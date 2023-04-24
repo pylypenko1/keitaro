@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,400&amp;display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bg {
+    background-image: url('../img/1.png');
+    /*height: 100vh;*/
+    display: flex;
+    /*align-items: center;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+
+.bg-header {
+    background-image: url('../img/h1.png');
+    background-size: 100%;
+    background-position: center;
+    height: 150%;
+    max-height: 100%;
+}
+
+.border-header {
+    border-bottom: 5px solid rgba(243, 173, 61, 1);
+    height: 30px;
+}
+
+.img-logo {
+    width: auto;
+    max-width: 78px;
+    height: auto;
+}
+
+.logo {
+    width: auto;
+    height: auto;
+    background: white;
+    border-radius: 0 0 80px 80px;
+    padding: 8px;
+    /*top: 20px;*/
+    position: relative;
+}
+
+.form {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.11);
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.form input {
+    background: #F5F5F5;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 49px;
+    border: none;
+    height: 43px;
+}
+
+.form input[type=submit] {
+    background: rgba(0, 133, 255, 1);
+    color: white;
+}
+
+.form input[type=submit]:hover {
+    background: rgb(8, 94, 172);
+}
+
+.form input::placeholder {
+    color: #A3A3A3;
+}
+
+.form p {
+    color: rgba(100, 100, 100, 1);
+}
+
+h1 {
+    text-align: left;
+    color: white
+}
+
+p {
+    text-align: left;
+    color: white
+}
+
+.block-2 p {
+    color: black;
+}
+
+.block-2 h2 {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.block-3 {
+    background: #F8F8F8;
+}
+
+.block-3 .icon {
+    width: auto;
+    /*max-width: 100px;*/
+    height: auto;
+    padding: 20px;
+}
+
+.block-3 p {
+    color: black;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.block-4 h2 {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.block-4 p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: black;
+}
+
+.block-5 ul{
+    list-style: none;
+    padding: 0;
+}
+.block-5 ul li{
+    display: inline-block;
+    margin: 20px 30px;
+}
+.block-5 ul li img{
+   filter: grayscale(1);
+    opacity: 0.2;
+    max-width: 100%;
+}
+.block-5 ul li img:hover{
+   filter: grayscale(1);
+    opacity: 1;
+    transition: 3s;
+}
+
+.logo-footer{
+    width: auto;
+    height: auto;
+    background: white;
+    border-radius: 80px 80px;
+    padding: 2px;
+    top: -40px;
+    position: relative;
+}
+
+/**/
+
+.block-2 ul.top-rewards {
+    padding: 0;
+    margin: 0 0;
+}
+
+.block-2 ul.top-rewards li {
+    width: 100%;
+    font-size: 18px;
+    background: #FFFFFF;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.09);
+    border-radius: 87px;
+    padding: 15px
+}
+
+.block-2 ul.top-rewards li .avatar {
+}
+
+.block-2 ul.top-rewards li .status {
+    font-weight: bold;
+    text-align: left;
+}
+
+.block-2 ul.top-rewards li .info {
+    flex-flow: column;
+    margin: 0 5px;
+}
+
+.block-2 ul.top-rewards li .name {
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.block-2 ul.top-rewards li .empt {
+    flex-flow: column;
+}
+
+.block-2 ul.top-rewards li .bonus {
+    flex-flow: column;
+    color: #19BC3D;
+    font-weight: bold;
+}
+/**/
+
+
+.btn-sxx{
+    background: #0085FF;
+    border-radius: 100px;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+.lczx{
+    background: linear-gradient(91.88deg, #F3AD3D 40.29%, #F9E36F 40.3%, #F3AD3D 99.7%);
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.09);
+    border-radius: 87px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+@media all and (max-width: 768px) {
+    .bg {
+        height: 100%;
+    }
+}

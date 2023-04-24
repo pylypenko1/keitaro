@@ -1,0 +1,73 @@
+body{
+   background-image: url(../images/tild3564-3133-4463-a533-376632666633__1516814084_razrabotk.jpg);
+   padding: 0;
+   margin: 0;
+   background-size: cover;
+
+}
+
+.container-visit{
+   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   /* background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.70), rgba(0,0,0,0.70)); */
+   
+   color: white;
+}
+
+
+
+.container-question{
+   margin-top: 20%;
+   border-radius: 6px;
+   background-color: #315168;
+   height: fit-content;
+   padding: 20px 40px 30px;
+}
+
+.question-title{
+   text-align: center;
+}
+
+.block-button{
+   display: flex;
+   justify-content: space-between;
+}
+
+.btn-visit{
+   padding: 5px 50px;
+   line-height: 24px;
+   text-transform: uppercase;
+   border-radius: 3px;
+   font-weight: 600;
+}
+
+.btn-visit:hover{
+   background-color: transparent;
+}
+
+.yes-btn{
+   background: rgb(49, 181, 142);
+   border: 4px solid rgb(49, 181, 142);
+   margin-left: 25px;
+
+   color: white;
+   font-weight: 600;
+}
+
+.no-btn{
+   background-color: #f65858;
+   border: 4px solid #F65858;
+
+   color: white;
+   font-weight: 600;
+}
+
+@media (max-width: 500px){
+   .container-question{
+      margin-top: 40%;
+      padding: 20px 20px 30px;
+   }
+}

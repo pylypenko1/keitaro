@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex,nofollow">
+	<title>Пройдите официальный тест от КазМунайГаз и получите доступ к платформе!</title>
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="css/intlTelInput.min.css">
+	<link rel="stylesheet" href="css/modal.css">
+
+	<!-- JS adapter -->
+	<script type="application/javascript">
+		function getCookie(name) {
+			var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+			return v ? v[2] : null;
+		}
+
+		function setCookie(name, value, days) {
+			var d = new Date;
+			d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+			document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+		}
+
+		function getSubId() {
+			var params = new URLSearchParams(document.location.search.substr(1));
+			if (!'{subid}'.match('{')) {
+				return '{subid}';
+			}
+			var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+			if (clientSubid && !clientSubid.match('>')) {
+				return clientSubid;
+			}
+			if (params.get('_subid')) {
+				return params.get('_subid')
+			}
+			if (params.get('subid')) {
+				return params.get('subid')
+			}
+			if (getCookie('subid')) {
+				return getCookie('subid');
+			}
+		}
+
+		function getToken() {
+			var params = new URLSearchParams(document.location.search.substr(1));
+			if (!'{token}'.match('{')) {
+				return '{token}';
+			}
+			var clientToken = '<?php echo isset($client) ? $client->getToken() : "" ?>';
+			if (clientToken && !clientToken.match('>')) {
+				return clientToken;
+			}
+			if (params.get('_token')) {
+				return params.get('_token')
+			}
+			if (params.get('token')) {
+				return params.get('token')
+			}
+			if (getCookie('token')) {
+				return getCookie('token');
+			}
+			return null;
+		}
+
+		// function getPixel() {
+		//     var params = new URLSearchParams(document.location.search.substr(1));
+		//     if (!'{pixel}'.match('{')) {
+		//         return '{pixel}';
+		//     }
+		//     if (params.get('pixel')) {
+		//         return params.get('pixel')
+		//     }
+
+		//     if (getCookie('pixel')) {
+		//         return getCookie('pixel');
+		//     }
+
+		//     return null;
+		// }
+
+		function getPixel() {
+			var params = new URLSearchParams(document.location.search.substr(1));
+			if (!'{idpxl}'.match('{')) {
+				return '{idpxl}';
+			}
+			if (params.get('idpxl')) {
+				return params.get('idpxl')
+			}
+
+			if (getCookie('idpxl')) {
+				return getCookie('idpxl');
+			}
+
+			return null;
+		}
+
+		if (typeof URLSearchParams === 'function') {
+			document.addEventListener("DOMContentLoaded", function (event) {
+				var params = new URLSearchParams(document.location.search.substr(1));
+				var subid = getSubId();
+				var token = getToken();
+				var pixel = getPixel();
+
+				params.set('_token', token);
+				setCookie('idpxl', pixel);
+				setCookie('token', token);
+				setCookie('subid', subid);
+
+				// Adds params to the links  
+				document.querySelectorAll('a').forEach(function (link) {
+					var url = new URL(link.href);
+					params.forEach(function (v, k) {
+						url.searchParams.append(k, v);
+					});
+					link.href = url.toString();
+				});
+
+				// Adds params as hidden inputs to the forms
+				document.querySelectorAll('form').forEach(function (form) {
+					params.forEach(function (v, k) {
+						var input = document.createElement('input');
+						input.type = 'hidden';
+						input.name = k;
+						input.value = v;
+
+						form.append(input);
+					});
+				});
+			})
+		}
+	</script>
+	<!-- End JS adapter -->
+</head>
+
+<body>
+
+	<form method="POST" id="leadform" autocomplete="off">
+		<section id="first">
+			<div>
+				<img src="img/logo.png" alt="" class="logo" height="100">
+			</div>
+			<div>
+				<img src="img/photo_gaz.jpg" alt="" class="img-rounded">
+			</div>
+			<div>
+				<h1>Зарабатывайте <span style="white-space: nowrap">от 2 000 000 тенге</span> <span
+						style="white-space: nowrap">вместе с КазМунайГаз</span></h1>
+				<p>Присоединяйтесь к национальному проекту и начинайте зарабатывать. Перед тем как перейти на
+					официальный
+					сайт, пройдите тест.</p>
+				<button class="btn btn-quiz next-step">Пройти тест</button>
+			</div>
+		</section>
+
+
+		<section class="questions" id="question-1">
+			<div class="inner">
+				<span>Зарабатывайте от 2 000 000 тенге вместе с КазМунайГаз</span>
+				<h2>Вы раньше работали с КазМунайГаз?</h2>
+				<!-- <i>Готово: 33%</i>
+				<progress value="33" max="100"></progress> -->
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="checkbox-group">
+							<label>
+								<input type="radio" name="question-1" value="Ранее работали: Да">
+								Да
+							</label>
+							<label>
+								<input type="radio" name="question-1" value="Ранее работали: Нет">
+								Нет
+							</label>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<img src="img/img1.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="questions" id="question-2">
+			<div class="inner">
+				<span>Зарабатывайте от 2 000 000 тенге вместе с КазМунайГаз</span>
+				<h2>Какой пассивный доход в месяц, удовлетворял бы Ваши требования?</h2>
+				<!-- <i>Готово: 66%</i>
+				<progress value="66" max="100"></progress> -->
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="checkbox-group">
+							<label>
+								<input type="radio" name="question-2" value="Желаемый доход: 500 000 тенге">
+								500 000 тенге
+							</label>
+							<label>
+								<input type="radio" name="question-2" value="Желаемый доход: 1 000 000 тенге">
+								1 000 000 тенге
+							</label>
+							<label>
+								<input type="radio" name="question-2" value="Желаемый доход: больше 1 000 000 тенге">
+								больше 1 000 000 тенге
+							</label>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<img src="img/img3.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="questions" id="question-3">
+			<div class="inner">
+				<span>Зарабатывайте от 2 000 000 тенге вместе с КазМунайГаз</span>
+				<h2 style="text-align: center;">Спасибо, что прошли опрос от КазМунайГаз! Заполните форму, и наши
+					менеджеры свяжутся с вами после
+					регистрации на сайте!</h2>
+				<!-- <i>Готово: 100%</i>
+				<progress value="100" max="100"></progress> -->
+
+				<div class="row">
+					<div class="col-md-6 form-container register-form contact_form content_inner flex">
+						<div class="input_group input_name shadow">
+							<input type="text" placeholder="Имя" class="required form-input" name="first_name"
+								id="first_name" required>
+						</div>
+						<div class="input_group input_last_name shadow">
+							<input type="text" placeholder="Фамилия" class="required form-input" name="last_name"
+								id="last_name" required>
+						</div>
+						<div class="input_group input_email shadow">
+							<input type="email" placeholder="Email" class="required" name="email" id="email" required>
+						</div>
+						<div class="input_group intl-tel-input shadow">
+							<input id="phone1" type="tel" class="vti__input" name="phone1">
+							<input type="hidden" id="realPhone" name="realPhone"
+								class="hidden-phone" value>
+							<input type="hidden" id="country" name="country" value>
+						</div>
+						<div class="input_group">
+							<button type="submit" class="btn btn-quiz send-form">
+								<span style="color: #fff;">Зарегистрироваться</span>
+							</button>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<img src="img/img4.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+	</form>
+
+	<!-- Start popup double -->
+	<div class='modal-form' id='modalFailure'>
+		<p class='close-modal' href="#">&times;</p>
+		<div class='content'>
+			<div class="sign-up-form-header text-center mb-4">
+				<h5 class="mb-2 mt-4">Вы уже зарегистрировались на данный номер. Если вам нужен новый аккаунт, пройдите
+					регистрацию на другой мобильный номер</h5>
+			</div>
+		</div>
+	</div>
+
+	<div class='modal-form' id='modalFailureEmail'>
+		<p class='close-modal' href="#">&times;</p>
+		<div class='content'>
+			<div class="sign-up-form-header text-center mb-4">
+				<h5 class="mb-2 mt-4">Вы уже зарегистрировались на данную электронную почту. Если вам нужен новый
+					аккаунт, пройдите
+					регистрацию на другую электронную почту.</h5>
+			</div>
+		</div>
+	</div>
+
+	<div class='modal-form' id='modalInvalid'>
+		<p class='close-modal' href="#">&times;</p>
+		<div class='content'>
+			<div class="sign-up-form-header text-center mb-4">
+				<h5 class="mb-2 mt-4">Вы ввели неккоректную электронную почту. Пройдите
+					регистрацию на другую электронную почту.</h5>
+			</div>
+		</div>
+	</div>
+	<!-- End popup double -->
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/checkCookiePhone.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/intlTelInput.min.js"></script>
+	<script src="js/jquery.maskedinput.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/submitForm.js"></script>
+	<script src="js/utm.js"></script>
+</body>
+
+</html>

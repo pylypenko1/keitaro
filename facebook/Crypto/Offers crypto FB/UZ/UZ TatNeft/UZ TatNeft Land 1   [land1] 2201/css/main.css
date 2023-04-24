@@ -1,0 +1,60 @@
+#content {
+    overflow: hidden;
+    margin-bottom: 0
+}
+
+.form-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 60px 25px;
+    background-color: #fff;
+    border-radius: 20px
+}
+
+.wrapper-form-header {
+    background-color: #fff;
+    padding: 60px 25px
+}
+
+.form-title-header {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 24px
+}
+
+form .send-form {
+    background-color: #1a9ede;
+    width: 100%;
+    padding: 12px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700
+}
+
+.form-container input {
+    text-align: left !important
+}
+
+form.form-container input {
+    background-color: #fff;
+    border-bottom: 1px solid #000
+}
+
+.checkbox-wrapper a {
+    color: #000
+}
+
+
+@media screen and (max-width: 500px){
+
+    .positionFixCustom {
+        position: fixed;
+        top: 0;
+        z-index:100;
+    }
+
+    #main{
+        margin-top: 130px;
+    }
+}

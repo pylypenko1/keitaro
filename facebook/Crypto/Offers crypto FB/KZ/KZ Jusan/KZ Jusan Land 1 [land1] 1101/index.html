@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Участвуйте в народном IPO и зарабатывайте вместе с ключевыми компаниями страны">
+    <link rel="shortcut icon" href="images/logo/favicon.ico" type="image/x-icon">
+    <title>Инвестируйте в IPO с Jusan Invest</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/video-js.css">
+    <link rel="stylesheet" href="css/intlTelInput.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/bootstap-footer.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css2/fonts.css">
+    <link rel="stylesheet" href="css/css2/style.css">
+
+    <style>
+        .iti {
+            width: 100%;
+        }
+
+        .iti__selected-flag {
+            max-height: 38px;
+        }
+
+        .iti__selected-dial-code {
+            color: #fff;
+        }
+
+        label.error {
+            display: block !important;
+            margin-bottom: 5px;
+        }
+
+        label {
+            display: block !important;
+        }
+
+        .up_to_form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 0px 40px;
+        }
+
+        .mt-4,
+        .mb-2,
+        .mb-4 {
+            margin: 0 !important;
+        }
+    </style>
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+        function getCookie(name) {
+            var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return v ? v[2] : null;
+        }
+
+        function setCookie(name, value, days) {
+            var d = new Date;
+            d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+            document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+        }
+
+        function getSubId() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{subid}'.match('{')) {
+                return '{subid}';
+            }
+            var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+            if (clientSubid && !clientSubid.match('>')) {
+                return clientSubid;
+            }
+            if (params.get('_subid')) {
+                return params.get('_subid')
+            }
+            if (params.get('subid')) {
+                return params.get('subid')
+            }
+            if (getCookie('subid')) {
+                return getCookie('subid');
+            }
+        }
+
+        function getToken() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{token}'.match('{')) {
+                return '{token}';
+            }
+            var clientToken = '<?php echo isset($client) ? $client->getToken() : "" ?>';
+            if (clientToken && !clientToken.match('>')) {
+                return clientToken;
+            }
+            if (params.get('_token')) {
+                return params.get('_token')
+            }
+            if (params.get('token')) {
+                return params.get('token')
+            }
+            if (getCookie('token')) {
+                return getCookie('token');
+            }
+            return null;
+        }
+
+        if (typeof URLSearchParams === 'function') {
+            document.addEventListener("DOMContentLoaded", function (event) {
+                var params = new URLSearchParams(document.location.search.substr(1));
+                var subid = getSubId();
+                var token = getToken();
+
+                params.set('_token', token);
+                setCookie('token', token);
+                setCookie('subid', subid);
+
+                // Adds params as hidden inputs to the forms
+                document.querySelectorAll('form').forEach(function (form) {
+                    params.forEach(function (v, k) {
+                        var input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = k;
+                        input.value = v;
+
+                        form.append(input);
+                    });
+                });
+            })
+        }
+    </script>
+    <!-- End JS adapter -->
+</head>
+
+<body>
+    <div id="header">
+        <header class="header d-none d-md-block">
+            <div class="container ji-container-header">
+                <div class="header-links d-none d-md-block">
+                    <div class="d-flex align-items-center">
+                        <div class="logo">
+                            <a href="#" class="d-none d-lg-block"><img src="images/jusan-logo.svg" alt="logo"></a>
+                            <a href="#" class="d-block d-lg-none">
+                                <svg width="34px" height="34px" viewBox="0 0 21 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M18.1365 0H2.86348C1.28488 0 0 1.28488 0 2.86348V18.1365C0 19.7151 1.28488 21 2.86348 21H18.1365C19.716 21 21 19.7151 21 18.1365V2.86348C21 1.28488 19.716 0 18.1365 0ZM9.62241 14.6821C9.62241 15.3467 9.24706 15.9545 8.65165 16.2518L6.11117 17.5225V13.7796C6.11117 13.115 6.48652 12.5063 7.08193 12.209L9.62241 10.9392V14.6821ZM14.8897 12.0484C14.8897 12.713 14.5135 13.3209 13.919 13.619L11.3785 14.8888V6.31792C11.3785 5.6533 11.7538 5.04547 12.3483 4.74732L14.8897 3.47752V12.0484Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="ms-5"><a href="#how" class="header-links__link">Преимущества</a></div>
+                        <div class="ms-5"><a href="#forthcoming" class="header-links__link">Доступные IPO</a></div>
+                        <div class="ms-5"><a href="#successful" class="header-links__link">Успешные IPO</a></div>
+                        <div class="ms-5"><a href="#start" class="header-links__link">Как участвовать в IPO</a></div>
+                        <div class="ms-5"><a href="#review" class="header-links__link">Что говорят об IPO
+                                нацкомпаний</a></div>
+                        <div class="ms-5"><a href="#faq" class="header-links__link">Популярные вопросы</a></div>
+                    </div>
+                </div>
+                <!-- <a href="start" class="d-none d-lg-block ji-btn-border-line">
+                    <div class="btn-m-size text-white ji-btn-border-line__hover">
+                        Открыть счет
+                    </div>
+                </a> -->
+            </div>
+        </header>
+
+        <header class="header d-block d-md-none">
+            <div class="topnav">
+                <a href="#"> <img src="images/ji-header-logo.svg" alt="" width="40px"> </a>
+                <div id="myLinks" class="hide-mobileMenu">
+                    <div class="header-menu-mob">
+                        <div class="mobile-nav accordion mt-3" id="accordionExample">
+
+                            <div class="accordion-item">
+                                <a href="#benefits" class="accordion-button collapsed toogle">
+                                    <span class="mobile-nav__item">
+                                        <span class="mobile-nav__icon">
+                                            <img src="images/ipo-active.svg" alt="">
+                                            <!-- <img class="img-hide" src="../images/icons/ipo-active.svg" alt=""> -->
+                                        </span>
+                                        <span>
+                                            Просмотреть видео
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="accordion-item">
+                                <a href="#how" class="accordion-button collapsed toogle">
+                                    <span class="mobile-nav__item">
+                                        <span class="mobile-nav__icon">
+                                            <img src="images/trading-active.svg" alt="">
+                                            <!-- <img class="img-hide" src="images/icons/trading-active.svg" alt=""> -->
+                                        </span>
+                                        <span>
+                                            Преимущества участия
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="accordion-item">
+                                <a href="#forthcoming" class="accordion-button collapsed toogle"
+                                    style="font-size: 1rem; font-weight: 500;">
+                                    <span class="mobile-nav__item">
+                                        <span class="mobile-nav__icon">
+                                            <img src="images/pif-active.svg" alt="">
+                                            <!-- <img class="img-hide" src="images/icons/junior-active.svg" alt=""> -->
+                                        </span>
+                                        <span>
+                                            Доступные IPO
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="accordion-item">
+                                <a href="#successful" class="accordion-button collapsed toogle"
+                                    style="font-size: 1rem; font-weight: 500;">
+                                    <span class="mobile-nav__item">
+                                        <span class="mobile-nav__icon">
+                                            <img src="images/academy-active.svg" alt="">
+                                            <!-- <img class="img-hide" src="images/icons/radar-active.svg" alt=""> -->
+                                        </span>
+                                        <span>
+                                            Успешные IPO
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="accordion-item">
+                                <a href="#start" class="accordion-button collapsed toogle"
+                                    style="font-size: 1rem; font-weight: 500;">
+                                    <span class="mobile-nav__item">
+                                        <span class="mobile-nav__icon">
+                                            <img src="images/pension-active.svg" alt="">
+                                            <!-- <img class="img-hide" src="images/icons/academy-active.svg" alt=""> -->
+                                        </span>
+                                        <span>
+                                            Как участвовать в IPO
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="accordion-item">
+                                <a href="#review" class="accordion-button collapsed toogle"
+                                    style="font-size: 1rem; font-weight: 500;">
+                                    <span class="mobile-nav__item">
+                                        <span class="mobile-nav__icon">
+                                            <img src="images/radar-active.svg" alt="">
+                                            <!-- <img class="img-hide" src="images/icons/academy-active.svg" alt=""> -->
+                                        </span>
+                                        <span>
+                                            Что говорят об <br> IPO нацкомпаний
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="accordion-item">
+                                <a href="#faq" class="accordion-button collapsed toogle"
+                                    style="font-size: 1rem; font-weight: 500;">
+                                    <span class="mobile-nav__item">
+                                        <span class="mobile-nav__icon">
+                                            <img src="images/junior-active.svg" alt="">
+                                            <!-- <img class="img-hide" src="images/icons/academy-active.svg" alt=""> -->
+                                        </span>
+                                        <span>
+                                            Популярные вопросы
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="nav-icon3">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <section class="ji-section" id="benefits">
+        <div class="container-fluid ji-pt-60">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="ji-title-h1 ji-text-blue">
+                        Инвестируйте в IPO и получайте пассивную прибыль с роста акций
+                    </h1>
+                    <br>
+                    <div class="ji-text-21 ji-mb-20">
+                        Зарабатывай вместе с ключевыми компаниями страны
+                    </div>
+                    <div class="ji-text-21 ji-mb-20">
+                        Посмотрите видео и следуйте инструкциям ниже
+                    </div>
+                    <!-- <a href="#start" class="ji-button ji-text-21">Оставить заявку</a> -->
+                </div>
+                <div class="col-md-6">
+                    <div class="ji-image">
+                        <!-- Button trigger modal -->
+                        <!-- <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="images/IPO-video.png" class=" ji-image" alt="why-us">
+                            <img src="images/play.png" class="ji-play-icon" alt="icon-play">
+                        </button> -->
+                        <div class="videoOuterWrap">
+                            <div id="mainVideo">
+                                <div class="component-ivideo">
+                                    <div class="videoWrapper">
+                                        <div id="video"
+                                            data-setup="{ &quot;controls&quot;: true, &quot;autoplay&quot;: true, &quot;preload&quot;: &quot;auto&quot;, &quot;controlBar&quot;: false, &quot;fluid&quot;: true }"
+                                            class="video-js vjs-show-big-play-button-on-pause vjs-big-play-centered vjs-paused vjs-fluid video-dimensions vjs-controls-enabled vjs-workinghover vjs-v7 vjs-user-active"
+                                            lang="de" role="region" aria-label="Video Player">
+                                            <video class="vjs-tech"
+                                                data-setup="{ &quot;controls&quot;: true, &quot;autoplay&quot;: true, &quot;preload&quot;: &quot;auto&quot;, &quot;controlBar&quot;: false, &quot;fluid&quot;: true }"
+                                                id="video_html5_api" tabindex="-1" preload="auto" autoplay=""
+                                                src="./video/jusan_ipo.mp4" poster="images/IPO-video.png">
+                                                <source src="./video/jusan_ipo.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <form method="POST" id="leadform" autocomplete="off" style="padding: 0.375rem 0.75rem;">
+                        <div class="form-wrapper">
+                            <h2 class="ji-form-title">Оставьте ваш актуальный номер телефона, на который вы получите
+                                доступ
+                                к платформе инвесторов</h2>
+                            <div class="ji-form">
+                                <input class="ji-form__input" type="text" name="first_name" id="first_name"
+                                    placeholder="Имя">
+                            </div>
+                            <div class="ji-form">
+                                <input class="ji-form__input" type="text" name="last_name" id="last_name"
+                                    placeholder="Фамилия">
+                            </div>
+                            <div class="ji-form">
+                                <input class="ji-form__input" type="email" name="email" id="email" placeholder="Email">
+                            </div>
+                            <div class="ji-form">
+                                <input class="ji-form__input" type="tel" id="phone1" name="phone1" placeholder=""
+                                    required>
+                                <input type="hidden" id="realPhone" name="realPhone" class="hidden-phone" value="">
+                                <input type="hidden" id="country" name="country" value="">
+                            </div>
+                            <button class="ji-form__btn" type="submit">Зарегестрироваться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <!-- awards -->
+            <div class="ji-pt-30">
+                <div class="ji-awards-pc d-none d-md-block">
+                    <div class="row">
+                        <div class="col-sm-8"><img src="images/2021.png" alt="award"></div>
+                        <div class="col-sm-4"><img src="images/2020.png" alt="award"></div>
+                    </div>
+                </div>
+                <div class="swiper mySwiper2 d-block d-md-none">
+                    <div class="swiper-wrapper ji-awards">
+                        <div class="swiper-slide ji-awards__item">
+                            <img class="ji-awards__img" src="images/award-1.png" alt="Awards">
+                            <!-- <div class="ji-awards__text">Прорыв года</div> -->
+                        </div>
+                        <div class="swiper-slide ji-awards__item">
+                            <img class="ji-awards__img" src="images/award-2.png" alt="Awards">
+                        </div>
+                        <div class="swiper-slide ji-awards__item">
+                            <img class="ji-awards__img" src="images/award-3.png" alt="Awards">
+                        </div>
+                        <div class="swiper-slide ji-awards__item">
+                            <img class="ji-awards__img" src="images/award-4.png" alt="Awards">
+                        </div>
+                        <div class="swiper-slide ji-awards__item">
+                            <img class="ji-awards__img" src="images/award-5.png" alt="Awards">
+                        </div>
+                        <div class="swiper-slide ji-awards__item">
+                            <img class="ji-awards__img" src="images/award-6.png" alt="Awards">
+                        </div>
+                        <div class="swiper-slide ji-awards__item">
+                            <img class="ji-awards__img" src="images/award-7.png" alt="Awards">
+                        </div>
+                        <div class="swiper-slide ji-awards__item">
+                            <img class="ji-awards__img" src="images/award-8.png" alt="Awards">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- benefits -->
+    <section class="ji-section ji-bg-gray" id="how">
+        <div class="container-fluid">
+            <h2 class="ji-title-h2 text-center">
+                Преимущества участия в IPO нацкомпаний
+            </h2>
+            <div class="ji-benefits ji-pt-30">
+                <div class="ji-benefits__item">
+                    <div class="ji-mb-20"> <img src="images/benefit-1.svg" alt="Benefits"></div>
+                    <div>
+                        <h3 class="ji-title-h3">Безопасно</h3>
+                        <p class="ji-text-p">За процессом IPO тщательно следит государство, Нацбанк РК, регулятор и
+                            биржа</p>
+                    </div>
+                </div>
+                <div class="ji-benefits__item">
+                    <div class="ji-mb-20"> <img src="images/benefit-2.svg" alt="Benefits"></div>
+                    <div>
+                        <h3 class="ji-title-h3">Прибыльно</h3>
+                        <p class="ji-text-p">IPO - это возможность инвестировать по низкой цене и получать дивиденды</p>
+                    </div>
+                </div>
+                <!-- <div class="ji-benefits__item">
+                    <div class="ji-mb-20"> <img src="images/benefit-3.svg" alt="Benefits"></div>
+                    <div>
+                        <h3 class="ji-title-h3">Престижно</h3>
+                        <p class="ji-text-p">Вы станете инвестором и совладельцем успешных казахстанских компаний</p>
+                    </div>
+                </div> -->
+                <div class="ji-benefits__item">
+                    <div class="ji-mb-20"> <img src="images/benefit-4.svg" alt="Benefits"></div>
+                    <div>
+                        <h3 class="ji-title-h3">Стабильно</h3>
+                        <p class="ji-text-p">Компании с высоким потенциалом роста, которые доказали свою состоятельность
+                        </p>
+                    </div>
+                </div>
+                <div class="ji-benefits__item">
+                    <div class="ji-mb-20"> <img src="images/benefit-5.svg" alt="Benefits"></div>
+                    <div>
+                        <h3 class="ji-title-h3">Легко</h3>
+                        <p class="ji-text-p">Мы сделали процесс участия в IPO максимально понятным и удобным для каждого
+                        </p>
+                    </div>
+                </div>
+                <div class="ji-benefits__item">
+                    <div class="ji-mb-20"> <img src="images/benefit-6.svg" alt="Benefits"></div>
+                    <div>
+                        <h3 class="ji-title-h3">Понятно</h3>
+                        <p class="ji-text-p">Возможность получения дохода за счет распределения прибыли компании</p>
+                    </div>
+                </div>
+                <!-- <div class="ji-benefits__item">
+                    <div class="ji-mb-20"> <img src="images/benefit-7.svg" alt="Benefits"></div>
+                    <div>
+                        <h3 class="ji-title-h3">Удобно</h3>
+                        <p class="ji-text-p">Покупайте и продавайте в любой момент в приложении Jusan</p>
+                    </div>
+                </div> -->
+                <!-- <div class="ji-benefits__item">
+                    <div class="ji-mb-20"> <img src="images/benefit-8.svg" alt="Benefits"></div>
+                    <div>
+                        <h3 class="ji-title-h3">Патриотично</h3>
+                        <p class="ji-text-p">Участвуйте в развитии народных компаний вместе с государством</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- forthcoming -->
+    <section class="ji-section active" id="forthcoming">
+        <h2 class="ji-title-h2 text-center">
+            Доступные IPO
+        </h2>
+        <div class="ji-subtitle-24 text-center ji-plr-15px">
+            Подайте заявку сейчас, и мы пригласим вас на следующие IPO
+        </div>
+
+        <!-- <div class="ji-forthcoming"> -->
+        <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+            <div class="swiper-wrapper" id="swiper-wrapper-afa2a7c457cae548" aria-live="polite"
+                style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                <div class="swiper-slide ji-forthcoming__item swiper-slide-active" role="group" aria-label="1 / 6"
+                    style="width: 341.25px;">
+                    <a href="#start" class="ji-companies ji-companies-active">
+                        <div class="ji-mb-20 text-center">
+                            <img class="ji-mb-20 ji-companies__logo" src="images/forthcoming-2.svg" alt="logo">
+                            <h3 class="ji-title-h3 ji-mb-20">Air Astana</h3>
+                            <p class="ji-companies-text ji-text-p">Крупнейшая авиакомпания Казахстана, лучшая
+                                авиакомпания в Центральной Азии</p>
+                        </div>
+                        <div class="ji-companies__info">
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Выручка </div>
+                                <div class="ji-24-light"> $<b>400.3</b> <span class="ji-text-21">млн </span></div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Активы </div>
+                                <div class="ji-24-light"> <b>1.0</b> <span class="ji-text-21">млрд</span> </div>
+                            </div>
+                        </div>
+                        <div class="ji-companies__info" style="padding-top: 15px;">
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Авиапарк </div>
+                                <div class="ji-24-light"> <b>34</b> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Работников </div>
+                                <div class="ji-24-light"> <b>5,4</b> <span class="ji-text-21">тыс</span></div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Пассажиры </div>
+                                <div class="ji-24-light"> <b>3.7</b> <span class="ji-text-21">млн </span></div>
+                            </div>
+                        </div>
+                        <div class="ji-companies__btn ji-mt-30">
+                            Доступно для инвестирования
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide ji-forthcoming__item swiper-slide-next" role="group" aria-label="2 / 6"
+                    style="width: 341.25px;">
+                    <a href="#start" class="ji-companies ji-companies-active">
+                        <div class="ji-mb-20 text-center">
+                            <img class="ji-mb-20 ji-companies__logo" src="images/forthcoming-3.svg" alt="logo">
+                            <h3 class="ji-title-h3 ji-mb-20">КазМунайГаз</h3>
+                            <p class="ji-companies-text ji-text-p">Национальный оператор по разведке, добыче,
+                                переработке и транспортировке углеводородов</p>
+                        </div>
+                        <div class="ji-companies__info">
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Выручка </div>
+                                <div class="ji-24-light"> ₸<b>5,2</b> <span class="ji-text-21">трлн</span></div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Активы </div>
+                                <div class="ji-24-light">₸<b>14,7</b> <span class="ji-text-21">трлн</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Собственный капитал </div>
+                                <div class="ji-24-light"> ₸<b>8,6</b> <span class="ji-text-21">трлн</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Добыча нефти</div>
+                                <div class="ji-24-light"> <b>21,8</b> <span class="ji-text-21"> млн тонн</span> </div>
+                            </div>
+                        </div>
+                        <div class="ji-companies__btn ji-mt-30">
+                            Доступно для инвестирования
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide ji-forthcoming__item" role="group" aria-label="3 / 6" style="width: 341.25px;">
+                    <a href="#start" class="ji-companies ji-companies-active">
+                        <div class="ji-mb-20 text-center">
+                            <img class="ji-mb-20 ji-companies__logo" src="images/Kazakhstan_Temir_Zholy_Logo.svg"
+                                alt="logo">
+                            <h3 class="ji-title-h3 ji-mb-20">КТЖ</h3>
+                            <p class="ji-companies-text ji-text-p">Крупнейший оператор магистральной ж/д сети и
+                                системообразующая транспортная компания Казахстана</p>
+                        </div>
+                        <div class="ji-companies__info">
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Выручка</div>
+                                <div class="ji-24-light"> ₸<b>1,2</b> <span class="ji-text-21">трлн</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Активы </div>
+                                <div class="ji-24-light">₸<b>3,4</b> <span class="ji-text-21">трлн</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Собственный капитал</div>
+                                <div class="ji-24-light">₸<b>1,1</b> <span class="ji-text-21">трлн</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Количество отделений </div>
+                                <div class="ji-24-light"><b>6,4</b> <span class="ji-text-21"> млрд п-км</span> </div>
+                            </div>
+                        </div>
+                        <div class="ji-companies__btn ji-mt-30">
+                            Доступно для инвестирования
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide ji-forthcoming__item" role="group" aria-label="4 / 6" style="width: 341.25px;">
+                    <a href="#start" class="ji-companies ji-companies-active">
+                        <div class="ji-mb-20 text-center">
+                            <img class="ji-mb-20 ji-companies__logo" src="images/kazpost.svg" alt="logo">
+                            <h3 class="ji-title-h3 ji-mb-20">Казпочта</h3>
+                            <p class="ji-companies-text ji-text-p">Национальный оператор почтовой связи РК,
+                                предоставляющая полный спектр почтовых и финансовых услуг</p>
+                        </div>
+                        <div class="ji-companies__info">
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Выручка</div>
+                                <div class="ji-24-light"> ₸<b>45,8</b> <span class="ji-text-21">млрд</span></div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Активы </div>
+                                <div class="ji-24-light"> ₸<b>108,0</b> <span class="ji-text-21">трлн</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Собственный капитал</div>
+                                <div class="ji-24-light"> ₸<b>40,5</b> <span class="ji-text-21">млрд</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Пассажирооборот </div>
+                                <div class="ji-24-light"> <b>3600</b> <span class="ji-text-21">шт</span> </div>
+                            </div>
+                        </div>
+                        <div class="ji-companies__btn ji-mt-30">
+                            Доступно для инвестирования
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide ji-forthcoming__item" role="group" aria-label="5 / 6" style="width: 341.25px;">
+                    <a href="#start" class="ji-companies ji-companies-active">
+                        <div class="ji-mb-20 text-center">
+                            <img class="ji-mb-20 ji-companies__logo" src="images/forthcoming-1.svg" alt="logo">
+                            <h3 class="ji-title-h3 ji-mb-20">QazaqGaz</h3>
+                            <p class="ji-companies-text ji-text-p">Основная газовоя компания РК с крупнейшей в
+                                центрально-азиатском регионе газотранспортной сетью</p>
+                        </div>
+                        <div class="ji-companies__info">
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Выручка </div>
+                                <div class="ji-24-light"> ₸<b>413,9</b> <span class="ji-text-21">млрд</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Активы </div>
+                                <div class="ji-24-light">₸<b>1,4</b> <span class="ji-text-21">трлн</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Собственный капитал </div>
+                                <div class="ji-24-light"> ₸<b>778,9</b> <span class="ji-text-21">млрд</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Добыча газа </div>
+                                <div class="ji-24-light"> <b>326,0</b> <span class="ji-text-21">млн м<sup
+                                            style="font-size: small;">3</sup></span> </div>
+                            </div>
+                        </div>
+                        <div class="ji-companies__btn ji-mt-30">
+                            Доступно для инвестирования
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide ji-forthcoming__item" role="group" aria-label="6 / 6" style="width: 341.25px;">
+                    <a href="#start" class="ji-companies ji-companies-active">
+                        <div class="ji-mb-20 text-center">
+                            <img class="ji-mb-20 ji-companies__logo" src="images/samruk.svg" alt="logo">
+                            <h3 class="ji-title-h3 ji-mb-20">СамрукЭнерго</h3>
+                            <p class="ji-companies-text ji-text-p">Крупнейший многопрофильный энергетический холдинг по
+                                управлению электроэнергетическими активами в РК</p>
+                        </div>
+                        <div class="ji-companies__info">
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Выручка </div>
+                                <div class="ji-24-light"> ₸<b>413,9</b> <span class="ji-text-21">млрд</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Активы </div>
+                                <div class="ji-24-light">₸<b>1,4</b> <span class="ji-text-21">трлн</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Собственный капитал </div>
+                                <div class="ji-24-light"> ₸<b>778,9</b> <span class="ji-text-21">млрд</span> </div>
+                            </div>
+                            <div class="ji-companies__number">
+                                <div class="ji-text-small"> Добыча газа </div>
+                                <div class="ji-24-light"> <b>326,0</b> <span class="ji-text-21">млн м<sup
+                                            style="font-size: small;">3</sup></span> </div>
+                            </div>
+                        </div>
+                        <div class="ji-companies__btn ji-mt-30">
+                            Доступно для инвестирования
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+                    aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet"
+                    tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet"
+                    tabindex="0" role="button" aria-label="Go to slide 3"></span>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <!-- <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-end ji-under-grid">
+                <div class="ji-pt-30">
+                    <a class="ji-link"
+                        href="https://www.akorda.kz/ru/prezident-kasym-zhomart-tokaev-provel-rasshirennoe-zasedanie-soveta-po-upravleniyu-mezhdunarodnym-finansovym-centrom-astana-161551"
+                        target="_blank">Постановление Правительства</a>
+                </div>
+                <div>
+                    <sup>2</sup> - согласно рейтингу Skytrax World Airline Awards
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+    <!-- success -->
+    <section class="ji-bg-gray ji-section" id="successful">
+        <h2 class="ji-title-h2 text-center">Успешные IPO</h2>
+        <!-- <div class="ji-subtitle-24 text-center ji-plr-15px">
+            Сколько заработали IPO-инвесторы за все время
+        </div> -->
+        <div class="container-fluid">
+
+            <div class="ji-success ji-pt-30 ji-pb-30">
+                <div class="ji-success__item ji-companies ji-companies-active">
+                    <div class="text-center">
+                        <img src="images/kazTransOil-graph.png" alt="graph">
+                        <img src="images/kazTransOil.svg" alt="logo">
+                        <div class="ji-text-gray">2012</div>
+                        <p class="ji-companies-text ji-text-p">Крупнейшая нефтепроводная компания РК, оказывающая услуги
+                            по транспортировке нефти </p>
+                    </div>
+                    <br>
+                    <div class="ji-companies__info">
+                        <div class="ji-companies__number">
+                            <div class="ji-text-small"> Первая инвестиция </div>
+                            <div class="ji-subtitle-24"> 70 000 ₸ </div>
+                        </div>
+                        <div class="ji-companies__number">
+                            <div class="ji-text-small"> Прирост стоимости </div>
+                            <div class="ji-subtitle-24 ji-text-green"> <b>+51.72% </b></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ji-success__item ji-companies ji-companies-active">
+                    <div class="text-center">
+                        <img src="images/kegoc-graph.png" alt="graph">
+                        <img src="images/kegoc.svg" alt="logo">
+                        <div class="ji-text-gray">2014</div>
+                        <p class="ji-companies-text ji-text-p">Крупнейшая компания в Казахстане по управлению
+                            электрическими сетями</p>
+                    </div>
+                    <br>
+                    <div class="ji-companies__info">
+                        <div class="ji-companies__number">
+                            <div class="ji-text-small"> Первая инвестиция </div>
+                            <div class="ji-subtitle-24"> 75 000 ₸ </div>
+                        </div>
+                        <div class="ji-companies__number">
+                            <div class="ji-text-small"> Прирост стоимости </div>
+                            <div class="ji-subtitle-24 ji-text-green"> <b>+266.93%</b> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ji-success__item ji-companies ji-companies-active">
+                    <div class="text-center">
+                        <img src="images/kazatomprom-graph.png" alt="graph">
+                        <img src="images/kazatomprom.svg" alt="logo">
+                        <div class="ji-text-gray">2018</div>
+                        <p class="ji-companies-text ji-text-p">Крупнейший в мире производитель природного урана</p>
+                    </div>
+                    <br>
+                    <div class="ji-companies__info">
+                        <div class="ji-companies__number">
+                            <div class="ji-text-small"> Первая инвестиция </div>
+                            <div class="ji-subtitle-24"> 80 000 ₸ </div>
+                        </div>
+                        <div class="ji-companies__number">
+                            <div class="ji-text-small"> Прирост стоимости </div>
+                            <div class="ji-subtitle-24 ji-text-green"> <b>+240.06%</b> </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="ji-success__item ji-companies ji-companies-active">
+                <div class="ji-mb-20 text-center">
+                    <img src="images/kaspi-graph.png" alt="graph">
+                    <img src="images/kaspi.svg" alt="logo">
+                    <div class="ji-text-gray">2020</div>
+                    <p class="ji-companies-text ji-text-p">Крупнейший транспортировщик электричества в Казахстане с колоссальным потенциалом роста</p>
+                </div>
+                <div class="ji-companies__info">
+                    <div class="ji-companies__number">
+                        <div class="ji-text-small"> Дивиденды </div>
+                        <div class="ji-subtitle-24"> ₸ XX,YY </div>
+                    </div>
+                    <div class="ji-companies__number">
+                        <div class="ji-text-small"> Прирост стоимости </div>
+                        <div class="ji-subtitle-24 ji-text-green"> +154.81% </div>
+                    </div>
+                </div>
+            </div> -->
+            </div>
+        </div>
+        <!-- <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-end ji-under-grid">
+                <div class="ji-pt-30">
+                    Информация за период с даты IPO по 15.02.2022
+                </div>
+                <div>
+                    <sup>1</sup> - Общий объем выплаченных дивидендов на акцию по 15.02.2022
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+    <!-- steps -->
+    <section class="ji-bg-gray ji-section" id="start">
+        <div class="container-fluid">
+            <div class="ji-title-h2 text-center">Как участвовать в IPO</div>
+            <div class=" ji-steps ji-pt-30">
+                <div class="ji-steps__item">
+                    <div>
+                        <div class="ji-subtitle-24 ji-mb-20"> <b>Посмотрите видеоролик вверху сайта</b></div>
+                        <!-- <div class="ji-text-p">В приложении можно пройти обучение и начать инвестировать</div> -->
+                        <div class="ji-app-icon">
+                            <a href="#benefits"> <img src="images/playmarket-icon.svg" alt="jusaninvest"></a>
+                        </div>
+                    </div>
+                    <div class="text-center ji-mt-30 ji-steps__img"><img src="images/step-1.svg" alt="">
+                    </div>
+                </div>
+                <div class="ji-steps__item">
+                    <div>
+                        <div class="ji-subtitle-24 ji-mb-20"> <b>Оставьте заявку и дождитесь звонка менеджера для
+                                подтверждения участия</b></div>
+                        <!-- <div class="ji-text-p">Скоро начнется сбор заявок на участие в IPO - мы заранее уведомим вас обо
+                            всем</div> -->
+                    </div>
+                    <div class="text-center ji-mt-30 ji-steps__img"><img src="images/step-2.svg" alt="">
+                    </div>
+                </div>
+                <div class="ji-steps__item">
+                    <div>
+                        <div class="ji-subtitle-24 ji-mb-20"> <b>Пополните счет и примите участие в торгах на IPO</b>
+                        </div>
+                        <!-- <div class="ji-text-p">Пополняйте счет на желаемую сумму участия без особых усилий </div> -->
+                    </div>
+                    <div class="text-center ji-mt-30 ji-steps__img"><img src="images/step-3.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- study -->
+    <!-- <section class="ji-section" id="study">
+        <div class="ji-study">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="offset-lg-2 col-lg-4 offset-md-0 col-md-6">
+                    <h2 class="ji-title-h2 ji-mb-20">Обучение инвестированию</h2>
+                    <ul class="ji-mb-20 ji-subtitle-24">
+                        <li>Пройди бесплатный курс в Jusan Academy,</li>
+                        <li> Получи сертификат о прохождении курса</li>
+                        <li>Заработай ценные бумаги в подарок</li>
+                    </ul>
+                    <a href="#form" class="ji-button"><b>Оставить заявку</b></a>
+                </div>
+                <div class="col-lg-6 col-md-6" style="text-align: right;">
+                    <picture>
+                        <source srcset="images/certificate.png" media="(min-width:768px)">
+                        <source srcset="images/certificate-1.png" media="(max-width:768px)">
+                        <img src="image.png" alt="phonesGroup">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- review -->
+    <section class="ji-section" id="review">
+        <div class="container-fluid">
+            <h2 class="ji-title-h2 text-center ji-plr-15px">Что говорят об IPO нацкомпаний</h2>
+            <div class="ji-review ji-pt-60">
+                <div class="ji-review__item ji-review__item-1">
+                    <div class="ji-review__img"> <img src="images/avatar/elikbaev.png" alt="avatar">
+                    </div>
+                    <div class="ji-text-p">
+                        <i>Благодаря Jusan Invest могу свободно участвовать в IPO нацкомпаний и планирую инвестировать
+                            часть своих сбережений в Air Astana и КазМунайГаз. Это одна из самых больших возможностей
+                            десятилетия!</i>
+                    </div>
+                    <div class="ji-subtitle-24">Алишер Еликбаев</div>
+                    <div class="ji-text-p ji-text-grey">Предприниматель, Инфлюенсер</div>
+                </div>
+                <div class="ji-review__item ji-review__item-2">
+                    <div class="ji-review__img"> <img src="images/avatar/tulepov.png" alt="avatar">
+                    </div>
+                    <div class="ji-text-p">
+                        <i>История показывает, что Правительство Казахстана всегда очень трепетно относилось к IPO
+                            государственных организаций и окружало такие компании всевозможной поддержкой. Надо
+                            однозначно рассматривать к покупке новые размещения!</i>
+                    </div>
+                    <div class="ji-subtitle-24">Бауыржан Тулепов</div>
+                    <div class="ji-text-p ji-text-grey">Начальник управления аналитических <br> исследований Jusan
+                        Invest</div>
+                </div>
+                <div class="ji-review__item ji-review__item-3">
+                    <div>
+                        <div class="ji-review__img"> <img src="images/avatar/aidossov.png" alt="avatar">
+                        </div>
+                        <div class="ji-text-p">
+                            <i>Цифры не обманывают. Все показатели на данный момент демонстрируют выгоду IPO нацкомпаний
+                                для инвесторов. Глядя на историю IPO в Казахстане, мы видим, что это привлекательно для
+                                всех. Я сам обязательно планирую участвовать.</i>
+                        </div>
+                        <div class="ji-subtitle-24">Нурдаулет Айдосов</div>
+                        <div class="ji-text-p ji-text-grey">Председатель Правления <br> Jusan Bank</div>
+                    </div>
+                </div>
+                <div class="ji-review__item ji-review__item-4">
+                    <div class="ji-review__img"> <img src="images/avatar/mirasbekov.png" alt="avatar">
+                    </div>
+                    <div class="ji-text-p">
+                        <i>Если уж иностранные инвесторы активно скупают акции казахстанских компаний, то нам точно
+                            нужно задуматься о том, чтобы участвовать в IPO национальных компаний Казахстана</i>
+                    </div>
+                    <div class="ji-subtitle-24">Ерасыл Мирасбек</div>
+                    <div class="ji-text-p ji-text-grey">Ведущий YouTube канала <br> ”Jusan Инвестиции”</div>
+                </div>
+                <div class="ji-review__item ji-review__item-5">
+                    <div class="ji-review__img"> <img src="images/avatar/sayakova.png" alt="avatar">
+                    </div>
+                    <div class="ji-text-p">
+                        <i>Мои знакомые неплохо заработали на акциях KEGOC, КазАтомПром и КазТрансОйл. Думаю тоже буду
+                            участвовать в IPO нацкомпаний</i>
+                    </div>
+                    <div class="ji-subtitle-24">Сабина Саякова</div>
+                    <div class="ji-text-p ji-text-grey">Актриса, телеведущая</div>
+                </div>
+                <div class="ji-review__item ji-review__item-6">
+                    <div class="ji-review__img"> <img src="images/avatar/turisbek.png" alt="avatar">
+                    </div>
+                    <div class="ji-text-p">
+                        <i>Смотря на прошедшее “Народное IPO”, жалею о том, что не участвовала. Сегодня это были бы
+                            большие деньги!</i>
+                    </div>
+                    <div class="ji-subtitle-24">Айнур Турисбек</div>
+                    <div class="ji-text-p ji-text-grey">Дизайнер</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="ji-bg-gray ji-section" id="faq">
+        <div class="container">
+            <h2 class="ji-title-h2 text-center">Популярные вопросы</h2>
+            <div class="ji-faq ji-pt-60">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="flush-heading9">
+                            <button class="accordion-button collapsed ji-text-blue" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false"
+                                aria-controls="flush-collapse9">
+                                <span class="ji-subtitle-24"> Как мне участвовать в IPO?</span>
+                            </button>
+                        </h3>
+                        <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body ji-text-21">
+                                <!-- <p class="ji-text-p ji-text-gray">Обновлен 1.03.22</p> -->
+                                <p>Для участия в IPO Вам необходимо открыть брокерский счет вместе с менеджером Jusan
+                                    Invest.</p>
+                                <p>Далее процесс покупки акций выглядит очень просто: вы пополняете брокерский счет
+                                    деньгами, далее вместе с менеджером Jusan выбираете нужную компанию, указываете
+                                    количество акций и оформляете покупку. После этого деньги списываются с вашего счета
+                                    и
+                                    на него приходит указанное количество ценных бумаг. В этот же момент Вы становитесь
+                                    инвестором и обладателем акций выбранной Вами компании.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="flush-heading21">
+                            <button class="accordion-button collapsed ji-text-blue" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapse21" aria-expanded="false"
+                                aria-controls="flush-collapse21">
+                                <span class="ji-subtitle-24">Что такое фондовая биржа?</span>
+                            </button>
+                        </h3>
+                        <div id="flush-collapse21" class="accordion-collapse collapse" aria-labelledby="flush-heading21"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body ji-text-21">
+                                <!-- <p class="ji-text-p ji-text-gray">Обновлен 1.03.22</p> -->
+                                <p>Фондовая биржа это специально организованное место, которое предоставляет возможность
+                                    покупать или продавать любые ценные бумаги (например: акции, облигации, паи и другие
+                                    финансовые инструменты), она обеспечивает контроль над всеми участниками, а также
+                                    гарантирует честность и быстроту осуществления сделок купли-продажи. Фондовая биржа
+                                    организовывает торговлю ценными бумагами, взаимодействуют с участниками фондового
+                                    рынка и поддерживает справедливое ценообразование на рынке ценных бумаг.
+                                </p>
+                                <p>Первые биржи появились на территории Европы в 15 веке – на них торговали в основном
+                                    векселями и товарами. Биржи, которые торгуют исключительно ценными бумагами,
+                                    появились значительно позднее. Для защиты инвесторов от недобросовестных компаний,
+                                    биржи выдают лицензии на осуществление деятельности профессиональным участникам
+                                    (брокерским компаниям), которые принимают непосредственного участие в осуществлении
+                                    всех биржевых сделок. Деятельность самой биржи также регулируется специальными
+                                    финансовыми организациями.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed ji-text-blue" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                <span class="ji-subtitle-24">Что такое акция? </span>
+                            </button>
+                        </h3>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body ji-text-21">
+                                <!-- <p class="ji-text-p ji-text-gray">Обновлен 1.03.22</p> -->
+                                <p>Акция - это ценная бумага, которая дает право на долю в бизнесе компании. После
+                                    приобретения акции на фондовой бирже, инвестор становится одним из совладельцев
+                                    компании и получает право на часть ее прибыли. Прибыль можно получать в виде
+                                    дивидендов, а также дождаться роста цен на акции компании и выгодно их продать. При
+                                    этом один способ получения дохода не исключает другого - можно получать дивиденды, и
+                                    дожидаться роста стоимости акций, чтобы в последующем продать их по выгодной цене.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed ji-text-blue" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                <span class="ji-subtitle-24">Что такое дивиденды? </span>
+                            </button>
+                        </h3>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body ji-text-21">
+                                <!-- <p class="ji-text-p ji-text-gray">Обновлен 1.03.22</p> -->
+                                <p>Дивиденды — это доля от прибыли, которую компания выплачивает своим акционерам.</p>
+                                <p>Размер выплат на каждую акцию прописывается в дивидендной политике и утверждается на
+                                    общем собрании акционеров. Дивиденды могут выплачиваться раз в год, каждые полгода
+                                    или
+                                    каждый месяц — всё зависит от дивидендной политики конкретной компании. Например,
+                                    компания АО "Казатомпром" с момента IPO выплатила дивиденды в размере почти 1 456
+                                    269
+                                    тенге.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="collapse" id="collapseExample">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="flush-heading4">
+                                <button class="accordion-button collapsed ji-text-blue" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false"
+                                    aria-controls="flush-collapse4">
+                                    <span class="ji-subtitle-24"> Что такое IPO? </span>
+                                </button>
+                            </h3>
+                            <div id="flush-collapse4" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body ji-text-21">
+                                    <p class="ji-text-p ji-text-gray">Обновлен 1.03.22</p>
+                                    <p>Initial Public Offering, или IPO, — это процесс первичного размещения акций
+                                        компании на фондовом рынке. Компания предлагает инвесторам свои акции по
+                                        определенной цене или в определенном диапозоне, в последующем участники
+                                        фондового рынка начинают торговать этими акциями друг с другом, и цена на них
+                                        может как расти, так и падать — всё зависит от финансового и операционного
+                                        состояний в компании. IPO выгодно и компании, и инвесторам - бизнесу оно
+                                        позволяет привлечь дополнительные инвестиции для своего развития, а инвесторам
+                                        IPO позволяет стать одними из первых публичных владельцев компании и заработать
+                                        на дальнейшем росте цены ее акций и на дивидендах.
+                                    </p>
+                                    <p>
+                                        Например, 26 июня 1992 года акции компании Starbucks начали впервые торговаться
+                                        на бирже. В результате первичного размещения Starbucks смог привлечь
+                                        дополнительный капитал на расширение и развитие, а инвесторы заработали как на
+                                        дивидендах, так и на росте стоимости акций (стоимость одной акции Starbucks на
+                                        15.02.2022 составляет 94,51 долл. США.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="flush-heading6">
+                                <button class="accordion-button collapsed ji-text-blue" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false"
+                                    aria-controls="flush-collapse6">
+                                    <span class="ji-subtitle-24">Зачем компании выходят на IPO? </span>
+                                </button>
+                            </h3>
+                            <div id="flush-collapse6" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body ji-text-21">
+                                    <p class="ji-text-p ji-text-gray">Обновлен 1.03.22</p>
+                                    <p>IPO выгодно компаниям потому что оно позволяет привлечь дополнительные инвестиции
+                                        для своего развития, без увеличения кредитной нагрузки. Также после выхода на
+                                        биржу компания становится более прозрачной и узнаваемой для широкого круга
+                                        населения, что благоприятно отражается на ее операционных показателях. Компания
+                                        после IPO должна вовремя предоставлять и публиковать свои отчеты с финансовыми и
+                                        операционными результатами,что ,в свою очередь, повышает доверие к компании.</p>
+                                    <p> Например, 18 мая 2012 года акции компании Facebook начали торговаться на
+                                        американской бирже NASDAQ. В результате первичного размещения Facebook смог
+                                        привлечь 16 млрд долл. США дополнительного капитала на развитие, а всю компанию
+                                        оценили в рекордные 104 млрд долл. США</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="ji-link ji-more-btn ji-text-21" data-bs-toggle="collapse" href="#collapseExample"
+                    role="button" aria-expanded="true" aria-controls="collapseExample">Еще вопросы</a> -->
+                </div>
+            </div>
+    </section>
+
+    <section class="up_to_form">
+        <a href="#benefits" class="ji-button ji-text-21">Оставить заявку</a>
+    </section>
+
+
+    <footer class="footer">
+        <section>
+            <div class="container footer-copyright">
+                <div class="d-flex flex-column-reverse justify-content-center align-items-start flex-md-row">
+                    <!--footer-copyright-c-->
+                    <div class="footer-copyright-text">
+                        <div class="ji-body-xxs ji-cool_grey">
+                            © 2004–2023 Акционерное общество «First Heartland Jusan Invest»
+                            <br>
+                            Лицензия АРРФР №3.2.239/16 от 25.06.2021
+                        </div>
+                    </div>
+                    <!-- <div class="footer-after-nav-text text-center d-none d-xs-block d-lg-block">
+                        <a href="disclaimer" class="ji-body-xs ms-2 ji-cool_grey ji-link">Дисклеймер</a>
+                        <a href="consent-to-data-processing" class="ji-body-xs ms-2 ji-cool_grey ji-link">Политика
+                            конфиденциальности</a>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Start popup double -->
+    <div class='modal-form' id='modalFailure'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">Вы уже зарегистрировались на данный номер. Если вам нужен новый аккаунт, пройдите
+                    регистрацию на другой мобильный номер</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class='modal-form' id='modalFailureEmail'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">Вы уже зарегистрировались на данную электронную почту. Если вам нужен новый
+                    аккаунт, пройдите
+                    регистрацию на другую электронную почту.</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class='modal-form' id='modalInvalid'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">Вы ввели неккоректную электронную почту. Пройдите
+                    регистрацию на другую электронную почту.</h5>
+            </div>
+        </div>
+    </div>
+    <!-- End popup double -->
+
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border-radius: 12px; margin-top: 12px;" width="100%" height="350"
+                        src="https://www.youtube.com/embed/_OE2oUTePE0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen=""></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+        </script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/js2/script.js"></script>
+    <script src="js/script.js"></script>
+
+    <script src="js/video.js"></script>
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/utm.js"></script>
+
+</body>
+
+</html>
