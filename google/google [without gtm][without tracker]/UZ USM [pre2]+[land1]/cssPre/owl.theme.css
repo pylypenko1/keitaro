@@ -1,0 +1,21 @@
+.init .item p {}
+.owl-dots {margin-top: 8px;}
+img {vertical-align: middle;}
+/*.owl-carousel {height: 100%;}*/
+/*.owl-carousel .owl-item, .owl-carousel .item {height: 100vh;}*/
+/*.owl-carousel .owl-item img {transform-style: initial;height: 100%;object-fit: cover;}*/
+/*.owl-thumb-item img {width: 150px;height: auto;}*/
+/*.owl-thumbs {position: absolute;bottom: 0;left: 0;display: table;width: 100%;text-align: center;padding: 5%;}*/
+.owl-thumb-item {display: table-cell;border: none;background: none;padding: 0;opacity: .4;}
+.owl-thumb-item.active {opacity: 1;}
+.label {position: absolute;top: 20px;right: 20px;background-color: #0a6cff;color: white;padding: 10px 20px;z-index: 5;text-align: center;}
+.owl-theme .owl-nav {position: absolute;top: 50%;width: 100%;margin-top: -30px;}
+.owl-nav .owl-next {float: right;}
+.owl-nav .owl-prev {float: left;}
+.owl-theme .owl-nav [class*='owl-']:hover {opacity: 0.8;background: #000000;}
+.owl-theme .owl-nav [class*='owl-'] {margin:0;padding: 8px 8px;font-size: 32px;background: #000000;opacity: 0.6;}
+.owl-theme .owl-nav [class*='owl-next'] {border-radius: 3px 0 0 3px;padding: 8px 6px 8px 10px;}
+.owl-theme .owl-nav [class*='owl-prev'] {border-radius: 0 3px 3px 0;padding: 8px 10px 8px 6px;}
+.owl-desc {margin: 10px 0 10px 0;}
+.owl-desc span {font-size: 12px; opacity: 0.6; margin: 0;}
+.owl-desc p {font-size: 14px; margin: 2px 0 0 0;}
