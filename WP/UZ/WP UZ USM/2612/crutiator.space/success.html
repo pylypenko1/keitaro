@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="stylesheet" href="startup/flat-ui/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="startup/flat-ui/css/flat-ui.css">
+	<link rel="stylesheet" href="startup/common-files/css/icon-font.css">
+	<link rel="stylesheet" href="startup/common-files/css/animations.css">
+	<link rel="stylesheet" href="static/css/style.css">
+	<link rel="stylesheet" href="startup/common-files/js/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="static/css/fresco/fresco.css" />
+	<link rel="shortcut icon" href="static/css/images/favicon.png" type="image/png">
+	<title>Аудиторская компания</title>
+</head>
+
+<body>
+
+
+	<div class="page-wrapper">
+		<header class="header-2">
+			<div class="container">
+				<div class="row">
+					<nav class="navbar col-sm-12" role="navigation">
+						<div class="navbar-header">
+							<a class="brand" href="index.html"><img src="static/css/images/logo.png" width="100px" alt=""></a>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<section class="header-2-sub bg-midnight-blue">
+			<div class="background">&nbsp;</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 ">
+						<div class="hero-unit">
+							<h1>Спасибо за вашу заявку</h1>
+							<p><strong>Мы с вами свяжемся.</strong>
+							</p>
+
+						</div>
+						<div class="btns">
+							<a class="btn btn-danger" href="index.html">Вернуться на сайт</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script src="startup/common-files/js/jquery-1.10.2.min.js"></script>
+	<script src="startup/common-files/js/jquery.bxslider.min.js"></script>
+	<script src="startup/common-files/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="startup/common-files/js/jquery.sharrre.min.js"></script>
+	<script src="startup/flat-ui/js/bootstrap.min.js"></script>
+	<script src="startup/common-files/js/masonry.pkgd.min.js"></script>
+	<script src="startup/common-files/js/modernizr.custom.js"></script>
+	<script src="startup/common-files/js/page-transitions.js"></script>
+	<script src="startup/common-files/js/easing.min.js"></script>
+	<script src="startup/common-files/js/jquery.svg.js"></script>
+	<script src="startup/common-files/js/jquery.svganim.js"></script>
+	<script src="startup/common-files/js/jquery.backgroundvideo.min.js"></script>
+	<script src="startup/common-files/js/froogaloop.min.js"></script>
+	<script src="startup/common-files/js/jquery.bxslider.js"></script>
+	<script src="startup/common-files/js/startup-kit.js"></script>
+	<script src="startup/common-files/js/fresco.js"></script>
+
+
+	<script type="text/javascript">
+		$(function () {
+			$('.content-12 .project-wrapper .photo img').mouseenter(function () {
+				var a = $(this).attr("src");
+				var b = $(this).attr("rel");
+				$(this).attr("src", b);
+				$(this).attr("rel", a);
+			})
+			$('.content-12 .project-wrapper .photo img').mouseleave(function () {
+				var a = $(this).attr("src");
+				var b = $(this).attr("rel");
+				$(this).attr("src", b);
+				$(this).attr("rel", a);
+			})
+
+			$('.blocks .overlay').mouseenter(function () {
+				var b = $(this).attr("rel");
+				$(this).prev().css("background-image", "url(" + b + ")");
+				$(this).prev().children().attr("src", "" + b + "");
+
+			})
+			$('.blocks .overlay').mouseleave(function () {
+				var a = $(this).attr("src");
+				$(this).prev().children().attr("src", "" + a + "");
+				$(this).prev().css("background-image", "url(" + a + ")");
+			})
+			$('.tabs a').click(function () {
+				$('.tabs a').removeClass('active');
+				$(this).addClass("active");
+				return false;
+			})
+		})
+		$(document).ready(function () {
+			$('.bxslider').bxSlider();
+		});
+		function scroll_to_elem(elem, link_active) {
+			if (document.getElementById(elem, link_active)) {
+				var destination = jQuery('#' + elem).offset().top;
+				jQuery("html,body").animate({ scrollTop: destination }, 1000);
+				jQuery('.nav li').removeClass('active');
+				jQuery('#' + link_active).addClass('active');
+			}
+		}
+		function send_phone() {
+			var error_msg = "";
+			var focused = 0;
+			if (jQuery("#f_name").val() == '') {
+				error_msg = 1;
+				jQuery("#f_name").css("border", "1px solid red");
+				if (focused == 0) {
+					focused = 1;
+					jQuery("#f_name").focus();
+				}
+			} else {
+				jQuery("#f_name").removeAttr("style");
+			}
+			if (jQuery("#f_tel").val() == '') {
+				error_msg = 1;
+				jQuery("#f_tel").css("border", "1px solid red");
+				if (focused == 0) {
+					focused = 1;
+					jQuery("#f_tel").focus();
+				}
+			} else {
+				jQuery("#f_tel").removeAttr("style");
+			}
+			if (jQuery("#f_type").val() == '') {
+				error_msg = 1;
+				jQuery("#f_type").css("border", "1px solid red");
+				if (focused == 0) {
+					focused = 1;
+					jQuery("#f_type").focus();
+				}
+			} else {
+				jQuery("#f_type").removeAttr("style");
+			}
+			if (error_msg == "") {
+				jQuery.ajax({
+					url: "form.php",
+					data: "do=send&name=" + jQuery("#f_name").val() + "&tel=" + jQuery("#f_tel").val() + "&mail=" + jQuery("#f_mail").val() + "&type=" + jQuery("#f_type").val() + "&text=" + jQuery("#f_text").val() + "&x=secure",
+					type: "POST",
+					dataType: "html",
+					cache: false,
+					success: function (data) {
+						alert("Заявка успешно отправлена");
+						jQuery(".form-control").val("")
+					}
+				});
+			}
+		}
+	</script>
+	</div>
+</body>
+
+</html>
