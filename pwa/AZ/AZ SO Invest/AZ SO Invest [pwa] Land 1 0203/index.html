@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      SO INVEST - Официальный сайт - инвестиции и заработок на газе Азербайджана (СО Инвест)
+    </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="mask-icon" href="fonts/safari-pinned-tab.svg" color="#ea6e00" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/styles.min.css" />
+
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/video-js.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <style type="text/css">
+      @media (max-width: 800px) and (min-width: 320px) {
+        .video {
+          width: 350px !important;
+          left: 50%;
+          margin-right: -50%;
+          transform: translate(-50%);
+        }
+      }
+
+      label.error {
+        color: #fff;
+      }
+    </style>
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!'{subid}'.match('{')) {
+          return '{subid}';
+        }
+        var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (clientSubid && !clientSubid.match('>')) {
+          return clientSubid;
+        }
+        if (params.get('_subid')) {
+          return params.get('_subid');
+        }
+        if (params.get('subid')) {
+          return params.get('subid');
+        }
+        if (getCookie('subid')) {
+          return getCookie('subid');
+        }
+      }
+
+      if (typeof URLSearchParams === 'function') {
+        document.addEventListener('DOMContentLoaded', function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+
+          setCookie('subid', subid);
+
+          // Adds params to the links
+          document.querySelectorAll('a').forEach(function (link) {
+            var url = new URL(link.href);
+            params.forEach(function (v, k) {
+              url.searchParams.append(k, v);
+            });
+            link.href = url.toString();
+          });
+
+          // Adds params as hidden inputs to the forms
+          document.querySelectorAll('form').forEach(function (form) {
+            params.forEach(function (v, k) {
+              var input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = k;
+              input.value = v;
+
+              form.append(input);
+            });
+          });
+        });
+      }
+    </script>
+    <!-- End JS adapter -->
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="wrapper__st">
+        <header class="header" data-scroll="60">
+          <div class="header__container">
+            <div class="header__logo -ibg_contain" onclick="scrollToElem('.page')">
+              <picture>
+                <source srcset="images/logo.webp" type="image/webp" />
+                <img src="images/logo.png" alt="logo" />
+              </picture>
+              <h1 style="position: absolute; right: -22px; top: 17px; font-weight: bolder">
+                SO INVEST
+              </h1>
+            </div>
+            <div class="header__menu menu-header">
+              <div class="menu-header__icon icon-menu">
+                <span></span>
+                <span></span>
+              </div>
+              <nav class="menu-header__body">
+                <ul class="menu-header__list">
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      data-goto-top="40"
+                      data-goto="#registration"
+                      class="menu-header__link"
+                      >Регистрация</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      data-goto-top="40"
+                      data-goto="#about"
+                      class="menu-header__link"
+                      >Про нас</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      data-goto-top="40"
+                      data-goto="#advantage"
+                      class="menu-header__link"
+                      >Преимущества</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      data-goto-top="40"
+                      data-goto="#calculator"
+                      class="menu-header__link"
+                      >Рассчитать доход</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <main class="page">
+          <section id="registration" class="cover">
+            <div class="cover__container">
+              <div class="cover__cnt">
+                <h2 class="cover__title -title -title_wh">
+                  So Invest дает жителям Азербайджана зарабатывать<br />
+                  на нефти и газе
+                </h2>
+                <div class="cover__subtitle">Теперь национальные ресурсы в ваших руках!</div>
+                <div class="cover__video">
+                  <!-- <video class="video" controls autoplay muted style=" width: 500px; margin: 0;">
+                                    <source src="media/video.mp4">
+                                </video> -->
+                  <style>
+                    .vjs-tech {
+                      outline: none;
+                    }
+                  </style>
+                  <div
+                    id="video"
+                    data-setup='{ "controls": true, "autoplay": true, "preload": "auto", "controlBar": false, "fluid": true }'
+                    class="video-js vjs-show-big-play-button-on-pause vjs-big-play-centered vjs-paused vjs-fluid video-dimensions vjs-controls-enabled vjs-workinghover vjs-v7 vjs-user-active"
+                    lang="de"
+                    role="region"
+                    aria-label="Video Player"
+                  >
+                    <video
+                      class="vjs-tech"
+                      data-setup='{ "controls": true, "autoplay": true, "preload": "auto", "controlBar": false, "fluid": true }'
+                      id="video_html5_api"
+                      tabindex="-1"
+                      preload="auto"
+                      autoplay=""
+                      src="media/video.mp4"
+                    >
+                      <source src="media/video.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <div class="cover__bt">
+                <div class="form">
+                  <h2 class="form-title" style="text-align: center">
+                    Начни зарабатывать прямо сейчас
+                  </h2>
+                  <form id="leadform" class="input-wrap" method="POST" autocomplete="off">
+                    <div class="input-wrap">
+                      <input
+                        class="form-input"
+                        type="text"
+                        name="first_name"
+                        id="first_name"
+                        value
+                        placeholder="Имя"
+                        required
+                      />
+                    </div>
+                    <div class="input-wrap">
+                      <input
+                        class="form-input"
+                        type="text"
+                        name="last_name"
+                        id="last_name"
+                        value
+                        placeholder="Фамилия"
+                        required
+                      />
+                    </div>
+                    <div class="input-wrap">
+                      <input
+                        class="form-input"
+                        type="email"
+                        name="email"
+                        id="email"
+                        value
+                        placeholder="Почта"
+                        required
+                      />
+                    </div>
+                    <div class="input-wrap">
+                      <input
+                        type="tel"
+                        id="phone1"
+                        name="phone1"
+                        placeholder=""
+                        autocomplete="off"
+                        required=""
+                        class="form-input"
+                      />
+                      <input
+                        type="hidden"
+                        id="realPhone"
+                        name="realPhone"
+                        class="hidden-phone"
+                        value=""
+                      />
+                      <input type="hidden" id="country" name="country" value="" />
+                      <style type="text/css">
+                        #tel {
+                          padding-left: 98px !important;
+                        }
+                      </style>
+                    </div>
+                    <button type="submit" class="button">Зарегистрироваться</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="advantage" class="advn">
+            <div class="advn__container">
+              <h2 class="advn__title -title">Почему это выгодно Азербайджанцам</h2>
+              <div class="advn__wrap">
+                <div class="advn__item">
+                  <div class="advn__icon -ibg_contain">
+                    <picture>
+                      <source srcset="images/advn-icon1.webp" type="image/webp" />
+                      <img src="images/advn-icon1.png" alt="profit" />
+                    </picture>
+                  </div>
+                  <div class="advn__item-title">Значительная прибыль при минимальных рисках</div>
+                </div>
+                <div class="advn__item">
+                  <div class="advn__icon -ibg_contain">
+                    <picture>
+                      <source srcset="images/advn-icon2.webp" type="image/webp" />
+                      <img src="images/advn-icon2.png" alt="cash" />
+                    </picture>
+                  </div>
+                  <div class="advn__item-title">Значительная прибыль при минимальных рисках</div>
+                </div>
+                <div class="advn__item">
+                  <div class="advn__icon -ibg_contain">
+                    <picture>
+                      <source srcset="images/advn-icon3.webp" type="image/webp" />
+                      <img src="images/advn-icon3.png" alt="gross-profit" />
+                    </picture>
+                  </div>
+                  <div class="advn__item-title">
+                    Быстрый вывод средств на любую карту Азербайджана
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="steps">
+            <div class="steps__container">
+              <h2 class="steps__title -title -title_wh">
+                Что нужно сделать, чтобы начать зарабатывать c So Invest уже сейчас?
+              </h2>
+              <div class="steps__box">
+                <div class="steps__item">
+                  <div class="steps__icon steps__icon_first">1</div>
+                  <div class="steps__item-txt">Зарегистрироваться на данном сайте в форме выше</div>
+                </div>
+                <div class="steps__item">
+                  <div class="steps__icon steps__icon_second">2</div>
+                  <div class="steps__item-txt">
+                    Дождаться звонка от финансового эксперта SoInvest и подтвердить регистрацию
+                  </div>
+                </div>
+                <div class="steps__item">
+                  <div class="steps__icon steps__icon_third">3</div>
+                  <div class="steps__item-txt">
+                    Внести сумму<br />
+                    (от ₼450) инвестиции на счет и уже к концу дня получить первую прибыль
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="about" class="about">
+            <div class="about__container">
+              <div class="about__inner">
+                <h3 class="about__title -title -title_wh" data-da=".about__cnt,767.98,0">
+                  Ровшан Наджаф
+                </h3>
+                <div class="about__subtitle" data-da=".about__cnt,767.98,1">
+                  Создатель «SO INVEST»
+                </div>
+                <div class="about__img -ibg">
+                  <picture>
+                    <source srcset="images/rovshan.jpeg" type="image/webp" />
+                    <img src="images/rovshan.jpeg" alt="manager" />
+                  </picture>
+                </div>
+                <div class="about__cnt">
+                  <div class="about__txt">
+                    Каждый житель Азербайджана теперь может инвестировать в национальные ресурсы,
+                    что будет выгодно и SO INVEST, и населению.
+                    <br /><br />
+                    Очевидно, что в настоящее время азербайджанский газ очень востребован – спрос на
+                    него на мировом рынке постоянно растет. Поэтому мы увеличили объемы производства
+                    в четыре раза и решили предложить гражданам страны инвестиции.
+                    <br /><br />
+                    Тарифы на газ регулярно изменяются, и, вкладывая в проекты SO INVEST, можно
+                    зарабатывать каждый месяц от 800 до 8500 долларов.
+                    <br /><br />
+                    Чтобы принести выгоду не только компании, но и всем жителям страны, мы сделали
+                    торговлю газом и нефтью доступной каждому.
+                    <br /><br />
+                    Компания SO INVEST, имея существенную долю рынка газа в Азербайджане, повысила
+                    добычу в четыре раза. Это помогло привлечь многих инвесторов, так как спрос во
+                    всем мире быстро растет.
+                  </div>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="scrollToElem('#form2')"
+                    class="about__btn -btn"
+                    >Зарегистрироваться</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="calculator" class="calculator">
+            <div class="calculator__container">
+              <div class="calculator__cnt">
+                <h2 class="calculator__title -title -title_wh">Калькулятор доходности</h2>
+                <div class="calculator__txt">
+                  Посчитайте, сколько вы можете заработать вместе с SO Invest
+                </div>
+              </div>
+              <div class="calculator__box">
+                <form
+                  data-local-form="form-55683"
+                  action="#"
+                  class="calculator__form dsd-calculator"
+                >
+                  <input type="hidden" name="_ref" value="https://so-invest.pro/" />
+                  <div class="dsd-calculator__item">
+                    <div class="dsd-calculator__title">Сумма инвестирования</div>
+                    <div class="dsd-calculator__slider">
+                      <input
+                        type="number"
+                        class="dsd-calculator__volume"
+                        id="dsd-calculator__volume"
+                        value="450"
+                      />
+                      <input
+                        type="range"
+                        class="dsd-calculator__range"
+                        id="dsd-calculator__range"
+                        step="1"
+                        min="450"
+                        max="8000"
+                        value="1"
+                      />
+                    </div>
+                  </div>
+                  <div class="dsd-calculator__item">
+                    <div class="dsd-calculator__title">Срок инвестировния</div>
+                    <ul class="dsd-calculator__switcher">
+                      <li class="dsd-calculator__switcher-item">
+                        <input
+                          type="radio"
+                          name="tariff"
+                          id="economy"
+                          class="dsd-calculator__tariff"
+                          value="14"
+                          checked="checked"
+                        />
+                        <label for="economy">1 день</label>
+                      </li>
+                      <li class="dsd-calculator__switcher-item">
+                        <input
+                          type="radio"
+                          name="tariff"
+                          id="comfort"
+                          class="dsd-calculator__tariff"
+                          value="98"
+                        />
+                        <label for="comfort">7 дней</label>
+                      </li>
+                      <li class="dsd-calculator__switcher-item">
+                        <input
+                          type="radio"
+                          name="tariff"
+                          id="business"
+                          class="dsd-calculator__tariff"
+                          value="196"
+                        />
+                        <label for="business">14 дней</label>
+                      </li>
+                      <li class="dsd-calculator__switcher-item">
+                        <input
+                          type="radio"
+                          name="tariff"
+                          id="premium"
+                          class="dsd-calculator__tariff"
+                          value="392"
+                        />
+                        <label for="premium">28 дней</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="dsd-calculator__item dsd-calculator__item_prf">
+                    <div class="dsd-calculator__order">
+                      <span>Прибыль</span>
+                      <output id="dsd-calculator__order-time">+17780₼</output>
+                    </div>
+                    <div class="dsd-calculator__order">
+                      <span>Сроки:</span>
+                      <output id="dsd-calculator__order-tariff">1 день</output>
+                    </div>
+                    <div class="dsd-calculator__order">
+                      <span>Итоговая сумма</span>
+                      <output class="dsd-calculator__total" id="dsd-calculator__total"
+                        >144780₼</output
+                      >
+                    </div>
+                    <div class="dsd-calculator__order">
+                      <span>В процентах:</span>
+                      <output id="dsd-calculator__order-percent">14%</output>
+                    </div>
+                  </div>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="scrollToElem('#form2')"
+                    style="text-align: center; padding: 10px"
+                    class="calculator__btn -btn"
+                    data-da=".calculator__cnt,767.98,2"
+                    >Инвестировать</a
+                  >
+                </form>
+              </div>
+            </div>
+          </section>
+          <section class="plans">
+            <div class="plans__container">
+              <h2 class="plans__title -title">ВЫБЕРИТЕ СВОЙ ПАКЕТ</h2>
+              <div class="slider-panel">
+                <img src="images/624846.png" width="30" alt="scroll" class="scroll-img" />
+              </div>
+              <div class="plans__slider slider-plans swiper">
+                <div class="slider-plans__wrapper swiper-wrapper">
+                  <div class="slider-plans__slide slider-plans__slide_slv swiper-slide">
+                    <div class="slider-plans__header">
+                      <h3 class="slider-plans__header-title">Легкий</h3>
+                      <div class="slider-plans__header-price">ОТ 450₼</div>
+                    </div>
+                    <div class="slider-plans__body">
+                      <div class="slider-plans__profit-title">Ваш доход в среднем составит</div>
+                      <ul class="slider-plans__profit-rst">
+                        <li class="slider-plans__profit-rst-item">от 68₼ в день</li>
+                        <li class="slider-plans__profit-rst-item">от 165₼ в неделю</li>
+                        <li class="slider-plans__profit-rst-item">от 1700₼ в месяц</li>
+                      </ul>
+                      <div class="slider-plans__title">Пакет состоит из:</div>
+                      <ol class="slider-plans__list">
+                        <li class="slider-plans__list-item">Инвестиции в региональные отделы</li>
+                        <li class="slider-plans__list-item">
+                          Инвестиции в акции региональных компаний
+                        </li>
+                        <li class="slider-plans__list-item">Инвестиции в полезные ископаемые</li>
+                      </ol>
+                    </div>
+                    <a
+                      href="javascript:void(0)"
+                      onclick="scrollToElem('#form2')"
+                      class="slider-plans__btn -btn"
+                      >Выбрать</a
+                    >
+                  </div>
+                  <div class="slider-plans__slide slider-plans__slide_gld swiper-slide ppl">
+                    <div class="slider-plans__header">
+                      <h3 class="slider-plans__header-title">Золотой</h3>
+                      <div class="slider-plans__header-price">ОТ 850₼</div>
+                    </div>
+                    <div class="slider-plans__body">
+                      <div class="slider-plans__profit-title">Ваш доход в среднем составит</div>
+                      <ul class="slider-plans__profit-rst">
+                        <li class="slider-plans__profit-rst-item">от 136₼ в день</li>
+                        <li class="slider-plans__profit-rst-item">от 950₼ в неделю</li>
+                        <li class="slider-plans__profit-rst-item">от 4000₼ в месяц</li>
+                      </ul>
+                      <div class="slider-plans__title">
+                        Включает в себя все привилегии предыдущего пакета, а так же:
+                      </div>
+                      <ol class="slider-plans__list">
+                        <li class="slider-plans__list-item">
+                          Инвестиции в государственные компании
+                        </li>
+                        <li class="slider-plans__list-item">Инвестиции в Северный поток2</li>
+                        <li class="slider-plans__list-item">Инвестиции в ценные бумаги</li>
+                      </ol>
+                    </div>
+                    <a
+                      href="javascript:void(0)"
+                      onclick="scrollToElem('#form2')"
+                      class="slider-plans__btn -btn"
+                      >Выбрать</a
+                    >
+                  </div>
+                  <div class="slider-plans__slide slider-plans__slide_dmd swiper-slide">
+                    <div class="slider-plans__header">
+                      <h3 class="slider-plans__header-title">Опытный</h3>
+                      <div class="slider-plans__header-price">ОТ 1700₼</div>
+                    </div>
+                    <div class="slider-plans__body">
+                      <div class="slider-plans__profit-title">Ваш доход в среднем составит</div>
+                      <ul class="slider-plans__profit-rst">
+                        <li class="slider-plans__profit-rst-item">от 272₼ в день</li>
+                        <li class="slider-plans__profit-rst-item">от 1700₼ в неделю</li>
+                        <li class="slider-plans__profit-rst-item">от 6800₼ в месяц</li>
+                      </ul>
+                      <div class="slider-plans__title">
+                        Включает в себя все привилегии предыдущего пакета, а так же:
+                      </div>
+                      <ol class="slider-plans__list">
+                        <li class="slider-plans__list-item">
+                          Инвестиции в международные компании и фонды
+                        </li>
+                        <li class="slider-plans__list-item">Инвестиции в высокорисковые активы</li>
+                        <li class="slider-plans__list-item">
+                          Инвестиции в акции топовых кампаний по льготным ценам
+                        </li>
+                      </ol>
+                    </div>
+                    <a
+                      href="javascript:void(0)"
+                      onclick="scrollToElem('#form2')"
+                      class="slider-plans__btn -btn"
+                      >Выбрать</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="docs">
+            <div class="docs__container">
+              <div class="docs__cnt">
+                <h2 class="docs__title -title">
+                  Лицензия профессионального участника рынка ценных бумаг<br />
+                  «SO invest»
+                </h2>
+                <div class="docs__txt">
+                  Лицензия №045-13980-02000 От 13.12.2019 Профессиональной и биржевой деятельности
+                  по ценным бумагам<br />
+                  АО "Государственная платформа SO Invest"
+                </div>
+              </div>
+              <div class="docs__media">
+                <div data-gallery class="docs__gallery">
+                  <a href="images/license-thmb.webp" id="doc" class="docs__img -ibg_contain">
+                    <picture>
+                      <source srcset="images/license-thmb.webp" type="image/webp" />
+                      <img src="images/license-thmb.jpg" alt="" />
+                    </picture>
+                  </a>
+                </div>
+                <button id="docs__gallery-btn" class="docs__btn -btn">Увеличить фото</button>
+              </div>
+            </div>
+          </section>
+          <section class="mp">
+            <div class="mp__container">
+              <div class="mp__wrap">
+                <div class="mp__icon">
+                  <picture>
+                    <source srcset="images/mp-visa.webp" type="image/webp" />
+                    <img src="images/mp-visa.png" alt="visa" />
+                  </picture>
+                </div>
+                <div class="mp__icon">
+                  <picture>
+                    <source srcset="images/mp-mastercard.webp" type="image/webp" />
+                    <img src="images/mp-mastercard.png" alt="mastercard" />
+                  </picture>
+                </div>
+                <div class="mp__icon">
+                  <picture>
+                    <source srcset="images/mp-maestro.webp" type="image/webp" />
+                    <img src="images/mp-maestro.png" alt="maestro" />
+                  </picture>
+                </div>
+                <div class="mp__icon">
+                  <picture>
+                    <source srcset="images/mp-yandex.webp" type="image/webp" />
+                    <img src="images/mp-yandex.png" alt="yandex" />
+                  </picture>
+                </div>
+                <div class="mp__icon">
+                  <picture>
+                    <source srcset="images/mp-webmoney.webp" type="image/webp" />
+                    <img src="images/mp-webmoney.png" alt="webmoney" />
+                  </picture>
+                </div>
+                <div class="mp__icon">
+                  <picture>
+                    <source srcset="images/mp-wire.webp" type="image/webp" />
+                    <img src="images/mp-wire.png" alt="wire" />
+                  </picture>
+                </div>
+                <div class="mp__icon">
+                  <picture>
+                    <source srcset="images/mp-diners.webp" type="image/webp" />
+                    <img src="images/mp-diners.png" alt="diners" />
+                  </picture>
+                </div>
+                <div class="mp__icon">
+                  <picture>
+                    <source srcset="images/mp-london.webp" type="image/webp" />
+                    <img src="images/mp-london.png" alt="london exchange" />
+                  </picture>
+                </div>
+                <div class="mp__icon">
+                  <picture>
+                    <source srcset="images/mp-dowjones.webp" type="image/webp" />
+                    <img src="images/mp-dowjones.png" alt="dowjones" />
+                  </picture>
+                </div>
+                <div class="mp__icon">
+                  <picture>
+                    <source srcset="images/mp-nasdaq.webp" type="image/webp" />
+                    <img src="images/mp-nasdaq.png" alt="nasdaq" />
+                  </picture>
+                </div>
+                <div class="mp__icon">
+                  <picture>
+                    <source srcset="images/mp-borse.webp" type="image/webp" />
+                    <img src="images/mp-borse.png" alt="borse group" />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="clb">
+            <div class="clb__container">
+              <div class="clb__form" id="form2">
+                <div class="form">
+                  <h2 class="form-title" style="text-align: center">
+                    Начни зарабатывать прямо сейчас
+                  </h2>
+                  <form class="input-wrap" method="POST" autocomplete="off" id="leadformModal">
+                    <div class="input-wrap">
+                      <input
+                        class="form-input"
+                        type="text"
+                        name="first_name"
+                        id="first_name"
+                        value
+                        placeholder="Имя"
+                        required
+                      />
+                    </div>
+                    <div class="input-wrap">
+                      <input
+                        class="form-input"
+                        type="text"
+                        name="last_name"
+                        id="last_name"
+                        value
+                        placeholder="Фамилия"
+                        required
+                      />
+                    </div>
+                    <div class="input-wrap">
+                      <input
+                        class="form-input"
+                        type="email"
+                        name="email"
+                        id="email"
+                        value
+                        placeholder="Почта"
+                        required
+                      />
+                    </div>
+                    <div class="input-wrap">
+                      <input
+                        type="tel"
+                        id="phoneModal"
+                        name="phoneModal"
+                        placeholder=""
+                        autocomplete="off"
+                        required=""
+                        class="form-input"
+                      />
+                      <input
+                        type="hidden"
+                        id="realPhone"
+                        name="realPhone"
+                        class="hidden-phone"
+                        value=""
+                      />
+                      <input type="hidden" id="country" name="country" value="" />
+
+                      <style type="text/css">
+                        #tel {
+                          padding-left: 98px !important;
+                        }
+                      </style>
+                    </div>
+                    <button type="submit" class="button">Зарегистрироваться</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <section id="advantage" class="advn" style="padding-bottom: 0">
+          <div class="advn__container">
+            <h2 class="advn__title -title">Текущие драйверы роста цен</h2>
+
+            <div class="about__txt">
+              <strong>Поставки газа из Азербайджана в ЕС в 2022 году выросли на 40%</strong>
+              <br /><br />
+              Азербайджан начал экспорт газа в Европу 31 декабря 2020 года. Сейчас в ЕС
+              азербайджанский газ покупают Италия, Греция, Болгария и Румыния. При этом имеется еще
+              группа стран, которые хотят покупать газ у Азербайджана. Еще в ноябре 2022 года
+              состоялся визит президента Азербайджана Ильхама Алиева в Албанию и Сербию, а в декабре
+              – Румынию. Еще раньше, в сентябре-октябре прошлого года состоялись визиты Ильхама
+              Алиева в Италию и Болгарию. А в январе текущего года состоялся визит Ильхама Алиева в
+              Венгрию. Сама география визитов уже говорит о том, что Азербайджан наращивает
+              возможности для экспорта природного газа.
+              <br /><br />
+              В 2021 году наш экспорт газа составил 19 млрд кубометров, в 2022 году — 22,6 млрд
+              кубометров, в 2023 году планируется на уровне 24,5 млрд кубометров», — заявил сегодня
+              президент Азербайджана <b>Ильхам Алиев</b>. Он выступал на IX министерском заседании в
+              рамках Консультативного совета по Южному газовому коридору и первом министерском
+              заседании в рамках Консультативного совета по зеленой энергетике.
+
+              <br /><br />
+              Все говорит о достаточно амбициозных планах Азербайджана по кооперации с Евросоюзом,
+              позволяющих стране выйти на новый уровень сотрудничества и укрепить свою роль в деле
+              обеспечения европейской энергетической безопасности
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer__container">
+            <div class="footer__logo -ibg_contain" onclick="scrollToElem('.page')">
+              <picture>
+                <source srcset="images/logo.webp" type="image/webp" />
+                <img src="images/logo.png" alt="logo" />
+              </picture>
+            </div>
+            <nav class="footer__menu">
+              <ul class="footer__list">
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    data-goto-top="40"
+                    data-goto="#registration"
+                    class="footer__link"
+                    >Регистрация</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    data-goto-top="40"
+                    data-goto="#about"
+                    class="footer__link"
+                    >Преимущества</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    data-goto-top="40"
+                    data-goto="#advantage"
+                    class="footer__link"
+                    >Про нас</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    data-goto-top="40"
+                    data-goto="#calculator"
+                    class="footer__link"
+                    >Рассчитать доход</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Start popup double -->
+    <div class="modal-form" id="modalFailure">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы уже зарегистрировались на данный номер. Если вам нужен новый аккаунт, пройдите
+            регистрацию на другой мобильный номер
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalFailureEmail">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы уже зарегистрировались на данную электронную почту. Если вам нужен новый аккаунт,
+            пройдите регистрацию на другую электронную почту.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalInvalid">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы ввели неккоректную электронную почту. Пройдите регистрацию на другую электронную
+            почту.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <!-- End popup double -->
+
+    <script src="js/script.min.js"></script>
+    <!-- <script src="js/mainTop.js"></script> -->
+    <script>
+      const scrollToElem = (el) => {
+        document.querySelector(el).scrollIntoView({ behavior: 'smooth' });
+      };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/utm.js"></script>
+  </body>
+</html>
