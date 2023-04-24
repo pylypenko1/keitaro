@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Congratulations!</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main-thanks.css">
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        let clickId = "";
+        let currentUrl = window.location.href;
+
+        if (currentUrl.indexOf("?") !== -1) {
+
+            let splitUrl = currentUrl.split("?");
+            let arrAttr = splitUrl[1].split("&");
+
+            for (let i = 0; i < arrAttr.length; i++) {
+
+                if (arrAttr[i].indexOf('idpxl') !== -1) {
+
+                    let valuePxl = arrAttr[i].split("=")[1]
+                    createPXLcode(valuePxl);
+                }
+            }
+        }
+
+        function createPXLcode(pixelID) {
+            ! function (f, b, e, v, n, t, s) {
+                if (f.fbq) return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', pixelID);
+            fbq('track', 'PageView');
+            fbq('track', 'Lead');
+        }
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <img id="pb" height="1" width="1" style="display:none" src="" />
+    <script>
+        var matches = document.cookie.match(new RegExp("(?:^|; )" + 'subid' + "=([^;]*)"));
+        var subId = matches ? decodeURIComponent(matches[1]) : undefined;
+        document.getElementById("pb").src = "https://keitaro-leadar.ink/f6c793a/postback?subid=" + subId +
+            "&status=lead";
+    </script>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <header class="header">
+            <!-- <img src="img/logo.png" alt="logotype" class="logo-img"> -->
+            <svg width="140" height="62" viewBox="0 0 124.2 42" fill="#fff">
+
+                <path d="M52.2,14.7c0.1,0.1,0.4,0.3,0.7,0.3c0.5,0,1.1-0.4,1.1-1.1v-2c0-2.8-2.2-5.2-5.2-5.2h-3.7V3c0-0.9-0.4-1.7-1.2-2.4
+            c-0.7-0.5-1.6-0.8-2.5-0.7L10,6.9c-2.4,0.4-4.2,2.5-4.2,5v25c0,2.8,2.2,5.2,5.2,5.2h38c2.8,0,5.2-2.2,5.2-5.2v-2.4
+            c0-0.3-0.1-0.5-0.3-0.7c-0.1-0.1-0.4-0.3-0.7-0.3c-0.5,0-1.1,0.4-1.1,1.1V37c0,1.7-1.5,3-3,3H10.9c-1.7,0-3-1.3-3-3V11.9
+            c0-1.6,1.2-2.8,2.6-3c0.1,0,0.3,0,0.5,0h38c1.7,0,3,1.3,3,3V14C52,14.3,52.1,14.5,52.2,14.7 M20,6.7L41.9,2c0.3,0,0.7,0,0.8,0.3
+            C43,2.4,43.1,2.8,43.1,3v3.7C43.1,6.7,20,6.7,20,6.7z"></path>
+                <path d="M25.4,32c-2-0.5-4-1.1-5.7-1.7c-0.3-0.1-0.6-0.2-0.9-0.2c-3.5-0.1-6.5-2.7-6.5-7.5c0-4.8,2.9-7.8,6.9-7.8
+            c4,0,6.6,3.1,6.6,7.5c0,3.8-1.8,6.2-4.2,7.1v0.1c1.5,0.4,3.1,0.7,4.3,0.9L25.4,32z M23.8,22.4c0-3-1.5-6-4.7-6c-3.2,0-4.8,3-4.8,6.2
+            c0,3.1,1.7,6,4.7,6C22.1,28.5,23.8,25.8,23.8,22.4z"></path>
+                <path d="M37.6,27c0,1.1,0,2.1,0.1,2.9h-1.7l-0.1-1.7h0c-0.5,0.9-1.6,2-3.5,2c-1.7,0-3.7-0.9-3.7-4.7v-6.2h1.9v5.9
+            c0,2,0.6,3.4,2.4,3.4c1.3,0,2.2-0.9,2.6-1.8c0.1-0.3,0.2-0.6,0.2-1v-6.5h1.9V27z"></path>
+                <path d="M47,29.9l-0.2-1.3h-0.1c-0.6,0.8-1.7,1.6-3.3,1.6c-2.2,0-3.3-1.5-3.3-3.1c0-2.6,2.3-4,6.4-4v-0.2c0-0.9-0.2-2.5-2.4-2.5
+            c-1,0-2,0.3-2.8,0.8L41,19.9c0.9-0.6,2.2-0.9,3.5-0.9c3.3,0,4,2.2,4,4.4v4c0,0.9,0,1.8,0.2,2.6H47z M46.7,24.4
+            c-2.1,0-4.5,0.3-4.5,2.4c0,1.3,0.8,1.8,1.8,1.8c1.4,0,2.3-0.9,2.6-1.8c0.1-0.2,0.1-0.4,0.1-0.6V24.4z">
+                </path>
+                <path d="M52.1,22.1c0-1.1,0-2-0.1-2.9h1.7l0.1,1.8h0c0.5-1,1.8-2,3.5-2c1.5,0,3.8,0.9,3.8,4.5v6.4h-1.9v-6.1c0-1.7-0.6-3.1-2.5-3.1
+            c-1.3,0-2.3,0.9-2.6,2c-0.1,0.2-0.1,0.6-0.1,0.9v6.4h-1.9V22.1z"></path>
+                <path d="M66.9,16.2v3.1h2.8v1.5h-2.8v5.7c0,1.3,0.4,2.1,1.5,2.1c0.5,0,0.9-0.1,1.1-0.1l0.1,1.5c-0.4,0.2-1,0.3-1.7,0.3
+            c-0.9,0-1.6-0.3-2.1-0.8c-0.5-0.6-0.7-1.5-0.7-2.8v-5.8h-1.7v-1.5H65v-2.6L66.9,16.2z"></path>
+                <path d="M81.1,27c0,1.1,0,2.1,0.1,2.9h-1.7l-0.1-1.7h0c-0.5,0.9-1.6,2-3.5,2c-1.7,0-3.7-0.9-3.7-4.7v-6.2H74v5.9
+            c0,2,0.6,3.4,2.4,3.4c1.3,0,2.2-0.9,2.6-1.8c0.1-0.3,0.2-0.6,0.2-1v-6.5h1.9V27z"></path>
+                <path d="M84.7,22.1c0-1.1,0-2-0.1-2.9h1.7l0.1,1.7h0.1c0.6-1,1.6-2,3.3-2c1.5,0,2.6,0.9,3,2.1h0c0.3-0.6,0.7-1.1,1.2-1.4
+            c0.6-0.5,1.3-0.7,2.4-0.7c1.4,0,3.5,0.9,3.5,4.6v6.3H98v-6c0-2-0.7-3.3-2.3-3.3c-1.1,0-2,0.8-2.3,1.8c-0.1,0.3-0.2,0.6-0.2,1v6.6
+            h-1.9v-6.4c0-1.7-0.7-2.9-2.2-2.9c-1.2,0-2.1,1-2.4,1.9c-0.1,0.3-0.2,0.6-0.2,0.9v6.4h-1.9V22.1z"></path>
+                <path d="M105.8,25.2l-1.5,4.7h-2l5-14.8h2.3l5.1,14.8h-2l-1.6-4.7H105.8z M110.7,23.7l-1.5-4.3c-0.3-1-0.6-1.8-0.8-2.7h0
+            c-0.2,0.9-0.5,1.8-0.7,2.7l-1.5,4.3H110.7z"></path>
+                <path d="M119.1,15v14.8h-1.9V15H119.1z"></path>
+
+            </svg>
+        </header>
+        <main class="main">
+            <div class="container">
+                <div class="main-content">
+                    <!-- <img src="img/checked.png" class="completed-img-desk" alt="completed"> -->
+                    <!-- <img src="img/like.png" class="completed-img-mob" alt="completed"> -->
+                    <h1 class="main-heading">
+                        <span class="main-heading-1st">THANK YOU!</span> <br>
+                        <span class="main-heading-2nd">YOUR APPLICATION IS ACCEPTED</span>
+                    </h1>
+                    <p class="thnx-text">
+                        <span class="thnx-text-1st">To get full access to working with the platform, you need to wait
+                            for a call from your personal consultant.</span>
+                        <br><br>
+                        <span class="thnx-text-2nd">Your personal consultant will contact you within 24 hours.</span>
+                    </p>
+                    <div class="counter-wrapper">
+                        <div class="numbers-wrapper">
+                            <div class="numbers-block-outer">
+                                <div class="numbers-block-inner">
+                                    <span class="current-number hours">23</span>
+                                </div>
+                            </div>
+                            <span class="time-measure hours-span">hours</span>
+                        </div>
+                        <div class="numbers-wrapper">
+                            <div class="numbers-block-outer">
+                                <div class="numbers-block-inner">
+                                    <span class="current-number minutes">51</span>
+                                </div>
+                            </div>
+                            <span class="time-measure minutes-span">minutes</span>
+                        </div>
+                        <div class="numbers-wrapper">
+                            <div class="numbers-block-outer">
+                                <div class="numbers-block-inner">
+                                    <span class="current-number seconds">23</span>
+                                </div>
+                            </div>
+                            <span class="time-measure seconds-span">seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <img src="img/main-bg-desk.jpeg" class="main-bg-img-desk" alt="main background"> -->
+            <!-- <img src="img/main-bg-mob.jpeg" class="main-bg-img-mob" alt="main background"> -->
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        /* COUNTER */
+
+        var localStorage = window.localStorage,
+            startDate;
+
+        if (localStorage.getItem('startDate')) {
+            startDate = localStorage.getItem('startDate')
+        } else {
+            startDate = new Date();
+            localStorage.setItem('startDate', startDate)
+        }
+        setTimer(startDate);
+
+        function setTimer(startDate) {
+            var deadline = new Date(Date.parse(startDate) + 01 * 24 * 60 * 60 * 1000);
+            initializeClock('countdown', deadline);
+        }
+
+        // Countdown
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+            return {
+                'total': t,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            };
+        }
+
+        function initializeClock(id, endtime) {
+            var clock = document.querySelector('.counter-wrapper');
+            var hoursSpan = clock.querySelector('.hours');
+            var minutesSpan = clock.querySelector('.minutes');
+            var secondsSpan = clock.querySelector('.seconds');
+
+            function updateClock() {
+                var t = getTimeRemaining(endtime);
+
+                hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                if (t.total <= 0) {
+                    startDate = new Date()
+                    localStorage.setItem('startDate', startDate)
+                    var deadline = new Date(Date.parse(startDate) + 24 * 60 * 60 * 1000);
+                    initializeClock('countdown', deadline);
+                    clearInterval(timeinterval);
+                }
+            }
+
+            updateClock();
+            var timeinterval = setInterval(updateClock, 1000);
+        }
+    </script>
+
+</body>
+
+</html>

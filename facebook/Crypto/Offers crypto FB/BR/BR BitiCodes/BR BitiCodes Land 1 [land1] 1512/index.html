@@ -1,0 +1,3613 @@
+<!DOCTYPE html>
+<html lang="pt" style="overflow-x: hidden;">
+
+<head>
+	<meta name="robots" content="noindex,nofollow">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>
+		Biti Codes - O software de auto-negociação mais preciso da indústria
+		Crypto
+	</title>
+
+	<link rel="stylesheet" id="astra-theme-css-css" href="css/main.min.css" media="all">
+	<link rel="stylesheet" href="css/index.css">
+
+	<link rel="stylesheet" id="wp-block-library-css" href="css/style.min.css" media="all">
+
+	<link rel="stylesheet" id="hurrytimer-css" href="css/0241e27a6e599f13.css" media="all">
+	<link rel="stylesheet" id="swiper-css" href="css/swiper.min.css" media="all">
+	<link rel="stylesheet" id="qi-addons-for-elementor-grid-style-css" href="css/grid.min.css" media="all">
+	<link rel="stylesheet" id="qi-addons-for-elementor-helper-parts-style-css" href="css/helper-parts.min.css"
+		media="all">
+	<link rel="stylesheet" id="qi-addons-for-elementor-style-css" href="css/main1.min.css" media="all">
+	<link rel="stylesheet" id="elementor-frontend-css" href="css/custom-frontend-lite.min.css" media="all">
+	<link rel="stylesheet" id="elementor-post-5-css" href="css/post-5.css" media="all">
+	<link rel="stylesheet" id="elementor-pro-css" href="css/custom-pro-frontend-lite.min.css" media="all">
+	<link rel="stylesheet" id="elementor-global-css" href="css/global.css" media="all">
+	<link rel="stylesheet" id="elementor-post-16-css" href="css/post-16.css" media="all">
+	<link rel="stylesheet" id="elementor-post-312-css" href="css/post-312.css" media="all">
+	<link rel="stylesheet" id="elementor-post-304-css" href="css/post-304.css" media="all">
+
+	<link rel="stylesheet" id="google-fonts-1-css"
+		href="https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CComfortaa%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=6.0.1"
+		media="all">
+	<link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="css/brands.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="css/solid.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="css/regular.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<script src="js/jquery.min_1.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="js/jquery-migrate.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<link rel="icon" href="images/cropped-Biticodes-favicon-32x32.png" sizes="32x32">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/intlTelInput.min.css" />
+	<link rel="stylesheet" href="css/modal.css" />
+	<!-- Open Graph -->
+	<meta name="description" content="Bem-vindo!">
+	<meta name="keywords" content="Bem-vindo!">
+	<meta property="og:title" content="Bem-vindo!">
+	<meta property="og:description" content="Bem-vindo!">
+	<meta property="og:image" content="images/Biticodes-logo-4.png">
+	<meta property="og:image:width" content="450">
+	<meta property="og:image:height" content="450">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="/biticodes-pt/">
+
+
+	<!-- JS adapter -->
+	<script type="application/javascript">
+		function getCookie(name) {
+			var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+			return v ? v[2] : null;
+		}
+
+		function setCookie(name, value, days) {
+			var d = new Date;
+			d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+			document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+		}
+
+		function getSubId() {
+			var params = new URLSearchParams(document.location.search.substr(1));
+			if (!'{subid}'.match('{')) {
+				return '{subid}';
+			}
+			var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+			if (clientSubid && !clientSubid.match('>')) {
+				return clientSubid;
+			}
+			if (params.get('_subid')) {
+				return params.get('_subid')
+			}
+			if (params.get('subid')) {
+				return params.get('subid')
+			}
+			if (getCookie('subid')) {
+				return getCookie('subid');
+			}
+		}
+
+		function getToken() {
+			var params = new URLSearchParams(document.location.search.substr(1));
+			if (!'{token}'.match('{')) {
+				return '{token}';
+			}
+			var clientToken = '<?php echo isset($client) ? $client->getToken() : "" ?>';
+			if (clientToken && !clientToken.match('>')) {
+				return clientToken;
+			}
+			if (params.get('_token')) {
+				return params.get('_token')
+			}
+			if (params.get('token')) {
+				return params.get('token')
+			}
+			if (getCookie('token')) {
+				return getCookie('token');
+			}
+			return null;
+		}
+
+		if (typeof URLSearchParams === 'function') {
+			document.addEventListener("DOMContentLoaded", function (event) {
+				var params = new URLSearchParams(document.location.search.substr(1));
+				var subid = getSubId();
+				var token = getToken();
+
+				params.set('_token', token);
+				setCookie('token', token);
+				setCookie('subid', subid);
+
+				// Adds params as hidden inputs to the forms
+				document.querySelectorAll('form').forEach(function (form) {
+					params.forEach(function (v, k) {
+						var input = document.createElement('input');
+						input.type = 'hidden';
+						input.name = k;
+						input.value = v;
+
+						form.append(input);
+					});
+				});
+			})
+		}
+	</script>
+	<!-- End JS adapter -->
+
+</head>
+
+<body itemtype="https://schema.org/WebPage" itemscope="itemscope"
+	class="home page-template-default page page-id-16 wp-custom-logo qodef-qi--no-touch qi-addons-for-elementor-1.5.3 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-desktop ast-page-builder-template ast-no-sidebar astra-3.8.2 elementor-default elementor-kit-5 elementor-page elementor-page-16">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
+				visibility: hidden;
+				position: absolute;
+				left: -9999px;
+				overflow: hidden;
+			">
+		<defs>
+			<filter id="wp-duotone-dark-grayscale">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tableValues="0 0.49803921568627" />
+					<fefuncg type="table" tableValues="0 0.49803921568627" />
+					<fefuncb type="table" tableValues="0 0.49803921568627" />
+					<fefunca type="table" tableValues="1 1" />
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
+				visibility: hidden;
+				position: absolute;
+				left: -9999px;
+				overflow: hidden;
+			">
+		<defs>
+			<filter id="wp-duotone-grayscale">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tableValues="0 1" />
+					<fefuncg type="table" tableValues="0 1" />
+					<fefuncb type="table" tableValues="0 1" />
+					<fefunca type="table" tableValues="1 1" />
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+		style="
+				visibility: hidden;
+				position: absolute;
+				left: -9999px;
+				overflow: hidden;
+			">
+		<defs>
+			<filter id="wp-duotone-purple-yellow">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tableValues="0.54901960784314 0.98823529411765" />
+					<fefuncg type="table" tableValues="0 1" />
+					<fefuncb type="table" tableValues="0.71764705882353 0.25490196078431" />
+					<fefunca type="table" tableValues="1 1" />
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
+				visibility: hidden;
+				position: absolute;
+				left: -9999px;
+				overflow: hidden;
+			">
+		<defs>
+			<filter id="wp-duotone-blue-red">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tableValues="0 1" />
+					<fefuncg type="table" tableValues="0 0.27843137254902" />
+					<fefuncb type="table" tableValues="0.5921568627451 0.27843137254902" />
+					<fefunca type="table" tableValues="1 1" />
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+		style="
+				visibility: hidden;
+				position: absolute;
+				left: -9999px;
+				overflow: hidden;
+			">
+		<defs>
+			<filter id="wp-duotone-midnight">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tableValues="0 0" />
+					<fefuncg type="table" tableValues="0 0.64705882352941" />
+					<fefuncb type="table" tableValues="0 1" />
+					<fefunca type="table" tableValues="1 1" />
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
+				visibility: hidden;
+				position: absolute;
+				left: -9999px;
+				overflow: hidden;
+			">
+		<defs>
+			<filter id="wp-duotone-magenta-yellow">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tableValues="0.78039215686275 1" />
+					<fefuncg type="table" tableValues="0 0.94901960784314" />
+					<fefuncb type="table" tableValues="0.35294117647059 0.47058823529412" />
+					<fefunca type="table" tableValues="1 1" />
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+		style="
+				visibility: hidden;
+				position: absolute;
+				left: -9999px;
+				overflow: hidden;
+			">
+		<defs>
+			<filter id="wp-duotone-purple-green">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tableValues="0.65098039215686 0.40392156862745" />
+					<fefuncg type="table" tableValues="0 1" />
+					<fefuncb type="table" tableValues="0.44705882352941 0.4" />
+					<fefunca type="table" tableValues="1 1" />
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
+				visibility: hidden;
+				position: absolute;
+				left: -9999px;
+				overflow: hidden;
+			">
+		<defs>
+			<filter id="wp-duotone-blue-orange">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tableValues="0.098039215686275 1" />
+					<fefuncg type="table" tableValues="0 0.66274509803922" />
+					<fefuncb type="table" tableValues="0.84705882352941 0.41960784313725" />
+					<fefunca type="table" tableValues="1 1" />
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+	<a class="skip-link screen-reader-text" href="#content" role="link" title="Aller au contenu">
+		Aller au contenu</a>
+
+	<div class="hfeed site" id="page">
+		<div data-elementor-type="header" data-elementor-id="312"
+			class="elementor elementor-312 elementor-location-header">
+			<section
+				class="elementor-section elementor-top-section elementor-element elementor-element-6438763 bc-custom-position      elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+				data-id="6438763" data-element_type="section" data-settings="{"
+				background_background":"classic","sticky":"top","sticky_on":["desktop","laptop","tablet_extra","tablet","mobile"],"sticky_offset":0,"sticky_effects_offset":0}">
+				<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ad90685"
+						data-id="ad90685" data-element_type="column">
+						<div class="elementor-widget-wrap elementor-element-populated">
+							<div class="elementor-element elementor-element-84401e4 elementor-widget__width-auto elementor-widget elementor-widget-shortcode"
+								data-id="84401e4" data-element_type="widget" data-widget_type="shortcode.default">
+								<div class="elementor-widget-container">
+									<div class="elementor-shortcode">
+										<div id="timer"></div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-element elementor-element-536a8eb elementor-widget__width-auto elementor-widget elementor-widget-heading"
+								data-id="536a8eb" data-element_type="widget" data-widget_type="heading.default">
+								<div class="elementor-widget-container">
+									<h2 class="elementor-heading-title elementor-size-default">
+										tempo restante para as últimas
+										inscrições
+									</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section
+				class="elementor-section elementor-top-section elementor-element elementor-element-0cac04e elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+				data-id="0cac04e" data-element_type="section" data-settings="{" background_background":"classic"}">
+				<div class="elementor-container elementor-column-gap-default"
+					style="display: flex; justify-content: center;">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-02b55ed"
+						data-id="02b55ed" data-element_type="column">
+						<div class="elementor-widget-wrap elementor-element-populated">
+							<div class="elementor-element elementor-element-725a56d elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
+								data-id="725a56d" data-element_type="widget" data-widget_type="theme-site-logo.default">
+								<div class="elementor-widget-container" style="display: flex; justify-content: center;">
+									<a href="javascript:void(0)" style="display: flex; justify-content: center;">
+										<img width="402" height="102" src="images/Biticodes-logo-4.png"
+											class="attachment-full size-full" alt="biti codes logo" loading="lazy"
+											sizes="(max-width: 402px) 100vw, 402px">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a63e940" data-id="a63e940" data-element_type="column">
+						<div class="elementor-widget-wrap elementor-element-populated">
+							<div class="elementor-element elementor-element-52636d2 elementor-widget elementor-widget-wpml-language-switcher" data-id="52636d2" data-element_type="widget" data-widget_type="wpml-language-switcher.default"></div>
+						</div>
+					</div> -->
+				</div>
+			</section>
+		</div>
+		<div id="content" class="site-content">
+			<div class="ast-container">
+				<div id="primary" class="content-area primary">
+					<main id="main" class="site-main">
+						<article class="post-16 page type-page status-publish ast-article-single" id="post-16"
+							itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+							<header class="entry-header ast-header-without-markup"></header>
+							<!-- .entry-header -->
+
+							<div class="entry-content clear" itemprop="text">
+								<div data-elementor-type="wp-page" data-elementor-id="16"
+									class="elementor elementor-16">
+									<section
+										class="elementor-section elementor-top-section elementor-element elementor-element-5b57fcb elementor-section-boxed elementor-section-height-default first-section elementor-section-height-default"
+										data-id="5b57fcb" data-element_type="section" data-settings="{"
+										background_background":"classic"}" style="min-height: 100vh;">
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-19c10db"
+												data-id="19c10db" data-element_type="column">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-0f912b1 elementor-widget elementor-widget-html"
+														data-id="0f912b1" data-element_type="widget"
+														data-widget_type="html.default">
+														<div class="elementor-widget-container"></div>
+													</div>
+													<div class="elementor-element elementor-element-516d908 elementor-widget elementor-widget-heading"
+														data-id="516d908" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h1 class="elementor-heading-title elementor-size-default">
+																BitiCodes -
+																O software
+																de
+																auto-negociação
+																mais preciso
+																da indústria
+																Crypto
+															</h1>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-6c52fa1 elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet_extra elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-text-editor"
+														data-id="6c52fa1" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															O software de
+															auto-negociação
+															mais preciso da
+															indústria Crypto
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-b025554 elementor-widget elementor-widget-html"
+														data-id="b025554" data-element_type="widget"
+														data-widget_type="html.default">
+														<div class="elementor-widget-container">
+															<div class="form-widget">
+																<div id="reg-form" class="flex flex-column">
+																	<div
+																		style="margin-left: auto; margin-right: auto; width: 100%; max-width: 360px; height: 350px;">
+																		<div id="req-form-section"
+																			class="form-container">
+																			<div class="form-title">Rejoignez le groupe
+																				de La Formule Française!</div>
+
+																			<form id="formTop" method="post"
+																				autocomplete="off">
+																				<div data-subject="wrapper">
+																					<div id="first_section"
+																						class="slide-wrapper">
+																						<div class="form-group">
+																							<input name="first_name"
+																								id="first_name"
+																								placeholder="Prénom"
+																								class="form-control"
+																								required />
+																						</div>
+
+																						<div class="form-group">
+																							<input name="last_name"
+																								id="last_name"
+																								placeholder="Nom"
+																								class="form-control"
+																								required />
+																						</div>
+
+																						<div class="form-group">
+																							<input name="email"
+																								id="email"
+																								placeholder="Email"
+																								class="form-control"
+																								required />
+																						</div>
+
+																						<div class="form-group">
+																							<!-- <input class="area_code" name="area_code" type="hidden" />
+																						<input class="phone form-control" name="phone" type="text" /> -->
+																							<input type="tel"
+																								id="phone1"
+																								name="phone1"
+																								class="form-control phone-1"
+																								placeholder required />
+																						</div>
+
+																						<div class="form-group">
+																							<button type="submit"
+																								class="form-btn">COMMENCEZ
+																								MAINTENANT</button>
+																						</div>
+																					</div>
+																				</div>
+																				<!-- wrapper -->
+																			</form>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-7c1841a elementor-mobile-align-center elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+														data-id="7c1841a" data-element_type="widget"
+														data-widget_type="icon-list.default">
+														<div class="elementor-widget-container">
+															<link rel="stylesheet"
+																href="css/custom-widget-icon-list.min.css">
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<section
+										class="elementor-section elementor-top-section elementor-element elementor-element-9ca09c5 elementor-section-boxed elementor-section-height-default elementor-section-height-default second-section"
+										data-id="9ca09c5" data-element_type="section">
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-605064e"
+												data-id="605064e" data-element_type="column">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-8882041 elementor-widget elementor-widget-image"
+														data-id="8882041" data-element_type="widget"
+														data-widget_type="image.default">
+														<div class="elementor-widget-container">
+															<img width="1920" height="904" src="images/Mockup-1.png"
+																class="attachment-full size-full"
+																alt="automated trading strategy" loading="lazy"
+																srcset="images/Mockup-1.png 1920w, images/Mockup-1-300x141.png 300w, images/Mockup-1-1024x482.png 1024w, images/Mockup-1-768x362.png 768w, images/Mockup-1-1536x723.png 1536w"
+																sizes="(max-width: 1920px) 100vw, 1920px">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<section
+										class="elementor-section elementor-top-section elementor-element elementor-element-c615a8f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+										data-id="c615a8f" data-element_type="section">
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5fef1d8"
+												data-id="5fef1d8" data-element_type="column">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-a8865ea elementor-widget elementor-widget-heading"
+														data-id="a8865ea" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																A BitiCodes
+																é um
+																software de
+																auto-negociação
+																poderoso,
+																inovador e
+																completo
+																projetado
+																para captar
+																oportunidades
+																no mercado.
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-033221f elementor-widget elementor-widget-heading"
+														data-id="033221f" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																Funciona
+																colocando
+																automaticamente
+																as trocas na
+																sua conta
+																para que não
+																tenha de o
+																fazer. As
+																encomendas
+																são
+																desencadeadas
+																por bots de
+																negociação
+																algorítmicos
+																altamente
+																precisos
+																para
+																fortalecer
+																as suas
+																hipóteses de
+																fazer um
+																comércio
+																rentável.
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-18d3770 elementor-widget elementor-widget-heading"
+														data-id="18d3770" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																A BitiCodes
+																é um
+																software de
+																negociação
+																automatizado
+																feito para
+																garantir a
+																melhor
+																experiência
+																de
+																negociação e
+																aplicar as
+																estratégias
+																de
+																negociação
+																mais
+																sofisticadas.
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-5e9ea28 elementor-testimonial--layout-image_stacked elementor-testimonial--mobile-align-center elementor-testimonial--skin-default elementor-testimonial--align-center elementor-pagination-type-bullets elementor-widget elementor-widget-testimonial-carousel"
+														data-id="5e9ea28" data-element_type="widget" data-settings="{"
+														slides_per_view_mobile":"1","pagination":"bullets","speed":500,"autoplay":"yes","autoplay_speed":5000,"pause_on_hover":"yes","pause_on_interaction":"yes","space_between":{"unit":"px","size":10,"sizes":[]},"space_between_laptop":{"unit":"px","size":10,"sizes":[]},"space_between_tablet_extra":{"unit":"px","size":10,"sizes":[]},"space_between_tablet":{"unit":"px","size":10,"sizes":[]},"space_between_mobile":{"unit":"px","size":10,"sizes":[]}}"
+														data-widget_type="testimonial-carousel.default">
+														<div class="elementor-widget-container">
+															<link rel="stylesheet" href="css/widget-carousel.min.css">
+															<div class="elementor-swiper">
+																<div
+																	class="elementor-main-swiper swiper-container swiper-1">
+																	<div class="swiper-wrapper">
+																		<div class="swiper-slide">
+																			<div class="elementor-testimonial">
+																				<div
+																					class="elementor-testimonial__footer">
+																					<div
+																						class="elementor-testimonial__image">
+																						<img src="images/Untitled-1.png"
+																							alt="Premium Technology">
+																					</div>
+																					<cite
+																						class="elementor-testimonial__cite"><span
+																							class="elementor-testimonial__name">Tecnologia
+																							Premium</span></cite>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="swiper-slide">
+																			<div class="elementor-testimonial">
+																				<div
+																					class="elementor-testimonial__footer">
+																					<div
+																						class="elementor-testimonial__image">
+																						<img src="images/Untitled-2.png"
+																							alt="Accurate results ">
+																					</div>
+																					<cite
+																						class="elementor-testimonial__cite"><span
+																							class="elementor-testimonial__name">Resultados
+																							precisos
+																						</span></cite>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="swiper-slide">
+																			<div class="elementor-testimonial">
+																				<div
+																					class="elementor-testimonial__footer">
+																					<div
+																						class="elementor-testimonial__image">
+																						<img src="images/Untitled-3.png"
+																							alt="High-quality performance ">
+																					</div>
+																					<cite
+																						class="elementor-testimonial__cite"><span
+																							class="elementor-testimonial__name">Desempenho
+																							de
+																							alta
+																							qualidade
+																						</span></cite>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="swiper-slide">
+																			<div class="elementor-testimonial">
+																				<div
+																					class="elementor-testimonial__footer">
+																					<div
+																						class="elementor-testimonial__image">
+																						<img src="images/Untitled-4.png"
+																							alt="Multi asset trading software ">
+																					</div>
+																					<cite
+																						class="elementor-testimonial__cite"><span
+																							class="elementor-testimonial__name">Software
+																							de
+																							negociação
+																							de
+																							vários
+																							ativos
+																						</span></cite>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="swiper-slide">
+																			<div class="elementor-testimonial">
+																				<div
+																					class="elementor-testimonial__footer">
+																					<div
+																						class="elementor-testimonial__image">
+																						<img src="images/Untitled-6.png"
+																							alt="High-tech trading tools ">
+																					</div>
+																					<cite
+																						class="elementor-testimonial__cite"><span
+																							class="elementor-testimonial__name">Ferramentas
+																							de
+																							negociação
+																							de
+																							alta
+																							tecnologia
+																						</span></cite>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="swiper-slide">
+																			<div class="elementor-testimonial">
+																				<div
+																					class="elementor-testimonial__footer">
+																					<div
+																						class="elementor-testimonial__image">
+																						<img src="images/Untitled-5.png"
+																							alt="Save time and money">
+																					</div>
+																					<cite
+																						class="elementor-testimonial__cite"><span
+																							class="elementor-testimonial__name">Poupe
+																							tempo
+																							e
+																							dinheiro</span></cite>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="swiper-pagination"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-0e2a666 elementor-mobile-align-center elementor-align-center form-opener elementor-widget elementor-widget-button"
+														data-id="0e2a666" data-element_type="widget"
+														data-widget_type="button.default">
+														<div class="elementor-widget-container">
+															<div class="elementor-button-wrapper">
+																<a href="javascript:void(0)"
+																	class="elementor-button-link elementor-button elementor-size-lg scrl"
+																	role="button">
+																	<span class="elementor-button-content-wrapper">
+																		<span class="elementor-button-text">REGISTE-SE
+																			DE
+																			FORMA
+																			SEGURA
+																			AGORA</span>
+																	</span>
+																</a>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-47daddd elementor-mobile-align-center elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+														data-id="47daddd" data-element_type="widget"
+														data-widget_type="icon-list.default">
+														<div class="elementor-widget-container">
+															<ul class="elementor-icon-list-items">
+																<li class="elementor-icon-list-item">
+																	<span class="elementor-icon-list-icon">
+																		<i aria-hidden="true" class="fas fa-bell"></i>
+																	</span>
+																	<span class="elementor-icon-list-text">AJA
+																		RÁPIDO
+																		-
+																		apenas
+																		7
+																		contas
+																		restantes!</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-a72f42d elementor-hidden-mobile elementor-hidden-tablet elementor-widget elementor-widget-image-carousel"
+														data-id="a72f42d" data-element_type="widget" data-settings="{"
+														slides_to_show_mobile":"3","navigation":"none","image_spacing_custom":{"unit":"px","size":100,"sizes":[]},"slides_to_show_tablet":"3","autoplay_speed":2000,"autoplay":"yes","pause_on_hover":"yes","pause_on_interaction":"yes","infinite":"yes","speed":500}"
+														data-widget_type="image-carousel.default">
+														<div class="elementor-widget-container">
+															<div class="elementor-image-carousel-wrapper swiper-container swiper-3"
+																dir="ltr">
+																<div class="elementor-image-carousel swiper-wrapper">
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/258-2584014_verified-by-visa-png.png"
+																				alt="verrfied by visa">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/2560px-Apple_Pay_logo.svg_.png"
+																				alt="apple pay logo">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/mastercard-logo.1.png"
+																				alt="mastercard Secure Code">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/comodo.png" alt="comodo">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/google-pay-logo-0.png"
+																				alt="Google Pay">
+																		</figure>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div
+														class="elementor-element elementor-element-3026e7e elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet_extra elementor-widget elementor-widget-image-carousel">
+														<div class="elementor-widget-container">
+															<div class="elementor-image-carousel-wrapper swiper-container swiper-3"
+																dir="ltr">
+																<div class="elementor-image-carousel swiper-wrapper">
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/258-2584014_verified-by-visa-png.png"
+																				alt="verrfied by visa">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/2560px-Apple_Pay_logo.svg_.png"
+																				alt="apple pay logo">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/mastercard-logo.1.png"
+																				alt="mastercard Secure Code">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/comodo.png" alt="comodo">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/google-pay-logo-0.png"
+																				alt="Google Pay">
+																		</figure>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<section
+										class="elementor-section elementor-top-section elementor-element elementor-element-3d57e85 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+										data-id="3d57e85" data-element_type="section" data-settings="{"
+										background_background":"classic"}">
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-aa75f69"
+												data-id="aa75f69" data-element_type="column">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-f776bb4 elementor-widget elementor-widget-heading"
+														data-id="f776bb4" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																Não é
+																preciso ter
+																experiência
+																comercial
+																para ter
+																lucro.
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-5a2d830 elementor-widget elementor-widget-text-editor"
+														data-id="5a2d830" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															Todos os dias,
+															cada vez mais
+															pessoas entram
+															nos mercados
+															financeiros para
+															desenvolver uma
+															maior
+															estabilidade
+															financeira. O
+															conceito de
+															poupar dinheiro
+															todos os meses
+															tornou-se
+															obsoleto quando
+															as pessoas
+															perceberam que é
+															mais fácil
+															ganhar $10.000
+															do que poupar
+															$10.000. Com
+															mais pessoas a
+															compreender este
+															conceito, o
+															investimento
+															tornou-se uma
+															forma comum de
+															as pessoas
+															fazerem dinheiro
+															e, em muitos
+															casos, tornou-se
+															mesmo uma
+															principal fonte
+															de rendimento.
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-00ca13d elementor-widget elementor-widget-text-editor"
+														data-id="00ca13d" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															Muitas pessoas
+															afastam-se do
+															investimento
+															porque assumem
+															que
+															“perderam
+															a sua
+															oportunidade”,
+															mas a realidade
+															é que estamos
+															apenas no
+															início, e ainda
+															há um longo
+															caminho a
+															percorrer. Os
+															principais
+															analistas
+															preveem que o
+															Bitcoin chegará
+															aos 100.000
+															dólares até ao
+															final do ano,
+															por isso, mesmo
+															que esteja a
+															comprar Bitcoin
+															a um preço
+															elevado, está a
+															olhar para
+															retornos
+															elevados a longo
+															prazo.
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-1e5ad53 elementor-widget elementor-widget-text-editor"
+														data-id="1e5ad53" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															Com a tecnologia
+															inovadora da
+															BitiCodes, não
+															precisará de ter
+															experiência de
+															negociação
+															prévia para
+															obter lucro. O
+															software é
+															projetado para
+															captar
+															oportunidades no
+															mercado, e
+															devido à sua
+															tecnologia
+															altamente
+															precisa, é
+															considerado
+															muito mais
+															seguro do que
+															negociar por
+															conta própria,
+															independentemente
+															do seu nível de
+															experiência. As
+															pessoas
+															cometeram erros
+															comerciais
+															porque as suas
+															emoções tomaram
+															o melhor deles,
+															quer vendendo
+															demasiado rápido
+															ou comprando
+															demasiado tarde
+															por medo de
+															perder, a Biti
+															Codes pode
+															ajudar a
+															equilibrar o
+															lado emocional
+															da negociação
+															com uma
+															abordagem mais
+															calculada e
+															lógica.
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-b51fbcc elementor-widget elementor-widget-text-editor"
+														data-id="b51fbcc" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															Os mercados são
+															tão voláteis,
+															com pessoas como
+															Elon Musk e Jeff
+															Bezos, que podem
+															mudar a direção
+															do mercado
+															apenas por um
+															tweet, é seguro
+															dizer que mesmo
+															os comerciantes
+															mais confiantes
+															precisam de
+															algum tipo de
+															manta de
+															segurança para
+															proteger os seus
+															fundos. É por
+															isso que as
+															pessoas usam
+															software de
+															auto-negociação,
+															especialmente
+															quando se lida
+															com crypto.
+															Trading Crypto é
+															indiscutivelmente
+															o mercado mais
+															volátil, e
+															igualmente, é um
+															mercado que pode
+															gerar alguns dos
+															maiores
+															retornos,
+															transformando as
+															pessoas em
+															milionários
+															noturnos. Mesmo
+															as melhores
+															ações
+															disponíveis como
+															Apple, Amazon e
+															Tesla não podem
+															gerar a mesma
+															quantidade de
+															retornos rápidos
+															que certas
+															Criptomoedas
+															podem.
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-fd60181 elementor-widget elementor-widget-heading"
+														data-id="fd60181" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																Quando
+																perceberes
+																que é mais
+																fácil ganhar
+																$10.000 do
+																que poupar
+																$10.000,
+																então podes
+																ter sucesso.
+															</h2>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<section
+										class="elementor-section elementor-top-section elementor-element elementor-element-201ed30 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+										data-id="201ed30" data-element_type="section">
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e398721"
+												data-id="e398721" data-element_type="column">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-22697fd elementor-widget__width-initial elementor-widget elementor-widget-image"
+														data-id="22697fd" data-element_type="widget"
+														data-widget_type="image.default">
+														<div class="elementor-widget-container">
+															<img width="1454" height="1082"
+																src="images/laptop-no-shadow3.png"
+																class="attachment-full size-full"
+																alt="Biti Codes - automated trading" loading="lazy">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<section
+										class="elementor-section elementor-top-section elementor-element elementor-element-a5744a6 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+										data-id="a5744a6" data-element_type="section">
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a1efd8d"
+												data-id="a1efd8d" data-element_type="column">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-bfecc97 elementor-widget elementor-widget-heading"
+														data-id="bfecc97" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																O que é
+																BitiCodes &
+																como pode
+																ajudá-lo a
+																fazer
+																transações
+																de sucesso
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-186c923 elementor-widget elementor-widget-text-editor"
+														data-id="186c923" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															A Biti Codes é
+															um dos softwares
+															de
+															auto-negociação
+															mais inovadores
+															da indústria
+															para os
+															comerciantes
+															principiantes e
+															experientes.
+															Permite uma das
+															experiências de
+															negociação mais
+															sem esforço
+															graças a
+															funcionalidades
+															altamente
+															precisas. Mesmo
+															os comerciantes
+															mais experientes
+															não podem
+															processar
+															informação tão
+															rapidamente e
+															simultaneamente
+															como um
+															computador pode.
+															Graças ao seu
+															algoritmo forte,
+															a máquina de
+															computação
+															quântica
+															BitiCodes foi
+															concebida para
+															tomar decisões
+															comerciais mais
+															rápidas e
+															eficientes do
+															que os nossos
+															cérebros alguma
+															vez poderiam.
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-c9bfab0 elementor-widget elementor-widget-text-editor"
+														data-id="c9bfab0" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															BitiCodes é um
+															software de
+															negociação de
+															automóveis
+															multi-activos
+															Crypto com
+															acesso a
+															Bitcoin,
+															Ethereum,
+															Solana, XRP,
+															Cardano e muitas
+															mais das
+															criptomoedas
+															mais populares.
+															Oferece acesso a
+															alguns dos
+															instrumentos
+															mais populares
+															da indústria. O
+															software é
+															multifuncional e
+															totalmente
+															personalizável
+															para atender às
+															necessidades de
+															cada um dos
+															traders.
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-c9c1c90 elementor-widget elementor-widget-text-editor"
+														data-id="c9c1c90" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															Oferece acesso a
+															alguns dos
+															instrumentos
+															mais populares
+															da indústria. O
+															software é
+															multifuncional e
+															totalmente
+															personalizável
+															para atender às
+															necessidades de
+															cada
+															comerciante.
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-e04df23 elementor-widget elementor-widget-text-editor"
+														data-id="e04df23" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															Os BitiCodes
+															destacam-se de
+															outros sistemas
+															de negociação
+															automatizados
+															pela sua
+															fiabilidade e
+															funcionalidade,
+															que permitem
+															aplicar a mais
+															sofisticada
+															estratégia de
+															negociação
+															automatizada ou
+															apenas parar
+															perdas ajustando
+															entradas e
+															saídas.
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-38dc8cf elementor-widget elementor-widget-image"
+														data-id="38dc8cf" data-element_type="widget"
+														data-widget_type="image.default">
+														<div class="elementor-widget-container">
+															<img width="1503" height="889"
+																src="images/biticodes-mockup-1.png"
+																class="attachment-full size-full"
+																alt="Biti Codes - automated trading systems"
+																loading="lazy"
+																sizes="(max-width: 1503px) 100vw, 1503px">
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-40341ac elementor-testimonial--skin-bubble elementor-testimonial--layout-image_above elementor-testimonial--mobile-align-center testimonial-text elementor-testimonial--align-center elementor-pagination-type-bullets elementor-widget elementor-widget-testimonial-carousel"
+														data-id="40341ac" data-element_type="widget" data-settings="{"
+														slides_per_view_mobile":"1","pagination":"bullets","speed":500,"autoplay":"yes","autoplay_speed":5000,"pause_on_hover":"yes","pause_on_interaction":"yes","space_between":{"unit":"px","size":10,"sizes":[]},"space_between_laptop":{"unit":"px","size":10,"sizes":[]},"space_between_tablet_extra":{"unit":"px","size":10,"sizes":[]},"space_between_tablet":{"unit":"px","size":10,"sizes":[]},"space_between_mobile":{"unit":"px","size":10,"sizes":[]}}"
+														data-widget_type="testimonial-carousel.default">
+														<div class="elementor-widget-container">
+															<div class="elementor-swiper">
+																<div
+																	class="elementor-main-swiper swiper-container swiper-5">
+																	<div class="swiper-wrapper">
+																		<div class="swiper-slide">
+																			<div class="elementor-testimonial">
+																				<div
+																					class="elementor-testimonial__content">
+																					<div
+																						class="elementor-testimonial__text">
+																						A
+																						BitiCodes
+																						é
+																						um
+																						dos
+																						softwares
+																						de
+																						auto-negociação
+																						mais
+																						inovadores
+																						do
+																						setor,
+																						a
+																						sua
+																						multi
+																						funcionalidade
+																						e
+																						funcionalidades
+																						de
+																						alta
+																						tecnologia
+																						tornaram-no
+																						um
+																						must
+																						have
+																						tanto
+																						para
+																						os
+																						comerciantes
+																						iniciantes
+																						como
+																						para
+																						os
+																						comerciantes
+																						experientes
+																						que
+																						procuram
+																						obter
+																						lucro
+																						nos
+																						mercados
+																						financeiros.
+																						A
+																						Biti
+																						Codes
+																						oferece
+																						algumas
+																						das
+																						funcionalidades
+																						mais
+																						de
+																						ponta
+																						projetadas
+																						para
+																						captar
+																						várias
+																						oportunidades
+																						de
+																						negociação
+																						ao
+																						mesmo
+																						tempo.
+																					</div>
+																				</div>
+																				<div
+																					class="elementor-testimonial__footer">
+																					<div
+																						class="elementor-testimonial__image">
+																						<img src="images/checkmark.png"
+																							alt="Innovative trading software">
+																					</div>
+																					<cite
+																						class="elementor-testimonial__cite"><span
+																							class="elementor-testimonial__name">Software
+																							de
+																							negociação
+																							inovador</span></cite>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="swiper-slide">
+																			<div class="elementor-testimonial">
+																				<div
+																					class="elementor-testimonial__content">
+																					<div
+																						class="elementor-testimonial__text">
+																						Após
+																						o
+																						registo,
+																						cada
+																						utilizador
+																						BitiCodes
+																						obtém
+																						um
+																						gestor
+																						de
+																						conta
+																						pessoal
+																						dedicado.
+																						O
+																						gestor
+																						de
+																						conta
+																						pode
+																						responder
+																						a
+																						todos
+																						os
+																						inquéritos,
+																						incluindo
+																						questões
+																						relacionadas
+																						com
+																						a
+																						negociação
+																						ou
+																						dificuldades
+																						técnicas
+																						de
+																						conta.
+																						Pode
+																						contactar
+																						o
+																						seu
+																						gestor
+																						de
+																						conta
+																						por
+																						e-mail,
+																						telefone
+																						ou
+																						por
+																						serviços
+																						de
+																						mensagens
+																						instantâneas,
+																						incluindo
+																						WhatsApp,
+																						Telegram
+																						e
+																						muito
+																						mais.
+																					</div>
+																				</div>
+																				<div
+																					class="elementor-testimonial__footer">
+																					<div
+																						class="elementor-testimonial__image">
+																						<img src="images/checkmark.png"
+																							alt="Personal account manager ">
+																					</div>
+																					<cite
+																						class="elementor-testimonial__cite"><span
+																							class="elementor-testimonial__name">Gestor
+																							de
+																							conta
+																							pessoal
+																						</span></cite>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="swiper-slide">
+																			<div class="elementor-testimonial">
+																				<div
+																					class="elementor-testimonial__content">
+																					<div
+																						class="elementor-testimonial__text">
+																						Os
+																						BitiCodes
+																						são
+																						compatíveis
+																						em
+																						todos
+																						os
+																						dispositivos,
+																						incluindo
+																						desktop,
+																						mobile
+																						e
+																						tablet,
+																						para
+																						que
+																						possa
+																						manter
+																						um
+																						olho
+																						na
+																						sua
+																						conta
+																						a
+																						qualquer
+																						momento
+																						e
+																						em
+																						qualquer
+																						lugar.
+																						Tudo
+																						o
+																						que
+																						precisa
+																						é
+																						de
+																						uma
+																						ligação
+																						wi-fi
+																						ou
+																						de
+																						dados
+																						móveis.
+																						O
+																						acesso
+																						à
+																						plataforma
+																						é
+																						rápido
+																						e
+																						fácil
+																						para
+																						que
+																						possa
+																						monitorizar
+																						a
+																						sua
+																						conta
+																						num
+																						instante.
+																					</div>
+																				</div>
+																				<div
+																					class="elementor-testimonial__footer">
+																					<div
+																						class="elementor-testimonial__image">
+																						<img src="images/checkmark.png"
+																							alt="Compatible on all devices">
+																					</div>
+																					<cite
+																						class="elementor-testimonial__cite"><span
+																							class="elementor-testimonial__name">Compatível
+																							em
+																							todos
+																							os
+																							dispositivos</span></cite>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="swiper-slide">
+																			<div class="elementor-testimonial">
+																				<div
+																					class="elementor-testimonial__content">
+																					<div
+																						class="elementor-testimonial__text">
+																						Os
+																						BitiCodes
+																						são
+																						compatíveis
+																						em
+																						todos
+																						os
+																						dispositivos,
+																						incluindo
+																						desktop,
+																						mobile
+																						e
+																						tablet,
+																						para
+																						que
+																						possa
+																						manter
+																						um
+																						olho
+																						na
+																						sua
+																						conta
+																						a
+																						qualquer
+																						momento
+																						e
+																						em
+																						qualquer
+																						lugar.
+																						Tudo
+																						o
+																						que
+																						precisa
+																						é
+																						de
+																						uma
+																						ligação
+																						wi-fi
+																						ou
+																						de
+																						dados
+																						móveis.
+																						O
+																						acesso
+																						à
+																						plataforma
+																						é
+																						rápido
+																						e
+																						fácil
+																						para
+																						que
+																						possa
+																						monitorizar
+																						a
+																						sua
+																						conta
+																						num
+																						instante.
+																					</div>
+																				</div>
+																				<div
+																					class="elementor-testimonial__footer">
+																					<div
+																						class="elementor-testimonial__image">
+																						<img src="images/checkmark.png"
+																							alt="Low minimum deposit ">
+																					</div>
+																					<cite
+																						class="elementor-testimonial__cite"><span
+																							class="elementor-testimonial__name">Depósito
+																							mínimo
+																							baixo
+																						</span></cite>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="swiper-slide">
+																			<div class="elementor-testimonial">
+																				<div
+																					class="elementor-testimonial__content">
+																					<div
+																						class="elementor-testimonial__text">
+																						Os
+																						BitiCodes
+																						são
+																						confiados
+																						por
+																						milhares
+																						de
+																						pessoas
+																						em
+																						todo
+																						o
+																						mundo
+																						devido
+																						aos
+																						seus
+																						resultados
+																						comprovados
+																						com
+																						96,2%
+																						de
+																						precisão.
+																						As
+																						funcionalidades
+																						inovadoras
+																						da
+																						plataforma
+																						tornaram-na
+																						num
+																						dos
+																						softwares
+																						de
+																						negociação
+																						automóvel
+																						mais
+																						confiáveis
+																						e
+																						de
+																						ponta
+																						do
+																						setor,
+																						com
+																						novos
+																						clientes
+																						a
+																						iniciarem
+																						os
+																						seus
+																						investimentos
+																						diariamente.
+																					</div>
+																				</div>
+																				<div
+																					class="elementor-testimonial__footer">
+																					<div
+																						class="elementor-testimonial__image">
+																						<img src="images/checkmark.png"
+																							alt="Accurate results">
+																					</div>
+																					<cite
+																						class="elementor-testimonial__cite"><span
+																							class="elementor-testimonial__name">Resultados
+																							precisos</span></cite>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="swiper-slide">
+																			<div class="elementor-testimonial">
+																				<div
+																					class="elementor-testimonial__content">
+																					<div
+																						class="elementor-testimonial__text">
+																						Os
+																						BitiCodes
+																						estão
+																						altamente
+																						protegidos,
+																						os
+																						seus
+																						dados
+																						pessoais
+																						permanecem
+																						privados
+																						e
+																						pode
+																						financiar
+																						e
+																						retirar-se
+																						de
+																						forma
+																						segura
+																						e
+																						eficiente.
+																						O
+																						software
+																						utiliza
+																						tecnologia
+																						superior
+																						para
+																						garantir
+																						que
+																						os
+																						seus
+																						fundos
+																						são
+																						mantidos
+																						seguros
+																						e
+																						que
+																						as
+																						suas
+																						hipóteses
+																						de
+																						obter
+																						lucro
+																						são
+																						grandes.
+																					</div>
+																				</div>
+																				<div
+																					class="elementor-testimonial__footer">
+																					<div
+																						class="elementor-testimonial__image">
+																						<img src="images/checkmark.png"
+																							alt="Security guaranteed ">
+																					</div>
+																					<cite
+																						class="elementor-testimonial__cite"><span
+																							class="elementor-testimonial__name">Segurança
+																							garantida
+																						</span></cite>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="swiper-pagination"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-f736c12 elementor-mobile-align-center elementor-align-center elementor-widget elementor-widget-button"
+														data-id="f736c12" data-element_type="widget"
+														data-widget_type="button.default">
+														<div class="elementor-widget-container">
+															<div class="elementor-button-wrapper">
+																<a href="javascript:void(0)"
+																	class="elementor-button-link elementor-button elementor-size-lg scrl"
+																	role="button">
+																	<span class="elementor-button-content-wrapper">
+																		<span class="elementor-button-text">REGISTE-SE
+																			DE
+																			FORMA
+																			SEGURA
+																			AGORA</span>
+																	</span>
+																</a>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-5d3d796 elementor-mobile-align-center elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+														data-id="5d3d796" data-element_type="widget"
+														data-widget_type="icon-list.default">
+														<div class="elementor-widget-container">
+															<ul class="elementor-icon-list-items">
+																<li class="elementor-icon-list-item">
+																	<span class="elementor-icon-list-icon">
+																		<i aria-hidden="true" class="fas fa-bell"></i>
+																	</span>
+																	<span class="elementor-icon-list-text">AJA
+																		RÁPIDO
+																		-
+																		apenas
+																		7
+																		contas
+																		restantes!</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<section
+										class="elementor-section elementor-top-section elementor-element elementor-element-d6d5a1f elementor-hidden-mobile elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+										data-id="d6d5a1f" data-element_type="section" data-settings="{"
+										background_background":"classic"}">
+										<div class="elementor-background-overlay"></div>
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-3dbfa8d"
+												data-id="3dbfa8d" data-element_type="column" data-settings="{"
+												background_background":"classic"}">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-860cc7c elementor-widget elementor-widget-heading"
+														data-id="860cc7c" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																REGISTO
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-097b5f6 elementor-widget elementor-widget-text-editor"
+														data-id="097b5f6" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															Registre-se para
+															uma conta
+															BitiCodes
+															clicando no
+															botão
+															‘INSCREVA-SE
+															COM SEGURANÇA
+															AGORA’
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-8863aed"
+												data-id="8863aed" data-element_type="column" data-settings="{"
+												background_background":"classic"}">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-a64115c elementor-widget elementor-widget-heading"
+														data-id="a64115c" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																CONTA DE
+																FUNDO
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-6a9a968 elementor-widget elementor-widget-text-editor"
+														data-id="6a9a968" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															Financie a sua
+															conta com um
+															depósito tão
+															baixo como $250,
+															o processo é
+															rápido, seguro e
+															fácil.
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9b81657"
+												data-id="9b81657" data-element_type="column" data-settings="{"
+												background_background":"classic"}">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-fe628ad elementor-widget elementor-widget-heading"
+														data-id="fe628ad" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																ESTÁ PRONTO!
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-f4efff2 elementor-widget elementor-widget-text-editor"
+														data-id="f4efff2" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															Assim que a sua
+															conta for
+															financiada, está
+															pronto para
+															começar a fazer
+															lucros! O seu
+															gestor de conta
+															pode ajudá-lo a
+															começar!
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<section
+										class="elementor-section elementor-top-section elementor-element elementor-element-0503e93 elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet_extra elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+										data-id="0503e93" data-element_type="section" data-settings="{"
+										background_background":"classic"}">
+										<div class="elementor-background-overlay"></div>
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0fd9b32"
+												data-id="0fd9b32" data-element_type="column" data-settings="{"
+												background_background":"classic"}">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-32b7847 elementor-widget elementor-widget-heading"
+														data-id="32b7847" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																REGISTO
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-e8f249a elementor-widget elementor-widget-text-editor"
+														data-id="e8f249a" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															Registre-se para
+															uma conta
+															BitiCodes
+															clicando no
+															botão
+															‘INSCREVA-SE
+															COM SEGURANÇA
+															AGORA’
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-e496e27"
+												data-id="e496e27" data-element_type="column" data-settings="{"
+												background_background":"classic"}">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-0333641 elementor-widget elementor-widget-heading"
+														data-id="0333641" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																CONTA DE
+																FUNDO
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-e7c7be0 elementor-widget elementor-widget-text-editor"
+														data-id="e7c7be0" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															Financie a sua
+															conta com um
+															depósito tão
+															baixo como $250,
+															o processo é
+															rápido, seguro e
+															fácil.
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-aa9b8a9"
+												data-id="aa9b8a9" data-element_type="column" data-settings="{"
+												background_background":"classic"}">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-46194c1 elementor-widget elementor-widget-heading"
+														data-id="46194c1" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																ESTÁ PRONTO!
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-7660133 elementor-widget elementor-widget-text-editor"
+														data-id="7660133" data-element_type="widget"
+														data-widget_type="text-editor.default">
+														<div class="elementor-widget-container">
+															Assim que a sua
+															conta for
+															financiada, está
+															pronto para
+															começar a fazer
+															lucros! O seu
+															gestor de conta
+															pode ajudá-lo a
+															começar!
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<section
+										class="elementor-section elementor-top-section elementor-element elementor-element-990e312 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+										data-id="990e312" data-element_type="section">
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4563a47"
+												data-id="4563a47" data-element_type="column">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-69f802a elementor-widget elementor-widget-accordion"
+														data-id="69f802a" data-element_type="widget"
+														data-widget_type="accordion.default">
+														<div class="elementor-widget-container">
+															<div class="elementor-accordion" role="tablist">
+																<div class="elementor-accordion-item">
+																	<div id="elementor-tab-title-1111"
+																		class="elementor-tab-title" data-tab="1"
+																		role="tab"
+																		aria-controls="elementor-tab-content-1111"
+																		aria-expanded="false">
+																		<span
+																			class="elementor-accordion-icon elementor-accordion-icon-left"
+																			aria-hidden="true">
+																			<span
+																				class="elementor-accordion-icon-closed"><i
+																					class="fas fa-plus"></i></span>
+																			<span
+																				class="elementor-accordion-icon-opened"><i
+																					class="fas fa-minus"></i></span>
+																		</span>
+																		<a class="elementor-accordion-title"
+																			href="javascript:void(0)">Como
+																			me
+																			junto
+																			a
+																			BitiCodes?
+																		</a>
+																	</div>
+																	<div id="elementor-tab-content-1111"
+																		class="elementor-tab-content elementor-clearfix"
+																		data-tab="1" role="tabpanel"
+																		aria-labelledby="elementor-tab-title-1111">
+																		Registe-se
+																		clicando
+																		no
+																		botão,
+																		deixe
+																		o
+																		seu
+																		nome,
+																		e-mail
+																		e
+																		número
+																		de
+																		telefone,
+																		e um
+																		membro
+																		da
+																		nossa
+																		equipa
+																		reservará
+																		o
+																		seu
+																		lugar
+																	</div>
+																</div>
+																<div class="elementor-accordion-item">
+																	<div id="elementor-tab-title-1112"
+																		class="elementor-tab-title" data-tab="2"
+																		role="tab"
+																		aria-controls="elementor-tab-content-1112"
+																		aria-expanded="false">
+																		<span
+																			class="elementor-accordion-icon elementor-accordion-icon-left"
+																			aria-hidden="true">
+																			<span
+																				class="elementor-accordion-icon-closed"><i
+																					class="fas fa-plus"></i></span>
+																			<span
+																				class="elementor-accordion-icon-opened"><i
+																					class="fas fa-minus"></i></span>
+																		</span>
+																		<a class="elementor-accordion-title"
+																			href="javascript:void(0)">Que
+																			resultados
+																			posso
+																			esperar?
+																		</a>
+																	</div>
+																	<div id="elementor-tab-content-1112"
+																		class="elementor-tab-content elementor-clearfix"
+																		data-tab="2" role="tabpanel"
+																		aria-labelledby="elementor-tab-title-1112">
+																		<p>
+																			A
+																			maioria
+																			dos
+																			utilizadores
+																			do
+																			BitiCodes
+																			vêem
+																			um
+																			lucro
+																			entre
+																			$500
+																			a
+																			$1500
+																			numa
+																			base
+																			diária.
+																			Isto
+																			depende
+																			naturalmente
+																			do
+																			tempo
+																			que
+																			dedicar
+																			à
+																			sua
+																			conta,
+																			quanto
+																			mais
+																			dedicação
+																			tiver,
+																			mais
+																			lucrará.
+																			Mas,
+																			pode
+																			também
+																			sentir-se
+																			confiante
+																			sabendo
+																			que
+																			mesmo
+																			com
+																			muito
+																			pouca
+																			atenção
+																			à
+																			sua
+																			conta,
+																			ainda
+																			pode
+																			ter
+																			um
+																			lucro
+																			significativo.
+																		</p>
+																	</div>
+																</div>
+																<div class="elementor-accordion-item">
+																	<div id="elementor-tab-title-1113"
+																		class="elementor-tab-title" data-tab="3"
+																		role="tab"
+																		aria-controls="elementor-tab-content-1113"
+																		aria-expanded="false">
+																		<span
+																			class="elementor-accordion-icon elementor-accordion-icon-left"
+																			aria-hidden="true">
+																			<span
+																				class="elementor-accordion-icon-closed"><i
+																					class="fas fa-plus"></i></span>
+																			<span
+																				class="elementor-accordion-icon-opened"><i
+																					class="fas fa-minus"></i></span>
+																		</span>
+																		<a class="elementor-accordion-title"
+																			href="javascript:void(0)">Os
+																			BitiCodes
+																			são
+																			seguros? </a>
+																	</div>
+																	<div id="elementor-tab-content-1113"
+																		class="elementor-tab-content elementor-clearfix"
+																		data-tab="3" role="tabpanel"
+																		aria-labelledby="elementor-tab-title-1113">
+																		<p>
+																			Sim,
+																			a
+																			BitiCodes
+																			é
+																			considerada
+																			um
+																			dos
+																			softwares
+																			de
+																			negociação
+																			automática
+																			crypto
+																			mais
+																			confiáveis
+																			da
+																			indústria,
+																			razão
+																			pela
+																			qual
+																			é
+																			confiada
+																			por
+																			mais
+																			de
+																			560.000
+																			utilizadores
+																			globais.
+																			Pode
+																			consultar
+																			a
+																			“análise
+																			de
+																			biticodes”,
+																			“revisão
+																			de
+																			códigos
+																			BTC”,
+																			“revisão
+																			de
+																			códigos
+																			biti”
+																			para
+																			análises
+																			aprofundadas
+																			de
+																			software.
+																		</p>
+																	</div>
+																</div>
+																<div class="elementor-accordion-item">
+																	<div id="elementor-tab-title-1114"
+																		class="elementor-tab-title" data-tab="4"
+																		role="tab"
+																		aria-controls="elementor-tab-content-1114"
+																		aria-expanded="false">
+																		<span
+																			class="elementor-accordion-icon elementor-accordion-icon-left"
+																			aria-hidden="true">
+																			<span
+																				class="elementor-accordion-icon-closed"><i
+																					class="fas fa-plus"></i></span>
+																			<span
+																				class="elementor-accordion-icon-opened"><i
+																					class="fas fa-minus"></i></span>
+																		</span>
+																		<a class="elementor-accordion-title"
+																			href="javascript:void(0)">É
+																			muito
+																			tarde
+																			para
+																			investir
+																			em
+																			Bitcoin? </a>
+																	</div>
+																	<div id="elementor-tab-content-1114"
+																		class="elementor-tab-content elementor-clearfix"
+																		data-tab="4" role="tabpanel"
+																		aria-labelledby="elementor-tab-title-1114">
+																		Analistas
+																		especialistas
+																		estão
+																		prevendo
+																		que
+																		o
+																		Bitcoin
+																		chegará
+																		a US
+																		$
+																		100.000,
+																		portanto,
+																		mesmo
+																		se
+																		você
+																		investir
+																		hoje
+																		no
+																		preço
+																		atual,
+																		poderá
+																		obter
+																		lucros
+																		drásticos!
+																	</div>
+																</div>
+																<div class="elementor-accordion-item">
+																	<div id="elementor-tab-title-1115"
+																		class="elementor-tab-title" data-tab="5"
+																		role="tab"
+																		aria-controls="elementor-tab-content-1115"
+																		aria-expanded="false">
+																		<span
+																			class="elementor-accordion-icon elementor-accordion-icon-left"
+																			aria-hidden="true">
+																			<span
+																				class="elementor-accordion-icon-closed"><i
+																					class="fas fa-plus"></i></span>
+																			<span
+																				class="elementor-accordion-icon-opened"><i
+																					class="fas fa-minus"></i></span>
+																		</span>
+																		<a class="elementor-accordion-title"
+																			href="javascript:void(0)">Porque
+																			é
+																			que
+																			os
+																			softwares
+																			de
+																			auto-negociação
+																			são
+																			considerados
+																			mais
+																			seguros
+																			do
+																			que
+																			o
+																			comércio
+																			independente?</a>
+																	</div>
+																	<div id="elementor-tab-content-1115"
+																		class="elementor-tab-content elementor-clearfix"
+																		data-tab="5" role="tabpanel"
+																		aria-labelledby="elementor-tab-title-1115">
+																		Muitos
+																		comerciantes
+																		cometeram
+																		erros
+																		devido
+																		às
+																		suas
+																		emoções
+																		que
+																		levaram
+																		a
+																		melhor.
+																		Usar
+																		a
+																		ajuda
+																		de
+																		um
+																		software
+																		de
+																		auto-negociação
+																		pode
+																		ajudá-lo
+																		a
+																		tomar
+																		as
+																		decisões
+																		certas
+																		de
+																		forma
+																		lógica
+																		e
+																		eficiente.
+																		Até
+																		os
+																		melhores
+																		comerciantes
+																		acham
+																		útil
+																		usar
+																		softwares
+																		de
+																		negociação
+																		automática
+																		crypto
+																		para
+																		garantir
+																		os
+																		seus
+																		lucros.
+																	</div>
+																</div>
+																<div class="elementor-accordion-item">
+																	<div id="elementor-tab-title-1116"
+																		class="elementor-tab-title" data-tab="6"
+																		role="tab"
+																		aria-controls="elementor-tab-content-1116"
+																		aria-expanded="false">
+																		<span
+																			class="elementor-accordion-icon elementor-accordion-icon-left"
+																			aria-hidden="true">
+																			<span
+																				class="elementor-accordion-icon-closed"><i
+																					class="fas fa-plus"></i></span>
+																			<span
+																				class="elementor-accordion-icon-opened"><i
+																					class="fas fa-minus"></i></span>
+																		</span>
+																		<a class="elementor-accordion-title"
+																			href="javascript:void(0)">Quanto
+																			tempo
+																			devo
+																			gastar
+																			na
+																			minha
+																			conta
+																			todos
+																			os
+																			dias?</a>
+																	</div>
+																	<div id="elementor-tab-content-1116"
+																		class="elementor-tab-content elementor-clearfix"
+																		data-tab="6" role="tabpanel"
+																		aria-labelledby="elementor-tab-title-1116">
+																		Pode
+																		passar
+																		o
+																		tempo
+																		que
+																		quiser,
+																		dependendo
+																		do
+																		que
+																		está
+																		disposto
+																		a
+																		comprometer-se,
+																		mas
+																		a
+																		maioria
+																		dos
+																		utilizadores
+																		passa
+																		entre
+																		10 a
+																		20
+																		minutos
+																		por
+																		dia
+																		na
+																		sua
+																		conta
+																		e
+																		depois
+																		deixa
+																		o
+																		software
+																		fazer
+																		todo
+																		o
+																		trabalho.
+																	</div>
+																</div>
+																<div class="elementor-accordion-item">
+																	<div id="elementor-tab-title-1117"
+																		class="elementor-tab-title" data-tab="7"
+																		role="tab"
+																		aria-controls="elementor-tab-content-1117"
+																		aria-expanded="false">
+																		<span
+																			class="elementor-accordion-icon elementor-accordion-icon-left"
+																			aria-hidden="true">
+																			<span
+																				class="elementor-accordion-icon-closed"><i
+																					class="fas fa-plus"></i></span>
+																			<span
+																				class="elementor-accordion-icon-opened"><i
+																					class="fas fa-minus"></i></span>
+																		</span>
+																		<a class="elementor-accordion-title"
+																			href="javascript:void(0)">Quanto
+																			custa
+																			ter
+																			uma
+																			conta
+																			BitiCodes?</a>
+																	</div>
+																	<div id="elementor-tab-content-1117"
+																		class="elementor-tab-content elementor-clearfix"
+																		data-tab="7" role="tabpanel"
+																		aria-labelledby="elementor-tab-title-1117">
+																		<p>
+																			Pode
+																			obter
+																			uma
+																			conta
+																			BitiCodes
+																			até
+																			$250
+																			de
+																			depósito.
+																		</p>
+																	</div>
+																</div>
+																<div class="elementor-accordion-item">
+																	<div id="elementor-tab-title-1118"
+																		class="elementor-tab-title" data-tab="8"
+																		role="tab"
+																		aria-controls="elementor-tab-content-1118"
+																		aria-expanded="false">
+																		<span
+																			class="elementor-accordion-icon elementor-accordion-icon-left"
+																			aria-hidden="true">
+																			<span
+																				class="elementor-accordion-icon-closed"><i
+																					class="fas fa-plus"></i></span>
+																			<span
+																				class="elementor-accordion-icon-opened"><i
+																					class="fas fa-minus"></i></span>
+																		</span>
+																		<a class="elementor-accordion-title"
+																			href="javascript:void(0)">O
+																			que
+																			posso
+																			trocar
+																			com
+																			BitiCodes?</a>
+																	</div>
+																	<div id="elementor-tab-content-1118"
+																		class="elementor-tab-content elementor-clearfix"
+																		data-tab="8" role="tabpanel"
+																		aria-labelledby="elementor-tab-title-1118">
+																		<p>
+																			Nos
+																			BitiCodes
+																			você
+																			pode
+																			trocar
+																			algumas
+																			das
+																			criptomoedas
+																			mais
+																			populares,
+																			incluindo
+																			Bitcoin,
+																			Ethereum,
+																			Tether,
+																			Solana,
+																			Cardano,
+																			XRP
+																			e
+																			muito
+																			mais.
+																		</p>
+																	</div>
+																</div>
+																<div class="elementor-accordion-item">
+																	<div id="elementor-tab-title-1119"
+																		class="elementor-tab-title" data-tab="9"
+																		role="tab"
+																		aria-controls="elementor-tab-content-1119"
+																		aria-expanded="false">
+																		<span
+																			class="elementor-accordion-icon elementor-accordion-icon-left"
+																			aria-hidden="true">
+																			<span
+																				class="elementor-accordion-icon-closed"><i
+																					class="fas fa-plus"></i></span>
+																			<span
+																				class="elementor-accordion-icon-opened"><i
+																					class="fas fa-minus"></i></span>
+																		</span>
+																		<a class="elementor-accordion-title"
+																			href="javascript:void(0)">Como
+																			negoco
+																			com
+																			BitiCodes? </a>
+																	</div>
+																	<div id="elementor-tab-content-1119"
+																		class="elementor-tab-content elementor-clearfix"
+																		data-tab="9" role="tabpanel"
+																		aria-labelledby="elementor-tab-title-1119">
+																		Após
+																		o
+																		registo
+																		bem
+																		sucedido,
+																		um
+																		dos
+																		corretores
+																		que
+																		colaborou
+																		entrará
+																		em
+																		contacto
+																		consigo
+																		para
+																		ativar
+																		a
+																		sua
+																		conta.
+																		Toda
+																		a
+																		informação
+																		necessária
+																		será
+																		dada
+																		pelo
+																		representante
+																		do
+																		corretor
+																		que
+																		estará
+																		em
+																		contacto
+																		consigo.
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-b76cdd9 elementor-mobile-align-center elementor-align-center elementor-widget elementor-widget-button"
+														data-id="b76cdd9" data-element_type="widget"
+														data-widget_type="button.default">
+														<div class="elementor-widget-container">
+															<div class="elementor-button-wrapper">
+																<a href="javascript:void(0)"
+																	class="elementor-button-link elementor-button elementor-size-lg scrl"
+																	role="button">
+																	<span class="elementor-button-content-wrapper">
+																		<span class="elementor-button-text">REGISTE-SE
+																			DE
+																			FORMA
+																			SEGURA
+																			AGORA</span>
+																	</span>
+																</a>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-b51cc5b elementor-mobile-align-center elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+														data-id="b51cc5b" data-element_type="widget"
+														data-widget_type="icon-list.default">
+														<div class="elementor-widget-container">
+															<ul class="elementor-icon-list-items">
+																<li class="elementor-icon-list-item">
+																	<span class="elementor-icon-list-icon">
+																		<i aria-hidden="true" class="fas fa-bell"></i>
+																	</span>
+																	<span class="elementor-icon-list-text">AJA
+																		RÁPIDO
+																		-
+																		apenas
+																		7
+																		contas
+																		restantes!</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-441bad2 elementor-widget elementor-widget-heading"
+														data-id="441bad2" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																Como visto
+																em
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-eea6464 elementor-hidden-mobile elementor-hidden-tablet elementor-widget elementor-widget-image-carousel"
+														data-id="eea6464" data-element_type="widget" data-settings="{"
+														slides_to_show_mobile":"3","navigation":"none","image_spacing_custom":{"unit":"px","size":100,"sizes":[]},"slides_to_show_tablet":"3","autoplay":"yes","pause_on_hover":"yes","pause_on_interaction":"yes","autoplay_speed":5000,"infinite":"yes","speed":500}"
+														data-widget_type="image-carousel.default">
+														<div class="elementor-widget-container">
+															<div class="elementor-image-carousel-wrapper swiper-container swiper-4"
+																dir="ltr">
+																<div class="elementor-image-carousel swiper-wrapper">
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/Untitled-8864761.png"
+																				alt="CNN">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/forbes-logo-gray.png"
+																				alt="Forbes">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/ft-horiz-new-black.215c1169.png"
+																				alt="FT _ Financial Times">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/Untitled-453541.png"
+																				alt="Time">
+																		</figure>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-26a10ae elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet_extra elementor-widget elementor-widget-image-carousel"
+														data-id="26a10ae" data-element_type="widget" data-settings="{"
+														slides_to_show_mobile":"3","navigation":"none","slides_to_show_tablet":"3","autoplay":"yes","pause_on_hover":"yes","pause_on_interaction":"yes","autoplay_speed":5000,"infinite":"yes","speed":500,"image_spacing_custom":{"unit":"px","size":20,"sizes":[]}}"
+														data-widget_type="image-carousel.default">
+														<div class="elementor-widget-container">
+															<div class="elementor-image-carousel-wrapper swiper-container"
+																dir="ltr">
+																<div class="elementor-image-carousel swiper-wrapper">
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/Untitled-8864761.png"
+																				alt="CNN">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/forbes-logo-gray.png"
+																				alt="Forbes">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/ft-horiz-new-black.215c1169.png"
+																				alt="FT _ Financial Times">
+																		</figure>
+																	</div>
+																	<div class="swiper-slide">
+																		<figure class="swiper-slide-inner">
+																			<img class="swiper-slide-image"
+																				src="images/Untitled-453541.png"
+																				alt="Time">
+																		</figure>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<section
+										class="elementor-section elementor-top-section elementor-element elementor-element-d98e97c elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+										data-id="d98e97c" data-element_type="section" data-settings="{"
+										background_background":"classic"}">
+										<div class="elementor-background-overlay"></div>
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9bbd222"
+												data-id="9bbd222" data-element_type="column">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<section
+														class="elementor-section elementor-inner-section elementor-element elementor-element-10b0ba5 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+														data-id="10b0ba5" data-element_type="section">
+														<div class="elementor-container elementor-column-gap-default">
+															<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-9b1961e"
+																data-id="9b1961e" data-element_type="column">
+																<div
+																	class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-31eece9 elementor-widget elementor-widget-heading"
+																		data-id="31eece9" data-element_type="widget"
+																		data-widget_type="heading.default">
+																		<div class="elementor-widget-container">
+																			<h2
+																				class="elementor-heading-title elementor-size-default">
+																				Comentários
+																				BitiCodes
+																				-
+																				A
+																				prova
+																				está
+																				em
+																				nossos
+																				resultados
+																			</h2>
+																		</div>
+																	</div>
+																	<div class="elementor-element elementor-element-5251ccb elementor-testimonial--skin-bubble elementor-testimonial--layout-image_above elementor-testimonial--mobile-align-center elementor-testimonial--align-center elementor-arrows-yes elementor-widget elementor-widget-testimonial-carousel"
+																		data-id="5251ccb" data-element_type="widget"
+																		data-settings="{"
+																		slides_per_view_mobile":"1","show_arrows":"yes","speed":500,"autoplay":"yes","autoplay_speed":5000,"loop":"yes","pause_on_hover":"yes","pause_on_interaction":"yes","space_between":{"unit":"px","size":10,"sizes":[]},"space_between_laptop":{"unit":"px","size":10,"sizes":[]},"space_between_tablet_extra":{"unit":"px","size":10,"sizes":[]},"space_between_tablet":{"unit":"px","size":10,"sizes":[]},"space_between_mobile":{"unit":"px","size":10,"sizes":[]}}"
+																		data-widget_type="testimonial-carousel.default">
+																		<div class="elementor-widget-container">
+																			<div class="elementor-swiper">
+																				<div
+																					class="elementor-main-swiper swiper-container swiper-2">
+																					<div class="swiper-wrapper">
+																						<div class="swiper-slide">
+																							<div
+																								class="elementor-testimonial">
+																								<div
+																									class="elementor-testimonial__content">
+																									<div
+																										class="elementor-testimonial__text">
+																										Investi
+																										há
+																										alguns
+																										anos
+																										e
+																										não
+																										tive
+																										a
+																										melhor
+																										experiência,
+																										estava
+																										a
+																										ficar
+																										frustrado
+																										porque
+																										estava
+																										a
+																										ouvir
+																										que
+																										todas
+																										estas
+																										pessoas
+																										lucram
+																										imenso
+																										com
+																										a
+																										Crypto
+																										e
+																										não
+																										tive
+																										os
+																										mesmos
+																										resultados
+																										que
+																										eles,
+																										por
+																										isso
+																										virei-me
+																										para
+																										o
+																										BitiCodes.
+																										Agora
+																										estou
+																										a
+																										fazer
+																										retornos
+																										estáveis
+																										todos
+																										os
+																										dias
+																										e
+																										não
+																										passo
+																										horas
+																										a
+																										ver
+																										gráficos
+																										de
+																										negociação
+																										como
+																										o
+																										que
+																										costumava
+																										fazer.
+																										Tão
+																										feliz
+																										com
+																										os
+																										serviços
+																										e
+																										as
+																										pessoas
+																										da
+																										BitiCodes,
+																										recomendaria
+																										vivamente.
+																									</div>
+																								</div>
+																								<div
+																									class="elementor-testimonial__footer">
+																									<div
+																										class="elementor-testimonial__image">
+																										<img src="images/isa-3.png"
+																											alt="Federikke, 27 from Denmark ">
+																									</div>
+																									<cite
+																										class="elementor-testimonial__cite"><span
+																											class="elementor-testimonial__name">Federikke,
+																											27
+																											da
+																											Dinamarca</span><span
+																											class="elementor-testimonial__title">7
+																											meses
+																											de
+																											lucro
+																											=
+																											$13.173</span></cite>
+																								</div>
+																							</div>
+																						</div>
+																						<div class="swiper-slide">
+																							<div
+																								class="elementor-testimonial">
+																								<div
+																									class="elementor-testimonial__content">
+																									<div
+																										class="elementor-testimonial__text">
+																										Estou
+																										tão
+																										feliz
+																										com
+																										esta
+																										plataforma!
+																										Estava
+																										muito
+																										nervosa
+																										por
+																										começar
+																										a
+																										negociar,
+																										já
+																										que
+																										não
+																										é
+																										o
+																										meu
+																										campo
+																										e
+																										nunca
+																										tive
+																										qualquer
+																										experiência
+																										de
+																										negociação
+																										anterior,
+																										mas
+																										tudo
+																										o
+																										que
+																										precisava
+																										era
+																										de
+																										compreender
+																										o
+																										básico,
+																										passar
+																										cerca
+																										de
+																										15
+																										minutos
+																										por
+																										dia
+																										na
+																										minha
+																										conta
+																										e
+																										ver
+																										lucros.
+																										Muito
+																										grato
+																										também
+																										ao
+																										meu
+																										gestor
+																										de
+																										conta
+																										por
+																										me
+																										ter
+																										ajudado
+																										no
+																										processo
+																										no
+																										início
+																										quando
+																										entrei!
+																									</div>
+																								</div>
+																								<div
+																									class="elementor-testimonial__footer">
+																									<div
+																										class="elementor-testimonial__image">
+																										<img src="images/isa-1.png"
+																											alt="Mikayla, 32 from Singapore">
+																									</div>
+																									<cite
+																										class="elementor-testimonial__cite"><span
+																											class="elementor-testimonial__name">Mikayla,
+																											32
+																											de
+																											Singapura</span><span
+																											class="elementor-testimonial__title">3
+																											meses
+																											de
+																											lucro
+																											=
+																											$5.238</span></cite>
+																								</div>
+																							</div>
+																						</div>
+																						<div class="swiper-slide">
+																							<div
+																								class="elementor-testimonial">
+																								<div
+																									class="elementor-testimonial__content">
+																									<div
+																										class="elementor-testimonial__text">
+																										O
+																										BitiCodes
+																										tem
+																										sido
+																										uma
+																										grande
+																										ajuda
+																										para
+																										mim,
+																										agir
+																										como
+																										uma
+																										espécie
+																										de
+																										"voz
+																										da
+																										razão"
+																										quando
+																										as
+																										minhas
+																										emoções
+																										atrapalham
+																										as
+																										minhas
+																										trocas.
+																										Já
+																										tive
+																										a
+																										minha
+																										quota-parte
+																										de
+																										momentos
+																										de
+																										venda
+																										de
+																										pânico
+																										que
+																										me
+																										fizeram
+																										perder
+																										algumas
+																										oportunidades
+																										de
+																										negociação
+																										incríveis.
+																										Desde
+																										que
+																										me
+																										registem
+																										com
+																										BitiCodes,
+																										já
+																										vi
+																										muitos
+																										mais
+																										resultados,
+																										estou
+																										agora
+																										a
+																										ganhar
+																										em
+																										média
+																										$1800
+																										por
+																										dia!
+																									</div>
+																								</div>
+																								<div
+																									class="elementor-testimonial__footer">
+																									<div
+																										class="elementor-testimonial__image">
+																										<img src="images/isa-2.png"
+																											alt="Andrew, 51 from United Kingdom">
+																									</div>
+																									<cite
+																										class="elementor-testimonial__cite"><span
+																											class="elementor-testimonial__name">Andrew,
+																											51
+																											anos
+																											do
+																											Reino
+																											Unido</span><span
+																											class="elementor-testimonial__title">Lucro
+																											de
+																											1
+																											ano
+																											=
+																											$22,259</span></cite>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<div
+																						class="elementor-swiper-button elementor-swiper-button-prev">
+																						<i
+																							class="fa-solid fa-angle-left"></i>
+																					</div>
+																					<div
+																						class="elementor-swiper-button elementor-swiper-button-next">
+																						<i
+																							class="fa-solid fa-angle-right"></i>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+													<section
+														class="elementor-section elementor-inner-section elementor-element elementor-element-2eff6a0 elementor-hidden-mobile elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+														data-id="2eff6a0" data-element_type="section">
+														<div class="elementor-container elementor-column-gap-default">
+															<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-c73e3f9"
+																data-id="c73e3f9" data-element_type="column">
+																<div
+																	class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-51a9d35 elementor-widget elementor-widget-qi_addons_for_elementor_progress_bar_circle"
+																		data-id="51a9d35" data-element_type="widget"
+																		data-widget_type="qi_addons_for_elementor_progress_bar_circle.default">
+																		<div class="elementor-widget-container">
+																			<div class="qodef-shortcode qodef-m qodef-qi-progress-bar-circle"
+																				data-active-line-color="#2C88D9"
+																				data-active-line-width="25"
+																				data-inactive-line-color="#7D8C9A"
+																				data-inactive-line-width="25"
+																				data-number="94"
+																				data-text-color="#FFFFFF">
+																				<div class="qodef-m-inner">
+																					<div class="qodef-m-canvas"></div>
+																					<h5 class="qodef-m-title">
+																						VIU
+																						LUCROS
+																						INSTANTÂNEOS
+																					</h5>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-a542587"
+																data-id="a542587" data-element_type="column">
+																<div
+																	class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-4d8c031 elementor-widget elementor-widget-counter"
+																		data-id="4d8c031" data-element_type="widget"
+																		data-widget_type="counter.default">
+																		<div class="elementor-widget-container">
+																			<div class="elementor-counter">
+																				<div
+																					class="elementor-counter-number-wrapper">
+																					<span
+																						class="elementor-counter-number-prefix"></span>
+																					<span
+																						class="elementor-counter-number"
+																						data-duration="2000"
+																						data-to-value="561284"
+																						data-from-value="0"
+																						data-delimiter=",">561284</span>
+																					<span
+																						class="elementor-counter-number-suffix"></span>
+																				</div>
+																				<div class="elementor-counter-title">
+																					UTILIZADORES
+																					ATIVOS
+																					ATUAIS
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-690911d"
+																data-id="690911d" data-element_type="column">
+																<div
+																	class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-d2cdb62 elementor-widget elementor-widget-qi_addons_for_elementor_progress_bar_circle"
+																		data-id="d2cdb62" data-element_type="widget"
+																		data-widget_type="qi_addons_for_elementor_progress_bar_circle.default">
+																		<div class="elementor-widget-container">
+																			<div class="qodef-shortcode qodef-m qodef-qi-progress-bar-circle"
+																				data-active-line-color="#2C88D9"
+																				data-active-line-width="25"
+																				data-inactive-line-color="#7D8C9A"
+																				data-inactive-line-width="25"
+																				data-number="96"
+																				data-text-color="#FFFFFF">
+																				<div class="qodef-m-inner">
+																					<div class="qodef-m-canvas"></div>
+																					<h5 class="qodef-m-title">
+																						DE
+																						PRECISÃO
+																						COMPROVADA
+																					</h5>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+													<section
+														class="elementor-section elementor-inner-section elementor-element elementor-element-5fceb81 elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet_extra elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+														data-id="5fceb81" data-element_type="section">
+														<div class="elementor-container elementor-column-gap-default">
+															<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-b4a960d"
+																data-id="b4a960d" data-element_type="column">
+																<div
+																	class="elementor-widget-wrap elementor-element-populated">
+																	<div class="elementor-element elementor-element-f72d344 elementor-widget elementor-widget-qi_addons_for_elementor_progress_bar_circle"
+																		data-id="f72d344" data-element_type="widget"
+																		data-widget_type="qi_addons_for_elementor_progress_bar_circle.default">
+																		<div class="elementor-widget-container">
+																			<div class="qodef-shortcode qodef-m qodef-qi-progress-bar-circle"
+																				data-active-line-color="#2C88D9"
+																				data-active-line-width="25"
+																				data-inactive-line-color="#7D8C9A"
+																				data-inactive-line-width="25"
+																				data-number="94"
+																				data-text-color="#FFFFFF">
+																				<div class="qodef-m-inner">
+																					<div class="qodef-m-canvas"></div>
+																					<h5 class="qodef-m-title">
+																						VIU
+																						LUCROS
+																						INSTANTÂNEOS
+																					</h5>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="elementor-element elementor-element-f242306 elementor-widget elementor-widget-counter"
+																		data-id="f242306" data-element_type="widget"
+																		data-widget_type="counter.default">
+																		<div class="elementor-widget-container">
+																			<div class="elementor-counter">
+																				<div
+																					class="elementor-counter-number-wrapper">
+																					<span
+																						class="elementor-counter-number-prefix"></span>
+																					<span
+																						class="elementor-counter-number"
+																						data-duration="2000"
+																						data-to-value="560000"
+																						data-from-value="0"
+																						data-delimiter=",">561284</span>
+																					<span
+																						class="elementor-counter-number-suffix"></span>
+																				</div>
+																				<div class="elementor-counter-title">
+																					UTILIZADORES
+																					ATIVOS
+																					ATUAIS
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="elementor-element elementor-element-806b2a0 elementor-widget elementor-widget-qi_addons_for_elementor_progress_bar_circle"
+																		data-id="806b2a0" data-element_type="widget"
+																		data-widget_type="qi_addons_for_elementor_progress_bar_circle.default">
+																		<div class="elementor-widget-container">
+																			<div class="qodef-shortcode qodef-m qodef-qi-progress-bar-circle"
+																				data-active-line-color="#2C88D9"
+																				data-active-line-width="25"
+																				data-inactive-line-color="#7D8C9A"
+																				data-inactive-line-width="25"
+																				data-number="96"
+																				data-text-color="#FFFFFF">
+																				<div class="qodef-m-inner">
+																					<div class="qodef-m-canvas"></div>
+																					<h5 class="qodef-m-title">
+																						DE
+																						PRECISÃO
+																						COMPROVADA
+																					</h5>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+													<div class="elementor-element elementor-element-2c48545 elementor-widget elementor-widget-heading"
+														data-id="2c48545" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																Registrar e
+																abrir um
+																<br>
+																Conta
+																BitiCodes
+															</h2>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<section
+										class="elementor-section elementor-top-section elementor-element elementor-element-ad9ed36 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+										style="padding-bottom: 230px" data-id="ad9ed36" data-element_type="section">
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f06f7e6"
+												data-id="f06f7e6" data-element_type="column">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-7f8246d elementor-widget elementor-widget-image"
+														data-id="7f8246d" data-element_type="widget"
+														data-widget_type="image.default">
+														<div class="elementor-widget-container">
+															<img width="2800" height="1700"
+																src="images/Mockup-2-1536x933.png"
+																class="attachment-full size-full"
+																alt="Biti Codes - automated trading software"
+																loading="lazy"
+																sizes="(max-width: 2800px) 100vw, 2800px">
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-a6c0783 elementor-widget elementor-widget-heading"
+														data-id="a6c0783" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h2 class="elementor-heading-title elementor-size-default">
+																REGISTE-SE
+																DE FORMA
+																SEGURA AGORA
+															</h2>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-2a3374a elementor-mobile-align-center elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+														data-id="2a3374a" data-element_type="widget"
+														data-widget_type="icon-list.default">
+														<div class="elementor-widget-container">
+															<ul class="elementor-icon-list-items">
+																<li class="elementor-icon-list-item">
+																	<span class="elementor-icon-list-icon">
+																		<i aria-hidden="true" class="fas fa-bell"></i>
+																	</span>
+																	<span class="elementor-icon-list-text">AJA
+																		RÁPIDO
+																		-
+																		apenas
+																		7
+																		contas
+																		restantes!</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="elementor-element elementor-element-e9b4f70 elementor-widget elementor-widget-html"
+														data-id="e9b4f70" data-element_type="widget"
+														data-widget_type="html.default">
+														<div class="elementor-widget-container">
+															<div class="form-widget">
+																<div id="reg-form-bot" class="flex flex-column">
+																	<div
+																		style="margin-left: auto; margin-right: auto; width: 100%; max-width: 360px; height: 350px;">
+																		<div id="req-form-section"
+																			class="form-container">
+																			<div class="form-title">Rejoignez le groupe
+																				de La Formule Française!</div>
+
+																			<form id="formTop-2" method="post"
+																				autocomplete="off">
+																				<div data-subject="wrapper">
+																					<div id="first_section"
+																						class="slide-wrapper">
+																						<div class="form-group">
+																							<input name="first_name"
+																								id="first_name"
+																								placeholder="Prénom"
+																								class="form-control"
+																								required />
+																						</div>
+
+																						<div class="form-group">
+																							<input name="last_name"
+																								id="last_name"
+																								placeholder="Nom"
+																								class="form-control"
+																								required />
+																						</div>
+
+																						<div class="form-group">
+																							<input name="email"
+																								id="email"
+																								placeholder="Email"
+																								class="form-control"
+																								required />
+																						</div>
+
+																						<div class="form-group">
+																							<input type="tel"
+																								id="phone2"
+																								name="phone2"
+																								class="form-control"
+																								placeholder required />
+																						</div>
+
+																						<div class="form-group">
+																							<button type="submit"
+																								class="form-btn">COMMENCEZ
+																								MAINTENANT</button>
+																						</div>
+
+																					</div>
+																				</div>
+																				<!-- wrapper -->
+																			</form>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+								</div>
+							</div>
+							<!-- .entry-content .clear -->
+						</article>
+						<!-- #post-## -->
+					</main>
+					<!-- #main -->
+				</div>
+				<!-- #primary -->
+			</div>
+			<!-- ast-container -->
+		</div>
+		<!-- #content -->
+		<div data-elementor-type="footer" data-elementor-id="304"
+			class="elementor elementor-304 elementor-location-footer">
+			<section
+				class="elementor-section elementor-top-section elementor-element elementor-element-5be11ae sticky-foot hide-foot elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+				data-id="5be11ae" data-element_type="section" id="fixfoot" data-settings="{"
+				background_background":"classic","sticky":"bottom","sticky_on":["desktop","laptop","tablet_extra","tablet","mobile"],"sticky_offset":0,"sticky_effects_offset":0}">
+				<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0ba4994"
+						data-id="0ba4994" data-element_type="column">
+						<div class="elementor-widget-wrap elementor-element-populated">
+							<div class="elementor-element elementor-element-ae9993b elementor-widget elementor-widget-html"
+								data-id="ae9993b" data-element_type="widget" data-widget_type="html.default">
+								<div class="elementor-widget-container"></div>
+							</div>
+							<div class="elementor-element elementor-element-dd38b9e elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+								data-id="dd38b9e" data-element_type="widget" data-widget_type="icon-list.default">
+								<div class="elementor-widget-container">
+									<ul class="elementor-icon-list-items">
+										<li class="elementor-icon-list-item">
+											<a href="javascript:void(0)" class="scrl">
+												<span class="elementor-icon-list-icon">
+													<i aria-hidden="true" class="far fa-clock"></i>
+												</span>
+												<span class="elementor-icon-list-text">INCREAVA-SE AGORA COM
+													SEGURANÇA</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section
+				class="elementor-section elementor-top-section elementor-element elementor-element-f50e7b2 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+				data-id="f50e7b2" data-element_type="section" data-settings="{" background_background":"classic"}">
+				<div class="elementor-background-overlay"></div>
+				<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c689a11"
+						data-id="c689a11" data-element_type="column">
+						<div class="elementor-widget-wrap elementor-element-populated">
+							<div class="elementor-element elementor-element-9b552d3 elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu"
+								data-id="9b552d3" data-element_type="widget" data-settings="{"
+								layout":"horizontal","submenu_icon":{"value":"<i fa-caret-down\">
+								<div class="elementor-widget-container"></div>
+							</div>
+							<section
+								class="elementor-section elementor-inner-section elementor-element elementor-element-482e79a elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+								data-id="482e79a" data-element_type="section">
+								<div class="elementor-column-gap-default">
+									<div class="elementor-column elementor-inner-column elementor-element"
+										data-id="8306ae1" data-element_type="column">
+										<div class="elementor-widget-wrap elementor-element-populated">
+											<div class="elementor-element elementor-element-a961e54 elementor-widget elementor-widget-text-editor"
+												data-id="a961e54" data-element_type="widget"
+												data-widget_type="text-editor.default">
+												<div class="elementor-widget-container">
+													<p>
+														Operamos com
+														múltiplos terceiros
+														e podemos transmitir
+														as suas informações
+														pessoais não só à
+														empresa descrita no
+														site, mas também a
+														outros terceiros,
+														incluindo afiliadas
+														comerciais não
+														afiliadas, e
+														transferir ou
+														divulgar os seus
+														dados privados para
+														fins de marketing ou
+														comerciais. Estes
+														terceiros podem
+														utilizar estes dados
+														para o contactar ou
+														para realizar as
+														suas próprias
+														operações e
+														finalidades
+														comerciais.
+													</p>
+													<p>
+														Nota chave sobre o
+														risco: A negociação
+														pode produzir
+														grandes lucros;
+														contudo, envolve
+														também o risco de
+														perder alguns ou
+														todos os fundos, e
+														deve ser contemplada
+														pelos investidores
+														iniciais.
+														Aproximadamente 70%
+														dos investidores
+														acabarão por perder
+														dinheiro. Por favor,
+														leia atentamente os
+														nossos termos e
+														condições e a nossa
+														página de renúncia
+														de responsabilidade
+														antes de investir.a
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section
+								class="elementor-section elementor-inner-section elementor-element elementor-element-541f91b elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+								data-id="541f91b" data-element_type="section">
+								<div class="elementor-container elementor-column-gap-default">
+									<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-d2a6e41"
+										data-id="d2a6e41" data-element_type="column">
+										<div class="elementor-widget-wrap elementor-element-populated">
+											<div class="elementor-element elementor-element-47904a8 elementor-widget elementor-widget-heading"
+												data-id="47904a8" data-element_type="widget"
+												data-widget_type="heading.default">
+												<div class="elementor-widget-container">
+													<h2 class="elementor-heading-title elementor-size-default">
+														Copyright ©
+														<br>
+														<span id="year"></span>
+														Todos os direitos
+														reservados.
+													</h2>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!-- #page -->
+
+	<!-- Start popup double -->
+	<div class='modal-form' id='modalFailure'>
+		<p class='close-modal' href="#">&times;</p>
+		<div class='content'>
+			<div class="sign-up-form-header text-center mb-4">
+				<h5 class="mb-2 mt-4">Você já está registrado com este número. Se você precisar de uma nova conta,
+					registre-se com outro número de celular.</h5>
+			</div>
+		</div>
+	</div>
+
+	<div class='modal-form' id='modalFailureEmail'>
+		<p class='close-modal' href="#">&times;</p>
+		<div class='content'>
+			<div class="sign-up-form-header text-center mb-4">
+				<h5 class="mb-2 mt-4">Você já está registrado com este e-mail. Se você precisar de uma nova conta,
+					registre-se com outro e-mail.</h5>
+			</div>
+		</div>
+	</div>
+
+	<div class='modal-form' id='modalInvalid'>
+		<p class='close-modal' href="#">&times;</p>
+		<div class='content'>
+			<div class="sign-up-form-header text-center mb-4">
+				<h5 class="mb-2 mt-4">Você digitou um e-mail inválido. Por favor, registre-se com um e-mail diferente.
+				</h5>
+			</div>
+		</div>
+	</div>
+	<!-- End popup double -->
+
+	<link rel="stylesheet" id="elementor-post-339-css" href="css/post-339.css" media="all">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.countdown.min.js" id="hurryt-countdown-js"></script>
+	<script src="js/core.min.js" id="jquery-ui-core-js"></script>
+	<script src="js/main.min.js" id="qi-addons-for-elementor-script-js"></script>
+	<script src="js/frontend.min.js" id="q2w3_fixed_widget-js"></script>
+	<script src="js/progressbar.min.js" id="progress-bar-js"></script>
+	<script src="js/jquery-numerator.min.js" id="jquery-numerator-js"></script>
+	<script src="js/jquery.sticky.min.js" id="e-sticky-js"></script>
+
+	<script src="js/swiper.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/intlTelInput.min.js"></script>
+	<script src="js/jquery.maskedinput.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/submitForm.js"></script>
+	<script src="js/utm.js"></script>
+
+</body>
+
+</html>

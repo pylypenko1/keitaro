@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bitcoin Billionaire ™ - Sitio oficial y actualizado 【2022】" />
+    <meta property="og:description"
+        content="Bienvenido al sitio oficial de Bitcoin Billionaire. Bitcoin Billionaire es una nueva y emocionante opción para operar con Bitcoin. Aquí puede encontrar información sobre Bitcoin Billionaire y cómo usarlo. ¡Comienza GRATIS hoy!" />
+    <meta property="og:image" content="https://bitcoin-billionaire.com//assets/logo.png" />
+    <meta property="og:image:alt" content="Bitcoin Billionaire" />
+    <meta name="description"
+        content="Bienvenido al sitio oficial de Bitcoin Billionaire. Bitcoin Billionaire es una nueva y emocionante opción para operar con Bitcoin. Aquí puede encontrar información sobre Bitcoin Billionaire y cómo usarlo. ¡Comienza GRATIS hoy!">
+
+    <title>Bitcoin Billionaire ™ - Sitio oficial y actualizado 【2022】</title>
+
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+    <style>
+        .iti.iti--allow-dropdown.iti--separate-dial-code {
+            width: 100%;
+        }
+
+        .iti--separate-dial-code .iti__selected-flag {
+            max-height: 48px;
+        }
+
+        input {
+            outline: none;
+        }
+
+        input.error {
+            border: 3px solid #eb162b !important;
+        }
+
+        input.valid {
+            border: 3px solid #41ad48 !important;
+        }
+
+        label.error {
+            width: 100%;
+            font-weight: 400;
+            margin-top: 0.25rem;
+            margin-bottom: 0 !important;
+            padding: 5px;
+            color: #fff;
+            background-color: #eb162b;
+            font-size: 12px;
+        }
+    </style>
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+        function getCookie(name) {
+            var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return v ? v[2] : null;
+        }
+
+        function setCookie(name, value, days) {
+            var d = new Date;
+            d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+            document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+        }
+
+        function getSubId() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{subid}'.match('{')) {
+                return '{subid}';
+            }
+            var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+            if (clientSubid && !clientSubid.match('>')) {
+                return clientSubid;
+            }
+            if (params.get('_subid')) {
+                return params.get('_subid')
+            }
+            if (params.get('subid')) {
+                return params.get('subid')
+            }
+            if (getCookie('subid')) {
+                return getCookie('subid');
+            }
+        }
+
+
+        if (typeof URLSearchParams === 'function') {
+            document.addEventListener("DOMContentLoaded", function (event) {
+                var params = new URLSearchParams(document.location.search.substr(1));
+                var subid = getSubId();
+
+                setCookie('subid', subid);
+
+                // Adds params to the links  
+                document.querySelectorAll('a').forEach(function (link) {
+                    var url = new URL(link.href);
+                    params.forEach(function (v, k) {
+                        url.searchParams.append(k, v);
+                    });
+                    link.href = url.toString();
+                });
+
+                // Adds params as hidden inputs to the forms
+                document.querySelectorAll('form').forEach(function (form) {
+                    params.forEach(function (v, k) {
+                        var input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = k;
+                        input.value = v;
+
+                        form.append(input);
+                    });
+                });
+            })
+        }
+    </script>
+    <!-- End JS adapter -->
+</head>
+
+<body class="mainpage">
+
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-7 col-md-3">
+                    <a href="index.html" class="logo">
+                        <picture>
+                            <source type="image/webp" srcset="images/logo.webp">
+                            <source type="image/png" srcset="images/logo.png">
+                            <img loading="lazy" src="images/logo.png" width="196" height="75"
+                                style="display: block; margin: 0 auto" alt="">
+                        </picture>
+                    </a>
+                </div>
+                <!-- <div class="col-12 col-md-6 order-3 order-md-2 d-flex justify-content-end" style="position: static;">
+                    <ul class="header-menu">
+                        <li><a href="about/index.html">Sobre nosotros</a></li>
+                        <li><a href="contact/index.html">Contáctenos</a></li>
+                        <li><a href="login/index.html">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
+                <div class="col-5 col-md-2 pl-0 order-2 order-md-3 d-flex justify-content-end align-items-center">
+                    <div class="language">
+                        <span><img src="images/icons/es.png" alt=""> ES <i class="iti__arrow"></i></span>
+                        <ul class="language-list">
+                            <li><a class="language-list__link" href="../index.html"><img src="../assets/icons/en.png"
+                                        alt=""> EN</a></li>
+                            <li><a class="language-list__link" href="../de/index.html"><img src="../assets/icons/de.png"
+                                        alt=""> DE</a></li>
+                            <li><a class="language-list__link" href="../fr/index.html"><img src="../assets/icons/fr.png"
+                                        alt=""> FR</a></li>
+                            <li><a class="language-list__link" href="../it/index.html"><img src="../assets/icons/it.png"
+                                        alt=""> IT</a></li>
+                            <li><a class="language-list__link" href="../pl/index.html"><img src="../assets/icons/pl.png"
+                                        alt=""> PL</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="container" style="max-width: 1250px;">
+            <div class="mb-5">
+                <h1 class="main-title">Bitcoin Billionaire</h1>
+                <h2 class="main-subtitle">Bitcoin Billionaire es una apasionante nueva opción para el trading de Bitcoin
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-md-8 order-2 order-md-1">
+                    <div class="main-video">
+                        <picture>
+                            <source type="image/webp" srcset="images/video-image.webp">
+                            <source type="image/png" srcset="images/video-image.jpg">
+                            <img loading="lazy" src="images/video-image.jpg" width="906" height="495" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="col-md-4 order-1 order-md-2">
+                    <div class="main-form" id="req-form-section">
+                        <div class="main-form-title">REGISTRATE AHORA <br>GRATIS!</div>
+                        <form method="post" id="formTop" autocomplete="off">
+                            <!-- <div class="alert alert-danger hidden" role="alert"></div> -->
+
+                            <div class="form-group">
+                                <input name="first_name" id="first_name" placeholder="Nombre" required>
+                                <!-- <div data-error-status="inactive" data-for-error="first_name">Su nombre es demasiado
+                                    corto (por lo menos 2 caracteres)</div>
+                                <span data-check-icon="inactive" data-check-icon-for="first_name"><img
+                                        src="images/form/check-icon.png" alt="✔"></span> -->
+                            </div>
+
+                            <div class="form-group">
+                                <input name="last_name" id="last_name" placeholder="Apellido" required>
+                                <!-- <div data-error-status="inactive" data-for-error="last_name">Su apellido es demasiado
+                                    corto (por lo menos 2 caracteres)</div>
+                                <span data-check-icon="inactive" data-check-icon-for="last_name"><img
+                                        src="images/form/check-icon.png" alt="✔"></span> -->
+                            </div>
+
+                            <div class="form-group">
+                                <input name="email" id="email" placeholder="Correo electrónico" required>
+                                <!-- <div data-error-status="inactive" data-for-error="email">Por favor ingrese su correo
+                                    electrónico verdadero. (<a href="../cdn-cgi/l/email-protection.html"
+                                        class="__cf_email__"
+                                        data-cfemail="c5a0afa0a8b5a9aa85a0a8a4aca9eba6aaa8">[email&#160;protected]</a>)
+                                </div>
+                                <span data-check-icon="inactive" data-check-icon-for="email"><img
+                                        src="images/form/check-icon.png" alt="✔"></span> -->
+                            </div>
+
+                            <div class="form-group">
+                                <!-- <input class="phone" name="phone" type="text" required> -->
+                                <input type="tel" id="phone1" name="phone1" class="phone" placeholder required>
+                                <input type="hidden" id="realPhone" name="realPhone" class="hidden-phone" value>
+                                <input type="hidden" id="country" name="country" value>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="form-btn">REGISTRATE AHORA</button>
+                            </div>
+
+                            <div class="form-group">
+                                <p class="form-footer">
+                                    *Al dejar sus datos personales aquí, nos permite compartir su información personal
+                                    con terceros que brindan servicios comerciales.
+                                </p>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="half-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="title">Bienvenido a Bitcoin Billionaire</h2>
+                    <p class="fs-20"><i>¡Hola! Bienvenido al sitio oficial de Bitcoin Billionaire. Aquí puede encontrar
+                            información sobre Bitcoin Billionaire, cómo usarlo y algunas de las razones por las que
+                            debería invertir en Bitcoin.</i></p>
+                    <p>El equipo son unos apasionados de Bitcoin y, con suerte, considerará invertir en Bitcoin si aún
+                        no lo ha hecho por esto. Bitcoin está dentro de una de las nuevas clases de activos más
+                        prometedoras, y es posible que su valor siga creciendo con el paso del tiempo. Siempre es
+                        aconsejable tener una cartera diversa, entonces, ¿qué mejor momento que ahora para agregar
+                        Bitcoin a la suya?</p>
+                    <p>Si desea invertir en Bitcoin pero no quiere operar con la moneda directamente, entonces Bitcoin
+                        Billionaire es una gran opción para usted. Bitcoin Billionaire se diseñó teniendo en cuenta la
+                        facilidad de uso, la accesibilidad, y el objetivo era desarrollar una plataforma que cualquiera
+                        pudiera usar, independientemente de cuánto sepan sobre criptomonedas o inversiones.</p>
+                    <div class="text-center text-md-left">
+                        <a href="#req-form-section" class="form-btn scroll-top-btn mt-4"
+                            style="max-width: 380px;">EMPIEZA AHORA MISMO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-60">
+        <div class="container text-center" style="max-width: 1050px;">
+            <h2 class="title title-center title-line">Una Explicación Breve Sobre Las Criptomonedas</h2>
+            <p class="fs-20"><i>Las criptomonedas están creciendo en relevancia y popularidad, pero para muchos, son un
+                    concepto confuso y misterioso. Si no sabes qué es una criptomoneda, no te sientas mal,
+                    ¡definitivamente no estás solo! En resumen, una criptomoneda es una moneda digital. Puede
+                    intercambiar criptografía en línea de una manera similar a la que podría intercambiar moneda
+                    física/fiduciaria con alguien en persona.</i></p>
+            <p>Sin embargo, operar con criptomonedas no es como hacer una transferencia bancaria en línea. Cuando
+                transfiere dinero en línea, el banco honra que puede poner esa cantidad a su disposición en fondos en
+                efectivo si es necesario. La criptomoneda es completamente digital. Su valor está determinado por sus
+                usuarios y cuánto vale en comparación con las monedas fiduciarias.</p>
+            <p>Esto puede sonar abstracto o extraño, pero las criptomonedas se están multiplicando rápidamente, tanto en
+                términos de popularidad como en cantidad. ¡Hay una buena razón para esto! Cuando se lanzó Bitcoin por
+                primera vez, la mayoría de la gente pensó que era un concepto marginal que sólo interesaría a los
+                expertos en tecnología. Sin embargo, desde entonces Bitcoin ha demostrado que llegó para quedarse.</p>
+        </div>
+    </section>
+
+    <section class="padding-60">
+        <div class="container" style="max-width: 1200px;">
+            <div class="togle-info">
+                <div class="togle-info-title">Disfruta Lo Mejor de Dos Mundos</div>
+                <div class="togle-info-content">
+                    <p>Invertir puede parecer seco o complejo para algunos, pero es muy recomendable intentar invertir
+                        una vez que sea financieramente independiente. Los asesores financieros están de acuerdo en
+                        esto: muchos afirman que invertir a largo plazo es una de las partes más importantes de la
+                        gestión financiera responsable. Al invertir sabiamente, puede prepararse para una jubilación
+                        mucho más cómoda de lo que podría tener de otra manera.</p>
+                    <p>El método tradicional para hacerlo es trabajar con un corredor que invierte su dinero por usted.
+                        Sin embargo, las criptomonedas llegaron a cambiar todo eso. Las criptomonedas son parte de la
+                        nueva ola de tecnología financiera, lo que hace que la inversión sea mucho más accesible para la
+                        persona promedio. Lo que no significa que no pueda consultar con un corredor experto, ya que la
+                        plataforma Bitcoin Billionaire no solo tiene una amplia gama de funciones que puede utilizar
+                        para obtener una mejor comprensión de los criptomercados, sino que también tiene acceso a un
+                        corredor dedicado que puede consultar antes de tomar decisiones comerciales. Y si eso no es
+                        suficiente, su corredor asignado también puede enviarle notificaciones cada vez que haya una
+                        posibilidad comercial que coincida con sus parámetros y preferencias. Entonces, en realidad,
+                        puedes disfrutar lo mejor de ambos mundos.</p>
+                </div>
+            </div>
+            <div class="togle-info">
+                <h2 class="togle-info-title">Maneja Tus Riesgo</h2>
+                <div class="togle-info-content">
+                    <p>Su perfil como inversor considera una variedad de factores, como la cantidad de riesgo que está
+                        dispuesto a asumir o tolerar en sus inversiones. Si no desea realizar inversiones riesgosas,
+                        probablemente invierta en clases que brindan rendimientos bajos pero estables durante un largo
+                        período de tiempo.</p>
+                    <p>Sería útil si basará sus objetivos financieros en dónde se ve a sí mismo en el futuro y cuánto
+                        dinero necesita para estar en esa posición. Una vez que establezca sus objetivos, sabrá cuánto
+                        dinero necesitará a su disposición para alcanzarlos. Al planificar sus inversiones, puede
+                        considerar sus objetivos y cómo la inversión puede ayudarlo a alcanzarlos.</p>
+                    <p>Una vez que haya determinado estos factores, estará en camino de crear la estrategia de inversión
+                        adecuada para usted. Las características de la plataforma le permitirán ver el panorama general,
+                        y su corredor dedicado puede ayudarlo a perfeccionar sus habilidades comerciales y ajustar su
+                        estrategia de inversión, así como enviarle indicaciones sobre las fluctuaciones del mercado y
+                        nuevas opciones comerciales viables para que las considere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <div class="half-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 offset-md-5">
+                        <h2 class="title">Como Ayuda Bitcoin Billionaire?</h2>
+                        <p><i>Bitcoin Billionaire tiene todos los datos vitales cuidadosamente organizados para usted,
+                                por lo que una vez que establezca sus preferencias para que su corredor le sugiera
+                                algunas buenas oportunidades de inversión, una vez que se familiarice con todas las
+                                características de la plataforma y realice algunas investigaciones, puede hacerlo mejor
+                                tomando mejores decisiones de inversión y mejorando sus habilidades comerciales.</i></p>
+                        <p>Con Bitcoin Billionaire, puede idear una buena estrategia comercial basada en los datos
+                            recopilados de las tendencias del mercado anteriores, lo que lo ayuda a reconocer mejor si
+                            la inversión es adecuada para usted. Esto es especialmente útil si no tiene mucha
+                            experiencia en inversiones y desea que sea lo más seguro y accesible posible utilizando la
+                            plataforma y consultando a su corredor asignado.</p>
+                        <div class="text-center">
+                            <a href="#req-form-section" class="form-btn scroll-top-btn mt-4"
+                                style="max-width: 440px;">ABRE UNA CUENTA GRATIS AHORA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="half-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7" style="padding-top: 10px; padding-bottom: 20px">
+                        <h2 class="title">Por Que Deberia De Considerar Las Criptomonedas</h2>
+                        <p>Las criptomonedas son una nueva clase de activos, lo que lleva a algunos asesores financieros
+                            o comentaristas a afirmar que invertir en criptomonedas es demasiado arriesgado en este
+                            momento. Sin embargo, ¡esto no puede estar muy lejos de la realidad! Ahora es un buen
+                            momento para invertir en criptomonedas, que están creciendo rápidamente como clase. El
+                            interés público en las criptomonedas siempre está en aumento, lo que conduce a una mayor
+                            legitimidad de las criptomonedas. Y cuanto más interés público reciban, es más probable que
+                            aumenten su valor.</p>
+                        <p>Sin embargo, es cierto que algunas criptomonedas no tienen la misma reputación que otras. Es
+                            por eso que Bitcoin Billionaire se enfoca en Bitcoin y recomienda a los comerciantes que
+                            inviertan en él. Bitcoin es la mejor opción de todas las criptomonedas para invertir en
+                            función de su reputación y su valor inherente. Algunas criptomonedas son más inestables que
+                            otras, y aunque Bitcoin también puede ser volátil, muchos expertos estarían de acuerdo en
+                            que Bitcoin llegó para quedarse.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="padding-60">
+        <div class="container" style="max-width: 1200px;">
+            <div class="togle-info">
+                <h3 class="togle-info-title">Las Cripto Son El Futuro</h3>
+                <div class="togle-info-content">
+                    <p>Las tendencias actuales sugieren que la moneda física se volverá cada vez más obsoleta en las
+                        próximas décadas. Las tiendas y los negocios sin efectivo son un fenómeno creciente y, en
+                        algunas ciudades, puede ser un desafío encontrar un lugar que realmente acepta efectivo. En un
+                        mundo sin efectivo, las criptomonedas tendrán un valor y una legitimidad mucho mayores. Por eso
+                        es tan crucial que comience a invertir en criptografía ahora en lugar de cuando sea demasiado
+                        tarde.</p>
+                    <p>Muchas naciones desarrolladas ahora también tienen legislación sobre el uso y la distribución de
+                        criptomonedas. Todo esto apunta a que las criptomonedas seguirán creciendo en todo el mundo,
+                        tanto en términos de popularidad como de prestigio. ¿Por qué no aprovechar este cambio y empezar
+                        a invertir? Plataformas como Bitcoin Billionaire pueden hacer que invertir en Bitcoin sea una
+                        experiencia más accesible e incluso agradable.</p>
+                </div>
+            </div>
+            <div class="togle-info">
+                <h3 class="togle-info-title">Por Que Bitcoin?</h3>
+                <div class="togle-info-content">
+                    <p>En comparación con la mayoría de las otras criptomonedas, Bitcoin tiene mucha más reputación.
+                        Además, algunos minoristas importantes en los EE. UU. ahora aceptan Bitcoin como forma de pago.
+                        Está claro que Bitcoin está a la vanguardia en la legitimación de las criptomonedas en todo el
+                        mundo, por lo que es la mejor opción para invertir en criptomonedas, especialmente si no está
+                        íntimamente familiarizado con el mundo de las criptomonedas.</p>
+                    <p>La legitimidad de Bitcoin también es una parte crucial de su valor. Más personas conocen Bitcoin
+                        que cualquier otra criptomoneda, y esto es importante para aumentar su peso, tanto en términos
+                        de moneda real como de clase de activo. Más personas están dispuestas a usar y aceptar Bitcoin,
+                        lo que lo convierte en una opción más segura para comprar y vender. A su vez, esto también lo
+                        convierte en una opción más segura para invertir.</p>
+                    <p>Bitcoin también tiene una gran base de usuarios y seguidores de comerciantes apasionados. Esto
+                        facilita aprender a invertir en Bitcoin en comparación con otras formas de financiación. Los
+                        entusiastas de Bitcoin generalmente son solidarios y quieren que el aprendizaje sobre Bitcoin
+                        sea accesible. Hay una serie de excelentes recursos gratuitos disponibles en línea para aprender
+                        a invertir en Bitcoin y en criptografía en general.</p>
+                </div>
+            </div>
+            <div class="togle-info">
+                <h3 class="togle-info-title">Como Puedes Invertir En Criptomonedas?</h3>
+                <div class="togle-info-content">
+                    <p>Puede invertir en criptomonedas de diferentes maneras. Al igual que otras monedas, puede
+                        intercambiar la moneda directamente y acumular Bitcoin hasta que acumule valor antes de
+                        venderlo. Sin embargo, dado el valor de Bitcoin, esta opción no está tan disponible. Al igual
+                        que otras clases de activos, puede comprar acciones de Bitcoin y empresas relacionadas con
+                        Bitcoin.</p>
+                    <p>Esta es una forma mucho más fácil y factible de comenzar a invertir en criptomonedas. Bitcoin
+                        Billionaire también es una de las formas más accesibles y sencillas de invertir en
+                        criptomonedas. Fue desarrollado para que sea sencillo y fácil de usar, independientemente de sus
+                        antecedentes o experiencia en inversiones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="big-half">
+        <div class="container">
+            <div class="row mb-4 mb-md-5">
+                <div class="col-md-9 offset-md-3">
+                    <h2 class="title title-line">Usando Bitcoin Billionaire Para Invertir</h2>
+                    <p>Regístrese en Bitcoin Billionaire para disfrutar de un conjunto diverso de funciones, y se
+                        conectará con un corredor calificado que lo ayudará a facilitar su camino en el comercio, aunque
+                        cuanto más esfuerzo ponga en mejorar sus habilidades comerciales, es más probable que debes
+                        hacerlo mejor. Si bien no hay resultados garantizados, muchos usuarios están muy satisfechos con
+                        su experiencia en la plataforma.</p>
+                    <p>Si no está seguro de invertir a través de una plataforma, Bitcoin Billionaire le explica el
+                        proceso en términos fáciles de entender.</p>
+                    <div class="text-center">
+                        <a href="#req-form-section" class="form-btn scroll-top-btn mt-4" style="max-width: 480px;">OBTÉN
+                            ACCESO INSTANTÁNEO AQUI</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7 offset-md-5">
+                    <h2 class="title">Diversifica Tu Portafolio Con Bitcoin</h2>
+                    <p>La diversificación de su cartera es una parte crucial de la inversión segura. Bitcoin es una
+                        excelente opción para complementar las clases de activos más tradicionales o convencionales. Si
+                        ya tiene una cartera sólida, debería considerar expandirse e invertir en tecnología. En términos
+                        generales, este es un campo que seguirá creciendo, tanto en términos de relevancia como de
+                        valor.</p>
+                    <p>Bitcoin es una de las formas más seguras y de mayor reputación para invertir en tecnología. En
+                        comparación con la mayoría de las otras criptomonedas, Bitcoin es reconocido por muchos
+                        gobiernos de todo el mundo, lo que significa que debe cumplir con la legislación y las
+                        regulaciones. Esto le brinda un recurso como inversionista si experimenta algún tipo de
+                        repercusión imprevista debido a la inversión en Bitcoin, que no esperaría al invertir en otras
+                        clases de activos.</p>
+                    <p>Algunos analistas financieros afirman que invertir en Bitcoin es arriesgado, pero Bitcoin ha
+                        demostrado con creces su valor y legitimidad. Fue la primera criptomoneda y le está yendo
+                        bastante bien desde su lanzamiento en 2009. El hecho de que los principales minoristas están
+                        comenzando a aceptar Bitcoin como forma de pago es un testimonio de su éxito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION START -->
+    <section class="faq_section">
+        <div class="container">
+            <h2 class="title text-center mb-4 mb-md-5">Preguntas Frecuentes Sobre Bitcoin Billionaire</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="faq-item">
+                        <h3 class="faq-item-title">QUE ES BITCOIN</h3>
+                        <div class="faq-item-content">
+                            <p>Bitcoin es la criptomoneda más grande lanzada en 2009</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-item-title">CÓMO FUNCIONA BITCOIN?</h3>
+                        <div class="faq-item-content">
+                            <p>Los propietarios de Bitcoins pueden intercambiarlos entre sí utilizando un tipo de red
+                                llamada blockchain. Los usuarios de Bitcoin tienen una "billetera", que pueden usar para
+                                almacenar y distribuir sus Bitcoins utilizando varias redes de distribución.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="faq-item">
+                        <h3 class="faq-item-title">BITCOIN ES SEGURO?</h3>
+                        <div class="faq-item-content">
+                            <p>Hay mucha legislación en torno a Bitcoin y las criptomonedas, podría ser más seguro que
+                                usar moneda física.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-item-title">ES SEGURO USAR PLATAFORMAS DE TRADING PARA INVERTIR?</h3>
+                        <div class="faq-item-content">
+                            <p>Siempre que utilice plataformas de buena reputación y bien diseñadas, usar plataformas
+                                para invertir debería ser tan seguro como operar de la manera tradicional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#req-form-section" class="form-btn scroll-top-btn mt-4" style="max-width: 440px;">ABRE UNA
+                    CUENTA GRATIS AHORA</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="container" style="max-width: 1400px;">
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <a href="index.html">
+                            <picture>
+                                <source type="image/webp" srcset="images/logo.webp">
+                                <source type="image/png" srcset="images/logo.png">
+                                <img loading="lazy" src="images/logo.png" width="196" height="75" alt=""
+                                    class="footer-logo">
+                            </picture>
+                        </a>
+                    </div>
+                    <!-- <div class="col-md-8">
+                        <ul class="footer-ul">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="about/index.html">Sobre nosotros</a></li>
+                            <li><a href="contact/index.html">Contáctenos</a></li>
+                            <li><a onclick="window.location = 'terms/index.html'" href="#">Términos</a></li>
+                            <li><a onclick="window.location = 'privacy-policy/index.html'" href="#">Privacidad</a></li>
+                            <li><a href="login/index.html">Iniciar Sesión</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+                <div class="copyright">
+                    <p><b>Nota de Riezgo Importante</b></p>
+                    <p>El comercio puede generar beneficios notables; sin embargo, también implica un riesgo de pérdida
+                        parcial o total de los fondos y debe ser considerado por los inversores iniciales. Alrededor del
+                        70 por ciento de los inversores perderán dinero.</p>
+                    <p><b>Bitcoin Billionaire</b> y cualquier otro nombre comercial utilizado en el sitio son solo para
+                        fines comerciales y no se refieren a ninguna empresa específica ni proveedores de servicios
+                        específicos.</p>
+                    <p>El video es solo para fines de presentación comercial e ilustración, y todos los participantes
+                        son actores.</p>
+                    <p>Lea atentamente los términos y condiciones y la página de exención de responsabilidad de la
+                        plataforma de inversores de terceros antes de invertir. los usuarios deben ser conscientes de su
+                        obligación tributaria individual sobre las ganancias de capital en su país de residencia. Es
+                        contra la ley solicitar a personas de los Estados Unidos que compren y vendan opciones sobre
+                        productos básicos, incluso si se denominan contratos de ""predicción"", a menos que estén
+                        listados para negociar y se negocien en una bolsa registrada en la CFTC o que estén legalmente
+                        exentos.</p>
+                    <p>La Autoridad de Conducta Financiera (""FCA"") ha emitido una declaración de política PS20/10, que
+                        prohíbe la venta, promoción y distribución de CFD sobre criptoactivos. Está prohibiendo la
+                        difusión de materiales de marketing relacionados con la distribución de CFD y otros productos
+                        financieros basados en Criptomonedas y que están dirigidos a residentes del Reino Unido.</p>
+                    <p>Al dejar sus datos personales aquí, usted acepta y nos permite compartir su información personal
+                        con terceros que brindan servicios comerciales según lo dispuesto en la privacidad y los
+                        términos de las condiciones.</p>
+                    <p>Hay varias opciones comerciales que el comerciante/usuario puede usar: mediante software
+                        comercial, utilizando corredores humanos o realizando sus propias operaciones, y es
+                        responsabilidad exclusiva del comerciante elegir y decidir cuál es la forma correcta de operar
+                        para él/ella.</p>
+                </div>
+            </div>
+        </div>
+        <div class="all-rights">Copyright © 2022 Bitcoin Billionaire. All Rights Reserved.</div>
+    </footer>
+    <!-- <div id="openModalLoading" class="modalDialog">
+        <div>
+            <div class="loading-spinner"></div>
+        </div>
+        <div class="loading-text">Conectándole al mejor bróker de su zona...</div>
+    </div> -->
+    <!-- <script data-cfasync="false" src="js/email-decode.min.js"></script> -->
+    <!-- <script type="application/ld+json">
+	    {
+	        "@type":"WebSite",
+	        "url": "https://bitcoin-billionaire.com",
+	        "headline":"Bitcoin Billionaire ™ - Sitio oficial y actualizado 【2022】",
+	        "name":"Bitcoin Billionaire",
+	        "sameAs":[
+	            "https://twitter.com/_BTCBillionaire",
+	            "https://www.facebook.com/Bitcoin-Billionaire-100339858144655/",
+	            "https://www.youtube.com/channel/UCMTQgl1jlZ0qjQwNNGp-dDQ"
+	        ],
+	        "image":"https://bitcoin-billionaire.com/assets/logo.png",
+	        "description":"Bienvenido al sitio oficial de Bitcoin Billionaire. Bitcoin Billionaire es una nueva y emocionante opción para operar con Bitcoin. Aquí puede encontrar información sobre Bitcoin Billionaire y cómo usarlo. ¡Comienza GRATIS hoy!",
+	        "@context":"http://schema.org"
+	    }
+</script> -->
+
+    <div class='modal-form' id='modalFailure'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">Ya se ha registrado para este número. Si necesita una nueva cuenta, regístrese
+                    para un número de teléfono diferente</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class='modal-form' id='modalFailureEmail'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">Ya se ha registrado con este e-mail. Si necesita una nueva cuenta, regístrese con
+                    un correo electrónico diferente</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class='modal-form' id='modalInvalid'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">Ha introducido un correo electrónico no válido. Regístrese para recibir otro
+                    correo electrónico</h5>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/main.4bce5c2e8598a72c33d7.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/utm.js"></script>
+</body>
+
+</html>
