@@ -1,0 +1,142 @@
+@media (min-width: 400px) {
+  .gif {
+    padding: 120px;
+  }
+  .responsive_bg {
+    padding: 220px;
+  }
+  .prod_img_2 {
+    padding: 190px;
+  }
+  .prod_img_2 {
+    padding: 200px;
+  }
+}
+@media (max-width: 400px) {
+  .responsive_bg {
+    padding: 170px;
+  }
+  .block {
+    padding: 15px;
+  }
+  .border_2::after, .border_1::after {
+    width: 10px;
+  }
+  .border_2::before, .border_1::before {
+    width: 20px;
+  }
+  .h1_2 {
+    font-size: 26px;
+  }
+  .reason_img {
+    padding: 110px;
+  }
+  .prod_img_2 {
+    padding: 180px 170px;
+  }
+}
+@media (min-width: 380px) {
+  .block_2 {
+    padding-bottom: 50px;
+  }
+  .responsive_bg_2 {
+    padding: 170px;
+  }
+  .b_info_4 {
+    bottom: 40px;
+  }
+}
+@media (max-width: 380px) {
+  .responsive_bg {
+    padding: 160px;
+  }
+  .responsive_bg_2 {
+    padding: 165px;
+  }
+  .reason_img {
+    padding: 105px;
+  }
+  .b_info_4 {
+    bottom: -10px;
+  }
+  .productsum, .oldproductsum {
+    font-size: 16px;
+  }
+}
+@media (min-width: 370px) and (max-width: 380px) {
+  .b_info_4 {
+    bottom: 30px;
+  }
+}
+@media (width: 360px) {
+  .b_info_4 {
+    bottom: -10px;
+  }
+}
+@media (min-width: 360px) {
+  .step_img {
+    padding: 30%;
+  }
+}
+@media (max-width: 360px) {
+  .prod_img_2 {
+    padding: 170px;
+  }
+  .responsive_bg {
+    padding: 150px;
+  }
+  .b_info {
+    font-size: 14px;
+  }
+  .h1_2 {
+    font-size: 22px;
+  }
+  .h1 {
+    font-size: 14px;
+  }
+  .border_2, .border_1 {
+    display: none;
+  }
+  .border_2::after, .border_1::after {
+    display: none;
+  }
+  .border_2::before, .border_1::before {
+    display: none;
+  }
+  .h2 {
+    font-size: 24px;
+  }
+  .responsive_bg_2 {
+    padding: 155px;
+  }
+  .reason_img {
+    padding: 100px;
+  }
+  .reasons_img {
+    padding: 80px 50px;
+  }
+  .b_info_4 {
+    bottom: -40px;
+  }
+}
+@media (max-width: 340px) {
+  .img_2 {
+    padding: 80px;
+  }
+  .responsive_bg {
+    padding: 140px;
+  }
+  .responsive_bg_2 {
+    padding: 150px;
+  }
+  .reason_img {
+    padding: 95px;
+  }
+  .steps_img {
+    padding: 100px;
+  }
+  .pink_t {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=media.css.map */

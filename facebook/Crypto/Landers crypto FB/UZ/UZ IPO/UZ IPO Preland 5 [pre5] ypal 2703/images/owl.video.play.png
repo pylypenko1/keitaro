@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="uz-latn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+                <meta name="theme-color" content="#ffffff">
+        <meta name="format-detection" content="telephone=no">
+                <title>Not Found (#404)</title>
+        <meta name="csrf-param" content="_csrf-frontend">
+<meta name="csrf-token" content="t6DmeYMmBogU9137oX5cqLvKgSpz2vBVAnYwPM5hihvQ5qofsG9pvSO2N5PvUymf9azQQwWUhjAvRVQEgxPmVA==">
+
+<link href="../css/main.css" rel="stylesheet">
+<link href="../css/authchoice.css" rel="stylesheet">
+<style>body .main .container .main__wrapper .content{
+    display: block;
+    margin-top: 24px!important;
+} 
+.not-found__content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.img-404{
+    max-width: 30%;
+    display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.btn-404{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    max-width: 20%;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    overflow: clip;
+	background: #0c88c5;
+	border-radius:11px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:16px;
+	font-weight:bold;
+	padding:8px 18px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #0c88c5;
+    transition: all 0.5s;
+}
+.btn-404:hover{
+    background: #fff;
+    border: 1px solid #0c88c5 ;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .btn-404{
+        max-width: 100%!important;
+    }
+    .img-404{
+        max-width: 40%!important;
+    }
+}
+@media  screen and (max-width: 750px) {
+    
+    .btn-404{
+        max-width: 100%!important;
+    }
+    .img-404{
+        max-width: 90%!important;
+    }
+}</style>
+<style>/* bu footerdagi reklamani arrow iconni yo'qotish uchun qilindi*/
+.own-footer__name::before{
+    content: none!important;
+}
+.own-footer__name::after{
+    content: none!important;
+}</style>
+<script>var siteLanguage = "uz-Latn-UZ";
+var postLogUrl = "\/comment\/post-log";</script>        <noscript class="loadLater">
+            <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+            <link rel="icon" href="../favicon.ico">
+            <link rel="icon" href="favicon-16x16.png" sizes="16x16">
+            <link rel="icon" href="favicon-32x32.png" sizes="32x32">
+            <link rel="manifest" href="/favicons/site.webmanifest">
+            <link rel="mask-icon" href="../site.webmanifest" color="#5bbad5">
+        </noscript>
+        <script>window.yaContextCb = window.yaContextCb || []</script>
+        <script src="../js/context.js" async></script>
+        <script type="application/javascript">
+            // Загрузить содержимое <noscript class="loadLater"></noscript>  после загрузки страницы
+            document.addEventListener("DOMContentLoaded", function(event) {
+                var loadLater = document.querySelector('.loadLater');
+                var head = document.querySelector('head');
+                if(loadLater && head){
+                    head.insertAdjacentHTML('beforeend', loadLater.innerHTML);
+                }
+            });
+        </script>
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();
+                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(91360584, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+            });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/91360584" style="position:absolute; left:-9999px;" alt></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+        <script>
+
+            function isMobile() {
+                let screenRes = window.matchMedia("only screen and (max-width: 766px)").matches;
+                if (screenRes) {
+                    return true;
+                }
+                return false;
+            }
+
+            function isDesktop() {
+                let screenRes = window.matchMedia("only screen and (min-width: 767px)").matches;
+                if (screenRes) {
+                    return true;
+                }
+                return false;
+            }
+        </script>
+        <meta name="facebook-domain-verification" content="te996g5m1u9ncqki35hcsleu3kwsvh">
+        <style>
+            .sidenav__top-title {
+                padding-top: 20px;
+            }
+            .sidenav__top-title span {
+                font-size: 17px;
+                padding-bottom: 22px;
+            }
+            .comment__list-wrapper .comment-moderation-text {
+                padding-left: 17px;
+            }
+            .banner__block {
+                height: unset;
+            }
+            @media screen and (max-width: 1600px) {
+                .sidenav__top-title {
+                    padding-top: 12px;
+                }
+                .sidenav__top-title span {
+                    padding-bottom: 11px;
+                }
+            }
+
+            .has-submenu .header-submenuWrapper {
+                display: block;
+            }
+            .default__section a{
+                color: #0000EE!important;
+                text-decoration: none!important;
+            }
+            /* bu postda table responsiv qilish uchun yosildi */
+            .table-none-scroll {
+                -ms-overflow-style: none!important; /* for Internet Explorer, Edge */
+                scrollbar-width: none!important; /* for*/
+            }
+            .table-none-scroll table{
+                display: inline-table!important;
+                table-layout: auto!important;
+                float: none!important;
+            }
+            .table-none-scroll::-webkit-scrollbar {
+                display: none!important; /* for Chrome, Safari, and Opera */
+            }
+        </style>
+    </head>
+    <body class>
+                <div class="barholder">
+            <div class="barline"></div>
+        </div>
+        <div class="wrapper">
+            <!-- Шапка сайта-->
+            
+<div id="languages-list" style="display: none;">
+    <a href="#" class="lang__current js-lang" data-tooltips="Tilni o‘zgartirish" id="langTrigger1">O'zb</a>
+    <div class="lang__items">
+                <div class="lang__item"><a class="lang__link" href="/k" alt="Ўзбекча"><span class="lang__key">(Ўзб)</span><span class="lang__value">Ўзбекча</span><span class="lang__line"></span></a></div>
+                <div class="lang__item"><a class="lang__link" href="/ru" alt="Русский"><span class="lang__key">(Рус)</span><span class="lang__value">Русский</span><span class="lang__line"></span></a></div>
+                <div class="lang__item"><a class="lang__link" href="/en" alt="English"><span class="lang__key">(Eng)</span><span class="lang__value">English</span><span class="lang__line"></span></a></div>
+            </div>
+
+</div>
+<div id="languages-list-mobile" style="display: none;">
+    <a href="#" class="lang__current js-lang" data-tooltips="Tilni o‘zgartirish" id="langTrigger1">
+    <div class="lang__title">
+        <svg>
+            <use xlink:href="../fonts/sprites.svg#world"/>
+        </svg>
+        Til    </div>
+    O'zb<span></span>
+</a>
+    <div class="lang__items">
+                <div class="lang__item"><a class="lang__link" href="/k" alt="Ўзбекча"><span class="lang__key">(Ўзб)</span><span class="lang__value">Ўзбекча</span><span class="lang__line"></span></a></div>
+                <div class="lang__item"><a class="lang__link" href="/ru" alt="Русский"><span class="lang__key">(Рус)</span><span class="lang__value">Русский</span><span class="lang__line"></span></a></div>
+                <div class="lang__item"><a class="lang__link" href="/en" alt="English"><span class="lang__key">(Eng)</span><span class="lang__value">English</span><span class="lang__line"></span></a></div>
+            </div>
+
+</div>
+
+<div id="active-route" data-active></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper border">
+                <div class="header__logo">
+                                        <a class="logo" href="/">
+                        <img src="../fonts/logo.svg" alt="logo" width="100%">
+                    </a>
+                </div>
+
+                
+                <div class="header__nav">
+                    <nav class="menu">
+                        <ul class="menu__lists">
+                                                        <li class="menu__list ">
+                                <a class="menu__link blue__line" href="/category/mahalliy">
+                                    Mahalliy                                </a>
+                            </li>
+                                                        <li class="menu__list ">
+                                <a class="menu__link lightBlue__line" href="/category/dunyo">
+                                    Dunyo                                </a>
+                            </li>
+                                                        <li class="menu__list ">
+                                <a class="menu__link orange__line" href="/category/pul">
+                                    Pul                                </a>
+                            </li>
+                                                        <li class="menu__list ">
+                                <a class="menu__link yellow__line" href="/category/madaniyat">
+                                    Madaniyat                                </a>
+                            </li>
+                                                        <li class="menu__list ">
+                                <a class="menu__link marble__line" href="/category/layfstayl">
+                                    Layfstayl                                </a>
+                            </li>
+                                                        <li class="menu__list ">
+                                <a class="menu__link pink__line" href="/category/sport">
+                                    Sport                                </a>
+                            </li>
+                                                                                    <li class="menu__list ">
+                                <a class="menu__link  blue__line" href="/category/maqolalar">
+                                    Kolumnistlar                                </a>
+                            </li>
+                                                        <li class="menu__list ">
+                                <a class="menu__link lightBlue__line" href="/category/multimedia">
+                                    Multimedia                                </a>
+                            </li>
+<!--            menyular pastdagilar izohga olindi va tepaga ikkita menyu qo'shib qo'yildi      Multimedia  ,  Kolumnistlar       -->
+                            <!--<li class="menu__list menu__list--submenu">
+                                <div class="menu__dots"><span></span></div>
+                                <div class="menu-submenu">
+                                    <ul class="menu-submenu__lists">
+                                                                                <li class="menu-submenu__list"><a class="menu-submenu__link"
+                                                                          href="">
+                                                <svg class="menu-submenu__icon">
+                                                    <use xlink:href="/images/sprites.svg#columnnist"></use>
+                                                </svg>
+                                                <div class="menu-submenu__name"></div>
+                                            </a></li>
+
+                                                                                <li class="menu-submenu__list"><a class="menu-submenu__link"
+                                                                          href="">
+                                                <svg class="menu-submenu__icon">
+                                                    <use xlink:href="/images/sprites.svg#multimedia"></use>
+                                                </svg>
+                                                <div class="menu-submenu__name"></div>
+                                            </a></li>
+                                        <li class="menu-submenu__list"><a class="menu-submenu__link" href="">
+                                                <svg class="menu-submenu__icon">
+                                                    <use xlink:href="/images/sprites.svg#icon01"></use>
+                                                </svg>
+                                                <div class="menu-submenu__name"></div>
+                                            </a></li>
+                                        <li class="menu-submenu__list"><a class="menu-submenu__link" href="">
+                                                <svg class="menu-submenu__icon">
+                                                    <use xlink:href="/images/sprites.svg#icon02"></use>
+                                                </svg>
+                                                <div class="menu-submenu__name"></div>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </li>-->
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__right">
+                    <div class="search">
+                        <button class="search__icon" id="searchBtn" aria-label="Qidirish" data-tooltips="Qidirish">
+                            <svg><use xlink:href="../fonts/sprites.svg#search"/></svg>
+                        </button>
+                    </div>
+                    <div class="lang">
+                    </div>
+                    <div class="menu-btn"><svg><use xlink:href="../fonts/sprites.svg#menu"/></svg></div>
+                </div>
+            </div>
+
+                    </div>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPN2C80LDP"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'G-SPN2C80LDP');
+        </script>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__wrapper">
+            <div class="mobile-menu__block border">
+                <div class="mobile-menu__header">
+                    <div class="mobile-menu__top">
+                    <span class="mobile-menu-btn">
+                        <svg><use xlink:href="../fonts/sprites.svg#menu"/></svg>
+                        Menyu                    </span>
+                        <a class="close-menu" href="javascript:void(0);"></a>
+                    </div>
+                    <div class="mobile-menu__center">
+                        <div class="mobile-menu__lang">
+                            <div class="lang"><a class="lang__current js-lang" href="javascript:void(0);">
+                                    <div class="lang__title">
+                                        <svg>
+                                            <use xlink:href="../fonts/sprites.svg#world"/>
+                                        </svg>Til                                    </div>O'zb<span></span></a>
+                                <div class="lang__items">
+                                    <div class="lang__item"><a class="lang__link is-active" href="#" alt="O'zbekcha"><span class="lang__key">(O'zb)</span><span class="lang__value">O'zbekcha</span><span class="lang__line"></span></a></div>
+                                    <div class="lang__item"><a class="lang__link" href="#" alt="Ўзбекча"><span class="lang__key">(Ўзб)</span><span class="lang__value">Ўзбекча</span><span class="lang__line"></span></a></div>
+                                    <div class="lang__item"><a class="lang__link" href="#" alt="Русский"><span class="lang__key">(Рус)</span><span class="lang__value">Русский</span><span class="lang__line"></span></a></div>
+                                    <div class="lang__item"><a class="lang__link" href="#" alt="English"><span class="lang__key">(Eng)</span><span class="lang__value">English</span><span class="lang__line"></span></a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mobile-menu__bottom">
+                        <div class="mobile-menu__categories">
+                            
+                                <a class="mobile-menu__categorie link-switch" href="/?show_ad_ajax=1" data-href="/?show_ad_ajax=1" data-root-url="/">So‘nggi yangiliklar                                <svg>
+                                    <use xlink:href="../fonts/sprites.svg#icon01"/>
+                                </svg></a>
+                                <a class="mobile-menu__categorie link-switch" href="/?mainpage=1&show_ad_ajax=1" data-href="/?mainpage=1&show_ad_ajax=1" data-root-url="/">Asosiy yangiliklar                                <svg>
+                                    <use xlink:href="../fonts/sprites.svg#icon02"/>
+                                </svg></a>
+                                <a class="mobile-menu__categorie link-switch" href="/popular?mainpage=1&show_ad_ajax=1">Eng ko‘p o‘qilgan                                <svg>
+                                    <use xlink:href="../fonts/sprites.svg#many"/>
+                                </svg></a>
+                                                                <a class="mobile-menu__categorie" href="/category/multimedia">Multimedia                                <svg>
+                                    <use xlink:href="../fonts/sprites.svg#multimedia"/>
+                                </svg></a>
+                                                                <a class="mobile-menu__categorie" href="/category/maqolalar">Kolumnistlar                                <svg>
+                                    <use xlink:href="../fonts/sprites.svg#columnnist"/>
+                                </svg></a>
+                        </div>
+                        <div class="mobile-menu__nav">
+                            <nav class="menu">
+                                <ul class="menu__lists">
+                                                                            <li class="menu__list blue__line">
+                                            <a class="menu__link" href="/category/mahalliy">
+                                                Mahalliy                                            </a>
+                                                                                    </li><!-- end category -->
+                                                                            <li class="menu__list lightBlue__line">
+                                            <a class="menu__link" href="/category/dunyo">
+                                                Dunyo                                            </a>
+                                                                                    </li><!-- end category -->
+                                                                            <li class="menu__list orange__line">
+                                            <a class="menu__link" href="/category/pul">
+                                                Pul                                            </a>
+                                                                                    </li><!-- end category -->
+                                                                            <li class="menu__list yellow__line">
+                                            <a class="menu__link" href="/category/madaniyat">
+                                                Madaniyat                                            </a>
+                                                                                    </li><!-- end category -->
+                                                                            <li class="menu__list marble__line">
+                                            <a class="menu__link" href="/category/layfstayl">
+                                                Layfstayl                                            </a>
+                                                                                    </li><!-- end category -->
+                                                                            <li class="menu__list pink__line">
+                                            <a class="menu__link" href="/category/sport">
+                                                Sport                                            </a>
+                                                                                    </li><!-- end category -->
+                                    
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu__footer">
+                    <div class="mobile-menu__currency">
+                        <div class="currency">
+                            
+    <ul class="currency__lists">
+        <li class="currency__list">
+            <span class="currency__name">USD</span>
+            <span class="currency__value up">
+                11095.31            </span>
+        </li>
+        <li class="currency__list">
+            <span class="currency__name">RUB</span>
+            <span class="currency__value up">
+                173.84            </span>
+        </li>
+        <li class="currency__list">
+            <span class="currency__name">EUR</span>
+            <span class="currency__value up">
+                10772.44            </span>
+        </li>
+    </ul>
+                            </div>
+                    </div>
+
+                    <div class="mobile-menu__app">
+                        <div class="app">
+                            <ul class="app__lists">
+                                <li class="app__list">
+                                    <a class="app__link" href="https://play.google.com/store/apps/details?id=uz.muloqot.daryo" rel="nofollow">
+                                        <span class="app__icon">
+                                            <svg><use xlink:href="../fonts/sprites.svg#googlep"/></svg>
+                                        </span>
+                                        <span class="app__name">Google play</span>
+                                    </a>
+                                </li>
+                                <li class="app__list">
+                                    <a class="app__link" href="https://itunes.apple.com/ru/app/daryo-o-zbekiston-yangiliklari/id865012404?mt=8" rel="nofollow">
+                                        <span class="app__icon">
+                                            <svg><use xlink:href="../fonts/sprites.svg#apple"/></svg>
+                                        </span>
+                                        <span class="app__name">App Store</span>
+                                    </a>
+                                </li>
+                                <li class="app__list">
+                                    <a class="app__link" href="https://t.me/Daryo" rel="nofollow">
+                                        <span class="app__icon">
+                                            <svg><use xlink:href="../fonts/sprites.svg#telegram"/></svg>
+                                        </span>
+                                        <span class="app__name">Telegram</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobile-menu__contact">
+                        <div class="mobile-contact">
+                            <div class="mobile-contact__item"> <a class="mobile-contact__title js-mcontact" href="javascript:void(0);">DARYO</a>
+                                <ul class="mobile-contact__lists js-dropdown">
+                                                                    </ul>
+                            </div>
+                            <div class="mobile-contact__item">
+                                                                <a class="mobile-contact__title js-mcontact own-footer__name" href="/uz/p/reklama-zojlastiris" title="Reklama joylashtirish">
+                                 REKLAMA</a><!--href="javascript:void(0);"-->
+                                <!--                                <ul class="mobile-contact__lists js-dropdown">-->
+<!--                                    --><!--                                    <li class="mobile-contact__list"><a class="mobile-contact__link" href="--><!--">--><!--</a></li>-->
+<!--                                    --><!--                                </ul>-->
+                            </div>
+                            <div class="mobile-contact__item"> <a class="mobile-contact__title js-mcontact" href="javascript:void(0);">Ijtimoiy tarmoqlar</a>
+                                <ul class="mobile-contact__lists js-dropdown">
+                                                                            <li class="mobile-contact__list"><a class="mobile-contact__link" href="https://www.instagram.com/daryoyangiliklari/">Instagram | Rasmiy</a></li>
+                                                                            <li class="mobile-contact__list"><a class="mobile-contact__link" href="https://instagram.com/daryo_lifestyle?utm_medium=copy_link">Instagram | Lifestyle</a></li>
+                                                                            <li class="mobile-contact__list"><a class="mobile-contact__link" href="https://www.instagram.com/daryo_sport/">Instagram | Sport</a></li>
+                                                                            <li class="mobile-contact__list"><a class="mobile-contact__link" href="https://www.facebook.com/daryo.yangiliklari">Facebook | Rasmiy</a></li>
+                                                                            <li class="mobile-contact__list"><a class="mobile-contact__link" href="https://ok.ru/daryo.uz">OK | Rasmiy</a></li>
+                                                                            <li class="mobile-contact__list"><a class="mobile-contact__link" href="https://www.youtube.com/c/DaryoUzyoutube?app=desktop">YouTube</a></li>
+                                                                    </ul>
+                            </div>
+                            <div class="mobile-contact__item"> <a class="mobile-contact__title js-mcontact" href="javascript:void(0);">Telegram-kanallar</a>
+                                <ul class="mobile-contact__lists js-dropdown">
+                                                                            <li class="mobile-contact__list"><a class="mobile-contact__link" href="https://t.me/Daryo">Daryo | Rasmiy  — Asosiy kanal. Faqat muhim xabarlar</a></li>
+                                                                            <li class="mobile-contact__list"><a class="mobile-contact__link" href="https://t.me/daryo_live">Daryo | Live — Qisqa va tezkor yangiliklar</a></li>
+                                                                            <li class="mobile-contact__list"><a class="mobile-contact__link" href="https://t.me/daryo_lotin">Daryo | Lifestyle — O‘zbekiston va jahon shou-biznesi, salomatlik, moda bo‘yicha dolzarb va so‘nggi voqealar, maslahatlar</a></li>
+                                                                            <li class="mobile-contact__list"><a class="mobile-contact__link" href="https://t.me/daryo_sport24">Daryo | Sport24 — O‘zbekiston va jahon sport olamidagi eng so‘nggi yangiliklar va maqolalar</a></li>
+                                                                            <li class="mobile-contact__list"><a class="mobile-contact__link" href="https://t.me/daryo_kirill">Daryo | Rasmiy — Kirill alifbosida o‘qishni afzal ko‘rganlar uchun</a></li>
+                                                                            <li class="mobile-contact__list"><a class="mobile-contact__link" href="https://t.me/daryo_pul">Daryo | Pul — O‘zbekistonda va jahonda biznes va iqtisodiyotga oid yangiliklar va tahliliy maqolalar</a></li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-menu__weather">
+                        <div class="weather">
+                            
+    
+    
+        <ul class="weather__block">
+            <li class="weather__current">
+                <div class="weather__icon">
+                    <svg><use xlink:href="../fonts/sprites.svg#sun"/></svg>
+                </div>
+                <div class="weather__info">
+                    <div class="weather__city">
+                        <span class="weather__val">Toshkent</span>da                    </div>
+                    <div class="weather__degree">
+                        +17&deg;C
+                    </div>
+                </div>
+            </li>
+
+            <ul class="weather__lists border">
+                <li class="weather__close"><a class="weather__close-btn" href="javascript:void(0);"></a></li>
+
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="weather" data-temp="17" data-value="Andijon">Andijon</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="22" data-value="Qarshi">Qarshi</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="20" data-value="Buxoro">Buxoro</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="cloudy-day" data-temp="15" data-value="Samarqand">Samarqand</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="cloudy-day" data-temp="16" data-value="Farg‘ona">Farg‘ona</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="16" data-value="Sirdaryo">Sirdaryo</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="15" data-value="Jizzax">Jizzax</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="23" data-value="Termiz">Termiz</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="weather" data-temp="16" data-value="Namangan">Namangan</a>
+                    </li>
+                                                        <li class="weather__list active">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="17" data-value="Toshkent">Toshkent</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="cloudy-day" data-temp="20" data-value="Navoiy">Navoiy</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="cloud" data-temp="14" data-value="Toshkent vil">Toshkent vil</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="21" data-value="Nukus">Nukus</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="20" data-value="Urganch">Urganch</a>
+                    </li>
+                            </ul>
+        </ul>
+    
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <!-- Контент-->
+            <div class="main">
+                <div class="container">
+                    <div class="main__wrapper">
+                        <!-- Информационный блок-->
+                        <div class="infoBar">
+    <div class="infoBar__item border weather__position">
+    <script type="text/javascript">
+        function digitalWatch() {
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            if (hours < 10) hours = "0" + hours;
+            if (minutes < 10) minutes = "0" + minutes;
+            document.getElementById("digital_watch").innerHTML = hours + ":" + minutes;
+            setTimeout("digitalWatch()", 1000);
+        }
+    </script>
+    <div class="infoBar__date">
+        <span>Сегодня,</span>
+        <p id="dayLang" data-lang="uz-latn">
+            <span class="date-xs"></span>
+            <span class="date-sm"></span>
+            <span class="time" id="digital_watch"></span>
+        </p>
+        <script>
+            digitalWatch();
+        </script>
+    </div>
+
+    <div class="infoBar__weather weather">
+        
+    
+    
+        <ul class="weather__block">
+            <li class="weather__current">
+                <div class="weather__icon">
+                    <svg><use xlink:href="../fonts/sprites.svg#sun"/></svg>
+                </div>
+                <div class="weather__info">
+                    <div class="weather__city">
+                        <span class="weather__val">Toshkent</span>da                    </div>
+                    <div class="weather__degree">
+                        +17&deg;C
+                    </div>
+                </div>
+            </li>
+
+            <ul class="weather__lists border">
+                <li class="weather__close"><a class="weather__close-btn" href="javascript:void(0);"></a></li>
+
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="weather" data-temp="17" data-value="Andijon">Andijon</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="22" data-value="Qarshi">Qarshi</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="20" data-value="Buxoro">Buxoro</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="cloudy-day" data-temp="15" data-value="Samarqand">Samarqand</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="cloudy-day" data-temp="16" data-value="Farg‘ona">Farg‘ona</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="16" data-value="Sirdaryo">Sirdaryo</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="15" data-value="Jizzax">Jizzax</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="23" data-value="Termiz">Termiz</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="weather" data-temp="16" data-value="Namangan">Namangan</a>
+                    </li>
+                                                        <li class="weather__list active">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="17" data-value="Toshkent">Toshkent</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="cloudy-day" data-temp="20" data-value="Navoiy">Navoiy</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="cloud" data-temp="14" data-value="Toshkent vil">Toshkent vil</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="21" data-value="Nukus">Nukus</a>
+                    </li>
+                                                        <li class="weather__list">
+                        <a href="javascript:void(0);" data-icon="sun" data-temp="20" data-value="Urganch">Urganch</a>
+                    </li>
+                            </ul>
+        </ul>
+    
+        </div>
+
+</div>
+
+    <div class="infoBar__item border">
+        <div class="currency">
+            
+    <ul class="currency__lists">
+        <li class="currency__list">
+            <span class="currency__name">USD</span>
+            <span class="currency__value up">
+                11095.31            </span>
+        </li>
+        <li class="currency__list">
+            <span class="currency__name">RUB</span>
+            <span class="currency__value up">
+                173.84            </span>
+        </li>
+        <li class="currency__list">
+            <span class="currency__name">EUR</span>
+            <span class="currency__value up">
+                10772.44            </span>
+        </li>
+    </ul>
+            </div>
+        <div class="app">
+            <ul class="app__lists">
+    <li class="app__list">
+        <a class="app__link" href="https://play.google.com/store/apps/details?id=uz.muloqot.daryo" rel="nofollow">
+            <span class="app__icon"><svg><use xlink:href="../fonts/sprites.svg#googlep"/></svg></span>
+            <span class="app__name">Google play</span>
+        </a>
+    </li>
+    <li class="app__list">
+        <a class="app__link" href="https://itunes.apple.com/ru/app/daryo-o-zbekiston-yangiliklari/id865012404?mt=8" rel="nofollow">
+            <span class="app__icon"><svg><use xlink:href="../fonts/sprites.svg#apple"/></svg></span>
+            <span class="app__name">App Store</span>
+        </a>
+    </li>
+    <li class="app__list">
+                <a class="app__link" href="https://t.me/Daryo" rel="nofollow">
+            <span class="app__icon"><svg><use xlink:href="../fonts/sprites.svg#telegram"/></svg></span>
+            <span class="app__name">Telegram</span>
+        </a>
+    </li>
+</ul>
+        </div>
+    </div>
+    </div>
+                        <!-- Контент-->
+                        <div class="content">
+                                                                                                                <main class="maincontent">
+                                <div class="not-found">
+    <div class="not-found__content">
+        <img class="img-404" src="404.png" alt="404">
+        <span class="text-center">Kechirasiz, xatolik yuz berdi, Sahifa topilmadi</span>
+        <a class="btn-404" href="/">Bosh sahifa</a>    </div>
+</div>
+<!--<div class="alert alert-danger">-->
+<!--    --><!--</div>-->
+                            </main>
+                                                                                    
+                            
+                            
+                            <footer class="footer border">
+                                <div class="footer__top">
+    <ul class="footer__nav">
+        <li class="footer__list footer__list--submenu">
+            <p class="footer__name">Daryo</p><span class="footer__list-arrow"></span>
+            <ul class="footer__submenu">
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="/uz/p/internet-nashr" title="Internet-nashr">Internet-nashr</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="/uz/p/tahririyat" title="Tahririyat haqida">Tahririyat haqida</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="/uz/p/aloka-malumotlari" title="Aloqa ma'lumotlari">Aloqa ma'lumotlari</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="/uz/p/fojdalanis-sartlari" title="Foydalanish shartlari">Foydalanish shartlari</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="/uz/p/mahfijlik-siesati" title="Maxfiylik siyosati">Maxfiylik siyosati</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="/archive" title="Yangiliklar arxivi">Yangiliklar arxivi</a>
+                </li>
+                            </ul>
+        </li>
+        <li class="footer__list footer__list--submenu">
+<!--            Reklamani menulari olib tashlandi va faqat reklama qoldirildi-->
+                        <a class="footer__submenu-title" href="/uz/p/reklama-zojlastiris" title="Reklama joylashtirish">
+                <p class="footer__name own-footer__name ">REKLAMA</p>
+<!--                <span class="footer__list-arrow"></span>-->
+            </a>
+<!--            <ul class="footer__submenu">-->
+                
+                <!--                    <li class="footer__submenu-list">-->
+<!--                        <a class="footer__submenu-title" href="--><!--" title="--><!--">--><!--</a>-->
+<!--                    </li>-->
+<!--                --><!--                <li class="footer__submenu-list">-->
+<!--                    <a class="footer__submenu-title" href="--><!--" title="--><!--">--><!--</a>-->
+<!--                </li>-->
+<!--                --><!--                --><!--            </ul>-->
+                    </li>
+        <li class="footer__list footer__list--submenu">
+            <p class="footer__name">Ijtimoiy tarmoqlar</p><span class="footer__list-arrow"></span>
+            <ul class="footer__submenu">
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="https://www.instagram.com/daryoyangiliklari/" title="Instagram | Rasmiy">Instagram | Rasmiy</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="https://instagram.com/daryo_lifestyle?utm_medium=copy_link" title="Instagram | Lifestyle">Instagram | Lifestyle</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="https://www.instagram.com/daryo_sport/" title="Instagram | Sport">Instagram | Sport</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="https://www.facebook.com/daryo.yangiliklari" title="Facebook | Rasmiy">Facebook | Rasmiy</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="https://ok.ru/daryo.uz" title="OK | Rasmiy">OK | Rasmiy</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="https://www.youtube.com/c/DaryoUzyoutube?app=desktop" title="YouTube">YouTube</a>
+                </li>
+                            </ul>
+        </li>
+        <li class="footer__list footer__list--submenu">
+            <p class="footer__name">Telegram-kanallar</p><span class="footer__list-arrow"></span>
+            <ul class="footer__submenu">
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="https://t.me/Daryo" title="Daryo | Rasmiy  — Asosiy kanal. Faqat muhim xabarlar">Daryo | Rasmiy  — Asosiy kanal. Faqat muhim xabarlar</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="https://t.me/daryo_live" title="Daryo | Live — Qisqa va tezkor yangiliklar">Daryo | Live — Qisqa va tezkor yangiliklar</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="https://t.me/daryo_lotin" title="Daryo | Lifestyle — O‘zbekiston va jahon shou-biznesi, salomatlik, moda bo‘yicha dolzarb va so‘nggi voqealar, maslahatlar">Daryo | Lifestyle — O‘zbekiston va jahon shou-biznesi, salomatlik, moda bo‘yicha dolzarb va so‘nggi voqealar, maslahatlar</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="https://t.me/daryo_sport24" title="Daryo | Sport24 — O‘zbekiston va jahon sport olamidagi eng so‘nggi yangiliklar va maqolalar">Daryo | Sport24 — O‘zbekiston va jahon sport olamidagi eng so‘nggi yangiliklar va maqolalar</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="https://t.me/daryo_kirill" title="Daryo | Rasmiy — Kirill alifbosida o‘qishni afzal ko‘rganlar uchun">Daryo | Rasmiy — Kirill alifbosida o‘qishni afzal ko‘rganlar uchun</a>
+                </li>
+                                <li class="footer__submenu-list">
+                    <a class="footer__submenu-title" href="https://t.me/daryo_pul" title="Daryo | Pul — O‘zbekistonda va jahonda biznes va iqtisodiyotga oid yangiliklar va tahliliy maqolalar">Daryo | Pul — O‘zbekistonda va jahonda biznes va iqtisodiyotga oid yangiliklar va tahliliy maqolalar</a>
+                </li>
+                            </ul>
+        </li>
+    </ul>
+</div>
+<div class="footer__bottom">
+    <div class="footer__items">
+        <div class="footer__item">
+            <p>
+                “Daryo” internet-nashrining (O‘zbekiston matbuot va axborot agentligi (O‘zMAA, hozirgi O‘zbekiston Respublikasi Prezidenti Administratsiyasi huzuridagi Axborot va ommaviy kommunikatsiyalar agentligi) tomonidan 13.03.2015 yil sanasida 0944-sonli guvohnoma bilan ommaviy axborot vositasi sifatida ro‘yxatga olingan. Matnli materiallarni to‘liq ko‘chirish yoki qisman iqtibos keltirishga, shuningdek, fotografik, grafik, audio va/yoki videomateriallaridan foydalanishga “daryo.uz” saytiga giperhavola mavjud bo‘lgan va/yoki “Daryo” internet-nashrining muallifligini ko‘rsatuvchi yozuv ilova qilingan taqdirda yo‘l qo‘yiladi. Chop etiladigan ba’zi ma’lumotlar 18 yoshga to‘lmagan foydalanuvchilarga mo‘ljallanmagan bo‘lishi mumkin. Info@daryo.uz            </p>
+        </div>
+        <div class="footer__item">
+            <div class="footer__item-info">
+                <p>© «Simple Networking Solutions» MChJ, 2013–2023</p>
+            </div>
+            <div class="footer__item-info">
+                <svg class="footer__icon">
+                    <use xlink:href="../fonts/sprites.svg#18"/>
+                </svg><p>Yosh bo‘yicha cheklov</p>
+            </div>
+            <div class="footer__item-info">
+                <svg class="footer__icon">
+                    <use xlink:href="../fonts/sprites.svg#mobile"/>
+                </svg>
+                <p>Xato topdingizmi? Ctrl+Enter’ni bosing</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function removeDesktopBanners() {
+        if (isMobile()) {
+            let divsToHide = document.getElementsByClassName("desktop-banner"); //divsToHide is an array
+            for (let i = 0; i < divsToHide.length; i++) {
+                divsToHide[i].style.display = "none";
+            }
+        }
+    }
+
+    function removeMobileBanners() {
+        if (isDesktop()) {
+            let divsToHide = document.getElementsByClassName("mobile-banner"); //divsToHide is an array
+            for (let i = 0; i < divsToHide.length; i++) {
+                divsToHide[i].style.display = "none";
+            }
+        }
+    }
+
+    removeDesktopBanners();
+    removeMobileBanners();
+</script>
+
+<!--AdFox START-->
+<!--yandex_ernestos.85-->
+<!--Площадка: 01_Web app / 01_Web app / 04_Mobile | Fullscreen-->
+<!--Категория: <не задана>-->
+<!--Тип баннера: Pop-up-->
+<div id="adfox_166538982610819153"></div>
+<script>
+    if (isMobile()) {
+        window.yaContextCb.push(() => {
+            Ya.adfoxCode.create({
+                ownerId: 371979,
+                containerId: 'adfox_166538982610819153',
+                params: {
+                    p1: 'cvyyq',
+                    p2: 'hwbb'
+                }
+            })
+        })
+    }
+</script>
+
+                            </footer>
+                            
+<div class="tablet-btn">
+    <button class="btn border  link-switch" type="button" data-href="/?show_ad_ajax=1" data-root-url="/">
+                                    <span class="btn-wrapper">
+                                        <svg><use xlink:href="../fonts/sprites.svg#icon02"/></svg>
+                                        <span class="btn-txt">
+                                            So‘nggi                                        </span>
+                                    </span>
+    </button>
+    <button class="btn border  link-switch" type="button" data-href="/?mainpage=1&show_ad_ajax=1" data-root-url="/">
+                                    <span class="btn-wrapper">
+                                        <svg><use xlink:href="../fonts/sprites.svg#icon01"/></svg>
+                                        <span class="btn-txt">
+                                            Asosiy                                        </span>
+                                    </span>
+    </button>
+    <button class="btn  link-switch" type="button" data-href="/popular?mainpage=1&show_ad_ajax=1" data-root-url="/">
+        <span class="btn-wrapper">
+        <svg>
+            <use xlink:href="../fonts/sprites.svg#many"/>
+        </svg><span class="btn-txt">Ko‘p o‘qilgan</span></span>
+    </button>
+</div>
+                            <div class="button-group">
+                                <a class="back-top" href="javascript:void(0);">
+                                    <svg><use xlink:href="../fonts/sprites.svg#arrowUp"/></svg>
+                                </a>
+                                <a class="back-link" href="javascript:void(0);" onclick="window.history.go(-1); return false;">
+                                    <svg><use xlink:href="../fonts/sprites.svg#back"/></svg>
+                                </a>
+                            </div><script>
+                                document.addEventListener('lazybeforeunveil', function(e){
+                                    var bg = e.target.getAttribute('data-poster');
+                                    if(bg){
+                                        e.target.setAttribute("poster", bg);
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="search-modal"><span class="close"></span>
+    <div class="modal__wrapper">
+        <div class="modal__title">
+            Nimani qidiramiz?        </div>
+                <form class="modal__form" action="/search" method="GET">
+            <div class="form-group">
+                <input class="modal__input" type="text" name="q" autofocus autocomplete="off" id="search-input">
+                <button class="clear-input form-group_clear" type="button"></button>
+            </div>
+            <button class="modal__btn" type="submit">
+                Izlash            </button>
+        </form>
+    </div>
+</div>
+        <div class="modal" id="auth-modal">
+    <div class="modal__auth"><span class="close"></span>
+        <div class="modal__auth-title">
+            Izoh qoldirish uchun quyidagi veb-servislardan foydalangan holda avtorizatsiyadan o‘tishingiz lozim:        </div>
+        <div id="w0"><div class="modal__auth-links"><a class="modal__auth-link auth-link" href="/site/auth?authclient=facebook" title="Facebook" data-popup-width="860" data-popup-height="480"><img src="fb.jpg" alt style="width:100px"></a><a class="modal__auth-link auth-link" href="/site/auth?authclient=google" title="Google"><img src="google.jpg" alt style="width:100px"></a><script async src="https://telegram.org/js/telegram-widget.js?7&amp;_t=1678718205" data-telegram-login="daryo_comment_bot" data-size="medium" data-userpic="false" data-radius="0" data-auth-url="/telegram" data-request-access="write"></script>
+
+<!--<div class="tgme_widget_login medium nouserpic" id="widget_login"><button class="btn tgme_widget_login_button" onclick="return TWidgetLogin.auth();"><i class="tgme_widget_login_button_icon"></i>Log in with Telegram111</button></div>-->
+<!--<script src="https://telegram.org/js/widget-frame.js?47"></script>-->
+<!--<script>TWidgetLogin.init('widget_login', 1753267357, {"origin":"https:\/\/core.telegram.org","embed":1,"request_access":"write"}, false, "en");</script>-->
+</div></div>
+        <span>
+            Izoh qoldirishingiz,            <a href="/uz/p/foydalanish-shartlari" target="_blank">
+                                    Foydalanish shartlari                            </a> va            <a href="/uz/p/privacy-policy" target="_blank">
+                                    Maxfiylik siyosati                                             shartlarini qabul qilganingizni anglatadi                        </a>
+        </span>
+    </div>
+</div>
+        <style>
+    .btn-custom {
+        background: #428bca;
+        border: #357ebd solid 0px;
+        border-radius: 3px;
+        color: #fff;
+        display: inline-block;
+        font-size: 14px;
+        padding: 8px 15px;
+        text-decoration: none;
+        text-align: center;
+        min-width: 60px;
+        position: relative;
+        transition: color .1s ease;
+    }
+    .btn-custom .btn-big {
+        font-size: 18px;
+        padding: 15px 20px;
+        min-width: 100px;
+    }
+    .btn-close {
+        color: #aaaaaa;
+        font-size: 20px;
+        text-decoration: none;
+        padding:10px 0px 10px 10px;
+        position: absolute;
+        right: 7px;
+        cursor: pointer;
+        top: 0;
+    }
+    .btn-close:hover {
+        color: #919191;
+    }
+    .post-log-modal:before {
+        content: "";
+        display: none;
+        background: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+    .opened:before {
+        display: block;
+    }
+    .opened .owner-modal-dialog {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        top: 20%;
+    }
+    .owner-modal-dialog {
+        padding: 0!important;
+        margin: 0!important;
+        background: #fefefe;
+        border: #333333 solid 0px;
+        border-radius: 5px;
+        /*margin-left: -200px;*/
+        text-align:center;
+        position: fixed;
+        left: 26%;
+        top: 24%!important;
+        z-index: 10000!important;
+        width: 50vw;
+        /*height: 300px;*/
+        overflow-y: auto;
+        /*box-shadow:0 5px 10px rgba(0,0,0,0.3);*/
+        -webkit-transform: translate(0, -500%);
+        -ms-transform: translate(0, -500%);
+        transform: translate(0, -500%);
+        -webkit-transition: -webkit-transform 0.3s ease-out;
+        -moz-transition: -moz-transform 0.3s ease-out;
+        -o-transition: -o-transform 0.3s ease-out;
+        transition: transform 0.3s ease-out;
+    }
+    .owner-modal-body {
+        padding: 10px;
+        margin: 10px!important;
+        max-width: 100%!important;
+        /*border:2px solid red;*/
+    }
+    .owner-modal-body input{
+        width:200px;
+        padding:8px;
+        border:1px solid #ddd;
+        color:#888;
+        outline:0;
+        font-size:14px;
+        font-weight:bold
+    }
+    .owner-modal-header,
+    .owner-modal-footer {
+        padding: 5px 10px;
+        max-width: 600px!important;
+    }
+    .owner-modal-header {
+        border-bottom: 1px solid #eeeeee;/* #eeeeee;*/
+        height: 56px;
+        text-align: left;
+        max-width: 100%!important;
+    }
+    .owner-modal-header h2,.owner-modal-header a {
+        font-size: 20px;
+        margin-top: 12px!important;
+    }
+    textarea {
+        display: block;
+        appearance: none;
+        width: 100%!important;
+        padding: 0.5rem 0.75rem;
+        font: inherit;
+        background-color: white;
+        border: 1px solid hsla(0, 0%, 0%, 0.15);
+        height: 50px;
+        box-sizing: border-box;
+        border-radius: 0.25rem;
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    }
+    #spelling-notification-text{
+        border: 1px solid hsla(0, 0%, 0%, 0.15);
+        background-color: #eee;
+        min-height: 50px;
+        /*width: 100%!important;*/
+        border-radius: 3px;
+        padding: 0.5rem 0.75rem;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+    .btn-brand-color{
+        width: 110px;
+        margin-top: 12px;
+        display: flex;
+    }
+    .post-errors{
+        background: #e89c9c;
+        margin: 5px 0px;
+        border-radius: 5px;
+        min-height: 40px;
+        padding: 3px;
+        line-height: 30px;
+        max-width: 100%!important;
+    }
+    .btn-not{
+        cursor: not-allowed;
+        background: #91c1df;
+    }
+
+    .post-log-send{
+        margin-top: 10px;
+    }
+</style>
+<!-- Modal -->
+<div class="post-log-modal" aria-hidden="true">
+    <div class="owner-modal-dialog">
+        <div class="owner-modal-header">
+            <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Matnda xato topdingizmi?</font></font></h2>
+            <span class="btn-close close_modal">&times;</span>
+        </div>
+        <div class="owner-modal-body before-submit" style="display: block;">
+            <form id="spelling-notification-form" action method="POST" class="form-group">
+                <div id="spelling-notification-text" data-max-length="100"></div>
+                <input type="hidden" name="SpellingMistake[post_text]" id="post-log-post-text">
+                <input type="hidden" name="SpellingMistake[post_url]" id="post-log-post-url">
+                <textarea id="spelling-notification-comment" autofocus name="SpellingMistake[comment_text]" placeholder="Xohlasangiz izoh qoldiring." class="form-control" data-max-length="200"></textarea>
+                <div class="post-errors" style="display: none;" data-long-comment-error="Izoh matni 200 ta belgidan oshmasligi kerak." data-long-text-error="Iltimos, 100 tadan oshmagan belgini ajrating va qayta urinib ko`ring." data-generic-error="Xatolik yuz berdi. Xatingizni keyinroq yuborishga urinib ko`ring yoki sayt ma’muriyati bilan bog`laning.">
+                </div>
+                <button class="btn-custom btn-brand-color text-left post-log-send" type="submit">
+                    Yuborish                </button>
+            </form>
+
+        </div>
+        <div class="owner-modal-footer">
+            <div class="after-submit" style="display: none;">
+                <p style="font-size: 18px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rahmat. </font><font style="vertical-align: inherit;">Biz sizning xabaringizni oldik va xatoni imkon qadar tezroq tuzatamiz.</font></font></p>
+
+                <button class="btn-custom btn-brand-color  finish-submit" data-micromodal-close>Davom eting</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal -->
+
+        <script src="../js/jquery.js"></script>
+<script src="../js/yii.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/mainpage.js"></script>
+<script src="../js/authchoice.js"></script>
+<script>$('.weather__list').on('click', function (e) {
+    var $this = $(e.currentTarget);
+    data = $this.find("a").data();
+    temp = data['temp'];
+    tempStr = data['temp'] + "&deg;C";
+    if (temp > 0) 
+        tempStr = "+" + tempStr;
+    $(".weather__info .weather__degree").html(tempStr);    
+    icon = data['icon'];
+    $(".weather__current .weather__icon svg").html('<use xlink:href="/images/sprites.svg#' + icon + '"></use>');   
+    var weatherVal = $this.children().text();
+    $this.addClass('active').siblings().removeClass('active');
+    $('.weather__val').html(weatherVal);
+});</script>
+<script>jQuery(function ($) {
+$('.header__right .lang').html($('#languages-list').html());
+$('.mobile-menu__lang .lang').html($('#languages-list-mobile').html());
+//var _langTrigger = $('.lang__current');
+//var _langItems = $('.lang__items');
+//_langTrigger.on('click', function(e) {
+//    console.log('click');
+//    e.preventDefault();
+//    if (!_langItems.hasClass('show')) {
+//        _langItems.addClass('show');
+//        _langItems.show();
+//    } else {
+//        _langItems.removeClass('show');
+//        _langItems.hide();
+//    }
+//});
+
+//$(document).mouseup(function (e) {
+//    if (!_langTrigger.is(e.target) && _langTrigger.has(e.target).length === 0) {
+//        $('.lang__items').hide();
+//    }
+//});
+jQuery('#w0').authchoice();
+
+        let postErrors = $('.post-errors');
+        var selectedText;
+//        bu function tanlangan textni olish uchun ishlaydi
+        function getSelectedText() {
+            if (window.getSelection) {
+                selectedText = window.getSelection().toString();
+            } else if (window.document.getSelection) {
+                selectedText =window.document.getSelection().toString();
+            } else if (window.document.selection) {
+                selectedText = window.document.selection.createRange().text;
+            }
+            return selectedText;
+        }
+        $('.close_modal').click(function (e) {
+            e.preventDefault();
+            postErrors.hide().html('');
+            $('.post-log-send').removeClass('btn-not');
+            
+            $('.before-submit').show();
+            $('.after-submit').hide();
+            $('.post-log-modal').removeClass('opened');
+            $('#spelling-notification-comment').val('');
+        });
+        $('.finish-submit').click(function (e) {
+            e.preventDefault();
+            postErrors.hide().html('');
+            $('.post-log-send').removeClass('btn-not');
+            $('.before-submit').show();
+            $('.after-submit').hide();
+            $('.post-log-modal').removeClass('opened');
+            $('#spelling-notification-comment').val('');
+        });
+        
+        $('body').delegate('#spelling-notification-comment', 'keyup', function (event) {
+                let textareaLength = $(this).val().length;
+                if (selectedText.length > 0 && selectedText.length<100 && textareaLength> 0 && textareaLength < 200){
+                    $('.post-log-send').removeClass('btn-not');
+                    postErrors.hide().html('');
+                }
+                if (textareaLength > 200){
+                    $('.post-log-send').addClass('btn-not');
+                    postErrors.show().html(postErrors.data('long-comment-error'));
+                }
+            });
+    
+        $(document).keypress(function(event){
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            getSelectedText();
+            let postTextLength = selectedText.length;
+            if(event.originalEvent.ctrlKey && (keycode == '10' || keycode == '13') && +postTextLength>0){
+                $('.post-log-modal').addClass('opened');
+                    $('#spelling-notification-text').html(selectedText)
+                    $('#post-log-post-text').val(selectedText)
+                    $('#post-log-post-url').val(location.href)
+                if(postTextLength > 100){
+                    $('.post-log-send').addClass('btn-not');
+                    postErrors.show().html(postErrors.data('long-text-error'));
+                }
+            }
+        });
+        $('body').delegate('.post-log-send','click', function(event){
+            event.preventDefault();
+            let postLogData ={};
+            let postText =$('#post-log-post-text').val();
+            let commentText = $(this).parents('form').find('#spelling-notification-comment').val();
+          postLogData['SpellingMistake'] = {
+                comment_text: commentText,
+                selected_text: postText,
+                current_url: location.href,
+                language: siteLanguage,
+            };
+            if(commentText.length > 200){
+                $('.post-log-send').addClass('btn-not');
+                postErrors.show().html(postErrors.data('long-comment-error'));
+            }
+            if(commentText.length < 200 && postText.length < 100){
+                $.ajax({
+                    url: postLogUrl,
+                    data:postLogData,
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function(response) {
+                        if(response.status == 1){
+                            postErrors.hide().html('');
+                           $('.before-submit').hide();
+                            $('.after-submit').show();
+                        }else{
+                            $('.post-log-modal').removeClass('opened');
+                            console.log(response.message);
+                        }
+                        
+                        $('#spelling-notification-comment').val('');
+                    }
+                });
+            }
+        });
+        
+});</script>        <script>
+            (function () {
+                const getHeaderHeight = () => {
+                    const doc = document.documentElement;
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+
+                    doc.setAttribute('style', `--headerHeight: ${headerHeight}px;`);
+                };
+
+                getHeaderHeight();
+
+                window.addEventListener('resize', () => {
+                    setTimeout(() => {
+                        getHeaderHeight();
+                    }, 300);
+                }, true);
+            })();
+
+        </script>
+    </body>
+</html>
