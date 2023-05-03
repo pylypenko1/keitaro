@@ -28,7 +28,7 @@ $postdata = http_build_query(
     'buyer' => $buyer,
     'country' => $country,
     'ip' => $ip,
-    'source' => 'facebook',
+    'source' => 'push.house',
     'lang' => 'ru',
     'quiz' => "1. {$quiz1}.  2. {$quiz2}.  3. {$quiz3}.  4. {$quiz4}."
   ]
