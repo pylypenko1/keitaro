@@ -597,117 +597,48 @@
           </div>
         </div>
 
-        <div class="section nopadding nobg">
-          <div class="calculate-container clearfix">
-            <div class="heading-block title-center nobottomborder page-section">
-              <h2 id="here">РАССЧИТАТЬ ПОТЕНЦИАЛЬНУЮ ПРИБЫЛЬ</h2>
-              <span id="section-profits">
-                Сколько вы хотите инвестировать и на какой срок, чтобы получить потенциальную
-                прибыль
-              </span>
-            </div>
-            <style>
-              @media (max-width: 414px) {
-                .adaptive {
-                  flex-direction: column;
-                }
-              }
-            </style>
-            <div class="mb-2 align-items-stretch adaptive" style="display: flex; margin: 0">
-              <div class="col-lg-4 col-md-12 mt-4 mt-md-0 calculator-container" style="padding: 0">
-                <div class="card text-center">
-                  <div class="card-body py-4">
-                    <h3 class="card-title t400">Потенциальная выплата</h3>
-                    <div class="pricing-price t600 py-2" style="color: #ff1135">£1267</div>
-                  </div>
+        <div class="row align-items-stretch">
+          <style>
+                    .images {
+                      display: flex;
+                      justify-content: center;
+                    }
 
-                  <div class="card-body py-4 sign-up-free" style="position: relative; top: 0px">
-                    <a class="btn" style="width: 80%" href="#destinations">Присоединиться</a>
-                  </div>
-                </div>
-              </div>
+                    .images img {
+                      margin-right: 20px;
+                    }
 
-              <style>
-                .section {
-                  position: relative;
-                }
+                    .text {
+                      display: flex;
+                      justify-content: center;
+                      flex-direction: column;
+                      align-items: center;
+                      padding-top: 50px;
+                    }
 
-                .nopadding {
-                  padding: 0 !important;
-                }
-              </style>
-              <div class="col-lg-8 col-md-12 range-slider-container" style="padding: 0">
-                <div class="row align-items-stretch clearfix">
-                  <div class="col-md-12" style="padding: 0">
-                    <div class="row align-items-stretch">
-                      <div class="col-md-12 col-sm-12" style="padding: 0">
-                        <div class="card mb-4">
-                          <div class="card-body range-slider">
-                            <style>
-                              .wrap {
-                                display: flex;
-                                justify-content: center;
-                              }
-                            </style>
-                            <div class="wrap">
-                              <h4 class="mb-4">Депозит</h4>
-                            </div>
-                            <input
-                              class="range-slider-cpu"
-                              style="display: none"
-                              tabindex="-1"
-                              readonly="readonly"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row align-items-stretch">
-                      <div class="col-md-12 col-sm-12" style="padding: 0">
-                        <div class="card mb-4">
-                          <div class="card-body range-slider">
-                            <div class="d-flex justify-content-between">
-                              <h4 class="mb-4">Срок вложения</h4>
-                            </div>
-                            <input
-                              class="range-slider-ram"
-                              style="display: none"
-                              tabindex="-1"
-                              readonly="readonly"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row align-items-stretch">
-              <style>
-                .images {
-                  display: flex;
-                  justify-content: center;
-                }
-
-                .images img {
-                  margin-right: 20px;
-                }
-
-                @media (max-width: 414px) {
-                  .images {
-                    align-items: center;
-                  }
-                }
-              </style>
-              <div class="col-md-12 col-sm-12 images">
-                <img class="trust-icons" alt="" src="images/mcafee-logo.png" />
-                <img class="trust-icons" alt="" src="images/norton-logo.png" />
-                <img class="trust-icons" alt="" src="images/ssl_secure-logo.png" />
-              </div>
-            </div>
+                    .text h2 {
+                      font-size: 44px !important;
+                      line-height: 44px !important;
+                      font-weight: bold;
+                      font-family: 'Montserrat', sans-serif;
+                    }
+                    @media (max-width: 414px) {
+                      .images {
+                        align-items: center;
+                      }
+                    }
+          </style>
+          <div class="col-md-12 col-sm-12 images">
+            <img class="trust-icons" alt="" src="images/mcafee-logo.png" />
+            <img class="trust-icons" alt="" src="images/norton-logo.png" />
+            <img class="trust-icons" alt="" src="images/ssl_secure-logo.png" />
           </div>
         </div>
+      </div>
+
+      <div class="text">
+        <h2>20-50%</h2>
+        <p>доходность в месяц</p>
       </div>
 
       <div id="allusers">
@@ -1028,7 +959,9 @@
         <h2 class="animate">
           Отзывы участников платформы
           <br />
-          <nobr style="letter-spacing: 0.3em"> <span style="color: #ff1135">Musk-Invest</span> </nobr>
+          <nobr style="letter-spacing: 0.3em">
+            <span style="color: #ff1135">Musk-Invest</span>
+          </nobr>
         </h2>
 
         <span class="timeline-text">
