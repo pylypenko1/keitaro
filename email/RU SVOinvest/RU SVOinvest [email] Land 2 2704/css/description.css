@@ -1,0 +1,16 @@
+.description {
+  margin: 63px 52px 0 51px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+}
+
+@media (max-width: 420px) {
+  .description {
+    margin: 59px 12px 0 11px;
+    font-size: 19px;
+    line-height: 23px;
+  }
+}
