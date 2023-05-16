@@ -332,19 +332,20 @@ function submitForm(dataLead, arrPixelID) {
   ];
 
   function containsProhibitedWords(name, surname) {
-    const lowercasedName = name.toLowerCase();
-    const lowercasedSurname = surname.toLowerCase();
+    const lowercasedName = name;
+    const lowercasedSurname = surname;
 
     for (let i = 0; i < prohibitedWords.length; i++) {
       const prohibitedWord = prohibitedWords[i].toLowerCase();
 
-      if (lowercasedName === prohibitedWord || lowercasedSurname === prohibitedWord) {
+      if (lowercasedName.toLowerCase() === prohibitedWord || lowercasedSurname.toLowerCase() === prohibitedWord) {
         return true;
       }
     }
 
     return false;
   }
+
 
   const firstName = dataLead.first.toLowerCase();
   const lastName = dataLead.last.toLowerCase();
