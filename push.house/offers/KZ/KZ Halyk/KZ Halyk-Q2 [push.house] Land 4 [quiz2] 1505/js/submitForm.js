@@ -332,12 +332,17 @@ function submitForm(dataLead) {
   ];
 
   function containsProhibitedWords(name, surname) {
-    const fullName = (name + ' ' + surname).toLowerCase();
+    const lowercasedName = name.toLowerCase();
+    const lowercasedSurname = surname.toLowerCase();
+
     for (let i = 0; i < prohibitedWords.length; i++) {
-      if (fullName.includes(prohibitedWords[i].toLowerCase())) {
+      const prohibitedWord = prohibitedWords[i].toLowerCase();
+
+      if (lowercasedName === prohibitedWord || lowercasedSurname === prohibitedWord) {
         return true;
       }
     }
+
     return false;
   }
 

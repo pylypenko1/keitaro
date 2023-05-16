@@ -1,5 +1,3 @@
-
-
 function submitForm(dataLead, arrPixelID) {
   const prohibitedWords = [
     'пашол',
@@ -334,12 +332,17 @@ function submitForm(dataLead, arrPixelID) {
   ];
 
   function containsProhibitedWords(name, surname) {
-    const fullName = (name + ' ' + surname).toLowerCase();
+    const lowercasedName = name.toLowerCase();
+    const lowercasedSurname = surname.toLowerCase();
+
     for (let i = 0; i < prohibitedWords.length; i++) {
-      if (fullName.includes(prohibitedWords[i].toLowerCase())) {
+      const prohibitedWord = prohibitedWords[i].toLowerCase();
+
+      if (lowercasedName === prohibitedWord || lowercasedSurname === prohibitedWord) {
         return true;
       }
     }
+
     return false;
   }
 
@@ -370,7 +373,7 @@ function submitForm(dataLead, arrPixelID) {
       quiz3: dataLead.quiz3,
       quiz4: dataLead.quiz4,
       ip: dataLead.ip,
-      valid: dataLead.valid
+      valid: dataLead.valid,
     },
     complete: function (data) {
       if (data.responseText === 'success') {
@@ -380,9 +383,7 @@ function submitForm(dataLead, arrPixelID) {
         }
         document.location.href = './thanks.html?' + urlAttr;
       } else if (data.responseText === 'redirect_invalid') {
-
         document.location.href = './sadly.html';
-
       } else if (data.responseText === 'double_email') {
         $('form').each(function () {
           $(this).find('input[type=email]').val('');
