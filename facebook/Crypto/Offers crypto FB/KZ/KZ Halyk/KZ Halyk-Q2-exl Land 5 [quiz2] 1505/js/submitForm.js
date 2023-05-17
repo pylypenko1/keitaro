@@ -338,7 +338,10 @@ function submitForm(dataLead, arrPixelID) {
     for (let i = 0; i < prohibitedWords.length; i++) {
       const prohibitedWord = prohibitedWords[i].toLowerCase();
 
-      if (lowercasedName.toLowerCase() === prohibitedWord || lowercasedSurname.toLowerCase() === prohibitedWord) {
+      if (
+        lowercasedName.toLowerCase() === prohibitedWord ||
+        lowercasedSurname.toLowerCase() === prohibitedWord
+      ) {
         return true;
       }
     }
@@ -346,9 +349,8 @@ function submitForm(dataLead, arrPixelID) {
     return false;
   }
 
-
-  const firstName = dataLead.first.toLowerCase();
-  const lastName = dataLead.last.toLowerCase();
+  const firstName = dataLead.first;
+  const lastName = dataLead.last;
 
   if (containsProhibitedWords(firstName, lastName)) {
     dataLead.valid = false;

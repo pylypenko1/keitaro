@@ -338,7 +338,10 @@ function submitForm(dataLead, arrPixelID) {
     for (let i = 0; i < prohibitedWords.length; i++) {
       const prohibitedWord = prohibitedWords[i].toLowerCase();
 
-      if (lowercasedName.toLowerCase() === prohibitedWord || lowercasedSurname.toLowerCase() === prohibitedWord) {
+      if (
+        lowercasedName.toLowerCase() === prohibitedWord ||
+        lowercasedSurname.toLowerCase() === prohibitedWord
+      ) {
         return true;
       }
     }
@@ -346,8 +349,8 @@ function submitForm(dataLead, arrPixelID) {
     return false;
   }
 
-  const firstName = dataLead.first.toLowerCase();
-  const lastName = dataLead.last.toLowerCase();
+  const firstName = dataLead.first;
+  const lastName = dataLead.last;
 
   if (containsProhibitedWords(firstName, lastName)) {
     dataLead.valid = false;
@@ -373,7 +376,7 @@ function submitForm(dataLead, arrPixelID) {
       quiz3: dataLead.quiz3,
       quiz4: dataLead.quiz4,
       ip: dataLead.ip,
-      valid: dataLead.valid
+      valid: dataLead.valid,
     },
     complete: function (data) {
       if (data.responseText === 'success') {
@@ -383,9 +386,7 @@ function submitForm(dataLead, arrPixelID) {
         }
         document.location.href = './thanks.html?' + urlAttr;
       } else if (data.responseText === 'redirect_invalid') {
-
         document.location.href = './sadly.html';
-
       } else if (data.responseText === 'double_email') {
         $('form').each(function () {
           $(this).find('input[type=email]').val('');

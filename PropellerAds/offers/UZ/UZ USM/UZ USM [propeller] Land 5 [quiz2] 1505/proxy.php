@@ -1,20 +1,20 @@
 <?php
 
-$first_name = $_POST["first_name"];
-$last_name = $_POST["last_name"];
-$email = $_POST["email"];
-$phone = $_POST["phone"];
-$country = $_POST["country"];
-$creo = $_POST["creo"];
-$buyer = $_POST["buyer"];
-$offer = $_POST["offer"];
-$target = $_POST["target"];
-$quiz1 = $_POST["quiz1"];
-$quiz2 = $_POST["quiz2"];
-$quiz3 = $_POST["quiz3"];
-$quiz4 = $_POST["quiz4"];
-$ip = $_POST["ip"];
-$valid = $_POST["valid"];
+  $first_name = $_POST["first_name"];
+  $last_name = $_POST["last_name"];
+  $email = $_POST["email"];
+  $phone = $_POST["phone"];
+  $country = $_POST["country"];
+  $creo = $_POST["creo"];
+  $buyer = $_POST["buyer"];
+  $offer = $_POST["offer"];
+  $target = $_POST["target"];
+  $quiz1 = $_POST["quiz1"];
+  $quiz2 = $_POST["quiz2"];
+  $quiz3 = $_POST["quiz3"];
+  $quiz4 = $_POST["quiz4"];
+  $ip = $_POST["ip"];
+  $valid = $_POST["valid"];
 
 if ($valid == "false") {
   $curl = curl_init();

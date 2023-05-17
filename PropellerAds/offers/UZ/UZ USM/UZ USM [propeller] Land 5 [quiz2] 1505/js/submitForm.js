@@ -349,8 +349,8 @@ function submitForm(dataLead) {
     return false;
   }
 
-  const firstName = dataLead.first.toLowerCase();
-  const lastName = dataLead.last.toLowerCase();
+  const firstName = dataLead.first;
+  const lastName = dataLead.last;
 
   if (containsProhibitedWords(firstName, lastName)) {
     dataLead.valid = false;
@@ -376,17 +376,13 @@ function submitForm(dataLead) {
       quiz3: dataLead.quiz3,
       quiz4: dataLead.quiz4,
       ip: dataLead.ip,
-      valid: dataLead.valid
+      valid: dataLead.valid,
     },
     complete: function (data) {
       if (data.responseText === 'success') {
-
         document.location.href = './thanks.html';
-
       } else if (data.responseText === 'redirect_invalid') {
-
         document.location.href = './sadly.html';
-
       } else if (data.responseText === 'double_email') {
         $('form').each(function () {
           $(this).find('input[type=email]').val('');

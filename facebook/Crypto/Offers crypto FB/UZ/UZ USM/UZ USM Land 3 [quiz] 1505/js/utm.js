@@ -1,6 +1,6 @@
 let objUTM = {
   country: "uz",
-  offer: "USM-Q2",
+  offer: "USM3",
   target: "",
   creo: "",
   buyer: "",

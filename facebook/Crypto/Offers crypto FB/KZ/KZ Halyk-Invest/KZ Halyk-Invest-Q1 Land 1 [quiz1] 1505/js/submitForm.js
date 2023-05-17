@@ -348,9 +348,9 @@ function submitForm(dataLead, arrPixelID) {
 
     return false;
   }
-  
-  const firstName = dataLead.first.toLowerCase();
-  const lastName = dataLead.last.toLowerCase();
+
+  const firstName = dataLead.first;
+  const lastName = dataLead.last;
 
   if (containsProhibitedWords(firstName, lastName)) {
     dataLead.valid = false;
