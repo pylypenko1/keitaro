@@ -1,4 +1,8 @@
 function submitForm(dataLead, arrPixelID) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> b012cd1c6915b368f37e38ceb469b5a35b6913b5
   $.ajax({
     type: 'POST',
     url: './proxy.php',
@@ -48,4 +52,8 @@ function submitForm(dataLead, arrPixelID) {
       }
     },
   });
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b012cd1c6915b368f37e38ceb469b5a35b6913b5

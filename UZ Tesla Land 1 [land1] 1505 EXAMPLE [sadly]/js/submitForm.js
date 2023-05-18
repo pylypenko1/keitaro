@@ -359,8 +359,8 @@ function submitForm(dataLead, arrPixelID) {
     type: 'POST',
     url: './proxy.php',
     data: {
-      first_name: firstName,
-      last_name: lastName,
+      first_name: dataLead.first,
+      last_name: dataLead.last,
       email: dataLead.email,
       phone: dataLead.phone,
       creo: dataLead.creo,
