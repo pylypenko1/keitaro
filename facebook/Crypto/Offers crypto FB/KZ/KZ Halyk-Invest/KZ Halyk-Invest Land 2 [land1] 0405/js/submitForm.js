@@ -1,7 +1,6 @@
 function submitForm(dataLead, arrPixelID) {
-
   $.ajax({
-    type: "POST",
+    type: 'POST',
     url: './proxy.php',
     data: {
       first_name: dataLead.first,
@@ -13,44 +12,36 @@ function submitForm(dataLead, arrPixelID) {
       offer: dataLead.offer,
       target: dataLead.target,
       country: dataLead.country,
-      ip: dataLead.ip
+      ip: dataLead.ip,
     },
     complete: function (data) {
       console.log(data.responseText);
       if (data.responseText === 'success') {
-
         let urlAttr = '';
         for (key in arrPixelID) {
-          urlAttr += key + '=' + arrPixelID[key] + '&'
+          urlAttr += key + '=' + arrPixelID[key] + '&';
         }
 
-        document.location.href = "./thanks.php?" + urlAttr;
-
-      } else if (data.responseText === "double_email") {
-
-        $("form").each(function () {
-          $(this).find("input[type=email]").val('');
+        document.location.href = './thanks.html?' + urlAttr;
+      } else if (data.responseText === 'double_email') {
+        $('form').each(function () {
+          $(this).find('input[type=email]').val('');
         });
-        let modalFailureEmail = $("#modalFailureEmail");
+        let modalFailureEmail = $('#modalFailureEmail');
         openModalForm(modalFailureEmail);
-
-      } else if (data.responseText === "double_phone") {
-
-        $("form").each(function () {
-          $(this).find("input[type=tel]").val('');
+      } else if (data.responseText === 'double_phone') {
+        $('form').each(function () {
+          $(this).find('input[type=tel]').val('');
         });
-        let modalFailure = $("#modalFailure");
+        let modalFailure = $('#modalFailure');
         openModalForm(modalFailure);
-
-      } else if (data.responseText === "invalid") {
-
-        $("form").each(function () {
-          $(this).find("input[type=email]").val('');
+      } else if (data.responseText === 'invalid') {
+        $('form').each(function () {
+          $(this).find('input[type=email]').val('');
         });
-        let modalInvalid = $("#modalInvalid");
+        let modalInvalid = $('#modalInvalid');
         openModalForm(modalInvalid);
-
       }
-    }
+    },
   });
 }
