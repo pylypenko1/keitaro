@@ -42,7 +42,7 @@ $opts = [
 ];
 
 $context = stream_context_create($opts);
-$result = file_get_contents('https://api.theleadar.com/api/leads/add', false, $context);
+$result = file_get_contents('https://api.solutionsulting.com/api/leads/add', false, $context);
 
 // Double check condition
 if ($saved = json_decode($result, true)['saved'] === 'true') {
