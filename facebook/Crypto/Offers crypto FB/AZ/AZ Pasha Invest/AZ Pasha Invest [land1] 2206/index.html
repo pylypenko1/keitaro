@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>PASHA INVEST</title>
+    <link rel="icon" type="image/png" href="images/512x512bb.jpg" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/video-js.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/timer.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!'{subid}'.match('{')) {
+          return '{subid}';
+        }
+        var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (clientSubid && !clientSubid.match('>')) {
+          return clientSubid;
+        }
+        if (params.get('_subid')) {
+          return params.get('_subid');
+        }
+        if (params.get('subid')) {
+          return params.get('subid');
+        }
+        if (getCookie('subid')) {
+          return getCookie('subid');
+        }
+      }
+
+      if (typeof URLSearchParams === 'function') {
+        document.addEventListener('DOMContentLoaded', function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+
+          setCookie('subid', subid);
+
+          // Adds params to the links
+          document.querySelectorAll('a').forEach(function (link) {
+            var url = new URL(link.href);
+            params.forEach(function (v, k) {
+              url.searchParams.append(k, v);
+            });
+            link.href = url.toString();
+          });
+
+          // Adds params as hidden inputs to the forms
+          document.querySelectorAll('form').forEach(function (form) {
+            params.forEach(function (v, k) {
+              var input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = k;
+              input.value = v;
+
+              form.append(input);
+            });
+          });
+        });
+      }
+    </script>
+    <!-- End JS adapter -->
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+      ym(94089649, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+        trackHash: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/94089649"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </head>
+
+  <body data-target="#mainNavbar" class="">
+    <div class="topBarCTA">
+      <div class="countdownBox">
+        <span class="countdownTime" id="register-count1">54</span>
+        <i class="fa fa-arrow-left"></i>
+        <span class="countdownMessage"> Пользователей на сайте </span>
+      </div>
+      <div class="dateBox">
+        <span class="countdownTime" id="register-count2">15</span>
+        <div class="icon wrap">
+          <i class="fa fa-arrow-left"></i>
+          <i class="fa fa-exclamation-triangle"></i>
+        </div>
+        Количество свободных мест
+      </div>
+    </div>
+    <section id="heroSection">
+      <div class="container">
+        <div class="heroRow">
+          <img
+            class="img-responsive heroLogo lazyload"
+            alt="PASHA INVEST"
+            src="./images/logo.png"
+          />
+          <h1 class="heroHeadline">
+            PASHA INVEST - зарабатывай от $1500 еженедельно на своих инвестициях.
+          </h1>
+        </div>
+        <div class="row hero-block">
+          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 hero-video">
+            <div class="videoOuterWrap">
+              <div id="mainVideo">
+                <div class="component-ivideo">
+                  <div class="videoWrapper">
+                    <div
+                      id="video"
+                      data-setup='{ "controls": true, "autoplay": true, "preload": "auto", "controlBar": false, "fluid": true }'
+                      class="video-js vjs-show-big-play-button-on-pause vjs-big-play-centered vjs-paused vjs-fluid video-dimensions vjs-controls-enabled vjs-workinghover vjs-v7 vjs-user-active"
+                      lang="de"
+                      role="region"
+                      aria-label="Video Player"
+                    >
+                      <video
+                        class="vjs-tech"
+                        data-setup='{ "controls": true, "autoplay": true, "preload": "auto", "controlBar": false, "fluid": true }'
+                        id="video_html5_api"
+                        tabindex="-1"
+                        preload="auto"
+                        autoplay=""
+                        src="./video/video1.mp4"
+                      >
+                        <source src="./video/video1.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                text-align: center;
+                color: #fff;
+                margin: 10px 0;
+                font-size: 18px;
+                font-weight: bold;
+              "
+            >
+              Начните инвестировать всего со $150!
+              <br />
+              Посмотрите это видео, чтобы начать зарабатывать с PASHA INVEST!
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 hero-form">
+            <div class="contactForm top_form">
+              <form
+                method="POST"
+                id="leadform"
+                class="register-form contact_form content_inner flex"
+              >
+                <h3>
+                  Оставьте ваш актуальный номер телефона, на который вы получите доступ к платформе
+                </h3>
+                <div class="input_group input_name shadow">
+                  <input
+                    type="text"
+                    placeholder="Имя"
+                    class="form-control required form-input"
+                    name="first_name"
+                    id="first_name"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="input_group input_last_name shadow">
+                  <input
+                    type="text"
+                    placeholder="Фамилия"
+                    class="form-control required form-input"
+                    name="last_name"
+                    id="last_name"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="input_group input_email shadow">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    class="form-control required"
+                    name="email"
+                    id="email"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="input_group intl-tel-input shadow">
+                  <input
+                    type="tel"
+                    id="phone1"
+                    name="phone1"
+                    placeholder=""
+                    autocomplete="off"
+                    required=""
+                    class="form-control"
+                  />
+                  <input
+                    type="hidden"
+                    id="realPhone"
+                    name="realPhone"
+                    class="hidden-phone"
+                    value=""
+                  />
+                  <input type="hidden" id="country" name="country" value="" />
+                </div>
+                <div class="input_group">
+                  <button type="submit" class="btn btn-submit btn-get-robot text-uppercase redBtn">
+                    <span>Начать зарабатывать</span>
+                  </button>
+                </div>
+              </form>
+
+              <style>
+                #leadform h3,
+                .form-title {
+                  font-size: 18px;
+                  margin: 15px 0;
+                  color: #e24353;
+                }
+
+                input.form-control {
+                  width: 100%;
+                  margin-bottom: 5px;
+                  padding: 10px;
+                  border-radius: 6px;
+                  border: 1px solid gray;
+                }
+
+                button.redBtn {
+                  text-align: center;
+                  width: 100%;
+                  display: block;
+                  background: #e62626;
+                  color: white;
+                  border: 0;
+                  padding: 15px;
+                  border-radius: 7px;
+                  font-weight: 700;
+                  cursor: pointer;
+                  text-transform: uppercase;
+                }
+
+                .fond__inner {
+                  display: flex;
+                  flex-direction: column;
+                }
+
+                .fond__body {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                }
+
+                .fond__left img {
+                  width: 300px;
+                  margin: 10px auto;
+                }
+
+                .fond__left {
+                  /* margin-right: 100px; */
+                  margin-bottom: 40px;
+                }
+
+                a.zoomBtn {
+                  text-align: center;
+                  width: fit-content;
+                  margin: 15px auto;
+                  display: block;
+                  background: #e24353;
+                  color: #fff;
+                  border: 0;
+                  padding: 15px;
+                  border-radius: 7px;
+                  font-weight: 700;
+                  cursor: pointer;
+                  text-transform: uppercase;
+                  text-decoration: none;
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="heroLogos">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="flex-row">
+              <img
+                src="images/AFFA.png"
+                alt=""
+                class="img-responsive"
+                style="width: 40px; height: 45px"
+              />
+              <img src="images/socar1.png" alt="" class="img-responsive" />
+              <img src="images/telecom.png" alt="" class="img-responsive" style="height: 80px" />
+              <div class="steps">
+                <div class="step">
+                  <div class="step-badge">
+                    <span>1</span>
+                  </div>
+                  <p>Смотрите видео</p>
+                </div>
+                <div class="step">
+                  <div class="step-badge">
+                    <span>2</span>
+                  </div>
+                  <p>Заполняйте форму, чтобы начать зарабатывать</p>
+                </div>
+                <div class="step">
+                  <div class="step-badge">
+                    <span>3</span>
+                  </div>
+                  <p>Вы получите личного финансового эксперта</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="heroSuccess">
+      <div class="container">
+        <h1 class="sectionHeadline text-center">
+          “Почему каждый участник зарабатывает от 1500$ в неделю?”
+        </h1>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="feature">
+              <div class="feature-icon">
+                <img src="images/1.png" alt="" class="img-responsive" />
+              </div>
+              <div class="feature-name">Личный Финансовый Эксперт</div>
+              <div class="feature-text">
+                “PASHA INVEST выделяет вам личного Финансового Эксперта! По его указаниям вы сможете
+                гарантированно выйти на недельный доход от 1500$.”
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature">
+              <div class="feature-icon">
+                <img src="images/2.png" alt="" class="img-responsive" />
+              </div>
+              <div class="feature-name">Гарантия прибыльности</div>
+              <div class="feature-text">
+                “PASHA INVEST использует технологию, лицензированную министерством финансов
+                Азербайджана.”
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature">
+              <div class="feature-icon">
+                <img src="images/3.png" alt="" class="img-responsive" />
+              </div>
+              <div class="feature-name">Заработок с 1 дня</div>
+              <div class="feature-text">
+                “Связавшись с личным финансовым экспертом, под его руководством вы сможете сразу
+                совершить прибыльную сделку, и получить прибыль буквально сразу!”
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="lead-big text-center heroParagraph">
+          “Наши участники во всем Азербайджане уже зарабатывают тысячи манат, так почему же вы еще
+          этого не сделали?”
+        </p>
+      </div>
+    </section>
+    <hr class="divider" />
+    <section id="heroTrading">
+      <div class="container">
+        <h1 class="sectionHeadline" style="text-align: center">
+          Зарегистрируйтесь и начните зарабатывать прямо сейчас!
+        </h1>
+        <!-- <p class="lead">
+            Благодаря новой технологии MBANK Invest вы можете начать зарабатывать сразу после регистрации. Вы даже
+            получите экспертный совет от финансового специалиста, который объяснит, как работает приложение, и как
+            правильно распорядиться своими инвестициями, чтобы уже через полгода выйти на доход более 250 000 сом в
+            месяц.
+         </p>
+         <p class="lead">
+            Невероятное программное обеспечение MBANK Invest также делает всю работу за вас, поэтому вам не нужно ничего
+            изучать, лишь следовать инструкциям. Софт подключен к магистрали финансовых рынков и зарабатывают деньги
+            каждый раз, когда совершается очередная транзакция. Эта передовая технология меняет жизнь людей. MBANK
+            Invest – ваш билет в мир инвестиций!
+         </p> -->
+      </div>
+    </section>
+    <hr class="divider" />
+    <section id="cryptoMedia">
+      <div class="container">
+        <h1 class="sectionHeadline text-center" style="margin: 10px auto 20px">Лицензия</h1>
+        <p style="text-align: center; font-size: 1.1em; color: #fff">
+          “Центральная палата по контролю финансовых рынков Азербайджана № iS-03 от 12.10.2018
+          Профессиональной и биржевой деятельности по ценным бумагам “Государственной платформы
+          PASHA INVEST” ”
+        </p>
+        <div class="fond__inner">
+          <div class="fond__body">
+            <div class="fond__left">
+              <a class="fancybox" href="images/licence.png">
+                <img src="images/licence.png" alt="License" />
+              </a>
+              <a href="images/licence.png" class="fancybox btn btn-submit btn-get-robot zoomBtn">
+                <span>Увеличить фото</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .reviews__items {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .reviews__item {
+        background: #f2f2f2;
+        padding-bottom: 10px;
+        margin-bottom: 35px;
+      }
+
+      .video__item {
+        margin-bottom: 10px;
+      }
+
+      .name__item {
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .name__country {
+        text-align: center;
+      }
+
+      .red {
+        color: #e24353;
+      }
+
+      .title {
+        text-align: center;
+        color: #007d57;
+        margin-bottom: 30px;
+      }
+    </style>
+
+    <section class="reviews">
+      <div class="container">
+        <div class="reviews__items">
+          <h2 class="title">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+          <div class="reviews__item">
+            <div class="video__item">
+              <div class="videoOuterWrap">
+                <div id="">
+                  <div class="component-ivideo">
+                    <div class="videoWrapper">
+                      <div>
+                        <video style="width: 100%" data-src="video/o1.mp4" controls></video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="name__item"><b>Мая Аврамова</b></div>
+            <div class="name__country">Клиент из <span class="red">Баку</span></div>
+          </div>
+
+          <div class="reviews__item">
+            <div class="video__item">
+              <div class="videoOuterWrap">
+                <div id="mainVideo">
+                  <div class="component-ivideo">
+                    <div class="videoWrapper">
+                      <div>
+                        <video style="width: 100%" data-src="video/o2.mov" controls></video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="name__item"><b>Гульнара Алиева</b></div>
+            <div class="name__country">Клиент из <span class="red">Сумгаита</span></div>
+          </div>
+
+          <div class="reviews__item">
+            <div class="video__item">
+              <div class="videoOuterWrap">
+                <div id="mainVideo">
+                  <div class="component-ivideo">
+                    <div class="videoWrapper">
+                      <div>
+                        <video style="width: 100%" data-src="video/o3.mp4" controls></video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="name__item"><b>Айша Мустафаева</b></div>
+            <div class="name__country">Клиент из <span class="red">Евлаха</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="polygon">
+      <div class="t-container index-z">
+        <div class="t-width t-width_12 t415__mainblock">
+          <div class="t-cover__wrapper t-valign_middle">
+            <div class="t415__content" data-hook-content="covercontent">
+              <img class="" style="max-width: 190px; margin: 30px auto" src="./images/logo.png" />
+              <div class="t415__textwrapper t-width t-width_12">
+                <div class="t415__title t-title t-title_md" field="title">
+                  Количество пользователей платформы лимитировано
+                </div>
+                <div class="t415__descr t-descr t-descr_md" field="descr">
+                  Успейте зарегистрироваться и начать зарабатывать на выгодных инвестициях.
+                  <br />
+                  До закрытия регистрации осталось...
+                </div>
+              </div>
+              <div id="t415__timer210558841" class="t415__timer">
+                <div class="t415__col">
+                  <span class="t415__days t-title t-title_lg t415__number"> 0 </span>
+                  <div class="t415__text t-descr t-descr_xxs">Дней</div>
+                </div>
+                <div class="t415__col">
+                  <span class="t415__hours t-title t-title_lg t415__number" id="hours">14</span>
+                  <div class="t415__text t-descr t-descr_xxs">Часов</div>
+                </div>
+                <div class="t415__col">
+                  <span class="t415__minutes t-title t-title_lg t415__number" id="minutes">45</span>
+                  <div class="t415__text t-descr t-descr_xxs">Минут</div>
+                </div>
+                <div class="t415__col">
+                  <span class="t415__seconds t-title t-title_lg t415__number" id="seconds">1</span>
+                  <div class="t415__text t-descr t-descr_xxs">Секунд</div>
+                </div>
+              </div>
+              <div class="t415__buttons">
+                <a href="#openModal_form" style="text-decoration: none">
+                  <button type="button" class="timer__btn redBtn">Зарегистрироваться</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <footer>
+      <div class="container">
+         <div class="footer-disclaimer" style="color: #8d8d8d; font-size: 11.2px; text-align: center;">
+            © 2022 All Rights Reserved - MBANK Invest
+         </div>
+      </div>
+   </footer> -->
+
+    <!-- Start popup double -->
+    <div class="modal-form" id="modalFailure">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы уже зарегистрировались на данный номер. Если вам нужен новый аккаунт, пройдите
+            регистрацию на другой мобильный номер
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalFailureEmail">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы уже зарегистрировались на данную электронную почту. Если вам нужен новый аккаунт,
+            пройдите регистрацию на другую электронную почту.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalInvalid">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы ввели неккоректную электронную почту. Пройдите регистрацию на другую электронную
+            почту.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <!-- End popup double -->
+
+    <!-- Start modal form -->
+    <div id="openModal_form" class="modal_form">
+      <div class="modal-dialog_form">
+        <div class="modal-content_form">
+          <div class="modal-header_form">
+            <h3 class="modal-title_form text-center"></h3>
+            <a href="#close_form" title="Закрыть" class="close_form">×</a>
+          </div>
+          <div class="modal-body_form">
+            <div class="contactForm" style="background-image: url(images/bg_form.png)">
+              <div class="form_header">
+                <span style="font-size: 14px">
+                  <h3 style="text-align: center; margin-bottom: 12px">
+                    <span style="font-weight: bold; color: #000; line-height: 1.3; font-size: 20px">
+                      Оставьте ваш актуальный номер телефона, на который вы получите доступ к
+                      платформе
+                    </span>
+                  </h3>
+                </span>
+              </div>
+              <form
+                method="POST"
+                id="leadformModal"
+                class="register-form contact_form content_inner flex"
+              >
+                <div class="input_group input_name shadow">
+                  <input
+                    type="text"
+                    placeholder="Имя"
+                    class="required form-input"
+                    name="first_name"
+                    id="first_name"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="input_group input_last_name shadow">
+                  <input
+                    type="text"
+                    placeholder="Фамилия"
+                    class="required form-input"
+                    name="last_name"
+                    id="last_name"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="input_group input_email shadow">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    class="required"
+                    name="email"
+                    id="email"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="input_group intl-tel-input shadow">
+                  <input
+                    type="tel"
+                    id="phoneModal"
+                    name="phoneModal"
+                    placeholder=""
+                    autocomplete="off"
+                    required=""
+                  />
+                  <input
+                    type="hidden"
+                    id="realPhoneModal"
+                    name="realPhone"
+                    class="hidden-phone"
+                    value=""
+                  />
+                  <input type="hidden" id="countryModal" name="country" value="" />
+                </div>
+                <div class="input_group">
+                  <button type="submit" class="btn btn-submit btn-get-robot text-uppercase">
+                    <span> Зарегистрироваться</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal form -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
+
+    <script src="js/timer.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/time-table.js"></script>
+    <script src="js/utm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.fancybox').fancybox({
+          buttons: ['zoom', 'slideShow', 'close'],
+          thumbs: {
+            autoStart: true,
+          },
+        });
+      });
+    </script>
+
+    <script>
+      var lazyLoad = new LazyLoad({
+        elements_selector: 'video',
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,572 @@
+<html lang="ru" class="js-focus-visible">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Душанбе Сити</title>
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon-precomposed">
+    <link href="assets/css/app.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdn-addict.site/addict-new/css/app.css" async type="text/css" media="all">
+    <!-- Open Graph -->
+    <meta name="description" content="Душанбе Сити" />
+    <meta name="keywords" content="Душанбе Сити" />
+    <meta property="og:title" content="Душанбе Сити" />
+    <meta property="og:description" content="Душанбе Сити" />
+    <meta property="og:image:width" content="450" />
+    <meta property="og:image:height" content="450" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/Душанбе Сити/" />
+
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/modal.css" />
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+        function getCookie(name) {
+            var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return v ? v[2] : null;
+        }
+
+        function setCookie(name, value, days) {
+            var d = new Date;
+            d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+            document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+        }
+
+        function getSubId() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{subid}'.match('{')) {
+                return '{subid}';
+            }
+            var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+            if (clientSubid && !clientSubid.match('>')) {
+                return clientSubid;
+            }
+            if (params.get('_subid')) {
+                return params.get('_subid')
+            }
+            if (params.get('subid')) {
+                return params.get('subid')
+            }
+            if (getCookie('subid')) {
+                return getCookie('subid');
+            }
+        }
+
+        function getToken() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{token}'.match('{')) {
+                return '{token}';
+            }
+            var clientToken = '<?php echo isset($client) ? $client->getToken() : "" ?>';
+            if (clientToken && !clientToken.match('>')) {
+                return clientToken;
+            }
+            if (params.get('_token')) {
+                return params.get('_token')
+            }
+            if (params.get('token')) {
+                return params.get('token')
+            }
+            if (getCookie('token')) {
+                return getCookie('token');
+            }
+            return null;
+        }
+
+        if (typeof URLSearchParams === 'function') {
+            document.addEventListener("DOMContentLoaded", function (event) {
+                var params = new URLSearchParams(document.location.search.substr(1));
+                var subid = getSubId();
+                var token = getToken();
+
+                params.set('_token', token);
+                setCookie('token', token);
+                setCookie('subid', subid);
+
+                // Adds params as hidden inputs to the forms
+                document.querySelectorAll('form').forEach(function (form) {
+                    params.forEach(function (v, k) {
+                        var input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = k;
+                        input.value = v;
+
+                        form.append(input);
+                    });
+                });
+            })
+        }
+    </script>
+    <!-- End JS adapter -->
+</head>
+
+<body class="text-primary font-sans leading-snug">
+    <header class="sm:w-full sm:z-50 sm:mb-8">
+        <div class="container relative flex justify-between items-center mx-auto py-4 mb-6 sm:mb-0">
+            <div class="flex w-1/2 md:w-auto">
+                <a href="javascript:void(0)">
+                    <img src="assets/img/logo.svg" style="width:130px;" alt="">
+                </a>
+            </div>
+            <div class="flex w-1/2 justify-end">
+                <img src="assets/img/pn2.png" style="width:130px;" alt="russian title">
+            </div>
+        </div>
+    </header>
+    <div class="fixed z-50 w-53 h-13 rounded-custom-right py-2 px-3 flex flex-col bg-secondary text-white shadow text-center left-0 sm:hidden"
+        style="text-shadow:0 3px 12px #333">
+        <span id="rand_man">125</span>
+        <span class="tracking-wide whitespace-no-wrap">
+            ЧЕЛОВЕК НА СТРАНИЦЕ
+        </span>
+    </div>
+    <div class="fixed z-50 w-53 h-13 rounded-custom-left py-2 px-3 flex flex-col bg-secondary text-white shadow text-center right-0 sm:hidden"
+        style="text-shadow:0 3px 12px #333">
+        <span id="rand_places">14 </span>
+        <span class="tracking-wide">
+            СВОБОДНЫХ МЕСТ
+        </span>
+    </div>
+    <main class="main content">
+        <section class="container mx-auto pt-4 sm:pt-0">
+            <h1
+                class="sm:text-3xl text-5xl text-center leading-extra-tight sm:leading-snug font-ubuntu font-black mb-3 sm:mb-6">
+                С банком Душанбе Сити каждый зарабатывает от 30 000 сомони в месяц на акциях компании!
+            </h1>
+            <h3 class="text-center text-2xl mb-6 sm:text-xl">
+                Теперь доступ открыт для всех жителей Таджикистана!
+            </h3>
+        </section>
+        <section id="about" class="container mx-auto mb-12 sm:mb-12">
+            <div class="w-full flex justify-center items-center sm:flex-col">
+                <div class="relative pr-2 w-2/3 flex sm:pr-0 sm:w-full sm:mr-0 js-vid1 sm:block video">
+                    <!-- <video width="100%" height="450px" src="assets/video/video_gp_tj.mp4" frameborder="0" controls
+                        controlsList="nodownload" loop></video>
+                    <div class="play-btn"></div> -->
+                    <img src="images/main_bg.png" alt="">
+                </div>
+                <div class="pl-6 block w-1/3 sm:p-0 sm:w-full" id="registration">
+                    <div
+                        class="reg-form block bg-white sm:shadow-none sm:bg-transparent rounded-custom shadow-form text-primary overflow-hidden w-full pt-6 pb-4 px-6 sm:pt-2 sm:px-4 sm:leading-tight">
+                        <h2 class="text-2xl text-center font-bold font-ubuntu mt-6 sm:mt-6 mb-4 sm:mb-4">Начните
+                            зарабатывать на
+                            государственном проекте!</h3>
+                            <!-- <div class="app" id="app1" data-type="2"
+                                data-url="thankyou.php?sub1={sub_id_1}&sub2={subid}&pixel_id="
+                                data-butt="Начать зарабатывать"></div> -->
+                            <form method="POST" autocomplete="off" id="formTop">
+                                <input class="form-control" type="text" id="first_name" name="first_name"
+                                    placeholder="Имя" required />
+
+                                <input class="form-control" type="text" id="last_name" name="last_name"
+                                    placeholder="Фамилия" required />
+
+                                <input class="form-control" type="email" id="email" name="email" placeholder="Email"
+                                    required />
+
+                                <input class="form-control" type="tel" id="phone" name="phone" required />
+
+                                <div class="input-wrap">
+                                    <button type="submit">Начать зарабатывать</button>
+                                </div>
+                            </form>
+                            <style>
+                                .play-btn {
+                                    opacity: 1 !important;
+                                    display: flex !important;
+                                }
+
+                                .form-control {
+                                    width: 100%;
+                                    padding: 0 40px 0 26px;
+                                    line-height: 40px;
+                                    font-weight: 600;
+                                    height: 40px;
+                                    border: 1px solid #bbb !important;
+                                    margin-bottom: 19px;
+                                    outline: none;
+                                }
+
+                                .form-control.error {
+                                    margin-bottom: 0 !important;
+                                }
+
+                                .iti.iti--allow-dropdown.iti--separate-dial-code {
+                                    width: 100%;
+                                }
+
+                                .iti__selected-flag {
+                                    max-height: 38px;
+                                }
+
+                                .iti__selected-dial-code {
+                                    font-weight: 600;
+                                    font-size: 100%;
+                                }
+
+                                input.error {
+                                    border: 2px solid #eb162b !important;
+                                }
+
+                                input.valid {
+                                    border: 2px solid #41ad48 !important;
+                                }
+
+                                label.error {
+                                    width: 100%;
+                                    font-weight: bold;
+                                    margin-top: 0 !important;
+                                    margin-bottom: 0 !important;
+                                    padding: 0px 5px;
+                                    color: red;
+                                    font-size: 14px;
+                                }
+
+                                .addition .cookie-bar {
+                                    z-index: 1099 !important;
+                                }
+
+                                #formBottom {
+                                    width: 90%;
+                                }
+
+                                .tracking-wide {
+                                    letter-spacing: 0 !important;
+                                }
+
+                                .section {
+                                    width: 100%;
+                                    padding: 20px;
+                                }
+
+                                .block-container {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                }
+
+                                .block-icons {
+                                    width: 33.33%;
+                                    max-width: 550px;
+                                    margin: 20px auto;
+                                    padding: 10px;
+                                    box-sizing: border-box;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+
+                                .block-icons img {
+                                    width: 80%;
+                                }
+
+                                @media screen and (max-width: 900px) {
+                                    .block-icons {
+                                        width: 100%;
+                                    }
+                                }
+                            </style>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="pt-8 pb-8 bg-primary">
+            <section class="container mx-auto flex justify-center pb-12 pt-12">
+                <div class="flex flex-col w-2/5 items-center bg-white md:w-4/5 sm:w-full ">
+                    <form action="javascript:void(0)"
+                        class="block bg-white text-primary overflow-hidden w-full pt-6 pb-4 px-6 sm:pt-2 sm:px-4 sm:leading-tight">
+                        <h3 class="text-2xl text-center font-bold font-ubuntu mt-5 mb-6 sm:mb-10">
+                            Сколько я заработаю?
+                        </h3>
+                        <div class="flex flex-col text-center font-bold mb-4 sm:mb-10 px-5">
+                            <label class="block text-center font-bold mb-2">Ваша инвестиция</label>
+                            <input type="text" class="js-range-slider" name="my_range" value="150" tabindex="-1"
+                                readonly="">
+                        </div>
+                        <div class="flex flex-col mb-5">
+                            <label class="block text-center font-bold ">Ваша прибыль</label>
+                            <h3 class="text-2xl text-center font-bold font-ubuntu mt-5" id="calcResult">15840 руб.</h3>
+                        </div>
+                        <div class="flex mb-4 justify-center">
+                            <a href="javascript:void(0)" onclick="scrollToForm()" class="inline-block  text-center w-56 font-sans font-bold transition bg-btn-primary hover:bg-btn-hover
+                                    text-white rounded py-3">
+                                Узнать подробнее
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="text-4xl sm:text-3xl font-ubuntu text-center font-bold mt-6 mb-4">Почему это выгодно <br> для
+                    обычных граждан</h2>
+            </div>
+            <div class="container">
+                <div class="block-container">
+                    <div class="block-icons">
+                        <div class="flex items-center mb-12">
+                            <div class="w-1/5">
+                                <img src="images/icon1.svg" alt="" style="display: block; margin: auto;">
+                            </div>
+                            <p class="w-4/5 pl-3 text-lg sm:text-base sm:pl-4 advantages--text">
+                                <span style="font-weight: 700; font-size: 1.2em;">Актив</span>
+                                <br>
+                                Один из самых доходных активов
+                            </p>
+                        </div>
+                        <div class="flex items-center mb-12">
+                            <div class="w-1/5">
+                                <img src="images/icon2.svg" alt="" style="display: block; margin: auto;">
+                            </div>
+                            <p class="w-4/5 pl-3 text-lg sm:text-base sm:pl-4 advantages--text">
+                                <span style="font-weight: 700; font-size: 1.2em;">Минимум времени</span>
+                                <br>
+                                Вам достаточно тратить от получаса в день, лишь для того, чтобы контролировать работу
+                                робота
+                            </p>
+                        </div>
+                        <div class="flex items-center mb-12">
+                            <div class="w-1/5">
+                                <img src="images/icon3.svg" alt="" style="display: block; margin: auto;">
+                            </div>
+                            <p class="w-4/5 pl-3 text-lg sm:text-base sm:pl-4 advantages--text">
+                                <span style="font-weight: 700; font-size: 1.2em;">Соинвестиции</span>
+                                <br>
+                                В связи с выходом на рынок Таджикистана мы дарим каждому пользователю 50% соинвестицию на
+                                первое пополнение
+                            </p>
+                        </div>
+                    </div>
+                    <div class="block-icons">
+                        <img src="images/image-phone.png" alt="Your Image">
+                    </div>
+                    <div class="block-icons">
+                        <div class="flex items-center mb-12">
+                            <div class="w-1/5">
+                                <img src="images/icon4.svg" alt="" style="display: block; margin: auto;">
+                            </div>
+                            <p class="w-4/5 pl-3 text-lg sm:text-base sm:pl-4 advantages--text">
+                                <span style="font-weight: 700; font-size: 1.2em;">Поддержка 24/7</span>
+                                <br>
+                                Наши менеджеры всегда помогут вам решить ваш вопрос
+                            </p>
+                        </div>
+                        <div class="flex items-center mb-12">
+                            <div class="w-1/5">
+                                <img src="images/icon5.svg" alt="" style="display: block; margin: auto;">
+                            </div>
+                            <p class="w-4/5 pl-3 text-lg sm:text-base sm:pl-4 advantages--text">
+                                <span style="font-weight: 700; font-size: 1.2em;">Удобство</span>
+                                <br>
+                                Возможность вывести средства любым удобным способом
+                            </p>
+                        </div>
+                        <div class="flex items-center mb-12">
+                            <div class="w-1/5">
+                                <img src="images/icon6.svg" alt="" style="display: block; margin: auto;">
+                            </div>
+                            <p class="w-4/5 pl-3 text-lg sm:text-base sm:pl-4 advantages--text">
+                                <span style="font-weight: 700; font-size: 1.2em;">Простота</span>
+                                <br>
+                                Для работы вам нужен только телефон и доступ к интернету
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="content" class="container mb-16 mx-auto">
+            <div class="inline-block sm:float-none float-left sm:w-screen sm:-ml-4 sm:p-0 w-3/5">
+                <article class="p-8 sm:pt-20 sm:pb-12 sm:px-4 flex flex-col bg-secondary text-white">
+                    <h2 class="text-4xl sm:text-3xl sm:mb-16 font-bold font-ubuntu mb-8">Что нужно сделать, чтобы
+                        начать зарабатывать c Душанбе Сити Инвест уже сейчас?</h2>
+                    <ul class="text-lg">
+                        <li class="mb-10 flex items-start"><span
+                                class="mt-3 w-4 h-1 bg-white inline-block mr-4 sm:flex-shrink-0 sm:w-3"></span>Зарегистрироваться
+                            на данном сайте в форме выше <span onclick="scrollToForm()"
+                                style="margin-left:8px;cursor:pointer">&#8679;</span>
+                        </li>
+                        <li class="mb-10 flex items-start"><span
+                                class="mt-3 w-4 h-1 bg-white inline-block mr-4 sm:flex-shrink-0 sm:w-3"></span>Дождаться
+                            звонка от финансового специалиста Душанбе Сити и подтвердить регистрацию
+                        </li>
+                        <li class="mb-10 flex items-start"><span
+                                class="mt-3 w-4 h-1 bg-white inline-block mr-4 sm:flex-shrink-0 sm:w-3"></span>Выбрать
+                            желаемую сумму на счет и уже через 30 дней получить первый доход
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <div class="w-full flex justify-center items-center sm:flex-col mt-16">
+                <div class="pt-18 inline-block w-3/5 text-primary sm:p-0 sm:w-full">
+                    <article class=" flex flex-col text-lg sm:text-base">
+                        <h4 class="text-2xl font-ubuntu font-bold mb-8 text-center">Инвестируйте с уверенностью: Банк
+                            Душанбе Сити и
+                            Государство Таджикистан - ключ к невероятному заработку!</h4>
+                        <!-- <h5 class="text-black opacity-50 mb-10 sm:mb-6">председатель правления совета <br> директоров
+                            ПАО
+                            «Газпром»
+                        </h5> -->
+                        <p class="mb-8 sm:leading-relaxed">
+                            В мире финансовых возможностей нашли свое место революционные инвестиционные проекты,
+                            которые обеспечивают не только финансовую стабильность, но и невероятно высокий заработок.
+                            Один из таких проектов разработан в партнерстве с банком Душанбе Сити и получил полную
+                            поддержку государства Таджикистана.
+                            <br><br>
+                            Сильное партнерство банка Душанбе Сити с государством Таджикистана является фундаментом
+                            успеха этого инвестиционного проекта. Благодаря поддержке правительства, проект имеет
+                            надежную защиту и выгодные условия, обеспечивая участникам высокую доходность и стабильность
+                            вложений.
+                            <br><br>
+                            Участники проекта уже сегодня наслаждаются невероятным заработком. Инвесторы, вкладывающие
+                            свои средства в акции компаний, получают высокую прибыль, которая в некоторых случаях
+                            достигает уровня впечатляющих 100 000 сомоний в месяц и более. Это значительно превосходит
+                            стандартные доходы, которые обычно доступны на рынке.
+                        </p>
+                        <!-- <div class="text-base">
+                            <a href="javascript:void(0)" onclick="scrollToForm()"
+                                class="inline-block text-center w-56 font-sans font-bold transition bg-btn-primary hover:bg-btn-hover text-white rounded py-3">Проконсультироваться</a>
+                        </div> -->
+                    </article>
+                </div>
+                <div
+                    class="-mt-24 sm:mt-5 sm:p-0 sm:w-screen sm:mb-8 sm:overflow-hidden pl-8 relative inline w-3/5 text-primary">
+                    <img width="100%" src="assets/img/image.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .owl-carousel .owl-item img {
+                display: block;
+                width: 70%;
+                height: auto;
+                margin: 0 auto;
+                max-width: 350px;
+            }
+        </style>
+
+        <div class="container mx-auto mb-24 sm:mb-24 text-center">
+            <h2 class="mb-8 text-4xl sm:text-3xl font-bold font-ubuntu text-center">
+                Наши награды на мировом рынке торгов
+            </h2>
+            <div class="w-full sm:flex sm:flex-col">
+                <div class="inline-block sm:float-none sm:-ml-4 sm:w-screen w-1/2">
+                    <div class="license-block">
+                        <div class="owl-carousel">
+                            <div class="item"><img src="images/lic1.png" alt="Image 1"></div>
+                            <div class="item"><img src="images/lic2.png" alt="Image 2"></div>
+                            <div class="item"><img src="images/lic3.png" alt="Image 3"></div>
+                        </div>
+                        <!-- <img src="assets/img/license-m.jpg" alt="License" class="w-1/2 mx-auto"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <div class="pt-8 pb-8 bg-primary">
+        <section class="container mx-auto flex justify-center pb-12 pt-12">
+            <div class="reg-form flex flex-col w-2/5 items-center bg-white md:w-4/5 sm:w-full"
+                style="border-radius:6px">
+                <h3 class="text-2xl text-center font-bold font-ubuntu mt-6 sm:mt-6 mb-4 sm:mb-4">
+                    Заполните заявку и с вами свяжется финансовый специалист в течении 2-х часов!
+                </h3>
+                <!-- <div class="app" id="app1" data-type="2" data-url="thankyou.php?sub1={sub_id_1}&sub2={subid}&pixel_id="
+                    data-butt="Начать зарабатывать"></div> -->
+                <form method="POST" autocomplete="off" id="formBottom">
+                    <input class="form-control" type="text" id="first_name" name="first_name" placeholder="Имя"
+                        required />
+
+                    <input class="form-control" type="text" id="last_name" name="last_name" placeholder="Фамилия"
+                        required />
+
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Email" required />
+
+                    <input class="form-control" type="tel" id="phone2" name="phone2" required />
+
+                    <div class="input-wrap">
+                        <button type="submit">Начать зарабатывать</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="container mx-auto py-4 text-center sm:leading-relaxed opacity-50 sm:text-xs">
+            Все права защищены.
+        </div>
+    </footer>
+
+    <!-- Start popup double -->
+    <div class='modal-form' id='modalFailure'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2">Вы уже зарегистрировались на данный номер. Если вам нужен новый аккаунт, пройдите
+                    регистрацию на другой мобильный номер</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class='modal-form' id='modalFailureEmail'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2">Вы уже зарегистрировались на данную электронную почту. Если вам нужен новый
+                    аккаунт, пройдите
+                    регистрацию на другую электронную почту.</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class='modal-form' id='modalInvalid'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2">Вы ввели неккоректную электронную почту. Пройдите
+                    регистрацию на другую электронную почту.</h5>
+            </div>
+        </div>
+    </div>
+    <!-- End popup double -->
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
+    <!-- <script src="assets/js/jquery.fancybox.min.js"></script> -->
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn-addict.site/addict-new/js/chunk-vendors.js" async></script>
+    <script src="https://cdn-addict.site/addict-new/js/app.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000
+            });
+        });
+    </script>
+
+    <script src="js/modal.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/utm.js"></script>
+</body>
+
+</html>
