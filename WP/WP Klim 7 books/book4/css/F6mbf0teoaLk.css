@@ -1,0 +1,245 @@
+.gEpJG {
+    display: flex;
+}
+
+.b6hTgc {
+    margin-left: 200px;
+}
+
+.gEpJG {
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.259);
+    background-color: white;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /*flex-direction: column;*/
+    margin: 16px auto;
+    /*max-width: 500px;*/
+    padding: 50px;
+    margin-top: 80px;
+    max-width: 1100px;
+}
+.MCcOAc {
+    bottom: auto; right: auto; width: 1920px; height: 100%;
+}
+
+
+@media (max-width: 1440px) {
+    .gEpJG {
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.259);
+        background-color: white;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        /*flex-direction: column;*/
+        margin: 16px auto;
+        max-width: 1000px;
+        align-items: center;
+    }
+
+    .EL4Yye {
+        width: 250px;
+    }
+
+    .b6hTgc {
+        margin-left: 30px;
+    }
+
+    .MCcOAc {
+        width: 1440px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .gEpJG {
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.259);
+        background-color: white;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        /*flex-direction: column;*/
+        margin: 16px auto;
+        max-width: 1000px;
+        align-items: center;
+    }
+
+    .EL4Yye {
+        width: 250px;
+    }
+
+    .b6hTgc {
+        margin-left: 30px;
+    }
+
+    .MCcOAc {
+        width: 1240px;
+    }
+}
+
+
+
+
+@media (max-width: 810px) {
+    .gEpJG {
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.259);
+        background-color: white;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        margin: 16px auto;
+        max-width: 500px;
+        align-items: center;
+    }
+
+    .EL4Yye {
+        width: 250px;
+    }
+
+    .b6hTgc {
+        margin-left: 0;
+    }
+
+    .MCcOAc {
+        width: 810px;
+    }
+}
+
+@media (max-width: 550px) {
+    .gEpJG {
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.259);
+        background-color: white;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        margin: 16px auto;
+        max-width: 500px;
+        align-items: center;
+    }
+
+    .EL4Yye {
+        width: 250px;
+    }
+
+    .b6hTgc {
+        margin-left: 0;
+    }
+
+    .MCcOAc {
+        width: 550px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .gEpJG {
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.259);
+        background-color: white;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        margin: 16px auto;
+        max-width: 450px;
+        align-items: center;
+    }
+
+    .EL4Yye {
+        width: 250px;
+    }
+
+    .b6hTgc {
+        margin-left: 0;
+    }
+
+    .MCcOAc {
+        width: 450px;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .gEpJG {
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.259);
+        background-color: white;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        margin: 16px auto;
+        max-width: 420px;
+        align-items: center;
+    }
+
+    .EL4Yye {
+        width: 250px;
+    }
+
+    .b6hTgc {
+        margin-left: 0;
+    }
+
+    .MCcOAc {
+        width: 420px;
+    }
+}
+
+
+@media (max-width: 390px) {
+    .gEpJG {
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.259);
+        background-color: white;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        margin: 16px auto;
+        max-width: 390px;
+        align-items: center;
+    }
+
+    .EL4Yye {
+        width: 250px;
+    }
+
+    .b6hTgc {
+        margin-left: 0;
+    }
+
+    .MCcOAc {
+        width: 390px;
+    }
+}

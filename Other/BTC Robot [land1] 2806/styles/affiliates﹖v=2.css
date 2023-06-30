@@ -1,0 +1,193 @@
+html{background:#dedfdf url(../images/kristall.jpg) 0 0 repeat fixed;}
+
+
+.main{min-width:990px;overflow:hidden;position:relative;}
+.main>.in{padding:40px 0;width:960px;margin:0 auto;}
+
+
+.Affiliates_BackImage{
+  position: absolute;
+  right: -280px;
+  top: 180px;
+  transform: rotate(35deg);
+}
+.Affiliates_BackImage>img{
+  display: block;
+}
+
+.Affiliates_Head_Sticker{
+  background: url('../images/affiliates/brand_new.png') 0 0 no-repeat;
+  width: 150px;
+  overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:150px;
+  position: absolute;
+  top: 80px;
+  left: -15px;
+}
+
+.Affiliates_GetLink{
+  display: block;
+  width: 98px;
+  overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:100px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background: url('../images/affiliates/get_my_link.png') 0 0 no-repeat;
+}
+
+
+.Affiliates .textarea textarea{padding:5px 7px;}
+
+
+.Affiliates{padding:0 40px 40px;font-size:20px;}
+.Affiliates .BigTitle{font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;text-align:center;
+font-size:36px;line-height:40px;padding-bottom:25px;}
+
+.Affiliates .ComissionSize{background:#ecb716 url(../images/affiliates/commision_size_bg.png) 0 0 repeat;
+line-height:60px;margin:-20px -80px 0;text-align:center;color:#000;text-transform:uppercase;
+font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;font-size:30px;}
+.Affiliates .ComissionSize b{font-size:50px;font-weight:normal;line-height:60px;
+display:inline-block;*display:inline;zoom:1;vertical-align:top;}
+
+.Affiliates .conNoWords{text-align:center;font-size:28px;font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .conNoWords>.in{display:inline;background:yellow;}
+
+.Affiliates .PriceSystem{text-align:center;font-size:24px;
+font-family:'Roboto Slab Regular','trebuchet ms',arial,sans-serif;}
+.Affiliates .PriceSystem .Title{font-weight:bold;font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .PriceSystem .Values b{font-weight:normal;font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .PriceSystem .Values .toSilver{color:#666;}
+.Affiliates .PriceSystem .Values .toGold{color:#ff950e;}
+.Affiliates .PriceSystem .Values .toPlatinum{color:#666;}
+
+.Affiliates .MainOffer{font-size:20px;line-height:32px;text-align:center;}
+.Affiliates .MainOffer .This{color:#e00;font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;
+font-size:40px;}
+
+.Affiliates .MainDates{font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .MainDates>.Title{font-size:48px;line-height:52px;font-weight:bold;text-align:center;padding-bottom:15px;
+letter-spacing:1px;}
+.Affiliates .MainDates .Els{position:relative;font-size:20px;line-height:24px;}
+.Affiliates .MainDates .Els>.BG{position:absolute;top:0px;bottom:0px;left:50%;width:400px;margin-left:-200px;
+font-size:0;overflow:hidden;text-indent:-9999px;
+border:1px solid #000;border-width:1px 0;}
+.Affiliates .MainDates .Els>.in{position:relative;padding:12px 0 12px;}
+.Affiliates .MainDates .Els>.in>table{margin:0 auto;}
+.Affiliates .MainDates .Els>.in>table>tbody>tr>td{vertical-align:top;}
+.Affiliates .MainDates .Els>.in>table>tbody>tr>td:first-child{font-family:'Roboto Slab Regular','trebuchet ms',arial,sans-serif;}
+.Affiliates .MainDates .Els>.in>table>tbody>tr>td:first-child~td{padding-left:15px;}
+.Affiliates .MainDates .Els>.in>table>tbody>tr+tr>td{padding-top:12px;}
+.Affiliates .MainDates .Els sup{display:inline-block;*display:inline;zoom:1;vertical-align:top;
+line-height:14px;padding-bottom:10px;font-size:16px;}
+
+.Affiliates .BigDate{font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .BigDate>table{margin:0 auto;}
+.Affiliates .BigDate td~td{padding-left:40px;text-align:center;color:#d22025;}
+.Affiliates .BigDate .Plate{background:url(../images/affiliates/launch_calendar.png) 0 0 no-repeat;
+width:225px;height:254px;padding:0 0 0 12px;text-align:center;}
+.Affiliates .BigDate .Plate .Month{color:#fff;padding:38px 0 0;line-height:48px;font-size:28px;}
+.Affiliates .BigDate .Plate .N{color:#000;line-height:124px;font-size:120px;}
+.Affiliates .BigDate .Text big{display:block;font-size:48px;line-height:48px;}
+.Affiliates .BigDate .Text small{display:block;font-size:32px;line-height:36px;padding-top:10px;}
+
+.Affiliates .AboutClickbetter{border:3px solid #aaa;-moz-border-radius:20px;border-radius:20px;
+margin:0 -25px;padding:22px 22px;}
+.Affiliates .AboutClickbetter .Title{background:url(../images/affiliates/clickbetter_logo.png) 0 0 no-repeat;
+padding:4px 0 0 290px;line-height:54px;padding-bottom:15px;font-size:32px;white-space:nowrap;
+font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .AboutClickbetter .LinkName{font-size:24px;line-height:28px;padding-bottom:10px;
+font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .AboutClickbetter .Also{padding-top:7px;}
+
+.Affiliates .AboutExplodely{border:3px solid #aaa;-moz-border-radius:20px;border-radius:20px;
+margin:0 -25px;padding:22px 22px;}
+.Affiliates .AboutExplodely .Title{background:url(../images/affiliates/explodely_logoS.png) 0 0 no-repeat; background-size: 32% 75%;
+padding:4px 0 0 290px;line-height:54px;padding-bottom:15px;font-size:32px;white-space:nowrap;
+font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .AboutExplodely .LinkName{font-size:24px;line-height:28px;padding-bottom:10px;
+font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .AboutExplodely .Also{padding-top:7px;}
+
+.Affiliates .conMoneyList{text-align:center;font-family:'Roboto Slab Regular','trebuchet ms',arial,sans-serif;
+font-size:24px;line-height:40px;}
+.Affiliates .conMoneyList b{font-weight:normal;color:#e00;border-bottom:2px solid #e00;
+font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+
+
+.Affiliates .KeyQuestion{font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .KeyQuestion .Red{text-align:center;color:#e00;text-transform:uppercase;font-weight:bold;}
+.Affiliates .KeyQuestion .Red small{display:block;font-size:32px;line-height:34px;padding-bottom:5px;letter-spacing:2px;}
+.Affiliates .KeyQuestion .Red big{display:block;font-size:70px;line-height:70px;letter-spacing:5px;}
+.Affiliates .KeyQuestion .Why{text-align:center;text-transform:uppercase;font-size:28px;line-height:36px;margin:0 -30px;
+padding-top:40px;}
+.Affiliates .KeyQuestion .Why>.in{display:inline;}
+.Affiliates .KeyQuestion .Why .B{background:yellow;font-size:36px;}
+
+
+.Affiliates .Structure{}
+.Affiliates .Structure .Section+.Section{padding-top:50px;}
+.Affiliates .Structure .Section>.Name{font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;
+font-size:24px;line-height:28px;color:#555;padding-bottom:20px;}
+.Affiliates .Structure .Section>.Name>.in{display:inline;border-bottom:2px solid #555;}
+.Affiliates .Structure .Section>.Name sup{display:inline-block;*display:inline;zoom:1;vertical-align:top;
+line-height:12px;padding-bottom:16px;font-size:20px;}
+.Affiliates .Structure .Descr{padding-bottom:25px;}
+.Affiliates .Structure .Swipe .Name{padding-bottom:7px;
+font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .Structure .Swipe .Name~.Name{padding-top:25px;}
+
+.Affiliates .Structure .Swipe .BigName{padding-bottom:15px;
+font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .Structure .Swipe .Name~.BigName,
+.Affiliates .Structure .Swipe .BigName~.BigName{padding-top:35px;}
+.Affiliates .Structure .Swipe .BigName+.Name{padding-top:10px;}
+.Affiliates .Structure .Swipe .BigName>.in{border-bottom:2px solid #000;display:inline;}
+.Affiliates .Structure .Swipe .BigNameDescr{padding-bottom:10px;}
+
+
+.Affiliates .LaunchTitle{text-align:center;
+font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;
+margin:0 -50px;text-shadow:0px 2px 0px #ECB715;padding-bottom:35px;}
+.Affiliates .LaunchTitle .Icon{text-align:center;padding-bottom:15px;}
+.Affiliates .LaunchTitle small{display:block;font-size:35px;line-height:35px;padding-bottom:10px;
+letter-spacing:1px;}
+.Affiliates .LaunchTitle small sup{display:inline-block;*display:inline;zoom:1;vertical-align:top;
+font-size:20px;line-height:20px;padding-bottom:12px;}
+.Affiliates .LaunchTitle big{display:block;font-size:60px;line-height:60px;}
+
+
+.Affiliates .CommissionPercents{font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+.Affiliates .CommissionPercents>.e+.e{padding-top:30px;}
+.Affiliates .CommissionPercents .Big{font-size:28px;line-height:34px;}
+.Affiliates .CommissionPercents .Big b{font-weight:normal;color:#e00;}
+
+.Affiliates .conMicroContests{font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;
+font-size:26px;line-height:32px;}
+
+.Affiliates .conBitcoinTeam{font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;
+font-size:24px;line-height:28px;text-align:right;}
+
+
+.Affiliates .Form{width:600px;margin:0 auto;}
+.Affiliates .Form .output{display:none;}
+.Affiliates .Form .Field+.Field{padding-top:25px;}
+.Affiliates .Form .Field>.Name{padding-bottom:5px;font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;
+font-size:24px;line-height:28px;}
+.Affiliates .Form .Field .Error{color:#c00;padding-top:3px;display:none;}
+.Affiliates .Form .Button{text-align:center;padding-top:25px;}
+.Affiliates .Form .output .Name{padding-bottom:5px;font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;
+font-size:24px;line-height:28px;}
+
+.Affiliates .Nuts .Section+.Section{padding-top:40px;}
+.Affiliates .Nuts .Section .Els>.e+.e{padding-top:35px;}
+.Affiliates .Nuts .Section>.Title{padding-bottom:15px;
+font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;}
+
+.Affiliates .StripedLine{padding-bottom:25px;}
+.Affiliates .StripedLine>.in{background:#ecb716 url(../images/affiliates/commision_size_bg.png) 0 0 repeat;
+font-family:'Roboto Slab Bold','trebuchet ms',arial,sans-serif;font-size:30px;
+margin:0 -80px;padding:10px 80px;font-size:48px;line-height:56px;text-align:center;}
+
+
+.typCode .Img{padding-bottom:15px;}
+.typCode .textarea textarea{font-family:'courier new',courier,monospace;font-size:13px;}

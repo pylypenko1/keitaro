@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>KazEU | Главная</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+  <meta name="msapplication-TileColor" content="#2d89ef" />
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <link rel="stylesheet" type="text/css" href="css/libs.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="css/app.css" />
+  <link rel="stylesheet" type="text/css" href="css/form.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/modal.css" />
+  <link rel="stylesheet" type="text/css" href="css/intlTelInput.min.css" />
+  <link rel="stylesheet" href="css/video-js.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <!-- JS adapter -->
+  <script type="application/javascript">
+    function getCookie(name) {
+      var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+      return v ? v[2] : null;
+    }
+
+    function setCookie(name, value, days) {
+      var d = new Date();
+      d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+      document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+    }
+
+    function getSubId() {
+      var params = new URLSearchParams(document.location.search.substr(1));
+      if (!'{subid}'.match('{')) {
+        return '{subid}';
+      }
+      var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+      if (clientSubid && !clientSubid.match('>')) {
+        return clientSubid;
+      }
+      if (params.get('_subid')) {
+        return params.get('_subid');
+      }
+      if (params.get('subid')) {
+        return params.get('subid');
+      }
+      if (getCookie('subid')) {
+        return getCookie('subid');
+      }
+    }
+
+    if (typeof URLSearchParams === 'function') {
+      document.addEventListener('DOMContentLoaded', function (event) {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        var subid = getSubId();
+
+        setCookie('subid', subid);
+
+        // Adds params to the links
+        document.querySelectorAll('a').forEach(function (link) {
+          var url = new URL(link.href);
+          params.forEach(function (v, k) {
+            url.searchParams.append(k, v);
+          });
+          link.href = url.toString();
+        });
+
+        // Adds params as hidden inputs to the forms
+        document.querySelectorAll('form').forEach(function (form) {
+          params.forEach(function (v, k) {
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = k;
+            input.value = v;
+
+            form.append(input);
+          });
+        });
+      });
+    }
+  </script>
+  <!-- End JS adapter -->
+</head>
+
+<body id="">
+  <div id="panel" class="d-none d-md-block"></div>
+  <div id="app">
+    <main>
+      <header class="header">
+        <div class="topBarCTA">
+          <div class="countdownBox">
+            <div style="display: flex; align-items: center">
+              <span class="countdownTime" id="register-count1">54</span>
+              <img src="images/people.svg" style="width: 24px; margin: 0 5px" alt="" />
+            </div>
+            <span class="countdownMessage"> Пользователей на сайте </span>
+          </div>
+          <div class="dateBox">
+            <div style="display: flex; align-items: center">
+              <span class="countdownTime" id="register-count2">15</span>
+              <img src="images/danger.svg" style="width: 18px; margin: 0 5px" alt="" />
+            </div>
+            <span> Количество свободных мест </span>
+          </div>
+        </div>
+
+        <div class="logo_container">
+          <div>
+            <img src="./images/kazeu_logo.png" height="70%" alt="">
+          </div>
+          <div>
+            <span class="logo_text">При поддержке</span>
+            <img src="./images/eu_logo.png" height="50%" alt="">
+            <span class="logo_text">Европейского Союза</span>
+          </div>
+        </div>
+
+      </header>
+
+      <section class="main-banner">
+        <img src="images/main_bg.png" width="100%" alt="">
+      </section>
+
+      <section class="form-section" id="block">
+
+        <div class="form-title">
+          <h2>Зарабатывайте <nobr>уже <span class="blue">сегодня</span></nobr>
+          </h2>
+        </div>
+
+        <div class="container">
+          <div class="hero-block">
+            <!-- <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 hero-video" style="max-width: 700px">
+              <div id="video"
+                class="video-js vjs-show-big-play-button-on-pause vjs-big-play-centered vjs-paused vjs-fluid video-dimensions vjs-controls-enabled vjs-workinghover vjs-v7 vjs-user-active">
+                <video class="vjs-tech" poster="video/poster.png"
+                  data-setup='{ "controls": true, "autoplay": true, "preload": "auto", "controlBar": false, "fluid": true }'
+                  id="video_html5_api" tabindex="-1" preload="auto" autoplay="" src="video/video.mp4">
+                  <source src="video/video.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div> -->
+            <div class="hero-form">
+              <div class="contactForm top_form">
+                <form method="POST" id="formTop" class="register-form contact_form content_inner flex">
+                  <h3>
+                    Заполните заявку и с вами свяжется финансовый специалист в течении 2-х часов
+                  </h3>
+                  <div class="input_group input_name">
+                    <input type="text" placeholder="Имя" class="form-control required form-input" name="first_name"
+                      id="first_name" required autocomplete="off" />
+                  </div>
+                  <div class="input_group input_last_name">
+                    <input type="text" placeholder="Фамилия" class="form-control required form-input" name="last_name"
+                      id="last_name" required autocomplete="off" />
+                  </div>
+                  <div class="input_group input_email">
+                    <input type="email" placeholder="Email" class="form-control required" name="email" id="email"
+                      required autocomplete="off" />
+                  </div>
+                  <div class="input_group intl-tel-input">
+                    <input type="tel" id="phone1" name="phone1" placeholder="" autocomplete="off" required=""
+                      class="form-control" />
+                  </div>
+                  <div class="input_group">
+                    <button type="submit" class="btn btn-submit btn-get-robot text-uppercase redBtn">
+                      <span>Начать зарабатывать</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="fond__top">
+        <div class="fond__img">
+          <img src="images/border-img.svg" alt="" />
+        </div>
+        <div class="fond__img">
+          <img src="images/bird.svg" alt="" />
+        </div>
+        <div class="fond__img">
+          <img src="images/border-img.svg" alt="" />
+        </div>
+      </div>
+
+      <section class="fond" id="fond">
+        <div class="container">
+          <div class="fond__inner">
+            <h3 class="fond__title">О Фонде</h3>
+
+            <div class="fond__body">
+              <div class="logo_container" style="background: transparent; margin: 10px 0 20px;">
+                <div>
+                  <img src="./images/eu_text_logo.png" height="80%" alt="">
+                </div>
+                <div>
+                  <img src="./images/kz_logo.png" height="85%" alt="">
+                </div>
+              </div>
+
+              <div class="fond__right">
+                <p>
+                  <b>
+                    Первые 35 тысяч казахстанцев уже вложились в государственный проект и
+                    заработали в среднем по 700 000 тенге за первые 2 недели! Поспешите
+                    стать
+                    частью этого финансового прорыва.
+                  </b>
+                </p>
+                <p>
+                  Количество новых заявок на данный момент ограничено, поэтому не теряйте время!
+                  Заполните заявку прямо сейчас и начните путь к вашему финансовому благополучию!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="fond__top">
+        <div class="fond__img">
+          <img src="images/border-img.svg" alt="" />
+        </div>
+        <div class="fond__img">
+          <img src="images/bird.svg" alt="" />
+        </div>
+        <div class="fond__img">
+          <img src="images/border-img.svg" alt="" />
+        </div>
+      </div>
+
+      <section class="fond" id="license">
+        <div class="container">
+          <div class="fond__inner">
+            <h3 class="fond__title">Лицензии</h3>
+
+            <div class="fond__body">
+              <div class="fond__left">
+                <a class="fancybox" href="images/lic_kazeu.png">
+                  <img src="images/lic_kazeu.png" alt="Image">
+                </a>
+              </div>
+              <div class="fond__left">
+                <a class="fancybox" href="images/lic_kzeu.png">
+                  <img src="images/lic_kzeu.png" alt="Image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="fond__top">
+        <div class="fond__img">
+          <img src="images/border-img.svg" alt="" />
+        </div>
+        <div class="fond__img">
+          <img src="images/bird.svg" alt="" />
+        </div>
+        <div class="fond__img">
+          <img src="images/border-img.svg" alt="" />
+        </div>
+      </div>
+
+      <section class="fond" id="userReviews">
+        <div class="container">
+          <div class="fond__inner">
+            <h3 class="fond__title">Отзывы</h3>
+
+            <div class="row flex-row">
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="user-review">
+                  <div class="user-profile">
+                    <div class="user-picture">
+                      <img src="images/user_1.png" alt="" class="img-responsive">
+                    </div>
+                    <h2 class="user-name">
+                      Ерлан Абдиров
+                    </h2>
+                  </div>
+                  <div class="user-rating">
+                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                      class="fa fa-star"></i> <i class="fa fa-star"></i>
+                  </div>
+                  <div class="user-quote">
+                    KazEU Finance внедрила уникальную технологию, которая является передовой. Эта инновационная система
+                    обрабатывает огромные объемы информации за невероятно короткое время, при этом предоставляя
+                    возможность внимательно изучать каждую деталь.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="user-review">
+                  <div class="user-profile">
+                    <div class="user-picture">
+                      <img src="images/user_2.png" alt="" class="img-responsive">
+                    </div>
+                    <h2 class="user-name">
+                      Рустем Жумабеков и Алия Жумабекова
+                    </h2>
+                  </div>
+                  <div class="user-rating">
+                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                      class="fa fa-star"></i> <i class="fa fa-star"></i>
+                  </div>
+                  <div class="user-quote">
+                    Мы открыли для себя невероятное решение с KazEU Finance. Это буквально приносит нам доход каждый
+                    день, не требуя от нас особых усилий.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="user-review">
+                  <div class="user-profile">
+                    <div class="user-picture">
+                      <img src="images/user_3.png" alt="" class="img-responsive">
+                    </div>
+                    <h2 class="user-name">
+                      Асылбек Назарбаев
+                    </h2>
+                  </div>
+                  <div class="user-rating">
+                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                      class="fa fa-star"></i> <i class="fa fa-star"></i>
+                  </div>
+                  <div class="user-quote">
+                    Использование от KazEU Finance просто поражает своей простотой, а бесплатные советы экспертов по
+                    максимизации дохода помогают мне зарабатывать более 500 000 тенге в настоящее время.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <div class="fond__top">
+        <div class="fond__img">
+          <img src="images/border-img.svg" alt="" />
+        </div>
+        <div class="fond__img">
+          <img src="images/bird.svg" alt="" />
+        </div>
+        <div class="fond__img">
+          <img src="images/border-img.svg" alt="" />
+        </div>
+      </div>
+
+      <section class="partners">
+        <div class="container">
+          <!-- <div class="partners-slider owl-carousel owl-theme">
+            <div class="slider-item">
+              <img src="images/1.png" alt="Partner" width="100%"
+                class="partners-block-image partners-block-image_full" />
+              <p class="partners-block-name"></p>
+            </div>
+            <div class="slider-item">
+              <img src="images/2.png" alt="Partner" width="100%"
+                class="partners-block-image partners-block-image_full" />
+              <p class="partners-block-name"></p>
+            </div>
+            <div class="slider-item">
+              <img src="images/3.png" alt="Partner" width="100%"
+                class="partners-block-image partners-block-image_full" />
+              <p class="partners-block-name"></p>
+            </div>
+
+          </div> -->
+
+          <div class="btn-scroll">
+            <a id="scroll-link" href="#block">Зарегистрироваться</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-bottom">
+          <div class="copyright">
+            © 2009-2023 АО «KazEU».
+            <br />
+            Все права защищены.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Start popup double -->
+  <div class="modal-form" id="modalFailure">
+    <p class="close-modal" href="#">&times;</p>
+    <div class="content">
+      <div class="sign-up-form-header text-center mb-4">
+        <h5 class="mb-2">
+          Вы уже зарегистрировались на данный номер. Если вам нужен новый аккаунт, пройдите
+          регистрацию на другой мобильный номер
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-form" id="modalFailureEmail">
+    <p class="close-modal" href="#">&times;</p>
+    <div class="content">
+      <div class="sign-up-form-header text-center mb-4">
+        <h5 class="mb-2">
+          Вы уже зарегистрировались на данную электронную почту. Если вам нужен новый аккаунт,
+          пройдите регистрацию на другую электронную почту.
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-form" id="modalInvalid">
+    <p class="close-modal" href="#">&times;</p>
+    <div class="content">
+      <div class="sign-up-form-header text-center mb-4">
+        <h5 class="mb-2">
+          Вы ввели неккоректную электронную почту. Пройдите регистрацию на другую электронную
+          почту.
+        </h5>
+      </div>
+    </div>
+  </div>
+  <!-- End popup double -->
+
+  <!-- <script src="js/script.min.js"></script> -->
+  <script src="js/script.js"></script>
+  <script src="js/video.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/checkCookiePhone.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/intlTelInput.min.js"></script>
+  <script src="js/jquery.maskedinput.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/submitForm.js"></script>
+  <script src="js/utm.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.fancybox').fancybox({
+        buttons: [
+          'zoom',
+          'slideShow',
+          'close'
+        ],
+        thumbs: {
+          autoStart: true
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

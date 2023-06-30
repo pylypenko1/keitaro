@@ -1,0 +1,3284 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>QuantumAI</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link id="aos-style-link" href="css/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/trades.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link class="intgrtn-asset" rel="stylesheet" type="text/css" href="css/sdk.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="js/time.js"></script>
+
+   
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!'{subid}'.match('{')) {
+          return '{subid}';
+        }
+        var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (clientSubid && !clientSubid.match('>')) {
+          return clientSubid;
+        }
+        if (params.get('_subid')) {
+          return params.get('_subid');
+        }
+        if (params.get('subid')) {
+          return params.get('subid');
+        }
+        if (getCookie('subid')) {
+          return getCookie('subid');
+        }
+      }
+
+      if (typeof URLSearchParams === 'function') {
+        document.addEventListener('DOMContentLoaded', function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+
+          setCookie('subid', subid);
+
+          // Adds params to the links
+          document.querySelectorAll('a').forEach(function (link) {
+            var url = new URL(link.href);
+            params.forEach(function (v, k) {
+              url.searchParams.append(k, v);
+            });
+            link.href = url.toString();
+          });
+
+          // Adds params as hidden inputs to the forms
+          document.querySelectorAll('form').forEach(function (form) {
+            params.forEach(function (v, k) {
+              var input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = k;
+              input.value = v;
+
+              form.append(input);
+            });
+          });
+        });
+      }
+    </script>
+    <!-- End JS adapter -->
+  </head>
+  <body
+    onload="setFormattedDate(); setFormattedTime()"
+    data-aos-easing="ease"
+    data-aos-duration="400"
+    data-aos-delay="0"
+    style="overflow: auto"
+  >
+    <style>
+      .checkbox-row {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .checkbox-row input {
+        width: 20px;
+      }
+      .my-form input {
+        height: 45px !important;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 1em;
+        border-radius: 5px;
+        border: 0;
+      }
+
+      #phone1,
+      #phoneModal {
+        font-size: inherit;
+      }
+    </style>
+
+    <link rel="stylesheet" href="css/app.css" />
+
+    <div id="pageloader">
+      <div class="figna">
+        <svg
+          version="1.1"
+          id="loader-1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="40px"
+          height="40px"
+          viewBox="0 0 40 40"
+          enable-background="new 0 0 40 40"
+          xml:space="preserve"
+        >
+          <path
+            opacity="0.2"
+            fill="#000"
+            d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+    s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+    c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"
+          ></path>
+          <path
+            fill="#000"
+            d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+    C22.32,8.481,24.301,9.057,26.013,10.047z"
+          >
+            <animatetransform
+              attributeType="xml"
+              attributeName="transform"
+              type="rotate"
+              from="0 20 20"
+              to="360 20 20"
+              dur="0.5s"
+              repeatCount="indefinite"
+            />
+          </path>
+        </svg>
+        <p style="color: #fff">Sending...</p>
+      </div>
+    </div>
+    <style>
+      .form-div {
+        padding: 10px;
+        overflow: visible;
+      }
+
+      #preloader > p {
+        display: none;
+      }
+
+      .loading-text {
+        color: black !important;
+      }
+
+      .dialog-body {
+        color: black !important;
+        font-weight: bold !important;
+      }
+
+      .success-message {
+        color: black !important;
+        font-weight: bold !important;
+      }
+
+      #preloader_preload {
+        display: block;
+        position: fixed;
+        z-index: 99999;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: 100%;
+        height: 100%;
+        min-width: 1000px;
+        background: #081047 url(fonts/puff.svg) center center no-repeat;
+        background-size: 41px;
+      }
+    </style>
+
+    <nav class="mobile-nav">
+      <div class="mobile-nav__wrap">
+        <a class="button button--sm" href="#" onclick=";document.location.hash='';return false;"
+          >Sign in</a
+        >
+      </div>
+    </nav>
+
+    <header class="header header--sticky">
+      <section class="warning">
+        <div class="div-block">
+          <p class="paragraph-9">
+            <strong>Warning: </strong> Due to extremely high media demand, we will close
+            registration as of <span id="landingDate">27/05/2023</span> - HURRY  <span
+              id="landingTime"
+              >08:37</span
+            >
+          </p>
+        </div>
+      </section>
+      <style>
+        .warning {
+          background-color: red;
+        }
+
+        .warning * {
+          color: white !important;
+        }
+
+        .div-block {
+          height: auto;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          background-color: transparent;
+          color: #fff;
+          text-align: center;
+        }
+
+        .paragraph-9 {
+          margin-bottom: 0px;
+          font-size: 15px;
+        }
+
+        @keyframes glowing {
+          0% {
+            background-color: transparent;
+            box-shadow: 0 0 5px transparent;
+          }
+          50% {
+            background-color: #ffc600;
+            box-shadow: 0 0 20px #ffc600;
+          }
+          100% {
+            background-color: transparent;
+            box-shadow: 0 0 5px transparent;
+          }
+        }
+
+        .buttonglow {
+          animation: glowing 1300ms infinite;
+        }
+      </style>
+      <div class="header__wrapper">
+        <div
+          class="header__logo aos-init aos-animate"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1000"
+        >
+          <!-- <img src="assets/logo.png"> -->
+          <svg width="140" height="62" viewBox="0 0 124.2 42">
+            <path
+              d="M52.2,14.7c0.1,0.1,0.4,0.3,0.7,0.3c0.5,0,1.1-0.4,1.1-1.1v-2c0-2.8-2.2-5.2-5.2-5.2h-3.7V3c0-0.9-0.4-1.7-1.2-2.4
+                c-0.7-0.5-1.6-0.8-2.5-0.7L10,6.9c-2.4,0.4-4.2,2.5-4.2,5v25c0,2.8,2.2,5.2,5.2,5.2h38c2.8,0,5.2-2.2,5.2-5.2v-2.4
+                c0-0.3-0.1-0.5-0.3-0.7c-0.1-0.1-0.4-0.3-0.7-0.3c-0.5,0-1.1,0.4-1.1,1.1V37c0,1.7-1.5,3-3,3H10.9c-1.7,0-3-1.3-3-3V11.9
+                c0-1.6,1.2-2.8,2.6-3c0.1,0,0.3,0,0.5,0h38c1.7,0,3,1.3,3,3V14C52,14.3,52.1,14.5,52.2,14.7 M20,6.7L41.9,2c0.3,0,0.7,0,0.8,0.3
+                C43,2.4,43.1,2.8,43.1,3v3.7C43.1,6.7,20,6.7,20,6.7z"
+            />
+            <path
+              d="M25.4,32c-2-0.5-4-1.1-5.7-1.7c-0.3-0.1-0.6-0.2-0.9-0.2c-3.5-0.1-6.5-2.7-6.5-7.5c0-4.8,2.9-7.8,6.9-7.8
+                c4,0,6.6,3.1,6.6,7.5c0,3.8-1.8,6.2-4.2,7.1v0.1c1.5,0.4,3.1,0.7,4.3,0.9L25.4,32z M23.8,22.4c0-3-1.5-6-4.7-6c-3.2,0-4.8,3-4.8,6.2
+                c0,3.1,1.7,6,4.7,6C22.1,28.5,23.8,25.8,23.8,22.4z"
+            />
+            <path
+              d="M37.6,27c0,1.1,0,2.1,0.1,2.9h-1.7l-0.1-1.7h0c-0.5,0.9-1.6,2-3.5,2c-1.7,0-3.7-0.9-3.7-4.7v-6.2h1.9v5.9
+                c0,2,0.6,3.4,2.4,3.4c1.3,0,2.2-0.9,2.6-1.8c0.1-0.3,0.2-0.6,0.2-1v-6.5h1.9V27z"
+            />
+            <path
+              d="M47,29.9l-0.2-1.3h-0.1c-0.6,0.8-1.7,1.6-3.3,1.6c-2.2,0-3.3-1.5-3.3-3.1c0-2.6,2.3-4,6.4-4v-0.2c0-0.9-0.2-2.5-2.4-2.5
+                c-1,0-2,0.3-2.8,0.8L41,19.9c0.9-0.6,2.2-0.9,3.5-0.9c3.3,0,4,2.2,4,4.4v4c0,0.9,0,1.8,0.2,2.6H47z M46.7,24.4
+                c-2.1,0-4.5,0.3-4.5,2.4c0,1.3,0.8,1.8,1.8,1.8c1.4,0,2.3-0.9,2.6-1.8c0.1-0.2,0.1-0.4,0.1-0.6V24.4z"
+            ></path>
+            <path
+              d="M52.1,22.1c0-1.1,0-2-0.1-2.9h1.7l0.1,1.8h0c0.5-1,1.8-2,3.5-2c1.5,0,3.8,0.9,3.8,4.5v6.4h-1.9v-6.1c0-1.7-0.6-3.1-2.5-3.1
+                c-1.3,0-2.3,0.9-2.6,2c-0.1,0.2-0.1,0.6-0.1,0.9v6.4h-1.9V22.1z"
+            />
+            <path
+              d="M66.9,16.2v3.1h2.8v1.5h-2.8v5.7c0,1.3,0.4,2.1,1.5,2.1c0.5,0,0.9-0.1,1.1-0.1l0.1,1.5c-0.4,0.2-1,0.3-1.7,0.3
+                c-0.9,0-1.6-0.3-2.1-0.8c-0.5-0.6-0.7-1.5-0.7-2.8v-5.8h-1.7v-1.5H65v-2.6L66.9,16.2z"
+            />
+            <path
+              d="M81.1,27c0,1.1,0,2.1,0.1,2.9h-1.7l-0.1-1.7h0c-0.5,0.9-1.6,2-3.5,2c-1.7,0-3.7-0.9-3.7-4.7v-6.2H74v5.9
+                c0,2,0.6,3.4,2.4,3.4c1.3,0,2.2-0.9,2.6-1.8c0.1-0.3,0.2-0.6,0.2-1v-6.5h1.9V27z"
+            />
+            <path
+              d="M84.7,22.1c0-1.1,0-2-0.1-2.9h1.7l0.1,1.7h0.1c0.6-1,1.6-2,3.3-2c1.5,0,2.6,0.9,3,2.1h0c0.3-0.6,0.7-1.1,1.2-1.4
+                c0.6-0.5,1.3-0.7,2.4-0.7c1.4,0,3.5,0.9,3.5,4.6v6.3H98v-6c0-2-0.7-3.3-2.3-3.3c-1.1,0-2,0.8-2.3,1.8c-0.1,0.3-0.2,0.6-0.2,1v6.6
+                h-1.9v-6.4c0-1.7-0.7-2.9-2.2-2.9c-1.2,0-2.1,1-2.4,1.9c-0.1,0.3-0.2,0.6-0.2,0.9v6.4h-1.9V22.1z"
+            />
+            <path
+              d="M105.8,25.2l-1.5,4.7h-2l5-14.8h2.3l5.1,14.8h-2l-1.6-4.7H105.8z M110.7,23.7l-1.5-4.3c-0.3-1-0.6-1.8-0.8-2.7h0
+                c-0.2,0.9-0.5,1.8-0.7,2.7l-1.5,4.3H110.7z"
+            />
+            <path d="M119.1,15v14.8h-1.9V15H119.1z" />
+          </svg>
+        </div>
+        <nav class="header__nav">
+          <div class="exclusive-offer">
+            <div class="exclusive-text">
+              <span class="text-span-8">EXCLUSIVE OFFER FOR</span><br /><span
+                class="text-span exc-2"
+                >TRADERS IN</span
+              >
+              <span style="text-transform: uppercase" data-init-macros="country_name">Country</span>
+            </div>
+            <div class="exclusive-flag flag-icon">
+              <img style="height: 40px" src="fonts/CA.svg" alt data-init-macros="country_flag" />
+            </div>
+          </div>
+        </nav>
+        <div
+          class="header__user aos-init aos-animate"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1000"
+          data-aos-delay="1050"
+        >
+          <a
+            class="header__auth button button--sm buttonglow"
+            href="#"
+            onclick=";document.location.hash='';return false;"
+            >Create account</a
+          >
+        </div>
+        <button class="header__hamburger hamburger hamburger--emphatic" type="button">
+          <a
+            class="header__auth button button--sm buttonglow"
+            href="#"
+            onclick=";document.location.hash='';return false;"
+            >Create account</a
+          >
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section promo promo-main">
+        <div class="modal-promo">
+          <div class="modal-join modal-join--visible">
+            <div class="modal-wrapper">
+              <div class="modal-wrapper__content">
+                <button type="button" class="close-btn close-btn--white"></button>
+                <div class="modal-wrapper__inner modal-wrapper__inner--form">
+                  <div class="embed-container">
+                    <div style="padding: 56.25% 0 0 0; position: relative">
+                      <iframe
+                        src
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+                        frameborder="0"
+                        allow="autoplay; fullscreen"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                    <script src="js/player.js"></script>
+                  </div>
+                </div>
+
+                <div
+                  class="modal-wrapper__inner modal-wrapper__inner--hidden modal-wrapper__inner--done"
+                >
+                  <p class="modal-title">Your request has been sent</p>
+                  <p class="modal-text">
+                    Thank you for your interest in Wulet. We'll review the application within 48
+                    hours
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper" id="title_text">
+          <div class="promo__wrap">
+            <div class="promo__head">
+              <h1
+                data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-delay="400"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+                class="aos-init aos-animate"
+              >
+                Smart Investing <br />
+                That Makes You<br />
+                <span data-init-macros="currencySymbol">$</span>9288 in 5 Hours<br />
+                And Cures Poverty
+              </h1>
+              <p
+                data-aos="fade-right"
+                data-aos-offset="20"
+                data-aos-delay="600"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+                class="aos-init aos-animate"
+              >
+                Our smart investing can make you thousands in less than 7 days, and will help cure
+                poverty while you earn!
+              </p>
+            </div>
+          </div>
+          <style>
+            /*.form {*/
+
+            /*width: 100%;*/
+
+            /*padding: 10px 30px;*/
+
+            /*margin-right: 30px;*/
+
+            /*background: #fff;*/
+
+            /*font-family: inherit;*/
+
+            /*position: relative;*/
+
+            /*top: 35px;*/
+
+            /*min-height: 400px;*/
+
+            /*z-index: 1;*/
+
+            /*}*/
+
+            .form {
+              margin: 0 0 40px;
+              color: #000000;
+            }
+
+            .form .form-head {
+              margin-top: 10px;
+              margin-bottom: 20px;
+            }
+
+            .form .form-head h2 {
+              font-family: inherit;
+              margin: 0;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 3rem;
+              line-height: 3.6rem;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              text-transform: uppercase;
+              color: #fafaff;
+            }
+
+            .form form .input-group {
+              display: flex;
+              justify-content: space-between;
+              flex-wrap: wrap;
+            }
+
+            .form form .input-group .form-name-1,
+            .form form .input-group .form-name-2 {
+              width: 49%;
+              margin-top: 0;
+            }
+
+            .form form .input-wrapper {
+              margin-top: 20px;
+              display: block;
+              position: relative;
+            }
+
+            .form form .input-wrapper > span {
+              position: absolute;
+              color: #000;
+              left: 3px;
+              background: #fff;
+              top: -5px;
+              cursor: text;
+              font-size: 10px;
+              opacity: 1;
+              transition: font-size 0.2s, opacity 0.2s, top 0.2s, left 0.2s, background 0.2s;
+            }
+
+            .form form .input-wrapper span.floating-label {
+              pointer-events: none;
+              font-style: italic;
+              font-weight: normal;
+            }
+
+            .form form .input-wrapper input {
+              color: #000;
+              font-style: italic;
+              font-weight: 400;
+              border: 2px solid #fafaff;
+              width: 100%;
+              padding: 0 10px 0 10px;
+              height: 40px;
+              font-size: 16px;
+              line-height: 19px;
+              background-color: #fff;
+            }
+
+            .form form .input-wrapper input:not(.phone)::placeholder {
+              opacity: 1;
+              transition: all 0.2s;
+            }
+
+            .form form .input-wrapper input:not(.phone):placeholder-shown:not(:focus)::placeholder {
+              opacity: 0;
+            }
+
+            .form
+              form
+              .input-wrapper
+              input:not(.phone):placeholder-shown:not(:focus)
+              ~ .floating-label {
+              font-size: 14px;
+              opacity: 0.5;
+              top: 1em;
+              left: 1em;
+              background: transparent;
+            }
+
+            .phone::placeholder {
+              font-size: 14px;
+              opacity: 0.5;
+              font-style: italic;
+              font-weight: normal;
+              color: #fafaff;
+            }
+
+            .form form .input-wrapper input:focus {
+              outline: none;
+              border-color: rgba(255, 255, 255, 0.5);
+            }
+
+            .form form .btm-send {
+              width: 100%;
+              min-height: 60px;
+              background: #4e1cbf;
+              border: 0;
+              font-family: inherit;
+              font-weight: bold;
+              font-size: 30px;
+              line-height: 34px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #fafaff;
+              margin-top: 25px;
+              cursor: pointer;
+              transition: linear background 0.2s, linear color 0.2s;
+            }
+
+            .form form .btm-send:hover {
+              background: #783efa;
+              color: #d5d5d7;
+            }
+
+            .form form .btm-send:active {
+              box-shadow: inset 0px 0px 0px 2px #fff;
+            }
+
+            .form form .password-wrapper {
+              display: flex;
+            }
+
+            .form form .password-wrapper .password-btn {
+              border: 0;
+              text-transform: uppercase;
+              background-color: #fafaff;
+              height: 40px;
+              font-family: inherit;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 8px;
+              line-height: 10px;
+              align-items: center;
+              min-width: 92px;
+              text-align: center;
+              color: #fff;
+              transition: linear background 0.2s, linear color 0.2s, linear border 0.2s;
+              cursor: pointer;
+            }
+
+            .form form .password-wrapper .password-btn:hover {
+              background: #fff;
+              color: #fff;
+              box-shadow: inset 0px 0px 0px 2px #fafaff;
+            }
+
+            .valid-block {
+              position: absolute;
+              background: #fafaff;
+              border: 1px solid #ff003c;
+              box-sizing: border-box;
+              z-index: 9996;
+              top: 40px;
+            }
+
+            .valid-check {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+
+            .valid-check label {
+              color: #f90201;
+              padding: 5px 25px;
+              position: relative;
+              text-align: left;
+              font-family: inherit;
+              font-size: 12px;
+              line-height: 1;
+              margin: 0;
+            }
+
+            .valid-check.check label {
+              color: #39b54a !important;
+            }
+
+            .valid-check.check label::before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 5px;
+              left: 8px;
+              width: 12px;
+              height: 11px;
+              background-image: url(fonts/form-valid.svg);
+              background-size: 80%;
+              background-position: 50%;
+              background-repeat: no-repeat;
+            }
+
+            .valid-check label::before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 5px;
+              left: 8px;
+              width: 12px;
+              height: 11px;
+              background-image: url(fonts/form-invalid.svg);
+              background-size: 80%;
+              background-position: 50%;
+              background-repeat: no-repeat;
+            }
+
+            /*input.error {*/
+
+            /*    background: rgba(255, 0, 60, 0.3) url(fonts/form-invalid.svg) no-repeat 95% !important;*/
+
+            /*    border: 2px solid #FF003C !important;*/
+
+            /*    padding-right: 30px !important;*/
+
+            /*    text-overflow: ellipsis;*/
+
+            /*    -webkit-background-size: 13px 10px !important;*/
+
+            /*    background-size: 13px 10px !important;*/
+
+            /*}*/
+
+            /*input.valid {*/
+
+            /*    background: rgba(57, 181, 74, 0.3) url(fonts/form-valid.svg) no-repeat 95% !important;*/
+
+            /*    border: 2px solid #39B54A !important;*/
+
+            /*    padding-right: 30px !important;*/
+
+            /*    text-overflow: ellipsis;*/
+
+            /*}*/
+
+            .valid > span {
+              color: #39b54a;
+            }
+
+            input[name='password'] + label.error {
+              display: none !important;
+            }
+
+            @media screen and (min-width: 992px) {
+              input[name='password'] {
+                min-width: 60% !important;
+              }
+              .password-btn {
+                min-width: 35% !important;
+              }
+            }
+
+            .data-protect {
+              display: flex;
+              margin-top: 43px;
+              align-items: center;
+            }
+
+            .data-protect img {
+              max-width: 62px;
+              height: auto;
+            }
+
+            .data-protect--text {
+              font-size: 7px;
+              line-height: 8px;
+              margin-left: 1rem;
+            }
+
+            .data-protect--text b {
+              font-weight: 900;
+            }
+
+            /*.section-info > .container {*/
+
+            /*    padding: 0;*/
+
+            /*}*/
+
+            .trust-block {
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+            }
+
+            .trust-image--bitgo {
+              max-width: 90px;
+            }
+
+            .trust-image--norton {
+              max-width: 91px;
+            }
+
+            .trust-image--paypal {
+              max-width: 115px;
+            }
+
+            .trust-image--visa {
+              max-width: 51px;
+            }
+
+            .trust-image--mastercard {
+              max-width: 129px;
+            }
+
+            .join-text--title {
+              font-size: 40px;
+              line-height: 48px;
+              text-transform: uppercase;
+            }
+
+            .join-text--title b {
+              color: #ad112c;
+            }
+
+            .section-join .join-text {
+              margin-top: 6.4rem;
+            }
+
+            .join-text--content {
+              font-weight: 300;
+              font-size: 17px;
+              line-height: 20px;
+              margin: 45px 0 0 0;
+            }
+
+            .join-img {
+              justify-content: flex-end;
+              display: flex;
+              position: relative;
+              top: 45px;
+            }
+
+            .join-img img {
+              max-width: 340px;
+            }
+
+            .join-text--trust {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-top: 55px;
+            }
+
+            .join-text--trust span {
+              font-size: 18px;
+              line-height: 22px;
+            }
+
+            .join-text--trust img {
+              max-width: 420px;
+            }
+
+            .title {
+              font-weight: 900;
+              font-size: 36px;
+              line-height: 43px;
+              text-transform: uppercase;
+              margin: 0;
+              text-align: center;
+            }
+
+            .dark-red {
+              color: #ad112c;
+            }
+
+            .section-testimonials {
+              margin-top: 70px;
+            }
+
+            .testimonial-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              position: relative;
+            }
+
+            .testimonial-container img {
+              max-width: 26.3rem;
+            }
+
+            .testimonial-group {
+              position: absolute;
+              transform: translate(-50%, -50%);
+              top: 80%;
+              left: 50%;
+              text-align: center;
+            }
+
+            .testimonials-margin {
+              margin-bottom: 35px;
+            }
+
+            .testimonial-group--about {
+              font-size: 16px;
+              line-height: 19px;
+              display: block;
+              color: #fff;
+            }
+
+            .testimonial-group--sum {
+              font-weight: 900;
+              font-size: 16px;
+              line-height: 19px;
+              color: #59c3ff;
+              display: block;
+            }
+
+            .testimonial-comment {
+              display: inline-block;
+              text-align: center;
+              padding: 17px 45px;
+              font-weight: 300;
+              font-size: 16px;
+              line-height: 19px;
+              color: #000;
+            }
+
+            .advantages-card {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              background: #fff;
+              color: #fff;
+              padding: 0 20px;
+              min-height: 420px;
+            }
+
+            .advantages-card img {
+              max-width: 148px;
+              margin-top: -80px;
+            }
+
+            .advantages-card h3 {
+              font-weight: 900;
+              font-size: 30px;
+              line-height: 36px;
+              text-transform: uppercase;
+              text-align: center;
+              margin: 15px 0 15px 0;
+            }
+
+            .advantages-card span {
+              font-size: 18px;
+              line-height: 22px;
+            }
+
+            .advantages-card span {
+              text-align: center;
+            }
+
+            .section-advantages {
+              margin-top: 175px;
+            }
+
+            .join-section {
+              margin-top: 40px;
+            }
+
+            button.btn-scroll {
+              background: #ad112c;
+              min-height: 60px;
+              max-width: 360px;
+              padding: 10px;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 auto;
+              font-size: 30px;
+              line-height: 36px;
+              color: #fafaff;
+              font-family: inherit;
+              border: 0;
+              transition: background 0.2s linear;
+              cursor: pointer;
+              font-weight: 700;
+            }
+
+            button.btn-scroll:hover {
+              background: rgba(173, 17, 44, 0.9);
+            }
+
+            .section-slider {
+              margin-top: 13.5rem;
+            }
+
+            .title-slider {
+              color: #fff;
+              margin-top: 6rem;
+              margin-bottom: 1.8rem;
+            }
+
+            .slider-earn {
+              text-align: center;
+            }
+
+            .slider-earn label {
+              font-size: 18px;
+              line-height: 22px;
+              font-weight: 700;
+              color: #fff;
+            }
+
+            .slider-earn #calcResult {
+              font-weight: 700;
+              font-size: 30px;
+              line-height: 36px;
+              color: #fff;
+              border: 2px solid #ffffff;
+              max-width: 310px;
+              width: 100%;
+              margin: 1.6rem auto 0 auto;
+              padding: 7px;
+            }
+
+            .js-range-slider {
+              display: none;
+            }
+
+            .slider-invest label {
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 22px;
+              color: #fff;
+              text-align: center;
+              width: 100%;
+              display: block;
+              margin: 4.8rem 0 1.5rem 0;
+            }
+
+            .slider-invest {
+              padding: 0 50px;
+            }
+
+            .section-slider .row {
+              background: url('images/calc-bg.jpg') no-repeat;
+              background-size: cover;
+            }
+
+            .irs-max,
+            .irs-min {
+              display: none !important;
+            }
+
+            .slider-scroll .btn-scroll {
+              margin-top: 4.8rem;
+              margin-bottom: 5.8rem;
+            }
+
+            .section-table {
+              margin-top: 13.5rem;
+            }
+
+            .table-responsive,
+            .table-responsive table {
+              width: 100%;
+            }
+
+            .table-responsive {
+              padding: 0 7rem;
+              border: 1px solid #a9a9a9;
+              margin-top: 3.5rem;
+            }
+
+            .table-responsive table {
+              margin-top: 4.3rem;
+              background: #fff;
+              border-collapse: collapse;
+            }
+
+            .table-responsive table thead th {
+              text-align: left;
+              font-size: 20px;
+              line-height: 24px;
+              padding: 0 2.5rem;
+            }
+
+            .table-responsive table tbody {
+              margin-top: 1rem;
+            }
+
+            .table-responsive table tbody tr {
+              min-height: 40px;
+              border-bottom: 1px solid #a9a9a9;
+            }
+
+            .table-responsive table tbody tr:last-child {
+              border-bottom: 0;
+            }
+
+            .table-responsive table tbody tr td:last-child img {
+              max-width: 23px;
+              margin: 0 auto;
+            }
+
+            .table-responsive table tbody tr td {
+              width: 20%;
+              font-size: 16px;
+              line-height: 19px;
+              padding: 1.1rem 2.5rem;
+            }
+
+            .table-responsive table tbody tr td:nth-child(2) {
+              font-weight: bold;
+            }
+
+            .table-responsive table tbody tr td:nth-child(3),
+            .table-responsive table tbody tr td:nth-child(4) {
+              font-weight: 300;
+            }
+
+            .table-responsive table tbody tr td:nth-child(5),
+            .table-responsive table thead th:nth-child(5) {
+              text-align: center;
+            }
+
+            .table-responsive table tbody::before {
+              content: '';
+              display: block;
+              height: 15px;
+            }
+
+            .table-responsive table tbody::after {
+              content: '';
+              display: block;
+              height: 40px;
+            }
+
+            .section-how {
+              margin-top: 11rem;
+            }
+
+            .how-card {
+              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              padding: 25px;
+              border: 3px solid #fff;
+              margin-top: 11.4rem;
+              min-height: 37rem;
+            }
+
+            /*.section-how > .container {*/
+
+            /*    padding: 0;*/
+
+            /*}*/
+
+            .how-card h3 {
+              font-weight: 900;
+              font-size: 30px;
+              line-height: 36px;
+              margin: 1rem 0 2rem 0;
+            }
+
+            .how-card h3 span {
+              text-transform: uppercase;
+            }
+
+            .how-card img {
+              max-width: 148px;
+              margin-top: -150px;
+            }
+
+            .how--last-card h3 {
+              margin: 1.6rem 0 5.7rem 0;
+            }
+
+            .how-section .btn {
+              margin-top: 4rem;
+            }
+
+            .section-steps {
+              margin-top: 13.2rem;
+            }
+
+            .steps-container {
+              display: flex;
+              align-items: center;
+              margin-bottom: 4.8rem;
+            }
+
+            .steps-container:last-child {
+              margin-bottom: 0;
+            }
+
+            .step-group .step-group--title {
+              margin: 0 0 1rem 0;
+            }
+
+            .number {
+              font-weight: 900;
+              font-size: 72px;
+              line-height: 86px;
+              color: #fff;
+            }
+
+            .column-1 {
+              padding-left: 0;
+              padding-right: 6rem;
+            }
+
+            .column-2 {
+              padding-right: 0;
+              padding-left: 4rem;
+            }
+
+            .section-steps .steps-margin {
+              margin-bottom: 2.3rem;
+            }
+
+            .step-group {
+              margin-left: 0.5rem;
+            }
+
+            .section-footer {
+              margin-top: 20.5rem;
+              background-image: url('images/bg-section-hero.jpg');
+              background-repeat: no-repeat;
+              -webkit-background-size: cover;
+              background-size: cover;
+            }
+
+            /*.section-footer > .container {*/
+
+            /*    padding: 0;*/
+
+            /*}*/
+
+            .footer-title {
+              max-width: 540px;
+              margin-top: 2.5rem;
+            }
+
+            .footer-title h1 {
+              font-weight: 900;
+              font-size: 60px;
+              line-height: 72px;
+              text-transform: uppercase;
+              margin: 0;
+              color: #fff;
+            }
+
+            .footer-subtitle {
+              margin-top: 4rem;
+            }
+
+            .footer-subtitle img {
+              max-width: 392px;
+            }
+
+            .footer-form {
+              margin-top: -110px;
+              top: 55px;
+            }
+
+            .section-info--footer .info-footer {
+              margin-top: 70px;
+            }
+
+            .section-info--footer {
+              padding-bottom: 1rem;
+            }
+
+            footer {
+              background: #000;
+              padding: 1.3rem 0;
+            }
+
+            footer .logo-footer img {
+              max-width: 126px;
+            }
+
+            footer .footer-content {
+              display: flex;
+              padding: 0;
+              justify-content: space-between;
+              align-items: center;
+            }
+
+            footer .footer-content .privacy-link a {
+              font-weight: bold;
+              font-size: 0.83rem;
+              line-height: 10px;
+              text-align: right;
+              text-decoration-line: underline;
+              color: rgba(250, 250, 255, 0.5);
+            }
+
+            footer .disclaimer {
+              font-size: 8px;
+              line-height: 10px;
+              color: rgba(250, 250, 255, 0.5);
+              padding: 0;
+              margin-top: 1rem;
+            }
+
+            footer .divider-footer {
+              margin-bottom: 2rem;
+            }
+
+            .selected-flag {
+              background: #fafaff;
+            }
+
+            .show-mobile {
+              display: none !important;
+            }
+
+            @media screen and (min-width: 992px) and (max-width: 1199px) {
+              .section-header .header-person .person-text {
+                margin-left: 10px;
+              }
+              .section-hero .hero-btc .btc-name,
+              .section-hero .hero-btc .btc-sum {
+                font-size: 1.7rem;
+                line-height: 1.7rem;
+              }
+              .form-block {
+                padding-left: unset;
+              }
+              .section-hero .form {
+                top: 60px;
+              }
+              .join-img img {
+                max-width: 372px;
+              }
+              .join-text--trust img {
+                max-width: 360px;
+              }
+              .testimonial-container img {
+                max-width: 23.3rem;
+              }
+              .testimonial-comment {
+                padding: 17px 30px;
+              }
+            }
+
+            @media screen and (max-width: 991px) {
+              input.error,
+              input.valid {
+                background-position: 98% 50% !important;
+              }
+              .section-hero .hero-subtitle h3 {
+                text-align: center;
+              }
+              .header-geo,
+              .header-person {
+                display: none !important;
+              }
+              .header-group {
+                padding-right: 0;
+              }
+              .section-hero .btc {
+                justify-content: center;
+              }
+              .section-hero .hero-btc:last-child {
+                margin-left: 3.6rem;
+                display: none;
+              }
+              .section-hero .hero-btc .btc-name,
+              .section-hero .hero-btc .btc-sum {
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+              }
+              .form-block {
+                padding-left: 15px;
+              }
+              .section-hero .form-block {
+                margin-top: unset;
+              }
+              .section-hero .form {
+                top: 0;
+              }
+              .form .form-head h2 {
+                justify-content: center;
+              }
+              .section-info > .container .row {
+                flex-direction: column-reverse;
+              }
+              .section-hero + .section-info {
+                margin-top: 1rem;
+              }
+              .data-protect {
+                margin-top: 10px;
+                margin-bottom: 10px;
+              }
+              .trust-block {
+                justify-content: space-between;
+              }
+              .section-join .join-text {
+                margin-top: 1.4rem;
+              }
+              .join-text--content {
+                margin: 25px 0 0 0;
+              }
+              .join-text--trust {
+                margin-top: 2rem;
+                justify-content: center;
+                flex-direction: column;
+              }
+              .join-text--trust span {
+                margin-right: 1rem;
+                margin-bottom: 1rem;
+              }
+              .join-reverse {
+                flex-direction: column-reverse;
+              }
+              .join-img {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+              }
+              .join-img img {
+                max-width: 240px;
+              }
+              .testimonial {
+                margin-bottom: 2rem;
+              }
+              .testimonial:last-child {
+                margin-bottom: 0;
+              }
+              .join-text--title.show-mobile {
+                text-align: center;
+              }
+              .advantages-card {
+                max-width: 360px;
+                margin: 0 auto 11rem auto;
+              }
+              .section-advantages .col-lg-4:last-child .advantages-card:last-child {
+                margin: 0 auto 0 auto;
+              }
+              .join-section {
+                margin-top: 1rem;
+              }
+              .column-1 {
+                padding-right: 0;
+                margin-bottom: 3rem;
+              }
+              .column-2 {
+                padding-left: 0;
+              }
+              .steps-container {
+                margin-bottom: 3rem;
+              }
+              .section-footer {
+                margin-top: 10rem;
+              }
+              .footer-title {
+                max-width: 100%;
+                text-align: center;
+              }
+              .table-responsive {
+                padding: 0 2rem;
+              }
+            }
+
+            @media screen and (max-width: 767px) {
+              .section-hero,
+              .section-footer {
+                background-image: url('images/hero-bg-mob.jpg');
+              }
+              label.error,
+              .valid-block {
+                top: 62px;
+              }
+              .section-hero .hero-title h1 {
+                font-size: 42px;
+                line-height: 50px;
+              }
+              .hero-subtitle {
+                margin-top: 2.7rem !important;
+                text-align: center;
+              }
+              .section-hero .hero-subtitle h3 {
+                line-height: 36px;
+              }
+              .section-hero .hero-btc .btc-name,
+              .section-hero .hero-btc .btc-sum {
+                font-size: 20px;
+                line-height: 24px;
+              }
+              .section-hero .hero-btc {
+                margin-top: 0;
+              }
+              .form {
+                /*padding: 20px 20px 38px 20px;*/
+              }
+              .form .form-head {
+                margin-bottom: 30px;
+              }
+              .form form .input-wrapper input,
+              .form form .password-wrapper .password-btn {
+                height: 62px;
+              }
+              .form form .password-wrapper .password-btn {
+                font-size: 13px;
+                line-height: 16px;
+                min-width: 140px;
+              }
+              .form
+                form
+                .input-wrapper
+                input:not(.phone):placeholder-shown:not(:focus)
+                ~ .floating-label {
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 24px;
+              }
+              .phone::placeholder {
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 24px;
+                color: #fafaff;
+              }
+              .form form .btm-send {
+                margin-top: 15px;
+                min-height: 90px;
+              }
+              .form form .selected-dial-code {
+                font-size: 16px;
+                line-height: 19px;
+                font-weight: bold;
+              }
+              .form .checkbox-svg {
+                margin: 15px 0 15px 0px;
+              }
+              .data-protect {
+                margin-top: 0;
+              }
+              .data-protect img {
+                max-width: 62px;
+              }
+              .section-hero + .section-info {
+                padding: 0 1.5rem;
+                margin-top: 0;
+              }
+              .data-protect--text span,
+              .data-protect--text b {
+                font-size: 10.4px;
+                line-height: 12px;
+              }
+              .data-protect--text {
+                margin-top: 2rem;
+              }
+              .trust-image--bitgo {
+                max-width: 63px;
+              }
+              .trust-image--norton {
+                max-width: 63px;
+              }
+              .trust-image--paypal {
+                max-width: 80px;
+              }
+              .trust-image--visa {
+                max-width: 36px;
+              }
+              .trust-image--mastercard {
+                max-width: 87.6px;
+              }
+              .trust-block {
+                margin-top: 5px;
+                padding: 0 2.5rem !important;
+              }
+              .join-text--title {
+                font-size: 30px;
+                line-height: 36px;
+                padding: 0 10px;
+                margin: 0 0 2rem 0;
+              }
+              .join-img {
+                top: 0;
+                margin-top: 3rem;
+              }
+              .join-text--content {
+                text-align: center;
+                padding: 0.6rem 2rem 0 2rem;
+                font-size: 16px;
+                line-height: 19px;
+              }
+              .join-text--trust span {
+                margin: 0.5rem 0 3rem 0;
+                font-size: 16px;
+                line-height: 19px;
+              }
+              .title {
+                font-size: 30px;
+                line-height: 36px;
+              }
+              .testimonials-title {
+                padding: 0 2rem;
+              }
+              .section-testimonials {
+                margin-top: 40px;
+              }
+              .testimonial-comment {
+                padding: 23px 15px;
+              }
+              .section-advantages {
+                margin-top: 100px;
+              }
+              .advantages-card h3 {
+                margin: 25px 0 20px 0;
+              }
+              .advantages-card {
+                margin: 0 auto 11.3rem auto;
+              }
+              .join-section {
+                margin-top: 2.7rem;
+              }
+              button.btn-scroll {
+                min-height: 92px;
+              }
+              .section-slider .row {
+                background: none;
+              }
+              .section-slider .slider-group {
+                background: url('images/calc-bg-mob.jpg') no-repeat;
+                background-size: cover;
+                max-width: 36rem;
+                margin: 0 auto;
+              }
+              .section-slider {
+                margin-top: 2.6rem;
+              }
+              .title-slider {
+                margin-top: 0;
+                margin-bottom: 3.7rem;
+              }
+              .slider-group-form {
+                padding: 1.6rem 2.5rem;
+              }
+              .slider-invest {
+                padding: 0;
+              }
+              .slider-scroll .btn-scroll {
+                margin-top: 5.7rem;
+                margin-bottom: 1.5rem;
+                font-size: 25px;
+                line-height: 30px;
+              }
+              .section-table {
+                margin-top: 5.5rem;
+              }
+              .table-responsive {
+                padding: 12px 15px;
+                border: 0;
+              }
+              .table-responsive table {
+                margin-top: 0;
+              }
+              .table-responsive table thead th {
+                font-size: 14px;
+                line-height: 17px;
+                padding: 1rem 0 1rem 1rem;
+              }
+              .table-responsive table tbody tr td {
+                font-size: 14px;
+                line-height: 17px;
+                padding: 1rem 0 1rem 1rem;
+              }
+              .section-how {
+                margin-top: 11.8rem;
+              }
+              .how-card {
+                max-width: 36rem;
+                margin: 11rem auto 0 auto;
+              }
+              .how--first-card .how-card {
+                max-width: 36rem;
+                margin: 14rem auto 0 auto;
+              }
+              .how-section .btn {
+                margin-top: 3rem;
+              }
+              .section-steps {
+                margin-top: 3.5rem;
+                padding: 0 1rem;
+              }
+              .steps-container {
+                margin-bottom: 3rem;
+              }
+              .column-1 {
+                margin-bottom: 3rem;
+              }
+              .step-group--title {
+                font-size: 18px;
+                line-height: 22px;
+              }
+              .step-group--text {
+                font-size: 16px;
+                line-height: 19px;
+              }
+              .section-footer {
+                margin-top: 10.5rem;
+              }
+              .footer-entrance {
+                flex-direction: column-reverse;
+                display: flex;
+              }
+              .footer-subtitle {
+                margin: 1.2rem auto 0 auto;
+              }
+              .footer-title {
+                padding: 0 4.5rem;
+              }
+              .footer-title h1 {
+                font-size: 40px;
+                line-height: 48px;
+              }
+              .footer-form {
+                margin-top: 1.5rem;
+                top: unset;
+              }
+              .section-info--footer .info-footer {
+                margin-top: 0;
+                padding: 0 1.7rem;
+              }
+              footer .footer-content,
+              footer .disclaimer {
+                padding: 0 15px;
+              }
+              .section-info--footer {
+                padding-bottom: 2.5rem;
+              }
+              footer {
+                padding: 2rem 0 1rem 0;
+              }
+              footer .logo-footer img {
+                max-width: 19.6rem;
+              }
+              body > section[class*='section'] > .container {
+                padding-right: 0;
+                padding-left: 0;
+              }
+              .row {
+                margin-right: 0;
+                margin-left: 0;
+              }
+              .row > .col,
+              .row > [class*='col-'] {
+                padding-right: 0;
+                padding-left: 0;
+              }
+              .popup_content_inner .popup-form-wrapper {
+                max-width: 450px;
+              }
+              .popup-content-wrapper {
+                display: none;
+              }
+            }
+
+            @media screen and (max-width: 575px) {
+              .section-hero,
+              .section-footer {
+                background-size: 100% 34%;
+              }
+              .join-text--title {
+                font-size: 24px;
+                line-height: 30px;
+              }
+            }
+
+            @media screen and (max-width: 449px) {
+              .section-header .header-logo,
+              .footer-subtitle img {
+                max-width: 290px;
+              }
+              .join-text--trust img {
+                padding: 0 2rem;
+              }
+              .form {
+                padding: 1rem 1rem;
+                padding-bottom: 0;
+              }
+              .section-hero + .section-info {
+                padding: 0 0.7rem;
+              }
+              .trust-image--bitgo {
+                max-width: 45px;
+              }
+              .trust-image--norton {
+                max-width: 53px;
+              }
+              .trust-image--paypal {
+                max-width: 60px;
+              }
+              .trust-image--visa {
+                max-width: 26px;
+              }
+              .trust-image--mastercard {
+                max-width: 67.6px;
+              }
+              .join-img img {
+                max-width: 210px;
+              }
+              .slider-group-form {
+                padding: 1.6rem 1rem;
+              }
+              .slider-invest {
+                padding: 0 2rem;
+              }
+              .table-responsive {
+                padding: 3px 5px;
+              }
+              .table-responsive table thead th,
+              .table-responsive table tbody tr td {
+                font-size: 10px;
+                line-height: 12px;
+              }
+              .section-how {
+                margin-top: 6rem;
+              }
+              .how-card {
+                max-width: 28rem !important;
+              }
+              button.btn-scroll {
+                max-width: 29rem;
+              }
+              .footer-title h1 {
+                font-size: 26px;
+                line-height: 34px;
+              }
+              footer .logo-footer img {
+                max-width: 12rem;
+              }
+              .trust-block {
+                padding: 0 1.5rem !important;
+              }
+              .section-hero .hero-btc .btc-name,
+              .section-hero .hero-btc .btc-sum {
+                font-size: 14px;
+                line-height: 18px;
+              }
+            }
+
+            /*MOBILE DEVICES*/
+
+            @media screen and (max-width: 991px) {
+              .show-mobile {
+                display: block !important;
+              }
+              .hide-mobile {
+                display: none !important;
+              }
+              .privacy-checkbox {
+                padding-left: 35px !important;
+              }
+              .checked-svg svg {
+                width: 34px;
+                height: 34px;
+                top: -5px;
+              }
+              .checked-svg:before {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 34px;
+                height: 34px;
+              }
+            }
+
+            @media screen and (max-width: 340px) {
+              .table-responsive table thead th,
+              .table-responsive table tbody tr td {
+                font-size: 9px;
+              }
+            }
+
+            @media screen and (min-width: 540px) {
+              .table-responsive table tbody tr td,
+              .table-responsive table thead th {
+                padding: 1rem 0 1rem 2rem;
+              }
+            }
+
+            .logo_wrapper {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              align-items: center;
+              font-weight: 700;
+            }
+
+            .logo_wrapper-header {
+              font-size: 28px;
+              color: #333333;
+            }
+
+            .logo_wrapper-header img {
+              max-height: 47px;
+              width: auto !important;
+              box-sizing: content-box;
+            }
+
+            .logo_wrapper-footer {
+              font-size: 30px;
+              line-height: 46px;
+              color: #fff;
+            }
+
+            .logo_wrapper-footer img {
+              max-height: 47px;
+              box-sizing: content-box;
+              width: auto;
+            }
+
+            .logo_wrapper-footer_small {
+              font-size: 14px;
+              color: #fff;
+            }
+
+            .logo_wrapper-footer_small img {
+              /* max-height: 47px; */
+              box-sizing: content-box;
+              width: auto;
+            }
+
+            .logo_wrapper-pop {
+              color: #fff;
+              font-size: 31px;
+              line-height: 32px;
+              color: #fff;
+            }
+
+            .logo_wrapper-pop img {
+              max-height: 51px;
+              box-sizing: content-box;
+              width: auto;
+            }
+
+            .lead-name {
+              margin: 0 !important;
+            }
+
+            .logo_wrapper-big {
+              flex-wrap: wrap;
+            }
+
+            .logo_wrapper-header.logo_wrapper-big img {
+              padding-bottom: 0;
+            }
+
+            .logo_wrapper-header.logo_wrapper-big {
+              padding-bottom: 25px;
+            }
+
+            .logo_wrapper-biggest .city {
+              font-size: 70%;
+            }
+
+            @media (max-width: 991px) {
+              .desk {
+                display: none;
+              }
+              .logo_wrapper-pop {
+                color: #fff;
+                font-size: 16px;
+                line-height: 26px;
+                color: #fff;
+              }
+              .logo_wrapper-pop img {
+                max-height: 26px;
+                box-sizing: content-box;
+                width: auto;
+              }
+            }
+
+            @media (max-width: 767px) {
+              .logo_wrapper-pop {
+                color: #fff;
+                font-size: 16px;
+                line-height: 26px;
+                color: #fff;
+              }
+              .logo_wrapper-pop img {
+                max-height: 26px;
+                box-sizing: content-box;
+                width: auto;
+              }
+              .logo_wrapper-footer img {
+                max-height: 25px;
+              }
+              .logo_wrapper-footer {
+                font-size: 15px;
+                line-height: 25px;
+              }
+              .logo_wrapper-header {
+                font-size: 15px;
+                line-height: 25px;
+                color: #333333;
+              }
+              .logo_wrapper-header img {
+                max-height: 25px;
+                width: auto !important;
+                box-sizing: content-box;
+              }
+              .logo_wrapper-footer_small {
+                font-size: 10px;
+                line-height: 16px;
+                color: #fff;
+              }
+              .logo_wrapper-footer_small img {
+                max-height: 16px;
+                box-sizing: content-box;
+                width: auto;
+              }
+              .privacy-link {
+                text-align: right;
+              }
+              .logo_wrapper-pop {
+                justify-content: center;
+              }
+            }
+            .input-wrap button {
+              min-height: 60px;
+              background: #4e1cbf;
+              border: 0;
+              font-weight: bold;
+              font-size: 30px;
+              line-height: 34px;
+              color: #fafaff;
+              cursor: pointer;
+              width: 100%;
+            }
+          </style>
+          <div class="promo__middle" style="max-height: 335px">
+            <div
+              class="promo__middle-left aos-init form_div aos-animate"
+              data-aos-offset="-200"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="1000"
+              data-aos-delay="700"
+            >
+              <div id="video_tag" class="video_tag" data-init-status="disable">
+                <video
+                  src="media/1.mp4"
+                  style="width: 100%; height: auto"
+                  autoplay
+                  muted
+                  controls
+                ></video>
+                <div class="video_on_volume" id="video_on_volume">
+                  <img id="block" src="images/volume.png" alt width="150" height="150" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="promo__middle" id="form_video_id">
+            <div
+              id="form_video_id_c"
+              class="promo__middle-left aos-init form-div aos-animate"
+              data-aos-offset="-200"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="1000"
+              data-aos-delay="700"
+            >
+              <h2>SIGN UP NOW</h2>
+              <div id="form-element-1" class="theme-undefined feature-tooltips">
+                <div class="form-container theme-default">
+                  <div class="hero-form form">
+                    <div class="preloader"></div>
+                    <form class="my-form" method="POST" id="leadform">
+                      <div class="preloader"></div>
+
+                      <div class="input-wrap">
+                        <input
+                          class="pl-0 p-2 border-b border-primary sm:bg-transparent focus:outline-none"
+                          name="first_name"
+                          id="first_name"
+                          type="text"
+                          placeholder="Name *"
+                          required
+                        />
+                      </div>
+                      <div class="input-wrap">
+                        <input
+                          class="pl-0 p-2 border-b border-primary sm:bg-transparent focus:outline-none"
+                          name="last_name"
+                          id="last_name"
+                          type="text"
+                          placeholder="Last name *"
+                          required
+                        />
+                      </div>
+                      <div class="input-wrap">
+                        <input
+                          class="pl-0 p-2 border-b border-primary sm:bg-transparent focus:outline-none"
+                          name="email"
+                          id="email"
+                          type="email"
+                          value
+                          placeholder="Email"
+                          required
+                        />
+                      </div>
+                      <div class="row">
+                        <div
+                          style="justify-content: center; align-items: center"
+                          class="border-b border-primary"
+                        >
+                          <input
+                            required
+                            id="phone1"
+                            name="phone1"
+                            class="form__input form-control form_field-input phoneInp"
+                            type="tel"
+                          />
+                          <p class="phone-errors"></p>
+                        </div>
+                      </div>
+
+                      <div class="flex mb-4 justify-center" style="margin-top: 13px">
+                        <div class="input-wrap"><button type="submit">Register</button></div>
+                      </div>
+                    </form>
+                    <p>
+                      <span style="color: red">VERY IMPORTANT:</span>
+                      <span style="text-transform: uppercase; color: white"
+                        >Provide your valid phone number and wait for a manager to call within 5-10
+                        minutes to confirm your registration. If it is not convenient for you to
+                        talk at this time, ask the manager to call back at a time convenient for
+                        you. Without a manager's confirmation your account will be inactive.</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="promo__footer aos-init"
+          data-aos="fade-up"
+          data-aos-offset="0"
+          data-aos-delay="800"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out"
+        >
+          <div class="promo__info wrapper">
+            <div id="live-trades" class="trades-wrapper active">
+              <div class="trades-div">
+                <div class="live-trades">
+                  <div id="694d58a8e3ebd" class="item animated slideInRight">
+                    <div class="ava"><img src="images/73.jpg" alt /></div>
+                    <div class="info">
+                      <div class="won-info">
+                        <b>Olivia won</b> won <span data-init-macros="currencySymbol">$</span>369
+                      </div>
+                      <div class="balance-info">
+                        <b
+                          >Current balance: <span data-init-macros="currencySymbol">$</span>
+                          <span class="bal">6,402</span></b
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div id="d7a31c612c937" class="item animated slideInRight">
+                    <div class="ava"><img src="images/83.jpg" alt /></div>
+                    <div class="info">
+                      <div class="won-info">
+                        <b>Bessie Frazier</b> won <span data-init-macros="currencySymbol">$</span>62
+                      </div>
+                      <div class="balance-info">
+                        <b
+                          >Current balance: <span data-init-macros="currencySymbol">$</span
+                          ><span class="bal">8,322</span></b
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div id="id_af168e8159a27" class="item animated slideInRight">
+                    <div class="ava"><img src="images/85.jpg" alt /></div>
+                    <div class="info">
+                      <div class="won-info">
+                        <b>Ross Morales</b> won <span data-init-macros="currencySymbol">$</span>283
+                      </div>
+                      <div class="balance-info">
+                        <b
+                          >Current balance: <span data-init-macros="currencySymbol">$</span
+                          ><span class="bal">256</span></b
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div id="id_22c16a4095ec1" class="item animated slideInRight">
+                    <div class="ava"><img src="images/64.jpg" alt /></div>
+                    <div class="info">
+                      <div class="won-info">
+                        <b>Harold Barnes</b> won <span data-init-macros="currencySymbol">$</span>235
+                      </div>
+                      <div class="balance-info">
+                        <b
+                          >Current balance: <span data-init-macros="currencySymbol">$</span
+                          ><span class="bal">132</span></b
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="promo__social">
+          <a
+            class="promo__social-link"
+            href="#form_video_id"
+            onclick="document.location.hash='form_video_id';return false;"
+          >
+            <svg width="20" height="20" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.5 5.99799C8.97177 5.99799 6.04839 8.87097 6.04839 12.4496C6.04839 16.0282 8.92137 18.9012 12.5 18.9012C16.0786 18.9012 18.9516 15.9778 18.9516 12.4496C18.9516 8.92137 16.0282 5.99799 12.5 5.99799ZM12.5 16.5827C10.2319 16.5827 8.36693 14.7177 8.36693 12.4496C8.36693 10.1815 10.2319 8.31653 12.5 8.31653C14.7681 8.31653 16.6331 10.1815 16.6331 12.4496C16.6331 14.7177 14.7681 16.5827 12.5 16.5827Z"
+              ></path>
+              <path
+                d="M19.2036 7.30847C20.0109 7.30847 20.6653 6.65405 20.6653 5.84678C20.6653 5.03951 20.0109 4.38509 19.2036 4.38509C18.3964 4.38509 17.7419 5.03951 17.7419 5.84678C17.7419 6.65405 18.3964 7.30847 19.2036 7.30847Z"
+              ></path>
+              <path
+                d="M22.9839 2.06653C21.6734 0.705645 19.8085 0 17.6915 0H7.30847C2.92339 0 0 2.92339 0 7.30847V17.6411C0 19.8085 0.705645 21.6734 2.11694 23.0343C3.47782 24.3448 5.29234 25 7.35887 25H17.6411C19.8085 25 21.623 24.2944 22.9335 23.0343C24.2944 21.7238 25 19.8589 25 17.6915V7.30847C25 5.19153 24.2944 3.37702 22.9839 2.06653ZM22.7823 17.6915C22.7823 19.254 22.2278 20.5141 21.3206 21.371C20.4133 22.2278 19.1532 22.6815 17.6411 22.6815H7.35887C5.84677 22.6815 4.58669 22.2278 3.67944 21.371C2.77218 20.4637 2.31855 19.2036 2.31855 17.6411V7.30847C2.31855 5.79637 2.77218 4.53629 3.67944 3.62903C4.53629 2.77218 5.84677 2.31855 7.35887 2.31855H17.7419C19.254 2.31855 20.5141 2.77218 21.4214 3.67944C22.2782 4.58669 22.7823 5.84677 22.7823 7.30847V17.6915Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="promo__social-link"
+            href="#form_video_id"
+            onclick="document.location.hash='form_video_id';return false;"
+          >
+            <svg
+              width="20"
+              height="18"
+              viewBox="0 0 12 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.6166 8.09511H7.66042V5.50041C7.66042 4.52598 8.30625 4.2988 8.76113 4.2988C9.21496 4.2988 11.553 4.2988 11.553 4.2988V0.0150071L7.70803 0C3.43976 0 2.46843 3.19499 2.46843 5.2396V8.09511H0V12.5093H2.46843C2.46843 18.1743 2.46843 25 2.46843 25H7.66042C7.66042 25 7.66042 18.107 7.66042 12.5093H11.1638L11.6166 8.09511Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="promo__social-link"
+            href="#form_video_id"
+            onclick="document.location.hash='form_video_id';return false;"
+          >
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 31 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.7632 2.95936C29.6323 3.46206 28.4152 3.80114 27.1382 3.95289C28.4421 3.1723 29.4418 1.93585 29.9133 0.460858C28.6937 1.18462 27.3436 1.7098 25.9055 1.99331C24.7546 0.766848 23.1141 0 21.2988 0C17.8136 0 14.9879 2.82572 14.9879 6.31151C14.9879 6.80547 15.0435 7.28693 15.1515 7.74966C9.90596 7.48614 5.25491 4.9739 2.14193 1.15527C1.59864 2.08698 1.28766 3.17105 1.28766 4.32882C1.28766 6.51821 2.40171 8.45032 4.09527 9.58186C3.06115 9.54876 2.0876 9.26463 1.23645 8.7919C1.23582 8.81813 1.23582 8.84498 1.23582 8.87183C1.23582 11.9292 3.41147 14.4796 6.29902 15.0603C5.76947 15.204 5.21182 15.2814 4.63606 15.2814C4.22891 15.2814 3.83362 15.242 3.44832 15.1677C4.25201 17.675 6.58253 19.5003 9.34393 19.5509C7.18389 21.2438 4.46308 22.253 1.5056 22.253C0.996653 22.253 0.493955 22.223 0 22.1643C2.79387 23.9559 6.11106 25 9.6749 25C21.2844 25 27.6321 15.3832 27.6321 7.04276C27.6321 6.76925 27.6265 6.49635 27.6146 6.22533C28.8474 5.33734 29.9177 4.22516 30.7632 2.95936Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="promo__social-link"
+            href="#form_video_id"
+            onclick="document.location.hash='form_video_id';return false;"
+          >
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 31 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M27.9842 0.164816L1.40106 10.3489C-0.413358 11.0716 -0.402613 12.0772 1.07026 12.5254L7.70011 14.5837L10.2375 22.3055C10.5445 23.1509 10.391 23.4864 11.2875 23.4864C11.9783 23.4864 12.2853 23.1738 12.669 22.8002C12.9131 22.5624 14.3637 21.162 15.984 19.5984L22.8802 24.6596C24.1489 25.3549 25.0653 24.995 25.3815 23.4886L29.9099 2.30013C30.3704 0.456792 29.1984 -0.381783 27.9842 0.164816ZM8.74087 14.108L23.6845 4.74344C24.4305 4.29442 25.1144 4.53532 24.5526 5.03084L11.7572 16.498L11.2591 21.7764L8.74087 14.108Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="promo__social-link"
+            href="#form_video_id"
+            onclick="document.location.hash='form_video_id';return false;"
+          >
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 19 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.8168 12.4224C16.0058 11.8157 14.8505 11.5731 14.8505 11.5731C14.8505 11.5731 15.8282 11.0101 16.2277 10.4477C16.6276 9.885 16.8275 9.01326 16.861 8.56094C16.8942 8.10841 16.9721 6.21099 15.4835 5.11889C14.3321 4.27385 13.0126 3.9384 11.2407 3.82926V0H8.86364V3.78402C8.33327 3.78402 7.71346 3.78402 7.0531 3.78402V0H4.67629V3.78402C2.24982 3.78402 0 3.78402 0 3.78402V6.23582C0 6.23582 0.99965 6.23582 1.37449 6.23582C1.74922 6.23582 2.41569 6.2772 2.69888 6.59202C2.98217 6.90629 3.03217 7.07192 3.03217 7.6839C3.03217 8.29611 3.03228 17.2218 3.03228 17.4535C3.03228 17.6851 2.98784 17.9718 2.78775 18.1595C2.588 18.3472 2.38814 18.391 1.91031 18.391C1.43259 18.391 0.488715 18.391 0.488715 18.391L0 21.2267C0 21.2267 2.32393 21.2267 4.67629 21.2267V25H7.05321V21.2267C7.78356 21.2267 8.41948 21.2267 8.86375 21.2267V25H11.2408V21.1644C11.8553 21.1288 12.4282 21.0826 12.7624 21.0391C13.4401 20.951 14.9728 20.7745 16.4059 19.7815C17.8386 18.7883 18.1605 17.2327 18.1939 15.6662C18.2277 14.0996 17.6271 13.0292 16.8168 12.4224ZM7.0531 6.45398C7.0531 6.45398 7.80833 6.38788 8.55257 6.39869C9.29703 6.40962 9.95206 6.4318 10.9298 6.72973C11.9071 7.02778 12.4843 7.75596 12.507 8.61656C12.5291 9.47715 12.151 10.0506 11.4849 10.4148C10.8185 10.7788 9.89707 10.9774 9.03029 11.0102C8.16407 11.0434 7.0531 11.0102 7.0531 11.0102V6.45398ZM12.3735 17.7402C11.8293 18.0382 10.7406 18.3029 9.68565 18.38C8.63034 18.4573 7.0531 18.4242 7.0531 18.4242V13.36C7.0531 13.36 8.56379 13.283 9.74131 13.36C10.9186 13.4376 11.9071 13.7352 12.3512 13.9562C12.7955 14.1767 13.5733 14.662 13.5733 15.8207C13.5733 16.9789 12.9175 17.4423 12.3735 17.7402Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="promo__social-link"
+            href="#form_video_id"
+            onclick="document.location.hash='form_video_id';return false;"
+          >
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.7925 20.1143C18.3072 21.5546 16.1467 22.4548 14.4363 22.5899C13.2211 22.7249 11.9608 22.7249 10.7455 22.5899C8.94511 22.3648 7.63981 21.8697 6.33452 21.3746C6.96466 20.7445 7.63981 19.8893 7.90987 19.1241C8.08991 18.674 8.0449 18.1789 7.86486 17.7738C6.46955 14.9382 7.09969 11.5624 9.3502 9.3569C10.9706 7.73654 13.2211 7.01638 15.5166 7.28644C17.182 7.51149 18.7123 8.23165 19.9276 9.40191C22.8082 12.3276 22.7182 17.2337 19.7925 20.1143ZM21.5479 7.5565C20.5127 6.52126 19.2974 5.75609 17.9921 5.26098C18.7573 3.05549 21.4579 2.2453 21.4579 2.2453C21.4579 2.2453 15.2465 -0.995423 8.40498 0.30987C6.10947 0.669951 3.90397 2.06526 2.32862 3.91068C-1.13716 7.91658 -0.687057 13.9929 3.36385 17.4137C3.99399 17.9538 5.38931 18.764 5.38931 18.809C4.48911 21.1495 1.56345 21.7797 1.56345 21.7797C1.56345 21.7797 5.43432 24.2102 10.6105 24.8404C12.0058 25.0204 13.4461 25.0654 14.9314 24.8854C17.317 24.7053 19.7025 23.4001 21.5479 21.6447C25.4188 17.7738 25.4638 11.4724 21.5479 7.5565Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="promo__social-link"
+            href="#form_video_id"
+            onclick="document.location.hash='form_video_id';return false;"
+          >
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 31 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M27.8158 22.4329L30.0926 24.6438V24.7171H18.5439V24.6438L20.8619 22.4329C21.1091 22.2283 21.2274 21.9033 21.1709 21.5842V7.44971C21.1709 6.85247 21.1709 6.04568 21.274 5.35415L13.4855 25H13.3928L5.32621 6.92582C5.15108 6.47527 5.09957 6.44384 4.98624 6.13998V17.9904C4.88967 18.7835 5.02211 19.5881 5.36742 20.306L8.6126 24.6438V24.7171H0V24.6438L3.24518 20.2955C3.58794 19.5805 3.7203 18.78 3.62636 17.9904V4.89313C3.67912 4.24825 3.48747 3.60725 3.09065 3.10143L0.793266 0.0733445V0H9.03499L15.9374 15.308L22.0157 0H30.0823V0.0733445L27.8158 2.6404C27.5442 2.84235 27.4085 3.18332 27.4655 3.52054V21.5842C27.4055 21.9129 27.5431 22.2464 27.8158 22.4329Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="promo__social-link"
+            href="#form_video_id"
+            onclick="document.location.hash='form_video_id';return false;"
+          >
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 30 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M29.4304 12.1745C29.4304 10.3711 27.9753 8.90625 26.1859 8.90625C25.3338 8.90625 24.5669 9.23177 23.9835 9.77214C21.8598 8.28776 18.9954 7.3112 15.7967 7.12891L17.2322 2.36328L21.6304 3.24219C21.7811 4.72005 23.02 5.8724 24.5341 5.8724C24.5406 5.8724 24.5406 5.8724 24.5472 5.8724C24.5538 5.8724 24.5538 5.8724 24.5603 5.8724C26.1728 5.8724 27.4771 4.55729 27.4771 2.9362C27.4771 1.3151 26.1662 0 24.5538 0C24.5472 0 24.5472 0 24.5406 0H24.5341C23.4067 0 22.4366 0.638021 21.945 1.58203L16.0655 0.410156L14.0466 7.11589L13.8828 7.1224C10.5858 7.26562 7.62307 8.25521 5.44692 9.77214C4.87011 9.23177 4.09666 8.90625 3.24456 8.90625C1.45513 8.90625 0 10.3711 0 12.1745C0 13.4505 0.721012 14.5508 1.77631 15.0911C1.72388 15.4102 1.69766 15.7292 1.69766 16.0547C1.70421 20.9896 7.5313 25 14.7152 25C21.8991 25 27.7262 20.9896 27.7262 16.0482C27.7262 15.7227 27.7 15.4036 27.6541 15.0846C28.7094 14.5443 29.4304 13.444 29.4304 12.1745ZM2.24825 13.4831C1.81564 13.1901 1.53379 12.6953 1.53379 12.1289C1.53379 11.2305 2.26136 10.4948 3.15279 10.4948C3.51985 10.4948 3.86069 10.6185 4.13599 10.8268C3.25111 11.6016 2.59564 12.5 2.24825 13.4831ZM23.4526 2.9362C23.4526 2.33724 23.9376 1.84245 24.5341 1.84245C25.1306 1.84245 25.6156 2.33073 25.6156 2.9362C25.6156 3.53516 25.1306 4.02995 24.5341 4.02995C23.9376 4.02995 23.4526 3.54167 23.4526 2.9362ZM8.32442 14.6094C8.32442 13.4635 9.25518 12.5391 10.4088 12.5391C11.5624 12.5391 12.4932 13.4635 12.4932 14.6094C12.4932 15.7552 11.5624 16.6797 10.4088 16.6797C9.25518 16.6797 8.32442 15.7552 8.32442 14.6094ZM14.7152 21.875C11.5952 21.862 9.73367 20.0195 9.65501 19.9414L10.4809 19.1341C10.494 19.1471 12.0344 20.7096 14.7152 20.7227C17.3567 20.7096 18.9233 19.1471 18.943 19.1341L19.7689 19.9414C19.6902 20.0195 17.8352 21.862 14.7152 21.875ZM19.0609 16.6797C17.9073 16.6797 16.9766 15.7552 16.9766 14.6094C16.9766 13.4635 17.9073 12.5391 19.0609 12.5391C20.2146 12.5391 21.1453 13.4635 21.1453 14.6094C21.1453 15.7552 20.208 16.6797 19.0609 16.6797ZM27.1953 13.5091C26.8413 12.513 26.1728 11.5951 25.2748 10.8138C25.5501 10.599 25.8975 10.4753 26.2711 10.4753C27.1822 10.4753 27.9163 11.2174 27.9163 12.1354C27.9228 12.7083 27.6344 13.2096 27.1953 13.5091Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="promo__social-link"
+            href="#form_video_id"
+            onclick="document.location.hash='form_video_id';return false;"
+          >
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 34 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M33.1105 5.52053C33.1105 2.591 30.9557 0.234362 28.2931 0.234362C24.6865 0.0651005 21.0084 0 17.2521 0C17.0567 0 16.8614 0 16.6661 0C16.4708 0 16.2755 0 16.0802 0C12.3304 0 8.64576 0.0651005 5.03919 0.234362C2.38309 0.234362 0.228258 2.60402 0.228258 5.53355C0.065507 7.85113 -0.00610365 10.1687 0.000406409 12.4863C-0.00610365 14.8039 0.065507 17.1214 0.221748 19.4455C0.221748 22.3751 2.37658 24.7512 5.03268 24.7512C8.82153 24.927 12.708 25.0051 16.6596 24.9986C20.6177 25.0116 24.4912 24.9335 28.2866 24.7512C30.9492 24.7512 33.104 22.3751 33.104 19.4455C33.2603 17.1214 33.3319 14.8039 33.3254 12.4798C33.3384 10.1622 33.2668 7.84462 33.1105 5.52053ZM13.4762 18.8726V6.08039L22.9158 12.4733L13.4762 18.8726Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="promo__social-link"
+            href="#form_video_id"
+            onclick="document.location.hash='form_video_id';return false;"
+          >
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 26 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.405405 8.30116H5.59845V25H0.405405V8.30116ZM3.01158 0C4.67181 0 6.02316 1.35135 6.02316 3.01158C6.02316 4.67181 4.67181 6.02317 3.01158 6.02317C1.3417 6.02317 0 4.67181 0 3.01158C0 1.35135 1.3417 0 3.01158 0Z"
+              ></path>
+              <path
+                d="M8.86099 8.30116H13.832V10.5888H13.8996C14.5946 9.27606 16.2838 7.89575 18.8127 7.89575C24.0637 7.89575 25.0386 11.3514 25.0386 15.8494V25H19.8552V16.8822C19.8552 14.9421 19.8262 12.4517 17.1622 12.4517C14.4594 12.4517 14.054 14.5656 14.054 16.7375V25H8.87064L8.86099 8.30116Z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="promo__social-link"
+            href="#form_video_id"
+            onclick="document.location.hash='form_video_id';return false;"
+          >
+            <svg
+              width="20"
+              height="25"
+              viewBox="0 0 26 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.5856 0C5.63543 0 0 5.73691 0 12.8188C0 18.4831 3.60713 23.2825 8.60766 24.979C9.23694 25.0962 9.4673 24.7 9.4673 24.3595C9.4673 24.0526 9.45606 23.249 9.45044 22.1775C5.95007 22.9532 5.20842 20.4587 5.20842 20.4587C4.63532 18.9798 3.80939 18.5836 3.80939 18.5836C2.66882 17.7855 3.89367 17.8023 3.89367 17.8023C5.15785 17.8916 5.82085 19.1249 5.82085 19.1249C6.94456 21.0837 8.76498 20.5201 9.48416 20.1908C9.59653 19.3649 9.92241 18.7956 10.282 18.4775C7.48956 18.1539 4.55105 17.0545 4.55105 12.1435C4.55105 10.7428 5.03986 9.59872 5.84332 8.70582C5.71409 8.38214 5.28146 7.07627 5.96693 5.31278C5.96693 5.31278 7.02322 4.96678 9.42797 6.62423C10.4337 6.33962 11.5068 6.2001 12.58 6.19452C13.6475 6.2001 14.7263 6.33962 15.732 6.62423C18.1368 4.96678 19.1874 5.31278 19.1874 5.31278C19.8729 7.07627 19.4403 8.38214 19.311 8.70582C20.1145 9.6043 20.6033 10.7483 20.6033 12.1435C20.6033 17.0656 17.6592 18.1483 14.8555 18.4664C15.305 18.8626 15.7095 19.6439 15.7095 20.8382C15.7095 22.5514 15.6927 23.9354 15.6927 24.354C15.6927 24.6944 15.9174 25.0962 16.5579 24.9678C21.5697 23.2769 25.1712 18.4775 25.1712 12.8188C25.1712 5.73691 19.5358 0 12.5856 0Z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="section solution">
+        <h2 class="visually-hidden">Problem</h2>
+        <div class="solution__top wrapper" id="problem">
+          <p
+            class="solution__title aos-init"
+            data-aos="fade-right"
+            data-aos-offset="0"
+            data-aos-duration="1500"
+            data-aos-easing="ease-out"
+          >
+            Problem
+          </p>
+          <div class="solution__top-wrap">
+            <div class="solution__item">
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                class="aos-init"
+              >
+                <span>1</span>
+                <p>
+                  Poverty is a global issue, one which we aim to solve – forever. When you invest
+                  with
+                  <span data-content="currency" style="padding-right: 0 !important">
+                    <sp data-init-macros="currencySymbol">$</sp>
+                  </span>
+                  <span
+                    data-content="sum"
+                    data-format-value="1200-1400"
+                    style="padding-right: 0 !important"
+                    >250</span
+                  >, you’re directly helping us save people’s lives – and making money!
+                </p>
+              </div>
+              <div
+                class="triangle-item triangle-item--left aos-init aos-animate"
+                data-aos="fade-up"
+                data-aos-offset="0"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+              >
+                <div class="triangle-item__img">
+                  <img
+                    class="lozad"
+                    data-src="img/brand.png"
+                    alt="deloitte"
+                    src="images/brand.png"
+                    data-loaded="true"
+                  />
+                </div>
+                <a
+                  class="triangle-item__link"
+                  href=""
+                  onclick="document.location.hash='?utm_source=facebook.com&utm_medium=24-04-elon-musk-w#';return false;"
+                  target="_blank"
+                  >Delloite link</a
+                >
+              </div>
+            </div>
+            <div class="solution__item">
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="150"
+                class="aos-init"
+              >
+                <span>2 </span>
+                <p>
+                  Big corporations are the ones holding all the keys to those big paychecks. With
+                  Quantum Computing, that’s no longer true. Now YOU have the power to make a great
+                  income. The power that was once reserve for the richest among us, is now yours.
+                </p>
+              </div>
+              <div
+                class="triangle-item triangle-item--middle aos-init aos-animate"
+                data-aos="fade-up"
+                data-aos-offset="0"
+                data-aos-delay="400"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+              >
+                <div class="triangle-item__img">
+                  <img
+                    class="lozad"
+                    data-src="img/brand2.png"
+                    alt="Bond"
+                    src="images/brand2.png"
+                    data-loaded="true"
+                  />
+                </div>
+                <a
+                  class="triangle-item__link"
+                  href=""
+                  onclick="document.location.hash='?utm_source=facebook.com&utm_medium=24-04-elon-musk-w#';return false;"
+                  target="_blank"
+                  >Bond link</a
+                >
+              </div>
+            </div>
+            <div class="solution__item">
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="300"
+                class="aos-init"
+              >
+                <span>3 </span>
+                <p>
+                  QuantumAI is designed to make the world better. Elon developed this idea as a
+                  win-win. Have loans to pay off, or a mortgage to pay? Want to help people? Now you
+                  can do both.
+                </p>
+              </div>
+              <div
+                class="triangle-item triangle-item--right aos-init aos-animate"
+                data-aos="fade-up"
+                data-aos-offset="0"
+                data-aos-delay="600"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+              >
+                <div class="triangle-item__img">
+                  <img
+                    class="lozad"
+                    data-src="img/brand3.png"
+                    alt="Colloquy"
+                    src="images/brand3.png"
+                    data-loaded="true"
+                  />
+                </div>
+                <a
+                  class="triangle-item__link"
+                  href=""
+                  onclick="document.location.hash='?utm_source=facebook.com&utm_medium=24-04-elon-musk-w#';return false;"
+                  target="_blank"
+                  >Colloquy link</a
+                >
+              </div>
+            </div>
+            <div class="solution__item">
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="350"
+                class="aos-init"
+              >
+                <span>4</span>
+                <p>
+                  A country’s economy is so fragile. As you saw in 2008, it only takes a few people
+                  at the top to ruin it. We want to stop that from happening ever again.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="solution__bottom">
+          <div class="solution__triangle">
+            <div class="wrapper"></div>
+          </div>
+          <div class="solution__bottom-wrap wrapper" id="solution">
+            <p
+              class="solution__title solution__title--white aos-init"
+              data-aos="fade-right"
+              data-aos-offset="0"
+              data-aos-duration="1500"
+              data-aos-easing="ease-out"
+            >
+              <strong style="color: #ffc600"></strong>Solution
+            </p>
+            <div
+              class="solution__decor aos-init"
+              data-aos-offset="200"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+            >
+              <p>
+                By using the power of Quantum Computing, you can help us take the exclusivity of the
+                top 1%, and solve 4 major problems: Develop a stable, wealthy economy for all, cure
+                poverty, level the playing ground for all (not just the richest), and help you make
+                your financial dreams come true!
+              </p>
+              <span class="solution__decor-triangle"></span>
+              <span
+                class="solution__decor-triangle solution__decor-triangle--always-visible"
+              ></span>
+              <span class="solution__decor-triangle"></span>
+            </div>
+          </div>
+          <div class="solution__steps">
+            <!-- <h2 style="text-align: center;color: #ffc600;font-weight:600;">How it works. </h2> -->
+            <!--  <div class="wrapper solution__top-wrap">
+
+                	    	<div class="solution__item">
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-duration="1200" data-aos-delay="350" class="aos-init">
+                            <p><span style="color: #f9ff00;text-align: center!important;">Step1</span></p>
+                            <p>REGISTER ON THE SITE</p>
+                              <p>Once your registration is accepted, You have the option to open up one account only. We will ensure that the relevant staff calls you (from an international toll-free number) to guide you through this Investment.</p>
+                        </div>
+                    </div>
+
+                          <div class="solution__item">
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-duration="1200" data-aos-delay="350" class="aos-init">
+                            <p><span style="color: #f9ff00">Step2</span></p>
+                            <p>FUND YOUR ACCOUNT</p>
+                            <p>Once registered, click the “Make Deposit” <span data-init-macros="currencySymbol">$</span>250, button to deposit some money into your account. A help team will guide you how to run the software on your account and generate daily profits. The guaranteed profit is <span data-init-macros="currencySymbol">$</span>5,000 per user.</p>
+                        </div>
+                    </div>
+
+                     <div class="solution__item">
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-duration="1200" data-aos-delay="350" class="aos-init">
+                            <span style="color: #f9ff00">Step3</span>
+                            <p>FINISH</p>
+                            <p>Check your account every day to see how much profit you have made.</p>
+                        </div>
+                    </div>
+
+                	    </div> -->
+            <div class="wrapper solution__steps-wrap">
+              <h2>So, what do you need to do to start?</h2>
+              <div
+                class="solution__step aos-init"
+                data-aos="slide-left"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+              >
+                <span class="solution__step-num">1</span>
+                <span class="solution__step-title">Deposit</span>
+                <p class="solution__step-text">
+                  Deposit <span data-init-macros="currencySymbol">$</span> 250
+                </p>
+              </div>
+              <div
+                class="solution__step aos-init"
+                data-aos="slide-right"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="250"
+              >
+                <span class="solution__step-num solution__step-num--middle">2</span>
+                <span class="solution__step-title">Pick</span>
+                <p class="solution__step-text" style="max-width: 100%">
+                  Pick the trades QuantumAI recommends (with the power of Quantum Computing!)
+                </p>
+              </div>
+              <div
+                class="solution__step aos-init"
+                data-aos="slide-left"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="500"
+              >
+                <span class="solution__step-num">3</span>
+                <span class="solution__step-title">Withdraw</span>
+                <p class="solution__step-text">Withdraw your profits to any payment method</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section technology" id="technology">
+        <div class="wrapper technology__header">
+          <h2
+            data-aos="fade-right"
+            data-aos-offset="0"
+            data-aos-duration="1500"
+            data-aos-easing="ease-out"
+            class="aos-init"
+          >
+            What Makes Quantum Computing So Good For Investing
+          </h2>
+
+          <p>
+            This is the world’s first quantum computing machine; unlike your home PC, this computer
+            is smart – it makes thousands of simultaneous ‘decisions’ at once. Your brain thinks one
+            thought at a time, in a sequence. Imagine if you could have thousands of thoughts at
+            once, each as clear as the other. That’s quantum computing.
+          </p>
+
+          <p>
+            Using that power, our quantum computing machine will help you make smarter trades and
+            make more money than you thought possible. Even better, it’s designed so that you can
+            make money and help others while you profit!
+          </p>
+
+          <p>
+            It finds trades by analysing differentials between stock prices every nano-second that
+            stock markets are live (and makes predictions even when the markets are closed, so
+            you’ll know what’s likely to happen when they re-open). Your current computer (and
+            everyone else’s) can’t match the decision speeds of this new system.
+          </p>
+
+          <p>
+            Sign up, and be one of the exclusive few using this technology (before everyone else
+            gets wind of it!)
+          </p>
+        </div>
+      </section>
+
+      <section class="section advisors" id="advisors">
+        <div class="wrapper">
+          <h2
+            class="text-white aos-init"
+            data-aos="fade-right"
+            data-aos-offset="0"
+            data-aos-duration="1500"
+            data-aos-easing="ease-out"
+          >
+            Advisors
+          </h2>
+          <div class="swiper-container js-advisors-slider">
+            <div class="advisors__wrap swiper-wrapper">
+              <div class="advisor-item swiper-slide">
+                <div
+                  class="advisor-item__wrap aos-init"
+                  data-aos="fade-right"
+                  data-aos-offset="0"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-out"
+                >
+                  <div class="advisor-item__top">
+                    <div class="advisor-item__img">
+                      <img
+                        class="lozad"
+                        data-src="img/team/c2.jpg"
+                        alt="Vladimir Tikhomirov"
+                        src="images/c2.jpg"
+                        data-loaded="true"
+                      />
+                    </div>
+                    <div class="advisor-item__info">
+                      <p class="advisor-item__name">Jeff Bezos:</p>
+                      <p class="advisor-item__position">
+                        Technology entrepreneur, investor, and philanthropist
+                      </p>
+                      <a href="#" onclick=";document.location.hash='';return false;">
+                        <svg width="26" height="26" viewBox="0 1 24 23">
+                          <ellipse cx="2.5" cy="3.5" rx="2.48" ry="2.5" />
+                          <path
+                            d="M12.982,10.155V8H8.014v16h4.969v-8.399c0-4.67,6.029-5.052,6.029,0V24H24V13.869C24,5.989,15.078,6.276,12.982,10.155z"
+                          ></path>
+                          <rect y="8" width="5" height="16" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="advisor-item__bottom">
+                    <p>
+                      Quantum computing is the future. I’m not exaggerating when I say it will
+                      change everything. This is the early days of quantum computing; not many
+                      people know about it, which means very few are using it. The few that are, are
+                      making incredibly wise (and profitable) decisions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="advisor-item swiper-slide">
+                <div
+                  class="advisor-item__wrap aos-init"
+                  data-aos="fade-left"
+                  data-aos-offset="0"
+                  data-aos-duration="1000"
+                  data-aos-delay="250"
+                  data-aos-easing="ease-out"
+                >
+                  <div class="advisor-item__top">
+                    <div class="advisor-item__img">
+                      <img
+                        class="lozad"
+                        data-src="img/team/c1.jpg"
+                        alt="Tom Kojima"
+                        src="images/c1.jpg"
+                        data-loaded="true"
+                      />
+                    </div>
+                    <div class="advisor-item__info">
+                      <p class="advisor-item__name">Bill Gates:</p>
+                      <p class="advisor-item__position">
+                        Business magnate, investor, author, philanthropist, and humanitarian
+                      </p>
+                      <a href="#" onclick=";document.location.hash='';return false;">
+                        <svg width="26" height="26" viewBox="0 1 24 23">
+                          <ellipse cx="2.5" cy="3.5" rx="2.48" ry="2.5" />
+                          <path
+                            d="M12.982,10.155V8H8.014v16h4.969v-8.399c0-4.67,6.029-5.052,6.029,0V24H24V13.869C24,5.989,15.078,6.276,12.982,10.155z"
+                          ></path>
+                          <rect y="8" width="5" height="16" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="advisor-item__bottom">
+                    <p>
+                      I know for a fact Elon has spent 3 billion of his own money to fund this
+                      program. Hats off to him for that – that’s 3 billion of his own money to fund
+                      a better future for everyone, and to help others make profits that’ll help him
+                      do so! It’s a win-win, and I’m very excited to see where it goes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination advisors__pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section partners">
+        <div class="wrapper wrapper--mobile">
+          <h2>Partners</h2>
+          <div class="swiper-container js-partner-slider swiper-container-horizontal">
+            <div
+              class="partners__wrap swiper-wrapper"
+              style="transform: translate3d(0px, 0px, 0px)"
+            >
+              <div class="partner-item swiper-slide swiper-slide-active">
+                <div class="partner-item__logo">
+                  <img
+                    class="lozad"
+                    data-src="img/ll1.png"
+                    alt="#"
+                    src="images/ll1.png"
+                    data-loaded="true"
+                  />
+                </div>
+                <div class="partner-item__hover" style="display: none">
+                  <p class="partner-item__title">MY WISH</p>
+                  <p class="partner-item__descr">
+                    Decentralized full cycle platform: Smart contracts creation, Audit, Deployment,
+                    Systematic calling on schedule, Execution.
+                  </p>
+                </div>
+              </div>
+              <div class="partner-item swiper-slide swiper-slide-next">
+                <div class="partner-item__logo">
+                  <img
+                    class="lozad"
+                    data-src="img/ll2.png"
+                    alt="#"
+                    src="images/ll2.png"
+                    data-loaded="true"
+                  />
+                </div>
+                <div class="partner-item__hover" style="display: none">
+                  <p class="partner-item__title">Teachmeplease</p>
+                  <p class="partner-item__descr">
+                    a platform created for those who want to learn and those who can teach. A
+                    database of learning institutions, online and offline schools, as well as
+                    different educational programmes.
+                  </p>
+                </div>
+              </div>
+              <div class="partner-item swiper-slide">
+                <div class="partner-item__logo">
+                  <img
+                    class="lozad"
+                    data-src="img/ll3.png"
+                    alt="#"
+                    src="images/ll3.png"
+                    data-loaded="true"
+                  />
+                </div>
+                <div class="partner-item__hover" style="display: none">
+                  <p class="partner-item__title">BestRate</p>
+                  <p class="partner-item__descr">
+                    is an aggregator of cryptocurrency exchanges that offers the best exchange rates
+                    for its users.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="wrapper">
+        <div class="container">
+          <section class="footer__content">
+            <div class="formhere">
+              <div class="whitelisting__heading">
+                <div id="form-element-2" class="theme-undefined feature-tooltips form-div">
+                  <div class="form-container theme-default">
+                    <div class="logos-container"></div>
+                    <h2>SIGN UP NOW</h2>
+                    <div id="form-element-2">
+                      <div class="form-container theme-default">
+                        <div class="hero-form form">
+                          <div class="preloader"></div>
+                          <form class="my-form" method="POST" id="leadformModal">
+                            <div class="preloader"></div>
+
+                            <div class="input-wrap">
+                              <input
+                                class="pl-0 p-2 border-b border-primary sm:bg-transparent focus:outline-none"
+                                name="first_name"
+                                id="first_name"
+                                type="text"
+                                placeholder="Name *"
+                                required
+                              />
+                            </div>
+                            <div class="input-wrap">
+                              <input
+                                class="pl-0 p-2 border-b border-primary sm:bg-transparent focus:outline-none"
+                                name="last_name"
+                                id="last_name"
+                                type="text"
+                                placeholder="Last name *"
+                                required
+                              />
+                            </div>
+                            <div class="input-wrap">
+                              <input
+                                class="pl-0 p-2 border-b border-primary sm:bg-transparent focus:outline-none"
+                                name="email"
+                                id="email"
+                                type="email"
+                                placeholder="Email"
+                                required
+                              />
+                            </div>
+                            <div class="row">
+                              <div
+                                style="justify-content: center; align-items: center"
+                                class="border-b border-primary"
+                              >
+                                <input
+                                  required
+                                  id="phoneModal"
+                                  name="phoneModal"
+                                  class="form__input form-control form_field-input phoneInp"
+                                  type="tel"
+                                />
+                                <p class="phone-errors"></p>
+                              </div>
+                            </div>
+
+                            <div class="flex mb-4 justify-center" style="margin-top: 13px">
+                              <div class="input-wrap"><button type="submit">Register</button></div>
+                            </div>
+                          </form>
+                          <p>
+                            <span style="color: red">VERY IMPORTANT:</span>
+                            <span style="text-transform: uppercase; color: white"
+                              >Provide your valid phone number and wait for a manager to call within
+                              5-10 minutes to confirm your registration. If it is not convenient for
+                              you to talk at this time, ask the manager to call back at a time
+                              convenient for you. Without a manager's confirmation your account will
+                              be inactive.</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__socials">
+              <div class="socials__heading">Follow our journey</div>
+              <div class="socials__list">
+                <a class="socials__link" id="scroll-link5" href="#block">
+                  <span class="socials__icon icon--medium"></span>
+                </a>
+                <a class="socials__link" id="scroll-link6" href="#block">
+                  <span class="socials__icon icon--facebook"></span>
+                </a>
+                <a class="socials__link" id="scroll-link7" href="#block">
+                  <span class="socials__icon icon--linkedin"></span>
+                </a>
+                <a class="socials__link" id="scroll-link8" href="#block">
+                  <span class="socials__icon icon--twitter"></span>
+                </a>
+                <a class="socials__link" id="scroll-link9" href="#block">
+                  <span class="socials__icon icon--reddit"></span>
+                </a>
+                <a class="socials__link" id="scroll-link10" href="#block">
+                  <span class="socials__icon icon--telegram"></span>
+                </a>
+                <a class="socials__link" id="scroll-link11" href="#block">
+                  <span class="socials__icon icon--bitcoin"></span>
+                </a>
+                <a class="socials__link" id="scroll-link12" href="#block">
+                  <span class="socials__icon icon--youtube"></span>
+                </a>
+              </div>
+            </div>
+          </section>
+          <div class="footer__bottom">
+            <div data-intgrtn-agreements data-intgrtn-type="4" class="finfo">
+              <p>
+                REGULATION & HIGH RISK INVESTMENT WARNING: Trading Forex, CFDs and Cryptocurrencies
+                is highly speculative, carries a level of risk and may not be suitable for all
+                investors. You may lose some or all of your invested capital, therefore you should
+                not speculate with capital that you cannot afford to lose. Please click here to read
+                a full risk warning. Quantum AI is a technology, marketing and advertising service.
+                Quantum AI does not gain or lose profits based on your trading results and operates
+                as a technology, marketing and advertising service. Quantum AI is not a financial
+                services firm and does not operate as a financial services firm and is only used as
+                a marketing tool by third party advertisers and brokers to attract customers. Its
+                your obligation to check and decide weather the broker you were connected to applies
+                to all local rules and regulations and is regulated in your country jurisdiction and
+                is allowed to receive customers from your location your are in, before you fund your
+                account with the broker and start trading with it. please report Quantum AI (by
+                clicking report abuse) if you find that the broker assigned to you is not regulated
+                in your jurisdiction so we can cancel your account with Quantum AI.
+              </p>
+              <p>
+                We are required to tell potential investors that our software's past performance
+                does not necessarily predict future results, therefore you should not speculate with
+                capital that you cannot afford to lose.
+              </p>
+              <p>
+                USA REGULATION NOTICE: Option trading is not regulated within the United States.
+                Quantum AI is not supervised or regulated by any financial agencies nor US agencies.
+                Any unregulated trading activity by U.S. residents is considered unlawful. Quantum
+                AI does not accept customers located within the United States or holding an American
+                citizenship.
+              </p>
+              <p>
+                SITE RISK DISCLOSURE: Quantum AI does not accept any liability for loss or damage as
+                a result of reliance on the information contained within this website; this includes
+                education material, price quotes and charts, and analysis. Please be aware of the
+                risks associated with trading the financial markets; never invest more money than
+                you can risk losing. The risks involved in trading Forex, CFDs and Cryptocurrencies
+                may not be suitable for all investors. Quantum AI doesn't retain responsibility for
+                any trading losses you might face as a result of using the data hosted on this site.
+              </p>
+              <p>
+                LEGAL RESTRICTIONS: without limiting the undermentioned provisions, you understand
+                that laws regarding financial contracts vary throughout the world, and it is your
+                responsibility to make sure you properly comply with any law, regulation or
+                guideline in your country of residence regarding the use of the Site. To avoid any
+                doubt, the ability to access our Site does not necessarily mean that our Services
+                and/or your activities through the Site are legal under the laws, regulations or
+                directives relevant to your country of residence.
+              </p>
+              <p>
+                Please note that Quantum AI receives advertising fees for directing users to open an
+                account with the brokers/advertisers and/or for driving traffic to the advertiser
+                website.
+              </p>
+
+              <br />
+              <p>© 2023 All Rights Reserved - Quantum AI</p>
+            </div>
+            <div class="bottom__col"></div>
+            <div class="bottom__col">
+              <p>
+                <a id="scroll-link" href="#block" class="bottom__link">Website Agreement</a>
+                |
+                <a id="scroll-link" href="#block" class="bottom__link">Risk Disclaimer</a> |
+                <a id="scroll-link2" href="#block" class="bottom__link">Privacy Policy</a> |
+                <a id="scroll-link3" href="#block" class="bottom__link">Report Abuse</a> |
+                <a id="scroll-link4" href="#block" class="bottom__link">Contact Us</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <div class="modal-form" id="modalFailure">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            You have already registered for this number. If you need a new account, please register
+            for a different mobile number.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalFailureEmail">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            You have already registered with this email. If you need a new account, please register
+            with a different email.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalInvalid">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            You have entered an invalid email. Sign up for a different email.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <style type="text/css">
+      .iti input {
+        padding-left: 85px !important;
+      }
+
+      .swiper-wrapper {
+        height: auto !important;
+      }
+
+      .footer__bottom p,
+      .finfo {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: normal;
+        color: #bacedb;
+        text-align: center;
+      }
+
+      .footer__bottom {
+        display: block;
+      }
+
+      .footer__bottom a {
+        color: #fff;
+      }
+
+      .header__logo::after {
+        position: absolute;
+        content: '';
+        top: 5px;
+        right: 2.5rem;
+        width: 2px;
+        height: 80%;
+        background: #ffc600;
+      }
+
+      .intgrtn-input {
+        height: 45px;
+        border-radius: 8px;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #000;
+      }
+
+      button.intgrtn-btn-submit {
+        display: block !important;
+        text-transform: uppercase !important;
+        text-align: center;
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        border-radius: 5px;
+        color: #fff !important;
+        width: 100% !important;
+        height: 40px !important;
+        background: #41ca04 !important;
+        border-color: #266f05 !important;
+        text-shadow: 0 0 6px black;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .intgrtn-input-holder-first-name {
+          width: 47%;
+          float: left;
+          margin-right: 6%;
+        }
+        section promo promo-main .intgrtn-input-holder-last-name {
+          width: 47%;
+          float: left;
+        }
+      }
+
+      .title-policy {
+        color: #000;
+        font-size: 30px;
+        line-height: 34px;
+        text-align: center;
+      }
+
+      .partner-item {
+        display: block;
+      }
+
+      .form-div {
+        /*margin-right: auto;*/
+        /*margin-left: auto;*/
+      }
+
+      .promo__footer {
+        z-index: 0;
+      }
+
+      .technology__header p {
+        margin: 0 auto;
+        padding-bottom: 1rem;
+      }
+
+      /*form { display:block;width:300px;max-width:100%;margin:0 auto; }*/
+
+      label.control-label,
+      div.checkbox,
+      #form > div:nth-child(11) > div:nth-child(1) {
+        display: none;
+      }
+
+      .form-group {
+        margin-bottom: 10px;
+      }
+
+      .form-control {
+        height: 45px;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #000;
+        -webkit-appearance: none;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        padding: 5px;
+        margin: 0;
+        background-color: #fff;
+        display: block;
+        width: 100%;
+      }
+
+      #form > button {
+        min-width: 88px;
+        padding: 8px 16px;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 0;
+        border-radius: 2px;
+        transition: all 0.2s linear;
+        display: block !important;
+        text-transform: uppercase !important;
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        color: #fff !important;
+        width: 100% !important;
+        height: 40px !important;
+        background: #41ca04 !important;
+        border-color: #266f05 !important;
+        text-shadow: 0 0 6px black;
+      }
+
+      .video_on_volume {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .video_on_volume img {
+        cursor: pointer;
+      }
+
+      .video_tag {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+
+    <script>
+      document.querySelector('#video_on_volume img').addEventListener('click', (e) => {
+        const video = document.querySelector('#video_tag video');
+        console.log(video);
+        video.muted = !video.muted;
+        document.querySelector('#video_on_volume').remove();
+      });
+    </script>
+
+    <!--SCRIPTS IN FOOTER -->
+    <link rel="stylesheet" href="css/styleform.css" type="text/css" media="all" />
+
+    <!--END IN FOOTER -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/utm.js"></script>
+  </body>
+</html>

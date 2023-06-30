@@ -1,0 +1,5 @@
+html{background:#dedfdf url(../images/kristall.jpg) 0 0 repeat fixed;}
+
+
+.main{min-width:990px;overflow:hidden;position:relative;}
+.main>.in{padding:40px 0;width:960px;margin:0 auto;}
