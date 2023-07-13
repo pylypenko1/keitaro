@@ -190,11 +190,11 @@ $(window).on('load', function () {
 });
 
 $.validator.addMethod(
-  'alphanumeric',
+  "alphanumeric",
   function (value, element) {
-    return this.optional(element) || /^[a-zA-Zа-яА-ЯЁё\s]+$/.test(value); //RU
+    return this.optional(element) || /^[а-яА-ЯёЁ\s]+$/.test(value); //RU
   },
-  'Имя может содержать только буквы!',
+  "Имя может содержать только русские буквы!"
 );
 
 $.validator.addMethod(
