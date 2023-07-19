@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sinooil Invest</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link href="fonts/Golos-Text_VF.woff2" type="font/woff2" crossorigin="anonymous" />
+    <style type="text/css">
+      body {
+        font-family: 'Golos', sans-serif;
+      }
+
+      .dateBox {
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .topBarCTA {
+        padding: 3px 5px 3px 5px;
+        border-radius: 15px;
+      }
+
+      .hg {
+        filter: saturate(170%);
+        position: relative;
+        height: 430px !important;
+      }
+
+      .hg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black; /* Цвет затемнения */
+        opacity: 0.7; /* Значение непрозрачности (меньше = более прозрачно) */
+        filter: saturate(130%);
+      }
+      .video-text {
+        color: #fff !important;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/timer.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- JS adapter -->
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!'{subid}'.match('{')) {
+          return '{subid}';
+        }
+        var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (clientSubid && !clientSubid.match('>')) {
+          return clientSubid;
+        }
+        if (params.get('_subid')) {
+          return params.get('_subid');
+        }
+        if (params.get('subid')) {
+          return params.get('subid');
+        }
+        if (getCookie('subid')) {
+          return getCookie('subid');
+        }
+      }
+
+      if (typeof URLSearchParams === 'function') {
+        document.addEventListener('DOMContentLoaded', function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+
+          setCookie('subid', subid);
+
+          // Adds params as hidden inputs to the forms
+          document.querySelectorAll('form').forEach(function (form) {
+            params.forEach(function (v, k) {
+              var input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = k;
+              input.value = v;
+
+              form.append(input);
+            });
+          });
+        });
+      }
+    </script>
+    <!-- End JS adapter -->
+  </head>
+  <body class="antialiased overflow-x-hidden">
+    <div class="h-[95px] w-full"></div>
+
+    <nav x-data="{ open: false, menu: false, timeout: null, opacity: false, langm: false }">
+      <menu
+        @scroll.window="opacity = (window.pageYOffset > 20) ? true : false"
+        :class="{ 'bg-[rgba(43,43,43,0.3)] transition duration-100' : opacity }"
+        class="w-full fixed top-0 bg-[rgba(43,43,43,0.75)] backdrop-blur-xl h-[95px] pt-10 z-[80] mx-auto transition ease-in-out duration-700"
+      >
+        <div class="wrapper">
+          <div
+            class="relative mr-auto"
+            style="display: flex; justify-content: space-around; align-items: center"
+          >
+            <a href=" "><img src="images/logo-2x.png" class="w-[147px] h-[20px]" alt /></a>
+            <div class="topBarCTA bg-gradient-to-r from-[#FF554A] to-[#F9B92D]">
+              <div class="dateBox">
+                Осталось мест:
+                <span class="countdownTime" id="register-count2">15</span>
+                <div class="count-wrap">
+                  <i class="fa fa-arrow-left"></i>
+                  <span><span class="fa fa-exclamation-triangle"></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr
+            :class="{ 'opacity-0' : opacity }"
+            class="absolute left-0 w-full top-[95px] h-[4px] z-[60] border-0 bg-gradient-to-r from-[#FF554A] to-[#F9B92D] transition ease-in-out duration-700"
+          />
+        </div>
+      </menu>
+    </nav>
+
+    <main class>
+      <section
+        class="bg-[url('/img/bg_main_kaindy_s.jpg')] bg-white sm:min-h-[800px] select-none bg-fixed relative z-10 mt-[-99px] pt-[99px] w-full h-screen bg-cover bg-center overflow-hidden"
+      >
+        <div
+          class="bg-fixed bg-[url('/img/bg_main_kaindy.jpg')] bg-cover bg-center backdrop-blur-2xl w-full h-full absolute"
+        ></div>
+        <div class="container font-bold mx-auto">
+          <div
+            class="text-center font-bold hero-title text-[3rem] 3sm:text-[4rem] sm:text-[5rem] lg:text-[6rem] xl:text-[7rem] leading-[60px] 3sm:leading-[80px] sm:leading-[90px] lg:leading-[100px] xl:leading-[135px] mx-auto relative z-40 grid place-items-center h-screen mt-[-99px]"
+          >
+            <div class="pt-8">
+              <div class="hero-delay" style="transform: translateY(100px); animation-delay: 0.7s">
+                <div
+                  class="hero-title-1 mt-[-8px]"
+                  style="
+                    --start-color: #007cf0;
+                    --end-color: #00dfd8;
+                    animation-delay: 1s;
+                    font-size: 90px;
+                  "
+                >
+                  Sinooil
+                </div>
+              </div>
+              <div
+                class="hero-delay"
+                style="transform: translateY(75px); animation-delay: 0.9s; opacity: 0"
+              >
+                <div
+                  class="hero-title-1 hero-delay-2"
+                  style="
+                    --start-color: #00ff0d;
+                    --end-color: #008d0c;
+                    animation-delay: 1s;
+                    font-size: 20px;
+                    line-height: 1;
+                    margin-top: 15px;
+                  "
+                >
+                  Зарабатывай от $3500/месяц
+                </div>
+              </div>
+              <div
+                class="hero-delay"
+                style="transform: translateY(50px); animation-delay: 1.1s; opacity: 0"
+              >
+                <div
+                  class="hero-title-1 hero-delay-3"
+                  style="
+                    --start-color: #ff4d4d;
+                    --end-color: #f9cb28;
+                    animation-delay: 1.5s;
+                    font-size: 15px;
+                    margin-top: -15px;
+                  "
+                >
+                  на своих инвестициях в заправки
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full text-center">
+          <img
+            src="fonts/chevron-double-down.svg"
+            class="drop-shadow-xl mx-auto inset-x-2/4 mx-[-20px] absolute bottom-8 animate-bounce"
+            alt
+          />
+        </div>
+        <div
+          class="first-road hidden lg:block bg-gradient-to-r z-10 absolute overflow-hidden right-[-73px] from-[#8026C6] to-[#F50385] z-40"
+        >
+          <div class="appearance">
+            <img
+              src="fonts/white-stroke.svg"
+              class="road-stroke absolute left-52 top-[-24px] drop-shadow-xl z-0"
+              alt
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Video-->
+      <div x-data="{dropdownMenu: false, mapbg: 2101, cityname: 'алматы'}" class="mapbganim">
+        <section
+          :style="'background-image:url(/img/bg_map'+mapbg+'.jpg)'"
+          class="relative hg bg-no-repeat lg:h-auto bg-[top_right_-200px] md:bg-left bg-cover xl:bg-contain xl:min-h-[960px] overflow-hidden transition ease-in-out duration-300"
+        >
+          <div
+            class="w-[575px] h-[270px] bg-gradient-to-r from-[#F9B92D] to-[#FF554A] absolute rotate-[10deg] opacity-60 bottom-2 left-[-25%] lg:left-[30%] z-10"
+          ></div>
+          <div
+            class="z-40 bg-[top_left_-31rem] md:bg-right overflow-hidden z-20 absolute top-0 right-0 h-full lg:h-screen min-h-[930px] w-1/2 xl:w-[50%]"
+          >
+            <div class="rotate-[10deg] opacity-30">
+              <img
+                src="fonts/white-stroke.svg"
+                class="road-stroke2 absolute right-[80px] drop-shadow-xl"
+                alt
+              />
+            </div>
+          </div>
+          <div class="md:container pt-228 3sm:pt-32 z-50 relative lg:flex">
+            <div class="container w-full lg:w-2/6 mb-16 3sm:mb-48 lg:mb-0">
+              <span
+                class="video-text z-50 font-bold leading-none text-[35px] 3sm:text-[48px] 2sm:text-[54px] md:text-[75px] bg-clip-text text-transparent bg-gradient-to-r from-[#0055de] to-[#8cd7ff]"
+                style="font-size: 25px"
+              >
+                Посмотрите видео, чтобы узнать больше про нашу компанию
+              </span>
+
+              <style>
+                .video-text {
+                  text-align: center !important;
+                  margin-bottom: 25px;
+                  display: block;
+                }
+                .from-\[\#F9B92D\] {
+                  --tw-gradient-from: #f9b92d;
+                  --tw-gradient-to: rgb(249 185 45 / 0);
+                  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+                }
+
+                .bg-gradient-to-r {
+                  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+                }
+                .to-\[\#FF554A\] {
+                  --tw-gradient-to: #ff554a;
+                }
+                .video {
+                  border-radius: 7px;
+                }
+              </style>
+
+              <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 hero-video">
+                <div class="videoOuterWrap">
+                  <div class="video-container" id="block">
+                    <video
+                      class="video"  style="
+                      border: 4px solid; /* Задаем толщину и стиль границы */
+                      border-image: linear-gradient(to right, #f9b92d, #f9b92d) 1;
+                    "
+                      controls
+                      poster="video/poster.png"
+                    >
+                      <source src="video/video.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+
+                  <style>
+                    .video-container {
+                      position: relative;
+                      width: 100%;
+                      padding-bottom: 56.25%;
+                      /* 16:9 соотношение сторон */
+                      overflow: hidden;
+                    }
+
+                    .video-container video {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      /* border-radius: 20px; */
+                    }
+                  </style>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Form -->
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 hero-form">
+        <div
+          class="contactForm top_form"
+          style="
+            border-top: 4px solid;
+            border-bottom: 3px solid;
+            border-image: linear-gradient(to right, #f9b92d, #ff554a) 1;
+          "
+        >
+          <form method="POST" id="leadform" class="register-form contact_form content_inner flex">
+            <h3 class="form-title" style="text-align: center">
+              Зарегистрируйтесь и наш финансовый эксперт свяжется с Вами в ближайшее время!
+            </h3>
+            <div class="input_group input_name shadow">
+              <input
+                type="text"
+                placeholder="Имя"
+                class="form-control required form-input"
+                name="first_name"
+                id="first_name"
+                required
+                autocomplete="off"
+              />
+            </div>
+            <div class="input_group input_last_name shadow">
+              <input
+                type="text"
+                placeholder="Фамилия"
+                class="form-control required form-input"
+                name="last_name"
+                id="last_name"
+                required
+                autocomplete="off"
+              />
+            </div>
+            <div class="input_group input_email shadow">
+              <input
+                type="email"
+                placeholder="Email"
+                class="form-control required"
+                name="email"
+                id="email"
+                required
+                autocomplete="off"
+              />
+            </div>
+            <div class="input_group intl-tel-input shadow">
+              <input
+                type="tel"
+                id="phone1"
+                name="phone1"
+                placeholder=""
+                autocomplete="off"
+                required=""
+                class="form-control"
+              />
+            </div>
+            <div class="input_group">
+              <button type="submit" class="btn btn-submit btn-get-robot text-uppercase redBtn">
+                <span>Оставить заявку</span>
+              </button>
+            </div>
+          </form>
+
+          <style>
+            #leadform h3,
+            .form-title {
+              font-size: 18px;
+              margin: 15px 0;
+              color: #000;
+              line-height: 19px;
+              letter-spacing: 0.5px;
+            }
+
+            input.form-control {
+              width: 100%;
+              margin-bottom: 5px;
+              padding: 10px;
+              border-radius: 6px;
+              border: 1px solid gray;
+            }
+
+            button.redBtn {
+              text-align: center;
+              width: 100%;
+              display: block;
+              background: #00afff;
+              color: #000;
+              border: 0;
+              padding: 15px;
+              border-radius: 7px;
+              font-weight: 700;
+              cursor: pointer;
+              text-transform: uppercase;
+            }
+
+            #heroSection {
+              border-radius: 0% 100% 40% 40%/0% 0% 10% 10%;
+            }
+
+            .iti__selected-flag {
+              z-index: 999;
+            }
+          </style>
+        </div>
+      </div>
+
+      <div class="row col1x" style="background-image: url(tg_image_3845548624.jpeg)">
+        <div class="col c1 tcenter" style="margin: 0 5% 0 5%">
+          <img class="bw" src="./images/logos.png" alt="logo" />
+        </div>
+      </div>
+      <section
+        id="cryptoMedia"
+        style="
+          padding-bottom: 50px;
+          padding-top: 25px;
+          background-image: url(tg_image_3845548624.jpeg);
+        "
+      >
+        <div class="container">
+          <h1
+            class="sectionHeadline text-center z-50 font-bold leading-none text-[35px] 3sm:text-[48px] 2sm:text-[54px] md:text-[75px] bg-clip-text text-transparent bg-gradient-to-r from-[#0055de] to-[#8cd7ff]"
+            style="margin: 10px auto 20px"
+          >
+            Лицензия
+          </h1>
+
+          <div class="fond__inner">
+            <div class="fond__body">
+              <div class="fond__left">
+                <img src="images/license.png" alt="License" />
+                <!-- <a href="images/licence.jpg" class="fancybox btn btn-submit btn-get-robot zoomBtn">
+                     <span>Увеличить фото</span>
+                  </a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ОТЗЫВЫ -->
+      <section
+        class="bg-[url('/img/bg_station_night1.jpg')] bg-[top_left_-5rem] bg-cover xl:bg-contain overflow-hidden relative bg-black bg-no-repeat swiper-overflow-container sm:min-h-[800px]"
+      >
+        <div
+          class="hidden xl:block absolute w-[50%] h-[623px] z-50 top-[177px] left-[50%] ml-[592px] xl:ml-[591px] bg-gradient-to-b from-[rgba(200,0,0,0.3)] to-[rgba(200,0,0,0.1)]"
+        ></div>
+        <div
+          class="absolute z-20 top-[160px] md:top-[200px] right-0 w-[60%] sm:w-[52%] md:w-[60%] h-[623px] lg:hidden backdrop-blur bg-gradient-to-b from-[rgba(200,0,0,0.65)] md:from-[rgba(200,0,0,1)] to-[rgba(200,0,0,0.2)]"
+        ></div>
+        <div class="container mx-auto h-screen select-none">
+          <div class="w-full pt-[50px] 3sm:pt-[62px] pb-1 3sm:pb-10">
+            <span
+              class="z-50 font-bold leading-none text-[35px] 3sm:text-[48px] 2sm:text-[54px] md:text-[75px] bg-clip-text text-transparent bg-gradient-to-r from-[#0055de] to-[#8cd7ff]"
+              style="font-size: 35px"
+            >
+              Отзывы пользователей
+            </span>
+          </div>
+          <div class="flex relative z-40">
+            <div
+              class="hidden lg:block w-1/2 lg:w-1/6 h-[623px] backdrop-blur-sm lg:bg-gradient-to-b lg:from-[rgba(200,0,0,0.4)] lg:to-[rgba(200,0,0,0)]"
+            ></div>
+            <div
+              class="w-full lg:w-5/6 h-[550px] 3sm:h-[623px] lg:backdrop-blur lg:bg-gradient-to-b from-[rgba(200,0,0,1)] to-[rgba(200,0,0,0)] lg:px-14"
+            >
+              <div
+                class="swiper !overflow-visible md:!overflow-hidden promoswipe h-[83%] 3sm:h-[80%] pb-18"
+              >
+                <div class="swiper-wrapper hover:cursor-grab active:cursor-ew-resize">
+                  <div class="swiper-slide pt-24 relative">
+                    <div
+                      class="bg-[#F9F9F9] rounded-[8px] 3sm:rounded-[16px] h-full w-full relative drop-shadow-lg4 p-7"
+                    >
+                      <div
+                        class="aspect-video relative mt-[-80px] mx-[-12px] mb-5 border-white border-4 rounded-[12px] 3sm:rounded-[16px] drop-shadow-xl"
+                      >
+                        <img
+                          src="images/2023-07-01-08-50-18128.png"
+                          class="w-full object-cover aspect-video rounded-[12px]"
+                        />
+                        <a
+                          href=" /promo/53"
+                          class="absolute bg-[rgba(255,168,0,0.2)] top-0 w-full backdrop-blur-2xl aspect-video rounded-[6px] 3sm:rounded-[12px]"
+                        >
+                          <img
+                            src="images/2023-07-01-08-50-18128.png"
+                            class="h-full mx-auto drop-shadow-xl"
+                            alt
+                          />
+                        </a>
+                      </div>
+                      <div class="flex">
+                        <div class="font-semibold text-[#AFAFAF] text-[15px] 3sm:text-[17px]">
+                          Павлодар
+                        </div>
+                        <div class="ml-auto font-bold text-[14px] 3sm:text-[16px] text-[#828282]">
+                          01.07
+                        </div>
+                      </div>
+                      <a href=" /promo/53" class="mt-2">
+                        <div
+                          class="font-bold mt-1 3sm:mt-0 text-black tracking-normal text-[16px] 3sm:text-[18px] w-full text-ellipsis overflow-hidden whitespace-nowrap"
+                        >
+                          Мухаджира Абдуллаева
+                        </div>
+                      </a>
+                      <div
+                        class="text-ellipsis w-full h-full text-[12px] 3sm:text-[13px] text-justify leading-relaxed mt-4"
+                      >
+                        Sinooil Invest безумно прост в использовании, а бесплатные советы экспертов
+                        о том, как заработать больше, помогают мне сейчас зарабатывать более 400 000
+                        тенге.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide pt-24 relative">
+                    <div
+                      class="bg-[#F9F9F9] rounded-[8px] 3sm:rounded-[16px] h-full w-full relative drop-shadow-lg4 p-7"
+                    >
+                      <div
+                        class="aspect-video relative mt-[-80px] mx-[-12px] mb-5 border-white border-4 rounded-[12px] 3sm:rounded-[16px] drop-shadow-xl"
+                      >
+                        <img
+                          src="images/2023-06-09-09-54-15956.png"
+                          class="w-full object-cover aspect-video rounded-[12px]"
+                        />
+                        <a
+                          href=" /promo/52"
+                          class="absolute bg-[rgba(255,168,0,0.2)] top-0 w-full backdrop-blur-2xl aspect-video rounded-[6px] 3sm:rounded-[12px]"
+                        >
+                          <img
+                            src="images/2023-06-09-09-54-15956.png"
+                            class="h-full mx-auto drop-shadow-xl"
+                            alt
+                          />
+                        </a>
+                      </div>
+                      <div class="flex">
+                        <div class="font-semibold text-[#AFAFAF] text-[15px] 3sm:text-[17px]">
+                          Астана
+                        </div>
+                        <div class="ml-auto font-bold text-[14px] 3sm:text-[16px] text-[#828282]">
+                          09.06
+                        </div>
+                      </div>
+                      <a href=" /promo/52" class="mt-2">
+                        <div
+                          class="font-bold mt-1 3sm:mt-0 text-black tracking-normal text-[16px] 3sm:text-[18px] w-full text-ellipsis overflow-hidden whitespace-nowrap"
+                        >
+                          Гульнара Исмаилова
+                        </div>
+                      </a>
+                      <div
+                        class="text-ellipsis w-full h-full text-[12px] 3sm:text-[13px] text-justify leading-relaxed mt-4"
+                      >
+                        Технология, лежащая в основе Sinooil Invest, является новаторской. Она, за
+                        очень короткое время, обрабатывает огромное количество информации, при этом
+                        вы все еще можете самостоятельно изучать каждую деталь.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide pt-24 relative">
+                    <div
+                      class="bg-[#F9F9F9] rounded-[8px] 3sm:rounded-[16px] h-full w-full relative drop-shadow-lg4 p-7"
+                    >
+                      <div
+                        class="aspect-video relative mt-[-80px] mx-[-12px] mb-5 border-white border-4 rounded-[12px] 3sm:rounded-[16px] drop-shadow-xl"
+                      >
+                        <img
+                          src="images/2023-04-18-11-53-10735.png"
+                          class="w-full object-cover aspect-video rounded-[12px]"
+                        />
+                        <a
+                          href=" /promo/48"
+                          class="absolute bg-[rgba(255,168,0,0.2)] top-0 w-full backdrop-blur-2xl aspect-video rounded-[6px] 3sm:rounded-[12px]"
+                        >
+                          <img
+                            src="images/2023-04-18-11-53-10735.png"
+                            class="h-full mx-auto drop-shadow-xl"
+                            alt
+                          />
+                        </a>
+                      </div>
+                      <div class="flex">
+                        <div class="font-semibold text-[#AFAFAF] text-[15px] 3sm:text-[17px]">
+                          Алматы
+                        </div>
+                        <div class="ml-auto font-bold text-[14px] 3sm:text-[16px] text-[#828282]">
+                          20.04
+                        </div>
+                      </div>
+                      <div
+                        class="font-bold mt-1 3sm:mt-0 text-black tracking-normal text-[16px] 3sm:text-[18px] w-full text-ellipsis overflow-hidden whitespace-nowrap"
+                      >
+                        Джамшед Юсупов
+                      </div>
+
+                      <div
+                        class="text-ellipsis w-full h-full text-[12px] 3sm:text-[13px] text-justify leading-relaxed mt-4"
+                      >
+                        Самое невероятное открытие, которое я когда-либо делал. Это буквально
+                        приносит мне деньги каждый день, и мне не нужно ничего для этого делать!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="promo-right bg-[url('/img/bg_promo_right.jpg')] overflow-hidden bg-fixed bg-right bg-[length:712px_1080px] bg-no-repeat bg-center z-10 absolute bottom-0 right-0 h-screen min-h-[900px] w-[45%] lg:w-[612px]"
+          >
+            <div class="rotate-[10deg] opacity-30">
+              <img
+                src="fonts/white-stroke.svg"
+                class="road-stroke2 absolute right-[181px] drop-shadow-xl"
+                alt
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        .fond__inner {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .fond__body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        .fond__left img {
+          width: 300px;
+          margin: 10px auto;
+        }
+
+        .fond__left {
+          /* margin-right: 100px; */
+          /* margin-bottom: 40px; */
+        }
+
+        a.zoomBtn {
+          text-align: center;
+          width: fit-content;
+          margin: 15px auto;
+          display: block;
+          background: #fff;
+          color: #23527c;
+          border: 0;
+          padding: 15px;
+          border-radius: 7px;
+          font-weight: 700;
+          cursor: pointer;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+
+        .swiper-dots {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .calculator-section {
+          padding-bottom: 50px;
+        }
+
+        .calc__container {
+          position: relative;
+        }
+
+        .calc__content {
+          position: relative;
+          max-width: 382px;
+          width: 100%;
+          margin: 0 auto;
+          height: 754px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          z-index: 5;
+          padding: 10px;
+        }
+
+        .calc-content__header {
+          border-radius: 30px 30px 0 0;
+          padding: 116px 25px 25px;
+          background: #dbdbdb;
+        }
+
+        .c-content-header__value {
+          font-weight: 700;
+          font-size: 18px;
+          color: #00afff;
+        }
+        .c-content-header__title {
+          margin-bottom: 50px;
+          font-weight: 500;
+          font-size: 20px;
+        }
+
+        .c-content-body__title {
+          font-size: 22px;
+        }
+
+        .c-content-header__description {
+          font-size: 16px;
+        }
+
+        .c-content-body-row__title,
+        .c-content-body-row__value {
+          font-size: 13px;
+        }
+
+        .c-content-header__input {
+          position: relative;
+          margin-bottom: 25px;
+          z-index: 1;
+        }
+
+        .slider-input-range {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          position: relative;
+          width: 100%;
+          height: 20px;
+          -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+          background-color: #f5f5f5;
+          border-radius: 5px;
+          cursor: pointer;
+          outline: 0;
+        }
+
+        .slider-input-range::before {
+          position: absolute;
+          content: '';
+          display: block;
+          height: 100%;
+          background: #00afff;
+          -webkit-box-shadow: inherit;
+          box-shadow: inherit;
+          border-radius: inherit;
+          width: var(--range);
+        }
+
+        .webp .calc__content::after {
+          background: url(images/iphone.webp) no-repeat;
+          background-size: 100% 100%;
+        }
+
+        .calc__content::after {
+          position: absolute;
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background: url(images/iphone.webp) no-repeat;
+          background-size: 100% 100%;
+          z-index: 0;
+        }
+        .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+          background-color: #00afff !important;
+        }
+
+        .c-content-header__input {
+          position: relative;
+          margin-bottom: 25px;
+          z-index: 1;
+        }
+
+        @media only screen and (max-width: 768px) {
+          .calc__content {
+            margin-bottom: 25px;
+          }
+        }
+
+        @media only screen and (max-width: 576px) {
+          .calc__content {
+            height: 660px;
+          }
+        }
+
+        @media only screen and (max-width: 576px) {
+          .slider-input-range {
+            height: 12px;
+          }
+        }
+
+        @media only screen and (max-width: 576px) {
+          .calc-content__header {
+            padding: 70px 25px 20px;
+          }
+        }
+
+        .first-dots {
+          margin-top: 15px;
+        }
+        .more {
+          color: red;
+          text-align: center;
+          display: block;
+          margin-top: 8px;
+        }
+
+        .card-name {
+          color: #000 !important;
+          font-weight: 800 !important;
+        }
+
+        .calculator-section {
+          padding-top: 50px;
+          padding-bottom: 30px !important;
+        }
+      </style>
+
+      <section class="calculator-section" style="background-image: url(tg_image_3845548624.jpeg)">
+        <div class="container">
+          <div class="calc__container">
+            <div class="calc__content calc-content">
+              <div class="calc-content__header c-content-header">
+                <div class="c-content-header__title">
+                  Стартовый капитал: <span class="c-content-header__value">$ 150</span>
+                </div>
+                <input
+                  class="c-content-header__input slider-input-range"
+                  type="range"
+                  min="150"
+                  max="20000"
+                  value="150"
+                />
+                <div class="c-content-header__description">
+                  Выберите в слайдере сумму инвестиции, что бы моментально посчитать будущую прибыль
+                </div>
+              </div>
+              <div class="calc-content__body c-content-body">
+                <div class="c-content-body__title">Предполагаемый доход:</div>
+                <div class="c-content-body__row c-content-body-row">
+                  <div class="c-content-body-row__title">Сколько я заработаю за неделю:</div>
+                  <div class="c-content-body-row__value">$ 7162</div>
+                </div>
+                <div class="c-content-body__row c-content-body-row">
+                  <div class="c-content-body-row__title">Сколько я заработаю за месяц:</div>
+                  <div class="c-content-body-row__value">$ 71625</div>
+                </div>
+                <div class="c-content-body__row c-content-body-row">
+                  <div class="c-content-body-row__title">Сколько я заработаю за год:</div>
+                  <div class="c-content-body-row__value">$ 811750</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mart Section -->
+      <section
+        class="relative lg:h-screen w-full min-h-[930px] bg-gradient-to-r from-[#0080EF] to-[#00D5DA] overflow-hidden"
+      >
+        <div class="container z-50 relative pt-12 3sm:pt-24">
+          <span
+            class="text-white text-[42px] 3sm:text-[48px] 2sm:text-[54px] md:text-[60px] leading-none font-bold"
+          >
+            Пакеты инвестиций
+          </span>
+          <div class="mt-36 lg:mt-8 md:flex md:flex-inline">
+            <div class="w-full md:w-1/2 relative">
+              <div
+                class="drop-shadow-2xl rounded-lg max-w-[535px] max-h-[644px] scale-[80%] rotate-[10deg] relative overflow-hidden"
+              >
+                <img
+                  src="images/mart1.jpg"
+                  class="object-fit scale-[125%] rotate-[-10deg] h-auto w-auto"
+                  style="padding-top: 50px"
+                  alt
+                />
+              </div>
+              <div
+                class="w-full 3sm:w-4/6 drop-shadow-2xl left-0 3sm:left-[60px] lg:left-[120px] top-[-80px] bottom-[auto] md:top-[auto] md:bottom-[-70px] lg:bottom-0 xl:bottom-[50px] absolute h-auto bg-white rounded-lg p-5 xl:p-8 text-justify text-[12px]"
+              >
+                <div class="font-bold text-[16px] pb-3">
+                  Инвестиция <span style="color: #ff0000; text-decoration: line-through">$350</span
+                  ><span style="color: #00a408"> $150</span>
+                </div>
+                <div class>
+                  Сеть заправочных станций Sinooil предлагает высококачественное топливо и широкий
+                  спектр услуг, тем самым создавая стабильный поток клиентов и потенциал для роста в
+                  перспективной рыночной среде Казахстана,
+                  <span style="font-weight: bold"
+                    >что обеспечивает высочайшую прибыль от инвестиции.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 relative">
+              <div
+                class="lg:ml-0 mt-[-40px] sm:mt-2 mb-36 sm:mb-14 md:mb-0 md:mt-16 drop-shadow-2xl rounded-lg max-w-[614px] max-h-[708px] scale-[80%] rotate-[10deg] relative overflow-hidden"
+              >
+                <img
+                  src="images/mart2.jpg"
+                  class="object-fit scale-[125%] rotate-[-10deg] h-auto w-auto"
+                  alt
+                />
+              </div>
+              <div
+                class="w-full 3sm:w-4/6 drop-shadow-2xl right-0 3sm:right-[30px] lg:right-[60px] bottom-[-90px] sm:bottom-0 sm:bottom-5 md:bottom-[auto] md:top-[-50px] xl:top-[-30px] absolute h-auto bg-white rounded-lg p-5 xl:p-8 text-justify text-[12px]"
+              >
+                <div class="font-bold text-[16px] pb-3">
+                  Инвестиция <span style="color: #00a408">$350</span>
+                </div>
+                <div class>
+                  Инвестиция в нефтевышку в Казахстане представляет уникальную возможность для
+                  клиентов. С учетом богатых запасов нефти в стране и стратегического расположения,
+                  <span style="font-weight: bold"
+                    >эта инвестиция обещает высокие доходы и устойчивость</span
+                  >, основанную на растущем спросе на нефтепродукты как на внутреннем, так и на
+                  международных рынках.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full absolute left-0 top-0 h-full bg-[url('/img/bg-store.jpg')] bg-cover lg:bg-contain opacity-40"
+        ></div>
+        <div
+          class="z-10 scale-75 lg:scale-100 w-[1450px] h-[3000px] rotate-[10deg] absolute top-[-90px] lg:top-[-150px] left-0 lg:left-[20%]"
+        >
+          <div class="w-full h-[11%] bg-gradient-to-r from-[#8026C6] to-[#F50385]"></div>
+          <div class="w-full h-[89%] bg-gradient-to-r from-[#FF554A] to-[#F9B92D]"></div>
+        </div>
+      </section>
+
+      <section class="polygon" style="padding: 50px 0">
+        <div class="t-container index-z">
+          <div class="t-width t-width_12 t415__mainblock">
+            <div class="t-cover__wrapper t-valign_middle">
+              <div class="t415__content" data-hook-content="covercontent">
+                <img
+                  class=""
+                  data-tu-max-width="800"
+                  data-tu-max-height="800"
+                  style="
+                    max-width: 250px;
+                    display: block;
+                    max-width: 250px;
+                    margin: 0 auto;
+                    margin-bottom: 25px;
+                  "
+                  src="./images/logo.png"
+                  imgfield="img2"
+                  data-hook-clogo="coverlogo"
+                />
+                <div class="t415__textwrapper t-width t-width_12">
+                  <div class="t415__title t-title t-title_md" field="title">
+                    Количество пользователей платформы лимитировано
+                  </div>
+                  <div class="t415__descr t-descr t-descr_md" field="descr">
+                    Успейте зарегистрироваться и начать зарабатывать на выгодных инвестициях.
+                    <br />
+                    До закрытия регистрации осталось...
+                  </div>
+                </div>
+                <div id="t415__timer210558841" class="t415__timer">
+                  <div class="t415__col">
+                    <span class="t415__days t-title t-title_lg t415__number"> 0 </span>
+                    <div class="t415__text t-descr t-descr_xxs">Дней</div>
+                  </div>
+                  <div class="t415__col">
+                    <span class="t415__hours t-title t-title_lg t415__number" id="hours">14</span>
+                    <div class="t415__text t-descr t-descr_xxs">Часов</div>
+                  </div>
+                  <div class="t415__col">
+                    <span class="t415__minutes t-title t-title_lg t415__number" id="minutes"
+                      >45</span
+                    >
+                    <div class="t415__text t-descr t-descr_xxs">Минут</div>
+                  </div>
+                  <div class="t415__col">
+                    <span class="t415__seconds t-title t-title_lg t415__number" id="seconds"
+                      >1</span
+                    >
+                    <div class="t415__text t-descr t-descr_xxs">Секунд</div>
+                  </div>
+                </div>
+
+                <style>
+                  .form-wrap {
+                    margin-top: 15px;
+                  }
+                </style>
+                <div class="hero-form">
+                  <div
+                    class="contactForm top_form form-wrap"
+                    style="
+                      border: 4px solid; /* Задаем толщину и стиль границы */
+                      border-image: linear-gradient(to right, #f9b92d, #ff554a) 1;
+                    "
+                  >
+                    <form
+                      method="POST"
+                      id="leadformModal"
+                      class="register-form contact_form content_inner flex"
+                    >
+                      <h3 class="form-title">
+                        Зарегистрируйтесь и наш финансовый эксперт свяжется с Вами в ближайшее
+                        время!
+                      </h3>
+                      <div class="input_group input_name shadow">
+                        <input
+                          type="text"
+                          placeholder="Имя"
+                          class="form-control required form-input"
+                          name="first_name"
+                          id="first_name"
+                          required
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div class="input_group input_last_name shadow">
+                        <input
+                          type="text"
+                          placeholder="Фамилия"
+                          class="form-control required form-input"
+                          name="last_name"
+                          id="last_name"
+                          required
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div class="input_group input_email shadow">
+                        <input
+                          type="email"
+                          placeholder="Email"
+                          class="form-control required"
+                          name="email"
+                          id="email"
+                          required
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div class="input_group intl-tel-input shadow">
+                        <input
+                          type="tel"
+                          id="phoneModal"
+                          name="phoneModal"
+                          placeholder=""
+                          autocomplete="off"
+                          required=""
+                          class="form-control"
+                        />
+                        <input
+                          type="hidden"
+                          id="realPhone"
+                          name="realPhone"
+                          class="hidden-phone"
+                          value=""
+                        />
+                        <input type="hidden" id="country" name="country" value="" />
+                      </div>
+                      <div class="input_group">
+                        <button
+                          type="submit"
+                          class="btn btn-submit btn-get-robot text-uppercase redBtn"
+                        >
+                          <span>Оставить заявку</span>
+                        </button>
+                      </div>
+                    </form>
+
+                    <style>
+                      .form-title {
+                        font-size: 18px;
+                        margin: 15px 0;
+                      }
+
+                      input.form-control {
+                        width: 100%;
+                        margin-bottom: 5px;
+                        padding: 10px;
+                        border-radius: 6px;
+                        border: 1px solid gray;
+                      }
+
+                      button.redBtn {
+                        text-align: center;
+                        width: 100%;
+                        display: block;
+                        background: #00afff;
+                        color: #000;
+                        border: 0;
+                        padding: 15px;
+                        border-radius: 7px;
+                        font-weight: 700;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                      }
+
+                      #heroSection {
+                        border-radius: 0% 100% 40% 40%/0% 0% 10% 10%;
+                      }
+                    </style>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-[#2B2B2B] pt-16 3sm:pt-24 pb-16 relative overflow-hidden"
+      style="padding-bottom: 2rem; padding-top: 2rem"
+    >
+      <div class="container relative flex flex-wrap">
+        <div class="w-full sm:w-2/3 lg:w-full sm:mb-24 xl:mb-0 xl:w-1/6">
+          <div class="mr-auto mt-1 text-left">
+            <a href="/"><img src="images/logo.png" class alt /></a>
+            <div class="font-regular mt-6 w-4/6 text-[11px] text-[#989898]">
+              Товарищество с ограниченной ответственностью “SINOOIL”<br />БИН 050940008016
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Start popup double -->
+    <div class="modal-form" id="modalFailure">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы уже зарегистрировались на данный номер. Если вам нужен новый аккаунт, пройдите
+            регистрацию на другой мобильный номер
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalFailureEmail">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы уже зарегистрировались на данную электронную почту. Если вам нужен новый аккаунт,
+            пройдите регистрацию на другую электронную почту.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalInvalid">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы ввели неккоректную электронную почту. Пройдите регистрацию на другую электронную
+            почту.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <!-- End popup double -->
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.promoswipe', {
+        breakpoints: {
+          240: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          },
+          320: {
+            slidesPerView: 1.08,
+            spaceBetween: 16,
+          },
+          400: {
+            slidesPerView: 1.2,
+            spaceBetween: 16,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 1.4,
+            spaceBetween: 16,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+          },
+        },
+      });
+
+      var swiper = new Swiper('.foodswipe', {
+        breakpoints: {
+          240: {
+            slidesPerView: 1,
+            spaceBetween: 8,
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 8,
+          },
+          400: {
+            slidesPerView: 1,
+            spaceBetween: 8,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 8,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 8,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 8,
+          },
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/timer.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/time-table.js"></script>
+    <script src="js/utm.js"></script>
+    <script src="js/good-scroll.js"></script>
+  </body>
+</html>

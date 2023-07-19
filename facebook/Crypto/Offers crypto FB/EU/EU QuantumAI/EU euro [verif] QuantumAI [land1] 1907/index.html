@@ -1,0 +1,912 @@
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#081047" />
+  <title>QuantumAI</title>
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/quantum.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+  <link id="aos-style-link" href="css/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/intlTelInput.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/modal-verif.css">
+
+  <!-- JS adapter -->
+  <script type="application/javascript">
+    function getCookie(name) {
+      var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|€)');
+      return v ? v[2] : null;
+    }
+
+    function setCookie(name, value, days) {
+      var d = new Date();
+      d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+      document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+    }
+
+    function getSubId() {
+      var params = new URLSearchParams(document.location.search.substr(1));
+      if (!'{subid}'.match('{')) {
+        return '{subid}';
+      }
+      var clientSubid = '<?php echo isset(€client) ? €client->getSubid() : "" ?>';
+      if (clientSubid && !clientSubid.match('>')) {
+        return clientSubid;
+      }
+      if (params.get('_subid')) {
+        return params.get('_subid');
+      }
+      if (params.get('subid')) {
+        return params.get('subid');
+      }
+      if (getCookie('subid')) {
+        return getCookie('subid');
+      }
+    }
+
+    function getToken() {
+      var params = new URLSearchParams(document.location.search.substr(1));
+      if (!'{token}'.match('{')) {
+        return '{token}';
+      }
+      var clientToken = '<?php echo isset(€client) ? €client->getToken() : "" ?>';
+      if (clientToken && !clientToken.match('>')) {
+        return clientToken;
+      }
+      if (params.get('_token')) {
+        return params.get('_token');
+      }
+      if (params.get('token')) {
+        return params.get('token');
+      }
+      if (getCookie('token')) {
+        return getCookie('token');
+      }
+      return null;
+    }
+
+    function getPixel() {
+      var params = new URLSearchParams(document.location.search.substr(1));
+      if (!'{idpxl}'.match('{')) {
+        return '{idpxl}';
+      }
+      if (params.get('idpxl')) {
+        return params.get('idpxl');
+      }
+
+      if (getCookie('idpxl')) {
+        return getCookie('idpxl');
+      }
+
+      return null;
+    }
+
+    if (typeof URLSearchParams === 'function') {
+      document.addEventListener('DOMContentLoaded', function (event) {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        var subid = getSubId();
+        var token = getToken();
+        var pixel = getPixel();
+
+        params.set('_token', token);
+        setCookie('idpxl', pixel);
+        setCookie('token', token);
+        setCookie('subid', subid);
+
+        // Adds params as hidden inputs to the forms
+        document.querySelectorAll('form').forEach(function (form) {
+          params.forEach(function (v, k) {
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = k;
+            input.value = v;
+
+            form.append(input);
+          });
+        });
+      });
+    }
+  </script>
+  <!-- End JS adapter -->
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+  <nav class="mobile-nav">
+    <div class="mobile-nav__wrap">
+      <a class="button button--sm" href="#">Sign in</a>
+    </div>
+  </nav>
+
+  <header class="header header--sticky">
+    <div class="header__wrapper">
+      <div class="header__logo aos-init aos-animate" data-aos="fade-zoom-in" data-aos-easing="ease-in-out"
+        data-aos-duration="1000">
+        <svg width="140" height="62" viewBox="0 0 124.2 42">
+          <path d="M52.2,14.7c0.1,0.1,0.4,0.3,0.7,0.3c0.5,0,1.1-0.4,1.1-1.1v-2c0-2.8-2.2-5.2-5.2-5.2h-3.7V3c0-0.9-0.4-1.7-1.2-2.4
+                c-0.7-0.5-1.6-0.8-2.5-0.7L10,6.9c-2.4,0.4-4.2,2.5-4.2,5v25c0,2.8,2.2,5.2,5.2,5.2h38c2.8,0,5.2-2.2,5.2-5.2v-2.4
+                c0-0.3-0.1-0.5-0.3-0.7c-0.1-0.1-0.4-0.3-0.7-0.3c-0.5,0-1.1,0.4-1.1,1.1V37c0,1.7-1.5,3-3,3H10.9c-1.7,0-3-1.3-3-3V11.9
+                c0-1.6,1.2-2.8,2.6-3c0.1,0,0.3,0,0.5,0h38c1.7,0,3,1.3,3,3V14C52,14.3,52.1,14.5,52.2,14.7 M20,6.7L41.9,2c0.3,0,0.7,0,0.8,0.3
+                C43,2.4,43.1,2.8,43.1,3v3.7C43.1,6.7,20,6.7,20,6.7z"></path>
+          <path d="M25.4,32c-2-0.5-4-1.1-5.7-1.7c-0.3-0.1-0.6-0.2-0.9-0.2c-3.5-0.1-6.5-2.7-6.5-7.5c0-4.8,2.9-7.8,6.9-7.8
+                c4,0,6.6,3.1,6.6,7.5c0,3.8-1.8,6.2-4.2,7.1v0.1c1.5,0.4,3.1,0.7,4.3,0.9L25.4,32z M23.8,22.4c0-3-1.5-6-4.7-6c-3.2,0-4.8,3-4.8,6.2
+                c0,3.1,1.7,6,4.7,6C22.1,28.5,23.8,25.8,23.8,22.4z"></path>
+          <path d="M37.6,27c0,1.1,0,2.1,0.1,2.9h-1.7l-0.1-1.7h0c-0.5,0.9-1.6,2-3.5,2c-1.7,0-3.7-0.9-3.7-4.7v-6.2h1.9v5.9
+                c0,2,0.6,3.4,2.4,3.4c1.3,0,2.2-0.9,2.6-1.8c0.1-0.3,0.2-0.6,0.2-1v-6.5h1.9V27z"></path>
+          <path d="M47,29.9l-0.2-1.3h-0.1c-0.6,0.8-1.7,1.6-3.3,1.6c-2.2,0-3.3-1.5-3.3-3.1c0-2.6,2.3-4,6.4-4v-0.2c0-0.9-0.2-2.5-2.4-2.5
+                c-1,0-2,0.3-2.8,0.8L41,19.9c0.9-0.6,2.2-0.9,3.5-0.9c3.3,0,4,2.2,4,4.4v4c0,0.9,0,1.8,0.2,2.6H47z M46.7,24.4
+                c-2.1,0-4.5,0.3-4.5,2.4c0,1.3,0.8,1.8,1.8,1.8c1.4,0,2.3-0.9,2.6-1.8c0.1-0.2,0.1-0.4,0.1-0.6V24.4z">
+          </path>
+          <path d="M52.1,22.1c0-1.1,0-2-0.1-2.9h1.7l0.1,1.8h0c0.5-1,1.8-2,3.5-2c1.5,0,3.8,0.9,3.8,4.5v6.4h-1.9v-6.1c0-1.7-0.6-3.1-2.5-3.1
+                c-1.3,0-2.3,0.9-2.6,2c-0.1,0.2-0.1,0.6-0.1,0.9v6.4h-1.9V22.1z"></path>
+          <path d="M66.9,16.2v3.1h2.8v1.5h-2.8v5.7c0,1.3,0.4,2.1,1.5,2.1c0.5,0,0.9-0.1,1.1-0.1l0.1,1.5c-0.4,0.2-1,0.3-1.7,0.3
+                c-0.9,0-1.6-0.3-2.1-0.8c-0.5-0.6-0.7-1.5-0.7-2.8v-5.8h-1.7v-1.5H65v-2.6L66.9,16.2z"></path>
+          <path d="M81.1,27c0,1.1,0,2.1,0.1,2.9h-1.7l-0.1-1.7h0c-0.5,0.9-1.6,2-3.5,2c-1.7,0-3.7-0.9-3.7-4.7v-6.2H74v5.9
+                c0,2,0.6,3.4,2.4,3.4c1.3,0,2.2-0.9,2.6-1.8c0.1-0.3,0.2-0.6,0.2-1v-6.5h1.9V27z"></path>
+          <path d="M84.7,22.1c0-1.1,0-2-0.1-2.9h1.7l0.1,1.7h0.1c0.6-1,1.6-2,3.3-2c1.5,0,2.6,0.9,3,2.1h0c0.3-0.6,0.7-1.1,1.2-1.4
+                c0.6-0.5,1.3-0.7,2.4-0.7c1.4,0,3.5,0.9,3.5,4.6v6.3H98v-6c0-2-0.7-3.3-2.3-3.3c-1.1,0-2,0.8-2.3,1.8c-0.1,0.3-0.2,0.6-0.2,1v6.6
+                h-1.9v-6.4c0-1.7-0.7-2.9-2.2-2.9c-1.2,0-2.1,1-2.4,1.9c-0.1,0.3-0.2,0.6-0.2,0.9v6.4h-1.9V22.1z"></path>
+          <path d="M105.8,25.2l-1.5,4.7h-2l5-14.8h2.3l5.1,14.8h-2l-1.6-4.7H105.8z M110.7,23.7l-1.5-4.3c-0.3-1-0.6-1.8-0.8-2.7h0
+                c-0.2,0.9-0.5,1.8-0.7,2.7l-1.5,4.3H110.7z"></path>
+          <path d="M119.1,15v14.8h-1.9V15H119.1z"></path>
+        </svg>
+      </div>
+      <nav class="header__nav"></nav>
+      <div class="header__user aos-init aos-animate" data-aos="fade-zoom-in" data-aos-easing="ease-in-out"
+        data-aos-duration="1000" data-aos-delay="1050">
+        <a class="header__auth button button--sm to-form" data-url="#toform">Create account</a>
+      </div>
+      <button class="header__hamburger hamburger hamburger--emphatic" type="button">
+        <a class="header__auth button button--sm to-form" data-url="#toform">Create account</a>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section promo promo-main">
+      <div class="wrapper">
+        <div class="promo__wrap" id="toform">
+          <div class="promo__head">
+            <h1 data-aos="fade-right" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1000"
+              data-aos-easing="ease-out" class="aos-init aos-animate">
+              Smart Investing That Makes You €1500 in 5 Hours And Cures Poverty
+            </h1>
+            <p data-aos="fade-right" data-aos-offset="200" data-aos-delay="600" data-aos-duration="1000"
+              data-aos-easing="ease-out" class="aos-init aos-animate">
+              Our smart investing can make you thousands in less than 7 days, and will help cure
+              poverty while you earn!
+            </p>
+
+            <p data-aos="fade-right" data-aos-offset="200" data-aos-delay="600" data-aos-duration="1000"
+              data-aos-easing="ease-out" class="aos-init aos-animate">
+              At the moment, the program exclusively accepts citizens of countries such as:
+              Malta, Cyprus, Norway and Netherlands.
+            </p>
+          </div>
+
+          <div class="promo__middle-left aos-init form-div aos-animate" data-aos-offset="-200" data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="700" id="formwork">
+            <h2>SIGN UP NOW</h2>
+            <style>
+              input.error {
+                margin-bottom: 0;
+                border: 2px solid #e90a0a;
+              }
+
+              input.valid {
+                border: 2px solid #3fc30f;
+              }
+
+              input {
+                outline: none;
+              }
+
+              .iti__selected-flag {
+                max-height: 43px;
+              }
+
+              .iti__selected-dial-code {
+                color: #000;
+              }
+
+              .iti.iti--allow-dropdown.iti--separate-dial-code {
+                width: 100% !important;
+              }
+
+              .iti__country.iti__standard,
+              .iti__country-name {
+                color: #000;
+              }
+            </style>
+            <div>
+              <form style="padding: 1rem 2rem 2rem 2rem" method="post" class="register-form" id="leadform"
+                autocomplete="off">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label class="control-label">First Name</label>
+                    <input type="text" class="form-control form-input" id="first_name" name="first_name" value=""
+                      placeholder="First Name" required />
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label class="control-label">Last Name</label>
+                    <input type="text" class="form-control form-input" id="last_name" name="last_name" value=""
+                      placeholder="Last Name" required />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <label class="control-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" name="email" value=""
+                      placeholder="Email" required />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12 form-group" style="display: flex">
+                    <label class="control-label">Phone</label>
+                    <input type="text" class="form-control bfh-phone form-input phone" name="phone1" id="phone1"
+                      value="" placeholder="" required />
+                    <input id="realPhone" class="hidden-phone" type="hidden" name="realPhone" value="" />
+                    <input id="country" type="hidden" name="country" value="" />
+                  </div>
+                </div>
+
+                <p style="color: #fff; text-align: center; margin: 10px 0; font-size: 14px;">
+                  We'll send you a verification code via SMS
+                </p>
+
+                <button type="submit" name="submitBtn"
+                  class="btn_send buttonSbmt btn btn-danger btn-lg tradeBtn btn-submit valid">
+                  <span class="b_icon"></span>
+                  <span>Get Started</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* 16:9 соотношение сторон */
+            overflow: hidden;
+          }
+
+          .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* border-radius: 20px; */
+          }
+        </style>
+
+        <div class="promo__middle">
+          <div class="promo__svg">
+            <!-- <iframe width="100%" height="100%" src="https://player.vimeo.com/video/648987551?autoplay=1"
+                                  frameborder="0" allow="encrypted-media" allowfullscreen></iframe> -->
+            <div class="video-container">
+              <video controls poster="video/poster.jpeg">
+                <source src="video/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="promo__footer aos-init aos-animate" data-aos="fade-up" data-aos-offset="0" data-aos-delay="800"
+        data-aos-duration="1000" data-aos-easing="ease-out">
+        <div class="promo__info wrapper">
+          <div id="live-trades" class="trades-wrapper" v-bind:class="{ active: showApp }">
+            <div class="trades-div">
+              <div class="live-trades">
+                <div class="header-person" data-init="person-timeout1">
+                  <div v-bind:id="trade.id" class="item animated slideInRight" v-for="trade in currentTrades">
+                    <div class="person-image">
+                      <img src="img/33.jpg" alt="Person" />
+                    </div>
+                    <div class="info">
+                      <div class="won-info">
+                        <span class="person-text--name name">User Saddle Dr</span><br />
+                        earnings
+                        <span class="person-text--sum">
+                          <span class="currency">€</span>
+                          <span class="sum sum1">815</span>
+                        </span>
+                      </div>
+                      <div class="balance">
+                        <b>Current balance: <span class="currency">€</span><span class="randomBalance">4.675</span></b>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-person" data-init="person-timeout2">
+                  <div v-bind:id="trade.id" class="item item3 animated slideInRight" v-for="trade in currentTrades">
+                    <div class="person-image">
+                      <img src="img/89.jpg" data-src="id_12345" alt="Person" />
+                    </div>
+                    <div class="info">
+                      <div class="won-info">
+                        <span class="person-text--name name">User Mathew</span><br />
+                        earnings
+                        <span class="person-text--sum">
+                          <span class="currency">€</span>
+                          <span class="sum">1764</span>
+                        </span>
+                      </div>
+                      <div class="balance">
+                        <b>Current balance: <span class="currency">€</span><span class="randomBalance">6.122</span></b>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-person" data-init="person-timeout3">
+                  <div v-bind:id="trade.id" class="item item2 animated slideInRight" v-for="trade in currentTrades">
+                    <div class="person-image">
+                      <img src="img/29.jpg" alt="Person" />
+                    </div>
+                    <div class="info">
+                      <div class="won-info">
+                        <span class="person-text--name name">User Avondale Ave</span><br />
+                        earnings
+                        <span class="person-text--sum">
+                          <span class="currency">€</span>
+                          <span class="sum">578</span>
+                        </span>
+                      </div>
+                      <div class="balance">
+                        <b>Current balance: <span class="currency">€</span><span class="randomBalance">8.457</span></b>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-person" data-init="person-timeout4">
+                  <div v-bind:id="trade.id" class="item item2 animated slideInRight" v-for="trade in currentTrades">
+                    <div class="person-image">
+                      <img src="img/70.jpg" data-src="id_12345" alt="Person" />
+                    </div>
+                    <div class="info">
+                      <div class="won-info">
+                        <span class="person-text--name name">User Naomi</span><br />
+                        earnings
+                        <span class="person-text--sum">
+                          <span class="currency">€</span>
+                          <span class="sum">4927</span>
+                        </span>
+                      </div>
+                      <div class="balance">
+                        <b>Current balance: <span class="currency">€</span><span class="randomBalance">6.955</span></b>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="promo__social">
+        <a class="promo__social-link to-form" data-url="#toform">
+          <svg width="20" height="20" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12.5 5.99799C8.97177 5.99799 6.04839 8.87097 6.04839 12.4496C6.04839 16.0282 8.92137 18.9012 12.5 18.9012C16.0786 18.9012 18.9516 15.9778 18.9516 12.4496C18.9516 8.92137 16.0282 5.99799 12.5 5.99799ZM12.5 16.5827C10.2319 16.5827 8.36693 14.7177 8.36693 12.4496C8.36693 10.1815 10.2319 8.31653 12.5 8.31653C14.7681 8.31653 16.6331 10.1815 16.6331 12.4496C16.6331 14.7177 14.7681 16.5827 12.5 16.5827Z">
+            </path>
+            <path
+              d="M19.2036 7.30847C20.0109 7.30847 20.6653 6.65405 20.6653 5.84678C20.6653 5.03951 20.0109 4.38509 19.2036 4.38509C18.3964 4.38509 17.7419 5.03951 17.7419 5.84678C17.7419 6.65405 18.3964 7.30847 19.2036 7.30847Z">
+            </path>
+            <path
+              d="M22.9839 2.06653C21.6734 0.705645 19.8085 0 17.6915 0H7.30847C2.92339 0 0 2.92339 0 7.30847V17.6411C0 19.8085 0.705645 21.6734 2.11694 23.0343C3.47782 24.3448 5.29234 25 7.35887 25H17.6411C19.8085 25 21.623 24.2944 22.9335 23.0343C24.2944 21.7238 25 19.8589 25 17.6915V7.30847C25 5.19153 24.2944 3.37702 22.9839 2.06653ZM22.7823 17.6915C22.7823 19.254 22.2278 20.5141 21.3206 21.371C20.4133 22.2278 19.1532 22.6815 17.6411 22.6815H7.35887C5.84677 22.6815 4.58669 22.2278 3.67944 21.371C2.77218 20.4637 2.31855 19.2036 2.31855 17.6411V7.30847C2.31855 5.79637 2.77218 4.53629 3.67944 3.62903C4.53629 2.77218 5.84677 2.31855 7.35887 2.31855H17.7419C19.254 2.31855 20.5141 2.77218 21.4214 3.67944C22.2782 4.58669 22.7823 5.84677 22.7823 7.30847V17.6915Z">
+            </path>
+          </svg>
+        </a>
+        <a class="promo__social-link to-form" data-url="#toform">
+          <svg width="20" height="18" viewBox="0 0 12 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.6166 8.09511H7.66042V5.50041C7.66042 4.52598 8.30625 4.2988 8.76113 4.2988C9.21496 4.2988 11.553 4.2988 11.553 4.2988V0.0150071L7.70803 0C3.43976 0 2.46843 3.19499 2.46843 5.2396V8.09511H0V12.5093H2.46843C2.46843 18.1743 2.46843 25 2.46843 25H7.66042C7.66042 25 7.66042 18.107 7.66042 12.5093H11.1638L11.6166 8.09511Z">
+            </path>
+          </svg>
+        </a>
+        <a class="promo__social-link to-form" data-url="#toform">
+          <svg width="20" height="25" viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M30.7632 2.95936C29.6323 3.46206 28.4152 3.80114 27.1382 3.95289C28.4421 3.1723 29.4418 1.93585 29.9133 0.460858C28.6937 1.18462 27.3436 1.7098 25.9055 1.99331C24.7546 0.766848 23.1141 0 21.2988 0C17.8136 0 14.9879 2.82572 14.9879 6.31151C14.9879 6.80547 15.0435 7.28693 15.1515 7.74966C9.90596 7.48614 5.25491 4.9739 2.14193 1.15527C1.59864 2.08698 1.28766 3.17105 1.28766 4.32882C1.28766 6.51821 2.40171 8.45032 4.09527 9.58186C3.06115 9.54876 2.0876 9.26463 1.23645 8.7919C1.23582 8.81813 1.23582 8.84498 1.23582 8.87183C1.23582 11.9292 3.41147 14.4796 6.29902 15.0603C5.76947 15.204 5.21182 15.2814 4.63606 15.2814C4.22891 15.2814 3.83362 15.242 3.44832 15.1677C4.25201 17.675 6.58253 19.5003 9.34393 19.5509C7.18389 21.2438 4.46308 22.253 1.5056 22.253C0.996653 22.253 0.493955 22.223 0 22.1643C2.79387 23.9559 6.11106 25 9.6749 25C21.2844 25 27.6321 15.3832 27.6321 7.04276C27.6321 6.76925 27.6265 6.49635 27.6146 6.22533C28.8474 5.33734 29.9177 4.22516 30.7632 2.95936Z">
+            </path>
+          </svg>
+        </a>
+        <a class="promo__social-link to-form" data-url="#toform">
+          <svg width="20" height="25" viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M27.9842 0.164816L1.40106 10.3489C-0.413358 11.0716 -0.402613 12.0772 1.07026 12.5254L7.70011 14.5837L10.2375 22.3055C10.5445 23.1509 10.391 23.4864 11.2875 23.4864C11.9783 23.4864 12.2853 23.1738 12.669 22.8002C12.9131 22.5624 14.3637 21.162 15.984 19.5984L22.8802 24.6596C24.1489 25.3549 25.0653 24.995 25.3815 23.4886L29.9099 2.30013C30.3704 0.456792 29.1984 -0.381783 27.9842 0.164816ZM8.74087 14.108L23.6845 4.74344C24.4305 4.29442 25.1144 4.53532 24.5526 5.03084L11.7572 16.498L11.2591 21.7764L8.74087 14.108Z">
+            </path>
+          </svg>
+        </a>
+        <a class="promo__social-link to-form" data-url="#toform">
+          <svg width="20" height="25" viewBox="0 0 19 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.8168 12.4224C16.0058 11.8157 14.8505 11.5731 14.8505 11.5731C14.8505 11.5731 15.8282 11.0101 16.2277 10.4477C16.6276 9.885 16.8275 9.01326 16.861 8.56094C16.8942 8.10841 16.9721 6.21099 15.4835 5.11889C14.3321 4.27385 13.0126 3.9384 11.2407 3.82926V0H8.86364V3.78402C8.33327 3.78402 7.71346 3.78402 7.0531 3.78402V0H4.67629V3.78402C2.24982 3.78402 0 3.78402 0 3.78402V6.23582C0 6.23582 0.99965 6.23582 1.37449 6.23582C1.74922 6.23582 2.41569 6.2772 2.69888 6.59202C2.98217 6.90629 3.03217 7.07192 3.03217 7.6839C3.03217 8.29611 3.03228 17.2218 3.03228 17.4535C3.03228 17.6851 2.98784 17.9718 2.78775 18.1595C2.588 18.3472 2.38814 18.391 1.91031 18.391C1.43259 18.391 0.488715 18.391 0.488715 18.391L0 21.2267C0 21.2267 2.32393 21.2267 4.67629 21.2267V25H7.05321V21.2267C7.78356 21.2267 8.41948 21.2267 8.86375 21.2267V25H11.2408V21.1644C11.8553 21.1288 12.4282 21.0826 12.7624 21.0391C13.4401 20.951 14.9728 20.7745 16.4059 19.7815C17.8386 18.7883 18.1605 17.2327 18.1939 15.6662C18.2277 14.0996 17.6271 13.0292 16.8168 12.4224ZM7.0531 6.45398C7.0531 6.45398 7.80833 6.38788 8.55257 6.39869C9.29703 6.40962 9.95206 6.4318 10.9298 6.72973C11.9071 7.02778 12.4843 7.75596 12.507 8.61656C12.5291 9.47715 12.151 10.0506 11.4849 10.4148C10.8185 10.7788 9.89707 10.9774 9.03029 11.0102C8.16407 11.0434 7.0531 11.0102 7.0531 11.0102V6.45398ZM12.3735 17.7402C11.8293 18.0382 10.7406 18.3029 9.68565 18.38C8.63034 18.4573 7.0531 18.4242 7.0531 18.4242V13.36C7.0531 13.36 8.56379 13.283 9.74131 13.36C10.9186 13.4376 11.9071 13.7352 12.3512 13.9562C12.7955 14.1767 13.5733 14.662 13.5733 15.8207C13.5733 16.9789 12.9175 17.4423 12.3735 17.7402Z">
+            </path>
+          </svg>
+        </a>
+        <a class="promo__social-link to-form" data-url="#toform">
+          <svg width="20" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19.7925 20.1143C18.3072 21.5546 16.1467 22.4548 14.4363 22.5899C13.2211 22.7249 11.9608 22.7249 10.7455 22.5899C8.94511 22.3648 7.63981 21.8697 6.33452 21.3746C6.96466 20.7445 7.63981 19.8893 7.90987 19.1241C8.08991 18.674 8.0449 18.1789 7.86486 17.7738C6.46955 14.9382 7.09969 11.5624 9.3502 9.3569C10.9706 7.73654 13.2211 7.01638 15.5166 7.28644C17.182 7.51149 18.7123 8.23165 19.9276 9.40191C22.8082 12.3276 22.7182 17.2337 19.7925 20.1143ZM21.5479 7.5565C20.5127 6.52126 19.2974 5.75609 17.9921 5.26098C18.7573 3.05549 21.4579 2.2453 21.4579 2.2453C21.4579 2.2453 15.2465 -0.995423 8.40498 0.30987C6.10947 0.669951 3.90397 2.06526 2.32862 3.91068C-1.13716 7.91658 -0.687057 13.9929 3.36385 17.4137C3.99399 17.9538 5.38931 18.764 5.38931 18.809C4.48911 21.1495 1.56345 21.7797 1.56345 21.7797C1.56345 21.7797 5.43432 24.2102 10.6105 24.8404C12.0058 25.0204 13.4461 25.0654 14.9314 24.8854C17.317 24.7053 19.7025 23.4001 21.5479 21.6447C25.4188 17.7738 25.4638 11.4724 21.5479 7.5565Z">
+            </path>
+          </svg>
+        </a>
+        <a class="promo__social-link to-form" data-url="#toform">
+          <svg width="20" height="25" viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M27.8158 22.4329L30.0926 24.6438V24.7171H18.5439V24.6438L20.8619 22.4329C21.1091 22.2283 21.2274 21.9033 21.1709 21.5842V7.44971C21.1709 6.85247 21.1709 6.04568 21.274 5.35415L13.4855 25H13.3928L5.32621 6.92582C5.15108 6.47527 5.09957 6.44384 4.98624 6.13998V17.9904C4.88967 18.7835 5.02211 19.5881 5.36742 20.306L8.6126 24.6438V24.7171H0V24.6438L3.24518 20.2955C3.58794 19.5805 3.7203 18.78 3.62636 17.9904V4.89313C3.67912 4.24825 3.48747 3.60725 3.09065 3.10143L0.793266 0.0733445V0H9.03499L15.9374 15.308L22.0157 0H30.0823V0.0733445L27.8158 2.6404C27.5442 2.84235 27.4085 3.18332 27.4655 3.52054V21.5842C27.4055 21.9129 27.5431 22.2464 27.8158 22.4329Z">
+            </path>
+          </svg>
+        </a>
+        <a class="promo__social-link to-form" data-url="#toform">
+          <svg width="20" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M29.4304 12.1745C29.4304 10.3711 27.9753 8.90625 26.1859 8.90625C25.3338 8.90625 24.5669 9.23177 23.9835 9.77214C21.8598 8.28776 18.9954 7.3112 15.7967 7.12891L17.2322 2.36328L21.6304 3.24219C21.7811 4.72005 23.02 5.8724 24.5341 5.8724C24.5406 5.8724 24.5406 5.8724 24.5472 5.8724C24.5538 5.8724 24.5538 5.8724 24.5603 5.8724C26.1728 5.8724 27.4771 4.55729 27.4771 2.9362C27.4771 1.3151 26.1662 0 24.5538 0C24.5472 0 24.5472 0 24.5406 0H24.5341C23.4067 0 22.4366 0.638021 21.945 1.58203L16.0655 0.410156L14.0466 7.11589L13.8828 7.1224C10.5858 7.26562 7.62307 8.25521 5.44692 9.77214C4.87011 9.23177 4.09666 8.90625 3.24456 8.90625C1.45513 8.90625 0 10.3711 0 12.1745C0 13.4505 0.721012 14.5508 1.77631 15.0911C1.72388 15.4102 1.69766 15.7292 1.69766 16.0547C1.70421 20.9896 7.5313 25 14.7152 25C21.8991 25 27.7262 20.9896 27.7262 16.0482C27.7262 15.7227 27.7 15.4036 27.6541 15.0846C28.7094 14.5443 29.4304 13.444 29.4304 12.1745ZM2.24825 13.4831C1.81564 13.1901 1.53379 12.6953 1.53379 12.1289C1.53379 11.2305 2.26136 10.4948 3.15279 10.4948C3.51985 10.4948 3.86069 10.6185 4.13599 10.8268C3.25111 11.6016 2.59564 12.5 2.24825 13.4831ZM23.4526 2.9362C23.4526 2.33724 23.9376 1.84245 24.5341 1.84245C25.1306 1.84245 25.6156 2.33073 25.6156 2.9362C25.6156 3.53516 25.1306 4.02995 24.5341 4.02995C23.9376 4.02995 23.4526 3.54167 23.4526 2.9362ZM8.32442 14.6094C8.32442 13.4635 9.25518 12.5391 10.4088 12.5391C11.5624 12.5391 12.4932 13.4635 12.4932 14.6094C12.4932 15.7552 11.5624 16.6797 10.4088 16.6797C9.25518 16.6797 8.32442 15.7552 8.32442 14.6094ZM14.7152 21.875C11.5952 21.862 9.73367 20.0195 9.65501 19.9414L10.4809 19.1341C10.494 19.1471 12.0344 20.7096 14.7152 20.7227C17.3567 20.7096 18.9233 19.1471 18.943 19.1341L19.7689 19.9414C19.6902 20.0195 17.8352 21.862 14.7152 21.875ZM19.0609 16.6797C17.9073 16.6797 16.9766 15.7552 16.9766 14.6094C16.9766 13.4635 17.9073 12.5391 19.0609 12.5391C20.2146 12.5391 21.1453 13.4635 21.1453 14.6094C21.1453 15.7552 20.208 16.6797 19.0609 16.6797ZM27.1953 13.5091C26.8413 12.513 26.1728 11.5951 25.2748 10.8138C25.5501 10.599 25.8975 10.4753 26.2711 10.4753C27.1822 10.4753 27.9163 11.2174 27.9163 12.1354C27.9228 12.7083 27.6344 13.2096 27.1953 13.5091Z">
+            </path>
+          </svg>
+        </a>
+        <a class="promo__social-link to-form" data-url="#toform">
+          <svg width="20" height="25" viewBox="0 0 34 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M33.1105 5.52053C33.1105 2.591 30.9557 0.234362 28.2931 0.234362C24.6865 0.0651005 21.0084 0 17.2521 0C17.0567 0 16.8614 0 16.6661 0C16.4708 0 16.2755 0 16.0802 0C12.3304 0 8.64576 0.0651005 5.03919 0.234362C2.38309 0.234362 0.228258 2.60402 0.228258 5.53355C0.065507 7.85113 -0.00610365 10.1687 0.000406409 12.4863C-0.00610365 14.8039 0.065507 17.1214 0.221748 19.4455C0.221748 22.3751 2.37658 24.7512 5.03268 24.7512C8.82153 24.927 12.708 25.0051 16.6596 24.9986C20.6177 25.0116 24.4912 24.9335 28.2866 24.7512C30.9492 24.7512 33.104 22.3751 33.104 19.4455C33.2603 17.1214 33.3319 14.8039 33.3254 12.4798C33.3384 10.1622 33.2668 7.84462 33.1105 5.52053ZM13.4762 18.8726V6.08039L22.9158 12.4733L13.4762 18.8726Z">
+            </path>
+          </svg>
+        </a>
+        <a class="promo__social-link to-form" data-url="#toform">
+          <svg width="20" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0.405405 8.30116H5.59845V25H0.405405V8.30116ZM3.01158 0C4.67181 0 6.02316 1.35135 6.02316 3.01158C6.02316 4.67181 4.67181 6.02317 3.01158 6.02317C1.3417 6.02317 0 4.67181 0 3.01158C0 1.35135 1.3417 0 3.01158 0Z">
+            </path>
+            <path
+              d="M8.86099 8.30116H13.832V10.5888H13.8996C14.5946 9.27606 16.2838 7.89575 18.8127 7.89575C24.0637 7.89575 25.0386 11.3514 25.0386 15.8494V25H19.8552V16.8822C19.8552 14.9421 19.8262 12.4517 17.1622 12.4517C14.4594 12.4517 14.054 14.5656 14.054 16.7375V25H8.87064L8.86099 8.30116Z">
+            </path>
+          </svg>
+        </a>
+        <a class="promo__social-link" href="#">
+          <svg width="20" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12.5856 0C5.63543 0 0 5.73691 0 12.8188C0 18.4831 3.60713 23.2825 8.60766 24.979C9.23694 25.0962 9.4673 24.7 9.4673 24.3595C9.4673 24.0526 9.45606 23.249 9.45044 22.1775C5.95007 22.9532 5.20842 20.4587 5.20842 20.4587C4.63532 18.9798 3.80939 18.5836 3.80939 18.5836C2.66882 17.7855 3.89367 17.8023 3.89367 17.8023C5.15785 17.8916 5.82085 19.1249 5.82085 19.1249C6.94456 21.0837 8.76498 20.5201 9.48416 20.1908C9.59653 19.3649 9.92241 18.7956 10.282 18.4775C7.48956 18.1539 4.55105 17.0545 4.55105 12.1435C4.55105 10.7428 5.03986 9.59872 5.84332 8.70582C5.71409 8.38214 5.28146 7.07627 5.96693 5.31278C5.96693 5.31278 7.02322 4.96678 9.42797 6.62423C10.4337 6.33962 11.5068 6.2001 12.58 6.19452C13.6475 6.2001 14.7263 6.33962 15.732 6.62423C18.1368 4.96678 19.1874 5.31278 19.1874 5.31278C19.8729 7.07627 19.4403 8.38214 19.311 8.70582C20.1145 9.6043 20.6033 10.7483 20.6033 12.1435C20.6033 17.0656 17.6592 18.1483 14.8555 18.4664C15.305 18.8626 15.7095 19.6439 15.7095 20.8382C15.7095 22.5514 15.6927 23.9354 15.6927 24.354C15.6927 24.6944 15.9174 25.0962 16.5579 24.9678C21.5697 23.2769 25.1712 18.4775 25.1712 12.8188C25.1712 5.73691 19.5358 0 12.5856 0Z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="section solution">
+      <h2 class="visually-hidden">Solution</h2>
+      <div class="solution__top wrapper" id="problem">
+        <p class="solution__title aos-init aos-animate" data-aos="fade-right" data-aos-offset="0"
+          data-aos-duration="1500" data-aos-easing="ease-out">
+          Problem
+        </p>
+        <div class="solution__top-wrap">
+          <div class="solution__item">
+            <div data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-duration="1200"
+              class="aos-init aos-animate">
+              <span>1</span>
+              <p>
+                Poverty is a global issue, one which we aim to solve – forever. When you invest
+                with 250€, you’re directly helping us save people’s lives – and making money!
+              </p>
+            </div>
+            <div class="triangle-item triangle-item--left aos-init aos-animate" data-aos="fade-up" data-aos-offset="0"
+              data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-out">
+              <div class="triangle-item__img">
+                <img class="lozad" data-src="/img/brand.png" alt="deloitte" src="img/brand.png" data-loaded="true" />
+              </div>
+              <a class="triangle-item__link" href="#">Delloite link</a>
+            </div>
+          </div>
+          <div class="solution__item">
+            <div data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-duration="1200"
+              data-aos-delay="150" class="aos-init aos-animate">
+              <span>2</span>
+              <p>
+                Big corporations are the ones holding all the keys to those big paychecks. With
+                Quantum Computing, that’s no longer true. Now YOU have the power to make a great
+                income. The power that was once reserve for the richest among us, is now yours.
+              </p>
+            </div>
+            <div class="triangle-item triangle-item--middle aos-init aos-animate" data-aos="fade-up" data-aos-offset="0"
+              data-aos-delay="400" data-aos-duration="1000" data-aos-easing="ease-out">
+              <div class="triangle-item__img">
+                <img class="lozad" data-src="/img/brand2.png" alt="Bond" src="img/brand2.png" data-loaded="true" />
+              </div>
+              <a class="triangle-item__link" href="#">Bond link</a>
+            </div>
+          </div>
+          <div class="solution__item">
+            <div data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-duration="1200"
+              data-aos-delay="300" class="aos-init aos-animate">
+              <span>3</span>
+              <p>
+                QuantumAI is designed to make the world better. Elon developed this idea as a
+                win-win. Have loans to pay off, or a mortgage to pay? Want to help people? Now you
+                can do both.
+              </p>
+            </div>
+            <div class="triangle-item triangle-item--right aos-init aos-animate" data-aos="fade-up" data-aos-offset="0"
+              data-aos-delay="600" data-aos-duration="1000" data-aos-easing="ease-out">
+              <div class="triangle-item__img">
+                <img class="lozad" data-src="/img/brand3.png" alt="Colloquy" src="img/brand3.png" data-loaded="true" />
+              </div>
+              <a class="triangle-item__link" href="#">Colloquy link</a>
+            </div>
+          </div>
+          <div class="solution__item">
+            <div data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-duration="1200"
+              data-aos-delay="350" class="aos-init aos-animate">
+              <span>4</span>
+              <p>
+                A country’s economy is so fragile. As you saw in 2008, it only takes a few people
+                at the top to ruin it. We want to stop that from happening ever again.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="solution__bottom">
+        <div class="solution__triangle">
+          <div class="wrapper"></div>
+        </div>
+        <div class="solution__bottom-wrap wrapper" id="solution">
+          <p class="solution__title solution__title--white aos-init aos-animate" data-aos="fade-right"
+            data-aos-offset="0" data-aos-duration="1500" data-aos-easing="ease-out">
+            Solution
+          </p>
+          <div class="solution__decor aos-init aos-animate" data-aos-offset="200" data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="100">
+            <p>
+              By using the power of Quantum Computing, you can help us take the exclusivity of the
+              top 1%, and solve 4 major problems: Develop a stable, wealthy economy for all, cure
+              poverty, level the playing ground for all (not just the richest), and help you make
+              your financial dreams come true!
+            </p>
+            <span class="solution__decor-triangle"></span>
+            <span class="solution__decor-triangle solution__decor-triangle--always-visible"></span>
+            <span class="solution__decor-triangle"></span>
+          </div>
+        </div>
+        <div class="solution__steps">
+          <div class="wrapper solution__steps-wrap">
+            <h2>So, what do you need to do to start?</h2>
+            <div class="solution__step aos-init aos-animate" data-aos="slide-left" data-aos-easing="ease-in-out"
+              data-aos-offset="0" data-aos-duration="1200">
+              <span class="solution__step-num">1</span>
+              <span class="solution__step-title">Deposit</span>
+              <p class="solution__step-text">Deposit 250 Euros.</p>
+            </div>
+            <div class="solution__step aos-init aos-animate" data-aos="slide-right" data-aos-easing="ease-in-out"
+              data-aos-offset="0" data-aos-duration="1200" data-aos-delay="250">
+              <span class="solution__step-num solution__step-num--middle">2</span>
+              <span class="solution__step-title">Pick</span>
+              <p class="solution__step-text">
+                Pick the trades QuantumAI recommends (with the power of Quantum Computing!)
+              </p>
+            </div>
+            <div class="solution__step aos-init aos-animate" data-aos="slide-left" data-aos-easing="ease-in-out"
+              data-aos-offset="0" data-aos-duration="1200" data-aos-delay="500">
+              <span class="solution__step-num">3</span>
+              <span class="solution__step-title">Withdraw</span>
+              <p class="solution__step-text">Withdraw any funds in matter of hours!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section technology" id="technology">
+      <div class="wrapper technology__header">
+        <h2 data-aos="fade-right" data-aos-offset="0" data-aos-duration="1500" data-aos-easing="ease-out"
+          class="aos-init">
+          What Makes Quantum Computing So Good For Investing
+        </h2>
+        <p>
+          This is the world’s first quantum computing machine; unlike your home PC, this computer
+          is smart – it makes thousands of simultaneous ‘decisions’ at once. Your brain thinks one
+          thought at a time, in a sequence. Imagine if you could have thousands of thoughts at
+          once, each as clear as the other. That’s quantum computing.
+        </p>
+        <p>
+          Using that power, our quantum computing machine will help you make smarter trades and
+          make more money than you thought possible. Even better, it’s designed so that you can
+          make money and help others while you profit!
+        </p>
+        <p>
+          It finds trades by analysing differentials between stock prices every nano-second that
+          stock markets are live (and makes predictions even when the markets are closed, so
+          you’ll know what’s likely to happen when they re-open). Your current computer (and
+          everyone else’s) can’t match the decision speeds of this new system.
+        </p>
+        <p>
+          Sign up, and be one of the exclusive few using this technology (before everyone else
+          gets wind of it!)
+        </p>
+        .
+      </div>
+    </section>
+
+    <section class="section advisors" id="advisors">
+      <div class="wrapper">
+        <h2 class="text-white aos-init" data-aos="fade-right" data-aos-offset="0" data-aos-duration="1500"
+          data-aos-easing="ease-out">
+          Advisors
+        </h2>
+        <div class="swiper-container js-advisors-slider">
+          <div class="advisors__wrap swiper-wrapper">
+            <div class="advisor-item swiper-slide">
+              <div class="advisor-item__wrap aos-init" data-aos="fade-right" data-aos-offset="0"
+                data-aos-duration="1000" data-aos-easing="ease-out">
+                <div class="advisor-item__top">
+                  <div class="advisor-item__img">
+                    <img class="lozad" data-src="/img/c2.jpg" alt="Vladimir Tikhomirov" src="img/c2.jpg"
+                      data-loaded="true" />
+                  </div>
+                  <div class="advisor-item__info">
+                    <p class="advisor-item__name">Jeff Bezos:</p>
+                    <p class="advisor-item__position">
+                      Technology entrepreneur, investor, and philanthropist
+                    </p>
+                    <a href="#">
+                      <svg width="26" height="26" viewBox="0 1 24 23">
+                        <ellipse cx="2.5" cy="3.5" rx="2.48" ry="2.5"></ellipse>
+                        <path
+                          d="M12.982,10.155V8H8.014v16h4.969v-8.399c0-4.67,6.029-5.052,6.029,0V24H24V13.869C24,5.989,15.078,6.276,12.982,10.155z">
+                        </path>
+                        <rect y="8" width="5" height="16"></rect>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="advisor-item__bottom">
+                  <p>
+                    Quantum computing is the future. I’m not exaggerating when I say it will
+                    change everything. This is the early days of quantum computing; not many
+                    people know about it, which means very few are using it. The few that are, are
+                    making incredibly wise (and profitable) decisions.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="advisor-item swiper-slide">
+              <div class="advisor-item__wrap aos-init" data-aos="fade-left" data-aos-offset="0" data-aos-duration="1000"
+                data-aos-delay="250" data-aos-easing="ease-out">
+                <div class="advisor-item__top">
+                  <div class="advisor-item__img">
+                    <img class="lozad" data-src="/img/c1.jpg" alt="Tom Kojima" src="img/c1.jpg" data-loaded="true" />
+                  </div>
+                  <div class="advisor-item__info">
+                    <p class="advisor-item__name">Bill Gates:</p>
+                    <p class="advisor-item__position">
+                      Business magnate, investor, author, philanthropist, and humanitarian
+                    </p>
+                    <a href="#">
+                      <svg width="26" height="26" viewBox="0 1 24 23">
+                        <ellipse cx="2.5" cy="3.5" rx="2.48" ry="2.5"></ellipse>
+                        <path
+                          d="M12.982,10.155V8H8.014v16h4.969v-8.399c0-4.67,6.029-5.052,6.029,0V24H24V13.869C24,5.989,15.078,6.276,12.982,10.155z">
+                        </path>
+                        <rect y="8" width="5" height="16"></rect>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="advisor-item__bottom">
+                  <p>
+                    I know for a fact Elon has spent €3 billion of his own money to fund this
+                    program. Hats off to him for that – that’s €3 billion of his own money to fund
+                    a better future for everyone, and to help others make profits that’ll help him
+                    do so! It’s a win-win, and I’m very excited to see where it goes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination advisors__pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section partners">
+      <div class="wrapper wrapper--mobile">
+        <h2>Partners</h2>
+        <div class="swiper-container js-partner-slider swiper-container-horizontal">
+          <div class="partners__wrap swiper-wrapper" style="transform: translate3d(0px, 0px, 0px)">
+            <div class="partner-item swiper-slide swiper-slide-active">
+              <div class="partner-item__logo">
+                <img class="lozad" alt="#" src="img/ll1.png" data-loaded="true" />
+              </div>
+            </div>
+            <div class="partner-item swiper-slide swiper-slide-next">
+              <div class="partner-item__logo">
+                <img class="lozad" alt="#" src="img/ll2.png" data-loaded="true" />
+              </div>
+            </div>
+            <div class="partner-item swiper-slide">
+              <div class="partner-item__logo">
+                <img class="lozad" alt="#" src="img/ll3.png" data-loaded="true" />
+              </div>
+            </div>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <div class="swiper-container js-partner-slider swiper-container-horizontal">
+          <div class="partners__wrap swiper-wrapper" style="transform: translate3d(0px, 0px, 0px)">
+            <div class="partner-item swiper-slide swiper-slide-active">
+              <div class="partner-item__logo">
+                <img class="lozad" alt="#" src="img/ll4.png" data-loaded="true" />
+              </div>
+            </div>
+            <div class="partner-item swiper-slide swiper-slide-next">
+              <div class="partner-item__logo">
+                <img class="lozad" alt="#" src="img/ll6.png" data-loaded="true" />
+              </div>
+            </div>
+            <div class="partner-item swiper-slide">
+              <div class="partner-item__logo">
+                <img class="lozad" alt="#" src="img/ll5.png" data-loaded="true" />
+              </div>
+            </div>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="wrapper">
+      <div class="promo__middle-right aos-init aos-animate" data-aos="fade-zoom-in" data-aos-easing="ease-in-out"
+        data-aos-duration="1000" data-aos-offset="-200" data-aos-delay="600">
+        <a class="ios-button to-form" data-url="#toform">
+          <div class="ios-button__img">
+            <img class="lozad" data-src="/img/apple-logo.png" src="img/qce_logo_150dpi.png" data-loaded="true" />
+          </div>
+          <div class="ios-button__text">
+            <span>World's first Quantum computer</span>
+            <span>is now LIVE!</span>
+          </div>
+        </a>
+      </div>
+      <!-- <div class="container">
+                <section class="footer__content">
+                </section>
+            </div>
+            <div class="footer__socials">
+                <div class="socials__heading">Follow our journey</div>
+                <div class="socials__list">
+                    <a class="socials__link">
+                        <span class="socials__icon icon--medium"></span>
+                    </a>
+                    <a class="socials__link">
+                        <span class="socials__icon icon--facebook"></span>
+                    </a>
+                    <a class="socials__link">
+                        <span class="socials__icon icon--linkedin"></span>
+                    </a>
+                    <a class="socials__link">
+                        <span class="socials__icon icon--twitter"></span>
+                    </a>
+                    <a class="socials__link">
+                        <span class="socials__icon icon--reddit"></span>
+                    </a>
+                    <a class="socials__link">
+                        <span class="socials__icon icon--telegram"></span>
+                    </a>
+                    <a class="socials__link">
+                        <span class="socials__icon icon--bitcoin"></span>
+                    </a>
+                    <a class="socials__link">
+                        <span class="socials__icon icon--youtube"></span>
+                    </a>
+                </div>
+            </div> -->
+
+      <div class="footer__bottom">
+        <div class="bottom__col">©QuantumAI. All rights reserved.</div>
+        <div class="bottom__col">
+          <a class="bottom__link to-form" data-url="#toform" target="__blank">Privacy Policy</a> |
+          <a class="bottom__link to-form" data-url="#toform">Cookie Policy &amp; Settings</a> |
+          <a class="bottom__link to-form" data-url="#toform">Contacts</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-form" id="modalFailure">
+    <p class="close-modal" href="#">&times;</p>
+    <div class="content">
+      <div class="sign-up-form-header text-center mb-4">
+        <h5 class="mb-2 mt-4">
+          ou have already registered for this number. If you need a new account, please register
+          for a different mobile number.
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-form" id="modalFailureEmail">
+    <p class="close-modal" href="#">&times;</p>
+    <div class="content">
+      <div class="sign-up-form-header text-center mb-4">
+        <h5 class="mb-2 mt-4">
+          You have already registered with this email. If you need a new account, please register
+          with a different email.
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-form" id="modalInvalid">
+    <p class="close-modal" href="#">&times;</p>
+    <div class="content">
+      <div class="sign-up-form-header text-center mb-4">
+        <h5 class="mb-2 mt-4">
+          You have entered an invalid email. Sign up for a different email.
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="verificationModal" tabindex="-1" role="dialog" aria-labelledby="verificationModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="verificationModalLabel">Enter the code from the SMS</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+        </div>
+        <div class="modal-body">
+          <!-- <input type="text" class="form-control form-input" id="verification_code" name="verification_code" value=""
+          placeholder="Verification Code" required /> -->
+          <input type="text" class="form-control form-input" id="verification_code" name="verification_code" value=""
+            placeholder="Verification Code" pattern="\d{4}" title="Please enter a 4-digit verification code" required
+            autocomplete="off" />
+
+          <div id="verificationError" class="error-message"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="verifyCodeBtn">Verify Code</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js">
+  </script>
+  <script src="js/aos.js"></script>
+  <script src="js/axios.min.js"></script>
+  <script src="js/jquery.animateNumber.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/utm.js"></script>
+  <script src="js/intlTelInput.min.js"></script>
+  <script src="js/jquery.maskedinput.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkCookiePhone.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/submitForm.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+
+</html>
