@@ -22,6 +22,12 @@
     <link rel="icon" href="images/0x0.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="images/0x0.png" />
 
+    <script
+      type="text/javascript"
+      src="js/jquery.fancybox.pack.js"
+      id="jquery-fancybox-js"
+    ></script>
+
     <!-- JS adapter -->
     <script type="application/javascript">
       function getCookie(name) {
@@ -509,7 +515,7 @@
                                       <div class="wpb_raw_code wpb_content_element wpb_raw_html">
                                         <div class="wpb_wrapper">
                                           <div text-align: center; class="video-button">
-                                            <a data-action="scrollToForm" class="fancybox">
+                                            <a id="toggleLink" href="#link" class="fancybox">
                                               <img src="images/16-1.png" />
                                             </a>
                                           </div>
@@ -547,12 +553,26 @@
                                                 loop="1"
                                               >
                                                 <source
-                                                  src="https://wtcprojects.com/VT/video/QUANTUMAIN/video/quantumai.mp4"
+                                                  src="video/video.mp4"
                                                   type="video/mp4"
                                                 />
                                               </video>
                                             </div>
                                           </div>
+
+                                          <script>
+                                            const toggleLink =
+                                              document.getElementById('toggleLink');
+                                            const linkElement = document.getElementById('link');
+
+                                            toggleLink.addEventListener('click', function () {
+                                              if (linkElement.style.display === 'none') {
+                                                linkElement.style.display = 'block';
+                                              } else {
+                                                linkElement.style.display = 'none';
+                                              }
+                                            });
+                                          </script>
                                         </div>
                                       </div>
                                     </div>
@@ -2924,6 +2944,12 @@
     </div>
 
     <link rel="stylesheet" href="css/intlTelInput.css" />
+
+    <script
+      type="text/javascript"
+      src="js/jquery.fancybox.pack.js"
+      id="jquery-fancybox-js"
+    ></script>
 
     <script src="js/jquery.validate.js"></script>
     <script src="js/utm.js"></script>
