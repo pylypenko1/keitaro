@@ -3261,7 +3261,8 @@ html {
     display: flex;
     align-items: center;
     color: #333333;
-    font-size: 14px;
+    font-size: 16px;
+    margin-left: 10px;
 }
 
 .main-header__navigation .btn-menu img {

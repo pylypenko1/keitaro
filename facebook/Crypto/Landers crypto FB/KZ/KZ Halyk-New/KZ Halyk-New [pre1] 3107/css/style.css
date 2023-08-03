@@ -494,6 +494,7 @@ a:hover {
   }
 
   .about__link:last-child {
+    z-index: 999;
     font-size: 18px;
     line-height: 31px;
   }
@@ -560,6 +561,7 @@ a:hover {
   }
 
   .header__list-img {
+    width: 30px;
     background: #fff;
   }
 
@@ -590,10 +592,6 @@ a:hover {
     top: 0;
     z-index: 100;
     box-shadow: 1px 1px 2px 1px #fff;
-  }
-
-  body.active {
-    overflow: hidden;
   }
 
   .header__menu {

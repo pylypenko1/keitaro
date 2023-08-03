@@ -1,0 +1,1741 @@
+<html lang="en">
+  <head>
+    <meta name="facebook-domain-verification" content="e1lk7gg97alcdve1adpj7zwarllv80" />
+    <meta name="theme-color" content="#081047" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>QuantumAI</title>
+    <link rel="stylesheet" href="css/quantum.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link id="aos-style-link" href="css/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style_1.css" />
+    <!-- <link rel="stylesheet" href="css/trades.css"> -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/intlTelInput.css" />
+    <link rel="stylesheet" href="css/range.css" />
+
+    <link rel="stylesheet" href="css/slider_1.css" />
+    <style>
+      .iti__flag-container {
+        color: #000;
+      }
+
+      html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+      }
+
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+      }
+    </style>
+
+    <style>
+      form {
+        position: relative;
+      }
+
+      #preloader {
+        display: none;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        background: #bdbdbdb3;
+        z-index: 1;
+        border-radius: 5px;
+      }
+
+      #preloader img {
+        position: absolute;
+        z-index: 2;
+        top: calc(50% - 25px);
+        left: calc(50% - 25px);
+        width: 50px;
+        height: 50px;
+      }
+      form button[type='submit'] {
+        margin-top: 15px;
+      }
+    </style>
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|€)');
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!'{subid}'.match('{')) {
+          return '{subid}';
+        }
+        var clientSubid = '<?php echo isset(€client) ? €client->getSubid() : "" ?>';
+        if (clientSubid && !clientSubid.match('>')) {
+          return clientSubid;
+        }
+        if (params.get('_subid')) {
+          return params.get('_subid');
+        }
+        if (params.get('subid')) {
+          return params.get('subid');
+        }
+        if (getCookie('subid')) {
+          return getCookie('subid');
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!'{token}'.match('{')) {
+          return '{token}';
+        }
+        var clientToken = '<?php echo isset(€client) ? €client->getToken() : "" ?>';
+        if (clientToken && !clientToken.match('>')) {
+          return clientToken;
+        }
+        if (params.get('_token')) {
+          return params.get('_token');
+        }
+        if (params.get('token')) {
+          return params.get('token');
+        }
+        if (getCookie('token')) {
+          return getCookie('token');
+        }
+        return null;
+      }
+
+      // function getPixel() {
+      //     var params = new URLSearchParams(document.location.search.substr(1));
+      //     if (!'{pixel}'.match('{')) {
+      //         return '{pixel}';
+      //     }
+      //     if (params.get('pixel')) {
+      //         return params.get('pixel')
+      //     }
+
+      //     if (getCookie('pixel')) {
+      //         return getCookie('pixel');
+      //     }
+
+      //     return null;
+      // }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!'{idpxl}'.match('{')) {
+          return '{idpxl}';
+        }
+        if (params.get('idpxl')) {
+          return params.get('idpxl');
+        }
+
+        if (getCookie('idpxl')) {
+          return getCookie('idpxl');
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === 'function') {
+        document.addEventListener('DOMContentLoaded', function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set('_token', token);
+          setCookie('idpxl', pixel);
+          setCookie('token', token);
+          setCookie('subid', subid);
+
+          // Adds params as hidden inputs to the forms
+          document.querySelectorAll('form').forEach(function (form) {
+            params.forEach(function (v, k) {
+              var input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = k;
+              input.value = v;
+
+              form.append(input);
+            });
+          });
+        });
+      }
+    </script>
+    <!-- End JS adapter -->
+  </head>
+
+  <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="overflow: auto">
+    <nav class="mobile-nav">
+      <div class="mobile-nav__wrap">
+        <a class="button button--sm" href="#" onclick="document.location.hash='';return false;"
+          >Sign in</a
+        >
+      </div>
+    </nav>
+
+    <header class="header header--sticky">
+      <div class="header__wrapper">
+        <div
+          class="header__logo aos-init aos-animate"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1000"
+        >
+          <svg width="140" height="62" viewBox="0 0 124.2 42">
+            <path
+              d="M52.2,14.7c0.1,0.1,0.4,0.3,0.7,0.3c0.5,0,1.1-0.4,1.1-1.1v-2c0-2.8-2.2-5.2-5.2-5.2h-3.7V3c0-0.9-0.4-1.7-1.2-2.4
+                c-0.7-0.5-1.6-0.8-2.5-0.7L10,6.9c-2.4,0.4-4.2,2.5-4.2,5v25c0,2.8,2.2,5.2,5.2,5.2h38c2.8,0,5.2-2.2,5.2-5.2v-2.4
+                c0-0.3-0.1-0.5-0.3-0.7c-0.1-0.1-0.4-0.3-0.7-0.3c-0.5,0-1.1,0.4-1.1,1.1V37c0,1.7-1.5,3-3,3H10.9c-1.7,0-3-1.3-3-3V11.9
+                c0-1.6,1.2-2.8,2.6-3c0.1,0,0.3,0,0.5,0h38c1.7,0,3,1.3,3,3V14C52,14.3,52.1,14.5,52.2,14.7 M20,6.7L41.9,2c0.3,0,0.7,0,0.8,0.3
+                C43,2.4,43.1,2.8,43.1,3v3.7C43.1,6.7,20,6.7,20,6.7z"
+            />
+            <path
+              d="M25.4,32c-2-0.5-4-1.1-5.7-1.7c-0.3-0.1-0.6-0.2-0.9-0.2c-3.5-0.1-6.5-2.7-6.5-7.5c0-4.8,2.9-7.8,6.9-7.8
+                c4,0,6.6,3.1,6.6,7.5c0,3.8-1.8,6.2-4.2,7.1v0.1c1.5,0.4,3.1,0.7,4.3,0.9L25.4,32z M23.8,22.4c0-3-1.5-6-4.7-6c-3.2,0-4.8,3-4.8,6.2
+                c0,3.1,1.7,6,4.7,6C22.1,28.5,23.8,25.8,23.8,22.4z"
+            />
+            <path
+              d="M37.6,27c0,1.1,0,2.1,0.1,2.9h-1.7l-0.1-1.7h0c-0.5,0.9-1.6,2-3.5,2c-1.7,0-3.7-0.9-3.7-4.7v-6.2h1.9v5.9
+                c0,2,0.6,3.4,2.4,3.4c1.3,0,2.2-0.9,2.6-1.8c0.1-0.3,0.2-0.6,0.2-1v-6.5h1.9V27z"
+            />
+            <path
+              d="M47,29.9l-0.2-1.3h-0.1c-0.6,0.8-1.7,1.6-3.3,1.6c-2.2,0-3.3-1.5-3.3-3.1c0-2.6,2.3-4,6.4-4v-0.2c0-0.9-0.2-2.5-2.4-2.5
+                c-1,0-2,0.3-2.8,0.8L41,19.9c0.9-0.6,2.2-0.9,3.5-0.9c3.3,0,4,2.2,4,4.4v4c0,0.9,0,1.8,0.2,2.6H47z M46.7,24.4
+                c-2.1,0-4.5,0.3-4.5,2.4c0,1.3,0.8,1.8,1.8,1.8c1.4,0,2.3-0.9,2.6-1.8c0.1-0.2,0.1-0.4,0.1-0.6V24.4z"
+            />
+            <path
+              d="M52.1,22.1c0-1.1,0-2-0.1-2.9h1.7l0.1,1.8h0c0.5-1,1.8-2,3.5-2c1.5,0,3.8,0.9,3.8,4.5v6.4h-1.9v-6.1c0-1.7-0.6-3.1-2.5-3.1
+                c-1.3,0-2.3,0.9-2.6,2c-0.1,0.2-0.1,0.6-0.1,0.9v6.4h-1.9V22.1z"
+            />
+            <path
+              d="M66.9,16.2v3.1h2.8v1.5h-2.8v5.7c0,1.3,0.4,2.1,1.5,2.1c0.5,0,0.9-0.1,1.1-0.1l0.1,1.5c-0.4,0.2-1,0.3-1.7,0.3
+                c-0.9,0-1.6-0.3-2.1-0.8c-0.5-0.6-0.7-1.5-0.7-2.8v-5.8h-1.7v-1.5H65v-2.6L66.9,16.2z"
+            />
+            <path
+              d="M81.1,27c0,1.1,0,2.1,0.1,2.9h-1.7l-0.1-1.7h0c-0.5,0.9-1.6,2-3.5,2c-1.7,0-3.7-0.9-3.7-4.7v-6.2H74v5.9
+                c0,2,0.6,3.4,2.4,3.4c1.3,0,2.2-0.9,2.6-1.8c0.1-0.3,0.2-0.6,0.2-1v-6.5h1.9V27z"
+            />
+            <path
+              d="M84.7,22.1c0-1.1,0-2-0.1-2.9h1.7l0.1,1.7h0.1c0.6-1,1.6-2,3.3-2c1.5,0,2.6,0.9,3,2.1h0c0.3-0.6,0.7-1.1,1.2-1.4
+                c0.6-0.5,1.3-0.7,2.4-0.7c1.4,0,3.5,0.9,3.5,4.6v6.3H98v-6c0-2-0.7-3.3-2.3-3.3c-1.1,0-2,0.8-2.3,1.8c-0.1,0.3-0.2,0.6-0.2,1v6.6
+                h-1.9v-6.4c0-1.7-0.7-2.9-2.2-2.9c-1.2,0-2.1,1-2.4,1.9c-0.1,0.3-0.2,0.6-0.2,0.9v6.4h-1.9V22.1z"
+            />
+            <path
+              d="M105.8,25.2l-1.5,4.7h-2l5-14.8h2.3l5.1,14.8h-2l-1.6-4.7H105.8z M110.7,23.7l-1.5-4.3c-0.3-1-0.6-1.8-0.8-2.7h0
+                c-0.2,0.9-0.5,1.8-0.7,2.7l-1.5,4.3H110.7z"
+            />
+            <path d="M119.1,15v14.8h-1.9V15H119.1z" />
+          </svg>
+        </div>
+        <nav class="header__nav">
+          <div class="exclusive-offer">
+            <div class="exclusive-text">
+              <span class="text-span-8">EXCLUSIVE OFFER FOR</span><br /><span
+                class="text-span exc-2"
+              >
+                CANADIANS</span
+              >
+            </div>
+            <div class="exclusive-flag flag-icon">
+              <img style="height: 40px" src="fonts/CA.svg" alt data-init-macros="country_flag" />
+            </div>
+          </div>
+        </nav>
+        <div
+          class="header__user aos-init aos-animate"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1000"
+          data-aos-delay="1050"
+        >
+          <a class="header__auth button button--sm" href="#block">Create account</a>
+        </div>
+        <button class="header__hamburger hamburger hamburger--emphatic" type="button">
+          <a class="header__auth button button--sm" href="#block">Create account</a>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section promo promo-main">
+        <div class="wrapper">
+          <div class="promo__wrap">
+            <div class="promo__head">
+              <h1
+                data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-delay="400"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+                class="aos-init aos-animate"
+              >
+                Smart Investing That Makes You $1500 in 5 Hours And Cures Poverty
+              </h1>
+              <p
+                data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-delay="600"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+                class="aos-init aos-animate"
+              >
+                Our smart investing can make you thousands in less than 7 days, and will help cure
+                poverty while you earn!
+              </p>
+              <a
+                class="ios-button"
+                href="#block"
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-duration="500"
+                data-aos-offset="-200"
+                data-aos-delay="900"
+              >
+                <div class="ios-button__img">
+                  <img
+                    class="lozad"
+                    data-src="img/apple-logo.png"
+                    src="images/qce_logo_150dpi.png"
+                    data-loaded="true"
+                  />
+                </div>
+                <div class="ios-button__text" id="block">
+                  <span>World's first Quantum computer</span>
+                  <span>is now LIVE!</span>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="promo__middle-left aos-init form-div aos-animate"
+              data-aos-offset="-200"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="1000"
+              data-aos-delay="700"
+            >
+              <h2>SIGN UP FOR FREE</h2>
+              <div>
+                <form
+                  style="padding: 1rem 2rem 2rem 2rem"
+                  method="post"
+                  class="register-form"
+                  id="leadform"
+                  autocomplete="off"
+                >
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <label class="control-label">First Name</label>
+                      <input
+                        class="form-control"
+                        id="first_name"
+                        name="first_name"
+                        value=""
+                        placeholder="First Name"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <label class="control-label">Last Name</label>
+                      <input
+                        class="form-control"
+                        id="last_name"
+                        name="last_name"
+                        value=""
+                        placeholder="Last Name"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label class="control-label">Email</label>
+                      <input
+                        class="form-control"
+                        type="email"
+                        id="email"
+                        name="email"
+                        name="email"
+                        value=""
+                        placeholder="Email"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label class="control-label">Phone</label>
+                      <input
+                        class="form-control"
+                        name="phone1"
+                        id="phone1"
+                        value=""
+                        placeholder=""
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div id="preloader"><img src="images/preloader.gif" alt="preloader" /></div>
+
+                  <button
+                    type="submit"
+                    id="submit"
+                    onclick="opengif()"
+                    class="btn_send buttonSbmt btn btn-danger btn-lg tradeBtn btn-submit"
+                  >
+                    <span class="b_icon"></span>
+                    <span>Get Started</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="w-layout-grid grid-hero---b">
+        <a href="#block" class="link-services-hero border-off w-inline-block">
+          <div class="block-services-hero">
+            <h3 class="heading-services-hero">1. SIGN UP</h3>
+          </div>
+          <p class="paragraph-services-hero">
+            Once your registration is accepted, you will automatically become the newest member of
+            the QuantumAI. And you will get to claim our proprietary bitcoin trading software for
+            free.
+          </p>
+        </a>
+        <a href="#block" class="link-services-hero w-inline-block">
+          <div class="block-services-hero">
+            <h3 class="heading-services-hero">2. FUND YOUR ACCOUNT</h3>
+          </div>
+          <p class="paragraph-services-hero">
+            Like any business, you need working capital to get started. So to start profiting with
+            QuantumAI, you must invest any amount you desire of $350 or more.
+          </p>
+        </a>
+        <a href="#block" class="link-services-hero w-inline-block">
+          <div class="block-services-hero">
+            <h3 class="heading-services-hero">3. PROFIT</h3>
+          </div>
+          <p class="paragraph-services-hero">
+            Click trade to enjoy precise and accurate hands-free trading powered by our
+            award-winning algorithm. You can also set the trading to manual if you prefer to trade
+            on your own.
+          </p>
+        </a>
+      </div>
+      <section class="calculate">
+        <div class="container">
+          <div class="calculate__title">
+            <h2>How much I will earn in 7 days?</h2>
+          </div>
+          <div class="calculate__wrapper">
+            <form class="calculate__group--form">
+              <div class="calculate__earn">
+                <label>Your profit:</label>
+                <h3 id="calcResult">$330</h3>
+              </div>
+              <div class="calculate__invest">
+                <label>Your investment:</label>
+                <span class="irs-grid" style="width: 95.3846%; left: 2.20769%"
+                  ><span class="irs-grid-pol" style="left: 0%"></span
+                  ><span
+                    class="irs-grid-text js-grid-text-0"
+                    style="left: 0%; margin-left: -2.69231%"
+                    >350</span
+                  ><span class="irs-grid-pol small" style="left: 20%"></span
+                  ><span class="irs-grid-pol small" style="left: 15%"></span
+                  ><span class="irs-grid-pol small" style="left: 10%"></span
+                  ><span class="irs-grid-pol small" style="left: 5%"></span
+                  ><span class="irs-grid-pol" style="left: 25%"></span
+                  ><span
+                    class="irs-grid-text js-grid-text-1"
+                    style="left: 25%; visibility: visible; margin-left: -4.61538%"
+                    >125 188</span
+                  ><span class="irs-grid-pol small" style="left: 45%"></span
+                  ><span class="irs-grid-pol small" style="left: 40%"></span
+                  ><span class="irs-grid-pol small" style="left: 35%"></span
+                  ><span class="irs-grid-pol small" style="left: 30%"></span
+                  ><span class="irs-grid-pol" style="left: 50%"></span
+                  ><span
+                    class="irs-grid-text js-grid-text-2"
+                    style="left: 50%; visibility: visible; margin-left: -4.90385%"
+                    >250 125</span
+                  ><span class="irs-grid-pol small" style="left: 70%"></span
+                  ><span class="irs-grid-pol small" style="left: 65%"></span
+                  ><span class="irs-grid-pol small" style="left: 60%"></span
+                  ><span class="irs-grid-pol small" style="left: 55%"></span
+                  ><span class="irs-grid-pol" style="left: 75%"></span
+                  ><span
+                    class="irs-grid-text js-grid-text-3"
+                    style="left: 75%; visibility: visible; margin-left: -5%"
+                    >375 063</span
+                  ><span class="irs-grid-pol small" style="left: 95%"></span
+                  ><span class="irs-grid-pol small" style="left: 90%"></span
+                  ><span class="irs-grid-pol small" style="left: 85%"></span
+                  ><span class="irs-grid-pol small" style="left: 80%"></span
+                  ><span class="irs-grid-pol" style="left: 100%"></span
+                  ><span
+                    class="irs-grid-text js-grid-text-4"
+                    style="left: 100%; margin-left: -5.28846%"
+                    >500 000</span
+                  ></span
+                ><span class="irs-bar irs-bar--single" style="left: 0px; width: 2.30769%"></span
+                ><span class="irs-shadow shadow-single" style="display: none"></span
+                ><span class="irs-handle single" style="left: 0%"><i></i><i></i><i></i></span
+                ><input
+                  type="text"
+                  class="js-range-slider"
+                  name="my_range"
+                  value
+                  tabindex="-1"
+                  readonly
+                />
+              </div>
+              <div class="calculate__btn-container">
+                <a href="#block" class="calculate__btn button btn-scroll">instant access</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="people">
+        <div class="container">
+          <div class="people__trades">
+            <div class="global-trades">
+              <table class="table">
+                <tbody class="live-trades">
+                  <tr>
+                    <td><span class="flag-icon flag-icon-nz flag-icon-squared"></span></td>
+                    <td>Donald S.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $628
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/USD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:03:03
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-gb flag-icon-squared"></span></td>
+                    <td>Beverly O.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $47
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/JPY
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:03:01
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-at flag-icon-squared"></span></td>
+                    <td>Armin R.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $893
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/CAD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:03:01
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-ie flag-icon-squared"></span></td>
+                    <td>Dean S.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $543
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/AUD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:03:00
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-ch flag-icon-squared"></span></td>
+                    <td>Heidi P.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $631
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/NZD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:59
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-it flag-icon-squared"></span></td>
+                    <td>Marzio U.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $599
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/NZD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:58
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-it flag-icon-squared"></span></td>
+                    <td>Artemio E.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $656
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/CAD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:57
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-hk flag-icon-squared"></span></td>
+                    <td>Bobby W.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $203
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/CHF
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:54
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-gb flag-icon-squared"></span></td>
+                    <td>Leslie D.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $657
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/NZD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:53
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-at flag-icon-squared"></span></td>
+                    <td>Lara Z.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $41
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/USD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:51
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-at flag-icon-squared"></span></td>
+                    <td>Eugen U.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $677
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/USD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:49
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-ch flag-icon-squared"></span></td>
+                    <td>Roman Z.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $767
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/AUD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:46
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-sg flag-icon-squared"></span></td>
+                    <td>Marsha Z.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $613
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/JPY
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:44
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-ch flag-icon-squared"></span></td>
+                    <td>Hannelore I.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $807
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/CAD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:42
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-nz flag-icon-squared"></span></td>
+                    <td>Sherry R.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $408
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/AUD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:40
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-at flag-icon-squared"></span></td>
+                    <td>Aliona J.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $401
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/GBP
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:38
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-nz flag-icon-squared"></span></td>
+                    <td>Bernard V.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $525
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/EUR
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:36
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-ca flag-icon-squared"></span></td>
+                    <td>Richard D.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $383
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/CAD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:35
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-it flag-icon-squared"></span></td>
+                    <td>Vanessa D.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $489
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/GBP
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:33
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-za flag-icon-squared"></span></td>
+                    <td>Cathy K.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $411
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/NZD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:31
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-nz flag-icon-squared"></span></td>
+                    <td>Whitney N.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $626
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/JPY
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:29
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-hk flag-icon-squared"></span></td>
+                    <td>Jay L.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $856
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/USD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:28
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-ch flag-icon-squared"></span></td>
+                    <td>Enzo N.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $634
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/USD
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:28
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-it flag-icon-squared"></span></td>
+                    <td>Gualtiero S.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $110
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/JPY
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:27
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-au flag-icon-squared"></span></td>
+                    <td>Bruce O.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $580
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/JPY
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:26
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="flag-icon flag-icon-gb flag-icon-squared"></span></td>
+                    <td>Ramona T.</td>
+                    <td>
+                      <div class="button-3d button-mini button-rounded button-green nomargin">
+                        $904
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-currency button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        IE/CHF
+                      </div>
+                    </td>
+                    <td class="live-trade-opt">
+                      <div
+                        class="live-trade-time button-3d button-mini button-rounded button-white button-light nomargin"
+                      >
+                        13:02:25
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section solution">
+        <h2 class="visually-hidden">Solution</h2>
+        <div class="solution__top wrapper" id="problem">
+          <p
+            class="solution__title aos-init aos-animate"
+            data-aos="fade-right"
+            data-aos-offset="0"
+            data-aos-duration="1500"
+            data-aos-easing="ease-out"
+          >
+            Problem
+          </p>
+          <div class="solution__top-wrap">
+            <div class="solution__item">
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                class="aos-init aos-animate"
+              >
+                <span>1</span>
+                <p>
+                  Poverty is a global issue, one which we aim to solve – forever. When you invest
+                  with 250$, you’re directly helping us save people’s lives – and making money!
+                </p>
+              </div>
+              <div
+                class="triangle-item triangle-item--left aos-init aos-animate"
+                data-aos="fade-up"
+                data-aos-offset="0"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+              >
+                <div class="triangle-item__img">
+                  <img
+                    class="lozad"
+                    data-src="img/brand.png"
+                    alt="deloitte"
+                    src="images/brand.png"
+                    data-loaded="true"
+                  />
+                </div>
+                <a
+                  class="triangle-item__link"
+                  href="#"
+                  onclick="document.location.hash='';return false;"
+                  >Delloite link</a
+                >
+              </div>
+            </div>
+            <div class="solution__item">
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="150"
+                class="aos-init aos-animate"
+              >
+                <span>2</span>
+                <p>
+                  Big corporations are the ones holding all the keys to those big paychecks. With
+                  Quantum Computing, that’s no longer true. Now YOU have the power to make a great
+                  income. The power that was once reserve for the richest among us, is now yours.
+                </p>
+              </div>
+              <div
+                class="triangle-item triangle-item--middle aos-init aos-animate"
+                data-aos="fade-up"
+                data-aos-offset="0"
+                data-aos-delay="400"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+              >
+                <div class="triangle-item__img">
+                  <img
+                    class="lozad"
+                    data-src="img/brand2.png"
+                    alt="Bond"
+                    src="images/brand2.png"
+                    data-loaded="true"
+                  />
+                </div>
+                <a
+                  class="triangle-item__link"
+                  href="#"
+                  onclick="document.location.hash='';return false;"
+                  >Bond link</a
+                >
+              </div>
+            </div>
+            <div class="solution__item">
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="300"
+                class="aos-init aos-animate"
+              >
+                <span>3</span>
+                <p>
+                  QuantumAI is designed to make the world better. Elon developed this idea as a
+                  win-win. Have loans to pay off, or a mortgage to pay? Want to help people? Now you
+                  can do both.
+                </p>
+              </div>
+              <div
+                class="triangle-item triangle-item--right aos-init aos-animate"
+                data-aos="fade-up"
+                data-aos-offset="0"
+                data-aos-delay="600"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+              >
+                <div class="triangle-item__img">
+                  <img
+                    class="lozad"
+                    data-src="img/brand3.png"
+                    alt="Colloquy"
+                    src="images/brand3.png"
+                    data-loaded="true"
+                  />
+                </div>
+                <a
+                  class="triangle-item__link"
+                  href="#"
+                  onclick="document.location.hash='';return false;"
+                  >Colloquy link</a
+                >
+              </div>
+            </div>
+            <div class="solution__item">
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="350"
+                class="aos-init aos-animate"
+              >
+                <span>4</span>
+                <p>
+                  A country’s economy is so fragile. As you saw in 2008, it only takes a few people
+                  at the top to ruin it. We want to stop that from happening ever again.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="solution__bottom">
+          <div class="solution__triangle">
+            <div class="wrapper"></div>
+          </div>
+          <div class="solution__bottom-wrap wrapper" id="solution">
+            <p
+              class="solution__title solution__title--white aos-init aos-animate"
+              data-aos="fade-right"
+              data-aos-offset="0"
+              data-aos-duration="1500"
+              data-aos-easing="ease-out"
+            >
+              Solution
+            </p>
+            <div
+              class="solution__decor aos-init aos-animate"
+              data-aos-offset="200"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+            >
+              <p>
+                By using the power of Quantum Computing, you can help us take the exclusivity of the
+                top 1%, and solve 4 major problems: Develop a stable, wealthy economy for all, cure
+                poverty, level the playing ground for all (not just the richest), and help you make
+                your financial dreams come true!
+              </p>
+              <span class="solution__decor-triangle"></span>
+              <span
+                class="solution__decor-triangle solution__decor-triangle--always-visible"
+              ></span>
+              <span class="solution__decor-triangle"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section technology" id="technology">
+        <div class="wrapper technology__header">
+          <h2
+            data-aos="fade-right"
+            data-aos-offset="0"
+            data-aos-duration="1500"
+            data-aos-easing="ease-out"
+            class="aos-init"
+            style="color: #1b1a75"
+          >
+            What Makes Quantum Computing So Good For Investing
+          </h2>
+          <p>
+            This is the world’s first quantum computing machine; unlike your home PC, this computer
+            is smart – it makes thousands of simultaneous ‘decisions’ at once. Your brain thinks one
+            thought at a time, in a sequence. Imagine if you could have thousands of thoughts at
+            once, each as clear as the other. That’s quantum computing.
+          </p>
+          <p>
+            Using that power, our quantum computing machine will help you make smarter trades and
+            make more money than you thought possible. Even better, it’s designed so that you can
+            make money and help others while you profit!
+          </p>
+          <p>
+            It finds trades by analysing differentials between stock prices every nano-second that
+            stock markets are live (and makes predictions even when the markets are closed, so
+            you’ll know what’s likely to happen when they re-open). Your current computer (and
+            everyone else’s) can’t match the decision speeds of this new system.
+          </p>
+          <p>
+            Sign up, and be one of the exclusive few using this technology (before everyone else
+            gets wind of it!)
+          </p>
+          .
+        </div>
+      </section>
+
+      <section class="section advisors" id="advisors">
+        <div class="wrapper">
+          <h2
+            class="text-white aos-init"
+            data-aos="fade-right"
+            data-aos-offset="0"
+            data-aos-duration="1500"
+            data-aos-easing="ease-out"
+          >
+            Advisors
+          </h2>
+          <div class="swiper-container js-advisors-slider">
+            <div class="advisors__wrap swiper-wrapper">
+              <div class="advisor-item swiper-slide">
+                <div
+                  class="advisor-item__wrap aos-init"
+                  data-aos="fade-right"
+                  data-aos-offset="0"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-out"
+                >
+                  <div class="advisor-item__top">
+                    <div class="advisor-item__img">
+                      <img
+                        class="lozad"
+                        data-src="img/c2.jpg"
+                        alt="Vladimir Tikhomirov"
+                        src="images/c2.jpg"
+                        data-loaded="true"
+                      />
+                    </div>
+                    <div class="advisor-item__info">
+                      <p class="advisor-item__name">Jeff Bezos:</p>
+                      <p class="advisor-item__position">
+                        Technology entrepreneur, investor, and philanthropist
+                      </p>
+                      <a href="#" onclick="document.location.hash='';return false;">
+                        <svg width="26" height="26" viewBox="0 1 24 23">
+                          <ellipse cx="2.5" cy="3.5" rx="2.48" ry="2.5" />
+                          <path
+                            d="M12.982,10.155V8H8.014v16h4.969v-8.399c0-4.67,6.029-5.052,6.029,0V24H24V13.869C24,5.989,15.078,6.276,12.982,10.155z"
+                          />
+                          <rect y="8" width="5" height="16" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="advisor-item__bottom">
+                    <p>
+                      Quantum computing is the future. I’m not exaggerating when I say it will
+                      change everything. This is the early days of quantum computing; not many
+                      people know about it, which means very few are using it. The few that are, are
+                      making incredibly wise (and profitable) decisions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="advisor-item swiper-slide">
+                <div
+                  class="advisor-item__wrap aos-init"
+                  data-aos="fade-left"
+                  data-aos-offset="0"
+                  data-aos-duration="1000"
+                  data-aos-delay="250"
+                  data-aos-easing="ease-out"
+                >
+                  <div class="advisor-item__top">
+                    <div class="advisor-item__img">
+                      <img
+                        class="lozad"
+                        data-src="img/c1.jpg"
+                        alt="Tom Kojima"
+                        src="images/c1.jpg"
+                        data-loaded="true"
+                      />
+                    </div>
+                    <div class="advisor-item__info">
+                      <p class="advisor-item__name">Bill Gates:</p>
+                      <p class="advisor-item__position">
+                        Business magnate, investor, author, philanthropist, and humanitarian
+                      </p>
+                      <a href="#" onclick="document.location.hash='';return false;">
+                        <svg width="26" height="26" viewBox="0 1 24 23">
+                          <ellipse cx="2.5" cy="3.5" rx="2.48" ry="2.5" />
+                          <path
+                            d="M12.982,10.155V8H8.014v16h4.969v-8.399c0-4.67,6.029-5.052,6.029,0V24H24V13.869C24,5.989,15.078,6.276,12.982,10.155z"
+                          />
+                          <rect y="8" width="5" height="16" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="advisor-item__bottom">
+                    <p>
+                      I know for a fact Elon has spent $3 billion of his own money to fund this
+                      program. Hats off to him for that – that’s $3 billion of his own money to fund
+                      a better future for everyone, and to help others make profits that’ll help him
+                      do so! It’s a win-win, and I’m very excited to see where it goes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination advisors__pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section advisors" id="advisors">
+        <div class="wrapper">
+          <h2 class="text-white aos-init">Feedback from our last partners!</h2>
+          <div class="swiper-container js-advisors-slider">
+            <div class="container-1">
+              <div
+                class="itc-slider"
+                data-slider="itc-slider"
+                data-loop="false"
+                data-autoplay="false"
+              >
+                <div class="itc-slider__wrapper">
+                  <div class="itc-slider__items">
+                    <style>
+                      .itc-slider__item {
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: center;
+                        height: 500px !important;
+                        padding: 10px;
+                      }
+
+                      .comVideo {
+                        width: 80%;
+                        height: 50%;
+                        margin: 0 auto 20px;
+                      }
+
+                      @media (max-width: 600px) {
+                        .comVideo {
+                          width: 100%;
+                        }
+
+                        .itc-slider__btn {
+                          top: 30% !important;
+                        }
+                      }
+                    </style>
+                    <link rel="stylesheet" href="css/slider.css" />
+                    <div class="itc-slider__item">
+                      <video class="comVideo" controls>
+                        <source src="media/vidcom1.mp4" type="video/mp4" />
+                      </video>
+                      <p style="color: white"></p>
+                      <p style="color: white">Mark, 45 y.o. Melbourne.</p>
+                      “i’ve made 1700 dollars extra in december 2022 with quantum program. I can’t
+                      believe i was so lucky to see that advertising, cuz later on i found out that
+                      it was targeted for a group of specific people, and i was 26 of 800 people on
+                      the program! ﻿“
+                      <p></p>
+                    </div>
+                    <div class="itc-slider__item">
+                      <video class="comVideo" controls>
+                        <source src="media/vidcom2.mp4" type="video/mp4" />
+                      </video>
+                      <p style="color: white"></p>
+                      <p style="color: white">Bob 47 y.o Broken Hill.</p>
+                      “I’m one of the first in the program and I earned over $4400 extra in December
+                      2022 with the Quantum program. I saw the advertisement and began to doubt,
+                      because I am 47 years old and I thought I was too old for this, but I made up
+                      my mind, left contacts and now, I have already made 4408 dollars in December!
+                      So if you followed the link, don't be afraid to start, if I did, you can make
+                      it too!”
+                      <p></p>
+                    </div>
+                    <div class="itc-slider__item">
+                      <video class="comVideo" controls src="media/vidcom3.mp4"></video>
+                      <p style="color: white"></p>
+                      <p style="color: white">Rosa 35 y.o. Adelaide.</p>
+                      “I’m the one of 800 partners of quantum preject and i’ve made 2617 dollars in
+                      December with quantum Ai.”
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+                <button class="itc-slider__btn itc-slider__btn_prev"></button>
+                <button class="itc-slider__btn itc-slider__btn_next"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        html {
+          scroll-behavior: smooth;
+        }
+
+        .goTo {
+          background-color: #1b1a75 !important;
+          color: white !important;
+          padding: 20px 30px !important;
+          margin: 20px 0 20px;
+          text-transform: uppercase;
+          width: 50%;
+          text-align: center;
+          border-radius: 10px;
+          cursor: pointer;
+
+          -webkit-animation-name: 'play_down';
+          -moz-animation-name: 'play_up';
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+        }
+
+        @keyframes play_top {
+          0% {
+            -webkit-box-shadow: 0 0 rgba(0, 163, 182, 0.6);
+            -moz-box-shadow: 0 0 rgba(0, 163, 182, 0.6);
+            box-shadow: 0 0 rgba(0, 163, 182, 0.6);
+          }
+
+          to {
+            -webkit-box-shadow: 0 0 0 20px rgba(0, 163, 182, 0);
+            -moz-box-shadow: 0 0 0 20px rgba(0, 163, 182, 0);
+            box-shadow: 0 0 0 20px rgba(0, 163, 182, 0);
+          }
+        }
+
+        @keyframes play_down {
+          0% {
+            -webkit-box-shadow: 0 0 rgba(55, 55, 55, 0.6);
+            -moz-box-shadow: 0 0 rgba(55, 55, 55, 0.6);
+            box-shadow: 0 0 rgba(55, 55, 55, 0.6);
+          }
+
+          to {
+            -webkit-box-shadow: 0 0 0 20px rgba(55, 55, 55, 0);
+            -moz-box-shadow: 0 0 0 20px rgba(55, 55, 55, 0);
+            box-shadow: 0 0 0 20px rgba(55, 55, 55, 0);
+          }
+        }
+
+        @media (max-width: 800px) {
+          .goTo {
+            width: 100%;
+          }
+        }
+      </style>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row _footer-disclaimer">
+          <div class="align-items-center" style="margin-bottom: 15px">
+            <a class="site-footer-logo" id="logo">
+              <svg width="140" height="62" viewBox="0 0 124.2 42">
+                <path
+                  d="M52.2,14.7c0.1,0.1,0.4,0.3,0.7,0.3c0.5,0,1.1-0.4,1.1-1.1v-2c0-2.8-2.2-5.2-5.2-5.2h-3.7V3c0-0.9-0.4-1.7-1.2-2.4
+                c-0.7-0.5-1.6-0.8-2.5-0.7L10,6.9c-2.4,0.4-4.2,2.5-4.2,5v25c0,2.8,2.2,5.2,5.2,5.2h38c2.8,0,5.2-2.2,5.2-5.2v-2.4
+                c0-0.3-0.1-0.5-0.3-0.7c-0.1-0.1-0.4-0.3-0.7-0.3c-0.5,0-1.1,0.4-1.1,1.1V37c0,1.7-1.5,3-3,3H10.9c-1.7,0-3-1.3-3-3V11.9
+                c0-1.6,1.2-2.8,2.6-3c0.1,0,0.3,0,0.5,0h38c1.7,0,3,1.3,3,3V14C52,14.3,52.1,14.5,52.2,14.7 M20,6.7L41.9,2c0.3,0,0.7,0,0.8,0.3
+                C43,2.4,43.1,2.8,43.1,3v3.7C43.1,6.7,20,6.7,20,6.7z"
+                />
+                <path
+                  d="M25.4,32c-2-0.5-4-1.1-5.7-1.7c-0.3-0.1-0.6-0.2-0.9-0.2c-3.5-0.1-6.5-2.7-6.5-7.5c0-4.8,2.9-7.8,6.9-7.8
+                c4,0,6.6,3.1,6.6,7.5c0,3.8-1.8,6.2-4.2,7.1v0.1c1.5,0.4,3.1,0.7,4.3,0.9L25.4,32z M23.8,22.4c0-3-1.5-6-4.7-6c-3.2,0-4.8,3-4.8,6.2
+                c0,3.1,1.7,6,4.7,6C22.1,28.5,23.8,25.8,23.8,22.4z"
+                />
+                <path
+                  d="M37.6,27c0,1.1,0,2.1,0.1,2.9h-1.7l-0.1-1.7h0c-0.5,0.9-1.6,2-3.5,2c-1.7,0-3.7-0.9-3.7-4.7v-6.2h1.9v5.9
+                c0,2,0.6,3.4,2.4,3.4c1.3,0,2.2-0.9,2.6-1.8c0.1-0.3,0.2-0.6,0.2-1v-6.5h1.9V27z"
+                />
+                <path
+                  d="M47,29.9l-0.2-1.3h-0.1c-0.6,0.8-1.7,1.6-3.3,1.6c-2.2,0-3.3-1.5-3.3-3.1c0-2.6,2.3-4,6.4-4v-0.2c0-0.9-0.2-2.5-2.4-2.5
+                c-1,0-2,0.3-2.8,0.8L41,19.9c0.9-0.6,2.2-0.9,3.5-0.9c3.3,0,4,2.2,4,4.4v4c0,0.9,0,1.8,0.2,2.6H47z M46.7,24.4
+                c-2.1,0-4.5,0.3-4.5,2.4c0,1.3,0.8,1.8,1.8,1.8c1.4,0,2.3-0.9,2.6-1.8c0.1-0.2,0.1-0.4,0.1-0.6V24.4z"
+                ></path>
+                <path
+                  d="M52.1,22.1c0-1.1,0-2-0.1-2.9h1.7l0.1,1.8h0c0.5-1,1.8-2,3.5-2c1.5,0,3.8,0.9,3.8,4.5v6.4h-1.9v-6.1c0-1.7-0.6-3.1-2.5-3.1
+                c-1.3,0-2.3,0.9-2.6,2c-0.1,0.2-0.1,0.6-0.1,0.9v6.4h-1.9V22.1z"
+                />
+                <path
+                  d="M66.9,16.2v3.1h2.8v1.5h-2.8v5.7c0,1.3,0.4,2.1,1.5,2.1c0.5,0,0.9-0.1,1.1-0.1l0.1,1.5c-0.4,0.2-1,0.3-1.7,0.3
+                c-0.9,0-1.6-0.3-2.1-0.8c-0.5-0.6-0.7-1.5-0.7-2.8v-5.8h-1.7v-1.5H65v-2.6L66.9,16.2z"
+                />
+                <path
+                  d="M81.1,27c0,1.1,0,2.1,0.1,2.9h-1.7l-0.1-1.7h0c-0.5,0.9-1.6,2-3.5,2c-1.7,0-3.7-0.9-3.7-4.7v-6.2H74v5.9
+                c0,2,0.6,3.4,2.4,3.4c1.3,0,2.2-0.9,2.6-1.8c0.1-0.3,0.2-0.6,0.2-1v-6.5h1.9V27z"
+                />
+                <path
+                  d="M84.7,22.1c0-1.1,0-2-0.1-2.9h1.7l0.1,1.7h0.1c0.6-1,1.6-2,3.3-2c1.5,0,2.6,0.9,3,2.1h0c0.3-0.6,0.7-1.1,1.2-1.4
+                c0.6-0.5,1.3-0.7,2.4-0.7c1.4,0,3.5,0.9,3.5,4.6v6.3H98v-6c0-2-0.7-3.3-2.3-3.3c-1.1,0-2,0.8-2.3,1.8c-0.1,0.3-0.2,0.6-0.2,1v6.6
+                h-1.9v-6.4c0-1.7-0.7-2.9-2.2-2.9c-1.2,0-2.1,1-2.4,1.9c-0.1,0.3-0.2,0.6-0.2,0.9v6.4h-1.9V22.1z"
+                />
+                <path
+                  d="M105.8,25.2l-1.5,4.7h-2l5-14.8h2.3l5.1,14.8h-2l-1.6-4.7H105.8z M110.7,23.7l-1.5-4.3c-0.3-1-0.6-1.8-0.8-2.7h0
+                c-0.2,0.9-0.5,1.8-0.7,2.7l-1.5,4.3H110.7z"
+                />
+                <path d="M119.1,15v14.8h-1.9V15H119.1z" />
+              </svg>
+            </a>
+          </div>
+          <div class style="text-align: center">
+            <div class="col-md-8 _footer-copyrights-links" style="margin: auto">
+              <p>
+                <a class="footerLink" href="#block">Privacy Statement</a
+                ><a class="footerLink" href="#block">Terms of Use</a
+                ><a class="footerLink" href="#block">Cookie Policy</a>
+              </p>
+            </div>
+            <br />
+            <p>© 2023 QuantumAI</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-form" id="modalFailure">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            You have already registered for this number. If you need a new account, please register
+            for a different mobile number.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalFailureEmail">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            You have already registered with this email. If you need a new account, please register
+            with a different email.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalInvalid">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            You have entered an invalid email. Sign up for a different email.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script type="text/javascript">
+      var delay_popup = 500;
+      setTimeout(
+        "document.getElementById('advads-cookie-consent-box').style.display='block'",
+        delay_popup,
+      );
+    </script> -->
+
+    <script src="js/aos.js"></script>
+    <script src="js/axios.min.js"></script>
+    <!-- <script src="js/trades.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/utm.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/submitForm.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/slider.js"></script>
+  </body>
+</html>

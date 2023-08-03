@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>Congratulations!</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/thanks.css" rel="stylesheet" />
+    <!-- Facebook Pixel Code -->
+    <script>
+      let clickId = '';
+      let currentUrl = window.location.href;
+
+      if (currentUrl.indexOf('?') !== -1) {
+        let splitUrl = currentUrl.split('?');
+        let arrAttr = splitUrl[1].split('&');
+
+        for (let i = 0; i < arrAttr.length; i++) {
+          if (arrAttr[i].indexOf('idpxl') !== -1) {
+            let valuePxl = arrAttr[i].split('=')[1];
+            createPXLcode(valuePxl);
+          }
+        }
+      }
+
+      function createPXLcode(pixelID) {
+        !(function (f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = '2.0';
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', pixelID);
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
+      }
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <img id="pb" height="1" width="1" style="display: none" src="" />
+    <script>
+      var matches = document.cookie.match(new RegExp('(?:^|; )' + 'subid' + '=([^;]*)'));
+      var subId = matches ? decodeURIComponent(matches[1]) : undefined;
+      document.getElementById('pb').src =
+        'https://keitaro-leadar.ink/f6c793a/postback?subid=' + subId + '&status=lead';
+    </script>
+  </head>
+  <body>
+    <div class="thanks">
+      <header class="thanks__top">
+        <div class="container">
+          <div class="d-flex justify-content-center align-items-center thanks__top-text-wrapper">
+            <p class="thanks__top-text thanks__top-text_highlited" id="profit-counter">15 550€</p>
+            <p class="thanks__top-text">Amount earned by users in automatic mode today</p>
+          </div>
+        </div>
+      </header>
+      <main class="thanks__main main">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-lg-6 main__first-part">
+              <div class="container h-100">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                  <div class="main__queue-block queue-block">
+                    <p class="users-num queue-block__counter"><span id="user-num">40</span></p>
+                    <script></script>
+                    <p class="queue-block__text">On what place are you now in the waiting list</p>
+                  </div>
+                  <div class="main__text-wrapper">
+                    <h1 class="main__title">Congratulations!</h1>
+                    <h3 class="main__subtitle">Registration is almost complete...</h3>
+                    <p class="main__text mb-5">
+                      A few more steps and you can make your first money online. What’s next?
+                    </p>
+                    <span class="main__number">1</span>
+                    <p class="main__text">
+                      Please wait for a specialist to call you in the next 10 minutes to confirm
+                      your registration
+                    </p>
+                    <span class="main__number">2</span>
+                    <p class="main__text">
+                      After confirmation of registration our specialist will help you to set up your
+                      personal trading account
+                    </p>
+                    <span class="main__number">3</span>
+                    <p class="main__text">Start earning today!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-lg-6 main__second-part d-flex align-items-center"
+              style="background-image: url(images/f6827942026eb53c9f7c3180d43c22ba.png)"
+            >
+              <div class="d-none d-lg-flex"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div id="modal-overlay">
+        <div id="modal">
+          <img class="alert" src="images/alert.png" alt="" />
+          <p class="modal-text">Thank you for registering!</p>
+          <p class="modal-text">
+            <strong>
+              <span style="color: #eb5757">Within 10 minutes</span> you will be dialed by our
+              specialist to register you in our platform.
+            </strong>
+          </p>
+          <p class="modal-text">
+            <strong>
+              Please <span style="color: #eb5757">pick up the phone</span> so that our specialist
+              can register you.
+            </strong>
+          </p>
+          <button class="close-button close-btn"></button>
+          <button class="mybtn close-btn">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/myScript.js"></script>
+  </body>
+</html>
