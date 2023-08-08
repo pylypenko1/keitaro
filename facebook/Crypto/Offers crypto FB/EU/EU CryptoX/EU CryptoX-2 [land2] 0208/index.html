@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Crypto X</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/intlTelInput.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .iti__selected-flag {
+            max-height: 46px;
+        }
+
+        label.error {
+            color: red;
+            font-size: .8rem;
+            position: absolute;
+            bottom: -16px;
+            left: 15px;
+        }
+    </style>
+    <!-- Open Graph -->
+    <meta name="description" content="Crypto X">
+    <meta name="keywords" content="Crypto X">
+    <meta property="og:title" content="Crypto X">
+    <meta property="og:description" content="Crypto X">
+    <meta property="og:image" content="images/poster.png">
+    <meta property="og:image:width" content="450">
+    <meta property="og:image:height" content="450">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+        function getCookie(name) {
+            var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|€)');
+            return v ? v[2] : null;
+        }
+
+        function setCookie(name, value, days) {
+            var d = new Date();
+            d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+            document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+        }
+
+        function getSubId() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{subid}'.match('{')) {
+                return '{subid}';
+            }
+            var clientSubid = '<?php echo isset(€client) ? €client->getSubid() : "" ?>';
+            if (clientSubid && !clientSubid.match('>')) {
+                return clientSubid;
+            }
+            if (params.get('_subid')) {
+                return params.get('_subid');
+            }
+            if (params.get('subid')) {
+                return params.get('subid');
+            }
+            if (getCookie('subid')) {
+                return getCookie('subid');
+            }
+        }
+
+        function getToken() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{token}'.match('{')) {
+                return '{token}';
+            }
+            var clientToken = '<?php echo isset(€client) ? €client->getToken() : "" ?>';
+            if (clientToken && !clientToken.match('>')) {
+                return clientToken;
+            }
+            if (params.get('_token')) {
+                return params.get('_token');
+            }
+            if (params.get('token')) {
+                return params.get('token');
+            }
+            if (getCookie('token')) {
+                return getCookie('token');
+            }
+            return null;
+        }
+
+        if (typeof URLSearchParams === 'function') {
+            document.addEventListener('DOMContentLoaded', function (event) {
+                var params = new URLSearchParams(document.location.search.substr(1));
+                var subid = getSubId();
+                var token = getToken();
+
+                params.set('_token', token);
+                setCookie('token', token);
+                setCookie('subid', subid);
+
+                // Adds params as hidden inputs to the forms
+                document.querySelectorAll('form').forEach(function (form) {
+                    params.forEach(function (v, k) {
+                        var input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = k;
+                        input.value = v;
+
+                        form.append(input);
+                    });
+                });
+            });
+        }
+    </script>
+    <!-- End JS adapter -->
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <header class="header" id="header">
+            <div class="container flex just-btwn center">
+                <img src="images/logo.png" alt="logo" class="logo-img" onclick="scrollToElem('.hero-video-wrapper')"
+                    loading="lazy">
+                <div class="winners-widget flex center just-center">
+                    <div class="winners-widget-inner flex center">
+                        <img src="images/11.jpg" alt="winner" id="winnerImg" loading="lazy"
+                            data-init-adw="person-image">
+                        <div class="winner-info">
+                            <span data-init-adw="person-name">Juan B.</span> won <br>
+                            <span class="winner-profit">
+                                <span data-init-adw="person-amt">112</span>$
+                            </span> currently!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="hero-section" id="hero">
+                <div class="container flex just-btwn">
+                    <div class="hero-video-wrapper">
+                        <div class="main-heading-wrapper flex center">
+                            <h1 class="main-heading text-colored">
+                                New times, new money - Crypto X. Your future is secure thanks to the new
+                                technologies leveraged by this platform.
+                            </h1>
+                            <img src="fonts/twitter.svg" alt="golden-coin" class="heading-img" loading="lazy">
+                        </div>
+                        <div class="image">
+                            <img src="images/main.jpg" width="100%">
+                        </div>
+                    </div>
+                    <div class="form-wrapper form">
+                        <h4 class="form-heading text-colored">
+                            Start your business trip with Crypto X
+                        </h4>
+                        <form class="form-registration" method="post" id="leadform" autocomplete="off">
+                            <div class="form-group">
+                                <input type="text" required placeholder="Enter your first name" name="first_name"
+                                    id="first_name" class="form-name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" required placeholder="Enter your last name" name="last_name"
+                                    id="last_name" class="form-lastname">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" required placeholder="Enter your address and email" name="email"
+                                    id="email" class="form-email">
+                            </div>
+                            <div class="form-group">
+                                <input name="phone1" id="phone1" value="" placeholder="" required type="tel"
+                                    class="form-phone">
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-wrap">
+                                    <input checked required type="checkbox" name="politics" id="politics"
+                                        class="form-politics">
+                                    <label for="politics">I agree with the
+                                        <a href="javascript:void(0)" data-name="policy" class="alterlink">Privacy
+                                            Policy</a>
+                                    </label>
+                                </div>
+                                <div class="checkbox-wrap">
+                                    <input checked required type="checkbox" name="call" id="call" class="form-over">
+                                    <label for="call">I agree to agree to receive a call from manager</label>
+                                </div>
+                                <div class="checkbox-wrap">
+                                    <input checked required type="checkbox" name="over" id="over" class="form-over">
+                                    <label for="over">I am over 18 years old</label>
+                                </div>
+                            </div>
+                            <button class="form-button" type="submit">
+                                Get access
+                            </button>
+                            <style>
+                                .iti__selected-flag {
+                                    border-radius: 25px 0 0 25px;
+                                }
+                            </style>
+                        </form>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="images/soft.png" alt="security soft" class="soft-img" loading="lazy">
+                    <img src="images/soft-1.png" alt="security soft" class="soft-img soft-img-2" loading="lazy">
+                </div>
+            </section>
+            <section class="about-section">
+                <img src="images/logo.png" alt="logo" class="logo-img animated" loading="lazy">
+                <div class="container flex just-btwn">
+                    <div class="about-text-wrapper animated">
+                        <div class="about__wrap">
+                            <p class="section-text">
+                                Once the deal to buy social media platform Twitter was confirmed, Elon Musk – the CEO of
+                                Tesla, Space X and now Twitter – revealed astonishing details about the work being done
+                                by his best and brightest minds.
+                            </p>
+                            <p class="section-text">
+                                The Digital Tesla team, together with the developers of Twitter, studied the behavior of
+                                cryptocurrencies on the market since 2018. The analysts realized that the price of a
+                                specific coin depends on people's mood, the community surrounding the project, and the
+                                number of people who support different projects.
+                            </p>
+                            <p class="section-text">
+                                Based on this data, an artificial intelligence system was created that collects this
+                                information for all possible projects and cryptocurrencies, giving Crypto X users a
+                                significant edge.
+                            </p>
+                            <p class="section-text">
+                                Imagine if, back in 2012, you had known that the price of bitcoin would rise from USD
+                                4.60 to USD 20,000 within just a few years, and that it would peak as high as USD
+                                67,000. If you had known, then you surely would have made a small investment in a
+                                crytocurrency with such impressive prospects.
+                            </p>
+                            <p class="section-text">
+                                AI-driven Crypto X works the same way, saving you a lot of time by independently
+                                collecting and analysing the necessary information so you can earn money here and now in
+                                just 40-60 minutes day.
+                            </p>
+                        </div>
+                        <div class="overlay">
+                            <img src="images/chevron.png" alt>
+                        </div>
+                    </div>
+                    <div class="about-image-wrapper animated">
+
+                        <img src="images/musk-2.png" alt="tesla model-x" class="about-car-img">
+                    </div>
+                </div>
+            </section>
+            <section class="calculator-section animated">
+                <div class="container">
+                    <div id="calculator" class="calculator__wrap step-card">
+                        <h3 class="calculator__title">
+                            How much will I earn?
+                        </h3>
+                        <div class="calculator__invest">
+                            <label class="calculator__invest-text">Your investment</label>
+                            <input type="text" class="js-range-slider irs-hidden-input" style="display: none;"
+                                name="my_range" value="150" tabindex="-1" readonly>
+                        </div>
+                        <div class="calculator__profit">
+                            <label class="block text-center font-bold ">Your profit</label>
+                            <h3 class="text-2xl text-center font-bold font-ubuntu mt-5" id="calcResult">330 $</h3>
+                        </div>
+                        <div class="calculator__btn">
+                            <button class="btn" onclick="scrollToElem('.hero-video-wrapper')">
+                                Get access
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="founder-section" id="founder">
+                <div class="container flex">
+                    <div class="founder-img-wrapper">
+
+                        <img src="images/Elon-Musk.png" alt="Elon Musk" class="founder-img animated" loading="lazy">
+                    </div>
+                    <div class="founder-content">
+                        <h2 class="section-heading animated">
+                            Elon Musk
+                        </h2>
+                        <p class="founder-position animated">
+                            Developer and founder of Crypto X
+                        </p>
+                        <div class="twit animated">
+                            <div class="twit__avatar">
+                                <img src="images/twitter-musk.jpg" alt>
+                            </div>
+                            <div class="twit__content">
+                                <div class="twit__header">
+                                    <div class="twit__header-left">
+                                        <div class="twit__name">Elon Musk
+                                            <svg viewBox="0 0 24 24" aria-label="Подлинная учетная запись" role="img"
+                                                class="r-1cvl2hr r-4qtqp9 r-yyyyoo r-1xvli5t r-9cviqr r-f9ja8p r-og9te1 r-bnwqim r-1plcrui r-lrvibr">
+                                                <g>
+                                                    <path
+                                                        d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="twit__link">@elonmusk</div>
+                                        <div class="twit__separator">·</div>
+                                        <div class="twit__duration">6h</div>
+                                    </div>
+                                    <div class="twit__header-right">
+                                        <svg width="16" height="4" viewBox="0 0 16 4" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.16667 3.66658C3.08714 3.66658 3.83333 2.92039 3.83333 1.99992C3.83333 1.07944 3.08714 0.333252 2.16667 0.333252C1.24619 0.333252 0.5 1.07944 0.5 1.99992C0.5 2.92039 1.24619 3.66658 2.16667 3.66658Z"
+                                                fill="#536471" />
+                                            <path
+                                                d="M8 3.66658C8.92047 3.66658 9.66667 2.92039 9.66667 1.99992C9.66667 1.07944 8.92047 0.333252 8 0.333252C7.07952 0.333252 6.33333 1.07944 6.33333 1.99992C6.33333 2.92039 7.07952 3.66658 8 3.66658Z"
+                                                fill="#536471" />
+                                            <path
+                                                d="M13.8333 3.66658C14.7538 3.66658 15.5 2.92039 15.5 1.99992C15.5 1.07944 14.7538 0.333252 13.8333 0.333252C12.9129 0.333252 12.1667 1.07944 12.1667 1.99992C12.1667 2.92039 12.9129 3.66658 13.8333 3.66658Z"
+                                                fill="#536471" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="twit__text">
+                                    Cryptocurrencies are the future and I'm sure that Crypto X will change the
+                                    lives of its users and help millions of people around the world. I think everyone is
+                                    entitled to improve their quality of life by increasing their capital. It's time to
+                                    acknowledge that cryptocurrencies play an important role in the financial world, and
+                                    anyone who starts getting involved now will soon have a high income.
+                                </p>
+                                <div class="twit__footer">
+                                    <div class="twit__footer-btn">
+                                        <div class="twit__footer-icon">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.705 0.868441L7.24837 0.860107H7.2467C3.6017 0.860107 0.746704 3.71594 0.746704 7.36177C0.746704 10.7768 3.4017 13.3668 6.96754 13.5034V16.6934C6.96754 16.7834 7.0042 16.9318 7.06754 17.0293C7.18587 17.2168 7.38754 17.3184 7.5942 17.3184C7.7092 17.3184 7.82504 17.2868 7.9292 17.2201C8.1492 17.0801 13.3234 13.7701 14.6692 12.6318C16.2542 11.2901 17.2025 9.32344 17.205 7.37177V7.35761C17.2 3.71844 14.3467 0.868441 10.705 0.867607V0.868441ZM13.8609 11.6784C12.9159 12.4784 9.80921 14.5159 8.21754 15.5476V12.8918C8.21754 12.5468 7.93837 12.2668 7.59254 12.2668H7.26254C4.21254 12.2668 1.99754 10.2034 1.99754 7.36177C1.99754 4.41677 4.3042 2.11011 7.24754 2.11011L10.7034 2.11844H10.705C13.6484 2.11844 15.955 4.42344 15.9567 7.36511C15.9542 8.95677 15.1717 10.5684 13.8617 11.6784H13.8609Z"
+                                                    fill="#536471" />
+                                            </svg>
+                                        </div>
+                                        <div class="twit__footer-count">3 119</div>
+                                    </div>
+                                    <div class="twit__footer-btn">
+                                        <div class="twit__footer-icon">
+                                            <svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M19.8084 10.0583C19.5651 9.8141 19.1692 9.8141 18.9251 10.0583L17.0751 11.9083V3.37493C17.0751 1.6516 15.6726 0.249929 13.9501 0.249929H9.07506C8.73006 0.249929 8.45006 0.529929 8.45006 0.874929C8.45006 1.21993 8.73006 1.49993 9.07506 1.49993H13.9501C14.9834 1.49993 15.8251 2.3416 15.8251 3.37493V11.9083L13.9751 10.0583C13.7309 9.8141 13.3351 9.8141 13.0917 10.0583C12.8484 10.3024 12.8467 10.6983 13.0917 10.9416L16.0084 13.8583C16.1292 13.9808 16.2892 14.0416 16.4501 14.0416C16.6109 14.0416 16.7692 13.9816 16.8917 13.8583L19.8084 10.9416C20.0534 10.6983 20.0534 10.3024 19.8084 10.0583ZM10.9251 12.7916H6.05006C5.01673 12.7916 4.17506 11.9499 4.17506 10.9166V2.38326L6.02506 4.23326C6.14839 4.35576 6.30839 4.41659 6.46839 4.41659C6.62839 4.41659 6.78839 4.35576 6.91006 4.23326C7.15423 3.9891 7.15423 3.59326 6.91006 3.34993L3.99339 0.433262C3.74923 0.188262 3.35339 0.188262 3.11006 0.433262L0.193394 3.34993C-0.0516065 3.59326 -0.0516065 3.9891 0.193394 4.23326C0.438394 4.47743 0.83256 4.47743 1.07673 4.23326L2.92673 2.38326V10.9166C2.92673 12.6399 4.32923 14.0416 6.05173 14.0416H10.9267C11.2717 14.0416 11.5517 13.7616 11.5517 13.4166C11.5517 13.0716 11.2709 12.7916 10.9267 12.7916H10.9251Z"
+                                                    fill="#536471" />
+                                            </svg>
+                                        </div>
+                                        <div class="twit__footer-count">10k</div>
+                                    </div>
+                                    <div class="twit__footer-btn">
+                                        <div class="twit__footer-icon">
+                                            <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9 16.0317H8.98833C6.83583 15.9917 0.625 10.38 0.625 5.06502C0.625 2.51169 2.72917 0.27002 5.1275 0.27002C7.03583 0.27002 8.31917 1.58669 8.99917 2.54502C9.6775 1.58835 10.9608 0.27002 12.87 0.27002C15.27 0.27002 17.3733 2.51169 17.3733 5.06585C17.3733 10.3792 11.1617 15.9909 9.00917 16.03H9V16.0317ZM5.12833 1.52085C3.395 1.52085 1.87583 3.17752 1.87583 5.06669C1.87583 9.85002 7.7375 14.73 9.00083 14.7817C10.2658 14.73 16.1258 9.85085 16.1258 5.06669C16.1258 3.17752 14.6067 1.52085 12.8733 1.52085C10.7667 1.52085 9.59 3.96752 9.58 3.99169C9.38833 4.46002 8.61667 4.46002 8.42417 3.99169C8.4125 3.96669 7.23667 1.52085 5.12917 1.52085H5.12833Z"
+                                                    fill="#536471" />
+                                            </svg>
+                                        </div>
+                                        <div class="twit__footer-count">92.1k</div>
+                                    </div>
+                                    <div class="twit__footer-btn">
+                                        <div class="twit__footer-icon">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.6084 5.22504L9.44175 1.05837C9.19758 0.814202 8.80175 0.814202 8.55842 1.05837L4.39175 5.22504C4.14675 5.4692 4.14675 5.86504 4.39175 6.10837C4.63675 6.3517 5.03092 6.35337 5.27508 6.10837L8.37508 3.00837V11.5C8.37508 11.845 8.65508 12.125 9.00008 12.125C9.34508 12.125 9.62508 11.845 9.62508 11.5V3.00837L12.7251 6.10837C12.8467 6.23087 13.0067 6.2917 13.1667 6.2917C13.3267 6.2917 13.4867 6.2317 13.6084 6.10837C13.8526 5.8642 13.8526 5.4692 13.6084 5.22504Z"
+                                                    fill="#536471" />
+                                                <path
+                                                    d="M15.4234 17.2867H2.57675C1.52341 17.2867 0.666748 16.43 0.666748 15.3767V10.6667C0.666748 10.3217 0.946748 10.0417 1.29175 10.0417C1.63675 10.0417 1.91675 10.3217 1.91675 10.6667V15.3767C1.91675 15.7409 2.21258 16.0367 2.57675 16.0367H15.4234C15.7876 16.0367 16.0834 15.7409 16.0834 15.3767V10.6667C16.0834 10.3217 16.3634 10.0417 16.7084 10.0417C17.0534 10.0417 17.3334 10.3217 17.3334 10.6667V15.3767C17.3334 16.43 16.4767 17.2867 15.4234 17.2867Z"
+                                                    fill="#536471" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="fonts/Group2.svg" alt="coin" class="coin-decor-img left">
+            </section>
+            <section class="reviews-section" id="reviews">
+                <h2 class="section-heading animated">
+                    What our users are saying:
+                </h2>
+                <div class="container reviews-wrapper">
+                    <ul class="reviews-list flex just-btwn">
+                        <li class="review-card animated">
+                            <div class="review-card-upper flex center">
+                                <img src="images/burcu.png" width="64" height="64" alt="user" class="review-card-img"
+                                    loading="lazy">
+                                <h4 class="card-heading">
+                                    Mara Contador
+                                </h4>
+                            </div>
+                            <div class="review-card-lower section-text">
+                                Every day I'm faced with thousands of coins to choose from. It's a very difficult task.
+                                Thanks to Elon Musk's advice on Crypto X, I now know which one to buy. What's more,
+                                I'm sure these coins will be his next big breakthrough. That's why I'm signing up.
+                            </div>
+                        </li>
+                        <li class="review-card animated">
+                            <div class="review-card-upper flex center">
+                                <img src="images/oguz.png" width="64" height="64" alt="user" class="review-card-img"
+                                    loading="lazy">
+                                <h4 class="card-heading">
+                                    Mikel Abad
+                                </h4>
+                            </div>
+                            <div class="review-card-lower section-text">
+                                Trading with Crypto X thanks to Digital Tesla is awesome. I earn $1,000 a day!
+                                That's right: $1,000 a day! I never would have dreamed it was possible. It's definitely
+                                worth a try.
+                            </div>
+                        </li>
+                        <li class="review-card animated">
+                            <div class="review-card-upper flex center">
+                                <img src="images/tolga.png" width="64" height="64" alt="user" class="review-card-img"
+                                    loading="lazy">
+                                <h4 class="card-heading">
+                                    Gerard Moreno
+                                </h4>
+                            </div>
+                            <div class="review-card-lower section-text">
+                                My friend recommended Crypto X to me, saying that it's the best investment right
+                                now. How often have I heard that? A lot. But I decided to give it a try and I was
+                                stunned. In no time at all I managed to buy the expensive car I'd always wanted so much.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="live">
+                <div class="container">
+                    <div class="live__block step-card">
+                        <div class="live__title animated">
+                            <h2 class="section-heading animated fade-in">
+                                See your earnings in real time
+                            </h2>
+                        </div>
+                        <table class="live__table animated">
+                            <thead class="thead">
+                                <tr>
+                                    <th class="tal">NAME</th>
+                                    <th>$</th>
+                                    <th>EXCHANGE TIME</th>
+                                    <th>CURRENCY</th>
+                                    <th>RESULT</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr>
+                                    <td class="bold">Eugene Woods.</td>
+                                    <td class="bold">1117$</td>
+                                    <td class="trade-time-td"></td>
+                                    <td>EOS/ETH</td>
+                                    <td><img src="fonts/checkmark.svg" alt="tick"></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">Steven Edwards.</td>
+                                    <td class="bold">939$</td>
+                                    <td class="trade-time-td"></td>
+                                    <td>BTC/ETH</td>
+                                    <td><img src="fonts/checkmark.svg" alt="tick"></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">Kathy Johnston.</td>
+                                    <td class="bold">482$</td>
+                                    <td class="trade-time-td"></td>
+                                    <td>BTC/ETH</td>
+                                    <td><img src="fonts/checkmark.svg" alt="tick"></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">Martha Wright.</td>
+                                    <td class="bold">1243$</td>
+                                    <td class="trade-time-td"></td>
+                                    <td>EOS/ETH</td>
+                                    <td><img src="fonts/checkmark.svg" alt="tick"></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">Kathy Vasquez.</td>
+                                    <td class="bold">1130$</td>
+                                    <td class="trade-time-td"></td>
+                                    <td>ETH/LTC</td>
+                                    <td><img src="fonts/checkmark.svg" alt="tick"></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">Lori Chen.</td>
+                                    <td class="bold">480$</td>
+                                    <td class="trade-time-td"></td>
+                                    <td>EOS/ETH</td>
+                                    <td><img src="fonts/checkmark.svg" alt="tick"></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">Eugene Woods.</td>
+                                    <td class="bold">472$</td>
+                                    <td class="trade-time-td"></td>
+                                    <td>EOS/ETH</td>
+                                    <td><img src="fonts/checkmark.svg" alt="tick"></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">Steven Edwards.</td>
+                                    <td class="bold">322$</td>
+                                    <td class="trade-time-td"></td>
+                                    <td>ETH/LTC</td>
+                                    <td><img src="fonts/checkmark.svg" alt="tick"></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">Jane Oliver.</td>
+                                    <td class="bold">535$</td>
+                                    <td class="trade-time-td"></td>
+                                    <td>EOS/ETH</td>
+                                    <td><img src="fonts/checkmark.svg" alt="tick"></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold last-td">Martha Wright.</td>
+                                    <td class="bold last-td">943$</td>
+                                    <td class="trade-time-td last-td"></td>
+                                    <td class="last-td">BTC/ETH</td>
+                                    <td class="last-td"><img src="fonts/checkmark.svg" alt="tick"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <img src="fonts/Group.svg" alt="coin" class="coin-decor-img">
+            </section>
+            <section class="form-section">
+                <div class="container">
+                    <div class="form-wrapper form animated">
+                        <h4 class="form-heading text-colored">
+                            Start your business trip with Crypto X
+                        </h4>
+                        <form class="form-registration" method="post" id="form2" autocomplete="off">
+                            <div class="form-group">
+                                <input type="text" required placeholder="Enter your first name" name="first_name"
+                                    id="first_name" class="form-name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" required placeholder="Enter your last name" name="last_name"
+                                    id="last_name" class="form-lastname">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" required placeholder="Enter your address and email" name="email"
+                                    id="email" class="form-email">
+                            </div>
+                            <div class="form-group">
+                                <input name="phoneModal" id="phoneModal" value="" placeholder="" required type="tel"
+                                    class="form-phone">
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-wrap">
+                                    <input checked required type="checkbox" name="politics2" id="politics2"
+                                        class="form-politics">
+                                    <label for="politics2">I agree with the
+                                        <a href="javascript:void(0)" data-name="policy" class="alterlink">Privacy
+                                            Policy</a>
+                                    </label>
+                                </div>
+                                <div class="checkbox-wrap">
+                                    <input checked required type="checkbox" name="call2" id="call2" class="form-over">
+                                    <label for="call2">I agree to agree to receive a call from manager</label>
+                                </div>
+                                <div class="checkbox-wrap">
+                                    <input checked required type="checkbox" name="over2" id="over2" class="form-over">
+                                    <label for="over2">I am over 18 years old</label>
+                                </div>
+                            </div>
+                            <button class="form-button" type="submit">
+                                Get access
+                            </button>
+                            <style>
+                                .iti__selected-flag {
+                                    border-radius: 25px 0 0 25px;
+                                }
+                            </style>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container flex center just-btwn">
+                <p class="footer-text animated">
+                    Crypto X @ <span class="current-year">2022</span>. All rights reserved
+                </p>
+                <div class="footer-links animated">
+                    <a href="javascript:void(0)" class="alterlink" data-name="policy">Privacy policy </a>
+                    <a href="javascript:void(0)" class="alterlink" data-name="terms">Use of terms</a>
+                </div>
+            </div>
+        </footer>
+
+        <img src="fonts/Group.svg" alt="coin" class="coin-decor-img">
+    </div>
+
+
+    <!-- modals -->
+    <div class="modal-form" id="modalFailure">
+        <p class="close-modal" href="#">&times;</p>
+        <div class="content">
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">
+                    You have already registered for this number. If you need a new account, please register
+                    for a different mobile number.
+                </h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-form" id="modalFailureEmail">
+        <p class="close-modal" href="#">&times;</p>
+        <div class="content">
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">
+                    You have already registered with this email. If you need a new account, please register
+                    with a different email.
+                </h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-form" id="modalInvalid">
+        <p class="close-modal" href="#">&times;</p>
+        <div class="content">
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">
+                    You have entered an invalid email. Sign up for a different email.
+                </h5>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- scripts -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/main2.js"></script>
+    <script src="js/index.js"></script>
+
+    <script src="scripts/jquery.validate.js"></script>
+    <script src="scripts/utm.js"></script>
+    <script src="scripts/intlTelInput.min.js"></script>
+    <script src="scripts/jquery.maskedinput.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/checkCookiePhone.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/submitForm.js"></script>
+</body>
+
+</html>
