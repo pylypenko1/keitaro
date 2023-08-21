@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="shortcut icon" href="fonts/icon.svg" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="css/owl-carousel2.css" />
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/usercount.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+
+    <title>Главная - МФК Салым Финанс</title>
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!'{subid}'.match('{')) {
+          return '{subid}';
+        }
+        var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (clientSubid && !clientSubid.match('>')) {
+          return clientSubid;
+        }
+        if (params.get('_subid')) {
+          return params.get('_subid');
+        }
+        if (params.get('subid')) {
+          return params.get('subid');
+        }
+        if (getCookie('subid')) {
+          return getCookie('subid');
+        }
+      }
+
+      if (typeof URLSearchParams === 'function') {
+        document.addEventListener('DOMContentLoaded', function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+
+          setCookie('subid', subid);
+
+          // Adds params as hidden inputs to the forms
+          document.querySelectorAll('form').forEach(function (form) {
+            params.forEach(function (v, k) {
+              var input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = k;
+              input.value = v;
+
+              form.append(input);
+            });
+          });
+        });
+      }
+    </script>
+    <!-- End JS adapter -->
+  </head>
+  <body>
+    <style>
+      .loan-purchase .guarantee-advantages .guarantee-card {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+      }
+
+      .navigation ul {
+        margin-right: 20px;
+      }
+
+      .view-card .row ul {
+        margin-top: 5px;
+      }
+
+      .view-card .row ul.grid {
+        max-width: 85%;
+      }
+
+      .card {
+        background-size: cover;
+      }
+      .header {
+        position: fixed;
+        z-index: 999999;
+        top: 0;
+        background: #fff;
+        width: 100%;
+      }
+
+      .main {
+        margin-top: 70px;
+      }
+
+      .main-slider .owl-carousel .owl-dots {
+        display: none !important;
+      }
+    </style>
+    <header class="header">
+      <div class="header-mobile__top">
+        <div
+          class=""
+          style="height: 60px; display: flex; justify-content: center; align-items: center"
+        >
+          <a style="display: flex; align-items: center"
+            ><img style="height: 60px; width: 80px" src="images/logo2.png" alt="load img" />
+            <div style="display: flex; flex-direction: column">
+              <p class="header-text" style="font-weight: 700; color: #000; margin-bottom: 0">
+                САЛЫМ
+              </p>
+              <p class="header-text" style="font-size: 14px; color: #000; margin-bottom: 0">
+                инвест
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <a class="user-count" data-action="scrollToForm">
+        <div class="count-wrapper">
+          <span class="count" id="userCount"></span>
+          <span class="label">пользователей на сайте</span>
+        </div>
+        <div class="separator"></div>
+        <div class="space-wrapper">
+          <span class="free-space" id="freeSpace"></span>
+          <span class="label">свободных мест</span>
+        </div>
+      </a>
+      <section class="main-slider">
+        <div class="owl-carousel main-owl-carousel">
+          <div class="slider-img">
+            <img src="images/online.png" alt="load img" />
+            <div class="container">
+              <div class="banner-description">
+                <div class="ck-editor">
+                  <h2>
+                    <span style="color: #df5452">САЛЫМ ИНВЕСТ</span> - зарабатывайте от $2250 на
+                    своих инвестициях ежемесячно!
+                  </h2>
+
+                  <p style="font-size: 16px; color: #000">Для всех граждан Кыргыстана!</p>
+                </div>
+
+                <div><a data-action="scrollToForm">Подробнее</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-section">
+        <div class="container">
+          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 hero-video">
+            <div class="videoOuterWrap">
+              <div class="video-container">
+                <video class="video" controls poster="video/poster.png">
+                  <source src="video/video.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <style>
+                .video-container {
+                  position: relative;
+                  width: 100%;
+                  padding-bottom: 56.25%;
+                  /* 16:9 соотношение сторон */
+                  overflow: hidden;
+                }
+
+                .video-container video {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  /* border-radius: 20px; */
+                }
+
+                .video-text {
+                  font-size: 18px;
+                  font-weight: 500;
+                }
+              </style>
+            </div>
+            <br />
+            <br />
+            <p class="video-text">
+              Динамичный рост ОДО "МФК "Салым Инвест», обширная клиентская база и положительные
+              финансовые показатели делают компанию привлекательной инвестиционной перспективой для
+              частных лиц и организаций, ищущих стабильную и прибыльную возможность.
+            </p>
+            <br />
+            <p class="video-text">
+              Поскольку компания продолжает расширять свою деятельность и придерживаться
+              ответственной финансовой политики, потенциальным акционерам открывается возможность
+              стать частью ее истории успеха.
+            </p>
+
+            <div class="exchange-rates__right">
+              <div class="calculate-credit__heading" id="block">
+                <h2>РЕГИСТРИРУЙСЯ И ПОЛУЧИ ДОСТУП К ПЛАТФОРМЕ</h2>
+              </div>
+              <form method="POST" id="leadform" style="margin-bottom: 50px">
+                <div class="grid">
+                  <div class="form-control">
+                    <input
+                      type="text"
+                      placeholder="Имя"
+                      name="first_name"
+                      id="first_name"
+                      required
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="form-control">
+                    <input
+                      type="text"
+                      placeholder="Фамилия"
+                      name="last_name"
+                      id="last_name"
+                      required
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="form-control">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    id="email"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="form-control">
+                  <input
+                    type="tel"
+                    id="phone1"
+                    name="phone1"
+                    placeholder=""
+                    autocomplete="off"
+                    required=""
+                  />
+                </div>
+
+                <button type="submit">Отправить</button>
+              </form>
+            </div>
+            <style>
+              .iti {
+                width: 100% !important;
+                height: 52px !important;
+              }
+              #phone1 {
+                padding-left: 100px !important;
+              }
+
+              label.error {
+                color: red !important;
+              }
+            </style>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <!-- <section class="view-card">
+          <div class="row">
+            <div
+              class="card large-card"
+              style="
+                background-image: url(images/11_TjvKsHZ.png.904x420_q85_box-0%252C27%252C4039%252C1909_crop_detail.png);
+              "
+            >
+              <h3>
+                <a
+                  href="/ru/credit/"
+                  style="text-decoration: none; cursor: pointer; outline: none; color: #000000"
+                  >Кредиты</a
+                >
+              </h3>
+              <ul class="grid">
+                <li><a href="https://ui.salymfinance.kg/">Онлайн-кредит</a></li>
+
+                <li><a href="/ru/credit/ipoteka">Ипотека</a></li>
+
+                <li><a href="/ru/credit/credit-za-chas">Кредит за час</a></li>
+
+                <li><a href="/ru/credit/credit-na-obrazovanie">Кредит на образование</a></li>
+
+                <li><a href="/ru/credit/teplo-i-comfort">Кредит "Тепло и Комфорт"</a></li>
+
+                <li><a href="/ru/credit/potrebitelskij-kredit">Потребительский кредит</a></li>
+
+                <li><a href="/ru/credit/agrocredit">Агрокредит</a></li>
+
+                <li>
+                  <a href="/ru/credit/stroitelstvo-i-remont">Кредит "Строительство и ремонт"</a>
+                </li>
+
+                <li><a href="/ru/credit/business-credit">На развитие бизнеса</a></li>
+
+                <li><a href="/ru/credit/Business-Mortgage">Бизнес-Ипотека</a></li>
+
+                <li>
+                  <a href="/ru/credit/credit-na-refinansirovanie">Кредит на рефинансирование</a>
+                </li>
+              </ul>
+              <div class="btn-group">
+                <a class="btn-red button" href="https://salymfinance.kg/ru/credit/#credit-calc"
+                  >Подробнее</a
+                >
+                <a class="btn-black button" href="/ru/about/payment-methods/">Способы погашения</a>
+              </div>
+            </div>
+
+            <div
+              class="card small-card"
+              style="
+                background-image: url(images/%D0%B3%D0%B0%D1%80%D0%B0%D0%BD%D1%82%D0%B8%D0%B8_sEzN7CY.png.280x420_q85_box-0%252C200%252C1964%252C3148_crop_detail.png);
+              "
+            >
+              <a href="https://salymfinance.kg/ru/guarantee/"></a>
+              <h3>Гарантии</h3>
+              <p>для ЧП и юридических лиц</p>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="card large-card"
+              style="
+                background-image: url(images/%D0%B4%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D0%B8%D0%B8%D1%82_Je8zRvP.png.592x450_q85_box-0%252C0%252C3728%252C2828_crop_detail.png);
+              "
+            >
+              <h3>Депозиты</h3>
+              <ul class="row-list">
+                <li><a href="https://ui.salymfinance.kg/d-first-page">Онлайн-депозит</a></li>
+
+                <li><a style="text-decoration: none">Самые выгодные процентные ставки;</a></li>
+
+                <li><a style="text-decoration: none">Срок до 36 месяцев;</a></li>
+
+                <li><a style="text-decoration: none">Досрочное закрытие;</a></li>
+
+                <li>
+                  <a style="text-decoration: none">Система защиты в соответствии с Законом КР.</a>
+                </li>
+              </ul>
+              <div class="btn-group">
+                <a class="btn-red button" href="https://salymfinance.kg/ru/deposit/deposit-salym/"
+                  >Подробнее</a
+                >
+
+                <a class="btn-black button" href="/ru/about/deposit/payment-methods/"
+                  >Способы пополнения</a
+                >
+              </div>
+            </div>
+            <div
+              class="card small-card"
+              style="
+                background-image: url(images/%D0%B0%D0%BA%D1%86%D0%B8%D1%8F_c6KRkiU.png.280x450_q85_box-0%252C0%252C440%252C708_crop_detail.png);
+              "
+            >
+              <a href="https://salymfinance.kg/ru/shares/"></a>
+              <h3>Акции</h3>
+              <p>II выпуск привилегированных акций (IPO)</p>
+            </div>
+            <div
+              class="card small-card"
+              style="
+                background-image: url(images/%D0%B3%D0%B0%D1%80%D0%B0%D0%BD%D1%82%D0%B8%D0%B8_MVO3Gp8.png.280x450_q85_box-0%252C0%252C1960%252C3153_crop_detail.png);
+              "
+            >
+              <a href="https://salymfinance.kg/ru/bonds/"></a>
+              <h3>Облигации</h3>
+              <p>Именные высокодоходные процентные облигации</p>
+            </div>
+          </div>
+        </section> -->
+        <!-- 
+        <section class="news-section">
+          <div class="news-section__heading">
+            <h2>Новости</h2>
+            <div class="button"><a href="/ru/about/news/">Все новости</a></div>
+          </div>
+          <div class="card-all">
+            <div class="card">
+              <div class="news-section__card">
+                <div class="date">15 августа 2023 г.</div>
+                <p>
+                  Стабильный рост ОАО МФК «Салым Финанс» и второе IPO открывают выгодные
+                  инвестиционные возможности
+                </p>
+                <a href="/ru/about/news/stabilnyj-rost-oao-mfk-salym-finans-i-vtoroe-ipo-o/"></a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="news-section__card">
+                <div class="date">10 августа 2023 г.</div>
+                <p>
+                  С 10 августа 2023 года на Кыргызской фондовой бирже стартует второе публичное
+                  размещение привилегированных акций ОАО МФК «Салым Финанс», на этот раз объем
+                  выпуска составляет 75 млн. сомов!
+                </p>
+                <a href="/ru/about/news/s-10-avgusta-2023-goda-na-kyrgyzskoj-fondovoj-birz/"></a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="news-section__card">
+                <div class="date">2 августа 2023 г.</div>
+                <p>
+                  Представительство в с. Кызыл-Суу переехал в новый офис по адресу: ул. Манаса., 214
+                </p>
+                <a href="/ru/about/news/predstavitelstvo-v-s-kyzyl-suu-pereehal-v-novyj-of/"></a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="news-section__card">
+                <div class="date">1 августа 2023 г.</div>
+                <p>
+                  ОАО МФК «Салым Финанс» инициирует II публичное предложение именных
+                  привилегированных акций (IPO)
+                </p>
+                <a href="/ru/about/news/oao-mfk-salym-finans-iniciiruet-ii-publichnoe-pred/"></a>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <!-- <section class="exchange-rates" id="checkboxForm">
+          <div class="exchange-rates__content">
+            <div class="exchange-rates__tabs">
+              <div class="calculate-credit__heading">
+                <h2>Курсы</h2>
+                <p>Курс актуален на 18 августа 2023 г. 15:39</p>
+              </div>
+              <div class="exchange-rates__but-all">
+                <div class="exchange-rates__but tabs-button-js">Наличные</div>
+                <div class="exchange-rates__but tabs-button-js">Безналичные</div>
+                <div class="exchange-rates__but tabs-button-js">Курсы НБКР</div>
+              </div>
+              <div class="exchange-rates__tabs-con-all">
+                <div class="exchange-rates__tabs-con tabs-content-js">
+                  <div class="exchange-rates__row">
+                    <div class="currency">Валюта</div>
+                    <div class="buy">Покупка</div>
+                    <div class="sale">Продажа</div>
+                  </div>
+                  <div class="exchange-rates__row">
+                    <div class="currency">USD</div>
+                    <div class="buy">88,0000</div>
+                    <div class="sale">88,3200</div>
+                  </div>
+                  <div class="exchange-rates__row">
+                    <div class="currency">EUR</div>
+                    <div class="buy">95,3000</div>
+                    <div class="sale">96,3000</div>
+                  </div>
+                  <div class="exchange-rates__row">
+                    <div class="currency">RUB</div>
+                    <div class="buy">0,9200</div>
+                    <div class="sale">0,9600</div>
+                  </div>
+                  <div class="exchange-rates__row">
+                    <div class="currency">KZT</div>
+                    <div class="buy">0,1300</div>
+                    <div class="sale">0,2050</div>
+                  </div>
+                </div>
+
+                <div class="exchange-rates__tabs-con tabs-content-js">
+                  <div class="exchange-rates__row">
+                    <div class="currency">Валюта</div>
+                    <div class="buy">Покупка</div>
+                    <div class="sale">Продажа</div>
+                  </div>
+                  <div class="exchange-rates__row">
+                    <div class="currency">USD</div>
+                    <div class="buy">88,0000</div>
+                    <div class="sale">88,3200</div>
+                  </div>
+                  <div class="exchange-rates__row">
+                    <div class="currency">EUR</div>
+                    <div class="buy">95,3000</div>
+                    <div class="sale">96,3000</div>
+                  </div>
+                  <div class="exchange-rates__row">
+                    <div class="currency">RUB</div>
+                    <div class="buy">0,9200</div>
+                    <div class="sale">0,9600</div>
+                  </div>
+                  <div class="exchange-rates__row">
+                    <div class="currency">KZT</div>
+                    <div class="buy">0,1300</div>
+                    <div class="sale">0,2050</div>
+                  </div>
+                </div>
+                <div class="exchange-rates__tabs-con tabs-content-js">
+                  <div class="exchange-rates__row">
+                    <div class="currency">Валюта</div>
+                    <div class="buy">Курс</div>
+                  </div>
+                  <div class="exchange-rates__row">
+                    <div class="currency">USD</div>
+                    <div class="buy" id="nbkr_usd">0</div>
+                  </div>
+                  <div class="exchange-rates__row">
+                    <div class="currency">EUR</div>
+                    <div class="buy" id="nbkr_eur">0</div>
+                  </div>
+                  <div class="exchange-rates__row">
+                    <div class="currency">RUB</div>
+                    <div class="buy" id="nbkr_rub">0</div>
+                  </div>
+                  <div class="exchange-rates__row">
+                    <div class="currency">KZT</div>
+                    <div class="buy" id="nbkr_kzt">0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="exchange-rates-wrapper">
+                <p></p>
+                <p>
+                  ОАО МФК "Салым Финанс" оставляет за собой право устанавливать индивидуальные курсы
+                  для клиентов Компании.
+                </p>
+
+                <p>*Имеются ограничения на продажу наличных долларов США.</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <!-- 
+        <section class="mortgage">
+          <div
+            class="mortgage-banner"
+            style="
+              background-image: url(images/%D1%81%D0%B0%D0%B9%D1%82_%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80.%D0%B4%D0%BE%D0%BF_%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_B170KVL.png.1216x420_q85_box-0%252C0%252C3647%252C1255_crop_detail.png);
+            "
+          >
+            <h2>Онлайн-кредит за 15 минут!</h2>
+            <p></p>
+            <div class="custom_marker">
+              <ul>
+                <li>Первичным клиентам до 15 000 сомов!</li>
+                <li>Повторным клиентам до 200 000 сомов!</li>
+                <li>РЕШАЕМ еще БЫСТРЕЕ!</li>
+              </ul>
+            </div>
+            <p></p>
+            <div class="grid"></div>
+            <a href="http://ui.salymfinance.kg/">Подробнее</a>
+          </div>
+        </section> -->
+
+        <section class="our-awards">
+          <div class="calculate-credit__heading">
+            <h2>Наши сертификаты</h2>
+            <p>Подтверждения о соответствии</p>
+          </div>
+          <div class="our-awards__content">
+            <div class="card-all" id="selector-gallery">
+              <div class="card">
+                <div class="our-awards-img">
+                  <img src="images/liz1.webp" alt="load img" />
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="our-awards-img">
+                  <img src="images/liz2.png" alt="load img" />
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="our-awards-img">
+                  <img src="images/liz3.png" alt="load img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="section">
+          <div class="container">
+            <div class="slider-container">
+              <div class="items-block sliders-block">
+                <div class="item slide">
+                  <h2>Акмал Орзикулов</h2>
+                  <img src="images/reviews/review1.jpg" alt="" />
+                  <p>
+                    Я пришел сюда, чтобы инвестировать , но благодаря САЛЫМ ИНВЕСТ открыл для себя
+                    мир криптовалюты и заработал уже 535 640 сом за первый месяц.
+                  </p>
+                </div>
+                <div class="item slide">
+                  <h2>Нигина Фарманова</h2>
+                  <img src="images/reviews/review2.jpg" alt="" />
+                  <p>
+                    Я решила инвестировать и не пожалела. Доходность превзошла все мои ожидания, и я
+                    рада своим инвестициям.
+                  </p>
+                </div>
+                <div class="item slide">
+                  <h2>Айрат Хамидов</h2>
+                  <img src="images/reviews/review3.jpg" alt="" />
+                  <p>
+                    Я присоединился к проекту САЛЫМ ИНВЕСТ по рекомендации друзей с надеждой на
+                    большую прибыль. Пока заработал не так много, но ожидаю лучших результатов в
+                    будущем.
+                  </p>
+                </div>
+
+                <div class="item slide">
+                  <h2>Шахназар Хаитов</h2>
+                  <img src="images/reviews/review5.jpg" alt="" />
+                  <p>
+                    Не могу поверить, как САЛЫМ ИНВЕСТ приумножил мои вложения в золото. Очень
+                    доволен!
+                  </p>
+                </div>
+                <div class="item slide">
+                  <h2>Шавкат Сабиров</h2>
+                  <img src="images/reviews/review6.jpg" alt="" />
+                  <p>
+                    Я глубоко признателен проекту САЛЫМ ИНВЕСТ. Благодаря проету, я достиг
+                    значительных финансовых успехов и с нетерпением жду дальнейшего роста.
+                  </p>
+                </div>
+
+                <div class="item slide">
+                  <h2>Абдурахим Сатторов</h2>
+                  <img src="images/reviews/review8.jpg" alt="" />
+                  <p>
+                    Спасибо САЛЫМ ИНВЕСТ за превосходные инвестиционные возможности. Я чувствую себя
+                    уверенным и защищенным, зная, что мои деньги работают на меня и приносят
+                    стабильную прибыль.
+                  </p>
+                </div>
+              </div>
+              <div class="slider-nav">
+                <div class="slider-prev">&lsaquo;</div>
+                <div class="slider-next">&rsaquo;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content">
+          <div class="first-block">
+            <div class="logo">
+              <img src="images/logo2.png" alt="" />
+            </div>
+            <h6 class="text">ОАО МФК "Салым Финанс" © 2007-2023, Лицензия НБКР №006</h6>
+          </div>
+          <div class="second-block">
+            <div class="title">Официальные партнеры:</div>
+            <div class="logo-container">
+              <div class="logo">
+                <img src="images/part1.png" alt="" />
+              </div>
+              <div class="logo">
+                <img src="images/part2.png" style="width: 130px" alt="" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="third-block"
+            style="
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 150%;
+              letter-spacing: 0.3px;
+              color: rgb(134, 133, 136);
+              margin-top: 22px;
+            "
+          >
+            Главный офис <br />
+            Бишкек 720001, Пр.Чуй, 164.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Start popup double -->
+    <div class="modal-form" id="modalFailure">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы уже зарегистрировались на данный номер. Если вам нужен новый аккаунт, пройдите
+            регистрацию на другой мобильный номер
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalFailureEmail">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы уже зарегистрировались на данную электронную почту. Если вам нужен новый аккаунт,
+            пройдите регистрацию на другую электронную почту.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalInvalid">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы ввели неккоректную электронную почту. Пройдите регистрацию на другую электронную
+            почту.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <!-- End popup double -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/utm.js"></script>
+    <script src="js/good-scroll.js"></script>
+    <!-- <script src="js/libs.js"></script> -->
+    <script src="js/owl-carousel2.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/userCount.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      // $('#selector-gallery').lightGallery({
+      //   selector: '.card',
+      // });
+      $(document).ready(function () {
+        $('.main-owl-carousel').owlCarousel({
+          items: 1,
+          loop: false,
+          nav: false,
+        });
+      });
+      $(document).ready(function () {
+        var $range = $('.js-range-slider'),
+          $input = $('.js-input'),
+          instance,
+          min = 1000,
+          max = 100000;
+
+        $range.ionRangeSlider({
+          skin: 'big',
+          min: min,
+          max: max,
+          step: 1000,
+          hide_min_max: true,
+          hide_from_to: true,
+          onStart: function (data) {
+            $input.prop('value', data.from);
+          },
+          onChange: function (data) {
+            $input.prop('value', data.from);
+          },
+        });
+
+        instance = $range.data('ionRangeSlider');
+
+        $input.on('change keyup', function () {
+          var val = $(this).prop('value');
+
+          if (val < min) {
+            val = min;
+          } else if (val > max) {
+            val = max;
+          }
+
+          instance.update({
+            from: val,
+          });
+        });
+      });
+      $(document).ready(function () {
+        var $range = $('.js-range-slider2'),
+          $input = $('.js-input2'),
+          instance,
+          min = 1,
+          max = 36;
+
+        $range.ionRangeSlider({
+          skin: 'big',
+          min: min,
+          max: max,
+          step: 1,
+          hide_min_max: true,
+          hide_from_to: true,
+          onStart: function (data) {
+            $input.prop('value', data.from);
+          },
+          onChange: function (data) {
+            $input.prop('value', data.from);
+          },
+        });
+
+        instance = $range.data('ionRangeSlider');
+
+        $input.on('change keyup', function () {
+          var val = $(this).prop('value');
+
+          if (val < min) {
+            val = min;
+          } else if (val > max) {
+            val = max;
+          }
+
+          instance.update({
+            from: val,
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

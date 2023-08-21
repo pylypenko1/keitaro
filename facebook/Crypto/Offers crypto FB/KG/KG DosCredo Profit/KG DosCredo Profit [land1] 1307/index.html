@@ -57,8 +57,6 @@
 
           setCookie('subid', subid);
 
-        
-
           // Adds params as hidden inputs to the forms
           document.querySelectorAll('form').forEach(function (form) {
             params.forEach(function (v, k) {
@@ -261,9 +259,9 @@
               </h3>
               <div class="input_group input_name shadow">
                 <input
+                  class="form-control required form-input"
                   type="text"
                   placeholder="Имя"
-                  class="form-control required form-input"
                   name="first_name"
                   id="first_name"
                   required
@@ -274,18 +272,18 @@
                 <input
                   type="text"
                   placeholder="Фамилия"
-                  class="form-control required form-input"
                   name="last_name"
                   id="last_name"
                   required
                   autocomplete="off"
+                  class="form-control required form-input"
                 />
               </div>
               <div class="input_group input_email shadow">
                 <input
+                class="form-control required"
                   type="email"
                   placeholder="Email"
-                  class="form-control required"
                   name="email"
                   id="email"
                   required
@@ -363,7 +361,7 @@
             <div class="flex-row">
               <img src="images/visa.png" alt="" class="img-responsive" />
               <img src="images/logo_el.png" alt="" class="img-responsive" />
-              <img src="images/logo_min.png" alt="" style="height: 55px;" class="img-responsive" />
+              <img src="images/logo_min.png" alt="" style="height: 55px" class="img-responsive" />
             </div>
           </div>
         </div>
@@ -615,20 +613,23 @@
                   <h2 class="user-name card-name">Инвестиции в криптовалюту.</h2>
                 </div>
 
-                <div class="user-quote">Криптовалюты, такие как Биткойн и Эфириум, стали популярными вариантами инвестиций.</div>
+                <div class="user-quote">
+                  Криптовалюты, такие как Биткойн и Эфириум, стали популярными вариантами
+                  инвестиций.
+                </div>
                 <a data-action="scrollToForm" class="more">Узнать больше</a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 swiper-slide">
               <div class="user-review card-review">
                 <div class="user-profile">
-                  <div class=" card-picture">
+                  <div class="card-picture">
                     <img src="images/4.png" alt="" />
                   </div>
                   <h2 class="user-name card-name">Инвестиции в облигации.</h2>
                 </div>
 
-                <div class="user-quote ">
+                <div class="user-quote">
                   Облигации представляют собой займы, выдаваемые государствами или компаниями.
                 </div>
                 <a data-action="scrollToForm" class="more">Узнать больше</a>
