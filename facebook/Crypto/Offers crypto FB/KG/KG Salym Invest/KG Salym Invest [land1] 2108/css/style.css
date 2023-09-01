@@ -1828,7 +1828,7 @@ main {
 }
 @media (max-width: 640px) {
   .main-slider .banner-description h2 {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 @media (max-width: 640px) {
@@ -1934,7 +1934,7 @@ main {
   line-height: 150%;
   text-align: center;
   color: #ffffff;
-  background: #989898;
+  background: #df5452;
   border-radius: 4px;
   padding: 16px 55px;
 }
@@ -2815,7 +2815,7 @@ main {
   color: #595858;
   font-family: 'Montserrat', sans-serif;
 }
- .exchange-rates__right .form-control input {
+.exchange-rates__right .form-control input {
   background: #ffffff;
   border: 2px solid #dfdfdf;
   -webkit-box-sizing: border-box;
@@ -2829,8 +2829,8 @@ main {
   color: #000000;
   font-family: 'Montserrat', sans-serif;
 }
- .exchange-rates__right button {
-  background: #a0a0a0;
+.exchange-rates__right button {
+  background: #df5452;
   border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2853,7 +2853,7 @@ main {
   font-family: 'Montserrat', sans-serif;
 }
 @media (max-width: 960px) {
- .exchange-rates__right {
+  .exchange-rates__right {
     max-width: 100%;
     margin: 48px 0 0 0;
   }
@@ -8385,3 +8385,120 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   color: #6e7782;
 }
 /*# sourceMappingURL=style.css.map */
+
+#userTable .userTable-block {
+  padding: 30px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+#userTable .userTable-block h1 {
+  color: #df5452;
+  text-align: center;
+}
+
+#userTable .tradersTableFadeOutWrap {
+  position: relative;
+  height: 521px;
+  overflow-y: hidden;
+}
+
+#userTable .tradersTableFadeOutWrap .tradersTableFadeOut {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 40px;
+  background-image: -o-linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(255, 255, 255, 0)),
+    to(#fff)
+  );
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+}
+
+#userTable #tradersTableWrap {
+  text-align: center;
+}
+
+#userTable #tradersTableWrap th {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  #userTable #tradersTableWrap table {
+    table-layout: fixed;
+  }
+}
+
+#userTable #tradersTableWrap table tr {
+  height: 40px;
+  line-height: 1;
+}
+
+#userTable #tradersTableWrap table tr th {
+  border-bottom: 1px solid #d7f7ff;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #0b1f35;
+  background-color: #f0fcff;
+}
+
+/* @media screen and (max-width: 767px) {
+	#userTable #tradersTableWrap table tr th:nth-child(2) {
+		display: none
+	}
+} */
+
+#userTable #tradersTableWrap table tr td {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#userTable #tradersTableWrap table tr td.tradersTableWinnerCell {
+  color: #67cc00;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#userTable #tradersTableWrap table tr td.tradersTableLoserCell {
+  color: #d75c37;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* @media screen and (max-width: 767px) {
+	#userTable #tradersTableWrap table tr td:nth-child(2) {
+		display: none
+	}
+} */
+
+#userTable .tradersTable tr.myhide td {
+  height: 0px;
+  line-height: 0px;
+  font-size: 0px;
+}
+
+#userTable .tradersTable tr.myhide td img {
+  height: 0;
+}
+
+.name-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  font-style: italic;
+}

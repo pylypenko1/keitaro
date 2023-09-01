@@ -115,28 +115,13 @@
       }
     </style>
     <header class="header">
-      <div class="header-mobile__top">
-        <div
-          class=""
-          style="height: 60px; display: flex; justify-content: center; align-items: center"
-        >
-          <a style="display: flex; align-items: center"
-            ><img style="height: 60px; width: 80px" src="images/logo2.png" alt="load img" />
-            <div style="display: flex; flex-direction: column">
-              <p class="header-text" style="font-weight: 700; color: #000; margin-bottom: 0">
-                САЛЫМ
-              </p>
-              <p class="header-text" style="font-size: 14px; color: #000; margin-bottom: 0">
-                инвест
-              </p>
-            </div>
-          </a>
-        </div>
-      </div>
+      <a style="display: flex; align-items: center"
+        ><img style="width: 146px" src="images/logo.png" alt="load img" />
+      </a>
     </header>
 
     <main class="main">
-      <a class="user-count" data-action="scrollToForm">
+      <a class="user-count" data-action="scrollToForm" id="hide-count">
         <div class="count-wrapper">
           <span class="count" id="userCount"></span>
           <span class="label">пользователей на сайте</span>
@@ -159,10 +144,26 @@
                     своих инвестициях ежемесячно!
                   </h2>
 
-                  <p style="font-size: 16px; color: #000">Для всех граждан Кыргыстана!</p>
+                  <p style="font-size: 20px; color: #000">
+                    Для всех граждан <br />
+                    Кыргызстана!
+                  </p>
                 </div>
 
-                <div><a data-action="scrollToForm">Подробнее</a></div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    bottom: 2%;
+                    position: absolute;
+                    width: 100%;
+                    right: 0;
+                    left: 0;
+                  "
+                >
+                  <a data-action="scrollToForm">Подробнее</a>
+                </div>
               </div>
             </div>
           </div>
@@ -174,7 +175,7 @@
           <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 hero-video">
             <div class="videoOuterWrap">
               <div class="video-container">
-                <video class="video" controls poster="video/poster.png">
+                <video class="video" controls poster="video/poster.jpg">
                   <source src="video/video.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -186,9 +187,11 @@
                   padding-bottom: 56.25%;
                   /* 16:9 соотношение сторон */
                   overflow: hidden;
+                  margin-bottom: 50px;
                 }
 
                 .video-container video {
+                  border: 1px solid #000;
                   position: absolute;
                   top: 0;
                   left: 0;
@@ -201,20 +204,31 @@
                   font-size: 18px;
                   font-weight: 500;
                 }
+
+                .pr-title {
+                  font-weight: bold;
+                  font-size: 28px;
+                  line-height: 130%;
+                  color: #0b1f35;
+                  margin-bottom: 10px;
+                }
               </style>
             </div>
-            <br />
+            <span class="pr-title"> Зарегистрируйтесь и начните зарабатывать прямо сейчас! </span>
             <br />
             <p class="video-text">
-              Динамичный рост ОДО "МФК "Салым Инвест», обширная клиентская база и положительные
-              финансовые показатели делают компанию привлекательной инвестиционной перспективой для
-              частных лиц и организаций, ищущих стабильную и прибыльную возможность.
+              Благодаря новой технологии САЛЫМ ИНВЕСТ вы можете начать зарабатывать сразу после
+              регистрации. Вы получите экспертный совет от финансового эксперта, который объяснит,
+              как работает приложение, и как правильно распорядиться своими инвестициями, чтобы уже
+              через полгода выйти на доход более 250 000 сом в месяц.
             </p>
             <br />
             <p class="video-text">
-              Поскольку компания продолжает расширять свою деятельность и придерживаться
-              ответственной финансовой политики, потенциальным акционерам открывается возможность
-              стать частью ее истории успеха.
+              Невероятное программное обеспечение САЛЫМ ИНВЕСТ также делает всю работу за вас,
+              поэтому вам не нужно ничего изучать, лишь следовать инструкциям. Софт подключен к
+              магистрали финансовых рынков и зарабатывают деньги каждый раз, когда совершается
+              очередная транзакция. Эта передовая технология меняет жизнь людей. САЛЫМ ИНВЕСТ – ваш
+              билет в мир инвестиций!
             </p>
 
             <div class="exchange-rates__right">
@@ -267,6 +281,19 @@
 
                 <button type="submit">Отправить</button>
               </form>
+              <span class="pr-title"> О проекте </span>
+              <br />
+              <p class="video-text">
+                Динамичный рост ОДО "МФК "Салым Инвест», обширная клиентская база и положительные
+                финансовые показатели делают компанию привлекательной инвестиционной перспективой
+                для частных лиц и организаций, ищущих стабильную и прибыльную возможность.
+              </p>
+              <br />
+              <p class="video-text">
+                Поскольку компания продолжает расширять свою деятельность и придерживаться
+                ответственной финансовой политики, потенциальным акционерам открывается возможность
+                стать частью ее истории успеха.
+              </p>
             </div>
             <style>
               .iti {
@@ -578,28 +605,30 @@
           </div>
         </section> -->
 
-        <section class="our-awards">
-          <div class="calculate-credit__heading">
-            <h2>Наши сертификаты</h2>
-            <p>Подтверждения о соответствии</p>
-          </div>
-          <div class="our-awards__content">
-            <div class="card-all" id="selector-gallery">
-              <div class="card">
-                <div class="our-awards-img">
-                  <img src="images/liz1.webp" alt="load img" />
+        <section class="our-awards" style="margin-top: 30px">
+          <div class="container">
+            <div class="calculate-credit__heading">
+              <h2>Наши сертификаты</h2>
+              <p>Подтверждения о соответствии</p>
+            </div>
+            <div class="our-awards__content">
+              <div class="card-all" id="selector-gallery">
+                <div class="card">
+                  <div class="our-awards-img">
+                    <img src="images/liz1.webp" alt="load img" />
+                  </div>
                 </div>
-              </div>
 
-              <div class="card">
-                <div class="our-awards-img">
-                  <img src="images/liz2.png" alt="load img" />
+                <div class="card">
+                  <div class="our-awards-img">
+                    <img src="images/liz2.png" alt="load img" />
+                  </div>
                 </div>
-              </div>
 
-              <div class="card">
-                <div class="our-awards-img">
-                  <img src="images/liz3.png" alt="load img" />
+                <div class="card">
+                  <div class="our-awards-img">
+                    <img src="images/liz3.png" alt="load img" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -611,7 +640,10 @@
             <div class="slider-container">
               <div class="items-block sliders-block">
                 <div class="item slide">
-                  <h2>Акмал Орзикулов</h2>
+                  <div class="name-wrap">
+                    <h2>Акмал Орзикулов</h2>
+                    <span>Строитель</span>
+                  </div>
                   <img src="images/reviews/review1.jpg" alt="" />
                   <p>
                     Я пришел сюда, чтобы инвестировать , но благодаря САЛЫМ ИНВЕСТ открыл для себя
@@ -619,7 +651,10 @@
                   </p>
                 </div>
                 <div class="item slide">
-                  <h2>Нигина Фарманова</h2>
+                  <div class="name-wrap">
+                    <h2>Нигина Фарманова</h2>
+                    <span>Адвокат</span>
+                  </div>
                   <img src="images/reviews/review2.jpg" alt="" />
                   <p>
                     Я решила инвестировать и не пожалела. Доходность превзошла все мои ожидания, и я
@@ -627,7 +662,10 @@
                   </p>
                 </div>
                 <div class="item slide">
-                  <h2>Айрат Хамидов</h2>
+                  <div class="name-wrap">
+                    <h2>Айрат Хамидов</h2>
+                    <span>Страховый агент</span>
+                  </div>
                   <img src="images/reviews/review3.jpg" alt="" />
                   <p>
                     Я присоединился к проекту САЛЫМ ИНВЕСТ по рекомендации друзей с надеждой на
@@ -637,7 +675,10 @@
                 </div>
 
                 <div class="item slide">
-                  <h2>Шахназар Хаитов</h2>
+                  <div class="name-wrap">
+                    <h2>Шахназар Хаитов</h2>
+                    <span>Бухгалтер</span>
+                  </div>
                   <img src="images/reviews/review5.jpg" alt="" />
                   <p>
                     Не могу поверить, как САЛЫМ ИНВЕСТ приумножил мои вложения в золото. Очень
@@ -645,7 +686,10 @@
                   </p>
                 </div>
                 <div class="item slide">
-                  <h2>Шавкат Сабиров</h2>
+                  <div class="name-wrap">
+                    <h2>Шавкат Сабиров</h2>
+                    <span>Агроном</span>
+                  </div>
                   <img src="images/reviews/review6.jpg" alt="" />
                   <p>
                     Я глубоко признателен проекту САЛЫМ ИНВЕСТ. Благодаря проету, я достиг
@@ -654,7 +698,10 @@
                 </div>
 
                 <div class="item slide">
-                  <h2>Абдурахим Сатторов</h2>
+                  <div class="name-wrap">
+                    <h2>Абдурахим Сатторов</h2>
+                    <span>Курьер</span>
+                  </div>
                   <img src="images/reviews/review8.jpg" alt="" />
                   <p>
                     Спасибо САЛЫМ ИНВЕСТ за превосходные инвестиционные возможности. Я чувствую себя
@@ -670,6 +717,588 @@
             </div>
           </div>
         </div>
+
+        <section id="userTable">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="userTable-block">
+                  <h1 id="liveUsers" class="text-center sectionHeadline">Онлайн трейдер</h1>
+                  <div class="table-responsive" style="overflow-x: scroll">
+                    <div id="tradersTableWrap">
+                      <div class="tradersTableFadeOutWrap">
+                        <div class="tradersTableFadeOut"></div>
+                        <table
+                          width="100%"
+                          cellspacing="0"
+                          cellpadding="0"
+                          class="tradersTable table-striped"
+                        >
+                          <tbody>
+                            <!-- <tr>
+                                        <th width="130" scope="col">Пользователь</th>
+                                        <th width="160" scope="col">Время</th>
+                                        <th width="104" scope="col">Торговля</th>
+                                        <th width="104" scope="col">Прибыль</th>
+                                     </tr> -->
+                            <tr>
+                              <th width="130" scope="col">Пользователь</th>
+                              <th width="90" scope="col">Прибыль</th>
+                              <th width="90" scope="col">Торговля</th>
+                              <th width="160" scope="col">Время</th>
+                            </tr>
+                            <tr class="myhide signals__col">
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                Н******
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                0
+                              </td>
+                              <td
+                                class="tradersTableLoserCell"
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                <i class="fa fa-times"></i>
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <pop>02:35:53</pop> <span>21/09/2020</span>
+                              </td>
+                            </tr>
+                            <tr class="myhide signals__col">
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                А******
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <b>$278</b>
+                              </td>
+                              <td
+                                class="tradersTableWinnerCell"
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                <i class="fa fa-check"></i>
+                              </td>
+
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <pop>02:40:21</pop> <span>21/09/2020</span>
+                              </td>
+                            </tr>
+                            <tr class="myhide signals__col">
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                А******
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <b>$73</b>
+                              </td>
+                              <td
+                                class="tradersTableWinnerCell"
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                <i class="fa fa-check"></i>
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <pop>02:40:19</pop> <span>21/09/2020</span>
+                              </td>
+                            </tr>
+                            <tr class="myhide signals__col">
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                Б******
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                0
+                              </td>
+                              <td
+                                class="tradersTableLoserCell"
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                <i class="fa fa-times"></i>
+                              </td>
+
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <pop>02:35:47</pop> <span>21/09/2020</span>
+                              </td>
+                            </tr>
+                            <tr class="myhide signals__col">
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                Л******
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <b>$213</b>
+                              </td>
+                              <td
+                                class="tradersTableWinnerCell"
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                <i class="fa fa-check"></i>
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <pop>02:35:30</pop> <span>21/09/2020</span>
+                              </td>
+                            </tr>
+                            <tr class="myhide signals__col">
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                Н******
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <b>$14</b>
+                              </td>
+                              <td
+                                class="tradersTableWinnerCell"
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                <i class="fa fa-check"></i>
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <pop>02:35:58</pop> <span>21/09/2020</span>
+                              </td>
+                            </tr>
+                            <tr class="myhide signals__col">
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                С******
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <b>$160</b>
+                              </td>
+                              <td
+                                class="tradersTableWinnerCell"
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                <i class="fa fa-check"></i>
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <pop>02:35:25</pop> <span>21/09/2020</span>
+                              </td>
+                            </tr>
+                            <tr class="myhide signals__col">
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                А******
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <b>$109</b>
+                              </td>
+                              <td
+                                class="tradersTableWinnerCell"
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                <i class="fa fa-check"></i>
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <pop>02:35:38</pop> <span>21/09/2020</span>
+                              </td>
+                            </tr>
+                            <tr class="myhide signals__col">
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                О******
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                0
+                              </td>
+                              <td
+                                class="tradersTableLoserCell"
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                <i class="fa fa-times"></i>
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <pop>02:35:21</pop> <span>21/09/2020</span>
+                              </td>
+                            </tr>
+                            <tr class="myhide signals__col">
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                М******
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <b>$80</b>
+                              </td>
+                              <td
+                                class="tradersTableWinnerCell"
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                <i class="fa fa-check"></i>
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <pop>02:35:50</pop> <span>21/09/2020</span>
+                              </td>
+                            </tr>
+                            <tr class="myhide signals__col">
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                А******
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                0
+                              </td>
+                              <td
+                                class="tradersTableLoserCell"
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                <i class="fa fa-times"></i>
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <pop>02:35:18</pop> <span>21/09/2020</span>
+                              </td>
+                            </tr>
+                            <tr class="myhide signals__col">
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                Д******
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                0
+                              </td>
+                              <td
+                                class="tradersTableLoserCell"
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                "
+                              >
+                                <i class="fa fa-times"></i>
+                              </td>
+                              <td
+                                style="
+                                  height: 40px;
+                                  line-height: 40px;
+                                  font-size: 14px;
+                                  overflow: hidden;
+                                  text-align: center;
+                                "
+                              >
+                                <pop>02:40:02</pop> <span>21/09/2020</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
@@ -678,7 +1307,7 @@
         <div class="content">
           <div class="first-block">
             <div class="logo">
-              <img src="images/logo2.png" alt="" />
+              <img src="images/logo.svg" alt="" />
             </div>
             <h6 class="text">ОАО МФК "Салым Финанс" © 2007-2023, Лицензия НБКР №006</h6>
           </div>
@@ -853,6 +1482,30 @@
             from: val,
           });
         });
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const blockToHide = document.getElementById('hide-count');
+        const footer = document.querySelector('footer');
+
+        function checkIfBlockReachedFooter() {
+          const blockRect = blockToHide.getBoundingClientRect();
+          const footerRect = footer.getBoundingClientRect();
+
+          if (blockRect.top >= footerRect.top) {
+            // Блок достиг нижней границы страницы и попал на футер
+            blockToHide.style.opacity = 0;
+          } else {
+            // Блок еще не достиг футера
+            blockToHide.style.opacity = 1;
+          }
+        }
+
+        // Первая проверка при загрузке страницы
+        checkIfBlockReachedFooter();
+
+        // Проверяем при прокрутке страницы
+        window.addEventListener('scroll', checkIfBlockReachedFooter);
       });
     </script>
   </body>

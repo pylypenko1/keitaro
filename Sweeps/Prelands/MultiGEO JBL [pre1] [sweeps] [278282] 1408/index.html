@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Amazon Geschenkkarte</title>
-    <meta name="viewport" content="user-scalable=false, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/css1.css">
     <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
@@ -26,6 +26,38 @@
             transform: translateY(90%);
         }
     </style>
+
+    <script>
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            const results = regex.exec(location.search);
+            console.log(results);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        ! function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', getUrlParameter('idpxl'));
+        fbq('track', 'PageView');
+        fbq('track', 'InitiateCheckout');
+    </script>
 </head>
 
 <body>
@@ -286,7 +318,8 @@
                             <p class="text-42">1. Натисніть "ОК", щоб відвідати нашу сторінку спонсора.</p>
                             <p class="text-43">2. Введіть свою адресу, щоб отримати вашу нагороду</p>
                             <p class="text-44">3. Ваша нагорода буде доставлена ​​протягом 3 або 5 днів кур'єром.</p><a
-                                href="{offer}"><button type="button" class="survey_button" id="afflink"> OK </button></a>
+                                href="{offer}"><button type="button" class="survey_button" id="afflink"> OK
+                                </button></a>
                         </div>
                     </div>
                 </div>
