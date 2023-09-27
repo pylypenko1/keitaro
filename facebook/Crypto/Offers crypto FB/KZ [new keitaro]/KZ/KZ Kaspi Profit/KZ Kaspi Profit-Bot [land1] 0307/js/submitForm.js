@@ -1,7 +1,6 @@
 function submitForm(dataLead, arrPixelID) {
-
   $.ajax({
-    type: "POST",
+    type: 'POST',
     url: './proxy.php',
     data: {
       first_name: dataLead.first,
@@ -17,53 +16,36 @@ function submitForm(dataLead, arrPixelID) {
       quiz2: dataLead.quiz2,
       quiz3: dataLead.quiz3,
       quiz4: dataLead.quiz4,
-      ip: dataLead.ip
+      ip: dataLead.ip,
     },
     complete: function (data) {
       console.log(data.responseText);
       if (data.responseText === 'success') {
-
         let urlAttr = '';
         for (key in arrPixelID) {
-          urlAttr += key + '=' + arrPixelID[key] + '&'
+          urlAttr += key + '=' + arrPixelID[key] + '&';
         }
 
-        document.location.href = "./thanks.html?" + urlAttr;
-
-      } else if (data.responseText === "double_email") {
-
-        $("form").each(function () {
-          $(this).find("input[type=email]").val('');
+        document.location.href = './thanks.html?' + urlAttr;
+      } else if (data.responseText === 'double_email') {
+        $('form').each(function () {
+          $(this).find('input[type=email]').val('');
         });
-        let modalFailureEmail = $("#modalFailureEmail");
+        let modalFailureEmail = $('#modalFailureEmail');
         openModal(modalFailureEmail);
-
-      } else if (data.responseText === "double_phone") {
-
-        $("form").each(function () {
-          $(this).find("input[type=tel]").val('');
+      } else if (data.responseText === 'double_phone') {
+        $('form').each(function () {
+          $(this).find('input[type=tel]').val('');
         });
-        let modalFailure = $("#modalFailure");
+        let modalFailure = $('#modalFailure');
         openModal(modalFailure);
-
-      } else if (data.responseText === "invalid") {
-
-        $("form").each(function () {
-          $(this).find("input[type=email]").val('');
+      } else if (data.responseText === 'invalid') {
+        $('form').each(function () {
+          $(this).find('input[type=email]').val('');
         });
-        let modalInvalid = $("#modalInvalid");
+        let modalInvalid = $('#modalInvalid');
         openModal(modalInvalid);
-
-      } else {
-
-        let urlAttr = '';
-        for (key in arrPixelID) {
-          urlAttr += key + '=' + arrPixelID[key] + '&'
-        }
-
-        document.location.href = "./thanks.html?" + urlAttr;
-
       }
-    }
+    },
   });
 }

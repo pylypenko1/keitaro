@@ -1593,3 +1593,9 @@ body.with_background .content {
   width: 35% !important;
   transform: translateY(90%);
 }
+
+@media (max-width: 998px) {
+  .flag-icon {
+    display: none !important;
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Sberbank</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/flow.css">
+    <link rel="stylesheet" href="css/funnel.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <div id="loader" style="display: none">
+        <img src="images/preloader.svg" alt="Preloader" />
+    </div>
+
+    <div class="logo">
+        <img class="logo-img" src="images/logo.png" alt="logo" style="width: 130px;max-width: 100%;">
+    </div>
+    <div class="custom-form">
+        <form class="form-wrapper" method="post" autocomplete="off">
+            <div class="form-group input-wrapper relative-input-wrapper">
+                <input type="text" name="firstName" id="firstName" placeholder="Ваше Имя" class="form-control">
+            </div>
+            <div class="form-group input-wrapper relative-input-wrapper">
+                <input type="text" name="lastName" id="lastName" placeholder="Ваша Фамилия" class="form-control">
+            </div>
+            <div class="form-group input-wrapper relative-input-wrapper">
+                <input type="email" name="email" id="email" placeholder="Ваш адрес электронной почты"
+                    class="form-control">
+            </div>
+            <div class="form-group input-wrapper relative-input-wrapper">
+                <input placeholder="Ваш телефон" class="phone form-control" name="phone" type="tel" id="phone">
+            </div>
+            <div class="form-group input-wrapper">
+                <button type="submit" class="register-btn">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/imask.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Validate.js -->
+    <script src="js/validate.min.js"></script>
+
+    <!-- JS-Adapter -->
+    <script src="js/jsAdapter.js"></script>
+    <script src="js/pixelInitPageView.js"></script>
+
+</body>
+
+</html>

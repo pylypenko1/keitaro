@@ -15,15 +15,14 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/form.css" />
     <link rel="stylesheet" href="css/intlTelInput.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/modal.css" />
 
-    <!-- JS adapter -->
-    <script type="application/javascript">
+     <!-- JS adapter -->
+     <script type="application/javascript">
       function getCookie(name) {
         var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
         return v ? v[2] : null;
@@ -61,15 +60,6 @@
           var subid = getSubId();
 
           setCookie('subid', subid);
-
-          // Adds params to the links
-          document.querySelectorAll('a').forEach(function (link) {
-            var url = new URL(link.href);
-            params.forEach(function (v, k) {
-              url.searchParams.append(k, v);
-            });
-            link.href = url.toString();
-          });
 
           // Adds params as hidden inputs to the forms
           document.querySelectorAll('form').forEach(function (form) {
@@ -124,7 +114,9 @@
             <div id="order" class="boxit">
               <div class="frame-container" style="padding: 30px">
                 <div class="row-form">
-                  <h4 class="form__title">Заполните поля ниже и с вами свяжется ваш финансовый эксперт</h4>
+                  <h4 class="form__title">
+                    Заполните поля ниже и с вами свяжется ваш финансовый эксперт
+                  </h4>
                   <!-- THERE -->
                   <form class="register-form" id="formTop" method="post">
                     <div class="form-input-main">

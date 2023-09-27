@@ -9,30 +9,27 @@
   <link rel="stylesheet" type="text/css" href="css/thanks.css">
   <link rel="icon" href="images/logo.png" type="image/png">
 
-  <script
-      async
-      src="https://api.imotech.video/ad/events.js?pixel_id=<?php echo (isset($_GET['idpxl'])) ? $_GET['idpxl'] : ''; ?>"
-    ></script>
-    <script>
-      window.bgdataLayer = window.bgdataLayer || [];
+  <script async src="https://api.imotech.video/ad/events.js?pixel_id=<?php echo (isset($_GET['idpxl'])) ? $_GET['idpxl'] : ''; ?>"></script>
+  <script>
+    window.bgdataLayer = window.bgdataLayer || [];
 
-      function bge() {
-        bgdataLayer.push(arguments);
-      }
-      bge('init', "<?php echo (isset($_GET['idpxl'])) ? $_GET['idpxl'] : ''; ?>");
-    </script>
-    <script>
-      // Track a conversion with BigoAds
-      BigoAds.trackConversion();
-    </script>
+    function bge() {
+      bgdataLayer.push(arguments);
+    }
+    bge('init', "<?php echo (isset($_GET['idpxl'])) ? $_GET['idpxl'] : ''; ?>");
+  </script>
+  <script>
+    // Track a conversion with BigoAds
+    BigoAds.trackConversion();
+  </script>
 
-    <img id="pb" height="1" width="1" style="display: none" src="" />
-    <script>
-      var matches = document.cookie.match(new RegExp('(?:^|; )' + 'subid' + '=([^;]*)'));
-      var subId = matches ? decodeURIComponent(matches[1]) : undefined;
-      document.getElementById('pb').src =
-        'https://keitaro-leadar.ink/f6c793a/postback?subid=' + subId + '&status=lead';
-    </script>
+  <img id="pb" height="1" width="1" style="display: none" src="" />
+  <script>
+    var matches = document.cookie.match(new RegExp('(?:^|; )' + 'subid' + '=([^;]*)'));
+    var subId = matches ? decodeURIComponent(matches[1]) : undefined;
+    document.getElementById('pb').src =
+      'https://nanometer.space/0a62660/postback?subid=' + subId + '&status=lead';
+  </script>
 </head>
 
 <body class="thank_page_main">
