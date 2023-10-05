@@ -1,0 +1,82 @@
+@media (max-width: 992px) {
+  .head-phone {
+    display: none !important;
+  }
+  .main-title {
+    font-size: 30px;
+  }
+  .about-block {
+    flex-direction: column !important;
+  }
+  .ab-pic,
+  .ab-us {
+    width: 100%;
+  }
+  .content-block {
+    flex-direction: column !important;
+  }
+  .content-title {
+    font-size: 30px;
+  }
+  .service-wrapper {
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .head-main-bar {
+    flex-direction: column;
+  }
+  .main-screen {
+    padding-top: 200px;
+    flex-direction: column !important;
+  }
+  .main-text,
+  .main-img {
+    width: 100%;
+  }
+  .main-title,
+  .main-link-btn {
+    text-align: center;
+  }
+  .service-title {
+    font-size: 30px;
+  }
+  .faq-wrap {
+    flex-direction: column;
+  }
+  .faq-img,
+  .client-form,
+  .faq-accordion {
+    width: 100%;
+  }
+  .footer-block {
+    flex-direction: column;
+  }
+  .footer-wrapper {
+    width: 100%;
+  }
+  .footer-nav {
+    flex-direction: row !important;
+    justify-content: center;
+  }
+  .footer-ttl h4 {
+    text-align: center;
+  }
+  .contact-item {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-title {
+    font-size: 30px;
+  }
+  button {
+    font-size: 16px !important;
+  }
+
+  .button-1::after {
+    display: none;
+  }
+}

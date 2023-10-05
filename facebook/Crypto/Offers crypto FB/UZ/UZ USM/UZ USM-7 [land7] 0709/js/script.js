@@ -1,10 +1,10 @@
 const offerCountry = 'uz';
 const offerName = 'USM-7';
-const sourceDefault = 'facebook';
+const trafficSource = getUrlParameter('source') || 'facebook';
 const offerLang = 'ru';
 
 // Добавляем в localStorage значение источника
-localStorage.setItem('sourceDefault', sourceDefault);
+localStorage.setItem('trafficSource', trafficSource);
 
 // Функция для получения регулярного выражения для номера телефона по коду страны
 const getPhonePatternForCountry = (countryCode) => {
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function () {
             offer: offerName,
             lang: offerLang,
             ip: ip || '111.111.111.111',
-            source: getUrlParameter('source') || sourceDefault,
+            source: trafficSource,
             buyer: getUrlParameter('buyer') || '',
             target: getUrlParameter('target') || '',
             creo: getUrlParameter('creo') || '',
@@ -253,7 +253,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 const emailInput = form.elements.email;
 
                 if (response.saved === 'true') {
-                  window.location.href = 'thanks/thanks.html';
+                  const redirectUrl = response.redirect_url || 'none';
+                  window.location.href = `thanks/thanks.html?redirectUrl=${redirectUrl}`;
                   return;
                 }
 
