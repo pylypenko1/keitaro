@@ -251,11 +251,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (xhr.status === 200) {
               if (xhr.responseText) {
                 const response = JSON.parse(xhr.responseText);
-                const duplicateErrorEmail =
-                  'Double: lead with this email has been added less than 21 days ago';
-                const duplicateErrorPhone =
-                  'Double: lead with this phone has been added less than 21 days ago';
-                const incorrectEmail = 'The provided value is invalid';
+                const duplicateErrorEmail = '4207';
+                const duplicateErrorPhone = '4206';
+                const incorrectEmail = '4204';
                 const phoneInput = form.elements.phone;
                 const emailInput = form.elements.email;
 
@@ -267,10 +265,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (response.saved === 'false' && response.errors) {
                   if (
-                    response.errors.phone &&
-                    response.errors.phone.custom === duplicateErrorPhone &&
-                    response.errors.email &&
-                    response.errors.email.custom === duplicateErrorEmail
+                    response.errors.includes(duplicateErrorPhone) &&
+                    response.errors.includes(duplicateErrorEmail)
                   ) {
                     showModal(
                       `Вы уже зарегистрированы <br> на номер ${phoneInput.value} <br> и почту ${emailInput.value}. Если вам нужен новый аккаунт, пройдите регистрацию на другую электронную почту и мобильный номер.`,
@@ -279,10 +275,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     return;
                   }
 
-                  if (
-                    response.errors.email &&
-                    response.errors.email.custom === duplicateErrorEmail
-                  ) {
+                  if (response.errors.includes(duplicateErrorEmail)) {
                     showModal(
                       `Вы уже зарегистрированы <br> на почту ${emailInput.value}. Если вам нужен новый аккаунт, пройдите регистрацию на другую электронную почту.`,
                     );
@@ -290,10 +283,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     return;
                   }
 
-                  if (
-                    response.errors.phone &&
-                    response.errors.phone.custom === duplicateErrorPhone
-                  ) {
+                  if (response.errors.includes(duplicateErrorPhone)) {
                     showModal(
                       `Вы уже зарегистрированы <br> на номер ${phoneInput.value}. Если вам нужен новый аккаунт, пройдите регистрацию на другой мобильный номер.`,
                     );
@@ -301,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     return;
                   }
 
-                  if (response.errors.email && response.errors.email.email === incorrectEmail) {
+                  if (response.errors.includes(incorrectEmail)) {
                     showModal(`Вы ввели некорректную почту <br> ${emailInput.value}`);
                     clearInputFields(emailInput);
                     return;

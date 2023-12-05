@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <circle id="b" cx="55" cy="55" r="45"/>
+    <filter id="a" width="135.6%" height="135.6%" x="-17.8%" y="-15.6%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0" in="shadowBlurOuter1"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <use fill="black" filter="url(#a)" xlink:href="#b"/>
+    <use fill="#FFFFFF" xlink:href="#b"/>
+    <path fill="#262626" d="M46.0830991,45 C46.559238,42.1573363 49.0243179,40 51.9937394,40 L58.0062606,40 C60.9649509,40 63.437672,42.1620539 63.9162875,45 L69.0098214,45 C71.2147544,45 73,46.7864076 73,48.990053 L73,65.009947 C73,67.2157067 71.2135362,69 69.0098214,69 L40.9901786,69 C38.7852456,69 37,67.2135924 37,65.009947 L37,48.990053 C37,46.7842933 38.7864638,45 40.9901786,45 L46.0830991,45 Z M55,65 C59.970563,65 64,60.970563 64,56 C64,51.029437 59.970563,47 55,47 C50.029437,47 46,51.029437 46,56 C46,60.970563 50.029437,65 55,65 Z M55,63 C51.1340066,63 48,59.8659934 48,56 C48,52.1340066 51.1340066,49 55,49 C58.8659934,49 62,52.1340066 62,56 C62,59.8659934 58.8659934,63 55,63 Z"/>
+  </g>
+</svg>

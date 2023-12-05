@@ -1,0 +1,467 @@
+UID: mrd-2B3D6A42B3EBF834
+OS: Windows 10 Home x64
+UserName: prais
+ComputerName: LAPTOP-K45BD0IB
+DateTime: 15.10.2022 10:05:14
+UserAgent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E)
+Keyboard Languages: English
+Display Resolution: 1536 x 864
+CPU: Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz core 8
+RAM: physical 2047MB , virtual 2047MB
+GPU: UNKNOWN
+
+Installed software:
+7-Zip 21.07 (x64) [21.07]
+FIFA18 MULTI version 1.0 [1.0]
+Git [2.37.1]
+Microsoft 365 - en-us [16.0.15629.20156]
+WinRAR 6.11 (64-bit) [6.11.0]
+CorelDRAW Graphics Suite [24.2.0.444]
+Corel Graphics - Windows Shell Extension [24.0.0.293]
+CorelDRAW Graphics Suite 2022 - Setup Files (x64) [24.2]
+CorelDRAW Graphics Suite 2022 - EN (x64) [24.2]
+CorelDRAW Graphics Suite 2022 - Draw (x64) [24.2]
+CorelDRAW Graphics Suite 2022 - Font Manager (x64) [24.2]
+Microsoft Visual C++ 2012 x64 Additional Runtime - 11.0.61030 [11.0.61030]
+CorelDRAW Graphics Suite 2022 - Discovery (x64) [24.0.1]
+Intel(R) Chipset Device Software [10.1.18383.8213]
+Corel Update Manager [2.15.656]
+Oracle VM VirtualBox 6.1.38 [6.1.38]
+CorelDRAW Graphics Suite 2022 - Models (x64) [24.0.1]
+Windows PC Health Check [3.6.2204.08001]
+Microsoft Update Health Tools [4.67.0.0]
+Corel Graphics - Windows Shell Extension [24.0.293]
+CorelDRAW Graphics Suite 2022 - VBA (x64) [24.2]
+CorelDRAW Graphics Suite 2022 - Writing Tools (x64) [24.2]
+CorelDRAW Graphics Suite 2022 - Capture (x64) [24.2]
+Update for Windows 10 for x64-based Systems (KB5001716) [4.91.0.0]
+CorelDRAW Graphics Suite 2022 - PHOTO-PAINT (x64) [24.2]
+Microsoft Visual Basic for Applications 7.1 (x64) [7.1.00.00]
+Office 16 Click-to-Run Licensing Component [16.0.15629.20156]
+Office 16 Click-to-Run Extensibility Component [16.0.15629.20118]
+Office 16 Click-to-Run Localization Component [16.0.13127.20616]
+Microsoft Visual Basic for Applications 7.1 (x64) English [7.1.0.0]
+Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.21005 [12.0.21005]
+CorelDRAW Graphics Suite 2022 - Common (x64) [24.2]
+Corel Graphics - Windows Shell Extension 32 Bit Keys [24.0.293]
+Microsoft Visual Studio Tools for Applications 2019 x64 Hosting Support [16.0.28801]
+Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.21005 [12.0.21005]
+Adobe Acrobat (64-bit) [22.003.20258]
+CorelDRAW Graphics Suite 2022 - Custom Data (x64) [24.2]
+CorelDRAW Graphics Suite 2022 [24.2]
+NVIDIA Graphics Driver 517.48 [517.48]
+NVIDIA GeForce Experience 3.26.0.131 [3.26.0.131]
+NVIDIA Optimus Update 39.4.0.0 [39.4.0.0]
+NVIDIA PhysX System Software 9.21.0713 [9.21.0713]
+NVIDIA Update 39.4.0.0 [39.4.0.0]
+NVIDIA FrameView SDK 1.3.8107.31782123 [1.3.8107.31782123]
+NVIDIA SHIELD Streaming [7.1.31648965]
+NVIDIA GPX Common OSS binaries (POCO, OpenSSL, libprotobuf) [7.1]
+NVIDIA HD Audio Driver 1.3.39.14 [1.3.39.14]
+NVIDIA Install Application [2.1002.377.0]
+NVIDIA Backend [39.4.0.0]
+NVIDIA Container [1.37]
+NVIDIA TelemetryApi helper for NvContainer [1.37]
+NVIDIA LocalSystem Container [1.37]
+NVIDIA Message Bus for NvContainer [1.37]
+NVIDIA NVAPI Monitor plugin for NvContainer [1.37]
+NVIDIA NetworkService Container [1.37]
+NVIDIA Session Container [1.37]
+NVIDIA User Container [1.37]
+NVIDIA NvModuleTracker [6.14.25214.24630]
+NVIDIA NodeJS [3.26.0.131]
+NVIDIA Watchdog Plugin for NvContainer [1.37]
+NVIDIA Telemetry Client [16.15.11.0]
+NVIDIA Virtual Host Controller [3.04.0.1]
+Nvidia Share [3.26.0.131]
+NVIDIA ShadowPlay 3.26.0.131 [3.26.0.131]
+NVIDIA SHIELD Wireless Controller Driver [3.26.0.94]
+NVIDIA Update Core [39.4.0.0]
+NVIDIA Virtual Audio 4.45.0.0 [4.45.0.0]
+EA app [12.21.0.5278]
+CorelDRAW Graphics Suite 2022 - IPM (x64) [24.2]
+Microsoft Visual C++ 2019 X64 Additional Runtime - 14.26.28720 [14.26.28720]
+Microsoft Visual C++ 2012 x64 Minimum Runtime - 11.0.61030 [11.0.61030]
+CorelDRAW Graphics Suite 2022 - Filters (x64) [24.2]
+Microsoft Visual C++ 2019 X64 Minimum Runtime - 14.26.28720 [14.26.28720]
+CorelDRAW Graphics Suite 2022 - IPM Content EN (x64) [24.1]
+Node.js [16.16.0]
+CorelDRAW Graphics Suite 2022 - Workspaces (x64) [24.2]
+Wampserver64 3.2.6 [3.2.6]
+Mobirise 5.6.13 [5.6.13]
+FXCM MetaTrader4 [4.00]
+FXCM Trading Station Desktop [01.16.072722]
+Google Chrome [106.0.5249.119]
+JDownloader 2 [2.0.1]
+Microsoft Edge [106.0.1370.47]
+Microsoft Edge Update [1.3.169.31]
+Microsoft Edge WebView2 Runtime [106.0.1370.42]
+PowerISO [7.7]
+Grand Theft Auto V [1]
+Rockstar Games Social Club [1.1.5.8]
+Lenovo Vantage Service [3.13.14.0]
+VLC media player [3.0.17.4]
+Ghostscript GPL 8.64 (Msi Setup) [8.64]
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.30501 [12.0.30501.0]
+Ghostscript GPL 8.64 (Msi Setup) [8.64]
+Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.21005 [12.0.21005]
+Microsoft Visual Studio Tools for Applications 2019 [16.0.28801]
+Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030 [11.0.61030.0]
+WebAdvisor by McAfee [4.1.1.757]
+FIFA 22 [1.0.77.45722]
+Microsoft Visual Studio Tools for Applications 2019 x86 Hosting Support [16.0.28801]
+Microsoft Visual C++ 2015-2019 Redistributable (x64) - 14.26.28720 [14.26.28720.3]
+Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.60610 [11.0.60610.1]
+Vagrant [2.3.0]
+Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.60610 [11.0.60610.1]
+Microsoft GameInput [10.1.22621.1011]
+EA app [12.21.0.5278]
+Adobe Refresh Manager [1.8.0]
+Intel(R) Chipset Device Software [10.1.18383.8213]
+Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.61030 [11.0.61030]
+FIFA 23 [1.0.78.25353]
+Microsoft Visual C++ 2019 X86 Additional Runtime - 14.28.29325 [14.28.29325]
+Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.61030 [11.0.61030]
+Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030 [11.0.61030.0]
+Microsoft Visual C++ 2015-2019 Redistributable (x86) - 14.28.29325 [14.28.29325.2]
+Microsoft Visual C++ 2019 X86 Minimum Runtime - 14.28.29325 [14.28.29325]
+Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219 [10.0.40219]
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.30501 [12.0.30501.0]
+Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.21005 [12.0.21005]
+Loom 0.139.2 [0.139.2]
+Microsoft OneDrive [22.196.0918.0001]
+µTorrent [3.5.5.46514]
+uTorrent Web [1.2.8]
+Telegram Desktop version 4.1.1 [4.1.1]
+Microsoft Visual Studio Code (User) [1.71.2]
+
+Disk:
+C:\ type: local disk, total: 487108MB, space: 52335MB
+D:\ type: DVD driver, total: , space: 
+
+Process:
+[System Process]
+System
+Registry
+smss.exe
+csrss.exe
+wininit.exe
+csrss.exe
+services.exe
+lsass.exe
+svchost.exe
+fontdrvhost.exe
+WUDFHost.exe
+svchost.exe
+svchost.exe
+winlogon.exe
+fontdrvhost.exe
+WUDFHost.exe
+WUDFHost.exe
+dwm.exe
+svchost.exe
+svchost.exe
+svchost.exe
+IntelCpHDCPSvc.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+IntelCpHeciSvc.exe
+igfxCUIService.exe
+svchost.exe
+svchost.exe
+svchost.exe
+NVDisplay.Container.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+Memory Compression
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+NVDisplay.Container.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+spoolsv.exe
+svchost.exe
+svchost.exe
+WmiPrvSE.exe
+DAX3API.exe
+svchost.exe
+svchost.exe
+armsvc.exe
+svchost.exe
+FMService64.exe
+OfficeClickToRun.exe
+OneApp.IGCC.WinService.exe
+wlanext.exe
+esif_uf.exe
+Lenovo.Modern.ImController.exe
+conhost.exe
+svchost.exe
+LenovoUtilityService.exe
+servicehost.exe
+svchost.exe
+LenovoVantageService.exe
+svchost.exe
+PsiService_2.exe
+nvcontainer.exe
+PsiService_2.exe
+LMS.exe
+RstMwService.exe
+RtkAudUService64.exe
+svchost.exe
+svchost.exe
+UDClientService.exe
+svchost.exe
+MsMpEng.exe
+jhi_service.exe
+svchost.exe
+svchost.exe
+DAX3API.exe
+AggregatorHost.exe
+svchost.exe
+gamingservices.exe
+gamingservicesnet.exe
+WmiPrvSE.exe
+svchost.exe
+rundll32.exe
+uihost.exe
+sihost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+igfxEM.exe
+svchost.exe
+taskhostw.exe
+svchost.exe
+explorer.exe
+svchost.exe
+svchost.exe
+svchost.exe
+FnHotkeyUtility.exe
+svchost.exe
+svchost.exe
+unsecapp.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+StartMenuExperienceHost.exe
+SearchHost.exe
+Widgets.exe
+RuntimeBroker.exe
+RuntimeBroker.exe
+svchost.exe
+dllhost.exe
+NVIDIA Web Helper.exe
+conhost.exe
+GoogleCrashHandler.exe
+GoogleCrashHandler64.exe
+svchost.exe
+svchost.exe
+nvcontainer.exe
+SearchIndexer.exe
+svchost.exe
+svchost.exe
+ctfmon.exe
+NisSrv.exe
+svchost.exe
+SecurityHealthSystray.exe
+SecurityHealthService.exe
+RtkAudUService64.exe
+OneDrive.exe
+QSHelper.exe
+uTorrent.exe
+Loom.exe
+Cortana.exe
+RuntimeBroker.exe
+msteams.exe
+svchost.exe
+svchost.exe
+RuntimeBroker.exe
+msedgewebview2.exe
+msedgewebview2.exe
+msedgewebview2.exe
+msedgewebview2.exe
+msedgewebview2.exe
+msedgewebview2.exe
+XboxAppServices.exe
+svchost.exe
+ApplicationFrameHost.exe
+XboxPcApp.exe
+Loom.exe
+RuntimeBroker.exe
+Loom.exe
+Loom.exe
+PWRISOVM.EXE
+Loom.exe
+loom-recorder-production.exe
+conhost.exe
+Loom.exe
+Loom.exe
+Loom.exe
+Loom.exe
+EAConnect_microsoft.exe
+LenovoVantage-(VantageCoreAddin).exe
+LenovoVantage-(LenovoGamingSystemAddin).exe
+EABackgroundService.exe
+unsecapp.exe
+QtWebEngineProcess.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+cmd.exe
+cmd.exe
+conhost.exe
+cmd.exe
+conhost.exe
+conhost.exe
+browserhost.exe
+browserhost.exe
+browserhost.exe
+chrome.exe
+QtWebEngineProcess.exe
+helper.exe
+svchost.exe
+svchost.exe
+SgrmBroker.exe
+svchost.exe
+svchost.exe
+chrome.exe
+Lenovo.Modern.ImController.PluginHost.Device.exe
+msedgewebview2.exe
+msedgewebview2.exe
+msedgewebview2.exe
+msedgewebview2.exe
+msedgewebview2.exe
+msedgewebview2.exe
+LenovoVantage-(DeviceSettingsSystemAddin).exe
+LenovoVantage-(LenovoServiceBridgeAddin).exe
+RtkUWP.exe
+RuntimeBroker.exe
+XboxGameBarSpotify.exe
+RuntimeBroker.exe
+dllhost.exe
+chrome.exe
+chrome.exe
+utorrentie.exe
+msedgewebview2.exe
+msedgewebview2.exe
+msedgewebview2.exe
+msedgewebview2.exe
+msedgewebview2.exe
+msedgewebview2.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+utorrentie.exe
+msedgewebview2.exe
+dllhost.exe
+chrome.exe
+ShellExperienceHost.exe
+RuntimeBroker.exe
+chrome.exe
+chrome.exe
+chrome.exe
+svchost.exe
+svchost.exe
+chrome.exe
+CalculatorApp.exe
+RuntimeBroker.exe
+backgroundTaskHost.exe
+GameBar.exe
+Video.UI.exe
+RuntimeBroker.exe
+RuntimeBroker.exe
+GameBarFTServer.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+msedge.exe
+msedge.exe
+msedge.exe
+msedge.exe
+msedge.exe
+msedge.exe
+chrome.exe
+PhoneExperienceHost.exe
+RuntimeBroker.exe
+chrome.exe
+cmd.exe
+conhost.exe
+browserhost.exe
+chrome.exe
+chrome.exe
+chrome.exe
+msedge.exe
+RuntimeBroker.exe
+chrome.exe
+LenovoVantage-(LenovoCompanionAppAddin).exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+LockApp.exe
+svchost.exe
+RuntimeBroker.exe
+Lenovo.Modern.ImController.PluginHost.SettingsApp.exe
+Lenovo.Modern.ImController.PluginHost.SettingsApp.exe
+Lenovo.Modern.ImController.PluginHost.Device.exe
+Lenovo.Modern.ImController.PluginHost.Device.exe
+WhatsApp.exe
+RuntimeBroker.exe
+MiniSearchHost.exe
+SystemSettings.exe
+UserOOBEBroker.exe
+SystemSettingsBroker.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+msedge.exe
+svchost.exe
+msedge.exe
+msedge.exe
+msedge.exe
+msedge.exe
+svchost.exe
+SearchProtocolHost.exe
+smartscreen.exe
+Setup.exe
+ctfmon.exe
+audiodg.exe
+Setup.exe
+

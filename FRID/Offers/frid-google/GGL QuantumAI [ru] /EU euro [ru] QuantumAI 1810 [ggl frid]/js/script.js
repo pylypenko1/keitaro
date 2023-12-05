@@ -227,11 +227,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (xhr.status === 200) {
               if (xhr.responseText) {
                 const response = JSON.parse(xhr.responseText);
-                const duplicateErrorEmail =
-                  'Double: lead with this email has been added less than 21 days ago';
-                const duplicateErrorPhone =
-                  'Double: lead with this phone has been added less than 21 days ago';
-                const incorrectEmail = 'The provided value is invalid';
+                const duplicateErrorEmail = '4207';
+                const duplicateErrorPhone = '4206';
+                const incorrectEmail = '4204';
                 const phoneInput = form.elements.phone;
                 const emailInput = form.elements.email;
 
@@ -247,55 +245,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (response.saved === 'false' && response.errors) {
                   if (
-                    response.errors.phone &&
-                    response.errors.phone.custom === duplicateErrorPhone &&
-                    response.errors.email &&
-                    response.errors.email.custom === duplicateErrorEmail
+                    response.errors.includes(duplicateErrorPhone) &&
+                    response.errors.includes(duplicateErrorEmail)
                   ) {
                     showModal(
-                      `Вы уже зарегистрированы <br> на этом номере ${
-                        currentDialCode + phoneInput.value
-                      } <br> и электронной почте ${
-                        emailInput.value
-                      }. Если вам нужна новая учетная запись, зарегистрируйтесь, используя другой адрес электронной почты и номер мобильного телефона.`,
+                      `Вы уже зарегистрированы <br> на номер ${phoneInput.value} <br> и почту ${emailInput.value}. Если вам нужен новый аккаунт, пройдите регистрацию на другую электронную почту и мобильный номер.`,
                     );
                     clearInputFields(phoneInput, emailInput);
                     return;
                   }
 
-                  if (
-                    response.errors.email &&
-                    response.errors.email.custom === duplicateErrorEmail
-                  ) {
+                  if (response.errors.includes(duplicateErrorEmail)) {
                     showModal(
-                      `Вы уже зарегистрированы <br> в ${emailInput.value}. Если вам нужна новая учетная запись, зарегистрируйтесь с другим адресом электронной почты.`,
+                      `Вы уже зарегистрированы <br> на почту ${emailInput.value}. Если вам нужен новый аккаунт, пройдите регистрацию на другую электронную почту.`,
                     );
                     clearInputFields(emailInput);
                     return;
                   }
 
-                  if (
-                    response.errors.phone &&
-                    response.errors.phone.custom === duplicateErrorPhone
-                  ) {
+                  if (response.errors.includes(duplicateErrorPhone)) {
                     showModal(
-                      `Вы уже зарегистрированы <br> на этом номере ${
-                        currentDialCode + phoneInput.value
-                      }. Если вам нужна новая учетная запись, зарегистрируйтесь с другим номером мобильного телефона.`,
+                      `Вы уже зарегистрированы <br> на номер ${phoneInput.value}. Если вам нужен новый аккаунт, пройдите регистрацию на другой мобильный номер.`,
                     );
                     clearInputFields(phoneInput);
                     return;
                   }
 
-                  if (response.errors.email && response.errors.email.email === incorrectEmail) {
-                    showModal(`You entered an incorrect email <br> ${emailInput.value}`);
+                  if (response.errors.includes(incorrectEmail)) {
+                    showModal(`Вы ввели некорректную почту <br> ${emailInput.value}`);
                     clearInputFields(emailInput);
                     return;
                   }
                 }
               }
             } else {
-              showModal('Ошибка отправки формы. попробуй позже');
+              showModal('Ошибка отправки формы. Попробуйте позже');
             }
           };
           xhr.onerror = function () {

@@ -8,8 +8,6 @@
   <title>Страница благодарности</title>
   <link rel="stylesheet" type="text/css" href="css/thanks.css" />
   <!-- <link rel="icon" href="../favicon.ico" /> -->
-
-  <script src="js/pixelInitLead.js"></script>
 </head>
 
 <body class="thank_page_main">
@@ -49,6 +47,34 @@
       </div>
     </div>
   </div>
+
+  <!-- Включение библиотеки Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <!-- Отслеживание конверсии -->
+  <script>
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      const results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    const idpxl = getUrlParameter('idpxl');
+    gtag('event', 'conversion', {
+      'send_to': idpxl
+    });
+  </script>
+
+
 </body>
 
 

@@ -1,0 +1,160 @@
+/**
+ * Paths
+ */
+/**
+ * GraphikCy
+ */
+/**
+ * Kazimir
+ */
+/**
+ * PTSerif
+ */
+/**
+ * PTMono
+ */
+/**
+ * GraphikCy
+ */
+@font-face {
+  font-family: 'GraphikCy-Light';
+  src: url('../fonts/3idqK0ZnvV3e.woff2') format('woff2'), url('../fonts/Em4enu4Ravaf.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy';
+  src: url('../fonts/3idqK0ZnvV3e.woff2') format('woff2'), url('../fonts/Em4enu4Ravaf.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy';
+  src: url('../fonts/KuQaicuNHVpu.woff2') format('woff2'), url('../fonts/dbrXRANz7SWM.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy-Medium';
+  src: url('../fonts/SkAwbOnNfYyG.woff2') format('woff2'), url('../fonts/wrWecCeWoT2X.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy';
+  src: url('../fonts/SkAwbOnNfYyG.woff2') format('woff2'), url('../fonts/wrWecCeWoT2X.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy-Semibold';
+  src: url('../fonts/zTQrWl9g5ug4.woff2') format('woff2'), url('../fonts/Y2szI51Wfg3t.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy';
+  src: url('../fonts/zTQrWl9g5ug4.woff2') format('woff2'), url('../fonts/Y2szI51Wfg3t.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy';
+  src: url('../fonts/uFb7tAQ5Zw4f.woff2') format('woff2'), url('../fonts/I2IXPSWZBJGl.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GraphikCy-Black';
+  src: url('../fonts/nO84qdkoe9jW.woff2') format('woff2'), url('../fonts/H2g1wl0E8kQ4.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/**
+ * Kazimir
+ */
+@font-face {
+  font-family: 'Kazimir';
+  src: url('../fonts/yMCeySR7UKKP.woff2') format('woff2'), url('../fonts/lif3xMsMm9kj.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kazimir';
+  src: url('../fonts/55DBgvr89Yor.woff2') format('woff2'), url('../fonts/H3V36m9vCcQF.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kazimir-Medium';
+  src: url('../fonts/j73tBAl3FWOT.woff2') format('woff2'), url('../fonts/rixy4FE7inTz.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kazimir-Semibold';
+  src: url('../fonts/sYYa2dlz9u1S.woff2') format('woff2'), url('../fonts/6DBEba8axJ9Q.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kazimir-Semibold-Italic';
+  src: url('../fonts/t7LDf9HXrOtk.woff2') format('woff2'), url('../fonts/CdYkn8213cuc.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kazimir';
+  src: url('../fonts/dnDuxNLcJkN5.woff2') format('woff2'), url('../fonts/Wfk4BXTgYNmC.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kazimir-Black';
+  src: url('../fonts/Xl1CaEcHf3VM.woff2') format('woff2'), url('../fonts/H7rdlnWClWm9.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/**
+ * PTSerif
+ */
+@font-face {
+  font-family: 'PTSerif';
+  src: url('../fonts/uZUHWoAe0SiT.woff2') format('woff2'), url('../fonts/qNKsUQSNkagK.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PTSerif';
+  src: url('../fonts/b1GxFGhwYyix.woff2') format('woff2'), url('../fonts/4gsnbjM06OHw.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+/**
+ * PTMono
+ */
+@font-face {
+  font-family: 'PTMono';
+  src: url('../fonts/dNjxRCivKeMH.woff2') format('woff2'), url('../fonts/82iHwoj1z91Q.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

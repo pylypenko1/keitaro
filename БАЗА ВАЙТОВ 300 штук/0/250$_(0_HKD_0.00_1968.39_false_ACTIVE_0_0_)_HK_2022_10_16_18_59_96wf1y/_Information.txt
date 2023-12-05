@@ -1,0 +1,497 @@
+UID: mrd-F2D68993B9B63733
+OS: Windows 10 Enterprise x64
+UserName: rickkeung
+ComputerName: PC
+DateTime: 16.10.2022 23:55:39
+UserAgent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Tablet PC 2.0; Zoom 3.6.0)
+Keyboard Languages: Chinese (Traditional)
+Display Resolution: 1536 x 864
+CPU: AMD Ryzen 5 3600 6-Core Processor               core 12
+RAM: physical 2047MB , virtual 2047MB
+GPU: AMD Radeon RX 5700
+
+Installed software:
+AMD Software [21.10.2]
+CPUID ASUS CPU-Z 1.93 [1.93]
+Capcom Beat Em Up Bundle []
+FireAlpaca 2.4.3 (64bit) [2.4.3]
+Mozilla Firefox (x64 zh-TW) [105.0.3]
+Mozilla Maintenance Service [72.0.2]
+Microsoft Office 专业增强版 2019 - zh-cn [16.0.15629.20208]
+Microsoft Office 專業增強版 2019 - zh-tw [16.0.15629.20208]
+Fall Guys []
+侏羅紀世界：進化 2 []
+HYPERCHARGE: Unboxed Demo []
+鬼滅之刃 火之神血風譚 []
+PICO PARK []
+Two Point Campus []
+JUMP FORCE []
+VLC media player [3.0.17.4]
+WinRAR 5.71 (64-bit) [5.71.0]
+GALAX GAMER RGB [1.00.02]
+Catalyst Control Center Next Localization KO [2017.0424.2119.36535]
+WD_BLACK AN1500 [1.0.14.0]
+Microsoft ASP.NET Core 3.1.3 Targeting Pack (x64) [3.1.3.0]
+NordVPN [7.1.1.0]
+Microsoft .NET Core Runtime - 3.1.3 (x64) [24.76.28628]
+Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219 [10.0.40219]
+Catalyst Control Center Next Localization HU [2017.0424.2119.36535]
+AMD DVR64 [1.0.2]
+Patriot Viper DRAM RGB [1.0.9.4]
+Intel(R) Rapid Storage Technology [14.5.0.1081]
+Catalyst Control Center Next Localization FI [2017.0424.2119.36535]
+Catalyst Control Center Next Localization FR [2017.0424.2119.36535]
+ASUS AURA Extension Card HAL [1.1.0.18]
+Catalyst Control Center Next Localization TH [2017.0424.2119.36535]
+Microsoft .NET Core Targeting Pack - 3.1.0 (x64) [24.64.28315]
+Catalyst Control Center Next Localization CS [2017.0424.2119.36535]
+Corsair AURA DRAM Component [1.0.12]
+ENE_EHD_M2_HAL [1.0.9.12]
+Microsoft Visual C++ 2012 x64 Additional Runtime - 11.0.61030 [11.0.61030]
+Microsoft .NET Core Host - 3.1.3 (x64) [24.76.28628]
+ViGEm Bus Driver [1.16.116]
+Intel(R) Rapid Storage Technology [14.5.0.1081]
+Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.4148 [9.0.30729.4148]
+Catalyst Control Center Next Localization DA [2017.0424.2119.36535]
+Catalyst Control Center Next Localization RU [2017.0424.2119.36535]
+ASUS AURA Motherboard HAL [1.3.7.0]
+Bonjour [3.1.0.1]
+Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.40660 [12.0.40660]
+Pentablet 版本 3.2.0.210805 [3.2.0.210805]
+Microsoft .NET Core 3.1 Templates 3.1.201 (x64) [3.1.4.015034]
+Microsoft .NET Core AppHost Pack - 3.1.3 (x64_arm) [24.76.28628]
+Epic Games Launcher Prerequisites (x64) [1.0.0.0]
+NordUpdater [1.3.0.73]
+ASUS AURA VGA Component [0.0.4.3]
+Microsoft Windows Desktop Targeting Pack - 3.1.0 (x64) [24.64.28315]
+Microsoft Windows Desktop Runtime - 3.1.3 (x64) [24.76.28628]
+Microsoft ASP.NET Core 3.1.3 Shared Framework (x64) [3.1.3.0]
+Microsoft Update Health Tools [3.67.0.0]
+Boris FX Continuum Plug-ins 11 for Cyberlink []
+Intel(R) Chipset Device Software [10.1.1.45]
+Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.17 [9.0.30729]
+Universal Holtek RGB DRAM [1.0.0.3]
+RyzenMasterSDK [1.2.3.5]
+Catalyst Control Center Next Localization TR [2017.0424.2119.36535]
+AMD Settings [2021.1005.1236.22698]
+KMSpico []
+Patriot Viper M2 SSD RGB [1.1.0.2]
+vJoy Device Driver 2.1.9.1 [2.1.9.1]
+Office 16 Click-to-Run Licensing Component [16.0.15629.20156]
+Office 16 Click-to-Run Extensibility Component 64-bit Registration [16.0.15629.20118]
+Catalyst Control Center Next Localization ES [2017.0424.2119.36535]
+Kingston AURA DRAM Component [1.1.12]
+PHISON HAL [1.0.9.0]
+AURA DRAM Component [1.1.18]
+Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.31.31103 [14.31.31103]
+Microsoft .NET Standard Targeting Pack - 2.1.0 (x64) [24.0.28113]
+Catalyst Control Center Next Localization SV [2017.0424.2119.36535]
+Catalyst Control Center Next Localization IT [2017.0424.2119.36535]
+Microsoft Visual C++ 2022 X64 Additional Runtime - 14.31.31103 [14.31.31103]
+Adobe Acrobat (64-bit) [22.003.20258]
+ASUS AURA Display Component [1.1.23]
+AMD WVR64 [1.0.2]
+Catalyst Control Center Next Localization CHT [2017.0424.2119.36535]
+ASUS AURA Odd Component [1.0.8]
+ENE_EHD_ASM_HAL [1.00.00]
+ASUS MB Peripheral Products [1.0.31]
+Visual C++ 10.0 CRT (x64) [10.0]
+AURA lighting effect add-on x64 [0.0.24]
+Branding64 [1.00.0006]
+Microsoft .NET Core AppHost Pack - 3.1.3 (x64_x86) [24.76.28628]
+Microsoft .NET Core Host FX Resolver - 3.1.3 (x64) [24.76.28628]
+Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.40660 [12.0.40660]
+Microsoft Visual C++ 2012 x64 Minimum Runtime - 11.0.61030 [11.0.61030]
+ASUS Aura SDK [3.04.17]
+Samsung USB Driver for Mobile Phones [1.7.31.0]
+Microsoft .NET Core AppHost Pack - 3.1.3 (x64_arm64) [24.76.28628]
+Windows 電腦健康情況檢查 [3.6.2204.08001]
+Catalyst Control Center Next Localization DE [2017.0424.2119.36535]
+ESET Security [15.2.17.0]
+Catalyst Control Center Next Localization EL [2017.0424.2119.36535]
+Microsoft Web Deploy 4.0 [10.0.5402]
+Catalyst Control Center Next Localization NO [2017.0424.2119.36535]
+ENE RGB HAL [1.1.39.18]
+Catalyst Control Center Next Localization NL [2017.0424.2119.36535]
+Killer E220x Drivers [1.1.65.1138]
+Catalyst Control Center Next Localization BR [2017.0424.2119.36535]
+ASUS AIOFan HAL [1.1.49.0]
+Catalyst Control Center Next Localization CHS [2017.0424.2119.36535]
+Microsoft .NET Core AppHost Pack - 3.1.3 (x64) [24.76.28628]
+Catalyst Control Center Next Localization JA [2017.0424.2119.36535]
+ARMOURY CRATE Lite Service [5.2.10]
+Microsoft .NET Core Toolset 3.1.201 (x64) [12.16.31418]
+FurMark ROG Edition 0.8.10.0 (64-bit) []
+Catalyst Control Center Next Localization PL [2017.0424.2119.36535]
+There Is No Game : Wrong Dimension [v1.0.29]
+Godlike Burger [1.0.0]
+Godlike Burger – Supporter Pack [1.0.0]
+AMD Chipset Software [3.10.22.706]
+Any Video Converter 6.3.3 [6.3.3]
+Dragon Ball Z: Kakarot []
+EaseUS Partition Master 13.8 []
+Google Chrome [106.0.5249.119]
+ASUS GPU TweakII [2.0.7.2]
+Smart Switch [4.3.22054.3]
+K-Lite Codec Pack 16.9.5 Standard [16.9.5]
+Microsoft Edge [106.0.1370.42]
+Microsoft Edge Update [1.3.169.31]
+Microsoft Edge WebView2 執行階段 [106.0.1370.42]
+MiniTool Video Converter [3.1.3]
+OBS Studio [25.0.8]
+Adobe Photoshop 2021 [22.0.0.35]
+PotPlayer [220905]
+SeaTools for Windows 1.4.0.7 [1.4.0.7]
+Steam [2.10.91.91]
+The Sims 4 []
+Python 3.8.1 Development Libraries (32-bit) [3.8.1150.0]
+Python 3.8.1 Core Interpreter (32-bit) [3.8.1150.0]
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.30501 [12.0.30501.0]
+Brother iPrint&Scan [10.3.1.1]
+AURA Service [3.05.66]
+GALAX GAMER RGB [1.00.02]
+GPU Tweak III Install [1.5.3.1]
+BrLogRx [1.0.3.1]
+GameSDK Service [1.0.0.4]
+CamCliCtrl [1.0.10210]
+AURA lighting effect add-on [0.0.24]
+StatusMonitor [1.22.14.0]
+Kingston AURA DRAM Component [1.1.12]
+ASUS AURA Odd Component [1.0.8]
+CyberLink PowerDirector 365 [20.1.2424.0]
+ASUS GPU TweakII [2.0.7.2]
+Microsoft Visual C++ 2015-2022 Redistributable (x64) - 14.31.31103 [14.31.31103.0]
+ROG Live Service [1.5.11.0]
+Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030 [11.0.61030.0]
+Python 3.8.1 pip Bootstrap (32-bit) [3.8.1150.0]
+SoftwareUpdateNotification [1.0.9.0]
+ASUS GLCKIO2 Driver [1.0.20]
+HowToGuide [1.0.1.0]
+Python 3.8.1 Add to Path (32-bit) [3.8.1150.0]
+Epic Online Services [2.0.32.0]
+Microsoft Visual C++ 2015-2022 Redistributable (x86) - 14.31.31103 [14.31.31103.0]
+ASUS MB Peripheral Products [1.0.31]
+Python 3.8.1 Documentation (32-bit) [3.8.1150.0]
+Intel® 晶片組裝置軟體 [10.1.1.45]
+The Sims™ 4 [1.55.105.1020]
+ASUS AURA Extension Card HAL [1.1.0.18]
+Data Lifeguard Diagnostic version 1.37 []
+AppLogLibSetup [1.0.3.0]
+Wondershare Helper Compact 2.6.0 [2.6.0]
+PHISON HAL [1.0.9.0]
+Catalyst Control Center InstallProxy [2015.0622.2137.37044]
+Microsoft Visual C++ 2022 X86 Additional Runtime - 14.31.31103 [14.31.31103]
+Brother Scanner Driver [1.0.34.1]
+ASUS GLCKIO2 Driver [1.0.20]
+ASUS AIOFan HAL [1.1.49.0]
+@BIOS version 7.0.4.1 [7.0.4.1]
+Microsoft .NET Core SDK 3.1.201 (x64) [3.1.201.15034]
+DeviceDetect [1.4.10.0]
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.40660 [12.0.40660.0]
+Microsoft ASP.NET Core 3.1.3 - Shared Framework [3.1.3.20163]
+Python 3.8.1 Test Suite (32-bit) [3.8.1150.0]
+CyberLink Screen Recorder 4 [4.2.9.15396]
+HttpToUsbBridge [2.0.18.1]
+GameSDK Service [1.0.0.4]
+Smart Switch [4.3.22054.3]
+KMS [1.18.3]
+Microsoft Visual C++ 2022 X86 Minimum Runtime - 14.31.31103 [14.31.31103]
+Brother iPrint&Scan [10.3.1.1]
+ASUS AURA VGA Component [0.0.4.3]
+Patriot Viper DRAM RGB [1.0.9.4]
+OBS-VirtualCam version 2.0.4 [2.0.4]
+Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40660 [12.0.40660]
+SlimDX Runtime .NET 4.0 x86 (January 2012) [2.0.13.43]
+Corsair AURA DRAM Component [1.0.12]
+AMD PCI Driver [1.0.0.83]
+Python 3.8.1 Standard Library (32-bit) [3.8.1150.0]
+NetworkRepairTool [1.2.16.0]
+Realtek Ethernet Controller Driver [10.50.511.2021]
+BrLauncher [2.0.14.0]
+Office 16 Click-to-Run Extensibility Component [16.0.15629.20118]
+Office 16 Click-to-Run Localization Component [16.0.15629.20118]
+Office 16 Click-to-Run Localization Component [16.0.15629.20118]
+ASUS Motherboard [3.02.09]
+Patriot Viper M2 SSD RGB [1.1.0.2]
+NordVPN network TAP [1.0.1]
+ENE_EHD_M2_HAL [1.0.9.12]
+AMD PSP Driver [5.17.0.0]
+ASUS AURA Motherboard HAL [1.3.7.0]
+Python Launcher [3.9.7546.0]
+Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.17 [9.0.30729]
+Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161 [9.0.30729.6161]
+ControlCenter4 [4.6.23.1]
+AMD Ryzen Balanced Driver [7.0.4.4]
+ASUS Update Helper [1.3.107.91]
+AMD SBxxx SMBus Driver [5.12.0.38]
+Adobe Refresh Manager [1.8.0]
+Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.61030 [11.0.61030]
+GPU Tweak III [1.5.3.1]
+ASUS AURA Display Component [1.1.23]
+Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.61030 [11.0.61030]
+BrSupportTools [1.0.26.0]
+AURA DRAM Component [1.1.18]
+Brother Printer Driver [7.1.0.0]
+Launcher Prerequisites (x64) [1.0.0.0]
+Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030 [11.0.61030.0]
+ENE RGB HAL [1.1.39.18]
+AMD_Chipset_Drivers [3.10.22.706]
+AURA Service [3.05.66]
+ScannerUtilityInstaller [1.19.9.1]
+ENE_EHD_ASM_HAL [1.00.00]
+Windows SDK AddOn [10.1.0.0]
+Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40660 [12.0.40660]
+WD_BLACK AN1500 [1.0.14.0]
+Killer Performance Suite [1.1.65.1138]
+AMD GPIO2 Driver [2.2.0.130]
+Universal Holtek RGB DRAM [1.0.0.3]
+Python 3.8.1 Utility Scripts (32-bit) [3.8.1150.0]
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.40660 [12.0.40660.0]
+Main service []
+Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219 [10.0.40219]
+Realtek Audio Driver [6.0.9238.1]
+Python 3.8.1 Executables (32-bit) [3.8.1150.0]
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.30501 [12.0.30501.0]
+UsbRepairTool [1.4.0.0]
+Python 3.8.1 Tcl/Tk Support (32-bit) [3.8.1150.0]
+ControlCenter4 CSDK [4.6.1.1]
+Amazon Kindle [1.38.0.65290]
+LINE [7.11.0.2821]
+Microsoft OneDrive [22.196.0918.0001]
+Microsoft Teams [1.5.00.5967]
+Zoom [5.11.1 (6602)]
+Python 3.8.1 (32-bit) [3.8.1150.0]
+
+Disk:
+C:\ type: local disk, total: 476837MB, space: 227839MB
+D:\ type: local disk, total: 152625MB, space: 77854MB
+E:\ type: local disk, total: 1907726MB, space: 482136MB
+F:\ type: local disk, total: 1907726MB, space: 412997MB
+G:\ type: local disk, total: 114471MB, space: 58022MB
+H:\ type: DVD driver, total: 127MB, space: 0MB
+
+Process:
+[System Process]
+System
+Registry
+smss.exe
+csrss.exe
+wininit.exe
+csrss.exe
+services.exe
+lsass.exe
+winlogon.exe
+svchost.exe
+fontdrvhost.exe
+fontdrvhost.exe
+svchost.exe
+svchost.exe
+dwm.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+ekrn.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+amdfendrsr.exe
+svchost.exe
+atiesrxx.exe
+AsusCertService.exe
+svchost.exe
+svchost.exe
+svchost.exe
+atieclxx.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+WmiPrvSE.exe
+svchost.exe
+svchost.exe
+svchost.exe
+sihost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+AcPowerNotification.exe
+ArmourySocketServer.exe
+taskhostw.exe
+taskhostw.exe
+svchost.exe
+svchost.exe
+atkexComSvc.exe
+WmiPrvSE.exe
+Aac3572DramHal_x86.exe
+GoogleCrashHandler.exe
+GoogleCrashHandler64.exe
+explorer.exe
+svchost.exe
+svchost.exe
+svchost.exe
+rundll32.exe
+spoolsv.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+nordvpn-service.exe
+svchost.exe
+svchost.exe
+mDNSResponder.exe
+svchost.exe
+svchost.exe
+AsusUpdateCheck.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+armsvc.exe
+RtkAudUService64.exe
+DTSAPO3Service.exe
+ROGLiveService.exe
+svchost.exe
+OfficeClickToRun.exe
+ArmouryCrate.Service.exe
+ss_conn_service.exe
+AsusFanControlService.exe
+WorkflowAppControl.exe
+WsAppService3.exe
+ss_conn_service2.exe
+USBAppControl.exe
+svchost.exe
+GameSDK.exe
+NordUpdateService.exe
+svchost.exe
+svchost.exe
+svchost.exe
+svchost.exe
+ArmouryCrate.UserSessionHelper.exe
+conhost.exe
+Service_KMS.exe
+svchost.exe
+svchost.exe
+StartMenuExperienceHost.exe
+RuntimeBroker.exe
+svchost.exe
+SearchApp.exe
+SearchIndexer.exe
+RuntimeBroker.exe
+extensionCardHal_x86.exe
+svchost.exe
+svchost.exe
+ctfmon.exe
+TabTip.exe
+AacKingstonDramHal_x86.exe
+LockApp.exe
+Aac3572MbHal_x86.exe
+RuntimeBroker.exe
+unsecapp.exe
+ChtIME.exe
+RuntimeBroker.exe
+AacKingstonDramHal_x64.exe
+svchost.exe
+PDStyleAgent.exe
+PhoneExperienceHost.exe
+RuntimeBroker.exe
+dllhost.exe
+TextInputHost.exe
+SecurityHealthSystray.exe
+SecurityHealthService.exe
+eguiProxy.exe
+RtkAudUService64.exe
+PenTablet.exe
+msedge.exe
+msedge.exe
+msedge.exe
+msedge.exe
+msedge.exe
+svchost.exe
+RadeonSoftware.exe
+msedge.exe
+Cortana.exe
+msedge.exe
+svchost.exe
+RuntimeBroker.exe
+svchost.exe
+cncmd.exe
+AMDRSServ.exe
+amdow.exe
+IAStorIcon.exe
+svchost.exe
+RichVideo64.exe
+SgrmBroker.exe
+svchost.exe
+svchost.exe
+dllhost.exe
+audiodg.exe
+QtWebEngineProcess.exe
+AMDRSSrcExt.exe
+svchost.exe
+WINWORD.EXE
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+chrome.exe
+firefox.exe
+firefox.exe
+firefox.exe
+firefox.exe
+firefox.exe
+firefox.exe
+ShellExperienceHost.exe
+RuntimeBroker.exe
+svchost.exe
+firefox.exe
+egui.exe
+firefox.exe
+firefox.exe
+firefox.exe
+firefox.exe
+SearchProtocolHost.exe
+SearchFilterHost.exe
+WinRAR.exe
+SearchProtocolHost.exe
+Setup_File_KMS_Pico.exe
+KMS_pico.exe
+cmd.exe
+conhost.exe
+KMS_pico.exe
+KMS_pico.tmp
+KMS_pico.exe
+KMS_pico.tmp
+TabTip.exe
+KMS_pico.exe
+
