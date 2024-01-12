@@ -2,7 +2,8 @@
 
 
 .form-input-main {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+  position: relative;
 }
 
 .form-input-main input,
@@ -50,7 +51,7 @@ button[name="submitBtn"] {
 	font-size: 20px;
 	font-weight: 700;
 	border: none;
-	margin: 0 auto;
+  margin-top: 25px;
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -133,6 +134,10 @@ button[name="submitBtn"] {
 	button[name="submitBtn"] {
 		width: 100%;
 	}
+}
+
+.phone-wrap {
+  padding-bottom: 25px;
 }
 
 /* End Form */
