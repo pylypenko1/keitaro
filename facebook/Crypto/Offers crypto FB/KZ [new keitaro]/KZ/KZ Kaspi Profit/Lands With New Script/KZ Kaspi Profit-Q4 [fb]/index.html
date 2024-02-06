@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="x-ms-format-detection" content="none">
+	<title>Kaspi Profit</title>
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<!-- bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Font awesome 6 -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+	<!-- custom styles -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<link rel="stylesheet" href="css/usercount.css">
+	<link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+	<div class="overflow-hidden">
+
+		<div class="user-count" style="display: none;">
+			<div class="count-wrapper">
+				<span class="count" id="userCount"></span>
+				<span class="label">пользователей на сайте</span>
+			</div>
+			<div class="separator"></div>
+			<div class="space-wrapper">
+				<span class="free-space" id="freeSpace"></span>
+				<span class="label">свободных мест</span>
+			</div>
+		</div>
+
+		<div id="loader" style="display: none;">
+			<img src="images/preloader.svg" alt="Preloader">
+		</div>
+
+		<header class="header">
+			<div class="header__top">
+				<div class="container">
+					<div class="header__top-details">
+						<!-- <p class="support-text">При поддержке</p> -->
+						<div class="logos">
+							<img src="images/logo_kaspi-kz.png" alt="" style="margin-right: 15px;">
+							<img src="images/gerb_kz.png" alt="">
+							<p class="ministry-text" style="margin-right: 15px;">
+								Министерство <br>
+								экономики <br>
+								Республики <br>
+								Казахстан
+							</p>
+							<!-- <img src="images/logo_usmholding.svg" alt=""> -->
+							<img src="images/kz.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="header__bottom">
+				<div class="header__bottom-details">
+					<div class="logo-container">
+						<div class="logos">
+							<img class="left-logo" src="images/logo_usmgold.png" alt="">
+						</div>
+					</div>
+					<div class="language-container inherit-w relative">
+						<div class="flag">
+							<img src="images/uz-flag.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</header>
+
+		<main>
+			<!-- sidebar -->
+
+			<div class="form-container">
+				<form id="quiz-form" novalidate autocomplete="off">
+					<div class="question-block">
+						<!-- <aside class="sidebar"> -->
+						<div class="wrapper">
+							<article class="sidebar-inner">
+								<!-- <span>send us donations</span> -->
+								<!-- <div class="video-container">
+									<video controls poster="video/poster.jpg">
+										<source src="video/video.mp4" type="video/mp4">
+									</video>
+								</div> -->
+								<h2>
+									Начните зарабатывать от <span class="gold-text nowrap">1.000.000₸</span> в первый
+									месяц с Kaspi Profit
+								</h2>
+								<!-- <p>
+									Получите доступ к уникальным инвестиционным предложениям после прохождения
+									опроса и начните
+									<span class="gold-text">зарабатывать от 20 000 000 сум в неделю</span> уже
+									сегодня.
+								</p> -->
+								<div class="items-block">
+									<div class="item">
+
+										<div class="item-content">
+											<div class="title">
+												<div class="item-number">
+													<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<rect width="32" height="32" rx="16" fill="#f24634"></rect>
+														<path
+															d="M12.68 13.306V11.092L15.2 9.4H17.36V22H15.2V11.632L12.68 13.306Z"
+															fill="#FAFAFF"></path>
+													</svg>
+												</div>
+												&nbsp;Пройдите регистрацию
+											</div>
+											<div class="description">
+												Заполните регистрационную форму для обратной связи.
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="item-content">
+											<div class="title">
+												<div class="item-number">
+													<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<rect width="32" height="32" rx="16" fill="#f24634"></rect>
+														<path
+															d="M11.63 22V20.092L15.698 16.186C17.3 14.656 17.822 13.936 17.822 13.09C17.822 11.992 17.084 11.254 15.86 11.254C14.636 11.254 13.898 11.992 13.898 13.27H11.63C11.63 10.822 13.232 9.238 15.86 9.238C18.506 9.238 20.09 10.822 20.09 13.09C20.09 14.512 19.208 15.754 17.282 17.518L14.456 20.092H20.09V22H11.63Z"
+															fill="#FAFAFF"></path>
+													</svg>
+												</div>
+												&nbsp;Ожидайте звонка
+											</div>
+											<div class="description">Дождаться звонка от финансового эксперта, чтобы
+												начать зарабатывать уже сегодня.
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="item-content">
+											<div class="title">
+												<div class="item-number">
+													<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<rect width="32" height="32" rx="16" fill="#f24634"></rect>
+														<path
+															d="M15.63 22.162C12.804 22.162 11.184 20.56 11.13 17.77H13.398C13.452 19.408 14.208 20.146 15.63 20.146C17.106 20.146 17.862 19.408 17.862 18.256C17.862 17.23 17.142 16.474 15.756 16.474H14.1V14.566H15.756C16.908 14.566 17.592 13.9 17.592 12.946C17.592 11.938 16.908 11.254 15.63 11.254C14.46 11.254 13.776 11.938 13.668 13.27H11.4C11.454 10.768 13.002 9.238 15.63 9.238C18.402 9.238 19.86 10.696 19.86 12.802C19.86 13.954 19.356 14.926 18.312 15.502C19.536 16.096 20.13 17.176 20.13 18.418C20.13 20.632 18.6 22.162 15.63 22.162Z"
+															fill="#FAFAFF"></path>
+													</svg>
+												</div>
+												&nbsp;Зарабатывайте
+											</div>
+											<div class="description">
+												Получайте выплаты с инвестиционной платформы уже сегодня.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wrap">
+									<button class="calculate-btn button is-blicked" type="button" id="startTest">
+										<span class="icon">
+											<svg viewBox="0 0 24 24" class="mdi-icon mdi-24px" fill="#fff">
+												<title>mdi-checkbox-marked-circle-outline</title>
+												<path fill="#fff"
+													d="M20,12C20,16.42 16.42,20 12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+													stroke-width="0" fill-rule="nonzero"></path>
+											</svg>
+										</span>
+										&nbsp; Пройти опрос
+									</button>
+								</div>
+
+							</article>
+							<!-- <footer class="copyright">
+								<div class="copyright-text">2021-2023 © ООО "USM GOLD"</div>
+							</footer> -->
+						</div>
+						<!-- </aside> -->
+					</div>
+					<div class="question-block">
+						<div class="question-item">
+							<h3>Шаг 1 из 4</h3>
+							<img src="images/step-1.jpg" alt="Шаг 1">
+							<p class="title">
+								Какую сумму в месяц Вы считаете достаточной для реализации своих желаний?
+							</p>
+							<div class="options">
+								<label>
+									<input type="radio" name="step1"
+										value="Для реализации желаний достаточно 250 000 ₸">
+									250 000 ₸
+								</label>
+								<label>
+									<input type="radio" name="step1"
+										value="Для реализации желаний достаточно 600 000 ₸ в месяц">
+									600 000 ₸
+								</label>
+								<label>
+									<input type="radio" name="step1"
+										value="Для реализации желаний достаточно 1 500 000 ₸ в месяц">
+									1 500 000 ₸
+								</label>
+								<label>
+									<input type="radio" name="step1"
+										value="Для реализации желаний нужно больше 2 000 000 ₸ в месяц">
+									Больше 2 000 000 ₸
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="question-block">
+						<div class="question-item">
+							<h3>Шаг 2 из 4</h3>
+							<img src="images/step-2.jpg" alt="Шаг 2">
+							<p class="title">
+								Какую цель вы ставите перед собой, стремясь увеличить свой доход?
+							</p>
+							<div class="options">
+								<label>
+									<input type="radio" name="step2" value="Моя цель: создать финансовый запас">
+									Создать финансовый запас
+								</label>
+								<label>
+									<input type="radio" name="step2"
+										value="Моя цель: инвестировать в себя, свое образование и развитие">
+									Инвестировать в себя, свое образование и развитие
+								</label>
+								<label>
+									<input type="radio" name="step2"
+										value="Моя цель: приобретение автомобиля или недвижимости">
+									Приобретение автомобиля или недвижимости
+								</label>
+								<label>
+									<input type="radio" name="step2"
+										value="Моя цель: освободиться от задолженности по кредиту/ипотеке">
+									Освобожусь от задолженности по кредиту/ипотеке
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="question-block">
+						<div class="question-item">
+							<h3>Шаг 3 из 4</h3>
+							<img src="images/step-3.jpg" alt="Шаг 3">
+							<p class="title">
+								Откуда Вы узнали о платформе от <span class="nowrap">Kaspi Profit</span>?
+							</p>
+							<div class="options">
+								<label>
+									<input type="radio" name="step3" value="Узнали через социальные сети">
+									Через социальные сети
+								</label>
+								<label>
+									<input type="radio" name="step3" value="Узнали по рекомендации знакомых">
+									Рекомендации знакомых
+								</label>
+								<label>
+									<input type="radio" name="step3"
+										value="Узнали от финансового эксперта Kaspi Profit">
+									От финансового эксперта Kaspi Profit
+								</label>
+								<label>
+									<input type="radio" name="step3" value="Узнали через наружная реклама">
+									Наружная реклама
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="question-block" id="step4">
+						<div class="question-item">
+							<!-- <h3>Шаг 4 из 4</h3> -->
+							<p class="main-text">
+								<!-- <span class="nowrap">Станьте частью успешного</span>
+								<span class="nowrap">инвестиционного проекта!</span> -->
+								Поздравляем!
+								<!-- <br>
+								Вам стали доступны инвестиции в проекте
+								<span class="gold-text nowrap">“USM GOLD”</span> -->
+							</p>
+							<p class="title">
+								Оставьте свои данные, чтобы начать
+								зарабатывать уже сегодня
+							</p>
+							<div class="last-block">
+								<div class="form-group">
+									<input type="text" id="firstName" name="firstName" placeholder=" ">
+									<label for="firstName">Имя</label>
+									<span class="error" data-field="firstName"></span>
+								</div>
+								<div class="form-group">
+									<input type="text" id="lastName" name="lastName" placeholder=" ">
+									<label for="lastName">Фамилия</label>
+									<span class="error" data-field="lastName"></span>
+								</div>
+								<div class="form-group">
+									<input type="email" id="email" name="email" placeholder=" ">
+									<label for="email">E-mail</label>
+									<span class="error" data-field="email"></span>
+								</div>
+								<div class="form-group">
+									<input type="tel" id="phone" name="phone" placeholder=" ">
+									<label for="phone">Телефон</label>
+									<span class="error" data-field="phone"></span>
+								</div>
+								<div class="policy">
+									Оставляя заявку, я соглашаюсь на
+									<a href="https://online.zakon.kz/Document/?doc_id=31396226&show_di=1&sub_id=70000&pos=122;-56#pos=122;-56"
+										target="_blank" rel="noreferrer">
+										обработку персональных данных
+									</a>
+								</div>
+								<div class="form-group">
+									<button class="calculate-btn button is-blicked"
+										type="submit">Зарегистрироваться</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</main>
+	</div>
+
+	<!-- Quiz JS -->
+	<script src="js/quiz.js"></script>
+	<!-- bootstrap JS -->
+	<!-- <script src="js/bootstrap.min.js"></script> -->
+	<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- custom JS -->
+	<script src="js/custom.js"></script>
+	<script src="js/validate.min.js"></script>
+	<script src="js/imask.js"></script>
+	<script src="js/script.js"></script>
+	<!-- JS-Adapter -->
+	<script src="js/adapter.js"></script>
+	<script src="js/fbPageView.js"></script>
+	<!-- Validate.js -->
+	<script src="js/validate.min.js"></script>
+	<!-- User Count JS -->
+	<script src="js/userCount.js"></script>
+
+</body>
+
+</html>

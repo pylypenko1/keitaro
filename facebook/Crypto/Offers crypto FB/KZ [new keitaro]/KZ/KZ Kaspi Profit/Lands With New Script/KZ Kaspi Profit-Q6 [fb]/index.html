@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="x-ms-format-detection" content="none">
+	<title>Kaspi Profit</title>
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<!-- bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Font awesome 6 -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+	<!-- custom styles -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<link rel="stylesheet" href="css/usercount.css">
+	<link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+  <div id="loader" style="display: none;">
+    <img src="images/preloader.svg" alt="Preloader">
+  </div>
+	<div class="overflow-hidden">
+
+		<div class="user-count" style="display: none;">
+			<div class="count-wrapper">
+				<span class="count" id="userCount"></span>
+				<span class="label">пользователей на сайте</span>
+			</div>
+			<div class="separator"></div>
+			<div class="space-wrapper">
+				<span class="free-space" id="freeSpace"></span>
+				<span class="label">свободных мест</span>
+			</div>
+		</div>
+
+	
+
+		<header class="header">
+			<div class="header__top">
+				<div class="container">
+					<div class="header__top-details">
+						<!-- <p class="support-text">При поддержке</p> -->
+						<div class="logos">
+							<img src="images/logo_kaspi-kz.png" alt="" style="margin-right: 15px;">
+							<img src="images/gerb_kz.png" alt="">
+							<p class="ministry-text" style="margin-right: 15px;">
+								Министерство <br>
+								экономики <br>
+								Республики <br>
+								Казахстан
+							</p>
+							<!-- <img src="images/logo_usmholding.svg" alt=""> -->
+							<img src="images/kz.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="header__bottom">
+				<div class="header__bottom-details">
+					<div class="logo-container">
+						<div class="logos">
+							<img class="left-logo" src="images/logo_usmgold.png" alt="">
+						</div>
+					</div>
+					<div class="language-container inherit-w relative">
+						<div class="flag">
+							<img src="images/uz-flag.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</header>
+
+		<main>
+			<!-- sidebar -->
+
+			<div class="form-container">
+				<form id="quiz-form" novalidate autocomplete="off">
+					<div class="question-block">
+						<div class="wrapper">
+							<article class="sidebar-inner">
+                <div class="video-wrap">
+                  <h2>
+                    Начните зарабатывать от <span class="gold-text nowrap">1.000.000₸</span> в первый
+                    месяц с Kaspi Profit
+                  </h2>
+
+                  <div class="video-container">
+                    <video controls poster="video/poster.png">
+                      <source src="video/video.mp4" type="video/mp4">
+                    </video>
+                  </div>
+
+                  <style>
+
+              .video-container {
+                position: relative;
+                width: 100%;
+                padding-bottom: 56.25%;
+                /* 16:9 соотношение сторон */
+                overflow: hidden;
+              }
+
+              .video-container video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                /* border-radius: 20px; */
+              }
+            
+                  </style>
+                </div>
+								<div class="items-block">
+									<div class="item">
+
+										<div class="item-content">
+											<div class="title">
+												<div class="item-number">
+													<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<rect width="32" height="32" rx="16" fill="#f24634"></rect>
+														<path
+															d="M12.68 13.306V11.092L15.2 9.4H17.36V22H15.2V11.632L12.68 13.306Z"
+															fill="#FAFAFF"></path>
+													</svg>
+												</div>
+												&nbsp;Пройдите регистрацию
+											</div>
+											<div class="description">
+												Заполните регистрационную форму для обратной связи.
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="item-content">
+											<div class="title">
+												<div class="item-number">
+													<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<rect width="32" height="32" rx="16" fill="#f24634"></rect>
+														<path
+															d="M11.63 22V20.092L15.698 16.186C17.3 14.656 17.822 13.936 17.822 13.09C17.822 11.992 17.084 11.254 15.86 11.254C14.636 11.254 13.898 11.992 13.898 13.27H11.63C11.63 10.822 13.232 9.238 15.86 9.238C18.506 9.238 20.09 10.822 20.09 13.09C20.09 14.512 19.208 15.754 17.282 17.518L14.456 20.092H20.09V22H11.63Z"
+															fill="#FAFAFF"></path>
+													</svg>
+												</div>
+												&nbsp;Ожидайте звонка
+											</div>
+											<div class="description">Дождаться звонка от финансового эксперта, чтобы
+												начать зарабатывать уже сегодня.
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="item-content">
+											<div class="title">
+												<div class="item-number">
+													<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<rect width="32" height="32" rx="16" fill="#f24634"></rect>
+														<path
+															d="M15.63 22.162C12.804 22.162 11.184 20.56 11.13 17.77H13.398C13.452 19.408 14.208 20.146 15.63 20.146C17.106 20.146 17.862 19.408 17.862 18.256C17.862 17.23 17.142 16.474 15.756 16.474H14.1V14.566H15.756C16.908 14.566 17.592 13.9 17.592 12.946C17.592 11.938 16.908 11.254 15.63 11.254C14.46 11.254 13.776 11.938 13.668 13.27H11.4C11.454 10.768 13.002 9.238 15.63 9.238C18.402 9.238 19.86 10.696 19.86 12.802C19.86 13.954 19.356 14.926 18.312 15.502C19.536 16.096 20.13 17.176 20.13 18.418C20.13 20.632 18.6 22.162 15.63 22.162Z"
+															fill="#FAFAFF"></path>
+													</svg>
+												</div>
+												&nbsp;Зарабатывайте
+											</div>
+											<div class="description">
+												Получайте выплаты с инвестиционной платформы уже сегодня.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wrap">
+									<div class="question-block" id="step4">
+                    <div class="question-item">
+                      <p class="title" style="font-size: 20px;">
+                        Оставьте свои данные, чтобы начать
+                        зарабатывать уже сегодня
+                      </p>
+                      <div class="last-block">
+                        <div class="form-group">
+                          <input type="text" id="firstName" name="firstName" placeholder=" ">
+                          <label for="firstName">Имя</label>
+                          <span class="error" data-field="firstName"></span>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" id="lastName" name="lastName" placeholder=" ">
+                          <label for="lastName">Фамилия</label>
+                          <span class="error" data-field="lastName"></span>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" id="email" name="email" placeholder=" ">
+                          <label for="email">E-mail</label>
+                          <span class="error" data-field="email"></span>
+                        </div>
+                        <div class="form-group">
+                          <input type="tel" id="phone" name="phone" placeholder=" ">
+                          <label for="phone">Телефон</label>
+                          <span class="error" data-field="phone"></span>
+                        </div>
+                        <div class="policy">
+                          Оставляя заявку, я соглашаюсь на
+                          <a href="https://online.zakon.kz/Document/?doc_id=31396226&show_di=1&sub_id=70000&pos=122;-56#pos=122;-56"
+                            target="_blank" rel="noreferrer">
+                            обработку персональных данных
+                          </a>
+                        </div>
+                        <div class="form-group">
+                          <button class="calculate-btn button is-blicked"
+                            type="submit">Зарегистрироваться</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+								</div>
+
+							</article>
+
+					</div>
+
+				</form>
+			</div>
+		</main>
+	</div>
+
+	<!-- Quiz JS -->
+	<!-- <script src="js/quiz.js"></script> -->
+	<!-- bootstrap JS -->
+	<!-- <script src="js/bootstrap.min.js"></script> -->
+	<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- custom JS -->
+	<script src="js/custom.js"></script>
+	<script src="js/validate.min.js"></script>
+	<script src="js/imask.js"></script>
+	<script src="js/script.js"></script>
+	<!-- JS-Adapter -->
+	<script src="js/adapter.js"></script>
+	<script src="js/fbPageView.js"></script>
+	<!-- Validate.js -->
+	<script src="js/validate.min.js"></script>
+	<!-- User Count JS -->
+	<script src="js/userCount.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+.user-count {
+    position: fixed;
+    bottom: 5px;
+    /* right: 5px; */
+    left: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    color: #333333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    border-radius: 20px;
+    z-index: 500;
+}
+
+.count-wrapper,
+.space-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.separator {
+    width: 2px;
+    height: 24px;
+    background-color: #d4af37;
+    margin-right: 20px;
+}
+
+.count,
+.free-space {
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+.label {
+    font-size: 14px;
+    opacity: 0.8;
+}

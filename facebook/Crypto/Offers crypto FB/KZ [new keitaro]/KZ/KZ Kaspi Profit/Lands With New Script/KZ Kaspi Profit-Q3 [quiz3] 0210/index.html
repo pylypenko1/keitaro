@@ -19,61 +19,6 @@
     <link rel="stylesheet" href="css/css.css" media="all" />
     <link rel="stylesheet" href="css/form.css" />
 
-    <!-- JS adapter -->
-    <script type="application/javascript">
-      function getCookie(name) {
-        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-        return v ? v[2] : null;
-      }
-
-      function setCookie(name, value, days) {
-        var d = new Date();
-        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
-        document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
-      }
-
-      function getSubId() {
-        var params = new URLSearchParams(document.location.search.substr(1));
-        if (!'{subid}'.match('{')) {
-          return '{subid}';
-        }
-        var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
-        if (clientSubid && !clientSubid.match('>')) {
-          return clientSubid;
-        }
-        if (params.get('_subid')) {
-          return params.get('_subid');
-        }
-        if (params.get('subid')) {
-          return params.get('subid');
-        }
-        if (getCookie('subid')) {
-          return getCookie('subid');
-        }
-      }
-
-      if (typeof URLSearchParams === 'function') {
-        document.addEventListener('DOMContentLoaded', function (event) {
-          var params = new URLSearchParams(document.location.search.substr(1));
-          var subid = getSubId();
-
-          setCookie('subid', subid);
-
-          // Adds params as hidden inputs to the forms
-          document.querySelectorAll('form').forEach(function (form) {
-            params.forEach(function (v, k) {
-              var input = document.createElement('input');
-              input.type = 'hidden';
-              input.name = k;
-              input.value = v;
-
-              form.append(input);
-            });
-          });
-        });
-      }
-    </script>
-    <!-- End JS adapter -->
   </head>
 
   <body style="background-color: white" class="iti-mobile">
