@@ -1,0 +1,46 @@
+.user-count {
+    position: fixed;
+    /* bottom: 20px;
+    left: 20px; */
+    bottom: 5px;
+    right: 5px;
+    /* left: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 18px;
+    background-color: #f5f5f5;
+    color: #333333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    border-radius: 20px;
+    z-index: 500;
+}
+
+.count-wrapper,
+.space-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.separator {
+    width: 2px;
+    height: 24px;
+    /* background-color: #d4af37; */
+    background-color: #f14635;
+    margin-right: 10px;
+}
+
+.count,
+.free-space {
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 6px;
+    color: #f14635;
+}
+
+.label {
+    font-size: 12px;
+    opacity: 0.8;
+}

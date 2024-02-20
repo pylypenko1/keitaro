@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 107 - 239  [o169;l1] imperial-go -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Imperial G&O - Gas and Oil platform</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link href="assets/landing/css/landing.css" rel="stylesheet" type="text/css" />
+    <!--[HEADER]-->
+  </head>
+
+  <body>
+    <!-- preloader -->
+    <div id="loader" style="display: none">
+      <img src="images/preloader.svg" alt="Preloader" />
+    </div>
+    <!-- preloader end -->
+    <div style="width: 100%; background: red; text-align: center; position: fixed; z-index: 100">
+      <div id="timer">
+        <div class="timer-title">Hurry up!</div>
+        <div class="counter-wrapper">
+          <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds"
+            >00</span
+          >
+        </div>
+      </div>
+    </div>
+    <header class="header" style="margin-top: 50px;">
+      <div class="container">
+        <div class="header__logo">
+          <a class="header__logo-link" style="margin-top: 7px">
+            <h1
+              style="
+                color: #5587cb;
+                font-size: 30px;
+                font-weight: bold;
+                padding-top: 15px;
+                text-align: center;
+              "
+            >
+              Imperial <span style="color: #f05555">G&O</span>
+            </h1>
+          </a>
+        </div>
+        <div class="header__text">
+          <h2 class="header__text-top">IMPERIAL OIL ANNOUNCES GAS & OIL TRADING</h2>
+          <h2 class="header__text-top">FOR AUSTRALIANS, BRITONS AND CANADIANS</h2>
+          <p class="header__text-bottom">Imperial Gas and Oil will help you multiply your funds!</p>
+        </div>
+        <div class="row">
+          <div class="col-xl-8">
+            <div class="header__video">
+              <div class="embed-container">
+                <div class="poster_block">
+                  <img class="poster" src="images/poster.webp" alt="" />
+                  <img class="play-btn" src="assets/landing/img/play.webp" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="header__form" id="register__form">
+              <form
+                method="post"
+                class="form-container register-form header__form-register"
+                novalidate
+              >
+                <h2>Start earning from your country's resources!</h2>
+                <div class="form__group form_group--name">
+                  <input type="text" name="firstName" placeholder="Name" />
+                </div>
+                <div class="form__group form_group--name">
+                  <input type="text" placeholder="Surname" name="lastName" />
+                </div>
+                <div class="form__group form_group--email">
+                  <input type="email" name="email" placeholder="Email" />
+                </div>
+                <div class="form__group form_input--group">
+                  <input type="tel" class="phone" name="phone" />
+                </div>
+                <div class="form_group--button">
+                  <button
+                    id="formbutton"
+                    class="send-form btn btn-primary"
+                    type="submit"
+                    name="submit"
+                  >
+                    <span class="button--inner">Register</span>
+                  </button>
+                </div>
+                <div class="checkbox-svg">
+                  <input checked="" type="checkbox" id="cbx" style="display: none" />
+                  <label for="cbx" class="checked-svg">
+                    <svg width="20px" height="20px" viewBox="0 0 18 18">
+                      <path
+                        d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"
+                      ></path>
+                      <polyline points="1 9 7 14 15 4"></polyline>
+                    </svg>
+                  </label>
+                  <div class="privacy-checkbox privacy-checkbox_main">
+                    <p>
+                      By registration I agree and accept Website
+                      <a href="privacy.html" target="_blank">terms</a> of use and
+                      <a href="privacy.html" target="_blank">Privacy Policy.</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="count">
+                  <b> The number of spots is limited: </b>
+                  <span id="count">200</span> spots available
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page__content" id="anchor_form_1">
+      <section class="projects" style="background: darkgrey; padding-top: 20px">
+        <div class="container" style="padding: 0 40px">
+          <div action="api.php?<?= http_build_query($_GET); ?>" class="">
+            <h3 class="header__text-bottom">How much will I earn?</h3>
+            <div class="header__text-bottom">
+              <label class="">Your investment</label>
+              <input
+                type="text"
+                class="js-range-slider irs-hidden-input"
+                name="my_range"
+                value="150"
+                tabindex="-1"
+                readonly=""
+              />
+            </div>
+            <div class="header__text-bottom" style="margin-bottom: 25px">
+              <label class="">Your profit</label>
+              <h3 class="" id="calcResult">330$</h3>
+            </div>
+            <div class="" style="text-align: center">
+              <a
+                href="#about"
+                data-scroll="#about"
+                class="projects__wrapper-items_btn scroll_top"
+                style="position: relative; bottom: 0"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="imperial" style="padding-top: 80px">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5">
+              <div class="imperial__box">
+                <h4 class="imperial__box-title">Benefits of the platform for ordinary people</h4>
+                <div class="imperial__box-items">
+                  <div class="imperial__box-items_img">
+                    <img src="images/punkt-1.webp" alt="stonks" />
+                  </div>
+                  <div class="imperial__box-items_text">
+                    <p>
+                      Even minimal investments will bring you a stable income: at least $600 daily;
+                    </p>
+                  </div>
+                </div>
+                <div class="imperial__box-items">
+                  <div class="imperial__box-items_img">
+                    <img src="images/punkt-2.webp" alt="cards" />
+                  </div>
+                  <div class="imperial__box-items_text">
+                    <p>You will be able to withdraw funds to any payment system or card;</p>
+                  </div>
+                </div>
+                <div class="imperial__box-items">
+                  <div class="imperial__box-items_img">
+                    <img src="images/punkt-3.webp" alt="money" />
+                  </div>
+                  <div class="imperial__box-items_text">
+                    <p>Initial investment will increase many times over.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-7">
+              <div class="imperial__wrapper">
+                <h4 class="imperial__wrapper-title">
+                  What do you need to start earning with Imperial G&O?
+                </h4>
+                <div class="imperial__wrapper-items">
+                  <div class="imperial__wrapper-items_img">
+                    <img src="images/punkt-1.svg" alt="stonks" />
+                  </div>
+                  <div class="imperial__wrapper-items_text">
+                    <p>Register on the site using the form above.</p>
+                  </div>
+                </div>
+                <div class="imperial__wrapper-items">
+                  <div class="imperial__wrapper-items_img">
+                    <img src="images/punkt-2.svg" alt="cards" />
+                  </div>
+                  <div class="imperial__wrapper-items_text">
+                    <p>
+                      Wait for a call from the company's consultant and confirm the registration.
+                    </p>
+                  </div>
+                </div>
+                <div class="imperial__wrapper-items">
+                  <div class="imperial__wrapper-items_img">
+                    <img src="images/punkt-3.svg" alt="money" />
+                  </div>
+                  <div class="imperial__wrapper-items_text">
+                    <p>
+                      With the help of the Imperial G&O platform, earn from $600 per day trading oil
+                      and gas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row__ceo">
+            <div class="col-xl-7">
+              <div class="imperial__desc">
+                <div class="imperial__desc-box">
+                  <div class="wrap">
+                    <p class="imperial__desc-box_text">
+                      We have made trading in gas and oil accessible to the masses of ordinary
+                      people, as it is beneficial both for them and for Imperial G&O.
+                    </p>
+                    <p class="imperial__desc-box_text">
+                      Currently, Imperial G&O controls approximately 80% of the oil market in
+                      America and Canada. Demand for oil is growing all over the globe, so we have
+                      decided to quadruple our oil production and attract private investors from all
+                      over the world.
+                    </p>
+                    <p class="imperial__desc-box_text">
+                      Oil prices are growing dynamically, so platform users can expect a monthly
+                      income of $10,000-15,000, on average.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5">
+              <div class="imperial__ceo">
+                <div class="imperial__ceo-img">
+                  <img src="images/ceo.webp" alt="Rich Kruger" />
+                  <div class="imperial__ceo-box">
+                    <p class="imperial__ceo-box_name">Rich Kruger</p>
+                    <p class="imperial__ceo-box_position">CEO Imperial G&O</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects">
+        <div class="container">
+          <h3 class="projects__title">Projects of Imperial G&O, which are</h3>
+          <h3 class="projects__title">open for investment</h3>
+          <div class="row row__projects">
+            <div class="col-xl-4">
+              <div class="projects__wrapper">
+                <div class="projects__wrapper-img">
+                  <img src="images/project-1.webp" alt="Esso" class="projects__wrapper-image" />
+                </div>
+                <div class="projects__wrapper-items">
+                  <p class="projects__wrapper-items_name">Esso</p>
+                  <p class="projects__wrapper-items_text">Gas station network across all Canada</p>
+                  <p class="projects__wrapper-items_profit">
+                    Optimal investment 375$
+                    <br /><br />
+                    Profitability from 400$ per day
+                  </p>
+                  <a href="#" class="projects__wrapper-items_btn scroll_top"> Apply </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="projects__wrapper">
+                <div class="projects__wrapper-img">
+                  <img
+                    src="images/project-2.webp"
+                    alt="Syncrude Canada Ltd"
+                    class="projects__wrapper-image"
+                  />
+                </div>
+                <div class="projects__wrapper-items">
+                  <p class="projects__wrapper-items_name">Syncrude Canada Ltd</p>
+                  <p class="projects__wrapper-items_text">Largest Electric Power Company</p>
+                  <p class="projects__wrapper-items_profit">
+                    Optimal investment 450$
+                    <br /><br />
+                    Profitability from 500$ per day
+                  </p>
+                  <a href="#" class="projects__wrapper-items_btn scroll_top"> Apply </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="projects__wrapper">
+                <div class="projects__wrapper-img">
+                  <img
+                    src="images/project-3.webp"
+                    alt="Exxon Mobil"
+                    class="projects__wrapper-image"
+                  />
+                </div>
+                <div class="projects__wrapper-items projects__wrapper-exxon">
+                  <p class="projects__wrapper-items_name projects__wrapper-items_exxon">
+                    Exxon Mobil
+                  </p>
+                  <p class="projects__wrapper-items_text">
+                    Specializes in oil and gas exploration and production.
+                  </p>
+                  <p class="projects__wrapper-items_profit">
+                    Optimal investment 500$
+                    <br /><br />
+                    Profitability from 650$ per day
+                  </p>
+                  <a href="#" class="projects__wrapper-items_btn scroll_top"> Apply </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gas">
+            <h4 class="gas__title">join the imperial gas & Oil,</h4>
+            <h4 class="gas__title">And start earning passively today!</h4>
+            <div class="gas__form">
+              <form
+                method="post"
+                class="form-container register-form header__form-register"
+                novalidate
+              >
+                <h2>Start earning from your country's resources!</h2>
+                <div class="form__group form_group--name">
+                  <input type="text" name="firstName" placeholder="Name" />
+                </div>
+                <div class="form__group form_group--name">
+                  <input type="text" placeholder="Surname" name="lastName" />
+                </div>
+                <div class="form__group form_group--email">
+                  <input type="email" name="email" placeholder="Email" />
+                </div>
+                <div class="form__group form_input--group">
+                  <input type="tel" class="phone" name="phone" />
+                </div>
+                <div class="form_group--button">
+                  <button
+                    id="formbutton"
+                    class="send-form btn btn-primary"
+                    type="submit"
+                    name="submit"
+                  >
+                    <span class="button--inner">Register</span>
+                  </button>
+                </div>
+                <div class="checkbox-svg">
+                  <input checked="" type="checkbox" id="cbx" style="display: none" />
+                  <label for="cbx" class="checked-svg">
+                    <svg width="20px" height="20px" viewBox="0 0 18 18">
+                      <path
+                        d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"
+                      ></path>
+                      <polyline points="1 9 7 14 15 4"></polyline>
+                    </svg>
+                  </label>
+                  <div class="privacy-checkbox privacy-checkbox_main">
+                    <p>
+                      By registration I agree and accept Website
+                      <a href="privacy.html" target="_blank">terms</a> of use and
+                      <a href="privacy.html" target="_blank">Privacy Policy.</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="count">
+                  <b> The number of spots is limited: </b>
+                  <span id="count">200</span> spots available
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__payments">
+          <img src="images/icons__payment.webp" alt="icons-payment" />
+        </div>
+        <div class="footer__text">
+          * All the results of work in this area are individual <br />
+          and depend on each client PJSC"Imperial G&O" ©2018 -
+          <span class="current__year"></span> Imperial oil
+        </div>
+      </div>
+      <div class="footer__pr">
+        <img src="images/pr.webp" style="filter: opacity(0.1)" alt="pr-group" />
+      </div>
+    </footer>
+    <div class="footer__sub__dsrc">
+      <div class="container">
+        <h2>Instead of Russia: Imperial G&O will increase energy exports</h2>
+        <p>
+          Canada will increase oil and gas exports by the end of the year in order to cover the
+          deficit in the world market, which arose as a result of restrictions on the import of
+          Russian energy resources. This was announced by the Minister of Natural Resources of
+          Canada.
+        </p>
+        <p>
+          Canada is ready to increase its energy supplies to help allies in North America and Europe
+          overcome the energy crisis caused by the rejection of Russian fuel. They need to move away
+          from Russian oil and gas in the short term, while accelerating the transition to other
+          energy sources.
+        </p>
+        <p>
+          Canada's export pipelines are already operating at near full capacity, so there is limited
+          room to increase supplies. However, according to the minister, Canada is considering the
+          possibility of exporting energy resources through the United States.
+        </p>
+        <p>
+          The country will continue to work closely with partner countries to support international
+          energy markets. This will facilitate an accelerated transition to other energy sources.
+        </p>
+        <h2>About Imperial G&O</h2>
+        <p>Operations</p>
+        <p>
+          We work at all stages of production and sale of gas and oil. We explore, produce and
+          transport oil and gas to our factories, where we turn them into products that people use
+          every day.
+        </p>
+        <p>Oil sands</p>
+        <p>
+          The Canadian oil sands are a source of energy contributing to global energy security. We
+          develop this valuable resource through innovative technologies.
+        </p>
+        <p>Refining</p>
+        <p>
+          Our company owns the largest oil refinery in Canada. Our refineries turn crude oil into
+          useful products such as various gasses, chemicals, waxes, motor oils, asphalt and fuels.
+        </p>
+        <h2>Petroleum industry in Canada</h2>
+        <p>
+          The Canadian oil industry is one of the largest in the world. In terms of oil production,
+          Canada is second only to Mexico, China, Iran, and the United States. Almost all of the oil
+          produced in Canada is destined for the United States.
+        </p>
+        <p>
+          Canada's proven oil reserves are the second largest in the world, after Saudi Arabia.
+          However, 95% of these reserves are tar sands in Alberta. The extraction of this oil is
+          much more labor intensive than the extraction of conventional oil. To date, approximately
+          40% of conventional Canadian oil has already been depleted.
+        </p>
+      </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form method="post" class="form-container register-form header__form-register" novalidate>
+          <h2>Start earning from your country's resources!</h2>
+          <div class="form__group form_group--name">
+            <input type="text" name="firstName" placeholder="Name" />
+          </div>
+          <div class="form__group form_group--name">
+            <input type="text" placeholder="Surname" name="lastName" />
+          </div>
+          <div class="form__group form_group--email">
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+          <div class="form__group form_input--group">
+            <input type="tel" class="phone" name="phone" />
+          </div>
+          <div class="form_group--button">
+            <button id="formbutton" class="send-form btn btn-primary" type="submit" name="submit">
+              <span class="button--inner">Register</span>
+            </button>
+          </div>
+          <div class="checkbox-svg">
+            <input checked="" type="checkbox" id="cbx" style="display: none" />
+            <label for="cbx" class="checked-svg">
+              <svg width="20px" height="20px" viewBox="0 0 18 18">
+                <path
+                  d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"
+                ></path>
+                <polyline points="1 9 7 14 15 4"></polyline>
+              </svg>
+            </label>
+            <div class="privacy-checkbox privacy-checkbox_main">
+              <p>
+                By registration I agree and accept Website
+                <a href="privacy.html" target="_blank">terms</a> of use and
+                <a href="privacy.html" target="_blank">Privacy Policy.</a>
+              </p>
+            </div>
+          </div>
+          <div class="count">
+            <b> The number of spots is limited: </b>
+            <span id="count">200</span> spots available
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="assets/landing/js/jquery.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/modal-form-and-timer.js"></script>
+
+    <!-- intl-tel-input -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+
+    <!-- Validate.js -->
+    <script src="js/validate.min.js"></script>
+
+    <!-- JS-Adapter -->
+    <script src="js/jsAdapter.js"></script>
+    <script src="js/pixelInitPageView.js"></script>
+  
+  </body>
+</html>

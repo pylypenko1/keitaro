@@ -1,0 +1,96 @@
+﻿
+.subscription-banner-mob-homePage {
+    display: none;
+}
+
+.subscription-banner-homePage {
+    background-color: #fff;
+    margin: 48px auto;
+}
+
+    .subscription-banner-homePage img {
+        width: 100%;
+        height: 311px;
+        border-radius: 12px;
+    }
+
+@media (max-width: 1200px) {
+    .subscription-banner-homePage img {
+        height: 353px;
+    }
+}
+
+@media (max-width: 767px) {
+    .subscription-banner-homePage {
+        display: none;
+    }
+
+    .subscription-banner-mob-homePage {
+        width: 328px;
+        background: #FCF5E3;
+        border: 1px solid #D9DCE2;
+        border-radius: 12px;
+        display: block;
+        max-width: 328px;
+        max-height: 490px;
+        margin: 32px auto;
+    }
+
+        .subscription-banner-mob-homePage img {
+            width: 100%;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .subscription-banner-mob-homePage .subscription__title__title {
+            text-align: center;
+        }
+
+        .subscription-banner-mob-homePage .subscription__title__description {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .subscription-banner-mob-homePage .button__submit {
+            width: 100%;
+        }
+
+        .subscription-banner-mob-homePage .form__item__button {
+            width: 100%;
+        }
+
+        .subscription-banner-mob-homePage button {
+            height: 50%;
+            max-width: 280px;
+            line-height: 15px;
+            margin-bottom: 16px;
+        }
+}
+
+@media (max-width: 375px) {
+    .subscription-banner-mob-homePage {
+        max-width: 283px;
+        max-height: 590px;
+    }
+
+    .subscription-banner-mob-homePage img {
+        max-width: 100%;
+        border-radius: 12px 12px 0 0;
+        max-height: 100%;
+    }
+
+
+    .subscription-banner-mob-homePage .button__submit {
+        width: 100%;
+    }
+
+    .subscription-banner-mob-homePage .form__item__button {
+        width: 100%;
+    }
+
+    .subscription-banner-mob-homePage button {
+        height: 50%;
+        max-width: 192px;
+        line-height: 15px;
+        margin-bottom: 16px;
+    }
+}
