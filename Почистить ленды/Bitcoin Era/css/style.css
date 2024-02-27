@@ -1,0 +1,56 @@
+button[type="submit"] {
+    background-image: linear-gradient(166deg, #156cff 1%, #0e49ff);
+    box-shadow: 0px 4px 20.9px 3.1px rgba(13, 13, 13, 0.43);
+    color: #fff;
+    border-radius: 6px;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+input[type=tel]{
+    margin: 0 !important;
+}
+input:not([type=checkbox]) {
+    width: 100% !important;
+    height: 40px !important;
+    border-radius: 0;
+}
+.form_wrapper .input-wrap {
+    margin: 10px 0;
+}
+input {
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+}
+input[type=checkbox], input[type=radio]{
+    margin: 0 10px 0 0 !important;
+}
+.vue-tel-input{
+    border: none !important;
+}
+.video{
+    display: flex;
+}
+.checkbox-wrap{
+    display: flex;
+    align-items: center;
+}
+.video .play-btn::before {
+        width: 9rem;
+        height: 6rem;
+        background-color: rgba(19,110,241,.7);
+        background-position: center;
+        border-radius: 6px;
+    }
+@media screen and (max-width: 768px){
+    .video .play-btn {
+        opacity: 1 !important;
+        display: flex !important;
+    }
+    .video .play-btn::before {
+            width: 6rem;
+            height: 4rem;
+        }
+}

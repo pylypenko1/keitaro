@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Kaspi Profit</title>
+
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.svg" />
+
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" />
+  </head>
+
+  <body cz-shortcut-listen="true">
+    <!-- preloader -->
+    <div id="loader" style="display: none">
+      <img src="img/preloader.svg" alt="Preloader" />
+    </div>
+    <!-- preloader end -->
+    <div id="page">
+      <div class="logo">
+        <img style="width: 50px" src="img/logo.svg" alt="" />
+      </div>
+
+      <div id="home">
+        <div class="block">
+          <h1 class="title" style="font-weight: 500">
+            Приветствуем вас на странице регистрации проекта Kaspi Profit!
+          </h1>
+          <div class="cont">
+            <div class="text1">
+              Пожалуйста, ответьте нам на несколько несложных вопросов, чтобы пройти регистрацию
+            </div>
+            <div
+              class="wrap-btns"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+              "
+              id="startBtn"
+            >
+              <a style="min-width: 100%" class="button">ПРОЙТИ ОПРОС<span class="flare"></span></a>
+
+              <img
+                style="
+                  width: 100%;
+                  display: block;
+                  margin-top: 15px;
+                  margin-bottom: 15px;
+                  max-width: 150px;
+                "
+                src="img/misha.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg"></div>
+      <div class="footer">
+        <div class="wrap">
+          <p style="font-size: 16px; margin-bottom: 10px; line-height: 18px">
+            Мы создаем сервисы, призванные улучшить жизнь граждан Казахстана Проект Kaspi Profit -
+            это инвестиционная платформа, объединившая в себе более 20 опытных брокеров, которые
+            умело управляют активами наших клиентов и инвестируют их в самые прибыльные сделки на
+            рынке акций.
+            <br />
+            С нами инвестиции — это просто!
+          </p>
+
+          <p style="color: grey; font-size: 16px">
+            Михаил Ломтадзе <br />
+            Основатель группы компаний Kaspi
+          </p>
+        </div>
+      </div>
+      <div class="callback">Дождитесь звонка от нашего специалиста</div>
+    </div>
+    <div id="quest">
+      <div id="main">
+        <div class="logo" style="display: flex; align-items: center; margin-bottom: 15px">
+          <img style="width: 50px; display: block; margin-right: 10px" src="img/logo.svg" alt="" />
+          <p style="font-size: 22px; font-weight: 800">Kaspi Profit</p>
+        </div>
+        <div id="card">
+          <div class="slide slide1 active">
+            <div class="cont">
+              <div class="quest">
+                <div class="name">Сколько Вам лет?</div>
+                <div class="answer" data-name="quest1">
+                  <div class="items">
+                    <div class="item" data-name="quest1" data-val="1">18 - 25</div>
+                    <div class="item" data-name="quest1" data-val="2">25 - 35</div>
+                    <div class="item" data-name="quest1" data-val="3">35 - 45</div>
+                    <div class="item" data-name="quest1" data-val="4">45+</div>
+                  </div>
+                </div>
+                <div class="mobile_img">
+                  <img src="img/p2.jpg" width="100%" />
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-navs">
+              <div class="steps">
+                <div class="step-val">Шаг 1 из 5</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide slide2">
+            <div class="cont">
+              <div class="quest">
+                <div class="name">Какова Ваша финансовая цель?</div>
+                <div class="answer" data-name="quest2">
+                  <div class="items">
+                    <div class="item" data-name="quest2" data-val="1">
+                      Обеспечить себя и свою семью
+                    </div>
+                    <div class="item" data-name="quest2" data-val="2">
+                      Создать финансовую подушку на "черный день"
+                    </div>
+                    <div class="item" data-name="quest2" data-val="3">
+                      Улучшить/приобрести личное жилье
+                    </div>
+                    <div class="item" data-name="quest2" data-val="4">Финансовая независимость</div>
+                  </div>
+                </div>
+                <div class="mobile_img">
+                  <img src="img/p3.jpg" width="100%" />
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-navs">
+              <div class="steps">
+                <div class="step-val">Шаг 2 из 5</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide slide3">
+            <div class="cont">
+              <div class="quest">
+                <div class="name">Был ли у вас ранее опыт заработка на инвестициях?</div>
+                <div class="answer" data-name="quest3">
+                  <div class="items">
+                    <div class="item" data-name="quest3" data-val="1">
+                      Да, я уже инвестировал раньше
+                    </div>
+                    <div class="item" data-name="quest3" data-val="2">Нет, но хочу научиться</div>
+                  </div>
+                </div>
+                <div class="mobile_img">
+                  <img src="img/p4.jpg" width="100%" />
+                </div>
+              </div>
+
+              <div class="slide-navs">
+                <div class="steps">
+                  <div class="step-val">Шаг 3 из 5</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide slide4">
+            <div class="cont">
+              <div class="quest">
+                <div class="name">Есть ли у вас постоянное место работы?</div>
+                <div class="answer" data-name="quest4">
+                  <div class="items">
+                    <div class="item" data-name="quest4" data-val="1">Да, работаю полный день</div>
+                    <div class="item" data-name="quest4" data-val="2">
+                      Да, работаю неполный день
+                    </div>
+                    <div class="item" data-name="quest4" data-val="3">Нет, не работаю</div>
+                  </div>
+                </div>
+                <div class="mobile_img">
+                  <img src="img/p5.jpg" width="100%" />
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-navs">
+              <div class="steps">
+                <div class="step-val">Шаг 4 из 5</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide slide5">
+            <div class="cont">
+              <div class="quest">
+                <div class="name">С какой суммы вам было бы комфортно начать инвестировать?</div>
+                <div class="answer" data-name="quest5">
+                  <div class="items">
+                    <div class="item" data-name="quest5" data-val="1">70.000₸</div>
+                    <div class="item" data-name="quest5" data-val="2">90.000₸</div>
+                    <div class="item" data-name="quest5" data-val="3">100.000₸</div>
+                    <div class="item" data-name="quest5" data-val="4">Пока не могу ответить</div>
+                  </div>
+                </div>
+                <div class="mobile_img">
+                  <img src="img/p6.jpg" width="100%" />
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-navs">
+              <div class="steps">
+                <div class="step-val">Шаг 5 из 5</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="slide-finish" class="slide">
+            <div class="la-left">
+              <div class="cont">
+                <div class="t1">
+                  Вы успешно прошли опрос! Теперь вы можете пройти регистрацию для доступа к проекту
+                  Kaspi Profit
+                </div>
+                <img src="img/p7.jpg" width="100%" />
+                <div class="text">
+                  <br />
+                  <p style="font-size: 15px">
+                    Пожалуйста заполните контактную форму, для того, чтобы мы могли связаться с вами
+                    и ожидайте звонок от нашего финансового эксперта
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="la-right">
+              <form method="post" id="leadform" autocomplete="off">
+                <div class="form-wrap" style="position: relative">
+                  <input type="text" name="firstName" placeholder="Ваше Имя" />
+                </div>
+                <div class="form-wrap" style="position: relative">
+                  <input type="text" name="lastName" placeholder="Ваша Фамилия" />
+                </div>
+                <div class="form-wrap" style="position: relative">
+                  <input type="email" name="email" placeholder="E-mail" />
+                </div>
+                <div style="position: relative; max-height: 50px">
+                  <input type="tel" name="phone" />
+                </div>
+                <button
+                  type="submit"
+                  class="mt-4 v-btn v-btn--block v-btn--disabled v-btn--has-bg theme--light v-size--x-large text-h4"
+                >
+                  <span class="v-btn__content"> Отправить </span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div id="slide-message" class="slide">
+            <div class="message">
+              <div class="icon"></div>
+              <div class="text">
+                <h2>Ура!</h2>
+
+                <p>Спасибо, ваш запрос был обработан.</p>
+                <p>Пожалуйста, дождитесь звонка от нашего специалиста.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      button {
+        background-color: #ff6363 !important;
+        width: 100%;
+        height: 52px;
+        border-radius: 6px;
+        border: 1px solid #e1e1e1;
+        border-color: #ff6363 !important;
+        margin-top: 30px;
+      }
+      .v-btn__content {
+        color: white;
+        font-size: 22px !important;
+        text-indent: 0.0892857143em;
+        text-transform: uppercase;
+        letter-spacing: 0.0073529412em !important;
+      }
+      form {
+        box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+          0 9px 46px 8px rgba(0, 0, 0, 0.12) !important;
+        padding: 16px !important;
+      }
+      input {
+        width: 100%;
+        margin-bottom: 25px;
+        padding: 16px;
+        border: 1px solid #e1e1e1;
+        border-radius: 6px;
+        max-height: 50px;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/slide.js"></script>
+
+    <script src="js/imask.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Validate.js -->
+    <script src="js/validate.min.js"></script>
+
+    <!-- JS-Adapter -->
+    <script src="js/jsAdapter.js"></script>
+    <script src="js/pixelInitPageView.js"></script>
+  </body>
+</html>

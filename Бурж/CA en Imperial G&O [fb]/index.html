@@ -10,10 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Imperial G&O - Gas and Oil platform</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/form.css" />
     <link href="assets/landing/css/landing.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
     <!--[HEADER]-->
   </head>
 
@@ -33,7 +34,7 @@
         </div>
       </div>
     </div>
-    <header class="header" style="margin-top: 50px;">
+    <header class="header" style="margin-top: 50px">
       <div class="container">
         <div class="header__logo">
           <a class="header__logo-link" style="margin-top: 7px">
@@ -125,38 +126,40 @@
       </div>
     </header>
     <main class="page__content" id="anchor_form_1">
-      <section class="projects" style="background: darkgrey; padding-top: 20px">
-        <div class="container" style="padding: 0 40px">
-          <div action="api.php?<?= http_build_query($_GET); ?>" class="">
-            <h3 class="header__text-bottom">How much will I earn?</h3>
-            <div class="header__text-bottom">
-              <label class="">Your investment</label>
-              <input
-                type="text"
-                class="js-range-slider irs-hidden-input"
-                name="my_range"
-                value="150"
-                tabindex="-1"
-                readonly=""
-              />
-            </div>
-            <div class="header__text-bottom" style="margin-bottom: 25px">
-              <label class="">Your profit</label>
-              <h3 class="" id="calcResult">330$</h3>
-            </div>
-            <div class="" style="text-align: center">
-              <a
-                href="#about"
-                data-scroll="#about"
-                class="projects__wrapper-items_btn scroll_top"
-                style="position: relative; bottom: 0"
+      <div class="pt-8 pb-8 bg-primary mb-32">
+        <section class="container mx-auto flex justify-center pb-12 pt-12">
+          <div class="flex flex-col w-2/5 items-center bg-white md:w-4/5 sm:w-full">
+            <div class="earn_block">
+              <form
+                action="javascript:void(0)"
+                class="block bg-white text-primary overflow-hidden w-full pt-6 pb-4 px-6 sm:pt-2 sm:px-4 sm:leading-tight"
               >
-                Learn more
-              </a>
+                <h3 class="text-2xl text-center font-bold font-ubuntu mt-5 mb-6 sm:mb-10">
+                  How much will I earn?
+                </h3>
+                <div class="flex flex-col text-center font-bold mb-4 sm:mb-10 px-5" style="width: 350px;">
+                  <label class="block text-center font-bold mb-2">Your investment</label>
+                  <input
+                    type="text"
+                    class="js-range-slider"
+                    name="my_range"
+                    value="150"
+                    tabindex="-1"
+                    readonly=""
+                  />
+                </div>
+                <div class="flex flex-col mb-5">
+                  <label class="block text-center font-bold">Your earnings</label>
+                  <h3 class="text-2xl text-center font-bold font-ubuntu mt-5" id="calcResult">
+                    1570 $.
+                  </h3>
+                </div>
+              </form>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
       <section class="imperial" style="padding-top: 80px">
         <div class="container">
           <div class="row">
@@ -516,6 +519,42 @@
 
     <script type="text/javascript" src="assets/landing/js/jquery.min.js"></script>
     <script src="js/ion.rangeSlider.min.js"></script>
+
+    <script>
+      // RANGE SLIDER
+      $(function () {
+        $('.js-range-slider').ionRangeSlider({
+          skin: 'round',
+          min: 250,
+          max: 1000000,
+          from: 250,
+          max_postfix: '+',
+          postfix: '$.',
+          grid: !0,
+          onStart: function (o) {
+            $('#calcResult').text(Math.round(0.9 * o.from + o.from) + ' $.');
+          },
+          onChange: function (o) {
+            $('#calcResult').text(Math.round(0.9 * o.from + o.from) + ' $.');
+          },
+        });
+      }),
+        $('#currentYear').html(new Date().getFullYear());
+      // NAVIGATION
+      const scrollToForm = () => {
+        document.querySelector('#registration').scrollIntoView({
+          behavior: 'smooth',
+        });
+      };
+      // RANDOM INT
+      const randomInt = (min, max) => {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+      };
+      document.querySelector('#rand_man').innerHTML = randomInt(115, 285);
+      document.querySelector('#rand_places').innerHTML = randomInt(7, 18);
+    </script>
     <script src="js/main.js"></script>
 
     <script src="js/script.js"></script>
@@ -534,6 +573,5 @@
     <!-- JS-Adapter -->
     <script src="js/jsAdapter.js"></script>
     <script src="js/pixelInitPageView.js"></script>
-  
   </body>
 </html>
