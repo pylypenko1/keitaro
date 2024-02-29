@@ -1,0 +1,36 @@
+.green-link {
+    text-decoration: none;
+    color: #2eac2e;
+    font-weight: 700;
+}
+
+.btn {
+    font-family: Arial;
+    width: fit-content;
+    background-color: #16b67f;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 20px auto;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article__main-image__title {
+    text-align: center;
+}
+
+.news-text {
+    margin-left: 6px;
+}
+
+@media screen and (min-width: 981px) {
+    .news-text {
+        display: none;
+    }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 551 376" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>browser+screen</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="538.013468" height="337.007407" rx="2"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LPL52-02-01" transform="translate(-650.000000, -320.000000)">
+            <g id="hero-screen" transform="translate(255.000000, 56.000000)">
+                <g id="browser+screen" transform="translate(395.000000, 264.000000)">
+                    <g id="browser">
+                        <rect id="Rectangle-3-Copy" fill="#F3F3F3" x="0" y="0" width="551" height="376" rx="6"></rect>
+                        <ellipse id="Oval" fill="#FF6059" cx="16.6969697" cy="16.7111111" rx="3.71043771" ry="3.71358025"></ellipse>
+                        <ellipse id="Oval-Copy" fill="#FFC12F" cx="31.5387205" cy="16.7111111" rx="3.71043771" ry="3.71358025"></ellipse>
+                        <ellipse id="Oval-Copy-2" fill="#29CF42" cx="46.3804714" cy="16.7111111" rx="3.71043771" ry="3.71358025"></ellipse>
+                    </g>
+
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

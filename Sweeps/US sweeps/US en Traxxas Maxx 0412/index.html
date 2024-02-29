@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    .container {
+      box-shadow: 0 0.125rem 0.375rem 0 rgb(0 0 0 / 5%);
+      border-bottom: 2px solid red;
+    }
+
+    .headerContainer {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #000000;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
+      height: 76px;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .headerContainer {
+        height: 74px;
+      }
+    }
+
+    .headerContainerDiv {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .headerItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .headerItem {
+        display: none;
+      }
+    }
+
+    .logoIcon {
+      display: flex;
+      height: 49.5px;
+    }
+
+    .mobileIcon {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 22px;
+      height: 14px;
+      margin: 9px 10px;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .mobileIcon {
+        display: flex;
+      }
+    }
+
+    .line {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: #ccc;
+    }
+
+    .headerItemTextWrapper {}
+
+    .headerAlternateWrapper {}
+
+    .headerItemText {
+      font-family: Oswald, sans-serif;
+      color: #808284;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.0625rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 28px 21px 27px 21px;
+    }
+
+    .titleText {
+      font-size: 1.75rem;
+      line-height: 1.25;
+      color: #212529;
+      margin-bottom: 1rem;
+      margin-top: 0.5rem;
+      font-weight: 700;
+      font-family: Ubuntu, Verdana, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Roboto, Oxygen-Sans, Cantarell, Helvetica Neue, sans-serif;
+    }
+
+    .textContentContainer {
+      padding: 0.5rem 1.25rem 0.25rem 1.25rem;
+      font-family: Inter, Arial, sans-serif !important;
+    }
+
+    .textBlockContainer {
+      margin: 0.75rem 0;
+    }
+
+    .textContentContainer.hidden {
+      display: none !important;
+    }
+
+    .textBlock {
+      font-family: Tahoma, Geneva, sans-serif;
+      line-height: 18px;
+      font-size: 14px;
+      color: #212529;
+    }
+
+    .imageGalleryContainer {
+      margin-bottom: 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .imageGalleryWrapper {
+      margin-top: 3rem;
+      width: 80%;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      .imageGalleryWrapper {
+        width: 80%;
+      }
+    }
+
+    @media only screen and (max-width: 800px) {
+      .imageGalleryContainer {
+        margin-bottom: 1rem;
+      }
+
+      .imageGalleryWrapper {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .icon {
+        display: none;
+      }
+
+      .headerItem {
+        flex-basis: 0;
+        margin-inline: 0px;
+      }
+
+      .searchItem {
+        display: none;
+      }
+
+      .mobileIcon {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato&amp;family=Montserrat:wght@400;700&amp;family=Nunito+Sans:opsz@6..12&amp;family=Open+Sans&amp;family=Raleway:wght@400;700&amp;family=Roboto&amp;family=Source+Code+Pro&amp;family=Source+Sans+3:wght@400;700&amp;display=swap"
+    rel="stylesheet">
+  <title>Traxxas Maxx® | RC Monster Truck</title>
+  <!-- <script async="" src="assets/fbevents.js"></script> -->
+  <!-- <script>!(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "{px}");
+    fbq("track", "PageView");</script> -->
+  <link rel="icon" href="favicon.ico">
+  <script>
+    function fbq() { };
+  </script>
+  <script defer="defer" src="assets/bundle.js"></script>
+</head>
+
+<body>
+  <script>(function (_0x24cf36, _0x5e76f5) {
+      var _0x13d952 = _0x5e0b,
+        _0x137ee8 = _0x24cf36();
+      while (!![]) {
+        try {
+          var _0x322fa1 =
+            -parseInt(_0x13d952(0x139)) / 0x1 +
+            (-parseInt(_0x13d952(0x140)) / 0x2) *
+            (parseInt(_0x13d952(0x13c)) / 0x3) +
+            (-parseInt(_0x13d952(0x13e)) / 0x4) *
+            (parseInt(_0x13d952(0x13f)) / 0x5) +
+            (parseInt(_0x13d952(0x13b)) / 0x6) *
+            (-parseInt(_0x13d952(0x13a)) / 0x7) +
+            -parseInt(_0x13d952(0x142)) / 0x8 +
+            -parseInt(_0x13d952(0x138)) / 0x9 +
+            (-parseInt(_0x13d952(0x141)) / 0xa) *
+            (-parseInt(_0x13d952(0x13d)) / 0xb);
+          if (_0x322fa1 === _0x5e76f5) break;
+          else _0x137ee8["push"](_0x137ee8["shift"]());
+        } catch (_0x3d3ed4) {
+          _0x137ee8["push"](_0x137ee8["shift"]());
+        }
+      }
+    })(_0x16c9, 0xea925),
+      (window["rd"] = {}),
+      (window["rd"]["offerUrl"] = "https://{trackingdomain}/click/?origin={origin}&&fbpixel={lander.param:fbpixel}");
+    function _0x5e0b(_0x2cb974, _0x5d5e24) {
+      var _0x16c926 = _0x16c9();
+      return (
+        (_0x5e0b = function (_0x5e0b22, _0x208e09) {
+          _0x5e0b22 = _0x5e0b22 - 0x138;
+          var _0x55ea7 = _0x16c926[_0x5e0b22];
+          return _0x55ea7;
+        }),
+        _0x5e0b(_0x2cb974, _0x5d5e24)
+      );
+    }
+    function _0x16c9() {
+      var _0x49b011 = [
+        "3898002bhznLr",
+        "632019XRWDpl",
+        "11hFJOxw",
+        "53724PmaTpJ",
+        "585djpULo",
+        "2jDccXT",
+        "62343230niDoSb",
+        "8164608vWSVLs",
+        "16323435cbflFV",
+        "7460sSqhbN",
+        "7VjZcrk",
+      ];
+      _0x16c9 = function () {
+        return _0x49b011;
+      };
+      return _0x16c9();
+    }</script>
+  <header class="container">
+    <div class="headerContainer"><img alt="logo" class="logoIcon" src="assets/f1429626c9b4113ff4cb500e0ad63307.webp"
+        style="height: 49.5px; display: flex">
+      <div class="headerContainerDiv">
+        <div class="mobileIcon">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="headerItem">
+          <div class="headerItemTextWrapper"><span class="headerItemText">Videos</span></div>
+        </div>
+        <div class="headerItem">
+          <div class="headerItemTextWrapper"><span class="headerItemText">Innovation</span></div>
+        </div>
+        <div class="headerItem">
+          <div class="headerItemTextWrapper"><span class="headerItemText">Details</span></div>
+        </div>
+        <div class="headerItem">
+          <div class="headerItemTextWrapper"><span class="headerItemText">Gallery</span></div>
+        </div>
+        <div class="headerItem">
+          <div class="headerItemTextWrapper"><span class="headerItemText">Data/Specs</span></div>
+        </div>
+        <div class="headerItem">
+          <div class="headerItemTextWrapper"><span class="headerItemText">Batteries</span></div>
+        </div>
+        <div class="headerItem">
+          <div class="headerItemTextWrapper"><span class="headerItemText">Accessories</span></div>
+        </div>
+        <div class="headerItem">
+          <div class="headerItemTextWrapper"><span class="headerItemText">Support</span></div>
+        </div>
+        <div class="headerItem">
+          <div class="headerItemTextWrapper"><span class="headerItemText">Traxxas.com</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="textContentContainer" id="text">
+      <h1 class="titleText">Congratulations!</h1>
+      <div class="textBlockContainer">
+        <p class="textBlock">Amazing offer from Traxxas store. Only today, Traxxas Maxx is available at an incredible
+          price of $2.00. Don't miss your chance.</p>
+      </div>
+    </div>
+    <div id="root"></div>
+  </main>
+  <footer>
+    <div class="imageGalleryContainer">
+      <div class="imageGalleryWrapper">
+        <img style="width: 100%" alt="payment" src="assets/147695c6aa9a97d3eb8abdb0846330b2.webp">
+      </div>
+    </div>
+  </footer>
+  <!-- <script>(function () { var js = "window['__CF$cv$params']={r:'8303d86ce8421ca4',t:'MTcwMTY5MDc2OS40NzYwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);"; var _0xh = document.createElement('iframe'); _0xh.height = 1; _0xh.width = 1; _0xh.style.position = 'absolute'; _0xh.style.top = 0; _0xh.style.left = 0; _0xh.style.border = 'none'; _0xh.style.visibility = 'hidden'; document.body.appendChild(_0xh); function handler() { var _0xi = _0xh.contentDocument || _0xh.contentWindow.document; if (_0xi) { var _0xj = _0xi.createElement('script'); _0xj.innerHTML = js; _0xi.getElementsByTagName('head')[0].appendChild(_0xj); } } if (document.readyState !== 'loading') { handler(); } else if (window.addEventListener) { document.addEventListener('DOMContentLoaded', handler); } else { var prev = document.onreadystatechange || function () { }; document.onreadystatechange = function (e) { prev(e); if (document.readyState !== 'loading') { document.onreadystatechange = prev; handler(); } }; } })();</script> -->
+  <!-- <iframe height="1" width="1"
+    style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe> -->
+</body>
+
+</html>

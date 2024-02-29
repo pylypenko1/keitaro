@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="31">
+	<defs>
+		<image id="img_0" width="31" height="31" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAIAAACQzIFuAAAAA3NCSVQICAjb4U/gAAAAkElEQVRIid3VSwrAIAwE0Lb03Aqe3IUgoZjPJCrYrFyU1zKRzp1zvpbNs45err/9lFKahZZS2uHkZHblTqcHZ5/h2v6XjHo7jdF5vt2+FViHFo7pH1oNENBRGtAdtFX30SbdTet6hFb0IC3pcZrVp9CsTrlII7LJNDRYtuN/JH2BPPIzJ7fHrm5yNLU6JydTAWtJMzMyZRQuAAAAAElFTkSuQmCC"/>
+	</defs>
+	<defs>
+		<clipPath id="clip_0">
+			<rect x="-706" y="-974" width="980" height="1030" clip-rule="evenodd"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip_0)">
+		<use fill="rgb(255,255,255)" fill-opacity="0.49803922" stroke="none" xlink:href="#img_0"/>
+	</g>
+
+</svg>

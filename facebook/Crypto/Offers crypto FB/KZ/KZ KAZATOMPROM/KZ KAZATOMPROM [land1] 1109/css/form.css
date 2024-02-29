@@ -1,0 +1,375 @@
+input:not([type='checkbox']):not([type='radio']),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.contactForm {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 0;
+  padding: 13px 20px;
+  border-radius: 4px;
+  color: #3c4d6b;
+  transition: all 0.3s ease 0s;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contactForm .form_header {
+  color: #778191;
+  margin: 0 0 20px 0;
+  font-size: 1em;
+}
+
+.contactForm .form_header h3 {
+  font-size: 1.9em;
+  padding: 0;
+  margin: 0 0 7px 0;
+  color: #3c4d6b;
+  font-weight: 600;
+}
+
+.contactForm .contact_form {
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  background: transparent;
+  text-align: center;
+}
+
+.contactForm .input_group {
+  position: relative;
+  width: 100% !important;
+  padding: 0;
+  float: left;
+  margin-bottom: 8px;
+}
+
+.contactForm .input_group:last-child {
+  margin-bottom: 0;
+}
+
+.input_questions label {
+  width: 100% !important;
+  font-weight: 300;
+  text-align: left;
+}
+
+.contactForm input[type='text'],
+.contactForm input[type='email'],
+.contactForm input[type='tel'],
+.contactForm textarea,
+.contactForm select {
+  display: block;
+  float: left;
+  width: 100% !important;
+  height: 50px;
+  padding: 6px 16px;
+  line-height: 1.42857143;
+  background-image: none;
+  color: #428a6a;
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: linear-gradient(270deg, #2b3990 54 0%, rgba(0, 28, 6, 0.15) 100%);
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+  margin-bottom: 0;
+  border: 2px solid #e6ecef;
+  transition: all 0.3s ease 0s;
+  z-index: 1;
+}
+
+.contactForm select {
+  padding: 6px 8px;
+  height: 36px;
+  color: #778191;
+}
+
+.contactForm select option {
+  color: #555;
+}
+
+.intl-tel-input {
+  width: 100% !important;
+}
+
+.flag-container {
+  z-index: 2;
+  color: #2e3346;
+}
+
+.contactForm input[type='text']:focus,
+.contactForm input[type='email']:focus,
+.contactForm input[type='tel']:focus,
+.contactForm textarea:focus,
+.contactForm select:focus {
+  /* border: 2px solid #FFDC33 !important; */
+  /* background: #fff !important; */
+  outline: none;
+  -moz-outline: none;
+  -webkit-outline: none;
+  box-shadow: none;
+}
+
+.contactForm input::-webkit-input-placeholder {
+  /* color: #428a6a !important; */
+  opacity: 1;
+}
+
+.contactForm input::-moz-placeholder {
+  color: #778191 !important;
+  opacity: 1;
+}
+
+/* Firefox 19+ */
+.contactForm input:-moz-placeholder {
+  color: #778191 !important;
+  opacity: 1;
+}
+
+/* Firefox 18- */
+.contactForm input:-ms-input-placeholder {
+  color: #778191 !important;
+  opacity: 1;
+}
+
+.contactForm input:placeholder {
+  color: #778191 !important;
+  opacity: 1;
+}
+
+.error_input {
+  border: 1px solid rgba(255, 0, 0, 0.8) !important;
+}
+
+.contactForm .btn-submit {
+  text-align: center;
+  width: 100%;
+  display: block;
+  background: #f24634;
+  color: white;
+  border: 0;
+  padding: 15px;
+  border-radius: 7px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.form_error {
+  display: none;
+  position: relative;
+  background: #fcf8f8;
+  padding: 6px 12px 6px 35px;
+  text-align: left;
+  margin: 0 0 25px 0;
+  border: 1px dashed #a94442;
+}
+
+.form_error:after {
+  content: '!';
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  font-size: 1.2em;
+  line-height: 25px;
+  bottom: 0;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #f9dcdc;
+  text-align: center;
+}
+
+.form_error p {
+  margin: 0;
+}
+
+.sms_confirm_block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 5;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.sms_confirm_title {
+  display: inline-block;
+  width: 90%;
+  font-size: 1.1em;
+  margin: 0 0 15px 0;
+}
+
+.sms_confirm_block .form-group {
+  margin-bottom: 10px;
+}
+
+.sms_confirm_block input {
+  text-align: center;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+  max-height: 48px;
+}
+
+.input_group.intl-tel-input.shadow .iti {
+  width: 100%;
+}
+
+.top_form label.error {
+  color: #fff;
+}
+
+/* For first form */
+.form-control.required.form-input.error,
+.form-control.required.error,
+#phone1.form-control.error {
+  border: 1px solid #ff8383;
+  background: #ffe7e7;
+}
+
+.form-control.required.form-input.valid,
+.form-control.required.valid,
+#phone1.form-control.valid {
+  border: 1px solid #84ff65;
+  background: #c9ffc4;
+}
+
+/* For second form */
+#first_name.required.form-input.error,
+#last_name.required.form-input.error,
+#email.required.error,
+#phoneModal.error {
+  border: 1px solid #ff8383;
+  background: #ffe7e7;
+}
+
+#first_name.required.form-input.valid,
+#last_name.required.form-input.valid,
+#email.required.valid,
+#phoneModal.valid {
+  border: 1px solid #84ff65;
+  background: #c9ffc4;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 20px;
+}
+
+.error.active {
+  position: absolute;
+  z-index: 99999;
+  bottom: -30px;
+  color: red;
+  padding-bottom: 15px;
+  font-size: 12px;
+}
+
+/* Стили для модального окна */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3000;
+  overflow: hidden;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 32px 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+  position: relative;
+  margin: 0 10px;
+}
+
+.modal-content p {
+  color: #000;
+  line-height: 140%;
+  margin: 10px 0 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #777777;
+}
+
+.modal-close:hover {
+  color: #fff333;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: #777777;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+
+/* ///////////////////////// */
+/* /////// PRELOADER /////// */
+/* ///////////////////////// */
+#loader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(168 168 168 / 70%);
+  z-index: 4000;
+}
+
+#loader img {
+  position: absolute;
+  width: 130px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

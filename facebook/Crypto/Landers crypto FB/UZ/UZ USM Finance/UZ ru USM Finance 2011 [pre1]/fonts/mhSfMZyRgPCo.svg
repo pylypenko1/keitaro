@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <circle id="b" cx="30" cy="30" r="20"/>
+    <filter id="a" width="180%" height="180%" x="-40%" y="-35%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0" in="shadowBlurOuter1"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <use fill="black" filter="url(#a)" xlink:href="#b"/>
+    <use fill="#FFFFFF" xlink:href="#b"/>
+    <path fill="#262626" d="M26.1708506,25 C26.5829556,23.8373783 27.6947744,23 29.0016655,23 L30.9983345,23 C32.3099021,23 33.420086,23.8349335 33.8304514,25 L36.0059397,25 C37.1054862,25 38,25.8992496 38,27.0085302 L38,34.9914698 C38,36.0980496 37.1072288,37 36.0059397,37 L23.9940603,37 C22.8945138,37 22,36.1007504 22,34.9914698 L22,27.0085302 C22,25.9019504 22.8927712,25 23.9940603,25 L26.1708506,25 Z M30,35 C32.2091391,35 34,33.2091391 34,31 C34,28.7908609 32.2091391,27 30,27 C27.7908609,27 26,28.7908609 26,31 C26,33.2091391 27.7908609,35 30,35 Z M30,34 C28.3431457,34 27,32.6568543 27,31 C27,29.3431457 28.3431457,28 30,28 C31.6568543,28 33,29.3431457 33,31 C33,32.6568543 31.6568543,34 30,34 Z"/>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Source Sans Pro:200,300,400,600,700,900&display=swap');/* EO GOOGLE FONTS */
+
+
+ h1 { font-family: 'Source Sans Pro'; color: #333333; font-size: 20px; font-weight: 300; line-height: 1.2; margin-top: #1e6eb7; margin-bottom: 15px;  }
+ h2 { font-family: 'Source Sans Pro'; color: #1e6eb7; font-size: 32px; font-weight: 600; line-height: 1.2; margin-top: #1e6eb7; margin-bottom: 15px;  }
+ h3 { font-family: 'Source Sans Pro'; color: #1e6eb7; font-size: 20px; font-weight: 600; line-height: 1.2; margin-top: #333333; margin-bottom: 15px;  }
+ h4 { font-family: 'Source Sans Pro'; color: #333333; font-size: 18px; font-weight: 700; line-height: 1.2; margin-top: #333333; margin-bottom: 15px;  }
+ h5 { font-family: 'Source Sans Pro'; color: #333333; font-size: 20px; font-weight: ; line-height: 1.2; margin-top: #656665; margin-bottom: 15px;  }
+ h6 { font-family: 'Source Sans Pro'; color: #656665; font-size: 16px; font-weight: 700; line-height: 1.2; margin-top: #333333; margin-bottom: 15px;  }
+ p { font-family: 'Source Sans Pro'; color: #333333; font-size: 18px; font-weight: 400; line-height: 1.2; margin-top: #FFFFFF; margin-bottom: 15px;  }
+ body { font-family: 'Source Sans Pro'; color: #333333; font-size: 18px; font-weight: #333333; line-height: 1.2;  }
+ .h1 { font-family: 'Source Sans Pro'; color: #333333; font-size: 20px; font-weight: 300; line-height: 1.2; margin-top: #1e6eb7; margin-bottom: 15px;  }
+ .h2 { font-family: 'Source Sans Pro'; color: #1e6eb7; font-size: 32px; font-weight: 600; line-height: 1.2; margin-top: #1e6eb7; margin-bottom: 15px;  }
+ .h3 { font-family: 'Source Sans Pro'; color: #1e6eb7; font-size: 20px; font-weight: 600; line-height: 1.2; margin-top: #333333; margin-bottom: 15px;  }
+ .h4 { font-family: 'Source Sans Pro'; color: #333333; font-size: 18px; font-weight: 700; line-height: 1.2; margin-top: #333333; margin-bottom: 15px;  }
+ .h5 { font-family: 'Source Sans Pro'; color: #333333; font-size: 20px; font-weight: ; line-height: 1.2; margin-top: #656665; margin-bottom: 15px;  }
+ .h6 { font-family: 'Source Sans Pro'; color: #656665; font-size: 16px; font-weight: 700; line-height: 1.2; margin-top: #333333; margin-bottom: 15px;  }
+ h1 a { color: #333333;  }
+ h2 a { color: #1e6eb7;  }
+ h3 a { color: #1e6eb7;  }
+ h4h5 a {  }
+ h6 a { color: #656665;  }
+ .h1 a { color: #333333;  }
+ .h2 a { color: #1e6eb7;  }
+ .h3 a { color: #1e6eb7;  }
+ .h4h5 a {  }
+ .h6 a { color: #656665;  }
+ .btn-primary { font-family: Source Sans Pro; color: #1e6eb7; background-color: #1e6eb7; border-color: #FFFFFF; font-size: #1e6eb7; font-weight: #1e6eb7;  }
+ .btn-primary:hover { color: #666666; background-color: #1e6eb7; border-color: #FFFFFF; opacity: #666666;  }
+ .btn-secondary { font-family: Source Sans Pro; color: #666666; background-color: #666666; border-color: #666666; font-size: #666666; font-weight: #666666;  }
+ .btn-secondary:hover { color: #666666; background-color: #666666; border-color: #666666;  }

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="isoCode" content="ua">
+    <meta name="description"
+        content="Immediate Edge is an advanced platform making sure you have a pleasant trading experience. Immediate Edge helps you monitor the market data and make smart choices.">
+    <!-- open graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Immediate Edge ™ - The Official Website 2022 | 【Most Updated】" />
+    <meta property="og:description"
+        content="Immediate Edge is an advanced platform making sure you have a pleasant trading experience. Immediate Edge helps you monitor the market data and make smart choices." />
+    <title>Immediate Edge ™ - The Official Website 2022 | 【Most Updated】</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="css/video-js.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <style>
+        .iti.iti--allow-dropdown.iti--separate-dial-code {
+            width: 100%;
+        }
+
+        .iti--separate-dial-code .iti__selected-flag {
+            max-height: 48px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+
+        /* input.error {
+            background-color: rgba(255, 0, 0, 0.182);
+        } */
+
+        label.error {
+            /* font-size: 0.95rem !important;
+            color: #ff0000be; */
+            width: 100%;
+            font-weight: 400;
+            margin-top: 0.25rem;
+            padding: 5px;
+            color: #fff;
+            background-color: #eb162b;
+            font-size: 12px;
+        }
+    </style>
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+        function getCookie(name) {
+            var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return v ? v[2] : null;
+        }
+
+        function setCookie(name, value, days) {
+            var d = new Date;
+            d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+            document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+        }
+
+        function getSubId() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{subid}'.match('{')) {
+                return '{subid}';
+            }
+            var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+            if (clientSubid && !clientSubid.match('>')) {
+                return clientSubid;
+            }
+            if (params.get('_subid')) {
+                return params.get('_subid')
+            }
+            if (params.get('subid')) {
+                return params.get('subid')
+            }
+            if (getCookie('subid')) {
+                return getCookie('subid');
+            }
+        }
+
+        function getToken() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{token}'.match('{')) {
+                return '{token}';
+            }
+            var clientToken = '<?php echo isset($client) ? $client->getToken() : "" ?>';
+            if (clientToken && !clientToken.match('>')) {
+                return clientToken;
+            }
+            if (params.get('_token')) {
+                return params.get('_token')
+            }
+            if (params.get('token')) {
+                return params.get('token')
+            }
+            if (getCookie('token')) {
+                return getCookie('token');
+            }
+            return null;
+        }
+
+        // function getPixel() {
+        //     var params = new URLSearchParams(document.location.search.substr(1));
+        //     if (!'{pixel}'.match('{')) {
+        //         return '{pixel}';
+        //     }
+        //     if (params.get('pixel')) {
+        //         return params.get('pixel')
+        //     }
+
+        //     if (getCookie('pixel')) {
+        //         return getCookie('pixel');
+        //     }
+
+        //     return null;
+        // }
+
+        function getPixel() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{idpxl}'.match('{')) {
+                return '{idpxl}';
+            }
+            if (params.get('idpxl')) {
+                return params.get('idpxl')
+            }
+
+            if (getCookie('idpxl')) {
+                return getCookie('idpxl');
+            }
+
+            return null;
+        }
+
+        if (typeof URLSearchParams === 'function') {
+            document.addEventListener("DOMContentLoaded", function (event) {
+                var params = new URLSearchParams(document.location.search.substr(1));
+                var subid = getSubId();
+                var token = getToken();
+                var pixel = getPixel();
+
+                params.set('_token', token);
+                setCookie('idpxl', pixel);
+                setCookie('token', token);
+                setCookie('subid', subid);
+
+                // Adds params to the links  
+                document.querySelectorAll('a').forEach(function (link) {
+                    var url = new URL(link.href);
+                    params.forEach(function (v, k) {
+                        url.searchParams.append(k, v);
+                    });
+                    link.href = url.toString();
+                });
+
+                // Adds params as hidden inputs to the forms
+                document.querySelectorAll('form').forEach(function (form) {
+                    params.forEach(function (v, k) {
+                        var input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = k;
+                        input.value = v;
+
+                        form.append(input);
+                    });
+                });
+            })
+        }
+    </script>
+    <!-- End JS adapter -->
+</head>
+
+<body>
+    <!-- INTRO SECTION 1 END -->
+    <header class="header">
+        <div class="container" style="max-width: 1400px;">
+            <div class="row header-row align-items-center" style="justify-content: center;">
+                <div class="col-7 col-md-3 order-1">
+                    <a href="#main-form" class="logo scroll-top">
+                        <img loading="lazy" src="assets/logo.png" width="213" height="66" alt="">
+                    </a>
+                </div>
+                <!-- <div class="col-12 col-md-6 order-3 order-md-2 d-flex justify-content-end" style="position: static;">
+                    <ul class="header-menu">
+                        <li><a href="login/index.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-5 col-md-2 pl-0 order-2 order-md-3 d-flex justify-content-end align-items-center">
+                    <div class="header-hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="container mb-5" style="max-width: 1220px;">
+            <h1 class="heading mb-0">Immediate Edge</h1>
+            <h2 class="fs-30 text-center">Join Immediate Edge and Improve Your Trading Skills!</h2>
+        </div>
+        <div class="container" style="max-width: 1300px;">
+            <div class="row">
+                <div class="col-lg-8">
+                    <img loading="lazy" src="assets/video-image.jpg" width="830" height="467" alt="Graph goes up"
+                        class="w-100">
+                </div>
+                <div class="col-lg-4">
+                    <div class="main-form" id="main-form">
+                        <div class="main-form-title">Sign-Up For FREE and Start Your Trading Journey TODAY!</div>
+                        <div class="main-form-body">
+                            <form id="formTop" autocomplete="off" method="post">
+                                <div class="form-group field-ti0form-first_name">
+                                    <input type="text" name="first_name" id="first_name" required
+                                        placeholder="First Name">
+                                    <!-- <div data-error-status="inactive" data-for-error="first_name">Your first name is
+                                            too short (at least 2 characters)</div> -->
+                                </div>
+                                <div class="form-group field-ti0form-last_name">
+                                    <input type="text" required name="last_name" id="last_name" placeholder="Last Name">
+                                    <!-- <div data-error-status="inactive" data-for-error="last_name">Your last name is
+                                            too short (at least 2 characters)</div> -->
+                                </div>
+                                <div class="form-group field-ti0form-email email-group">
+                                    <input type="email" name="email" id="email" placeholder="Email Address">
+                                    <!-- <div data-error-status="inactive" data-for-error="email">Please enter your real
+                                            email address -->
+                                </div>
+                                <div class="form-group field-ti0form-phone reg-phone">
+                                    <input type="tel" id="phone1" name="phone1" placeholder="" autocomplete="off"
+                                        required>
+                                    <input type="hidden" id="realPhone" name="realPhone" class="hidden-phone" value>
+                                    <input type="hidden" id="country" name="country" value>
+                                </div>
+
+                                <div class="form-group form-actions">
+                                    <button type="submit" class="submit-button">Get FREE Access</button>
+                                </div>
+                                <div class="form-actions">
+                                    <p class="form-footer">*By leaving your personal details here you allow us to
+                                        share your personal information with third parties providing trading
+                                        services as provided in the privacy</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-60">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-9">
+                    <h2 class="title">What is Online Trading?</h2>
+                    <p><b><i>Online trading is becoming a very popular way to execute buy-and-sell transactions of
+                                cryptocurrencies, assets, and other currencies. It’s been around since 1971, when the
+                                NASDAQ became the first to start online trading.</i></b></p>
+                    <p>As the years passed, there have been several changes to the online trading platforms; there are
+                        now hundreds of different assets you can exchange, markets you can invest in, and platforms that
+                        make the trading process smoother for you.</p>
+                    <p>To make your trading experience easier, the team has gathered as much information as they could
+                        on trading strategies and put it into developing Immediate Edge, a platform now available to all
+                        members! It was designed for people who are looking for a smoother trading experience, whether
+                        they’re beginners or experienced users.</p>
+                    <div class="text-center text-md-left mt-3 mt-md-4 mb-4 mb-md-0">
+                        <a href="#main-form" class="btn-link scroll-top" style="max-width: 250px;">JOIN</a>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img loading="lazy" src="assets/img-1.png" width="369" height="261" alt="Computers">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-60 bg-gray">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 order-2 order-md-1 text-center">
+                    <img loading="lazy" src="assets/img-2.png" width="361" height="246" alt="Bitcoin Graph on a phone">
+                </div>
+                <div class="col-md-9 order-1 order-md-2">
+                    <h2 class="title">How Does Online Trading Work?</h2>
+                    <p><b><i>Online trading has a basic premise, but it’s more complex in execution. In essence, it
+                                involves executing buy/sell orders through the internet. You can trade a wide variety of
+                                assets, such as commodities, bonds, currencies, cryptocurrencies, and more.</i></b></p>
+                    <p>To start trading on the internet, all you need is a computer and a stable internet connection.
+                        After you create your trading account, you can start buying or selling assets whenever you want.
+                    </p>
+                    <p>However, trading isn’t as easy as it seems. This activity involves a lot of risks, planning, and
+                        trial-and-error. When it comes to trading assets online, some of them may be highly volatile.
+                        When you begin trading, you need to involve practicing, studying market data, and preparing new
+                        and improved trading strategies.</p>
+                    <p>With the constant growth of trading over the past few years, modern trading platforms were
+                        created with the intention of making that process even easier. Traditional trading is hard to
+                        master, and not everybody can dedicate the time and effort. Thanks to these new platforms, even
+                        beginners can start trading with a little bit of help.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-60">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-9 order-2 order-md-1">
+                    <h2 class="title">How Does Immediate Edge Work?</h2>
+                    <p><b><i>This is the official Immediate Edge! Its main purpose is to help you trade more smoothly
+                                and fluently. The team understands that getting into trading may not be straightforward,
+                                which is why they’ve created this platform to make it easier for everyone to
+                                understand.</i></b></p>
+                    <p>To use the platform, first you need to clarify your trading preferences and parameters, sharing
+                        them with your broker, so they can help you find potential trading opportunities specifically
+                        catered to you, and send you the right notifications.</p>
+                    <p>There are several advantages to using the platform. However, the best thing about it is that it
+                        can save you a lot of time researching the market and looking for trading opportunities. This
+                        type of traditional trading can be too stressful for beginners, which is why they’ve created a
+                        platform that can help you trade more effectively.</p>
+                    <p>Keep in mind that Immediate Edge can be used by users of every skill level. If you’re a beginner,
+                        you can use the platform to learn the fundamentals of trading and have a more fluent start. And
+                        if you’re an experienced user, you can still use the platform to save time on your trades.</p>
+                    <div class="text-center text-md-left mt-3 mt-md-4 mb-4 mb-md-0">
+                        <a href="#main-form" class="btn-link scroll-top" style="max-width: 350px;">GET STARTED</a>
+                    </div>
+                </div>
+                <div class="col-md-3 order-1 order-md-2 text-center">
+                    <img loading="lazy" src="assets/img-3.png" width="390" height="265" alt="3D Crypto graph">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-60 bg-gray">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center">
+                    <img loading="lazy" src="assets/img-4.png" width="379" height="283" alt="CFD’s graph on I-phone">
+                </div>
+                <div class="col-md-9">
+                    <h2 class="title">How Can Immediate Edge Help You With Your Trading?</h2>
+                    <p><b><i>Whether you’re a beginner, intermediate, or advanced user, there are many ways to get the
+                                most out of Immediate Edge. First, you need to understand how trading platforms can be
+                                more efficient than traditional trading.</i></b></p>
+                    <p>Since online trading became a trend, it was somewhat stressful for most people. This is because
+                        there’s little to no margin of error; the slightest mistake could cost a lot of money, which is
+                        discouraging for newbies. While many people have made peace with the fact that trading is always
+                        going to involve some ups and downs, other people feel like they’re wasting their deposit on
+                        these trades.</p>
+                    <p>As you get more skilled, your trading methods could significantly increase with your ability to
+                        make trades on your own, but there’s no precise method to do it; you have to keep practicing and
+                        studying.</p>
+                    <p>Overall, these features work great for beginners since it takes the stress and frustration out of
+                        the equation, but they’re also good for advanced users who want to save time on their daily
+                        trading.</p>
+                    <div class="text-center text-md-left mt-3 mt-md-4">
+                        <a href="#main-form" class="btn-link scroll-top" style="max-width: 350px;">OPEN FREE ACCOUNT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-60">
+        <div class="container text-center">
+            <h2 class="title">Benefits of Using Immediate Edge</h2>
+            <p class="fs-30 mb-4 mb-md-5">Right now, there are hundreds of trading platforms that you can use, so it may
+                be hard for you to choose one that feels reliable and effective right away. That is why you need to
+                properly understand all the advantages of Immediate Edge, to make a better decision on the best fit for
+                you. <br> Keep in mind that the team is constantly updating Immediate Edge’s features to make it a
+                better experience for you and keep up with trading trends.</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="benefit">
+                        <div class="benefit-title">Easy to Set Up and Use</div>
+                        <div class="benefit-text">
+                            <p>Setting up Immediate Edge doesn’t take much time, and you can do it from anywhere you
+                                want. After you are verified, you gain full access to the platform’s features. If you’re
+                                a beginner, it may take a little more time to figure out how everything works.</p>
+                            <p>The team did their best to make Immediate Edge easy to understand for everyone. They’ve
+                                taken advice from advanced traders worldwide to learn more about how an efficient
+                                trading platform should work. After much research and development, they can safely say
+                                the platform is easily understandable, regardless of how experienced you are, which
+                                makes it so much more accessible.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="benefit">
+                        <div class="benefit-title">All the Money You Make is Entirely Yours</div>
+                        <div class="benefit-text">
+                            <p>Many trading platforms on the internet charge you additional fees for using them. This
+                                means they take a small percentage from each withdrawal you make, leaving you with a
+                                portion of what you earned. While this is not a bad thing, at Immediate Edge they
+                                understand that most users want to keep 100% of their earnings.</p>
+                            <p>All potential earnings you make on the platform are yours; they don’t take any percentage
+                                whatsoever from the withdrawal process, so you don’t have to worry about that. However,
+                                keep in mind that depending on your bank institution, you may have to pay a small amount
+                                to receive your money. It is advisable to contact your bank and ask about withdrawal
+                                fees.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="benefit">
+                        <div class="benefit-title">There Are No Hidden Fees</div>
+                        <div class="benefit-text">
+                            <p>Withdrawal fees are not the only way for trading platforms to get more money from you.
+                                Some of them may ask you to pay a fee for registration, account maintenance, extra
+                                features, etc. </p>
+                            <p>The team at Immediate Edge understands this may be awkward or annoying for most users,
+                                which is why they’ve decided to make the platform completely free for members, from
+                                registration to withdrawal. To become a member, all you have to do is fill out the
+                                registration form and wait for an e-mail confirmation!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="benefit">
+                        <div class="benefit-title">Compatible With Several Devices</div>
+                        <div class="benefit-text">
+                            <p>One of the main things Immediate Edge wanted to address was compatibility. Most
+                                professional traders use a powerful computer to keep track of the latest trading trends
+                                and find good trading opportunities. However, your trading could be more efficient if
+                                you could access your account from anywhere.</p>
+                            <p>Immediate Edge can be used from any device that has a stable internet connection and
+                                browser. This means that you can use your computer or laptop as your “main device” for
+                                trading, but you can still access the platform from your phone or tablet whenever are
+                                away. This can help you keep track of everything, even if you’re not at home.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="benefit">
+                        <div class="benefit-title">You Can Easily Choose the Assets You Want to Trade with Immediate
+                            Edge</div>
+                        <div class="benefit-text">
+                            <p>You can use Immediate Edge to trade any type of asset you feel most comfortable with. Not
+                                every trader wants to buy or sell the same things, so it was important to make sure that
+                                you could use the same platform to carry out any sort of trading.</p>
+                            <p>If you mainly deal with cryptocurrencies, you can use Immediate Edge. And if you want to
+                                start trading a different kind of asset, you can easily do that as well.</p>
+                            <p>Remember that to be successful at trading, you need to stick to a particular trading plan
+                                from time to time; make sure that you’re not constantly changing strategies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4 mt-md-5">
+                <a href="#main-form" class="btn-link scroll-top" style="max-width: 400px;">JOIN THE PLATFORM TODAY</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="how">
+        <div class="container text-center mb-4 mb-md-5">
+            <h2 class="title">How Can You Sign Up for Immediate Edge?</h2>
+            <div class="fs-22 font-weight-bold">Immediate Edge is one of the best ways to get into trading, and the
+                sign-up process is straightforward. You don’t need any previous knowledge about trading to start; all
+                you need is a device with a stable internet connection and browser.</div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="how-item">
+                        <h3 class="how-item-title">Step One – Registration</h3>
+                        <div class="how-item-text">
+                            <p>First, fill out the registration form (check out below). Just put in your name, phone
+                                number, and e-mail address, and you’ll receive a confirmation e-mail with a link. When
+                                you click that link, you’re going to become a member of Immediate Edge, which grants you
+                                full access to the platform for free!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="how-item">
+                        <h3 class="how-item-title">Step Two – Financials</h3>
+                        <div class="how-item-text">
+                            <p>This is an important step in your setup process. Keep in mind that to start trading, you
+                                need to invest a minimum amount of money. If you’re an experienced trader, you already
+                                know that the higher the investment amount, the better. However, it also means the risk
+                                of losing money is higher.</p>
+                            <p>If you’re a beginner, it would be better to invest the recommended minimum amount. This
+                                way, you can take your time to learn your way around the platform without worrying too
+                                much about your investment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="how-item">
+                        <h3 class="how-item-title">Step Three – Trading</h3>
+                        <div class="how-item-text">
+                            <p>The last step is fairly easy to follow, but you need to do it carefully. You have to set
+                                up your trading parameters. You can take as much time as you want, so make sure that you
+                                explore the platform as much as possible. </p>
+                            <p>And once you’re done, just click the START button!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4 mt-md-5">
+                <a href="#main-form" class="btn-link scroll-top" style="max-width: 290px;">GET STARTED</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="faq_section">
+        <div class="container mb-4 mb-md-5" style="max-width: 1120px; text-align: center;">
+            <h2 class="title orange text-center">Frequently Asked Questions</h2>
+            <p class="fs-22 font-weight-bold">If you’re new to trading, it’s normal to have a few questions about how it
+                works. Not investigating enough is a common mistake beginners make, so make sure you understand
+                everything properly.</p>
+            <p class="fs-22 font-weight-bold">Below is a list of the most frequently asked questions, to help you get a
+                clearer idea of how you can use Immediate Edge to improve your trading.</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="faq-item">
+                        <div class="faq-item-title">IS EXPERIENCE ESSENTIAL TO TRADE USING IMMEDIATE EDGE?</div>
+                        <div class="faq-item-content">
+                            <p>You can use Immediate Edge even if you don’t have any previous experience whatsoever! The
+                                platform is designed in a way that allows any user to understand it properly. If you’re
+                                a beginner, it may take you a little longer to set up everything the way you want it.
+                            </p>
+                            <p>However, as you spend more time using the platform, you’re going to get familiarized with
+                                the features, making it easier to set up everything. If you’re an experienced user, you
+                                can still use Immediate Edge to save time on your trades.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-item-title">WHAT TYPE OF ASSETS CAN ONE TRADE?</div>
+                        <div class="faq-item-content">
+                            <p>You can trade any type of asset that you feel comfortable with. The platform works with
+                                cryptocurrencies, bonds, currencies, and more! If you ever want to trade a different
+                                type of asset, you can easily change your settings in a few seconds.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="faq-item">
+                        <div class="faq-item-title">IS IMMEDIATE EDGE FREE?</div>
+                        <div class="faq-item-content">
+                            <p>It is completely free for registered members. No registration or withdrawal fees
+                                required, which means that your money is 100% yours. When you have money in your
+                                account, you can save it, withdraw it, or re-invest it without any extra fees.</p>
+                            <p>The aim is to make the platform accessible for trading enthusiasts and professionals,
+                                which is why everything is as accessible as possible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="last-section">
+        <div class="container text-center" style="max-width: 1000px;">
+            <div class="fs-24 font-weight-bold mb-3 mb-md-4">Trading is all about efficiency and consistency. If you
+                dedicate enough time to it, you’re going to learn newer and better ways to execute your trades. With the
+                help of Immediate Edge, you can do all of these things while saving time, which is great for those with
+                a very busy lifestyle.</div>
+            <div class="fs-24">Just fill out the registration form to start trading with Immediate Edge.</div>
+            <div class="text-center mt-4 mt-md-5">
+                <a href="#main-form" class="btn-link scroll-top" style="max-width: 350px;">JOIN</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row flex-wrap justify-content-between align-items-center">
+                <a href="#main-form" class="scroll-top">
+                    <img loading="lazy" src="assets/logo-footer.png" width="213" height="66" alt="Bitcoin Trader"
+                        class="footer-logo">
+                </a>
+                <!-- <ul class="footer-menu">
+                    <li><a href="terms/index.html">Term</a></li>
+                </ul> -->
+            </div>
+            <div class="risk py-4">
+                <p><b>Important Risk Note:</b></p>
+                <p>Trading can generate notable benefits; however, it also involves a risk of partial/full funds loss
+                    and should be considered by initial investors. Around 70 percent of the investors will lose money.
+                </p>
+                <p><b>#Immediate Edge</b> and any other commercial names used on the site are for commercial purposes
+                    only, and do not refer to any specific company nor specific services providers.</p>
+                <p>The video is for commercial presentation and illustration purposes only, and all participants are
+                    actors.</p>
+                <p>Carefully read the Terms & Conditions and Disclaimer page of the third-party investor platform before
+                    investing. Users must be cognizant of their individual capital gain tax liability in their country
+                    of residence. It is against the law to solicit United States persons to buy and sell commodity
+                    options, even if they are called ‘prediction' contracts unless they are listed for trading and
+                    traded on a CFTC-registered exchange or unless legally exempt.</p>
+                <p>The Financial Conduct Authority (‘FCA’) has issued a policy statement PS20/10, which prohibits the
+                    sale, promotion, and distribution of CFD on Crypto assets. It is prohibiting the dissemination of
+                    marketing materials relating to distribution of CFDs and other financial products based on
+                    Cryptocurrencies and which are addressed to UK residents</p>
+                <p>By leaving your personal details herein you consent and allow us to share your personal information
+                    with third parties providing trading services as provided in the Privacy Policy and Terms &
+                    Conditions.</p>
+                <p>There are several trading options that the trader/user can use – by trading software, using human
+                    brokers, or by making own trades and it's the trader’s sole responsibility to choose and decide what
+                    is the right way for him/her to trade.</p>
+            </div>
+        </div>
+        <div class="text-center py-3 copyright" style="font-size: 15px;">Copyright © 2022 Immediate Edge. All Rights
+            Reserved.</div>
+    </footer>
+    <!-- <div id="openModalLoading" class="modalDialog">
+        <div>
+            <div class="loading-spinner"></div>
+        </div>
+        <div class="loading-text">Connecting you to the best broker for your region...</div>
+    </div> -->
+
+
+    <div class='modal-form' id='modalFailure'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">ou have already registered for this number. If you need a new account, please
+                    register for a different mobile number.</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class='modal-form' id='modalFailureEmail'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">You have already registered with this email. If you need a new account, please
+                    register with a different email.</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class='modal-form' id='modalInvalid'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">You have entered an invalid email. Sign up for a different email.</h5>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="main.cc0be658110cc60eb859.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/utm.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<h1>404 Not Found</h1>
+<ul>
+<li>Code: NoSuchKey</li>
+<li>Message: The specified key does not exist.</li>
+<li>Key: fonts/bitcoin-revolution.ttf</li>
+<li>RequestId: 2AC4539C840A8351</li>
+<li>HostId: GPLO99gavjp4iMCgFbdFMF9quEVIk5ZgL8KMxx1hvISRb2CxlZ4uPjzKKrxhOeOiW5Lz1VBqJdk=</li>
+</ul>
+<hr>
+</body>
+</html>

@@ -1,0 +1,588 @@
+aPayment[strAddress] --==> cnr sentrum and oak ave
+aPayment[strCardHolder] --==> MS LT SHARARA
+aPayment[strCity] --==> Johannesburg
+aPayment[strEmail] --==> lincesharara@gmail.com
+aPayment[strPhone] --==> +27763120630
+aPayment[strPostcode] --==> 2191
+aPayment[strState] --==> Gauteng
+address1 --==> 30 Cross street
+changepasswordemail --==> praisewealthy@gmail.com
+city --==> Johannesburg
+config_hostname --==> sk1.ebllockinc.com
+country --==> South Africa
+customerlogin --==> Razzy
+demo.email_address --==> praisewealthy@gmail.com
+demo_email --==> praisewealthy@gmail.com
+domain --==> sk
+email --==> praisewealthy@gmail.com
+email2 --==> praisewealthy@gmail.com
+extractfilepath --==> public_html
+firstName --==> PRAISEGOD
+firstName --==> Praise
+first_name --==> Praise
+firstname --==> Praise
+full_name --==> Praise Wealth
+guardian_relation --==> Father
+iVerifyText --==> 2768786
+identifier --==> lincesharara
+identifier --==> praisegodchaps
+identifier --==> praisewealthy
+identifier --==> razielbarakiel
+keywords --==> invalid or unregistered app, please contact to smart school admin
+keywords --==> it says
+lastName --==>  CHAPARIKA
+lastName --==>  Chaparika
+last_name --==> Wealth
+lastname --==> Wealth
+location --==> Johannesburg
+login --==> praisewealthy@gmail.com
+name --==> Praise Wealth
+postcode --==> 2194
+profession --==> Kubernetes DevOps Engineer
+q --==> AZ-400
+q --==> ebllockglobal.co.zw
+q --==> red dark mode dashboard
+resetPswEmailImgCodeInput7 --==> AT4tu
+s --==>  Devops
+s --==> Azure Devops
+s --==> IT
+s --==> TECH
+s --==> software
+search --==> AZ-104
+search --==> Data Structures & Algorithms – JavaScript
+search --==> Deploy MEAN Stack App on Azure Cloud with CICD Pipeline
+search --==> Deploy any MERN Stack App on Azure Cloud using CICD Pipeline
+search --==> EXAM TOPICS
+search --==> Learn Azure DevOps CI/CD pipelines
+search --==> Practice Tests | AZ-104: Azure Administrator 
+search --==> Practice Tests | AZ-104: Azure Administrator Exam 
+search --==> Practice Tests | AZ-104: Azure Administrator Exam 2022 
+search --==> Step by Step deployment of any MERN Stack App on Azure Cloud with CICD Pipeline using AzureDevOps & Other Cloud Services
+search --==> az-400
+search --==> az-400 questions
+search --==> dumps
+search --==> exam collection
+search --==> practical kubernetes
+search --==> ranjan pandey
+search_value --==> az-104
+sms_verify --==> 4945
+state --==> Gauteng
+story --==> smart school android app
+subdomainsld --==> sk
+task --==> Task1
+task --==> Task2
+task --==> Task3
+taskList --==> Pray
+taskList --==> Read
+taskList --==> School
+taskList --==> Shopping
+taskList --==> bath
+term --==> Azure
+term --==> DevOps
+txt_check --==> 9067
+txtmemory_limit --==> 512M
+user --==> praisewealthy@gmail.com
+user[login] --==> Praise01
+user[login] --==> Razzy1518
+username --==> D291176738
+username --==> Praise01
+username --==> bothwellsithole
+username --==> jason@gmail.com
+username --==> parent1
+username --==> parent9
+username --==> praisewealthy@gmail.com
+username --==> std1
+username --==> std2
+username --==> superadmin@gmail.com
+username --==> tech2creative22@gmail.com
+username --==> william@gmail.com
+Address.City --==> Johannesburg
+Company --==> Tech Lead inc
+CompanyEmail --==> praisegodchaps@gmail.com
+ConfirmEmail --==> praisegodchaps@gmail.com
+Email --==> praisegodchaps@gmail.com
+FirstName --==> PRAISEGOD
+LastName --==> CHAPARIKA
+Phone --==>  +27672728597
+Phone --==> +27672728597
+Registrant.Dossier.Company --==> NA
+Registrant.Dossier.ContactMethods[Email] --==> praisegodchaps@gmail.com
+Registrant.Dossier.ContactMethods[Phone] --==> +27672728597
+Registrant.Dossier.FirstName --==> Praise
+Registrant.Dossier.LastName --==> Chaparika
+Registrant.Dossier.Title --==> DevOps Engineer
+SearchProgram --==> micr
+SenderID --==> 141378836214
+SenderID --==> 331968699607
+ServerKey --==> AAAAIOrV1vY:APA91bHYrNYMOWC4edPphtr-tdFuXwxoD29VWShWSDjetnUdMQLNvcpO17Vo2wQZeruBmnhoN1G_Eni98Y2B09BPG9C9dijNC93cGCtEIwiO2xbaOb6O5TcnAyKIqtIIbv4MYy7mtpra
+ServerKey --==> AAAATUrgXNc:APA91bGR5E7GIHa-74X5ruupAyHq0BMWtcf29481sa5mil0TJW7UoB7fyMaHys9xpbpAFGo3dBCytvfxXvyIVG9TuCjSH_sXawZN0b5T_8Jr2DZBoVS-qwnGzj0bsXa3kdgPh-hnaAIq
+account_screening_profile[address1] --==> 366 Pretoria Ave
+account_screening_profile[city] --==> Johanneburg
+account_screening_profile[first_name] --==> Praise
+account_screening_profile[last_name] --==> Chaparika
+additionaldata --==> 2194
+admin[email] --==> praisewealthy.com
+admin[email] --==> praisewealthy@gmail.com
+admin[login] --==> admin
+admin[login] --==> admin1
+admin[login] --==> root
+billingAddressEmail --==> lincesharara@gmail.com
+birthdate --==> 16/12/1991
+bundle_id --==> overview
+call-number --==> +27 672728597
+callee-name --==> Bailey
+company --==> NA
+companyName --==> Ebllock Global
+company_name --==> Azure Devops
+customerName --==> PRAISEGOD  CHAPARIKA
+dbname --==> admin_eb
+dbname --==> admin_sk
+dbname --==> admin_sk1
+dbname --==> admin_sk3
+dcq_question_subjective_1 --==> PraiseGod Chaparika
+description --==> Academic Excellence
+description --==> Football
+display-name --==> PRAISEGOD CHAPARIKA
+domain --==> https://sk.ebllockinc.com
+domainName[name] --==> sk
+domainName[name] --==> sk1
+domainName[name] --==> sk2
+domainName[name] --==> sk3
+email --==> praisegodchaps@gmail.com
+email --==> praisewealthy@gmail.com
+email --==> tech
+end_time_at --==> 4PM
+exec --==>  /usr/bin/php -d memory_limit=512M -f /var/www/vhosts/ebllockinc.com/sk1.ebllockinc.com/cron.php >> /var/www/vhosts/ebllockinc.com/sk1.ebllockinc.com/var/log/cron.log 2>&1
+exec --==> * * * * * /usr/bin/php -d memory_limit=512M -f /var/www/vhosts/ebllockinc.com/sk1.ebllockinc.com/cron.php >> /var/www/vhosts/ebllockinc.com/sk1.ebllockinc.com/var/log/cron.log 2>&1
+facet-search-input --==> AZ-400
+facet-search-input --==> az-104
+firstName --==> Lincemore
+firstName --==> PRAISEGOD
+host --==> localhost
+hostingSettings[root] --==> sk.ebllockinc.com
+hostingSettings[root] --==> sk1.ebllockinc.com
+hostingSettings[root] --==> sk2.ebllockinc.com
+hostingSettings[root] --==> sk3.ebllockinc.com
+identifier --==> praisegodchaps@gmail.com
+key --==> TOYOTA C-HR 
+key --==> Toyota C-HR Wine
+key --==> toyota c-hr
+lastName --==> CHAPARIKA
+lastName --==> Sharara
+log --==> praisewealthy@gmail.com
+login --==> praisegodchaps@gmail.com
+login --==> root
+login_email --==> praisegodchaps@gmail.com
+login_name --==> root
+main_domain --==>  sk.ebllockinc.com
+main_domain --==>  sk3.ebllockinc.com
+main_domain --==> ebllockinc.com
+main_domain --==> sk1.ebllockinc.com
+main_domain --==> sk3.ebllockinc.com
+max --==> 12000
+min --==> 5000
+min --==> 7000
+name --==> Academic Excellence
+name --==> PRAISEGOD
+name --==> Praisegod
+name --==> Sports
+name --==> Sports activities
+name --==> Xul App
+name --==> Xul App2
+name --==> Xul App3
+ncf_email_field --==> praisewealthy@gmail.com
+ncf_name_field --==> Praise
+package_name --==> overview
+phoneNumber --==> 27764686533
+platform_name --==> Xul App
+position --==> Azure DevOps Engineer
+query --==> az-400
+resolving_input --==> praisegodchaps@gmail.com
+s --==> header
+s --==> lethal weapon
+s --==> school
+s --==> software
+schoolName --==> Sakubva High School
+start_at --==> 2022-07-22 
+start_time_at --==> 11AM
+subject --==> Mathematics,  Physics, Chemistry, English & Communication Skills
+subtitle --==> Football
+surname --==> CHAPARIKA
+surname --==> Chaparika
+term --==> Azure 
+term --==> Azure kubernetes
+term --==> Uber
+term --==> Uber 
+term --==> uber eats
+text --==> flower
+text --==> fres
+txtRegistrationCountryDropdown --==> South Africa
+userLoginId --==> lincemoresharara@gmail.com
+userLoginId --==> lincesharara@gmail.com
+username --==> 0672728597
+username --==> admin_eb01
+username --==> admin_sk01
+username --==> admin_sk03
+username --==> admin_sk101
+username --==> maria@gmail.com
+username --==> parent1
+username --==> praisegodchaps@gmail.com
+username --==> razielbarakiel9@gmail.com
+username --==> std1
+username --==> superadmin@gmail.com
+username --==> tech2creative22@gmail.com
+usernameOrEmail --==> praisewealthy@gmail.com
+wu_sendmoneymini_amount --==> 5000
+your-email --==> praisewealthy@gmail.com
+zOPprogressiveprofilingjtitle --==> Software Developer
+zOPprogressiveprofilingpcode --==> 2191
+INPUT-FIELD-STRING0 --==> npm install
+INPUT-FIELD-STRING1 --==> npm install
+INPUT-FIELD-STRING10 --==> Azure App Service Deploy: 
+INPUT-FIELD-STRING15 --==> ng build
+INPUT-FIELD-STRING24 --==> npm install
+INPUT-FIELD-STRING3 --==> Publish Artifact: drop
+INPUT-FIELD-STRING3 --==> npm install
+INPUT-FIELD-STRING4 --==> Publish Artifact: drop
+INPUT-FIELD-STRING4 --==> ng build
+INPUT-FIELD-STRING9 --==> npm install
+TextField29 --==> storagepgee
+TextField29 --==> storagepgee22
+__azc-numericTextBox1 --==> 15
+__azc-textBox-tsx1 --==> expressapimeanstack
+__azc-textBox-tsx1 --==> meanstack22
+__azc-textBox-tsx1 --==> pegeeVM22
+__azc-textBox-tsx1 --==> pgeelogs22
+__azc-textBox-tsx2 --==> pgeeVM22
+__azc-textBox-tsx3 --==> PGEEGW22
+__azc-textBox-tsx4 --==> pgee01
+__azc-textBox-tsx4 --==> pgeeAKS
+__azc-textBox-tsx4 --==> pgeerecoveryvault22
+__azc-textBox-tsx42 --==> peegeewebapp22
+__azc-textBox-tsx6 --==> Budgetpgee
+__azc-textBox14 --==> 1
+admin_email --==> tech2creative22@gmail.com
+database --==> admin_xul
+editable-title-textbox-id --==> TaskManager-BE-API-CD
+editable-title-textbox-id --==> TaskManager-BE-API-CI
+editable-title-textbox-id --==> TaskManager-FE-CI
+email --==> 0763120630
+email --==> anesuchaps21@gmail.com
+email --==> lincesharara@gmail.com
+email --==> tech2creative22@gmail.com
+environment-name-textbox --==> Deployment
+fbc_d --==> platform wide app2
+hostname --==> localhost
+iVerifyText --==> 6656621
+login --==> praisegodchaps@gmail.com
+name --==> Anesu
+phoneNumberField --==> 06 727 28597
+pidlInput_accountHolderName --==> MS LT SHARARA
+pidlInput_address_line1 --==> 56 Cross Street
+pidlInput_city --==> Johannesburg
+pidlInput_postal_code --==> 2194
+username --==> admin_xul01
+username --==> tech2creative22@gmail.com
+verifyCode --==> 330388
+871471_218588pi_871471_218588 --==> Praise
+871471_218590pi_871471_218590 --==> Wealth
+871471_218592pi_871471_218592 --==> praisewealthy@gmail.com
+Company --==> G7 Technologies
+Email --==> praisegodchaps@gmail.com
+FirstName --==> PraiseGod
+LastName --==> Chaparika
+Phone --==>  +27672728597
+code --==> 9238
+creative --==> MostRead Toyota Rav4
+demo.email_address --==> anesuchaps21@gmail.com
+dob --==> 03/01/2007
+dob --==> 03/14/2007
+dob --==> 08/22/2006
+email --==> client@client.com
+email --==> client@client.com 
+facet-search-input --==> AZ-104
+father_name --==> Matthew  Scores
+father_occupation --==> Doctor
+father_phone --==> 02323232323
+guardian_name --==> Lesley Cole
+guardian_name --==> Matthew  Scores
+guardian_occupation --==> Doctor
+guardian_occupation --==> Professor
+guardian_phone --==> 02323232323
+guardian_phone --==> 04444444444
+guardian_relation --==> Father
+identifier --==> anesuchaps21@gmail.com
+image --==> http://localhost/school/uploads/gallery/media/FC3.jpg
+image --==> http://localhost/school/uploads/gallery/media/ac1.jpg
+image --==> http://localhost/school/uploads/gallery/media/act3.jpg
+key --==> honda fit
+key --==> subaru forester
+key --==> toyota harrier
+lastname --==> Surname Part of Name
+login --==> tech2@creative22@gmail.com
+login2 --==> tech2creative22@gmail.com
+login_name --==> root
+main_domain --==> demope.siberiancms.com
+mother_name --==> Bailey Scores
+mother_occupation --==> Lawyer
+mother_phone --==> 03434343434
+owndomain --==> ebllockinc.com
+registersld --==> ebllockglobal
+search --==> exam collection
+search --==> vce exam simulator
+search-field --==> Azure
+search-field --==> Azure Admin
+search-field --==> Azure Adminstrator
+source --==> NEWS24_MR_LA
+text --==> flowers
+username --==> 	paulsteves@gmail.com
+username --==> parent1
+username --==> parent3
+username --==> std1
+username --==> std3
+username --==> tech2creative22@gmail.com
+PasswordText --==> @Viclove22
+addLine1 --==> Johannesburg, Southafrica
+address --==> 17 Leslie Avenue
+address1 --==> 17 Leslie Avenue
+billingDetailsForm_address --==> 17 Leslie Avenue
+billingDetailsForm_city --==> Johannesburg
+billingDetailsForm_email --==> tech2creative22@gmail.com
+billingDetailsForm_fullName --==> James David
+billingDetailsForm_state --==> Gauteng
+billingDetailsForm_zipCode --==> 2191
+billing_address_1 --==> cnr sentrum and oak avenue
+billing_city --==> Johannesburg
+billing_email --==> tech2creative22@gmail.com
+billing_first_name --==> Lince
+billing_last_name --==> Sharara
+billing_phone --==> 0763120630
+billing_postcode --==> 2191
+cardnumber-expiry --==> 08 / 27
+city --==> Johannesburg
+code --==> 7667
+company --==> Microsoft AZ-104
+company --==> Microsoft AZ-400
+creditCardName --==> James David
+demo.email_address --==> tech2creative22@gmail.com
+demo.firstname --==> James
+demo.lastname --==> David
+demo.phone --==> 0763814221
+dob --==> 03/01/2007
+dob --==> 06/12/2007
+dob --==> 07/13/2006
+dob --==> 08/01/2022
+dob --==> 11/15/2006
+domain --==> ebllockglobal
+domain --==> ebllockglobal.co.za
+domain --==> ebllockglobal.co.zw
+domain --==> matimba
+email --==>  client@client.com
+email --==> client@client.com
+email --==> praisegodchaps@gmail.com
+email --==> tech2creative22@gmail.com
+emailAddress --==> tech2creative22@gmail.com
+exp-date --==> 11 / 29
+extractfilepath --==> public_html/
+facet-search-input --==> az-104
+field_creditCardHolderName --==> Adobe Card
+firstName --==> James
+firstName --==> PRAISEGOD
+firstNameField --==> James
+fullname --==> James David
+guardian_name --==> Eric Riggs
+guardian_name --==> George Messi
+guardian_name --==> Jack Chesa
+guardian_name --==> James David
+guardian_occupation --==>  Civil Engineer 
+guardian_occupation --==>  Doctor
+guardian_occupation --==> Electrical Engineer 
+guardian_occupation --==> Football Coach
+guardian_phone --==> 0222222222
+guardian_phone --==> 022222222222
+guardian_phone --==> 07543222121
+guardian_relation --==> Father
+handle --==> tech2creative22-gmai
+lastName --==> CHAPARIKA
+lastName --==> David
+lastNameField --==> David
+login2 --==> tech2creative22@gmail.com
+name --==> Jaden David
+name --==> James
+name --==> James 
+name --==> James David
+nav-domain-field --==> ebllockglobal.co.zw
+new_credit_card[expiry] --==> 11/24
+owndomainsld --==> ebllockinc
+owndomaintld --==> .com
+phone --==> +27 76 312 0630 / +27 67 272 8579
+phone --==> +27 76 468 6533 / +27 67 272 8579
+phoneNumberField --==> 07 646 86533
+phonenumber --==> 0763814221
+pidlInput_accountHolderName --==> JAMES DAVID
+pidlInput_accountToken --==> 4007382050936
+pidlInput_address_line1 --==> 17 Leslie Avenue
+pidlInput_city --==> Johannesburg
+pidlInput_postal_code --==> 2191
+pidlInput_region --==> Gauteng
+postalCode --==> 2191
+postcode --==> 2191
+profession --==>  DevOps Engineer
+q --==> az-104
+q --==> az-400
+q --==> ebllock.co.zw
+q --==> microsoft
+query --==> Azure SRE
+query --==> Site  reliability Engineering
+query --==> avondale
+query --==> deploy mernstack
+registersld --==> ebllockglobal
+registersld --==> ebllocki
+registersld --==> techlead
+s --==> Richard Branson
+s --==> deploy mern stack
+s --==> deploy mern stack in azure
+search --==> Deploy MEAN Stack App on Azure Cloud with CICD Pipeline
+search --==> deploying mean cicd
+search --==> testdumbs
+searchField --==> azure devops
+search_contents --==> ebllockglobal.co.za
+search_contents --==> ebllockglobal.com
+searchterm --==> gd
+signup-form[details][login] --==> tech2creative22@gmail.com
+signup-form[details][profile_name] --==> tech
+sld --==> ebllock.co.zw
+state --==> Gauteng
+text --==> Azure
+typeahead-input-for-company --==> G7inc
+typeahead-input-for-title --==> DevOps Engineer
+upm-dac-search --==> ebllock.co.zw
+user[email] --==> tech2creative22@gmail.com
+user[username] --==> jamesdavid106
+username --==> parent1
+username --==> parent3
+username --==> superadmin@gmail.com
+username --==> tech2creative22@gmail.com
+username --==> william@gmail.com
+usr_email --==> tech2creative22@gmail.com
+usr_login --==> James David
+TextField12 --==> J4DVJ
+TextField12 --==> RIDE
+TextField12 --==> VRVYJKVM
+Username --==> PraisegodCH
+WaybillNo --==> NLYWADBK04202
+__azc-textBox-tsx2 --==> Contoso Organization
+__azc-textBox-tsx3 --==> contosoorg1822
+__azc-textBox-tsx8 --==> Contoso Organization
+__azc-textBox-tsx9 --==> contosoorg18222
+accountHolderName --==> MS
+accountHolderName --==> MS LT SHARARA
+address1 --==> 30 Cross street
+addressLine --==> 17 Leslie Avenue Douglasdale Ext 44, 2191 Johannesburg
+address_line1 --==> CNR SENTRUM & OAK AVE
+changepasswordemail --==> praisewealthy@gmail.com
+city --==> Johannesburg
+config_hostname --==> sk1.ebllockinc.com
+country --==> South Africa
+customerlogin --==> Razzy
+demo.email_address --==> praisewealthy@gmail.com
+demo_email --==> praisewealthy@gmail.com
+domain --==> sk
+email --==> praisewealthy@gmail.com
+email-input-field --==> tech2creative22@gmail.com
+email2 --==> praisewealthy@gmail.com
+expiryMonth --==> 11
+expiryYear --==> 29
+extractfilepath --==> public_html
+field_creditCardHolderName --==> JAMES DAVID
+first-name --==> JAMES
+firstName --==> Javid
+firstName --==> PRAISEGOD
+firstName --==> Praise
+first_name --==> Praise
+firstname --==> Praise
+full_name --==> Praise Wealth
+guardian_relation --==> Father
+iVerifyText --==> 2768786
+identifier --==> lincesharara
+identifier --==> praisegodchaps
+identifier --==> praisewealthy
+identifier --==> razielbarakiel
+keywords --==> invalid or unregistered app, please contact to smart school admin
+keywords --==> it says
+last-name --==> DAVID
+lastName --==>  CHAPARIKA
+lastName --==>  Chaparika
+lastName --==> David
+last_name --==> Wealth
+lastname --==> Wealth
+location --==> Johannesburg
+login --==> praisewealthy@gmail.com
+name --==> Praise Wealth
+new_db --==> admin_xul
+pma_username --==> root
+postcode --==> 2194
+profession --==> Kubernetes DevOps Engineer
+q --==> AZ-400
+q --==> ebllockglobal.co.zw
+q --==> red dark mode dashboard
+query --==> Ranjan pandey
+resetPswEmailImgCodeInput7 --==> AT4tu
+s --==>  Devops
+s --==> Azure Devops
+s --==> Deploy any MERN Stack App on Azure Cloud using CICD Pipeline
+s --==> IT
+s --==> TECH
+s --==> az-104 
+s --==> software
+search --==> AZ-104
+search --==> Data Structures & Algorithms – JavaScript
+search --==> Deploy MEAN Stack App on Azure Cloud with CICD Pipeline
+search --==> Deploy any MERN Stack App on Azure Cloud using CICD Pipeline
+search --==> EXAM TOPICS
+search --==> Learn Azure DevOps CI/CD pipelines
+search --==> Practice Tests | AZ-104: Azure Administrator 
+search --==> Practice Tests | AZ-104: Azure Administrator Exam 
+search --==> Practice Tests | AZ-104: Azure Administrator Exam 2022 
+search --==> Step by Step deployment of any MERN Stack App on Azure Cloud with CICD Pipeline using AzureDevOps & Other Cloud Services
+search --==> az-400
+search --==> az-400 questions
+search --==> dumps
+search --==> exam collection
+search --==> practical kubernetes
+search --==> ranjan pandey
+search_value --==> az-104
+sms_verify --==> 4945
+state --==> Gauteng
+story --==> smart school android app
+subdomainsld --==> sk
+task --==> Task1
+task --==> Task2
+task --==> Task3
+taskList --==> Pray
+taskList --==> Read
+taskList --==> School
+taskList --==> Shopping
+taskList --==> bath
+term --==> Azure
+term --==> DevOps
+txtTOAAEmail --==> praisegod.chaparika@falcorp.co.za
+txt_check --==> 9067
+txtmemory_limit --==> 512M
+user --==> praisewealthy@gmail.com
+userLoginId --==> lincesharara@gmail.com
+user[login] --==> Praise01
+user[login] --==> Razzy1518
+username --==> D291176738
+username --==> Praise01
+username --==> bothwellsithole
+username --==> jason@gmail.com
+username --==> parent1
+username --==> parent9
+username --==> praise
+username --==> praisewealthy@gmail.com
+username --==> std1
+username --==> std2
+username --==> superadmin@gmail.com
+username --==> tech2creative22@gmail.com
+username --==> william@gmail.com

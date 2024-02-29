@@ -1,0 +1,406 @@
+.fourth-section .form-group,
+.modal-form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group.phone label {
+    top: 0px !important;
+    left: 20px !important;
+    font-size: 14px !important;
+    background: rgb(242 242 242 / 70%) !important;
+    padding: 0 5px !important;
+    color: #666 !important;
+}
+
+.fourth-section input,
+.modal-form input {
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    background: rgb(250, 250, 250);
+    /* border: 2px solid rgb(235, 235, 235); */
+    gap: 4px;
+    display: flex;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 10px;
+    padding: 12px 16px;
+    box-shadow: 1px 2px 2px 2px lightgrey;
+}
+
+.fourth-section input:focus,
+.modal-form input:focus {
+    outline: none;
+    background: rgb(250, 250, 250);
+}
+
+.fourth-section label,
+.modal-form label {
+    /* position: absolute;
+    top: 0px;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 15px;
+    background: #fafafa;
+    padding: 0 5px;
+    transition: all 0.3s ease;
+    pointer-events: none; */
+
+    position: absolute;
+    top: 20px;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 15px;
+    background: #fafafa;
+    padding: 0 5px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* .fourth-section input:focus+label,
+.modal-form input:focus+label,
+.fourth-section input:not(:placeholder-shown)+label,
+.modal-form input:not(:placeholder-shown)+label {
+    top: 0px;
+    left: 20px;
+    font-size: 14px;
+    background: rgb(242 242 242 / 70%);
+    padding: 0 5px;
+    color: #666;
+} */
+
+.fourth-section .error,
+.modal-form .error {
+    position: absolute;
+    bottom: -9px;
+    left: 0px;
+    padding: 1px 6px;
+    font-size: 12px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #fff;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.fourth-section .error::before,
+.modal-form .error::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    border: 5px solid transparent;
+    border-bottom-color: #ff0000;
+}
+
+.fourth-section .error.active,
+.modal-form .error.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* .fourth-section button[type="submit"],
+.modal-form button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f14635;
+    color: #fff;
+    cursor: pointer;
+} */
+
+/* Стили для модального окна */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3000;
+    overflow: hidden;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 32px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+    margin: 0 10px;
+}
+
+.modal-content p {
+    line-height: 140%;
+    margin: 10px 0 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #777777;
+}
+
+.modal-close:hover {
+    color: #333333;
+}
+
+.modal-close::before,
+.modal-close::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background-color: #777777;
+}
+
+.modal-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+/* ///////////////////////// */
+/* /////// PRELOADER /////// */
+/* ///////////////////////// */
+#loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(168 168 168 / 70%);
+    z-index: 4000;
+}
+
+#loader img {
+    position: absolute;
+    width: 130px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Modal Form */
+.modal-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    overflow: hidden;
+}
+
+.modal-form_content {
+    background-color: rgb(242, 242, 242);
+    padding: 36px 16px 4px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+    margin: 0 10px;
+}
+
+.modal-form .modal-close {
+    top: 5px;
+    right: 5px;
+}
+
+.modal-form .modal-close::before,
+.modal-form .modal-close::after {
+    width: 22px;
+}
+
+.button .icon:first-child:last-child {
+    margin-left: -0.375em;
+    margin-right: -0.375em;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+button.is-blicked {
+    overflow: hidden;
+    position: relative;
+}
+
+.button.is-blicked:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, .1) 10%, hsla(0, 0%, 100%, .2) 20%, hsla(0, 0%, 100%, .6));
+    width: 20px;
+    transform: skewX(-45deg);
+    left: -20%;
+    transition: all .6s ease;
+    animation-name: blick;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blick {
+    0% {
+        left: -20%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Стили для модального окна */
+.universal-modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    z-index: 3000 !important;
+    overflow: hidden !important;
+}
+
+.universal-modal-content {
+    background-color: #ffffff !important;
+    padding: 32px 24px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    text-align: center !important;
+    max-width: 400px !important;
+    position: relative !important;
+    margin: 0 10px !important;
+    border: none !important;
+}
+
+.universal-modal-content p {
+    line-height: 140% !important;
+    margin: 10px 0 0 !important;
+}
+
+.universal-modal-close {
+    position: absolute !important;
+    top: 5px !important;
+    right: 5px !important;
+    cursor: pointer !important;
+    width: 30px !important;
+    height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 24px !important;
+    color: #777777 !important;
+}
+
+.universal-modal-close:hover {
+    color: #333333 !important;
+}
+
+.universal-modal-close::before,
+.universal-modal-close::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 16px !important;
+    height: 2px !important;
+    background-color: #777777 !important;
+}
+
+.universal-modal-close::before {
+    transform: rotate(45deg) !important;
+}
+
+.universal-modal-close::after {
+    transform: rotate(-45deg) !important;
+}
+
+.universal-modal-open {
+    overflow: hidden !important;
+}
+
+/* Modal Form */
+/* .modal-form {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    z-index: 2000 !important;
+    overflow: hidden !important;
+}
+
+.modal-form_content {
+    background-color: rgb(242, 242, 242) !important;
+    padding: 70px 16px 32px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    text-align: center !important;
+    max-width: 400px !important;
+    position: relative !important;
+    margin: 0 10px !important;
+} */
+
+.modal-form .universal-modal-close {
+    top: 10px !important;
+    right: 10px !important;
+}
+
+.modal-form .universal-modal-close::before,
+.modal-form .universal-modal-close::after {
+    width: 22px !important;
+}

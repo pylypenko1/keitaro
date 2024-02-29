@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>TonCoin</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/intlTelInput.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+
+  <!-- JS adapter -->
+  <script type="application/javascript">
+    function getCookie(name) {
+      var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+      return v ? v[2] : null;
+    }
+
+    function setCookie(name, value, days) {
+      var d = new Date();
+      d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+      document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+    }
+
+    function getSubId() {
+      var params = new URLSearchParams(document.location.search.substr(1));
+      if (!'{subid}'.match('{')) {
+        return '{subid}';
+      }
+      var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+      if (clientSubid && !clientSubid.match('>')) {
+        return clientSubid;
+      }
+      if (params.get('_subid')) {
+        return params.get('_subid');
+      }
+      if (params.get('subid')) {
+        return params.get('subid');
+      }
+      if (getCookie('subid')) {
+        return getCookie('subid');
+      }
+    }
+
+    function getToken() {
+      var params = new URLSearchParams(document.location.search.substr(1));
+      if (!'{token}'.match('{')) {
+        return '{token}';
+      }
+      var clientToken = '<?php echo isset($client) ? $client->getToken() : "" ?>';
+      if (clientToken && !clientToken.match('>')) {
+        return clientToken;
+      }
+      if (params.get('_token')) {
+        return params.get('_token');
+      }
+      if (params.get('token')) {
+        return params.get('token');
+      }
+      if (getCookie('token')) {
+        return getCookie('token');
+      }
+      return null;
+    }
+
+    if (typeof URLSearchParams === 'function') {
+      document.addEventListener('DOMContentLoaded', function (event) {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        var subid = getSubId();
+        var token = getToken();
+
+        params.set('_token', token);
+        setCookie('token', token);
+        setCookie('subid', subid);
+
+        // Adds params as hidden inputs to the forms
+        document.querySelectorAll('form').forEach(function (form) {
+          params.forEach(function (v, k) {
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = k;
+            input.value = v;
+
+            form.append(input);
+          });
+        });
+      });
+    }
+  </script>
+  <!-- End JS adapter -->
+</head>
+
+<body data-target="#mainNavbar" class="">
+  <section id="heroSection">
+    <div class="container">
+      <div class="heroRow">
+        <div class="logo-container">
+          <img class="img-responsive heroLogo lazyload" alt="TonCoin" src="./images/logo.png" />
+          <span class="logo-text">TonCoin</span>
+        </div>
+      </div>
+      <div class="heroRow">
+        <h1 class="heroHeadline">
+          ЗАПУСТИТЕ ВАШ ЗАРАБОТОК В РЕЖИМЕ АВТО-ПИЛОТА С ПОМОЩЬЮ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА И
+          УНИКАЛЬНЫХ ТЕХНОЛОГИЙ
+        </h1>
+      </div>
+      <div class="row hero-block">
+        <div class="hero-video">
+          <div id="block" style="
+                text-align: center;
+                color: #fff;
+                margin: 10px 0 20px;
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 1.35;
+              ">
+            Присоединяйтесь к революции в инвестициях и трейдинге с использованием искусственного
+            интеллекта и позвольте GPT Trading взять ваше финансовое будущее в свои руки уже
+            сегодня
+          </div>
+        </div>
+        <div class="hero-form">
+          <div class="contactForm top_form">
+            <form method="POST" id="leadform" class="register-form contact_form content_inner flex">
+              <h3>ПОДАЙТЕ ЗАЯВКУ, ЧТОБЫ ПОЛУЧИТЬ ДОСТУП К ПЛАТФОРМЕ</h3>
+              <div class="input_group input_name shadow">
+                <input type="text" placeholder="Имя" class="form-control required form-input" name="first_name"
+                  id="first_name" required autocomplete="off" />
+              </div>
+              <div class="input_group input_last_name shadow">
+                <input type="text" placeholder="Фамилия" class="form-control required form-input" name="last_name"
+                  id="last_name" required autocomplete="off" />
+              </div>
+              <div class="input_group input_email shadow">
+                <input type="email" placeholder="Email" class="form-control required" name="email" id="email" required
+                  autocomplete="off" />
+              </div>
+              <div class="input_group intl-tel-input shadow">
+                <input type="tel" id="phone1" name="phone1" placeholder="" autocomplete="off" required=""
+                  class="form-control" />
+                <input type="hidden" id="realPhone" name="realPhone" class="hidden-phone" value="" />
+                <input type="hidden" id="country" name="country" value="" />
+              </div>
+              <div class="input_group">
+                <button type="submit" class="btn btn-submit btn-get-robot text-uppercase redBtn">
+                  <span>Начать зарабатывать</span>
+                </button>
+              </div>
+            </form>
+
+            <style>
+              #leadform h3,
+              .form-title {
+                font-size: 18px;
+                margin: 15px 0;
+                color: #fff;
+              }
+
+              input.form-control {
+                width: 100%;
+                margin-bottom: 5px;
+                padding: 10px;
+                border-radius: 6px;
+                border: 1px solid gray;
+              }
+
+              button.redBtn {
+                text-align: center;
+                width: 100%;
+                display: block;
+                background: #e62626;
+                color: white;
+                border: 0;
+                padding: 15px;
+                border-radius: 7px;
+                font-weight: 700;
+                cursor: pointer;
+                text-transform: uppercase;
+              }
+
+              .info {
+                background-color: #003f35;
+              }
+
+              .info__title {
+                color: #05f6b7;
+                font-size: 1.4em;
+                line-height: 1.3;
+                text-align: center;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+              }
+
+              .info__text {
+                text-align: center;
+                color: #fff;
+                margin: 10px 0 20px;
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 1.35;
+              }
+
+              .info__btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                text-align: center;
+                width: 200px;
+                background: linear-gradient(to bottom, #02e0a7 20%, #000000 100%);
+                color: white;
+                border: 0;
+                padding: 15px;
+                border-radius: 7px;
+                font-weight: 700;
+                cursor: pointer;
+                text-transform: uppercase;
+              }
+
+              #heroSuccess {
+                background-color: #003f35;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="info">
+    <div class="container">
+      <div class="info__inner">
+        <h2 class="info__title">Зарегистрируйтесь и начните зарабатывать прямо сейчас!</h2>
+        <div class="info__text">
+          Благодаря новой технологии Toncoin вы можете начать зарабатывать сразу после регистрации. Вы даже получите
+          экспертный совет от финансового специалиста, который объяснит, как работает приложение, и как правильно
+          распорядиться своими инвестициями, чтобы уже через полгода выйти на доход более 1 000 000 тенге в месяц.
+          Инвестируя всего 70 000 тенге.
+        </div>
+        <div class="info__text">
+          Невероятное программное обеспечение Toncoin также делает всю работу за вас, поэтому вам не нужно ничего
+          изучать, лишь следовать инструкциям. Софт подключен к магистрали финансовых рынков и зарабатывают деньги
+          каждый раз, когда совершается очередная транзакция. Эта передовая технология меняет жизнь людей. Toncoin – ваш
+          билет в мир инвестиций!
+        </div>
+        <img class="info__img" src="images/hand.jpg" alt="" />
+        <a data-action="scrollToForm" class="info__btn">ОТКРЫТЬ АККАУНТ</a>
+      </div>
+    </div>
+  </section>
+  <section id="heroSuccess">
+    <div class="container">
+      <h1 class="sectionHeadline text-center">ИНВЕСТИРУЙТЕ КАК НИКОГДА РАНЬШЕ</h1>
+      <div class="info__text">
+        Передовые Технологии Искусственного Интеллекта И Молниеносные Сделки С Технологией Toncoin
+        Обеспечивают Максимальный Инвестиционный Потенциал
+      </div>
+      <div class="row feature__inner">
+        <div class="col-sm-4">
+          <div class="feature">
+            <div class="feature-icon">
+              <img src="images/tech.png" alt="" class="img-responsive" />
+            </div>
+            <div class="feature-name">ПЕРЕДОВЫЕ ТЕХНОЛОГИИ ИИ</div>
+            <div class="feature-text">
+              Наша платформа использует передовую технологию искусственного интеллекта для
+              отслеживания рыночных тенденций и принятия обоснованных инвестиционных решений, что
+              дает вам конкурентное преимущество на рынке
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="feature">
+            <div class="feature-icon">
+              <img src="images/trading.png" alt="" class="img-responsive" />
+            </div>
+            <div class="feature-name">МАКСИМАЛЬНЫЙ ИНВЕСТИЦИОННЫЙ ПОТЕНЦИАЛ</div>
+            <div class="feature-text">
+              Используя мощь нашей передовой технологии искусственного интеллекта, наша платформа
+              максимизирует ваш инвестиционный потенциал
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="feature">
+            <div class="feature-icon">
+              <img src="images/deal.png" alt="" class="img-responsive" />
+            </div>
+            <div class="feature-name">МОЛНИЕНОСНЫЕ СДЕЛКИ</div>
+            <div class="feature-text">
+              Благодаря нашей системе, работающей на основе искусственного интеллекта и
+              совершающей сделки со скоростью 200 в минуту, вы можете воспользоваться
+              преимуществами молниеносных движений рынка и получать прибыль в режиме реального
+              времени
+            </div>
+          </div>
+        </div>
+      </div>
+      <a data-action="scrollToForm" class="info__btn">НАЧАТЬ СЕЙЧАС</a>
+    </div>
+  </section>
+
+  <section class="info bg">
+    <div class="container">
+      <div class="info__inner info-bg">
+        <h2 class="info__title">ЭТО СТОИТ ЗНАТЬ</h2>
+        <div class="info__text">
+          Знаете ли вы, что передовая система Toncoin, работающая на основе искусственного
+          интеллекта, отслеживает рынок в миллион раз быстрее, чем человек и легко может совершать
+          200-300 сделок в день? Присоединяйтесь к нам сейчас и позвольте нашей технологии
+          работать на вас, максимизируя ваш инвестиционный потенциал
+        </div>
+
+        <div class="info__counts">
+          <div class="info__item">
+            <div class="info__item-title">2T+</div>
+            <p class="info__item-sub">ЕЖЕДНЕВНЫЙ ОБОРОТ</p>
+          </div>
+          <div class="info__item">
+            <div class="info__item-title">500M+</div>
+            <p class="info__item-sub">УСПЕШНЫХ СДЕЛОК</p>
+          </div>
+          <div class="info__item">
+            <div class="info__item-title">750K+</div>
+            <p class="info__item-sub">ИНВЕСТОРОВ</p>
+          </div>
+        </div>
+
+        <a data-action="scrollToForm" class="info__btn">НАЧАТЬ СЕЙЧАС</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="appFeatures">
+    <div class="container">
+      <h1 class="text-center sectionHeadline">КАК НАЧАТЬ ИНВЕСТИРОВАТЬ С НАШЕЙ ТЕХНОЛОГИЕЙ?</h1>
+      <h2 class="text-center sectionSubheadline">GPT Trading's Al technology is here to help</h2>
+      <div class="row app-center">
+        <div class="col-md-4">
+          <div class="feature">
+            <div class="feature-name">1 ШАГ</div>
+            <div class="feature-icon">
+              <img src="images/note.png" alt="" style="width: 100%; max-width: 60px" class="img-responsive lazyload" />
+            </div>
+
+            <div class="feature-text">
+              Зарегистрируйтесь на платформе и ожидайте настройки вашего аккаунта. Это занимает до
+              24 часов.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature">
+            <div class="feature-name">2 ШАГ</div>
+            <div class="feature-icon">
+              <img src="images/people.png" alt="" class="img-responsive" />
+            </div>
+
+            <div class="feature-text">
+              Ожидайте звонка нашего технического специалиста, чтобы настроить свой счет и
+              персонализировать его в соответствии с вашими инвестиционными целями и ожиданиями.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature">
+            <div class="feature-name">3 ШАГ</div>
+            <div class="feature-icon">
+              <img src="images/tech.png" alt="" class="img-responsive" />
+            </div>
+
+            <div class="feature-text">
+              Наблюдайте за тем, как открываются торговые сделки и растут ваши инвестиции с
+              помощью передовой технологии искусственного интеллекта.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature">
+            <div class="feature-name">4 ШАГ</div>
+            <div class="feature-icon">
+              <img src="images/trading.png" alt="" class="img-responsive" />
+            </div>
+
+            <div class="feature-text">
+              Выводите вашу прибыль любым комфортным способом. На банковскую карту, банковский
+              счет, криптовалютой или на любую другую платежную систему.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="info footer">
+    <div class="container">
+      <div class="info__inner">
+        <h2 class="info__title footer__title">FAQ</h2>
+        <div class="info__text">
+          Мы уверены, что наш искусственный интеллект может выбирать акции лучше, чем ваш друг на
+          работе.
+        </div>
+        <div class="info__text">
+          "Говорят, что душевное спокойствие не имеет цены, но с передовой технологией
+          искусственного интеллекта Toncoin Вы можете инвестировать уверенно, зная, что на вашей
+          стороне лучшие торговые алгоритмы".
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start popup double -->
+  <div class="modal-form" id="modalFailure">
+    <p class="close-modal" href="#">&times;</p>
+    <div class="content">
+      <div class="sign-up-form-header text-center mb-4">
+        <h5 class="mb-2 mt-4">
+          Вы уже зарегистрировались на данный номер. Если вам нужен новый аккаунт, пройдите
+          регистрацию на другой мобильный номер
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-form" id="modalFailureEmail">
+    <p class="close-modal" href="#">&times;</p>
+    <div class="content">
+      <div class="sign-up-form-header text-center mb-4">
+        <h5 class="mb-2 mt-4">
+          Вы уже зарегистрировались на данную электронную почту. Если вам нужен новый аккаунт,
+          пройдите регистрацию на другую электронную почту.
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-form" id="modalInvalid">
+    <p class="close-modal" href="#">&times;</p>
+    <div class="content">
+      <div class="sign-up-form-header text-center mb-4">
+        <h5 class="mb-2 mt-4">
+          Вы ввели неккоректную электронную почту. Пройдите регистрацию на другую электронную
+          почту.
+        </h5>
+      </div>
+    </div>
+  </div>
+  <!-- End popup double -->
+
+  <!-- Start modal form -->
+  <div id="openModal_form" class="modal_form">
+    <div class="modal-dialog_form">
+      <div class="modal-content_form">
+        <div class="modal-header_form">
+          <h3 class="modal-title_form text-center"></h3>
+          <a href="#close_form" title="Закрыть" class="close_form">×</a>
+        </div>
+        <div class="modal-body_form">
+          <div class="contactForm" style="background-image: url(images/bg_form.png)">
+            <div class="form_header">
+              <span style="font-size: 14px">
+                <h3 style="text-align: center; margin-bottom: 12px">
+                  <span style="font-weight: bold; color: #000; line-height: 1.3; font-size: 20px">
+                    Оставьте ваш актуальный номер телефона, на который вы получите доступ к
+                    платформе
+                  </span>
+                </h3>
+              </span>
+            </div>
+            <form method="POST" id="leadformModal" class="register-form contact_form content_inner flex">
+              <div class="input_group input_name shadow">
+                <input type="text" placeholder="Имя" class="required form-input" name="first_name" id="first_name"
+                  required autocomplete="off" />
+              </div>
+              <div class="input_group input_last_name shadow">
+                <input type="text" placeholder="Фамилия" class="required form-input" name="last_name" id="last_name"
+                  required autocomplete="off" />
+              </div>
+              <div class="input_group input_email shadow">
+                <input type="email" placeholder="Email" class="required" name="email" id="email" required
+                  autocomplete="off" />
+              </div>
+              <div class="input_group intl-tel-input shadow">
+                <input type="tel" id="phoneModal" name="phoneModal" placeholder="" autocomplete="off" required="" />
+                <input type="hidden" id="realPhoneModal" name="realPhone" class="hidden-phone" value="" />
+                <input type="hidden" id="countryModal" name="country" value="" />
+              </div>
+              <div class="input_group">
+                <button type="submit" class="btn btn-submit btn-get-robot text-uppercase">
+                  <span> Зарегистрироваться</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End modal form -->
+
+  <script src="js/good-scroll.js"></script>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/checkCookiePhone.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/intlTelInput.min.js"></script>
+  <script src="js/jquery.maskedinput.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/submitForm.js"></script>
+  <script src="js/utm.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+
+body { margin: 0px auto; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; max-width: 500px; font-family: Verdana,arial; font-size: 14px; }
+.top1 { background: rgb(255, 255, 255) none repeat scroll 0% 0%; box-shadow: 0px 0px 7px 1px rgba(50, 50, 50, 0.5); margin: 5px; }
+.content { padding: 5px 10px; }
+.zagolov { background: rgb(0, 0, 0) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-size: 130%; padding: 4px; }
+.probel { height: 15px; }
+.cena { border: 1px solid rgb(171, 91, 0); padding: 10px; border-radius: 7px; width: 80%; margin: 0px auto; text-align: center; font-size: 120%; background: rgb(255, 253, 201) none repeat scroll 0% 0%; max-width: 300px; }
+.form_buy { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgb(222, 239, 255) 0%, rgb(152, 190, 222) 100%) repeat scroll 0% 0%; padding: 0px; border-top: 1px solid rgb(0, 165, 255); }
+
+.counter { text-align: center; }
+.counter > div { display: inline-block; vertical-align: middle; margin-bottom: 10px; }
+.counter .digit { font-size: 37px; border-radius: 5px; padding: 10px 15px; display: block; line-height: 1; }
+.counter .text { display: block; font-size: 16px; }
+.counter .divider { vertical-align: top; font-size: 30px; line-height: 1.5; font-weight: bold; }

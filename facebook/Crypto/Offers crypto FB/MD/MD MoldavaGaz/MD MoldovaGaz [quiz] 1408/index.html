@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сколько вы сможете зарабатывать на инвестициях?</title>
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
+    <style>
+      .box-btn__btn--next-new {
+        width: 134px;
+        height: 48px;
+        text-align: center;
+        color: #fff;
+        background-color: transparent;
+        border-radius: 24px;
+        font-size: 24px;
+        border: 1px solid #ff183b;
+        color: #ff183b;
+        cursor: pointer;
+      }
+    </style>
+
+    <style>
+      .overlay-xYPWWWlMLF {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        overflow-y: auto;
+        display: none;
+      }
+      .lds-spinner-xYPWWWlMLF {
+        color: official;
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-spinner-xYPWWWlMLF div {
+        transform-origin: 40px 40px;
+        animation: lds-spinner-xYPWWWlMLF 1.2s linear infinite;
+      }
+      .lds-spinner-xYPWWWlMLF div:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 37px;
+        width: 6px;
+        height: 18px;
+        border-radius: 20%;
+        background: #fff;
+      }
+      .lds-spinner-xYPWWWlMLF div:nth-child(1) {
+        transform: rotate(0deg);
+        animation-delay: -1.1s;
+      }
+      .lds-spinner-xYPWWWlMLF div:nth-child(2) {
+        transform: rotate(30deg);
+        animation-delay: -1s;
+      }
+      .lds-spinner-xYPWWWlMLF div:nth-child(3) {
+        transform: rotate(60deg);
+        animation-delay: -0.9s;
+      }
+      .lds-spinner-xYPWWWlMLF div:nth-child(4) {
+        transform: rotate(90deg);
+        animation-delay: -0.8s;
+      }
+      .lds-spinner-xYPWWWlMLF div:nth-child(5) {
+        transform: rotate(120deg);
+        animation-delay: -0.7s;
+      }
+      .lds-spinner-xYPWWWlMLF div:nth-child(6) {
+        transform: rotate(150deg);
+        animation-delay: -0.6s;
+      }
+      .lds-spinner-xYPWWWlMLF div:nth-child(7) {
+        transform: rotate(180deg);
+        animation-delay: -0.5s;
+      }
+      .lds-spinner-xYPWWWlMLF div:nth-child(8) {
+        transform: rotate(210deg);
+        animation-delay: -0.4s;
+      }
+      .lds-spinner-xYPWWWlMLF div:nth-child(9) {
+        transform: rotate(240deg);
+        animation-delay: -0.3s;
+      }
+      .lds-spinner-xYPWWWlMLF div:nth-child(10) {
+        transform: rotate(270deg);
+        animation-delay: -0.2s;
+      }
+      .lds-spinner-xYPWWWlMLF div:nth-child(11) {
+        transform: rotate(300deg);
+        animation-delay: -0.1s;
+      }
+      .lds-spinner-xYPWWWlMLF div:nth-child(12) {
+        transform: rotate(330deg);
+        animation-delay: 0s;
+      }
+      @keyframes lds-spinner-xYPWWWlMLF {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .visible-xYPWWWlMLF {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+    </style>
+    <!--[HEADER]-->
+
+     <!-- JS adapter -->
+  <script type="application/javascript">
+    function getCookie(name) {
+      var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+      return v ? v[2] : null;
+    }
+
+    function setCookie(name, value, days) {
+      var d = new Date;
+      d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+      document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+    }
+
+    function getSubId() {
+      var params = new URLSearchParams(document.location.search.substr(1));
+      if (!'{subid}'.match('{')) {
+        return '{subid}';
+      }
+      var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+      if (clientSubid && !clientSubid.match('>')) {
+        return clientSubid;
+      }
+      if (params.get('_subid')) {
+        return params.get('_subid')
+      }
+      if (params.get('subid')) {
+        return params.get('subid')
+      }
+      if (getCookie('subid')) {
+        return getCookie('subid');
+      }
+    }
+
+    function getToken() {
+      var params = new URLSearchParams(document.location.search.substr(1));
+      if (!'{token}'.match('{')) {
+        return '{token}';
+      }
+      var clientToken = '<?php echo isset($client) ? $client->getToken() : "" ?>';
+      if (clientToken && !clientToken.match('>')) {
+        return clientToken;
+      }
+      if (params.get('_token')) {
+        return params.get('_token')
+      }
+      if (params.get('token')) {
+        return params.get('token')
+      }
+      if (getCookie('token')) {
+        return getCookie('token');
+      }
+      return null;
+    }
+
+    if (typeof URLSearchParams === 'function') {
+      document.addEventListener("DOMContentLoaded", function (event) {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        var subid = getSubId();
+        var token = getToken();
+
+        params.set('_token', token);
+        setCookie('token', token);
+        setCookie('subid', subid);
+
+        // Adds params as hidden inputs to the forms
+        document.querySelectorAll('form').forEach(function (form) {
+          params.forEach(function (v, k) {
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = k;
+            input.value = v;
+
+            form.append(input);
+          });
+        });
+      })
+    }
+  </script>
+  <!-- End JS adapter -->
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container-full">
+        <div class="header__wrapper">
+          <div class="header__img header__img--mobile">
+            <!-- <img src="images/header-img.jpg" alt="Logo" /> -->
+          </div>
+          <div class="main-content-first">
+            <div class="main-content__logo">
+              <p class="title">
+                Как реализовать свои мечты с инвестиционной платформой <br />«MoldovaGaz» 👇
+              </p>
+            </div>
+            <h1 class="main-content__title">
+              Пройдите официальный тест <br />от «MoldovaGaz», чтобы получить доступ к платформе и
+              начать зарабатывать. ✅
+            </h1>
+            <button class="main-content__btn">
+              <span class="icon">
+                <svg viewBox="0 0 24 24" class="mdi-icon mdi-24px">
+                  <title>mdi-checkbox-marked-circle-outline</title>
+                  <path
+                    d="M20,12C20,16.42 16.42,20 12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+                    stroke-width="0"
+                    fill-rule="nonzero"
+                  />
+                </svg> </span
+              >Начать тест
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section-quiz d-none" id="section-quiz">
+      <div class="quiz">
+        <div class="container">
+          <div class="quiz__content">
+            <div class="quiz__progres-bar">
+              <span class="quiz__progres-line" style="width: 16.6667%"></span>
+            </div>
+            <div class="quiz-wrapper">
+              <div class="quiz-wrapper__img">
+                <img src="images/quiz1.png" alt="Logo" />
+              </div>
+              <div class="quiz-wrapper__box-input">
+                <p class="quiz-wrapper__answer-title">1. Сколько вам лет?</p>
+                <label class="quiz-wrapper__answer">
+                  <input
+                    type="radio"
+                    class="quiz-wrapper__input"
+                    value="18-25"
+                    name="0"
+                  />18-25</label
+                ><label class="quiz-wrapper__answer">
+                  <input
+                    type="radio"
+                    class="quiz-wrapper__input"
+                    value="25-35"
+                    name="0"
+                  />25-35</label
+                ><label class="quiz-wrapper__answer">
+                  <input
+                    type="radio"
+                    class="quiz-wrapper__input"
+                    value="35-45"
+                    name="0"
+                  />35-45</label
+                ><label class="quiz-wrapper__answer">
+                  <input type="radio" class="quiz-wrapper__input" value="45+" name="0" />45+</label
+                >
+              </div>
+            </div>
+            <div class="dots-wrapper">
+              <div class="d-flex">
+                <p class="dots-current">
+                  Вопрос
+                  <span class="dots-current__start">1</span>
+                  из <span class="dots-current__end">6</span>
+                </p>
+                <ul class="dots" id="dots">
+                  <li class="dots__item active"></li>
+                  <li class="dots__item"></li>
+                  <li class="dots__item"></li>
+                  <li class="dots__item"></li>
+                  <li class="dots__item"></li>
+                  <li class="dots__item"></li>
+                </ul>
+              </div>
+              <div class="box-btn">
+                <button class="box-btn__btn box-btn__btn--prev" name="prev" data-btn="prev">
+                  <svg
+                    width="21"
+                    height="16"
+                    viewBox="0 0 21 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.292892 8.70711C-0.0976315 8.31658 -0.0976315 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41421 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM21 9H1V7H21V9Z"
+                      fill="#242589"
+                    />
+                  </svg>
+                </button>
+                <button class="box-btn__btn box-btn__btn--next-new">Далее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-fomt d-none" id="section-form">
+      <div class="container-full">
+        <div class="section-form__wrapper">
+          <div class="congratsCnt">
+            <div class="final-page__header">
+              Поздравляем! <br />
+              Теперь вы официально зарегистрированы на инвестиционной платформе «MoldovaGaz»! 🎁
+            </div>
+            <h1 class="final-page__content">
+              Оставьте свои контактные данные, и в ближайшее время наш менеджер вам перезвонит! ✅
+            </h1>
+          </div>
+          <div class="main-content">
+            <form class="form _main-form signup_form" method="POST" id="formTop">
+              <div class="form-group input-group">
+                <input
+                  class="form-control form-input form__input"
+                  name="first_name"
+                  id="first_name"
+                  placeholder="Имя"
+                  type="text"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+              <div class="form-group input-group">
+                <input
+                  class="form-control form-input form__input"
+                  name="last_name"
+                  id="last_name"
+                  placeholder="Фамилия"
+                  required
+                  autocomplete="off"
+                  type="text"
+                />
+              </div>
+              <div class="form-group input-group">
+                <input
+                  class="form-control form__input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="E-mail"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+              <div class="form-group input-group">
+                <input
+                  class="form-control form-input _phone"
+                  type="tel"
+                  id="phone1"
+                  name="phone1"
+                  placeholder=""
+                  autocomplete="off"
+                  style="padding-left: 74px"
+                />
+              </div>
+
+              <button
+                class="btn secondary-solid-btn btn-block buttonSend btn_send btnFormText"
+                name="submitBtn"
+                type="submit"
+              >
+                Зарегистрироваться
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Start popup double -->
+    <div class="modal-form" id="modalFailure">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы уже зарегистрировались на данный номер. Если вам нужен новый аккаунт, пройдите
+            регистрацию на другой мобильный номер
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalFailureEmail">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы уже зарегистрировались на данную электронную почту. Если вам нужен новый аккаунт,
+            пройдите регистрацию на другую электронную почту.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalInvalid">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="content">
+        <div class="sign-up-form-header text-center mb-4">
+          <h5 class="mb-2 mt-4">
+            Вы ввели неккоректную электронную почту. Пройдите регистрацию на другую электронную
+            почту.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <!-- End popup double -->
+    <!-- <script src="js/jquery-3.6.4.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/utm.js"></script>
+    <script src="js/utils.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+$(document).ready((function(){$(".responsive-menu-button").on("click",(()=>{$(".primary-nav").toggleClass("active")}))}));

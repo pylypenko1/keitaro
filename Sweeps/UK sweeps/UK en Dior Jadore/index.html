@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dior</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./libs/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./styles/iconmoon.css" />
+    <link rel="stylesheet" href="./styles/main.min.css" />
+  </head>
+
+  <style>
+    @media (max-width: 749px) {
+      .logo-wrap {
+        display: none;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="header-top">
+      <div class="header-content">
+        <div class="header-top">
+          <div class="logo-wrap">
+            <span
+              id="logo"
+              href="/"
+              class="logo"
+              title="trendyol"
+              style="width: 100%; font-weight: 600"
+            >
+              <p>FASHION & ACCESSORIES FRAGRANCE & BEAUTY</p>
+            </span>
+          </div>
+          <div id="autoCompleteAppWrapper">
+            <img
+              style="height: 45px; margin-bottom: -3px"
+              src="./images/logo.jpeg"
+              alt="Trendyol"
+            />
+          </div>
+          <div id="accountNavigation">
+            <div
+              data-fragment-name="AccountNavigation"
+              data-fragment-id="eb7428a4-6767-4b28-af4e-2e229860da38"
+              data-gateway-service="prod-web-navigation-gateway"
+            >
+              <link
+                rel="stylesheet"
+                href="https://cdn.dsmcdn.com/web/master/account-navigation-v2.style.cebb13cf143437b857d88bc1296d25f8.css"
+              />
+              <div id="account-navigation-container">
+                <div class="account-navigation-wrapper">
+                  <div class="account-nav-item user-login-container">
+                    <div class="link account-user">
+                      <div class="icon-container">
+                        <i class="i-user initial-icon"></i><i class="i-user-orange hover-icon"></i>
+                      </div>
+                      <p class="link-text">Login</p>
+                    </div>
+                    <div class="new-login-dropdown">
+                      <div class="user-notloggedin-container container-padding">
+                        <div class="login-button">Se connecter</div>
+                        <div class="signup-button signup-button-container">Inscription</div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="account-nav-item account-favorites" href="">
+                    <div class="link">
+                      <div class="icon-container">
+                        <i class="i-heart initial-icon"></i
+                        ><i class="i-heart-orange hover-icon"></i>
+                      </div>
+                      <p class="link-text">Favorite</p>
+                    </div>
+                  </span>
+                  <div class="account-nav-item basket-preview">
+                    <span class="link account-basket" href="/sepet">
+                      <div class="icon-container">
+                        <i class="i-bagg initial-icon"></i><i class="i-bagg-orange hover-icon"></i>
+                      </div>
+                      <p class="link-text">Cart</p>
+                      <div class="basket-item-count-container">0</div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .header-content {
+        padding: 0 10px;
+        width: 100%;
+      }
+
+      .header-top {
+        display: flex;
+        width: 100%;
+        height: 64px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        margin: 0;
+      }
+
+      .header .header {
+        margin: 0;
+        padding: 0;
+      }
+
+      .logo {
+        display: block;
+        width: 150px;
+        margin-left: 0;
+      }
+
+      .mOkuL__p {
+        width: 598px;
+        position: relative;
+      }
+
+      .mOkuL__p .N4M8bfaJ {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      .mOkuL__p .N4M8bfaJ .V8wbcUhU {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        font-size: 14px;
+        color: #333;
+        background-color: #f3f3f3;
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-radius: 6px;
+        padding: 10px 40px 10px 15px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        outline: none;
+        -webkit-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+        line-height: 0;
+      }
+
+      .mOkuL__p .N4M8bfaJ .cyrzo7gC {
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        right: 15px;
+        bottom: calc(50% - 9px);
+        filter: brightness(0) saturate(100%) invert(0%) sepia(79%) saturate(0%) hue-rotate(191deg)
+          brightness(97%) contrast(105%);
+        cursor: pointer;
+        background-image: url('data:image/svg+xml;charset=utf8, %3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2718%27 height=%2718%27 viewBox=%270 0 18 18%27%3E%3Cpath fill=%27%23F27A1A%27 d=%27M18.711 17.306l-4.684-4.703a7.49 7.49 0 0 0 1.864-4.932C15.891 3.441 12.327 0 7.946 0S0 3.441 0 7.671s3.565 7.671 7.946 7.671a8.056 8.056 0 0 0 4.552-1.388l4.72 4.74c.197.197.462.306.746.306.27 0 .525-.1.718-.28a.977.977 0 0 0 .03-1.414zM7.946 2.001c3.238 0 5.873 2.544 5.873 5.67 0 3.127-2.635 5.67-5.873 5.67-3.239 0-5.873-2.543-5.873-5.67 0-3.126 2.634-5.67 5.873-5.67z%27/%3E%3C/svg%3E');
+      }
+
+      #account-navigation-container .account-navigation-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 250px;
+      }
+
+      #account-navigation-container .account-navigation-wrapper .link {
+        margin: 0 !important;
+        text-decoration: none !important;
+        filter: brightness(0) saturate(100%) invert(0%) sepia(91%) saturate(7466%)
+          hue-rotate(334deg) brightness(100%) contrast(96%);
+      }
+
+      .account-navigation-container .account-navigation-wrapper .account-nav-item {
+        display: flex;
+      }
+
+      #account-navigation-container .account-navigation-wrapper .link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 40px;
+        font-family: Arial, Verdana, 'Roboto';
+      }
+
+      #account-navigation-container .account-navigation-wrapper .link .icon-container {
+        position: relative;
+        height: 18px;
+        filter: brightness(0) saturate(100%);
+      }
+
+      #account-navigation-container .account-navigation-wrapper .initial-icon,
+      #account-navigation-container .account-navigation-wrapper .hover-icon {
+        display: block;
+        font-size: 16px;
+        transition: opacity 0.4s ease;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(60deg)
+          brightness(106%) contrast(101%);
+      }
+
+      #account-navigation-container .account-navigation-wrapper .hover-icon {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(60deg)
+          brightness(106%) contrast(101%);
+      }
+
+      #account-navigation-container .account-navigation-wrapper .link .link-text {
+        font-size: 14px;
+        color: #333333;
+        padding-left: 5px;
+        margin-top: 2px;
+        font-weight: 700;
+        text-decoration: none !important;
+        margin-bottom: 0;
+        font-family: Arial, Verdana, 'Roboto';
+      }
+
+      .i-user-orange:before {
+        content: '\e965';
+        color: #fff;
+        filter: brightness(0) saturate(100%);
+      }
+
+      .i-heart-orange:before {
+        content: '\e966';
+        color: #fff;
+      }
+
+      .i-bagg-orange:before {
+        content: '\e958';
+        color: #fff;
+      }
+
+      #account-navigation-container .user-notloggedin-container .login-button {
+        background-color: #ff0000;
+      }
+
+      @media (max-width: 1170px) {
+        .mOkuL__p {
+          width: 400px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .mOkuL__p {
+          width: 200px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #account-navigation-container .account-navigation-wrapper .link .link-text {
+          display: none;
+        }
+
+        #account-navigation-container .account-navigation-wrapper {
+          width: auto;
+        }
+
+        #account-navigation-container .account-navigation-wrapper > div,
+        #account-navigation-container .account-navigation-wrapper > a,
+        #account-navigation-container .account-navigation-wrapper > span {
+          margin-left: 15px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .mOkuL__p {
+          display: none;
+        }
+      }
+    </style>
+    <header class="header">
+      <div class="header__block-text">
+        <h2 class="header__block-text-title">Congratulations!</h2>
+        <p class="header__block-text-ds">
+          To kick off the fall season, we're introducing an incredible price on our best-selling
+          perfumes! Until the end of this week only, you have the opportunity to get this perfume
+          for just £2!
+        </p>
+      </div>
+
+      <div class="slider">
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/1.jpeg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/2.jpeg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/3.jpeg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/4.jpeg" />
+            </div>
+          </div>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/1.jpeg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/2.jpeg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/3.jpeg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/4.jpeg" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+      <style>
+        .swiper {
+          margin: 10px auto;
+        }
+
+        .swiper-slide img {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+        }
+
+        .swiper-slide {
+          height: 400px;
+        }
+
+        .mySwiper .swiper-slide {
+          height: 120px;
+        }
+
+        .mySwiper .swiper-slide img {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+        }
+
+        .prez__win-window {
+          height: auto;
+          max-height: 100%;
+          overflow-y: auto;
+        }
+
+        .prez__main-win {
+          width: auto;
+          height: auto;
+          max-width: 70%;
+          max-height: 70%;
+        }
+      </style>
+    </header>
+    <main class="main">
+      <section class="prezent">
+        <p class="prezent__ds">
+          In order To get a promotional J'Adore In Joy perfume, please complete the survey for
+          confirming that you are a real person. Please hurry up, because the number of items on
+          offer is limited!
+        </p>
+        <h5 class="prezent__title">Hurry up, the number of prizes is limited!</h5>
+
+        <div class="prezent__question">
+          <div class="prezent__question-box prezent__question-box-one">
+            <p class="prezent__question-box-text">
+              <span class="prezent__question-box-text-span">Question 1 of 3</span> Do you live in
+              the United Kingdom?
+            </p>
+            <button class="prezent__question-box-btn prezent__question-box-btn-one">Yes</button>
+            <button class="prezent__question-box-btn prezent__question-box-btn-one">No</button>
+          </div>
+          <div class="prezent__question-box prezent__question-box-two">
+            <p class="prezent__question-box-text">
+              <span class="prezent__question-box-text-span">Question 2 of 3</span> Have you ever
+              used J'Adore In Joy perfumes?
+            </p>
+            <button class="prezent__question-box-btn prezent__question-box-btn-two">Yes</button>
+            <button class="prezent__question-box-btn prezent__question-box-btn-two">No</button>
+          </div>
+          <div class="prezent__question-box prezent__question-box-three">
+            <p class="prezent__question-box-text">
+              <span class="prezent__question-box-text-span">Question 3 of 3 </span>Do you like
+              J'Adore In Joy fragrance?
+            </p>
+            <button class="prezent__question-box-btn prezent__question-box-btn-three">Yes</button>
+            <button class="prezent__question-box-btn prezent__question-box-btn-three">No</button>
+          </div>
+        </div>
+      </section>
+      <section class="prez">
+        <h2 class="prez__title">Your answers are being verified</h2>
+        <div class="prez__loading"></div>
+
+        <div class="prez__text-block">
+          <p class="prez__text-block-ds prez__text-block-ds-one">
+            You have answered 3/3 of the questions!
+          </p>
+          <p class="prez__text-block-ds prez__text-block-ds-two">
+            There are no duplicate entries from your IP.
+          </p>
+          <p class="prez__text-block-ds prez__text-block-ds-three">You are qualified</p>
+        </div>
+
+        <div class="prez__block">
+          <div class="prez__block-box">
+            <img class="prez__block-box-img-top" src="./images/head-box.webp" alt="" />
+            <img class="prez__block-box-img-into" src="./images/black-box.webp" alt="" />
+            <img class="prez__block-box-img-value" src="./images/3-bg.png" alt="" />
+            <img class="prez__block-box-img-bottom" src="./images/side-box.webp" alt="" />
+          </div>
+          <div class="prez__block-box">
+            <img class="prez__block-box-img-top" src="./images/head-box.webp" alt="" />
+            <img class="prez__block-box-img-into" src="./images/black-box.webp" alt="" />
+            <img class="prez__block-box-img-value" src="./images/3-bg.png" alt="" />
+            <img class="prez__block-box-img-bottom" src="./images/side-box.webp" alt="" />
+          </div>
+          <div class="prez__block-box">
+            <img class="prez__block-box-img-top" src="./images/head-box.webp" alt="" />
+            <img class="prez__block-box-img-into" src="./images/black-box.webp" alt="" />
+            <img class="prez__block-box-img-value" src="./images/3-bg.png" alt="" />
+            <img class="prez__block-box-img-bottom" src="./images/side-box.webp" alt="" />
+          </div>
+          <div class="prez__block-box">
+            <img class="prez__block-box-img-top" src="./images/head-box.webp" alt="" />
+            <img class="prez__block-box-img-into" src="./images/black-box.webp" alt="" />
+            <img class="prez__block-box-img-value" src="./images/3-bg.png" alt="" />
+            <img class="prez__block-box-img-bottom" src="./images/side-box.webp" alt="" />
+          </div>
+          <div class="prez__block-box">
+            <img class="prez__block-box-img-top" src="./images/head-box.webp" alt="" />
+            <img class="prez__block-box-img-into" src="./images/black-box.webp" alt="" />
+            <img class="prez__block-box-img-value" src="./images/3-bg.png" alt="" />
+            <img class="prez__block-box-img-bottom" src="./images/side-box.webp" alt="" />
+          </div>
+          <div class="prez__block-box">
+            <img class="prez__block-box-img-top" src="./images/head-box.webp" alt="" />
+            <img class="prez__block-box-img-into" src="./images/black-box.webp" alt="" />
+            <img class="prez__block-box-img-value" src="./images/3-bg.png" alt="" />
+            <img class="prez__block-box-img-bottom" src="./images/side-box.webp" alt="" />
+          </div>
+          <div class="prez__block-box">
+            <img class="prez__block-box-img-top" src="./images/head-box.webp" alt="" />
+            <img class="prez__block-box-img-into" src="./images/black-box.webp" alt="" />
+            <img class="prez__block-box-img-value" src="./images/3-bg.png" alt="" />
+            <img class="prez__block-box-img-bottom" src="./images/side-box.webp" alt="" />
+          </div>
+          <div class="prez__block-box">
+            <img class="prez__block-box-img-top" src="./images/head-box.webp" alt="" />
+            <img class="prez__block-box-img-into" src="./images/black-box.webp" alt="" />
+            <img class="prez__block-box-img-value" src="./images/3-bg.png" alt="" />
+            <img class="prez__block-box-img-bottom" src="./images/side-box.webp" alt="" />
+          </div>
+          <div class="prez__block-box">
+            <img class="prez__block-box-img-top" src="./images/head-box.webp" alt="" />
+            <img class="prez__block-box-img-into" src="./images/black-box.webp" alt="" />
+            <img class="prez__block-box-img-value" src="./images/3-bg.png" alt="" />
+            <img class="prez__block-box-img-bottom" src="./images/side-box.webp" alt="" />
+          </div>
+          <div class="prez__block-box none-sm">
+            <img class="prez__block-box-img-top" src="./images/head-box.webp" alt="" />
+            <img class="prez__block-box-img-into" src="./images/black-box.webp" alt="" />
+            <img class="prez__block-box-img-value" src="./images/3-bg.png" alt="" />
+            <img class="prez__block-box-img-bottom" src="./images/side-box.webp" alt="" />
+          </div>
+          <div class="prez__block-box none-sm">
+            <img class="prez__block-box-img-top" src="./images/head-box.webp" alt="" />
+            <img class="prez__block-box-img-into" src="./images/black-box.webp" alt="" />
+            <img class="prez__block-box-img-value" src="./images/3-bg.png" alt="" />
+            <img class="prez__block-box-img-bottom" src="./images/side-box.webp" alt="" />
+          </div>
+          <div class="prez__block-box none-sm">
+            <img class="prez__block-box-img-top" src="./images/head-box.webp" alt="" />
+            <img class="prez__block-box-img-into" src="./images/black-box.webp" alt="" />
+            <img class="prez__block-box-img-value" src="./images/3-bg.png" alt="" />
+            <img class="prez__block-box-img-bottom" src="./images/side-box.webp" alt="" />
+          </div>
+        </div>
+
+        <div class="prez__black"></div>
+
+        <div class="prez__hint">
+          <img class="prez__hint-img" src="./images/full-box.webp" alt="" />
+          <h3 class="prez__hint-title">
+            Congratulations, your answers have been verified correctly!
+          </h3>
+          <p class="prez__hint-text">
+            Today, <span class="prez__hint-text-span"></span>, you have a chance to win Dior
+            Sauvage!
+          </p>
+          <p class="prez__hint-text">Just choose the right gift box.</p>
+          <p class="prez__hint-text">You have 3 attempts, good luck!</p>
+          <button class="prez__hint-btn">ok</button>
+        </div>
+
+        <div class="prez__one">
+          <div class="prez__one-empty">
+            <div class="prez__one-empty-box"></div>
+          </div>
+          <h2 class="prez__one-title">Ohhh...</h2>
+          <p class="prez__one-ds">This gift box is empty! You have 2 more attempts. Good luck!</p>
+          <button class="prez__one-btn">ok</button>
+        </div>
+
+        <img class="prez__main-win" src="./images/3.jpeg" alt="" />
+
+        <div class="prez__win-window">
+          <img class="prez__win-window-img" src="./images/3.jpeg" alt="" />
+          <h2 class="prez__win-window-title">Congratulations!!</h2>
+          <p class="prez__win-window-ds">You win Dior Sauvage</p>
+          <p class="prez__win-window-ds">
+            You have only
+            <span class="prez__win-window-ds-span prez__win-window-ds-span-min">1</span>
+            <span class="prez__win-window-ds-span">minute</span>
+            <span class="prez__win-window-ds-span prez__win-window-ds-span-sek"></span>
+            <span class="prez__win-window-ds-span">seconds</span>
+            to get your prize.
+          </p>
+          <p class="prez__win-window-ds">1. Click OK below to go to our sponsor's page.</p>
+          <p class="prez__win-window-ds">
+            2. We have reserved a prize for you. You have 2 minutes to confirm your application and
+            get your Dior Sauvage.
+          </p>
+          <p class="prez__win-window-ds">
+            3. The prize will be delivered within 3-5 days after confirmation.
+          </p>
+          <a class="prez__win-window-btn" href="{offer}">ok</a>
+        </div>
+      </section>
+
+      <section class="comment">
+        <h2 class="comment__title">Comment:</h2>
+        <div class="comment__block-user">
+          <div class="comment__block-user-box">
+            <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+            <input
+              class="comment__block-user-box-input input-ans-thirteen"
+              type="text"
+              placeholder="Write a comment..."
+            />
+            <button class="comment__block-user-box-btn btn-ans-thirteen">Send</button>
+          </div>
+          <div class="comment__block-user-iconki">
+            <i class="comment__block-user-iconki-icon far fa-smile"></i>
+            <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+          </div>
+        </div>
+
+        <div class="comment__block-reviews">
+          <div class="comment__block-reviews-box">
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user-one.jpg" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Samira Yousefi</h6>
+                <p class="comment__block-reviews-box-com-ds">
+                  Has anyone already applied? Did you get a prize for just £2,00?
+                </p>
+
+                <div
+                  class="comment__block-reviews-box-reaction comment__block-reviews-box-reaction-small"
+                >
+                  <i class="comment__block-reviews-box-reaction-icon fas fa-heart"></i>
+                  <p class="comment__block-reviews-box-reaction-ds">9</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">6 h</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer ans-btn-one"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div class="comment__block-reviews-box comment__block-reviews-box-answer">
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user-two.jpg" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Ian Botterill</h6>
+                <p class="comment__block-reviews-box-com-ds">
+                  Yes, I did, the manager contacted me during the day, checked the data, said he
+                  would send it in 3 days. I'm waiting.
+                </p>
+
+                <div class="comment__block-reviews-box-reaction">
+                  <i class="comment__block-reviews-box-reaction-icon fas fa-heart"></i>
+                  <i class="comment__block-reviews-box-reaction-icon-l fas fa-thumbs-up"></i>
+                  <p class="comment__block-reviews-box-reaction-ds">16</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">2 h</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer ans-btn-two"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div class="comment__block-reviews-box comment__block-reviews-box-answer-duble">
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user-one.jpg" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Stefania Bonaccorso</h6>
+                <p class="comment__block-reviews-box-com-ds">And I already have my own))))</p>
+                <img class="comment__block-reviews-box-com-img" src="./images/img2.jpg" alt="" />
+
+                <div class="comment__block-reviews-box-reaction">
+                  <i class="comment__block-reviews-box-reaction-icon-l fas fa-thumbs-up"></i>
+                  <i class="comment__block-reviews-box-reaction-icon fas fa-heart"></i>
+                  <p class="comment__block-reviews-box-reaction-ds">21</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">17 min</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer ans-btn-three"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="user_ans-three user-ans comment__block-reviews-box comment__block-reviews-box-answer-thrible"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, nobis!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="user_ans-two user-ans comment__block-reviews-box comment__block-reviews-box-answer-duble"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, nobis!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="user_ans-one user-ans comment__block-reviews-box comment__block-reviews-box-answer"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds"></p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="comment__block-reviews-box comment__block-reviews-box comment__block-reviews-box-answer"
+          ></div>
+
+          <div
+            class="user_ans-four user-ans comment__block-reviews-box comment__block-reviews-box-answer-duble"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="comment__block-user-ans comment__block-user-ans-one">
+            <div class="comment__block-user-box">
+              <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+              <input
+                class="comment__block-user-box-input input-ans-one"
+                type="text"
+                placeholder="Escribir un comentario..."
+              />
+              <button class="comment__block-user-box-btn btn-ans-one">Enviar</button>
+            </div>
+            <div class="comment__block-user-iconki">
+              <i class="comment__block-user-iconki-icon far fa-smile"></i>
+              <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+            </div>
+          </div>
+
+          <div class="comment__block-user-ans comment__block-user-ans-two">
+            <div class="comment__block-user-box">
+              <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+              <input
+                class="comment__block-user-box-input input-ans-two"
+                type="text"
+                placeholder="Escribir un comentario..."
+              />
+              <button class="comment__block-user-box-btn btn-ans-two">Enviar</button>
+            </div>
+            <div class="comment__block-user-iconki">
+              <i class="comment__block-user-iconki-icon far fa-smile"></i>
+              <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+            </div>
+          </div>
+
+          <div class="comment__block-user-ans comment__block-user-ans-three">
+            <div class="comment__block-user-box">
+              <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+              <input
+                class="comment__block-user-box-input input-ans-three"
+                type="text"
+                placeholder="Escribir un comentario..."
+              />
+              <button class="comment__block-user-box-btn btn-ans-three">Enviar</button>
+            </div>
+            <div class="comment__block-user-iconki">
+              <i class="comment__block-user-iconki-icon far fa-smile"></i>
+              <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+            </div>
+          </div>
+
+          <div class="comment__block-user-ans comment__block-user-ans-four">
+            <div class="comment__block-user-box">
+              <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+              <input
+                class="comment__block-user-box-input input-ans-four"
+                type="text"
+                placeholder="Escribir un comentario..."
+              />
+              <button class="comment__block-user-box-btn btn-ans-four">Enviar</button>
+            </div>
+            <div class="comment__block-user-iconki">
+              <i class="comment__block-user-iconki-icon far fa-smile"></i>
+              <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+            </div>
+          </div>
+
+          <div class="comment__block-reviews-box">
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user-three.jpg" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Robert Robillard</h6>
+                <p class="comment__block-reviews-box-com-ds">
+                  I've never written comments, but then I decided to share). That's how it was: I
+                  went to the website, answered the questions and got the opportunity to
+                  participate. I thought it was some kind of scam, reread everything, sent my data
+                  and waited... after 2 hours, a girl called me, clarified the correctness of my
+                  data and said: "Congratulations, you have won a prize. Our carrier will deliver it
+                  to you in 3 days." You can't imagine how surprised I was when I received it the
+                  next day. In general... don't be afraid to try your luck.
+                </p>
+                <img class="comment__block-reviews-box-com-img" src="./images/img3.jpg" alt="" />
+
+                <div class="comment__block-reviews-box-reaction">
+                  <i class="comment__block-reviews-box-reaction-icon-l fas fa-thumbs-up"></i>
+                  <i class="comment__block-reviews-box-reaction-icon fas fa-heart"></i>
+                  <p class="comment__block-reviews-box-reaction-ds">41</p>
+                </div>
+              </div>
+            </div>
+
+          
+          </div>
+
+          <div class="comment__block-reviews-box comment__block-reviews-box-answer">
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">23 h</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer ans-btn-six"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="user_ans-six user-ans comment__block-reviews-box comment__block-reviews-box-answer-duble"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds"></p>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">1 min</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="user_ans-five user-ans comment__block-reviews-box comment__block-reviews-box-answer"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds"></p>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">1 min</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div class="comment__block-reviews-box comment__block-reviews-box-answer-duble">
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user-four.jpg" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Mary Sommerlad</h6>
+                <p class="comment__block-reviews-box-com-ds">
+                  the guy was just lucky), now I'm going to try my luck.
+                </p>
+
+                <div class="comment__block-reviews-box-reaction">
+                  <i class="comment__block-reviews-box-reaction-icon-l fas fa-thumbs-up"></i>
+                  <i class="comment__block-reviews-box-reaction-icon fas fa-heart"></i>
+                  <p class="comment__block-reviews-box-reaction-ds">2</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">6 h</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer ans-btn-seven"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="user_ans-seven user-ans comment__block-reviews-box comment__block-reviews-box-answer-thrible"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds"></p>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">1 min</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div class="comment__block-user-ans comment__block-user-ans-five">
+            <div class="comment__block-user-box">
+              <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+              <input
+                class="comment__block-user-box-input input-ans-five"
+                type="text"
+                placeholder="Escribir un comentario..."
+              />
+              <button class="comment__block-user-box-btn btn-ans-five">Enviar</button>
+            </div>
+            <div class="comment__block-user-iconki">
+              <i class="comment__block-user-iconki-icon far fa-smile"></i>
+              <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+            </div>
+          </div>
+
+          <div class="comment__block-user-ans comment__block-user-ans-six">
+            <div class="comment__block-user-box">
+              <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+              <input
+                class="comment__block-user-box-input input-ans-six"
+                type="text"
+                placeholder="Escribir un comentario..."
+              />
+              <button class="comment__block-user-box-btn btn-ans-six">Enviar</button>
+            </div>
+            <div class="comment__block-user-iconki">
+              <i class="comment__block-user-iconki-icon far fa-smile"></i>
+              <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+            </div>
+          </div>
+
+          <div class="comment__block-user-ans comment__block-user-ans-seven">
+            <div class="comment__block-user-box">
+              <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+              <input
+                class="comment__block-user-box-input input-ans-seven"
+                type="text"
+                placeholder="Escribir un comentario..."
+              />
+              <button class="comment__block-user-box-btn btn-ans-seven">Enviar</button>
+            </div>
+            <div class="comment__block-user-iconki">
+              <i class="comment__block-user-iconki-icon far fa-smile"></i>
+              <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+            </div>
+          </div>
+
+          <div class="comment__block-reviews-box">
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user-five.jpg" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Mark Rosenthal</h6>
+                <p class="comment__block-reviews-box-com-ds">
+                  I tried it a day ago and am still waiting.
+                </p>
+
+                <div class="comment__block-reviews-box-reaction">
+                  <i class="comment__block-reviews-box-reaction-icon-l fas fa-thumbs-up"></i>
+                  <i class="comment__block-reviews-box-reaction-icon fas fa-heart"></i>
+                  <p class="comment__block-reviews-box-reaction-ds">3</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">2 h</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer ans-btn-eight"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div class="comment__block-reviews-box comment__block-reviews-box-answer"></div>
+
+          <div
+            class="user_ans-nine user-ans comment__block-reviews-box comment__block-reviews-box-answer-duble"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds"></p>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">1 min</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div class="comment__block-reviews-box comment__block-reviews-box-answer-duble">
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user-six.jpg" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Usha Sharma</h6>
+                <p class="comment__block-reviews-box-com-ds">Where to click the "Next" button</p>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">45 min</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer ans-btn-ten"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="user_ans-ten user-ans comment__block-reviews-box comment__block-reviews-box-answer-thrible"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds"></p>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">1 min</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="user_ans-eight user-ans comment__block-reviews-box comment__block-reviews-box-answer"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds"></p>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">1 min</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div class="comment__block-user-ans comment__block-user-ans-eight">
+            <div class="comment__block-user-box">
+              <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+              <input
+                class="comment__block-user-box-input input-ans-eight"
+                type="text"
+                placeholder="Escribir un comentario..."
+              />
+              <button class="comment__block-user-box-btn btn-ans-eight">Enviar</button>
+            </div>
+            <div class="comment__block-user-iconki">
+              <i class="comment__block-user-iconki-icon far fa-smile"></i>
+              <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+            </div>
+          </div>
+
+          <div class="comment__block-user-ans comment__block-user-ans-nine">
+            <div class="comment__block-user-box">
+              <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+              <input
+                class="comment__block-user-box-input input-ans-nine"
+                type="text"
+                placeholder="Escribir un comentario..."
+              />
+              <button class="comment__block-user-box-btn btn-ans-nine">Enviar</button>
+            </div>
+            <div class="comment__block-user-iconki">
+              <i class="comment__block-user-iconki-icon far fa-smile"></i>
+              <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+            </div>
+          </div>
+
+          <div class="comment__block-user-ans comment__block-user-ans-ten">
+            <div class="comment__block-user-box">
+              <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+              <input
+                class="comment__block-user-box-input input-ans-ten"
+                type="text"
+                placeholder="Escribir un comentario..."
+              />
+              <button class="comment__block-user-box-btn btn-ans-ten">Enviar</button>
+            </div>
+            <div class="comment__block-user-iconki">
+              <i class="comment__block-user-iconki-icon far fa-smile"></i>
+              <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+            </div>
+          </div>
+
+          <div class="comment__block-reviews-box">
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user-seven.jpg" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">James Walkden</h6>
+                <p class="comment__block-reviews-box-com-ds">
+                  Damn, here's my prize. My wife is delighted
+                </p>
+                <img class="comment__block-reviews-box-com-img" src="./images/img1.jpg" alt="" />
+
+                <div class="comment__block-reviews-box-reaction">
+                  <i class="comment__block-reviews-box-reaction-icon-l fas fa-thumbs-up"></i>
+                  <i class="comment__block-reviews-box-reaction-icon fas fa-heart"></i>
+                  <p class="comment__block-reviews-box-reaction-ds">4</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">7 h</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer ans-btn-eleven"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div class="comment__block-reviews-box comment__block-reviews-box-answer"></div>
+
+          <div
+            class="user_ans-twelfe user-ans comment__block-reviews-box comment__block-reviews-box-answer-duble"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds"></p>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">1 min</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="user_ans-eleven user-ans comment__block-reviews-box comment__block-reviews-box-answer"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds"></p>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">1 min</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="user_ans-thirteen user-ans comment__block-reviews-box comment__block-reviews-box"
+          >
+            <div class="comment__block-reviews-box-info">
+              <img class="comment__block-reviews-box-img" src="./images/user_main.png" alt="" />
+              <div class="comment__block-reviews-box-com">
+                <h6 class="comment__block-reviews-box-com-title">Utilizator</h6>
+                <p class="comment__block-reviews-box-com-ds"></p>
+              </div>
+            </div>
+
+            <div class="comment__block-reviews-box-control">
+              <p class="comment__block-reviews-box-control-ds">1 min</p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-like"
+              >
+                Like
+              </p>
+              <p
+                class="comment__block-reviews-box-control-ds comment__block-reviews-box-control-ds-answer"
+              >
+                Answer
+              </p>
+            </div>
+          </div>
+
+          <div class="comment__block-user-ans comment__block-user-ans-eleven">
+            <div class="comment__block-user-box">
+              <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+              <input
+                class="comment__block-user-box-input input-ans-eleven"
+                type="text"
+                placeholder="Escribir un comentario..."
+              />
+              <button class="comment__block-user-box-btn btn-ans-eleven">Enviar</button>
+            </div>
+            <div class="comment__block-user-iconki">
+              <i class="comment__block-user-iconki-icon far fa-smile"></i>
+              <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+            </div>
+          </div>
+
+          <div class="comment__block-user-ans comment__block-user-ans-twelfe">
+            <div class="comment__block-user-box">
+              <img class="comment__block-user-box-img" src="./images/user_main.png" alt="" />
+              <input
+                class="comment__block-user-box-input input-ans-twelfe"
+                type="text"
+                placeholder="Escribir un comentario..."
+              />
+              <button class="comment__block-user-box-btn btn-ans-twelfe">Enviar</button>
+            </div>
+            <div class="comment__block-user-iconki">
+              <i class="comment__block-user-iconki-icon far fa-smile"></i>
+              <i class="comment__block-user-iconki-icon fas fa-camera"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">
+        <img style="width: 100%" src="images/1.webp" alt="" />
+      </div>
+    </main>
+    <div class="questions">
+      <img class="questions__img" src="./images/questions-img.png" alt="" />
+
+      <div class="questions__block">
+        <button class="questions__block-btn"><i class="fal fa-times-circle"></i></button>
+        <div class="questions__block-ul">
+          <li class="questions__block-ul-li">
+            <h3 class="questions__block-ul-li-title">
+              How long will I wait for my prize?
+              <span class="questions__block-ul-li-title-span"
+                ><i class="questions__block-ul-li-title-span-icon fas fa-chevron-down"></i
+              ></span>
+            </h3>
+            <p class="questions__block-ul-li-ds">It usually takes 2 to 5 business days.</p>
+          </li>
+          <li class="questions__block-ul-li">
+            <h3 class="questions__block-ul-li-title">
+              Are there hidden costs?
+              <span class="questions__block-ul-li-title-span"
+                ><i class="questions__block-ul-li-title-span-icon fas fa-chevron-down"></i
+              ></span>
+            </h3>
+            <p class="questions__block-ul-li-ds">
+              Absolutely not. Once you win the prize and enter your details, we will take care of
+              the rest.
+            </p>
+          </li>
+          <li class="questions__block-ul-li">
+            <h3 class="questions__block-ul-li-title">
+              I'm a winner, why should I answer the questions?<span
+                class="questions__block-ul-li-title-span"
+                ><i class="questions__block-ul-li-title-span-icon fas fa-chevron-down"></i
+              ></span>
+            </h3>
+            <p class="questions__block-ul-li-ds">
+              You're not a winner yet, but you were one of the 100 people chosen to try to win our
+              prize.
+            </p>
+          </li>
+          <li class="questions__block-ul-li">
+            <h3 class="questions__block-ul-li-title">
+              How will I get my prize if I win?<span class="questions__block-ul-li-title-span"
+                ><i class="questions__block-ul-li-title-span-icon fas fa-chevron-down"></i
+              ></span>
+            </h3>
+            <p class="questions__block-ul-li-ds">
+              First of all, you need to enter the delivery address and contact details, then pay
+              £2,00 for processing the delivery.
+            </p>
+          </li>
+          <li class="questions__block-ul-li">
+            <h3 class="questions__block-ul-li-title">
+              Why should I pay £2,00 for the prize?
+              <span class="questions__block-ul-li-title-span"
+                ><i class="questions__block-ul-li-title-span-icon fas fa-chevron-down"></i
+              ></span>
+            </h3>
+            <p class="questions__block-ul-li-ds">
+              We charge £2,00 for handling and transportation.
+            </p>
+          </li>
+          <li class="questions__block-ul-li">
+            <h3 class="questions__block-ul-li-title">
+              I can't use my credit card or phone and the transaction doesn't go through?
+              <span class="questions__block-ul-li-title-span"
+                ><i class="questions__block-ul-li-title-span-icon fas fa-chevron-down"></i
+              ></span>
+            </h3>
+            <p class="questions__block-ul-li-ds">
+              If you can't use a credit card or phone, then your bank is blocking your transaction:
+              you need to approve it on your bank account.
+            </p>
+          </li>
+        </div>
+      </div>
+    </div>
+    <div class="notice">
+      <img class="notice__img" src="./images/3.jpeg" alt="" />
+      <div class="notice__block">
+        <h5 class="notice__title">
+          Harlan <span class="notice__title-blue">from</span>
+          <span class="notice__title-city">Glasgow, United Kingdom</span>
+        </h5>
+        <p class="notice__ds">Dior Sauvage</p>
+        <p class="notice__time">
+          1 min 12 sek <span><i class="notice__time-icon fas fa-check"></i></span>
+        </p>
+        <button class="notice__btn">
+          <i class="notice__btn-icon far fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./scripts/common.js"></script>
+  </body>
+</html>

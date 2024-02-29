@@ -1,0 +1,164 @@
+/* Start Form */
+
+.register-form {
+  background-color: transparent;
+  max-width: 500px;
+  /* margin: 10px; */
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-input-main {
+  margin-bottom: 20px;
+  position: relative;
+  /* max-width: 245px; */
+}
+
+.form-input-main input,
+.form-input-main select {
+  font-family: 'Inter', sans-serif;
+  height: 38px;
+  width: 100%;
+  padding-left: 10px;
+  border: 0.5px solid rgb(212, 212, 213);
+  background: rgb(249 250 251);
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000;
+  min-width: 245px;
+}
+
+.form-input-main select {
+  margin: 0;
+  width: 100%;
+}
+
+.form-input-main input::placeholder,
+.form-input-main select::placeholder {
+  color: rgb(20, 20, 20, 0.7);
+}
+
+button[name='submitBtn'] {
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-header-text,
+.form-footer-text {
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+}
+.form-header-text {
+  font-size: 24px;
+  padding: 20px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.form-header-text {
+  margin-bottom: 20px;
+}
+
+.form-footer-text {
+  margin-top: 20px;
+}
+
+.form-input-main label[for='nationality'] {
+  width: 100%;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  color: #000;
+}
+
+.form-input-main label[for='policy'],
+.form-input-main label[for='policy2'] {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  color: #000;
+}
+
+.form-input-main label[for='age'],
+.form-input-main label[for='age2'] {
+  font-size: 16px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  color: #000;
+}
+
+.form-input-main input[name='policy'],
+.form-input-main input[name='policy2'] {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type='tel'],
+.iti--allow-dropdown input[type='text'],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type='tel'],
+.iti--separate-dial-code input[type='text'] {
+  width: 100%;
+  padding-left: 104px !important;
+}
+
+.iti__selected-dial-code,
+.iti__arrow {
+  color: #000 !important;
+  border-top-color: #000 !important;
+}
+
+.iti {
+  width: 100% !important;
+}
+
+.iti__country {
+  color: #000 !important;
+}
+
+/* Hide arrows */
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+select {
+  appearance: auto !important;
+}
+
+@media screen and (max-width: 768px) {
+  button[name='submitBtn'] {
+    width: 100%;
+  }
+}
+
+/* End Form */
+
+.form-input-main {
+  background: #f5f5f5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 100%;
+}

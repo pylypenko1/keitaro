@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Projecteur d'étoiles Rossetta</title>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
+    rel="stylesheet" />
+  <!-- ICONS -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <!-- CDN -->
+  <link rel="stylesheet" href="css/slick-theme.css" />
+  <link rel="stylesheet" href="css/slick.css" />
+  <link rel="stylesheet" href="css/flipclock.css" />
+  <link rel="stylesheet" href="css/css1.css" />
+
+  <link href="css/global.css" rel="stylesheet" />
+  <link href="css/override.css" rel="stylesheet" />
+
+  <style type="text/css">
+    img.wp-smiley,
+    img.emoji {
+      display: inline !important;
+      border: none !important;
+      box-shadow: none !important;
+      height: 1em !important;
+      width: 1em !important;
+      margin: 0 0.07em !important;
+      vertical-align: -0.1em !important;
+      background: none !important;
+      padding: 0 !important;
+    }
+  </style>
+  <link rel="stylesheet" id="wp-block-library-css" href="css/style.min.css" type="text/css" media="all" />
+  <style id="classic-theme-styles-inline-css" type="text/css">
+    /*! This file is auto-generated */
+    .wp-block-button__link {
+      color: #fff;
+      background-color: #32373c;
+      border-radius: 9999px;
+      box-shadow: none;
+      text-decoration: none;
+      padding: calc(0.667em + 2px) calc(1.333em + 2px);
+      font-size: 1.125em;
+    }
+
+    .wp-block-file__button {
+      background: #32373c;
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+  <style id="global-styles-inline-css" type="text/css">
+    body {
+      --wp--preset--color--black: #000000;
+      --wp--preset--color--cyan-bluish-gray: #abb8c3;
+      --wp--preset--color--white: #ffffff;
+      --wp--preset--color--pale-pink: #f78da7;
+      --wp--preset--color--vivid-red: #cf2e2e;
+      --wp--preset--color--luminous-vivid-orange: #ff6900;
+      --wp--preset--color--luminous-vivid-amber: #fcb900;
+      --wp--preset--color--light-green-cyan: #7bdcb5;
+      --wp--preset--color--vivid-green-cyan: #00d084;
+      --wp--preset--color--pale-cyan-blue: #8ed1fc;
+      --wp--preset--color--vivid-cyan-blue: #0693e3;
+      --wp--preset--color--vivid-purple: #9b51e0;
+      --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,
+          rgba(6, 147, 227, 1) 0%,
+          rgb(155, 81, 224) 100%);
+      --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,
+          rgb(122, 220, 180) 0%,
+          rgb(0, 208, 130) 100%);
+      --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,
+          rgba(252, 185, 0, 1) 0%,
+          rgba(255, 105, 0, 1) 100%);
+      --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,
+          rgba(255, 105, 0, 1) 0%,
+          rgb(207, 46, 46) 100%);
+      --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,
+          rgb(238, 238, 238) 0%,
+          rgb(169, 184, 195) 100%);
+      --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,
+          rgb(74, 234, 220) 0%,
+          rgb(151, 120, 209) 20%,
+          rgb(207, 42, 186) 40%,
+          rgb(238, 44, 130) 60%,
+          rgb(251, 105, 98) 80%,
+          rgb(254, 248, 76) 100%);
+      --wp--preset--gradient--blush-light-purple: linear-gradient(135deg,
+          rgb(255, 206, 236) 0%,
+          rgb(152, 150, 240) 100%);
+      --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,
+          rgb(254, 205, 165) 0%,
+          rgb(254, 45, 45) 50%,
+          rgb(107, 0, 62) 100%);
+      --wp--preset--gradient--luminous-dusk: linear-gradient(135deg,
+          rgb(255, 203, 112) 0%,
+          rgb(199, 81, 192) 50%,
+          rgb(65, 88, 208) 100%);
+      --wp--preset--gradient--pale-ocean: linear-gradient(135deg,
+          rgb(255, 245, 203) 0%,
+          rgb(182, 227, 212) 50%,
+          rgb(51, 167, 181) 100%);
+      --wp--preset--gradient--electric-grass: linear-gradient(135deg,
+          rgb(202, 248, 128) 0%,
+          rgb(113, 206, 126) 100%);
+      --wp--preset--gradient--midnight: linear-gradient(135deg,
+          rgb(2, 3, 129) 0%,
+          rgb(40, 116, 252) 100%);
+      --wp--preset--font-size--small: 13px;
+      --wp--preset--font-size--medium: 20px;
+      --wp--preset--font-size--large: 36px;
+      --wp--preset--font-size--x-large: 42px;
+      --wp--preset--spacing--20: 0.44rem;
+      --wp--preset--spacing--30: 0.67rem;
+      --wp--preset--spacing--40: 1rem;
+      --wp--preset--spacing--50: 1.5rem;
+      --wp--preset--spacing--60: 2.25rem;
+      --wp--preset--spacing--70: 3.38rem;
+      --wp--preset--spacing--80: 5.06rem;
+      --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+      --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+      --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+      --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1),
+        6px 6px rgba(0, 0, 0, 1);
+      --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+    }
+
+    :where(.is-layout-flex) {
+      gap: 0.5em;
+    }
+
+    :where(.is-layout-grid) {
+      gap: 0.5em;
+    }
+
+    body .is-layout-flow>.alignleft {
+      float: left;
+      margin-inline-start: 0;
+      margin-inline-end: 2em;
+    }
+
+    body .is-layout-flow>.alignright {
+      float: right;
+      margin-inline-start: 2em;
+      margin-inline-end: 0;
+    }
+
+    body .is-layout-flow>.aligncenter {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    body .is-layout-constrained>.alignleft {
+      float: left;
+      margin-inline-start: 0;
+      margin-inline-end: 2em;
+    }
+
+    body .is-layout-constrained>.alignright {
+      float: right;
+      margin-inline-start: 2em;
+      margin-inline-end: 0;
+    }
+
+    body .is-layout-constrained>.aligncenter {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+      max-width: var(--wp--style--global--content-size);
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    body .is-layout-constrained>.alignwide {
+      max-width: var(--wp--style--global--wide-size);
+    }
+
+    body .is-layout-flex {
+      display: flex;
+    }
+
+    body .is-layout-flex {
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    body .is-layout-flex>* {
+      margin: 0;
+    }
+
+    body .is-layout-grid {
+      display: grid;
+    }
+
+    body .is-layout-grid>* {
+      margin: 0;
+    }
+
+    :where(.wp-block-columns.is-layout-flex) {
+      gap: 2em;
+    }
+
+    :where(.wp-block-columns.is-layout-grid) {
+      gap: 2em;
+    }
+
+    :where(.wp-block-post-template.is-layout-flex) {
+      gap: 1.25em;
+    }
+
+    :where(.wp-block-post-template.is-layout-grid) {
+      gap: 1.25em;
+    }
+
+    .has-black-color {
+      color: var(--wp--preset--color--black) !important;
+    }
+
+    .has-cyan-bluish-gray-color {
+      color: var(--wp--preset--color--cyan-bluish-gray) !important;
+    }
+
+    .has-white-color {
+      color: var(--wp--preset--color--white) !important;
+    }
+
+    .has-pale-pink-color {
+      color: var(--wp--preset--color--pale-pink) !important;
+    }
+
+    .has-vivid-red-color {
+      color: var(--wp--preset--color--vivid-red) !important;
+    }
+
+    .has-luminous-vivid-orange-color {
+      color: var(--wp--preset--color--luminous-vivid-orange) !important;
+    }
+
+    .has-luminous-vivid-amber-color {
+      color: var(--wp--preset--color--luminous-vivid-amber) !important;
+    }
+
+    .has-light-green-cyan-color {
+      color: var(--wp--preset--color--light-green-cyan) !important;
+    }
+
+    .has-vivid-green-cyan-color {
+      color: var(--wp--preset--color--vivid-green-cyan) !important;
+    }
+
+    .has-pale-cyan-blue-color {
+      color: var(--wp--preset--color--pale-cyan-blue) !important;
+    }
+
+    .has-vivid-cyan-blue-color {
+      color: var(--wp--preset--color--vivid-cyan-blue) !important;
+    }
+
+    .has-vivid-purple-color {
+      color: var(--wp--preset--color--vivid-purple) !important;
+    }
+
+    .has-black-background-color {
+      background-color: var(--wp--preset--color--black) !important;
+    }
+
+    .has-cyan-bluish-gray-background-color {
+      background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+    }
+
+    .has-white-background-color {
+      background-color: var(--wp--preset--color--white) !important;
+    }
+
+    .has-pale-pink-background-color {
+      background-color: var(--wp--preset--color--pale-pink) !important;
+    }
+
+    .has-vivid-red-background-color {
+      background-color: var(--wp--preset--color--vivid-red) !important;
+    }
+
+    .has-luminous-vivid-orange-background-color {
+      background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+    }
+
+    .has-luminous-vivid-amber-background-color {
+      background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+    }
+
+    .has-light-green-cyan-background-color {
+      background-color: var(--wp--preset--color--light-green-cyan) !important;
+    }
+
+    .has-vivid-green-cyan-background-color {
+      background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+    }
+
+    .has-pale-cyan-blue-background-color {
+      background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+    }
+
+    .has-vivid-cyan-blue-background-color {
+      background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+    }
+
+    .has-vivid-purple-background-color {
+      background-color: var(--wp--preset--color--vivid-purple) !important;
+    }
+
+    .has-black-border-color {
+      border-color: var(--wp--preset--color--black) !important;
+    }
+
+    .has-cyan-bluish-gray-border-color {
+      border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+    }
+
+    .has-white-border-color {
+      border-color: var(--wp--preset--color--white) !important;
+    }
+
+    .has-pale-pink-border-color {
+      border-color: var(--wp--preset--color--pale-pink) !important;
+    }
+
+    .has-vivid-red-border-color {
+      border-color: var(--wp--preset--color--vivid-red) !important;
+    }
+
+    .has-luminous-vivid-orange-border-color {
+      border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+    }
+
+    .has-luminous-vivid-amber-border-color {
+      border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+    }
+
+    .has-light-green-cyan-border-color {
+      border-color: var(--wp--preset--color--light-green-cyan) !important;
+    }
+
+    .has-vivid-green-cyan-border-color {
+      border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+    }
+
+    .has-pale-cyan-blue-border-color {
+      border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+    }
+
+    .has-vivid-cyan-blue-border-color {
+      border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+    }
+
+    .has-vivid-purple-border-color {
+      border-color: var(--wp--preset--color--vivid-purple) !important;
+    }
+
+    .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+      background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+    }
+
+    .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+      background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+    }
+
+    .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+      background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+    }
+
+    .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+      background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+    }
+
+    .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+      background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+    }
+
+    .has-cool-to-warm-spectrum-gradient-background {
+      background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+    }
+
+    .has-blush-light-purple-gradient-background {
+      background: var(--wp--preset--gradient--blush-light-purple) !important;
+    }
+
+    .has-blush-bordeaux-gradient-background {
+      background: var(--wp--preset--gradient--blush-bordeaux) !important;
+    }
+
+    .has-luminous-dusk-gradient-background {
+      background: var(--wp--preset--gradient--luminous-dusk) !important;
+    }
+
+    .has-pale-ocean-gradient-background {
+      background: var(--wp--preset--gradient--pale-ocean) !important;
+    }
+
+    .has-electric-grass-gradient-background {
+      background: var(--wp--preset--gradient--electric-grass) !important;
+    }
+
+    .has-midnight-gradient-background {
+      background: var(--wp--preset--gradient--midnight) !important;
+    }
+
+    .has-small-font-size {
+      font-size: var(--wp--preset--font-size--small) !important;
+    }
+
+    .has-medium-font-size {
+      font-size: var(--wp--preset--font-size--medium) !important;
+    }
+
+    .has-large-font-size {
+      font-size: var(--wp--preset--font-size--large) !important;
+    }
+
+    .has-x-large-font-size {
+      font-size: var(--wp--preset--font-size--x-large) !important;
+    }
+
+    .wp-block-navigation a:where(:not(.wp-element-button)) {
+      color: inherit;
+    }
+
+    :where(.wp-block-post-template.is-layout-flex) {
+      gap: 1.25em;
+    }
+
+    :where(.wp-block-post-template.is-layout-grid) {
+      gap: 1.25em;
+    }
+
+    :where(.wp-block-columns.is-layout-flex) {
+      gap: 2em;
+    }
+
+    :where(.wp-block-columns.is-layout-grid) {
+      gap: 2em;
+    }
+
+    .wp-block-pullquote {
+      font-size: 1.5em;
+      line-height: 1.6;
+    }
+  </style>
+  <link rel="stylesheet" id="wrlocker-style-css" href="css/styles.css" type="text/css" media="all" />
+  <link rel="stylesheet" id="fa-style-css" href="css/font-awesome.min.css" type="text/css" media="all" />
+  <script type="text/javascript" src="js/jquery.min.js" id="jquery-js"></script>
+  <script src="js/wp-emoji-release.min.js" defer></script>
+</head>
+
+<body>
+  <style>
+    :root {
+      --contest-color: #2d2d2d;
+      --hover-border-select-color: #3c7aad;
+      --background-banner: #3c7aad;
+      --background-alert-banner: #f2534a;
+      --background-content: #ffffff;
+      --background-btn-buy: #3c7aad;
+      --hover-background-btn-buy: #000000;
+    }
+  </style>
+
+  <!-- CDN -->
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <!-- JS -->
+  <script type="text/javascript" src="js/carousel.js"></script>
+
+  <!-- HEADER -->
+  <div id="id1" class="header">
+    <div class="container">
+      <div class="nav-logo-link">
+        <span class="nav-logo-base"><img src="images/logo.png" width="97" height="30" alt="Amazon" /></span>
+      </div>
+      <div class="nav-location">
+        <div class="nav-location-icon">
+          <img src="images/icon-location.png" width="15" height="18" alt="" />
+        </div>
+        <div class="nav-location-address">
+          <span class="nav-line nav-line-1 text-69">Livraison en </span><strong class="nav-line nav-line-2 js-country">
+            &nbsp;France</strong>
+        </div>
+      </div>
+      <!-- <div class="header-title text-1">Пробна програма</div> -->
+      <div class="nav-signin">
+        <span class="nav-line-1"><span class="nav-subline-1 text-70">Bonjour,</span>
+          &nbsp;
+          <span class="nav-subline-2 text-71">Se connecter</span></span><strong class="nav-line-2 text-72">Compte et
+          listes</strong>
+      </div>
+      <div class="nav-orders">
+        <span class="nav-line-1 text-73">Retours </span><strong class="nav-line-2 text-74">et commandes</strong>
+      </div>
+      <div class="nav-cart" style="padding: 10px 0;">
+        <div class="nav-cart-count-container">
+          <span class="nav-cart-count"> 0 </span><span class="nav-cart-icon"><img src="images/icon-basket.png"
+              width="38" height="26" alt="" /></span>
+        </div>
+        <div class="nav-cart-text-container" style="padding: 10px 0;">
+          <span class="nav-line-1 text-75"></span><strong class="nav-line-2 text-76">Panier</strong>
+        </div>
+        <div class="flag-icon"></div>
+      </div>
+    </div>
+  </div>
+  <!-- PRODUCT -->
+  <div id="product">
+    <div class="preview-container">
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="container-img" style="background-image: url(images/1.jpg)">
+            <img src="images/background-slider-image.jpg" alt />
+          </div>
+          <div class="container-img" style="background-image: url(images/2.jpg)">
+            <img src="images/background-slider-image.jpg" alt />
+          </div>
+          <div class="container-img" style="background-image: url(images/4.jpg)">
+            <img src="images/background-slider-image.jpg" alt />
+          </div>
+          <div class="container-img" style="background-image: url(images/3.jpg)">
+            <img src="images/background-slider-image.jpg" alt />
+          </div>
+        </div>
+        <div class="select-carousel-container">
+          <div class="select-carousel">
+            <script>
+              let imagesSB = {};
+            </script>
+            <div class="container-img">
+              <img src="images/1.jpg" alt class="selected" data-number="0" value-from-select />
+            </div>
+            <div class="container-img">
+              <img src="images/2.jpg" alt class data-number="1" value-from-select />
+            </div>
+            <div class="container-img">
+              <img src="images/4.jpg" alt class data-number="2" value-from-select />
+            </div>
+            <div class="container-img">
+              <img src="images/3.jpg" alt class data-number="3" value-from-select />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-container">
+      <h1>Projecteur d'étoiles Rossetta</h1>
+      <div class="container-img">
+        <img src="fonts/5-stars.svg" alt />
+        <div class="review-container">
+          <p class="numberReview">6018</p>
+          <p class="textReview">avis</p>
+        </div>
+      </div>
+
+      <div class="offer-container">
+        <p>
+          <svg class="icon icon-accordion color-foreground-text" aria-hidden="true" focusable="false"
+            role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+            style="display: inline-block; vertical-align: sub">
+            <path
+              d="M0 3.75156C0 3.47454 0.224196 3.24997 0.500755 3.24997H10.647C10.9235 3.24997 11.1477 3.47454 11.1477 3.75156V5.07505V5.63362V6.10938V13.6616C10.9427 14.0067 10.8813 14.1101 10.5516 14.6648L7.22339 14.6646V13.6614H10.1462V4.25316H1.00151V13.6614H2.6842V14.6646H0.500755C0.224196 14.6646 0 14.44 0 14.163V3.75156Z" />
+            <path
+              d="M18.9985 8.08376L11.1477 6.10938V5.07505L19.6212 7.20603C19.8439 7.26203 20 7.46255 20 7.69253V14.1631C20 14.4401 19.7758 14.6647 19.4992 14.6647H17.3071V13.6615H18.9985V8.08376ZM11.1477 13.6616L13.3442 13.6615L13.3443 14.6647L10.5516 14.6648L11.1477 13.6616Z" />
+            <path
+              d="M7.71269 14.1854C7.71269 15.6018 6.56643 16.75 5.15245 16.75C3.73847 16.75 2.59221 15.6018 2.59221 14.1854C2.59221 12.7691 3.73847 11.6209 5.15245 11.6209C6.56643 11.6209 7.71269 12.7691 7.71269 14.1854ZM5.15245 15.7468C6.01331 15.7468 6.71118 15.0478 6.71118 14.1854C6.71118 13.3231 6.01331 12.6241 5.15245 12.6241C4.29159 12.6241 3.59372 13.3231 3.59372 14.1854C3.59372 15.0478 4.29159 15.7468 5.15245 15.7468Z" />
+            <path
+              d="M17.5196 14.1854C17.5196 15.6018 16.3733 16.75 14.9593 16.75C13.5454 16.75 12.3991 15.6018 12.3991 14.1854C12.3991 12.7691 13.5454 11.6209 14.9593 11.6209C16.3733 11.6209 17.5196 12.7691 17.5196 14.1854ZM14.9593 15.7468C15.8202 15.7468 16.5181 15.0478 16.5181 14.1854C16.5181 13.3231 15.8202 12.6241 14.9593 12.6241C14.0985 12.6241 13.4006 13.3231 13.4006 14.1854C13.4006 15.0478 14.0985 15.7468 14.9593 15.7468Z" />
+          </svg>
+          Livraison gratuite en 48h
+        </p>
+        <p>✓ Retour dans les 30 jours</p>
+        <p>
+          <svg class="icon icon-accordion color-foreground-text" aria-hidden="true" focusable="false"
+            role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+            style="display: inline-block; vertical-align: sub">
+            <path
+              d="M9.69502 0.6786C9.91338 0.601796 10.1516 0.603123 10.3691 0.682353L18.2151 3.54058C18.61 3.68445 18.8728 4.05988 18.8728 4.48018V14.4287C18.8728 14.8074 18.6588 15.1537 18.32 15.3231L10.4731 19.2465C10.196 19.385 9.87022 19.3873 9.59117 19.2526L1.45405 15.3244C1.10843 15.1576 0.888794 14.8076 0.888794 14.4239V4.48434C0.888794 4.05997 1.15665 3.68181 1.55699 3.541L9.69502 0.6786ZM6.07999 3.01017L2.5346 4.25719L10.149 7.63545L13.5692 6.118L6.07999 3.01017ZM6.78606 2.76183L14.1997 5.83828L17.5367 4.35774L10.0268 1.62195L6.78606 2.76183ZM1.88879 14.4239L1.88879 5.06467L9.64898 8.50762V18.1701L1.88879 14.4239ZM17.8728 14.4287L10.649 18.0405V8.50762L17.8728 5.30263V14.4287Z"
+              fill-rule="evenodd" />
+          </svg>
+          Livré depuis notre entrepôt à Blagnac 🇫🇷
+        </p>
+      </div>
+      <div class="btn-payment-container">
+        <div class="price">
+          <span class="old-price">30.00€</span>
+          <span class="new-price">2.00€</span>
+          <span class="regular-price">30.00€</span>
+        </div>
+        <a href="{offer}" class="btn-payment">
+          <img src="fonts/cart.svg" alt />
+          <p>Commander</p>
+        </a>
+      </div>
+
+      <div style="
+            background-color: #f2f2f2;
+            padding: 10px 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: black;
+          ">
+        <span style="text-decoration: underline; font-weight: bold">Attention! :</span> L'offre se
+        termine à épuisement des stocks, nous limitons les commandes à
+        <span style="text-decoration: underline; font-weight: bold">1 article par personne</span>.
+      </div>
+
+      <div class="container-img max">
+        <img src="images/ticTac.gif" alt />
+      </div>
+
+      <div class="cards-container">
+        <span class="card-title">Paiement sécurisé par</span>
+        <img src="fonts/visa.svg" alt />
+        <img src="fonts/mastercard.svg" alt />
+        <img src="fonts/american-express.svg" alt />
+        <img src="fonts/jcb.svg" alt />
+        <img src="fonts/cb.svg" alt />
+      </div>
+
+      <!-- ATTRIBUTES -->
+      <div id="attributes" class>
+        <div class="info-container">
+          <h2>
+            Projecteur d'étoiles Rossetta avec projecteur de galaxies, veilleuse et haut-parleur musical
+          </h2>
+          <p>
+            Mieux qu'une veilleuse, des bandeaux lumineux à LED, des lumières stroboscopiques, une lampe de table, des
+            lumières de Noël et bien plus encore, les veilleuses projecteurs d'étoiles Rossetta illuminent la nuit en
+            rapprochant l'espace extérieur de vous avec des sons apaisants.
+          </p>
+          <div class="info">
+            <div class="img-container">
+              <img src="images/8.jpg" alt />
+            </div>
+            <p>
+              Le projecteur d'ambiance à étoiles et galaxies pour la chambre à coucher est doté de 14 effets d'éclairage
+              réglables, présentant 14 couleurs vives qui projettent des étoiles scintillantes et des nébuleuses
+              captivantes. Il dispose de 4 couleurs primaires (rouge, vert, bleu et blanc), et elles peuvent être
+              combinées via la télécommande pour créer jusqu'à 15 modes de couleur différents, vous offrant ainsi de
+              nombreuses options de couleur pour ne jamais vous ennuyer.
+            </p>
+          </div>
+          <div class="info">
+            <div class="img-container">
+              <img src="images/6.jpg" alt />
+            </div>
+            <p>
+              Le projecteur d'étoiles et de galaxies dispose également d'un haut-parleur intégré et de 19 sons blancs.
+              La fonction haut-parleur Bluetooth du projecteur de galaxies LED peut être synchronisée avec votre
+              appareil Bluetooth. Une fois jumelées à votre musique, les lumières interagiront avec le rythme de votre
+              musique et bougeront au rythme de la musique ! La prochaine fois que vous aurez du mal à vous endormir,
+              sélectionnez l'un des bruits blancs pour vous aider à vous endormir.
+            </p>
+          </div>
+          <div class="info">
+            <div class="img-container">
+              <img src="images/7.jpg" alt />
+            </div>
+            <p>
+              La veilleuse projecteur de nuit de Rossetta est une lumière adaptée aux enfants avec des sons apaisants
+              qui rendent la préparation au coucher amusante et excitante chaque soir. Elle transforme instantanément
+              les pièces sombres en sanctuaires sécurisés d'une simple pression sur un bouton. Que vous cherchiez à
+              créer l'ambiance parfaite dans votre salon ou à endormir des enfants anxieux, les projecteurs de veilleuse
+              sont un spectacle amusant et apaisant pour tous les âges, favorisant un meilleur sommeil.
+            </p>
+          </div>
+          <div class="info">
+            <div class="img-container">
+              <img src="images/9.jpg" alt />
+            </div>
+            <br>
+          </div>
+          <div id="features">
+            <div class="feature">
+              <span class="feature-name">Style</span>
+              <span class="feature-value">Moderne</span>
+            </div>
+            <div class="feature">
+              <span class="feature-name">Marque</span>
+              <span class="feature-value">Rossetta</span>
+            </div>
+            <div class="feature">
+              <span class="feature-name">Dimensions du produit</span>
+              <span class="feature-value">6,3 po de diamètre x 4,3 po de largeur x 6,3 po de hauteur</span>
+            </div>
+            <div class="feature">
+              <span class="feature-name">Fonction spéciale</span>
+              <span class="feature-value">Hauteur réglable, Changement de couleur</span>
+            </div>
+            <div class="feature">
+              <span class="feature-name">Type de source lumineuse</span>
+              <span class="feature-value">LED</span>
+            </div>
+            <div class="feature">
+              <span class="feature-name">Type de finition</span>
+              <span class="feature-value">Peint</span>
+            </div>
+            <div class="feature">
+              <span class="feature-name">Matériau</span>
+              <span class="feature-value">Plastique</span>
+            </div>
+            <div class="feature">
+              <span class="feature-name">Type de lampe</span>
+              <span class="feature-value">Veilleuse</span>
+            </div>
+            <div class="feature">
+              <span class="feature-name">Type de pièce</span>
+              <span class="feature-value">Chambre d'enfant, Chambre à coucher, Salon</span>
+            </div>
+            <div class="feature">
+              <span class="feature-name">Couleur de l'abat-jour</span>
+              <span class="feature-value">Multicolore</span>
+            </div>
+          </div>
+          <div class="info">
+            <div class="img-container">
+              <img src="images/10.jpg" alt />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="warranty">
+    <div class="container">
+      <div class="content">
+        <h2 class="warranty-title">Votre satisfaction, notre garantie</h2>
+        <p>
+          Nous sommes convaincus que la satisfaction de nos clients est primordiale. C'est
+          pourquoi nous offrons une politique de retour satisfait ou remboursé pour tous nos
+          produits.<br />
+          Si vous n'êtes pas complètement satisfait de votre achat, il vous suffit de nous le
+          retourner dans les 15 jours suivant la réception de votre commande, et nous vous
+          rembourserons le montant total de votre achat.<br />
+        </p>
+      </div>
+      <div class="image"></div>
+    </div>
+  </div>
+
+  <!-- REVIEWS -->
+  <div id="reviews">
+    <div class="container">
+      <h2 class="title">
+        Ils parlent de <b>Projecteur d'étoiles Rossetta</b><span><img src="fonts/5-stars.svg" alt /> basé sur 6 018
+          avis</span>
+      </h2>
+      <button class="submit-review" onclick="alert('Avant de pouvoir déposer une avis, merci de passer une commande')">
+        Déposer un avis
+      </button>
+      <div class="reviews-container">
+        <div class="review">
+          <div class="stars-container">
+            <img src="fonts/5-stars.svg" alt />
+          </div>
+          <div class="text-container">
+            <span class="name">Romain vln</span>
+            <span class="verified">Achat vérifié</span>
+            <p>
+              Ce projecteur en forme d'œuf confère à n'importe quelle pièce dans laquelle il est placé un aspect
+              atmosphérique et cool. J'ai fixé mes attentes à un niveau bas après avoir lu les spécifications du
+              produit, et dans l'ensemble, je dirais qu'il a répondu à ces attentes, voire les a légèrement dépassées.
+              J'ai ce produit depuis près d'un mois et je l'utilise tous les jours depuis lors sans aucun signe de
+              déclin de performance ou d'apparence. J'ai divertis des invités âgés de 6 à 70 ans et je n'ai pas encore
+              reçu de compliment négatif (bouche bée pour les préadolescents et en-dessous). Les photos que j'ai
+              publiées ne captent pas à quel point ce produit peut être captivant.
+
+              Points positifs : j'aime comment il peut superposer 2 couleurs en même temps pour un effet visuel plus
+              profond tout en contrôlant la vitesse du mouvement des nuages et le basculement de l'affichage des
+              étoiles. Très bien en tant que veilleuse lorsque l'œuf est fermé ou ouvert. Je prends encore plaisir à la
+              valeur de nouveauté un mois après l'achat.
+
+              Points négatifs : options de couleur limitées. Les étoiles n'apparaissent qu'en vert. Qualité des sons et
+              des haut-parleurs intégrés (pas très important pour moi car je l'ai acheté uniquement pour l'affichage
+              visuel).
+
+              J'espère que cela vous a été au moins quelque peu utile et bonne chance.
+            </p>
+            <img src="images/r1.jpeg" class="image" />
+            <span class="date">17/08/2023</span>
+          </div>
+        </div>
+        <div class="review">
+          <div class="stars-container">
+            <img src="fonts/5-stars.svg" alt />
+          </div>
+          <div class="text-container">
+            <span class="name">qnanbi bilal</span>
+            <span class="verified">Achat vérifié</span>
+            <p>
+              Acheté cela pour notre chambre à coucher ! Notre chambre est légèrement trop grande pour obtenir
+              l'expérience sur l'image, mais cela ajoute toujours une atmosphère incroyable à notre chambre la nuit
+              lorsque nous nous endormons et... pour d'autres activités.
+            </p>
+            <img src="images/r7.jpeg" class="image" />
+            <span class="date">15/08/2023</span>
+          </div>
+        </div>
+        <div class="review">
+          <div class="stars-container">
+            <img src="fonts/5-stars.svg" alt />
+          </div>
+          <div class="text-container">
+            <span class="name">martine paga</span>
+            <span class="verified">Achat vérifié</span>
+            <p>
+              Les nuages LED sont en partie mécaniques car on peut entendre
+              un léger bruit de la lampe lorsqu'elle est en mouvement. Chacune des options laser et LED peut être
+              contrôlée séparément ou jouée ensemble avec la télécommande incluse. Tout fonctionne. Ce n'était pas aussi
+              intéressant que certaines des démonstrations que j'ai vues avant l'achat, mais dans l'ensemble c'est
+              génial. Elle est également livrée avec une banque de sons pour dormir qui diffuse des sons d'eau,
+              d'oiseaux, etc. Les choix de la banque de sons semblent assez bons, et le contrôle du volume est bon, vous
+              pouvez donc jouer les effets sonores à différents volumes, de doux à modérément fort. À un volume élevé,
+              cela bloquerait probablement certaines conversations à proximité dans une maison ou un appartement si
+              c'était l'objectif de votre achat. Les sons ne s'allument pas automatiquement, chaque fonction de la lampe
+              finit donc par être un choix. Vous pouvez personnaliser le spectacle lumineux de nombreuses façons
+              différentes, notamment les combinaisons de couleurs. Les étoiles vertes du laser sont toujours vertes,
+              cependant.
+            </p>
+            <img src="images/r2.jpeg" class="image" />
+            <span class="date">14/08/2023</span>
+          </div>
+        </div>
+        <div class="review">
+          <div class="stars-container">
+            <img src="fonts/4-stars.svg" alt />
+          </div>
+          <div class="text-container">
+            <span class="name">enitram83210</span>
+            <span class="verified">Achat vérifié</span>
+            <p>
+              C'est notre lampe préférée !
+            </p>
+            <img src="images/r6.jpeg" class="image" />
+            <span class="date">12/08/2023</span>
+          </div>
+        </div>
+        <div class="review">
+          <div class="stars-container">
+            <img src="fonts/4-stars.svg" alt />
+          </div>
+          <div class="text-container">
+            <span class="name">Stéphane Salord</span>
+            <span class="verified">Achat vérifié</span>
+            <p>
+              Super projecteur, mais il s'éteint toutes les 4 heures. Mais ça vaut quand même le coup. Fonctionne aussi
+              très bien en tant que veilleuse. Idéal pour les enfants. Recommandé sans aucun doute.
+            </p>
+            <img src="images/r3.jpeg" class="image" />
+            <span class="date">11/08/2023</span>
+          </div>
+        </div>
+        <div class="review">
+          <div class="stars-container">
+            <img src="fonts/5-stars.svg" alt />
+          </div>
+          <div class="text-container">
+            <span class="name">FELIX ROLAND</span>
+            <span class="verified">Achat vérifié</span>
+            <p>
+              Génial, les meilleures lumières que j'aie jamais vues, meilleures que prévu, le son est également super,
+              ma fille adore ça.
+            </p>
+            <img src="images/r5.jpeg" class="image" />
+            <span class="date">09/08/2023</span>
+          </div>
+        </div>
+        <div class="review">
+          <div class="stars-container">
+            <img src="fonts/5-stars.svg" alt />
+          </div>
+          <div class="text-container">
+            <span class="name">Aurélie Angeline</span>
+            <span class="verified">Achat vérifié</span>
+            <p>
+              Génial ! J'adore le scintillement des étoiles. Seulement, je n'ai pas fait attention aux piles nécessaires
+              pour la télécommande afin d'accéder aux différents schémas de couleurs. Alors n'oubliez pas 2 piles AAA.
+              La qualité sonore de la machine à bruits était également très bonne. Satisfait de l'achat et de la
+              réaction de ma fille.
+            </p>
+            <img src="images/r4.jpeg" class="image" />
+            <span class="date">08/08/2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="fixed-add-to-cart-button" class="btn-payment-container">
+    <a href="{offer}" class="btn-payment">
+      <img src="fonts/cart.svg" alt />
+      <p>Commander</p>
+    </a>
+  </div>
+
+  <script>
+    // $(document).ready(function () {
+    //   window.scrollTo(0, 35);
+    //   fbq('track', 'ViewContent');
+    //   $('.btn-payment').on('click', (e) => {
+    //     $('#loader').css('display', 'block');
+    //     fbq('track', 'AddToCart');
+    //     window.location = "{offer}";
+    //   });
+    // });
+  </script>
+
+  <div id="reinsurances">
+    <div class="container">
+      <div class="reinsurance">
+        <img src="fonts/delivery.svg" alt />
+        <span>Livraison <br /><b>Offerte</b></span>
+      </div>
+      <div class="reinsurance">
+        <img src="fonts/secure.svg" alt />
+        <span>Paiement <br /><b>100% sécurisé</b></span>
+      </div>
+      <div class="reinsurance">
+        <img src="fonts/return.svg" alt />
+        <span>Satisfait ou <br /><b>remboursé</b></span>
+      </div>
+      <div class="reinsurance">
+        <img src="fonts/service.svg" alt />
+        <span>Service Client <br /><b>dédié 24/7</b></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer" class="footer">
+    <p style="padding: 20px; margin-bottom: 0px; font-size: 13px">
+      <a href="{offer}" class="text-62">Conditions de vente</a><span style="color: #fff;">•</span>
+      <a href="{offer}" class="text-63">Conditions de participation au programme de marché</a><span
+        style="color: #fff;">•</span>
+      <a href="{offer}" class="text-64">Données personnelles</a><span style="color: #fff;">•</span>
+      <a href="{offer}" class="text-65">Cookies</a><span style="color: #fff;">•</span>
+      <a href="{offer}" class="text-66">Annonces basées sur vos intérêts</a>
+    </p>
+  </div>
+
+  <script src="js/dateGeneration.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Parabéns!</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/thanks.css" />
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      let clickId = '';
+      let currentUrl = window.location.href;
+
+      if (currentUrl.indexOf('?') !== -1) {
+        let splitUrl = currentUrl.split('?');
+        let arrAttr = splitUrl[1].split('&');
+
+        for (let i = 0; i < arrAttr.length; i++) {
+          if (arrAttr[i].indexOf('idpxl') !== -1) {
+            let valuePxl = arrAttr[i].split('=')[1];
+            createPXLcode(valuePxl);
+          }
+        }
+      }
+
+      function createPXLcode(pixelID) {
+        !(function (f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = '2.0';
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', pixelID);
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
+      }
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <img id="pb" height="1" width="1" style="display: none" src="" />
+    <script>
+      var matches = document.cookie.match(new RegExp('(?:^|; )' + 'subid' + '=([^;]*)'));
+      var subId = matches ? decodeURIComponent(matches[1]) : undefined;
+      document.getElementById('pb').src =
+        'https://keitaro-leadar.ink/f6c793a/postback?subid=' + subId + '&status=lead';
+    </script>
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <header class="header">
+        <img src="images/logo.png" alt="logotype" class="logo-img" />
+      </header>
+      <main class="main">
+        <div class="container">
+          <div class="main-content">
+            <h1 class="main-heading">
+              <span class="main-heading-1st">¡Felicidades!</span>
+              <br />
+              <span class="main-heading-2nd"> ¡Se ha registrado exitosamente! </span>
+            </h1>
+            <p class="thnx-text">
+              <span class="thnx-text-1st"
+                >Para tener acceso completo a la plataforma, debe esperar una llamada de un asesor
+                personal.</span
+              >
+              <br /><br />
+              <span class="thnx-text-1st"
+                >Su asesor personal se pondrá en contacto con usted a su debido tiempo.
+                tiempo:</span
+              >
+              <!-- <br><br>
+                        <span class="thnx-text-2nd">Um em cada cinco brasileiros pensa que fazer investimentos é uma
+                            tarefa muito difícil, mas você terá a oportunidade de trabalhar com a ajuda de
+                            profissionais. Espere receber uma chamada de nosso especialista das 09:00 às 20:00 para uma
+                            revisão detalhada e para reservar um assento. Beneficie-se da maior empresa de petróleo e
+                            gás do país!</span> -->
+            </p>
+            <div class="counter-wrapper">
+              <div class="numbers-wrapper">
+                <div class="numbers-block-outer">
+                  <div class="numbers-block-inner">
+                    <span class="current-number hours">23</span>
+                  </div>
+                </div>
+                <span class="time-measure hours-span">horas</span>
+              </div>
+              <div class="numbers-wrapper">
+                <div class="numbers-block-outer">
+                  <div class="numbers-block-inner">
+                    <span class="current-number minutes">51</span>
+                  </div>
+                </div>
+                <span class="time-measure minutes-span">minutos</span>
+              </div>
+              <div class="numbers-wrapper">
+                <div class="numbers-block-outer">
+                  <div class="numbers-block-inner">
+                    <span class="current-number seconds">23</span>
+                  </div>
+                </div>
+                <span class="time-measure seconds-span">segundos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /* COUNTER */
+
+      var localStorage = window.localStorage,
+        startDate;
+
+      if (localStorage.getItem('startDate')) {
+        startDate = localStorage.getItem('startDate');
+      } else {
+        startDate = new Date();
+        localStorage.setItem('startDate', startDate);
+      }
+      setTimer(startDate);
+
+      function setTimer(startDate) {
+        var deadline = new Date(Date.parse(startDate) + 01 * 24 * 60 * 60 * 1000);
+        initializeClock('countdown', deadline);
+      }
+
+      // Countdown
+      function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        return {
+          total: t,
+          hours: hours,
+          minutes: minutes,
+          seconds: seconds,
+        };
+      }
+
+      function initializeClock(id, endtime) {
+        var clock = document.querySelector('.counter-wrapper');
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+
+        function updateClock() {
+          var t = getTimeRemaining(endtime);
+
+          hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+          minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+          secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+          if (t.total <= 0) {
+            startDate = new Date();
+            localStorage.setItem('startDate', startDate);
+            var deadline = new Date(Date.parse(startDate) + 24 * 60 * 60 * 1000);
+            initializeClock('countdown', deadline);
+            clearInterval(timeinterval);
+          }
+        }
+
+        updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+      }
+    </script>
+  </body>
+</html>

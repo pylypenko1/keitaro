@@ -1,0 +1,85 @@
+
+.comments {
+    background: #fff;
+    padding-bottom: 30px;
+}
+
+.recent {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+    .recent p, .recent a {
+        font-family: Tahoma;
+        font-size: 14px;
+        margin: 0;
+        line-height: 18px;
+        color: #3B5998;
+    }
+
+    .recent p {
+        font-weight: bold;
+    }
+
+.media {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 8px 0;
+    border-top: 1px solid #E2E2E2;
+}
+
+.media.border-bottom {
+    border-bottom: 1px solid #E2E2E2;
+}
+
+.media-left img {
+    height: 55px !important;
+    width: 55px !important;
+}
+.media-body{
+    width: 90%;
+    margin-left: 15px;
+}
+.media-body h4 a {
+    font-family: Tahoma;
+    font-size: 13px;
+    color: #3B5998;
+    margin: 0 0 5px 0;
+    line-height: 14px;
+    font-weight: bold;
+}
+
+    .media-body h4 a:hover, .media-body h4 a:focus {
+        color: #3B5998;
+    }
+
+.media-body p {
+    font-family: Tahoma;
+    font-size: 12px;
+    color: #1A1A1A;
+    line-height: 15px;
+    margin: 0 0 5px 0;
+}
+
+    .media-body p.bottom {
+        color: #3B5998;
+    }
+
+        .media-body p.bottom .like {
+            margin-left: 8px;
+        }
+
+        .media-body p.bottom .time {
+            color: #808080;
+            border-bottom: 1px dotted #808080;
+        }
+
+.comments p.small {
+    font-family: Tahoma;
+    font-size: 11px;
+    color: #3B5998;
+    margin: 10px 0;
+}

@@ -1,0 +1,159 @@
+#modal-error .modal-dialog.modal-sm {
+    width: 100%;
+}
+#modal-error button.close {
+    position: relative;
+    z-index: 99999;
+    font-size: 44px;
+    right: 15px;
+}
+form input.err,
+form input.err:focus {
+    background-color: rgba(230, 25, 25, 0.3) !important;
+    color: #fff;
+}
+form input.valid,
+form input.valid:focus {
+    background-color: rgba(25, 230, 25, 0.3) !important;
+}
+.modal-open {
+    overflow: scroll;
+    display: block;
+}
+.cookie-policy,
+.exit_popup {
+    display: none;
+}
+.cookie-policy.active {
+    display: block;
+}
+button,
+input {
+    outline: 0;
+}
+.pops {
+    cursor: pointer;
+}
+.exit_popup {
+    background: rgba(255, 255, 255, 0.6);
+}
+.help-block-error {
+    line-height: 1;
+    margin: 0 0 11px;
+    text-align: left;
+    background-color: red;
+    color: #fff;
+}
+form .help-block {
+    display: block;
+}
+.form-registration .intgrtn-form-signup input[name="phone"] {
+    padding-left: 94px !important;
+}
+.form-container-unique .form-group .help-block.block {
+    display: block;
+}
+.err::-webkit-input-placeholder,
+.valid::-webkit-input-placeholder {
+    color: #fff;
+}
+.err::-moz-placeholder,
+.valid::-moz-placeholder {
+    color: #fff;
+}
+.err:-ms-input-placeholder,
+.valid:-ms-input-placeholder {
+    color: #fff;
+}
+.err:-moz-placeholder,
+.valid:-moz-placeholder {
+    color: #fff;
+}
+.play-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 87%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+@media screen and (max-width: 768px) {
+    .play-btn {
+        opacity: 0;
+        display: none;
+    }
+}
+.play-btn:before {
+    content: "";
+    display: block;
+    width: 24%;
+    background: url(https://tesla-invest.me/form/play.png);
+    height: 48%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.play .play-btn:before {
+    opacity: 0;
+}
+.pop-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 97;
+    display: none;
+}
+.pop-outer.active {
+    display: flex;
+}
+.pop-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+.pop-inner {
+    height: 80%;
+    position: relative;
+    z-index: 101;
+    background: #fff;
+    max-width: 80%;
+}
+.pop-inner__in {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0 40px 0 40px;
+}
+.pop-close {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 5;
+}
+@media screen and (max-width: 768px) {
+    .pop-inner {
+        max-width: 100%;
+    }
+    .pop-inner__in {
+        padding: 0;
+    }
+    .pop-inner__in svg {
+        width: auto;
+        height: auto;
+    }
+}

@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="robots" content="noindex,nofollow">
+   <title>Талко Инвест</title>
+   <link rel="icon" type="image/png" href="images/pn1.png">
+   <link rel="stylesheet" href="css/form.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/intlTelInput.min.css">
+   <link rel="stylesheet" href="css/video-js.css">
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/timer.css">
+   <link rel="stylesheet" href="css/modal.css">
+   <link rel="stylesheet" href="css/app.css">
+
+   <!-- JS adapter -->
+   <script type="application/javascript">
+      function getCookie(name) {
+         var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+         return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+         var d = new Date;
+         d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+         document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+         var params = new URLSearchParams(document.location.search.substr(1));
+         if (!'{subid}'.match('{')) {
+            return '{subid}';
+         }
+         var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+         if (clientSubid && !clientSubid.match('>')) {
+            return clientSubid;
+         }
+         if (params.get('_subid')) {
+            return params.get('_subid')
+         }
+         if (params.get('subid')) {
+            return params.get('subid')
+         }
+         if (getCookie('subid')) {
+            return getCookie('subid');
+         }
+      }
+
+      if (typeof URLSearchParams === 'function') {
+         document.addEventListener("DOMContentLoaded", function (event) {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            var subid = getSubId();
+
+            setCookie('subid', subid);
+
+            // Adds params to the links  
+            document.querySelectorAll('a').forEach(function (link) {
+               var url = new URL(link.href);
+               params.forEach(function (v, k) {
+                  url.searchParams.append(k, v);
+               });
+               link.href = url.toString();
+            });
+
+            // Adds params as hidden inputs to the forms
+            document.querySelectorAll('form').forEach(function (form) {
+               params.forEach(function (v, k) {
+                  var input = document.createElement('input');
+                  input.type = 'hidden';
+                  input.name = k;
+                  input.value = v;
+
+                  form.append(input);
+               });
+            });
+         })
+      }
+   </script>
+   <!-- End JS adapter -->
+</head>
+
+<body data-target="#mainNavbar" class="">
+   <div id="app">
+      <div class="topBarCTA">
+         <div class="countdownBox">
+            <span class="countdownTime" id="register-count1">54</span>
+            <i class="fa fa-arrow-left"></i>
+            <span class="countdownMessage">
+               Пользователей на сайте
+            </span>
+         </div>
+         <div class="dateBox">
+            <span class="countdownTime" id="register-count2">15</span>
+            <i class="fa fa-arrow-left"></i>
+            <span><span class="fa fa-exclamation-triangle"></span>
+               Количество свободных мест
+         </div>
+      </div>
+      <section id="heroSection">
+         <div class="container">
+            <div class="heroRow">
+               <img class="img-responsive heroLogo lazyload" alt="Талко Инвест" src="./images/pn1.png">
+               <h1 class="heroHeadline">ТАЛКО Инвест  разработал платформу, на которой каждый сможет вкладывать и зарабатывать от $2 500 в месяц на акциях компании!</h1>
+            </div>
+            <div class="row hero-block">
+               <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 hero-video">
+                  <div class="videoOuterWrap">
+                     <div id="mainVideo">
+                        <div class="component-ivideo">
+                           <div class="videoWrapper">
+                              <div id="video"
+                                 data-setup="{ &quot;controls&quot;: true, &quot;autoplay&quot;: true, &quot;preload&quot;: &quot;auto&quot;, &quot;controlBar&quot;: false, &quot;fluid&quot;: true }"
+                                 class="video-js vjs-show-big-play-button-on-pause vjs-big-play-centered vjs-paused vjs-fluid video-dimensions vjs-controls-enabled vjs-workinghover vjs-v7 vjs-user-active"
+                                 lang="de" role="region" aria-label="Video Player">
+                                 <video class="vjs-tech"
+                                    data-setup="{ &quot;controls&quot;: true, &quot;autoplay&quot;: true, &quot;preload&quot;: &quot;auto&quot;, &quot;controlBar&quot;: false, &quot;fluid&quot;: true }"
+                                    id="video_html5_api" tabindex="-1" preload="auto" autoplay=""
+                                    src="./video/video1.mp4">
+                                    <source src="./video/video1.mp4" type="video/mp4">
+                                 </video>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: center; color: #fff; margin: 10px 0; font-size: 18px; font-weight: bold;">
+                    Начните инвестировать всего со $150!
+                     <br>
+                     Посмотрите это видео, чтобы узнать больше об инновационной платформе ТАЛКО Инвест
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 hero-form">
+                  <div class="contactForm top_form">
+                     <form method="POST" id="leadform" class="register-form contact_form content_inner flex">
+                        <h3>Оставьте ваш актуальный номер телефона, на который вы получите доступ к платформе</h3>
+                        <div class="input_group input_name shadow">
+                           <input type="text" placeholder="Имя" class="form-control required form-input"
+                              name="first_name" id="first_name" required autocomplete="off" />
+                        </div>
+                        <div class="input_group input_last_name shadow">
+                           <input type="text" placeholder="Фамилия" class="form-control required form-input"
+                              name="last_name" id="last_name" required autocomplete="off" />
+                        </div>
+                        <div class="input_group input_email shadow">
+                           <input type="email" placeholder="Email" class="form-control required" name="email" id="email"
+                              required autocomplete="off" />
+                        </div>
+                        <div class="input_group intl-tel-input shadow">
+                           <input type="tel" id="phone1" name="phone1" placeholder="" autocomplete="off" required=""
+                              class="form-control">
+                           <input type="hidden" id="realPhone" name="realPhone" class="hidden-phone" value="" />
+                           <input type="hidden" id="country" name="country" value="" />
+                        </div>
+                        <div class="input_group">
+                           <button type="submit" class="btn btn-submit btn-get-robot text-uppercase redBtn">
+                              <span>Начать зарабатывать</span>
+                           </button>
+                        </div>
+                     </form>
+
+                     <style>
+                        #leadform h3,
+                        .form-title {
+                           font-size: 18px;
+                           margin: 15px 0;
+                           color: #f5d33c;
+                        }
+
+                        input.form-control {
+                           width: 100%;
+                           margin-bottom: 5px;
+                           padding: 10px;
+                           border-radius: 6px;
+                           border: 1px solid gray;
+                        }
+
+                        button.redBtn {
+                           text-align: center;
+                           width: 100%;
+                           display: block;
+                           background: #e62626;
+                           color: white;
+                           border: 0;
+                           padding: 15px;
+                           border-radius: 7px;
+                           font-weight: 700;
+                           cursor: pointer;
+                           text-transform: uppercase;
+                        }
+                     </style>
+                  </div>
+               </div>
+            </div>
+         </div>
+   </div>
+   </div>
+   </section>
+   <section id="heroLogos">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="flex-row">
+                  <img src="images/pn2.png" alt="" class="img-responsive" style="height: 50px;">
+                  <img src="images/pn3.png" alt="" class="img-responsive" style="height: 60px;">
+                  <img src="images/pn4.png" alt="" class="img-responsive" style="height: 35px;">
+                  <!-- <img src="images/bank/bank4.png" alt="" class="img-responsive"> -->
+                  <!-- <img src="images/bank/bank5.svg" alt="" class="img-responsive"> -->
+                  <!-- <img src="images/bank/bank6.png" alt="" class="img-responsive"> -->
+                  <div class="steps">
+                     <div class="step">
+                        <div class="step-badge">
+                           <span>1</span>
+                        </div>
+                        <p>
+                           Смотрите видео
+                        </p>
+                     </div>
+                     <div class="step">
+                        <div class="step-badge">
+                           <span>2</span>
+                        </div>
+                        <p>
+                           Заполняйте форму, чтобы создать бесплатную учетную запись
+                        </p>
+                     </div>
+                     <div class="step">
+                        <div class="step-badge">
+                           <span>3</span>
+                        </div>
+                        <p>
+                           Вы получите бесплатный звонок от специалиста
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="cryptoMedia">
+      <h1 class="sectionHeadline text-center">Лицензия</h1>
+      <div class="container">
+         <p class="lead" style="color: #fff; text-align: center;">
+            Министерство финансов Таджикистанской Республики
+            №045-13980-02000 От 23.07.2008
+            Профессиональной и биржевой деятельности по ценным бумагам
+            ПАО "Государственная платформа ТАЛКО ИНВЕСТ"          
+         </p>
+      </div>
+      <br>
+      <div class="container">
+         <img src="images/pn5.png" alt="Лицензия" width="100%" class="img-responsive"
+            style="max-width: 550px; margin: 0 auto;">
+      </div>
+   </section>
+   
+   <section id="heroSuccess">
+      <div class="container">
+         <h1 class="sectionHeadline text-center">Зарабатывать от $2500? Это возможно и вот как:</h1>
+         <div class="row">
+            <div class="col-sm-4">
+               <div class="feature">
+                  <div class="feature-icon">
+                     <img src="images/icon_expert-guidance.svg" alt="" class="img-responsive">
+                  </div>
+                  <div class="feature-name">
+                     Советы экспертов
+                  </div>
+                  <div class="feature-text">
+                    ТАЛКО ИНВЕСТ предлагает вам профессиональные советы от финансовых экспертов и помогает вам зарабатывать больше
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-4">
+               <div class="feature">
+                  <div class="feature-icon">
+                     <img src="images/icon_powerful-technology.svg" alt="" class="img-responsive">
+                  </div>
+                  <div class="feature-name">
+                     Мощная технология
+                  </div>
+                  <div class="feature-text">
+                    ТАЛКО ИНВЕСТ использует новейшие передовые технологии, чтобы гарантировать вам прибыль
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-4">
+               <div class="feature">
+                  <div class="feature-icon">
+                     <img src="images/icon_earn-instantly.svg" alt="" class="img-responsive">
+                  </div>
+                  <div class="feature-name">
+                     Зарабатывай мгновенно!
+                  </div>
+                  <div class="feature-text">
+                    Гарантом платформы выступает государство и гарантирует стабильные выплата для всех участников 
+                  </div>
+               </div>
+            </div>
+         </div>
+         <p class="lead-big text-center heroParagraph">
+            Наши первые участники во всей Киргизии уже зарабатывают сотни тысяч сом, так почему же вы еще этого не
+            сделали? <a href="#heroSection" style="text-decoration: none;">Зарегистрируйтесь сегодня</a> и начните
+            зарабатывать уже завтра. Да, так просто.
+         </p>
+      </div>
+   </section>
+
+   <hr class="divider">
+
+   <section id="heroTrading">
+      <div class="container">
+         <h1 class="sectionHeadline" style="text-align: center;">
+            Зарегистрируйтесь и начните зарабатывать прямо сейчас!
+         </h1>
+         <p class="lead">
+          Благодаря новой платформе ТАЛКО Инвест вы можете начать зарабатывать перепродаже ресурсов страны сразу после регистрации. Вы даже получите экспертный совет от финансового специалиста, который объяснит, как работает приложение, и как правильно распорядиться своими инвестициями, чтобы уже через полгода выйти на доход более 50 000 сомони в месяц.
+         </p>
+         <p class="lead">
+          Невероятное программное обеспечение ТАЛКО Инвест также делает всю работу за вас, поэтому вам не нужно ничего изучать, лишь следовать инструкциям. Софт подключен к магистрали финансовых рынков и зарабатывают деньги каждый раз, когда совершается очередная транзакция. Эта передовая технология меняет жизнь людей. NGMK Invest – ваш билет в мир инвестиций!
+         </p>
+      </div>
+   </section>
+
+   <hr class="divider">
+
+   <section id="userReviews">
+      <div class="container">
+         <h1 class="sectionHeadline text-center">Отзывы</h1>
+         <div class="row flex-row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+               <div class="user-review">
+                  <div class="user-profile">
+                     <div class="user-picture">
+                        <img src="images/pn11.png" alt="" class="img-responsive">
+                     </div>
+                     <h2 class="user-name">
+                      Фатима Ким
+                     </h2>
+                  </div>
+                  <div class="user-rating">
+                     <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                        class="fa fa-star"></i> <i class="fa fa-star"></i>
+                  </div>
+                  <div class="user-quote">
+                    Я не могу поверить всего за одну неделю я смогла заработать свою месячную зарплату, до сих пор не могу поверить. Теперь думаю о том стоит ли уволится со своей старой работы
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+               <div class="user-review">
+                  <div class="user-profile">
+                     <div class="user-picture">
+                        <img src="images/pn12.jpeg" alt="" class="img-responsive">
+                     </div>
+                     <h2 class="user-name">
+                      Ирода Рахимова
+                     </h2>
+                  </div>
+                  <div class="user-rating">
+                     <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                        class="fa fa-star"></i> <i class="fa fa-star"></i>
+                  </div>
+                  <div class="user-quote">
+                    Работаю с платформой <b>ТАЛКО</b> второй месяц, вышла на 3700 долларов в месяц. Подключила мужа и брата, все нравится, всем советую
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+               <div class="user-review">
+                  <div class="user-profile">
+                     <div class="user-picture">
+                        <img src="images/pn16.jpeg" alt="" class="img-responsive">
+                     </div>
+                     <h2 class="user-name">
+                      Анзур Шарипова
+                     </h2>
+                  </div>
+                  <div class="user-rating">
+                     <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                        class="fa fa-star"></i> <i class="fa fa-star"></i>
+                  </div>
+                  <div class="user-quote">
+                    До сих пор не верится! Думала что какая-то ерунда очередная по заработку, а оказался отличный способ! И реально переводят деньги после запроса, причем быстро. Я очень довольна
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+               <div class="user-review">
+                  <div class="user-profile">
+                     <div class="user-picture">
+                        <img src="images/user_4.jpg" alt="" class="img-responsive">
+                     </div>
+                     <h2 class="user-name">
+                        Ivaldor Karlos
+                     </h2>
+                  </div>
+                  <div class="user-rating">
+                     <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                        class="fa fa-star"></i> <i class="fa fa-star"></i>
+                  </div>
+                  <div class="user-quote">
+                     Честно говоря, лучшее, что я когда-либо делал. Программное обеспечение потрясающее, и помощь,
+                     которую оно оказывает, исключительна. Это изменит вашу жизнь.
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+               <div class="user-review">
+                  <div class="user-profile">
+                     <div class="user-picture">
+                        <img src="images/pn14.jpeg" alt="" class="img-responsive">
+                     </div>
+                     <h2 class="user-name">
+                      Иосиф Ибрагимов
+                     </h2>
+                  </div>
+                  <div class="user-rating">
+                     <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                        class="fa fa-star"></i> <i class="fa fa-star"></i>
+                  </div>
+                  <div class="user-quote">
+                    <b>ТАЛКО ИНВЕСТ</b> безумно прост в использовании, а бесплатные советы экспертов о том, как заработать больше, помогают мне сейчас зарабатывать более 30 000 сомони в месяц.
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+               <div class="user-review">
+                  <div class="user-profile">
+                     <div class="user-picture">
+                        <img src="images/pn13.jpeg" alt="" class="img-responsive">
+                     </div>
+                     <h2 class="user-name">
+                      Рустам Саидов 
+                     </h2>
+                  </div>
+                  <div class="user-rating">
+                     <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                        class="fa fa-star"></i> <i class="fa fa-star-half-o"></i>
+                  </div>
+                  <div class="user-quote">
+                    Мы с друзьями в шоке!! Сначала думали, что лохотрон какой-то, не понятно было что и как работает. А потом мне позвонил мой менеджер Артур и подробно все разжевал, оказалось очень просто! Я всегда много вкалывал и такой заработок видел только в фильмах. Короче на машину уже почти заработал!
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   
+   <div class="pt-8 pb-8 bg-primary mb-32">
+    <section class="container mx-auto flex justify-center pb-12 pt-12">
+        <div class="flex flex-col w-2/5 items-center bg-white md:w-4/5 sm:w-full ">
+            <form action="javascript:void(0)" class="block bg-white text-primary overflow-hidden w-full pt-6 pb-4 px-6 sm:pt-2 sm:px-4 sm:leading-tight">
+                <h3 class="text-2xl text-center font-bold font-ubuntu mt-5 mb-6 sm:mb-10" style="color: #efb43f">
+                    Сколько я заработаю?
+                </h3>
+                <div class="flex flex-col text-center font-bold mb-4 sm:mb-10 px-5">
+                    <label class="block text-center font-bold mb-2" style="color: #efb43f">Ваша инвестиция</label>
+                    <input type="text" class="js-range-slider" name="my_range" value="150" tabindex="-1" readonly="">
+                </div>
+                <div class="flex flex-col mb-5">
+                    <label class="block text-center font-bold " style="color: #efb43f">Ваша прибыль</label>
+                    <h3 class="text-2xl text-center font-bold font-ubuntu mt-5" id="calcResult" style="color: #efb43f">12000 руб.</h3>
+                </div>
+                <div class="flex mb-4 justify-center">
+                    <a href="javascript:void(0)" onclick="scrollToForm()" class="inline-block  text-center w-56 font-sans font-bold transition bg-btn-primary hover:bg-btn-hover
+                            text-white rounded py-3">
+                        Узнать подробнее
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+
+   <section id="userTable">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+               <div class="userTable-block">
+                  <h1 id="liveUsers" class="text-center sectionHeadline">Онлайн трейдер</h1>
+                  <div class="table-responsive" style="overflow-x: scroll;">
+                     <div id="tradersTableWrap">
+                        <div class="tradersTableFadeOutWrap">
+                           <div class="tradersTableFadeOut"></div>
+                           <table width="100%" cellspacing="0" cellpadding="0" class="tradersTable table-striped">
+                              <tbody>
+                                 <!-- <tr>
+                                    <th width="130" scope="col">Пользователь</th>
+                                    <th width="160" scope="col">Время</th>
+                                    <th width="104" scope="col">Торговля</th>
+                                    <th width="104" scope="col">Прибыль</th>
+                                 </tr> -->
+                                 <tr>
+                                    <th width="130" scope="col">Пользователь</th>
+                                    <th width="90" scope="col">Прибыль</th>
+                                    <th width="90" scope="col">Торговля</th>
+                                    <th width="160" scope="col">Время</th>
+                                 </tr>
+                                 <tr class="myhide signals__col">
+                                    <td style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;">
+                                       Н******
+                                    </td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden; text-align: center;">
+                                       0
+                                    </td>
+                                    <td class="tradersTableLoserCell"
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;"><i
+                                          class="fa fa-times"></i>
+                                    </td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden; text-align: center;">
+                                       <pop>02:35:53</pop> <span>21/09/2020</span>
+                                    </td>
+                                 </tr>
+                                 <tr class="myhide signals__col">
+                                    <td style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;">
+                                       А******
+                                    </td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <b>$278</b></td>
+                                    <td class="tradersTableWinnerCell"
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;"><i
+                                          class="fa fa-check"></i></td>
+
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <pop>02:40:21</pop> <span>21/09/2020</span>
+                                    </td>
+                                 </tr>
+                                 <tr class="myhide signals__col">
+                                    <td style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;">
+                                       А******</td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <b>$73</b></td>
+                                    <td class="tradersTableWinnerCell"
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;"><i
+                                          class="fa fa-check"></i></td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <pop>02:40:19</pop> <span>21/09/2020</span>
+                                    </td>
+                                 </tr>
+                                 <tr class="myhide signals__col">
+                                    <td style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;">
+                                       Б******</td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       0
+                                    </td>
+                                    <td class="tradersTableLoserCell"
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;"><i
+                                          class="fa fa-times"></i></td>
+
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <pop>02:35:47</pop> <span>21/09/2020</span>
+                                    </td>
+                                 </tr>
+                                 <tr class="myhide signals__col">
+                                    <td style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;">
+                                       Л******</td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <b>$213</b></td>
+                                    <td class="tradersTableWinnerCell"
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;"><i
+                                          class="fa fa-check"></i></td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <pop>02:35:30</pop> <span>21/09/2020</span>
+                                    </td>
+                                 </tr>
+                                 <tr class="myhide signals__col">
+                                    <td style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;">
+                                       Н******</td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <b>$14</b></td>
+                                    <td class="tradersTableWinnerCell"
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;"><i
+                                          class="fa fa-check"></i></td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <pop>02:35:58</pop> <span>21/09/2020</span>
+                                    </td>
+                                 </tr>
+                                 <tr class="myhide signals__col">
+                                    <td style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;">
+                                       С******</td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <b>$160</b></td>
+                                    <td class="tradersTableWinnerCell"
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;"><i
+                                          class="fa fa-check"></i></td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <pop>02:35:25</pop> <span>21/09/2020</span>
+                                    </td>
+                                 </tr>
+                                 <tr class="myhide signals__col">
+                                    <td style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;">
+                                       А******</td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <b>$109</b></td>
+                                    <td class="tradersTableWinnerCell"
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;"><i
+                                          class="fa fa-check"></i></td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <pop>02:35:38</pop> <span>21/09/2020</span>
+                                    </td>
+                                 </tr>
+                                 <tr class="myhide signals__col">
+                                    <td style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;">
+                                       О******</td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       0
+                                    </td>
+                                    <td class="tradersTableLoserCell"
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;"><i
+                                          class="fa fa-times"></i></td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <pop>02:35:21</pop> <span>21/09/2020</span>
+                                    </td>
+                                 </tr>
+                                 <tr class="myhide signals__col">
+                                    <td style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;">
+                                       М******</td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <b>$80</b></td>
+                                    <td class="tradersTableWinnerCell"
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;"><i
+                                          class="fa fa-check"></i></td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <pop>02:35:50</pop> <span>21/09/2020</span>
+                                    </td>
+                                 </tr>
+                                 <tr class="myhide signals__col">
+                                    <td style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;">
+                                       А******</td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       0
+                                    </td>
+                                    <td class="tradersTableLoserCell"
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;"><i
+                                          class="fa fa-times"></i></td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <pop>02:35:18</pop> <span>21/09/2020</span>
+                                    </td>
+                                 </tr>
+                                 <tr class="myhide signals__col">
+                                    <td style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;">
+                                       Д******</td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       0
+                                    </td>
+                                    <td class="tradersTableLoserCell"
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;"><i
+                                          class="fa fa-times"></i></td>
+                                    <td
+                                       style="height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;text-align:center;">
+                                       <pop>02:40:02</pop> <span>21/09/2020</span>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="polygon">
+      <div class="t-container index-z">
+         <div class="t-width t-width_12 t415__mainblock">
+            <div class="t-cover__wrapper t-valign_middle">
+               <div class="t415__content" data-hook-content="covercontent">
+                  <img class="" data-tu-max-width="800" data-tu-max-height="800" style="max-width:250px; margin: 0 auto;"
+                     src="./images/pn1.png" imgfield="img2" data-hook-clogo="coverlogo">
+                  <div class="t415__textwrapper t-width t-width_12">
+                     <div class="t415__title t-title t-title_md" field="title">
+                        Количество пользователей платформы лимитировано
+                     </div>
+                     <div class="t415__descr t-descr t-descr_md" field="descr">
+                        Успейте зарегистрироваться и начать зарабатывать на выгодных инвестициях.
+                        <br>
+                        До закрытия регистрации осталось...
+                     </div>
+                  </div>
+                  <div id="t415__timer210558841" class="t415__timer">
+                     <div class="t415__col ">
+                        <span class="t415__days t-title t-title_lg t415__number">
+                           0
+                        </span>
+                        <div class="t415__text t-descr t-descr_xxs">
+                           Дней
+                        </div>
+                     </div>
+                     <div class="t415__col">
+                        <span class="t415__hours t-title t-title_lg t415__number" id="hours">14</span>
+                        <div class="t415__text t-descr t-descr_xxs">
+                           Часов
+                        </div>
+                     </div>
+                     <div class="t415__col">
+                        <span class="t415__minutes t-title t-title_lg t415__number" id="minutes">45</span>
+                        <div class="t415__text t-descr t-descr_xxs">
+                           Минут
+                        </div>
+                     </div>
+                     <div class="t415__col">
+                        <span class="t415__seconds t-title t-title_lg t415__number" id="seconds">1</span>
+                        <div class="t415__text t-descr t-descr_xxs">
+                           Секунд
+                        </div>
+                     </div>
+                  </div>
+                  <div class="t415__buttons">
+                     <a href="#openModal_form" style="text-decoration: none;">
+                        <button type="button" class="timer__btn redBtn">
+                           Зарегистрироваться
+                        </button>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Start popup double -->
+   <div class='modal-form' id='modalFailure'>
+      <p class='close-modal' href="#">&times;</p>
+      <div class='content'>
+         <div class="sign-up-form-header text-center mb-4">
+            <h5 class="mb-2 mt-4">Вы уже зарегистрировались на данный номер. Если вам нужен новый аккаунт, пройдите
+               регистрацию на другой мобильный номер</h5>
+         </div>
+      </div>
+   </div>
+
+   <div class='modal-form' id='modalFailureEmail'>
+      <p class='close-modal' href="#">&times;</p>
+      <div class='content'>
+         <div class="sign-up-form-header text-center mb-4">
+            <h5 class="mb-2 mt-4">Вы уже зарегистрировались на данную электронную почту. Если вам нужен новый
+               аккаунт, пройдите
+               регистрацию на другую электронную почту.</h5>
+         </div>
+      </div>
+   </div>
+
+   <div class='modal-form' id='modalInvalid'>
+      <p class='close-modal' href="#">&times;</p>
+      <div class='content'>
+         <div class="sign-up-form-header text-center mb-4">
+            <h5 class="mb-2 mt-4">Вы ввели неккоректную электронную почту. Пройдите
+               регистрацию на другую электронную почту.</h5>
+         </div>
+      </div>
+   </div>
+   <!-- End popup double -->
+
+   <!-- Start modal form -->
+   <div id="openModal_form" class="modal_form">
+      <div class="modal-dialog_form">
+         <div class="modal-content_form">
+            <div class="modal-header_form">
+               <h3 class="modal-title_form text-center"></h3>
+               <a href="#close_form" title="Закрыть" class="close_form">×</a>
+            </div>
+            <div class="modal-body_form">
+               <div class="contactForm" style="background-image: url(images/bg_form.png);">
+                  <div class="form_header">
+                     <span style="font-size: 14px;">
+                        <h3 style="text-align: center; margin-bottom: 12px;">
+                           <span style="font-weight: bold; color: #000; line-height: 1.3; font-size: 20px;">
+                              Оставьте ваш актуальный номер телефона, на который вы получите доступ к платформе
+                           </span>
+                        </h3>
+                     </span>
+                  </div>
+                  <form method="POST" id="leadformModal" class="register-form contact_form content_inner flex">
+                     <div class="input_group input_name shadow">
+                        <input type="text" placeholder="Имя" class="required form-input" name="first_name"
+                           id="first_name" required autocomplete="off" />
+                     </div>
+                     <div class="input_group input_last_name shadow">
+                        <input type="text" placeholder="Фамилия" class="required form-input" name="last_name"
+                           id="last_name" required autocomplete="off" />
+                     </div>
+                     <div class="input_group input_email shadow">
+                        <input type="email" placeholder="Email" class="required" name="email" id="email" required
+                           autocomplete="off" />
+                     </div>
+                     <div class="input_group intl-tel-input shadow">
+                        <input type="tel" id="phoneModal" name="phoneModal" placeholder="" autocomplete="off"
+                           required="">
+                        <input type="hidden" id="realPhoneModal" name="realPhone" class="hidden-phone" value="" />
+                        <input type="hidden" id="countryModal" name="country" value="" />
+                     </div>
+                     <div class="input_group">
+                        <button type="submit" class="btn btn-submit btn-get-robot text-uppercase">
+                           <span> Зарегистрироваться</span>
+                        </button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- End modal form -->
+
+   <script src="js/jquery.min.js"></script>
+   <script src="js/timer.js"></script>
+   <script src="js/video.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/checkCookiePhone.js"></script>
+   <script src="js/jquery.validate.js"></script>
+   <script src="js/intlTelInput.min.js"></script>
+   <script src="js/jquery.maskedinput.js"></script>
+   <script src="js/modal.js"></script>
+   <script src="js/main.js"></script>
+   <script src="js/submitForm.js"></script>
+   <script src="js/time-table.js"></script>
+   <script src="js/utm.js"></script>
+   <script src="js/ion.rangeSlider.min.js"></script>
+   <script src="js/script.js"></script>
+
+   
+
+</body>
+
+</html>

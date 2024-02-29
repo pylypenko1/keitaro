@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <title>Arut Invest</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__left">
+          <img src="images/logo.svg" alt="logo" class="logo" />
+          <div class="logo__text">
+            <span class="logo__title">ARUT INVEST ACADEMY</span>
+            <span class="logo__subtitle">Мастерская миллионеров</span>
+          </div>
+        </div>
+        <div class="header__right">
+          <a data-action="scrollToForm"> ВСТУПИТЬ В ИНВЕСТ АКАДЕМИЮ </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="intro">
+    <div class="container">
+      <div class="intro__inner">
+        <div class="intro__left">
+          <div class="intro__img-wrap">
+            <img src="images/man.png" alt="man" />
+            <div class="paralelogram-text">
+              <img class="parallelogram" src="images/paralelogram.svg" alt="" />
+              <div class="text-wrapper">
+                <div class="name">
+                  <img class="icon" src="images/icon.svg" alt="i icon" />
+                  <span>Арут Назарян</span>
+                </div>
+                <div class="name__sub">
+                  Криптоинвестор, предприниматель, <br />
+                  блогер-миллионник
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="intro__right">
+          Начните зарабатывать <br />
+          <span>от 2000$</span> <br />
+          с помощью <span>инвестиций</span> <br />
+          в современные <br />
+          цифровые активы
+        </div>
+      </div>
+
+      <a class="btn" data-action="scrollToForm">
+        <img src="images/btn.png" alt="" />
+      </a>
+    </div>
+  </section>
+
+  <section class="formS">
+    <div class="container">
+      <div class="formS__inner">
+        <div class="videoOuterWrap">
+          <div class="video-container" id="block">
+            <video class="video" controls poster="video/poster.jpg">
+              <source src="video/video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="hero-form">
+          <div class="contactForm top_form">
+            <form id="form1" novalidate autocomplete="off">
+              <div class="form-group">
+                <input type="text" id="firstName" name="firstName" placeholder="Имя " />
+                <span class="error" data-field="firstName"></span>
+              </div>
+              <div class="form-group">
+                <input type="text" id="lastName" name="lastName" placeholder="Фамилия " />
+                <span class="error" data-field="lastName"></span>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email " />
+                <span class="error" data-field="email"></span>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="Телефон " />
+                <span class="error" data-field="phone"></span>
+              </div>
+              <div class="form-group">
+                <button class="calculate-btn" type="submit">Зарегестрироваться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="container">
+      <div class="info__inner">
+        <div class="info__top">
+          <h2 class="title">
+            Арут Назарян открыл доступ к своей <span>инвестиционной</span> платформе.
+          </h2>
+          <p class="info__subtitle">
+            "Я хочу помочь тем, кто находится в трудных условиях. Я не могу оставаться безучастным, наблюдая, как многие
+            люди борются за свое существование, а не имеют возможности полноценно жить. К тому же, <span>для жителей
+              Казахстана</span> предоставляется уникальная возможность начать свой путь всего за 150 долларов.
+            “Благодаря этой платформе я могу осуществить мечты о собственном бизнесе, путешествиях и жить так, как
+            всегда хотел."
+            <br>
+            Спешите, количество мест ограничено!
+          </p>
+          <img class="info__img" src="images/man2.png" />
+          <span class="info__name">Арут Назарян</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info__calc">
+    <div class="container">
+      <div class="calc__inner">
+        <form id="form3"
+          class="block bg-white text-primary overflow-hidden w-full pt-6 pb-4 px-6 sm:pt-2 sm:px-4 sm:leading-tight">
+          <h3 class="calc__title">Наглядный пример того, сколько вы сможете заработать.</h3>
+          <div class="">
+            <input type="text" class="js-range-slider" style="display: none" name="my_range" value="150" tabindex="-1"
+              readonly="" />
+          </div>
+          <div class="">
+            <label class="price">Ваша прибыль</label>
+            <h3 class="price__info" style="color: #19bc7b; text-align: center" id="calcResult">
+              335 $.
+            </h3>
+          </div>
+          <div class="flex mb-4 justify-center">
+            <a class="btn btn-second" data-action="scrollToForm">
+              <img src="images/btn.png" alt="btn" />
+            </a>
+          </div>
+        </form>
+      </div>
+
+      <h2 class="title swiper-title">
+        Отзывы участников платформы <span>ARUT INVEST ACADEMY</span>
+      </h2>
+
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="images/1.png" alt="" />
+            <div>
+              <span class="item__title">Шавкат Сабиров</span>
+              <p class="item__subtitle">
+                Когда я впервые увидел рекламу я не поверил что это возможно и переживал так как
+                инвестировал сразу большую сумму, но после первой недели я смог забрать неплохую
+                сумму денег что помогло мне стать на ноги и помогать родителям!
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/2.png" alt="" />
+            <div>
+              <span class="item__title">Дилноза Овлакимова</span>
+              <p class="item__subtitle">
+                Мой парень все время говорил мне найди роботу и постоянно упрекал мне в этом я
+                нашла роботу но работать по 12 часов в день это не для меня поэтому я решила
+                рискнуть и инвестировать всю заработанную мной зарплату за месяц. На мое удивления
+                после второй неделя я поняла что платформа приносит мне в разы больше чем моя
+                робота за месяц и это при удивлении двух часов в день!
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/3.png" alt="" />
+            <div>
+              <span class="item__title">Абдурахим Сатторов</span>
+              <p class="item__subtitle">
+                Хотелось написать этот отзывы в знак благодарности, мы с женой наконец-то
+                разобрались с нашим кредитом и даже планируем купить новую квартиру и всё с
+                помощью вашей команды и хороших сотрудников. Теперь у меня стабильный доход и я
+                могу возить семью на отдых и дарить крутые подарки!
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/4.png" alt="" />
+            <div>
+              <span class="item__title">Аббосжон Ашуров</span>
+              <p class="item__subtitle">
+                Все сработала точно так как мне рассказывали, благодаря инструкции от менеджера я
+                вышел на доход в 3000 тысячи зеленых, уже на 3-ей недели!!! Надеюсь на дальнейшее
+                сотрудничество и прибыль и очень благодарен за возможность сотрудничать!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="prices">
+    <div class="container">
+      <div class="prices__inner">
+        <div class="prices__item">
+          <img src="images/all-block.png" alt="" />
+          <div class="prices__wrap">
+            <div class="prices__count">7</div>
+            <div class="prices__title">
+              <img src="images/icon-2.svg" alt="" />
+              дней
+            </div>
+            <div class="prices__subtitle">
+              средний срок получения первой прибыли после инвестиций в ARUT INVEST ACADEMY
+            </div>
+          </div>
+        </div>
+        <div class="prices__item">
+          <img src="images/all-block.png" alt="" />
+          <div class="prices__wrap">
+            <div class="prices__count">20 000+</div>
+            <div class="prices__title">
+              <img src="images/icon-2.svg" alt="" />
+              человек
+            </div>
+            <div class="prices__subtitle">
+              присоединились к нам в первую неделю после запуска платформи
+            </div>
+          </div>
+        </div>
+        <div class="prices__item">
+          <img src="images/all-block.png" alt="" />
+          <div class="prices__wrap">
+            <div class="prices__count">$15 000</div>
+            <div class="prices__title">
+              <img src="images/icon-2.svg" alt="" />
+              рекордный заработок
+            </div>
+            <div class="prices__subtitle">участника после 15 дней инвестирований</div>
+          </div>
+        </div>
+
+        <a data-action="scrollToForm">
+          <img src="images/btn.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="loader" style="display: none">
+    <img src="images/preloader.svg" alt="Preloader" />
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/ion.rangeSlider.min.js"></script>
+  <script>
+    $(function () {
+      $('.js-range-slider').ionRangeSlider({
+        skin: 'round',
+        min: 150,
+        max: 1000000,
+        from: 150,
+        max_postfix: '+',
+        postfix: '$',
+        grid: true,
+        onStart: function (data) {
+          $('#calcResult').text(Math.round(data.from * 4.4 + data.from) + '$');
+        },
+        onChange: function (data) {
+          $('#calcResult').text(Math.round(data.from * 4.4 + data.from) + '$');
+        },
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    var swiper2 = new Swiper('.swiper', {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+      slideToClickedSlide: !0,
+      speed: 1500,
+      centeredSlides: !0,
+      loop: !0,
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        900: {
+          slidesPerView: 2.4,
+          loop: !0,
+          centeredSlides: 1
+        },
+        1400: {
+          slidesPerView: 3.4,
+          loop: !0,
+          centeredSlides: 1
+        },
+      },
+    });
+  </script>
+
+  <script src="js/imask.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/good-scroll.js"></script>
+  <!-- JS-Adapter -->
+  <script src="js/adapter.js"></script>
+  <script src="js/fbPageView.js"></script>
+  <!-- Validate.js -->
+  <script src="js/validate.min.js"></script>
+</body>
+
+</html>

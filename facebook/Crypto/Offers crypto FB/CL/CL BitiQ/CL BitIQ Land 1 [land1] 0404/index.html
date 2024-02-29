@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Open Graph -->
+    <meta name="description" content="BitiQ ™ - Sitio oficial 2023 [ACTUALIZADO]!" />
+    <meta name="keywords" content="BitiQ ™ - Sitio oficial 2023 [ACTUALIZADO]!" />
+    <meta property="og:title" content="BitiQ ™ - Sitio oficial 2023 [ACTUALIZADO]!" />
+    <meta property="og:description" content="BitiQ ™ - Sitio oficial 2023 [ACTUALIZADO]!" />
+    <meta property="og:image" content="images/main-bg.webp" />
+    <meta property="og:image:width" content="450" />
+    <meta property="og:image:height" content="450" />
+    <meta property="og:type" content="website" />
+    <title>BitiQ ™ - Sitio oficial 2023 [ACTUALIZADO]</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link href="css/css2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+
+    <style>
+      .iti.iti--allow-dropdown.iti--separate-dial-code {
+        width: 100%;
+      }
+
+      .iti--separate-dial-code .iti__selected-flag {
+        max-height: 48px;
+      }
+
+      input.error {
+        margin-bottom: 0;
+        border: 2px solid #eb162b !important;
+      }
+
+      input.valid {
+        border: 2px solid #1eb630 !important;
+      }
+
+      label.error {
+        width: 100%;
+        font-weight: 400;
+        margin-top: 0.25rem;
+        padding: 5px;
+        color: #fff;
+        background-color: #eb162b;
+        font-size: 12px;
+      }
+    </style>
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie = name + '=' + value + ';path=/;expires=' + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!'{subid}'.match('{')) {
+          return '{subid}';
+        }
+        var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (clientSubid && !clientSubid.match('>')) {
+          return clientSubid;
+        }
+        if (params.get('_subid')) {
+          return params.get('_subid');
+        }
+        if (params.get('subid')) {
+          return params.get('subid');
+        }
+        if (getCookie('subid')) {
+          return getCookie('subid');
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!'{token}'.match('{')) {
+          return '{token}';
+        }
+        var clientToken = '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (clientToken && !clientToken.match('>')) {
+          return clientToken;
+        }
+        if (params.get('_token')) {
+          return params.get('_token');
+        }
+        if (params.get('token')) {
+          return params.get('token');
+        }
+        if (getCookie('token')) {
+          return getCookie('token');
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!'{pixel}'.match('{')) {
+          return '{pixel}';
+        }
+        if (params.get('pixel')) {
+          return params.get('pixel');
+        }
+
+        if (getCookie('pixel')) {
+          return getCookie('pixel');
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === 'function') {
+        document.addEventListener('DOMContentLoaded', function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set('_token', token);
+          setCookie('idpxl', pixel);
+          setCookie('token', token);
+          setCookie('subid', subid);
+
+          // // Adds params to the links
+          // document.querySelectorAll('a').forEach(function (link) {
+          //     var url = new URL(link.href);
+          //     params.forEach(function (v, k) {
+          //         url.searchParams.append(k, v);
+          //     });
+          //     link.href = url.toString();
+          // });
+
+          // Adds params as hidden inputs to the forms
+          document.querySelectorAll('form').forEach(function (form) {
+            params.forEach(function (v, k) {
+              var input = document.createElement('input');
+              input.type = 'hidden';
+              input.name = k;
+              input.value = v;
+
+              form.append(input);
+            });
+          });
+        });
+      }
+    </script>
+    <!-- End JS adapter -->
+  </head>
+
+  <body class="home">
+    <header class="header">
+      <div class="container">
+        <div class="row align-items-center justify-content-between header-container">
+          <div class="col-7 col-md-3 order-1">
+            <div class="logo">
+              <a href="javascript:void(0)">
+                <picture>
+                  <source type="image/webp" srcset="images/logo.webp" />
+                  <source type="image/png" srcset="images/logo.png" />
+                  <img loading="lazy" src="images/logo.png" width="212" height="56" alt="BitQT" />
+                </picture>
+              </a>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-6 order-3 order-md-2 d-flex justify-content-end"
+            style="position: static"
+          >
+            <div class="header-menu" style="display: none">
+              <div class="header-menu-item">
+                <a href="javascript:void(0)" onclick="scrollToForm()">Sobre Nosotros</a>
+              </div>
+              <div class="header-menu-item">
+                <a href="javascript:void(0)" onclick="scrollToForm()">Contactanos</a>
+              </div>
+              <div class="header-menu-item">
+                <a href="javascript:void(0)" onclick="scrollToForm()">INICIAR SESIÓN</a>
+              </div>
+            </div>
+          </div>
+          <div class="header-hamburger"><span></span> <span></span> <span></span></div>
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <div class="container" style="max-width: 1200px">
+        <h1 class="main-title">BitIQ</h1>
+        <h2 class="main-subtitle">La nueva clave para su estrategia de inversión en Bitcoin</h2>
+        <div class="row">
+          <div class="col-lg-7">
+            <picture>
+              <source type="image/webp" srcset="images/video-image.webp" />
+              <source type="image/png" srcset="images/video-image.png" />
+              <img
+                loading="lazy"
+                src="images/video-image.png"
+                width="601"
+                height="431"
+                alt="BitIQ App"
+              />
+            </picture>
+          </div>
+          <div class="col-lg-5">
+            <div class="main-form" id="formwork">
+              <div class="main-form-title"><span class="blue">ABRE UNA CUENTA GRATIS</span></div>
+              <div style="margin-left: auto; margin-right: auto; width: 100%; max-width: 360px">
+                <form id="formTop" autocomplete="off" method="post">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="first_name"
+                    id="first_name"
+                    required
+                    placeholder="Nombre"
+                  />
+
+                  <input
+                    class="form-control"
+                    type="text"
+                    required
+                    name="last_name"
+                    id="last_name"
+                    placeholder="Apellido"
+                  />
+
+                  <input
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Correo electrónico"
+                  />
+
+                  <input
+                    class="form-control"
+                    type="tel"
+                    id="phone1"
+                    name="phone1"
+                    placeholder=""
+                    autocomplete="off"
+                    required
+                  />
+                  <input type="hidden" id="realPhone" name="realPhone" class="hidden-phone" value />
+                  <input type="hidden" id="country" name="country" value />
+
+                  <button class="btn form-btn" style="margin-top: 10px" type="submit">
+                    Regístrese ahora
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="half-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <p>
+              <b
+                >¿Usted opera? Si no, ¿por qué? El trading es una de las mejores formas de
+                desarrollar una mayor estabilidad financiera, y las oportunidades y opciones de
+                trading son cada vez más diversas y emocionantes. Bitcoin es una clase de activos de
+                rápido crecimiento en sí misma. Si aún no opera, el equipo de BitIQ lo alienta a que
+                considere invertir en Bitcoin.</b
+              >
+            </p>
+            <p>
+              No se preocupe si no tiene experiencia en finanzas o tecnología. Ya no necesitas
+              amplios conocimientos para poder invertir. La creciente introducción de diferentes
+              tecnologías en las finanzas está haciendo que la inversión y el trading sean más
+              fáciles de entender para el público en general.
+            </p>
+            <p>
+              BITIQ es parte de esto. El equipo ha desarrollado esta plataforma como una forma para
+              que las personas inviertan en Bitcoin, incluso si no tienen ningún conocimiento previo
+              de tecnología o finanzas. Todo lo que necesita para comenzar es un depósito.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="half-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 offset-md-2">
+            <h2 class="title">E¡Esta es su oportunidad de convertirse en parte de BITIQ hoy!</h2>
+            <p class="fs-20">
+              Nunca ha habido un mejor momento para empezar a invertir. La plataforma cierra la
+              brecha entre el público en general y las clases de activos sofisticados como Bitcoin.
+              Es posible que esté considerando el trading pero no está seguro de por dónde empezar.
+              Si es así, no dudes en probar BITIQ. Es de uso gratuito, por lo que puede probarlo
+              antes de comprometerse con nada.
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-4 mt-md-5">
+          <a
+            href="javascript:void(0)"
+            onclick="scrollToForm()"
+            class="form-btn scroll-top"
+            style="max-width: 350px"
+            >ÚNASE A LA PLATAFORMA AHORA</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="padding-60 bg-gray">
+      <div class="container">
+        <h2 class="title text-center">La historia de las criptomonedas</h2>
+      </div>
+      <div class="half-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="quote">
+                Las criptomonedas son un concepto relativamente nuevo. Sin embargo, desde el
+                lanzamiento público de Bitcoin en 2008, miles de otras criptomonedas se han puesto a
+                disposición para su uso. El atractivo de las criptomonedas está estrechamente
+                relacionado con el papel cada vez mayor de la tecnología en la vida de todos.
+                Constantemente se desarrollan nuevas tecnologías, brindando a las personas más
+                oportunidades y habilidades que nunca.
+              </div>
+              <p class="fs-20">
+                Como se mencionó anteriormente, Bitcoin está lejos de ser la única criptomoneda
+                disponible en la actualidad. Hay muchas criptomonedas disponibles con sus propias
+                ventajas o características únicas. Algunas criptomonedas se han desarrollado para
+                incluir un contrato o cláusula, haciéndolas más seguras para los usuarios.
+              </p>
+              <p class="fs-20">
+                Otras criptomonedas funcionan de la misma manera que Bitcoin pero no han alcanzado
+                el mismo nivel de prominencia. Es por eso que el equipo de BitIQ cree que Bitcoin es
+                fácilmente la mejor opción para invertir en criptomonedas. Su crecimiento ha sido
+                impresionante y no muestra signos de detenerse pronto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="history-item">
+              <h3 class="history-item-title">Defininiendo una criptomoneda</h3>
+              <div class="history-item-content">
+                <p>
+                  En resumen, una criptomoneda es una moneda completamente digital. No puede retirar
+                  una criptomoneda de un cajero automático y usarla en una tienda. Si desea comprar
+                  criptomonedas o venderlas, debe hacerlo digitalmente.
+                </p>
+                <p>
+                  A diferencia de las monedas estándar, las criptomonedas son independientes de la
+                  regulación y los estándares financieros. Como tal, el valor de una criptomoneda
+                  está determinado por otros factores. Esto significa que el valor de las
+                  criptomonedas puede fluctuar considerablemente.
+                </p>
+              </div>
+            </div>
+            <div class="history-item">
+              <h3 class="history-item-title">Bitcoin frente a otras criptomonedas</h3>
+              <div class="history-item-content">
+                <p>
+                  Quizás se pregunte por qué BitIQ prefiere Bitcoin como opción de inversión en
+                  comparación con otras criptomonedas. No es fácil precisar por qué Bitcoin se ha
+                  convertido en un nombre familiar, dada la cantidad de criptomonedas que se han
+                  desarrollado y están disponibles públicamente. Independientemente, esta
+                  popularidad es una razón crucial por la que la plataforma fomenta el trading de
+                  Bitcoin en particular.
+                </p>
+                <p>
+                  La prominencia pública de Bitcoin significa que es poco probable que pierda su
+                  valor en el corto plazo. En pocas palabras, el equipo de BitIQ no cree que Bitcoin
+                  vaya a ninguna parte. El perfil de la criptomoneda continúa creciendo y ya no es
+                  una inversión de nicho ni una opción de pago. De hecho, algunos minoristas
+                  importantes en los EE. UU. ahora están comenzando a aceptar pagos en Bitcoin en
+                  línea.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="history-item">
+              <h3 class="history-item-title">¿Cómo funcionan la criptomonedas?</h3>
+              <div class="history-item-content">
+                <p>
+                  Hay diferentes formas de comprar y usar criptomonedas. Los usuarios de Bitcoin
+                  generalmente almacenan sus Bitcoins en una "billetera". Su billetera de Bitcoin a
+                  menudo está conectada a una computadora o dispositivo en particular, lo que
+                  significa que no puede acceder a ella en ningún otro lugar. Si desea intercambiar
+                  Bitcoin, debe usar una red llamada blockchain.
+                </p>
+                <p>
+                  Una cadena de bloques (blockchain) es una red de computadoras. Estas computadoras
+                  registran diferentes tipos de información de la transacción a medida que se lleva
+                  a cabo. Sin embargo, vale la pena señalar que la cadena de bloques no registra las
+                  características de identificación que forman parte de la transacción, aparte de la
+                  identificación de las billeteras.
+                </p>
+                <p>
+                  Esta es una de las razones por las que muchos entusiastas de las criptomonedas
+                  prefieren usar criptomonedas siempre que sea posible para las monedas fiduciarias.
+                  Las criptomonedas como Bitcoin son una opción mucho mejor para preservar la
+                  privacidad y el anonimato. No necesita revelar su identidad ni ninguna información
+                  sobre usted cuando compra o intercambia Bitcoin.
+                </p>
+              </div>
+            </div>
+            <div class="history-item">
+              <h3 class="history-item-title">Tecnología en Finanzas</h3>
+              <div class="history-item-content">
+                <p>
+                  En BitIQ creen que este desarrollo es especialmente significativo si se considera
+                  que la tecnología tiene un papel cada vez mayor en la vida de las personas en
+                  general. La moneda física se está volviendo cada vez más obsoleta. Además, cada
+                  vez más todas las transacciones y operaciones bancarias se realizan en línea. Si
+                  considera el crecimiento de Bitcoin, el equipo no ve ninguna señal de que la
+                  tecnología vaya a caer en desgracia en el corto plazo.
+                </p>
+                <p>
+                  Sienten que lo contrario es mucho más probable. Es probable que la tecnología
+                  domine más y más aspectos de las finanzas. Es por eso que en BitIQ creen que ahora
+                  es el momento perfecto para comenzar en el trading de criptomonedas. Puede
+                  aprovechar el crecimiento significativo de Bitcoin antes de que se vuelva
+                  demasiado caro o competitivo para comenzar.
+                </p>
+                <p>
+                  Además, la tecnología está haciendo que las finanzas y la inversión sean mucho más
+                  accesibles para la persona promedio. Con plataformas como BITIQ, una vez que se
+                  haya familiarizado con el mercado de las criptomonedas, puede comenzar a depositar
+                  y hacer trading con Bitcoin.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4 mt-md-5">
+          <a
+            href="javascript:void(0)"
+            onclick="scrollToForm()"
+            class="form-btn scroll-top"
+            style="max-width: 320px"
+            >EMPEZAR AHORA</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="half-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-4">
+            <h2 class="title">¿Qué es BitIQ y por qué lo necesita?</h2>
+            <p>
+              <b
+                >Los traders de Bitcoin buscan tendencias y toman decisiones de trading analizando
+                velas bajistas y alcistas. Sin embargo, la volatilidad de Bitcoin puede dificultar
+                la efectividad del trading humano. Y esto podría ser realmente estresante para
+                mantenerse al día con los oficios.</b
+              >
+            </p>
+            <p>
+              Bueno, ya no tienes que lidiar con esta ansiedad. La plataforma BitIQ analiza el
+              mercado y lo ayuda a ver el panorama general para que pueda tomar decisiones más
+              inteligentes. Esto es todo lo que necesitas saber sobre la plataforma.
+            </p>
+            <h3 class="title">¿Cuáles son los beneficios de usar BitIQ?</h3>
+            <ul class="list-arrow">
+              <li>
+                <b><i>Apto para todos los traders.</i></b> Ya sea que sea un trader principiante o
+                experimentado, la plataforma BitIQ se creó para usted. No necesita ser un experto
+                para comenzar a hacer trading con la plataforma. Se le asignará un administrador de
+                cuenta que estará disponible para ayudarlo en todo momento. Entonces, no te
+                preocupes.
+              </li>
+              <li>
+                <b><i>Administrador de cuenta dedicado.</i></b> Después de registrarse en la
+                aplicación BitIQ, se le asignará un administrador de cuenta dedicado. Su
+                administrador de cuenta se encargará de todas sus consultas y solicitudes, lo que le
+                permitirá concentrarse en el trading en lugar de ocuparse de los problemas técnicos
+                de la cuenta.
+              </li>
+              <li>
+                <b><i>Fácil de usar.</i></b> BitIQ tiene una interfaz fácil de usar con análisis
+                exhaustivos. La plataforma es bastante sencilla. También le permite personalizar su
+                estrategia de trading y establecer límites de ganancias y pérdidas.
+              </li>
+              <li>
+                <b><i>Compatible con todos los dispositivos.</i></b> BitIQ es compatible con todas
+                las PC y dispositivos móviles. Por lo tanto, puede usar cualquier dispositivo para
+                acceder a su cuenta de trading en cualquier momento y desde cualquier lugar.
+              </li>
+              <li>
+                <b><i>Una amplia gama de herramientas.</i></b> BitIQ viene con una variedad de
+                herramientas que le permiten crear una estrategia de trading personalizada. También
+                permite el copy-trading, en el que ejecuta operaciones siguiendo la estrategia de un
+                operador experimentado.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="padding-60 pt-md-0">
+      <div class="container" style="max-width: 1000px">
+        <h3 class="title">¿Cómo usar BitIQ?</h3>
+        <p><b>Así es como puede comenzar con BitIQ.</b></p>
+        <ul>
+          <li>Regístrese con un corredor certificado</li>
+          <li>Se le asignará un administrador de cuenta recomendado después del registro.</li>
+          <li>Su administrador de cuenta dedicado le proporcionará la plataforma BitIQ.</li>
+          <li>
+            Para usar BitIQ, comparta sus parámetros de trading y preferencias con su administrador
+            de cuenta, para que puedan ayudarlo a diseñar estrategias, encontrar posibles
+            oportunidades de trading y enviarle las notificaciones adecuadas.
+          </li>
+        </ul>
+        <p>¿Entonces, Qué esperas? Comience ahora mismo. Únase a BitIQ hoy.</p>
+      </div>
+    </section>
+    <section class="half-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 class="title">Inversiones explicadas</h2>
+            <p>
+              <b
+                >Si no tiene experiencia en finanzas, es posible que se pregunte qué es realmente
+                invertir. En pocas palabras, puede invertir en algo poniendo dinero en ello. En el
+                contexto del mercado, esta práctica también puede denominarse en términos generales
+                como trading.</b
+              >
+            </p>
+            <p>
+              Mucha gente utiliza la inversión como un medio para desarrollar y mantener la
+              estabilidad financiera. Además, le brinda una gran oportunidad de apoyar a los
+              sectores o industrias que le interesan. Si cree que una clase de activos en particular
+              tiene un buen potencial y quiere ayudarla a tener éxito, puede contribuir a ello
+              directamente a través de la inversión.
+            </p>
+            <p>
+              Desde el punto de vista del trading, las diferentes clases de activos tienen ventajas
+              y desventajas únicas. Si no tiene mucha experiencia en inversiones, también vale la
+              pena saber que las clases de activos se comportan de manera diferente entre sí. Por
+              ejemplo, invertir en bienes raíces mediante la compra y el desarrollo de propiedades
+              es una experiencia muy diferente en comparación con el trading de acciones en el
+              mercado de valores.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="half-6">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-4">
+            <h3 class="title">¿Es el trading adecuado para usted?</h3>
+            <div class="quote">
+              El equipo de BitIQ cree que invertir es algo de lo que todos pueden beneficiarse. Lo
+              más importante es que tenga una estrategia que funcione mejor para usted y sus
+              objetivos. Por ejemplo, si desea ahorrar para un automóvil nuevo, no necesita comprar
+              y vender acciones agresivamente. Puede desarrollar su propio método de trading en
+              función de sus objetivos financieros y el nivel de ingresos que tenga.
+            </div>
+            <p class="fs-20">
+              Si cree que no tiene suficiente conocimiento de las finanzas o el mercado para operar
+              con éxito, no se desanime. Las plataformas como BITIQ lo ayudan a invertir mientras
+              adquiere experiencia en finanzas y tecnología. El equipo desarrolló específicamente la
+              plataforma para que sea accesible para aquellos sin ningún interés particular en el
+              trading.
+            </p>
+            <p class="fs-20">
+              Es por eso que no necesita dudar en comenzar en el trading. Puede aprovechar al máximo
+              las oportunidades y los beneficios que la inversión puede brindarle. Todo lo que usted
+              o cualquier otra persona necesita ahora es un depósito para comenzar a hacer trading
+              de Bitcoins a través de BITIQ.
+            </p>
+            <div class="text-center text-md-left mt-4 mt-md-5">
+              <a
+                href="javascript:void(0)"
+                onclick="scrollToForm()"
+                class="form-btn scroll-top"
+                style="max-width: 400px"
+                >ABRIR UNA CUENTA GRATIS HOY</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="padding-60">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="history-item">
+              <h3 class="history-item-title">¿Cómo empezar a invertir?</h3>
+              <div class="history-item-content">
+                <p>
+                  Existen numerosas estrategias diferentes que puede utilizar al invertir. A algunas
+                  personas les gusta trabajar directamente con un corredor, especialmente si no
+                  tienen experiencia en finanzas o trading. El corredor toma sus decisiones de
+                  inversión en su nombre después de consultar con usted acerca de sus objetivos y
+                  metas. Sin embargo, debe pagarle a un corredor por sus servicios.
+                </p>
+                <p>
+                  Otras personas prefieren las plataformas de trading. Esto es más fácil en algunos
+                  aspectos, especialmente porque a menudo elimina por completo la necesidad de un
+                  corredor. Sin embargo, muchos de estos programas son costosos y complicados de
+                  usar. Desafortunadamente, es poco probable que una persona promedio obtenga mucho
+                  de las plataformas de trading convencionales.
+                </p>
+                <p>
+                  BITIQ lo ayuda a ver el panorama general sin tener que pasar horas leyendo
+                  noticias financieras y analistas antes de siquiera pensar en invertir, por lo que
+                  no necesita pasar demasiado tiempo frente a su computadora monitoreando las
+                  tendencias en el mercado.
+                </p>
+              </div>
+            </div>
+            <div class="history-item">
+              <h3 class="history-item-title">¿Por qué debería invertir en tecnología?</h3>
+              <div class="history-item-content">
+                <p>
+                  La tecnología no es un campo único. Más bien, es un término general para una
+                  variedad de sectores y clases de inversión. La investigación muestra que la
+                  tecnología está adquiriendo rápidamente un papel más importante en el desarrollo
+                  global y el crecimiento humano. A su vez, esta tendencia significa que las
+                  personas van a utilizar cada vez más tecnología para tareas básicas a medida que
+                  pasa el tiempo.
+                </p>
+                <p>
+                  A medida que la humanidad se vuelva más dependiente de la tecnología, su valor
+                  inherente aumentará. Esto significa que invertir en diferentes áreas dentro de la
+                  tecnología debería ser cada vez más rentable.
+                </p>
+              </div>
+            </div>
+            <div class="history-item">
+              <h3 class="history-item-title">Gestión del riesgo al operar</h3>
+              <div class="history-item-content">
+                <p>
+                  Es importante comprender la relación entre el riesgo y la inversión si desea
+                  comenzar en el trading. Ningúna operación está completamente desprovista de
+                  riesgo, por lo que la práctica hace al maestro. Sin embargo, puede limitar el
+                  riesgo de sus inversiones siguiendo ciertos principios. Además, algunas clases de
+                  activos son inherentemente más riesgosas que otras. Al optar por no invertir en
+                  estas acciones, puede reducir sustancialmente el riesgo que conlleva su cartera.
+                </p>
+                <p>
+                  Su cartera de inversiones es la colección de activos que puede comprar y vender.
+                  Al seleccionar su cartera en función del nivel de riesgo asociado con las acciones
+                  que le interesan, puede controlar qué tan arriesgado es su trading en última
+                  instancia. No hay nada intrínsecamente malo con el riesgo. Sin embargo, debe
+                  evitar exponerse a riesgos innecesariamente.
+                </p>
+                <p>
+                  Comprender el nivel de riesgo que está dispuesto a asumir al invertir es una parte
+                  importante de la práctica. Si no está seguro de su relación con el riesgo, debe
+                  considerar sus metas y objetivos financieros. Además, debe pensar en cuánto está
+                  potencialmente dispuesto a perder al invertir.
+                </p>
+                <p>
+                  Considerar factores como estos lo ayuda a tener una idea de cuánto riesgo puede y
+                  debe tolerar. Luego, puede desarrollar una estrategia para su trading que refleje
+                  su tolerancia al riesgo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="history-item">
+              <h3 class="history-item-title">¿Qué sucede si no tiene antecedentes financieros?</h3>
+              <div class="history-item-content">
+                <p>
+                  Ya no necesita una formación profunda en finanzas para sacar mucho provecho de la
+                  inversión. De hecho, casi cualquier persona puede operar si usa las herramientas
+                  adecuadas. BITIQ fue desarrollado para ser lo más accesible posible. El equipo de
+                  la plataforma reconoce que la mayoría de las personas no tienen tiempo suficiente
+                  para leer análisis de mercado y noticias financieras todos los días.
+                </p>
+                <p>
+                  Querían que la inversión fuera accesible para todos. De hecho, sienten que muchas
+                  personas tienen una percepción falsa del trading. El equipo de BitIQ sabe que la
+                  gente piensa que invertir es mucho más complicado de lo que realmente es. Esta es
+                  una de las razones por las que se creó esta plataforma de trading.
+                </p>
+              </div>
+            </div>
+            <div class="history-item">
+              <h3 class="history-item-title">Diversifique su cartera</h3>
+              <div class="history-item-content">
+                <p>
+                  Tener una cartera diversa es una parte crucial de invertir sabiamente. Cuanto más
+                  invierta en una sola clase de activo, mayor será el nivel de riesgo que conlleva
+                  el trading. Esto se debe a que las industrias y los sectores se ven afectados por
+                  las quiebras y los eventos globales de manera diferente. Algunas clases de activos
+                  son inherentemente muy sensibles a otros mercados, por ejemplo.
+                </p>
+                <p>
+                  Al invertir en una variedad de clases de activos, puede minimizar la influencia de
+                  caídas o recesiones en el valor de su cartera en su conjunto. Esta es una de las
+                  maneras más fáciles de reducir el riesgo. A menos que tenga un nivel de
+                  experiencia en un campo en particular, no es prudente que invierta demasiado
+                  dinero en esa área.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4 mt-md-5">
+          <a
+            href="javascript:void(0)"
+            class="form-btn scroll-top"
+            onclick="scrollToForm()"
+            style="max-width: 450px"
+            >ÚNASE A LA PLATAFORMA DE TRADING AHORA</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="section-faq">
+      <div class="container" style="max-width: 1200px">
+        <h2 class="title text-center mb-5">Preguntas frecuentes</h2>
+        <div class="faq-item">
+          <h3 class="faq-item-title">¿Qué es Bitcoin?</h3>
+          <div class="faq-item-text">
+            <p>
+              Bitcoin es la criptomoneda más popular y conocida. Incluso si no está interesado en la
+              tecnología, probablemente haya escuchado el nombre antes. Bitcoin es esencialmente un
+              nombre familiar ahora, y cada vez más personas se interesan en invertir en
+              criptomonedas como resultado de su popularidad.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-item-title">¿Cómo funciona Bitcoin?</h3>
+          <div class="faq-item-text">
+            <p>
+              Los propietarios de Bitcoin pueden enviar y recibir Bitcoin a través de la cadena de
+              bloques. Para comprar y almacenar Bitcoin, todo lo que necesita es una billetera en su
+              dispositivo. Puede comprar Bitcoin directamente en varios sitios web diferentes.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h2 class="faq-item-title">¿Cómo puedes empezar a usar BITIQ?</h2>
+          <div class="faq-item-text">
+            <p>
+              BITIQ se complace en dar la bienvenida a nuevos miembros. Para comenzar a utilizar la
+              plataforma, todo lo que necesita hacer es registrarse. Puede probar la plataforma de
+              forma gratuita antes de decidir depositar fondos en su cuenta. to welcome new members.
+              To start using the platform, all you need to do is register. You can try the platform
+              for free before you decide to deposit any funds into your account.
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-md-5">
+          <a
+            href="javascript:void(0)"
+            class="form-btn scroll-top"
+            onclick="scrollToForm()"
+            style="max-width: 320px"
+            >HÁGASE MIEMBRO AHORA</a
+          >
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+          <div class="logo">
+            <a href="javascript:void(0)">
+              <picture>
+                <source type="image/webp" srcset="images/logo.webp" />
+                <source type="image/png" srcset="images/logo.png" />
+                <img loading="lazy" src="images/logo.png" width="212" height="56" alt="BitQT" />
+              </picture>
+            </a>
+          </div>
+          <div class="header-menu" style="display: none">
+            <div class="header-menu-item">
+              <a href="javascript:void(0)" onclick="scrollToForm()">Sobre nós</a>
+            </div>
+            <div class="header-menu-item">
+              <a href="javascript:void(0)" onclick="scrollToForm()">Contate-nos</a>
+            </div>
+            <div class="header-menu-item">
+              <a href="javascript:void(0)" onclick="scrollToForm()">Login</a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="risk">
+          <p><b>Nota de Riezgo Importante</b></p>
+          <p>
+            El comercio puede generar beneficios notables; sin embargo, también implica un riesgo de
+            pérdida parcial o total de los fondos y debe ser considerado por los inversores
+            iniciales. Alrededor del 70 por ciento de los inversores perderán dinero.
+          </p>
+          <p>
+            <b>#BITIQ</b> y cualquier otro nombre comercial utilizado en el sitio son solo para
+            fines comerciales y no se refieren a ninguna empresa específica ni proveedores de
+            servicios específicos.
+          </p>
+          <p>
+            El video es solo para fines de presentación comercial e ilustración, y todos los
+            participantes son actores.
+          </p>
+          <p>
+            Lea atentamente los términos y condiciones y la página de exención de responsabilidad de
+            la plataforma de inversores de terceros antes de invertir. los usuarios deben ser
+            conscientes de su obligación tributaria individual sobre las ganancias de capital en su
+            país de residencia. Es contra la ley solicitar a personas de los Estados Unidos que
+            compren y vendan opciones sobre productos básicos, incluso si se denominan contratos de
+            ""predicción"", a menos que estén listados para negociar y se negocien en una bolsa
+            registrada en la CFTC o que estén legalmente exentos.
+          </p>
+          <p>
+            La Autoridad de Conducta Financiera (""FCA"") ha emitido una declaración de política
+            PS20/10, que prohíbe la venta, promoción y distribución de CFD sobre criptoactivos. Está
+            prohibiendo la difusión de materiales de marketing relacionados con la distribución de
+            CFD y otros productos financieros basados en Criptomonedas y que están dirigidos a
+            residentes del Reino Unido.
+          </p>
+          <p>
+            Al dejar sus datos personales aquí, usted acepta y nos permite compartir su información
+            personal con terceros que brindan servicios comerciales según lo dispuesto en la
+            privacidad y los términos de las condiciones.
+          </p>
+          <p>
+            Hay varias opciones comerciales que el comerciante/usuario puede usar: mediante software
+            comercial, utilizando corredores humanos o realizando sus propias operaciones, y es
+            responsabilidad exclusiva del comerciante elegir y decidir cuál es la forma correcta de
+            operar para él/ella.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+          <div class="copyright-title">Copyrights © 2022 All Rights Reserved by BITIQ</div>
+          <!-- <div class="copyright-menu">
+                    <div class="copyright-menu-item"><a class="alterlink" href="javascript:void(0)"
+                            data-name="terms">Termos</a></div>
+                    <div class="copyright-menu-item"><a class="alterlink" href="javascript:void(0)"
+                            data-name="policy">Privacidade</a></div>
+                </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Start popup double -->
+    <div class="modal-form" id="modalFailure">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="contents">
+        <div class="sign-up-form-header text-center">
+          <h5 class="mb-2 mt-4">
+            Ya estás registrado para este número. Si necesita una nueva cuenta, registrarse en otro
+            número de móvil.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalFailureEmail">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="contents">
+        <div class="sign-up-form-header text-center">
+          <h5 class="mb-2 mt-4">
+            Ya estás registrado para esta cuenta de correo electrónico. Si necesita una nueva cuenta,
+            registrarse con una cuenta de correo electrónico diferente.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-form" id="modalInvalid">
+      <p class="close-modal" href="#">&times;</p>
+      <div class="contents">
+        <div class="sign-up-form-header text-center">
+          <h5 class="mb-2 mt-4">
+            Ingresaste el correo electrónico incorrecto. Por favor regístrese con un correo electrónico diferente.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <!-- End popup double -->
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/utm.js"></script>
+  </body>
+</html>

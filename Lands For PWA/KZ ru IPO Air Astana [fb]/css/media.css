@@ -1,0 +1,71 @@
+﻿
+@media (max-width: 1199px) {
+    .subscription-homePage {
+        max-width: 406px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .subscription-homePage {
+        max-width: 100%;
+        margin: 48px 25.5px;
+        padding: 32px;
+    }
+
+    .subscription-banner-homePage {
+        background-color: #fff;
+        max-width: 100%;
+        margin: 48px 25.5px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .subscription-homePage {
+        max-width: 610px;
+        /* max-height: 480px; */
+        margin: 16px auto;
+    }
+
+    .form__item {
+        flex-direction: column;
+    }
+
+    .form__item__button {
+        width: 100%;
+    }
+
+    .button__submit {
+        width: 100%;
+    }
+
+    .form__item {
+        gap: 16px;
+        align-items: center;
+    }
+
+    .subscription-banner-homePage {
+        max-width: 406px;
+        max-height: 336px;
+        margin: 32px auto;
+    }
+
+    .subscription-banner-homePage img {
+        height: 353px;
+    }
+}
+
+@media (max-width: 520px) {
+    .subscription-homePage {
+        margin: 16px;
+        padding: 24px;
+    }
+
+    .subscription-banner-homePage {
+        margin: 32px 16px;
+    }
+
+    .subscription-banner-homePage img {
+        height: 336px;
+    }
+}

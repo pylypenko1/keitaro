@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="isoCode" content="ua">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="index.html" />
+    <link rel="alternate" hreflang="x-default" href="index.html" />
+    <meta property="og:url" content="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#fff">
+    <meta name="description"
+        content="Immediate Edge is an advanced crypto trading website that allows you to trade Bitcoin. It’s Simple, Reliable and Fast.">
+    <meta name="og:type" content="website">
+    <meta name="og:title" content="Immediate Edge ™ | The Official Website (2022)">
+    <meta name="og:description"
+        content="Immediate Edge is an advanced crypto trading website that allows you to trade Bitcoin. It’s Simple, Reliable and Fast.">
+    <title>Immediate Edge ™ | The Official Website (2022)</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/video-js.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <style>
+        .iti.iti--allow-dropdown.iti--separate-dial-code {
+            width: 100%;
+        }
+
+        .iti--separate-dial-code .iti__selected-flag {
+            max-height: 40px;
+        }
+
+        /* input.error {
+            background-color: rgba(255, 0, 0, 0.182);
+        } */
+
+        label.error {
+            font-size: 0.95rem !important;
+            color: #ff0000be;
+        }
+    </style>
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+        function getCookie(name) {
+            var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return v ? v[2] : null;
+        }
+
+        function setCookie(name, value, days) {
+            var d = new Date;
+            d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+            document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+        }
+
+        function getSubId() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{subid}'.match('{')) {
+                return '{subid}';
+            }
+            var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+            if (clientSubid && !clientSubid.match('>')) {
+                return clientSubid;
+            }
+            if (params.get('_subid')) {
+                return params.get('_subid')
+            }
+            if (params.get('subid')) {
+                return params.get('subid')
+            }
+            if (getCookie('subid')) {
+                return getCookie('subid');
+            }
+        }
+
+
+        if (typeof URLSearchParams === 'function') {
+            document.addEventListener("DOMContentLoaded", function (event) {
+                var params = new URLSearchParams(document.location.search.substr(1));
+                var subid = getSubId();
+
+                setCookie('subid', subid);
+
+                // Adds params to the links  
+                document.querySelectorAll('a').forEach(function (link) {
+                    var url = new URL(link.href);
+                    params.forEach(function (v, k) {
+                        url.searchParams.append(k, v);
+                    });
+                    link.href = url.toString();
+                });
+
+                // Adds params as hidden inputs to the forms
+                document.querySelectorAll('form').forEach(function (form) {
+                    params.forEach(function (v, k) {
+                        var input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = k;
+                        input.value = v;
+
+                        form.append(input);
+                    });
+                });
+            })
+        }
+    </script>
+    <!-- End JS adapter -->
+</head>
+
+<body>
+
+    <header class="header" id="header" data-lang="en">
+        <div class="headerContent">
+            <div class="headerLogo">
+                <a href="#to_top">
+                    <img src="assets/immediate-edge.png" alt="Immediate Edge" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="homeContent">
+        <section class="homeTitle">
+            <div class="firstSectionOpacity"></div>
+            <div class="content-wrapper">
+                <div class="container">
+                    <h1>Web Oficial de Immediate Edge 2022</h1>
+                    <h2>Acceda al vasto mundo del comercio de criptomonedas con Immediate Edge. Encuentre corredores
+                        populares de forma rápida y sencilla.</h2>
+                    <p>Immediate Edge ofrece a la gente de a pie un enfoque sencillo para operar en el mercado de
+                        criptodivisas de rápido crecimiento. Le pondremos en contacto con un corredor de comercio de
+                        criptomonedas en su país que le ayudará a acceder a datos de mercado en profundidad, robots de
+                        comercio, numerosos activos y apoyo continuo.</p>
+                    <div class="homeTopBox" id="to_top">
+                        <div class="homeTopVideo">
+                            <!-- <img src="assets/video-poster.jpg" alt="Immediate Edge Image"> -->
+                            <div id="video"
+                                data-setup="{ &quot;controls&quot;: true, &quot;autoplay&quot;: true, &quot;preload&quot;: &quot;auto&quot;, &quot;controlBar&quot;: false, &quot;fluid&quot;: true }"
+                                class="video-js vjs-show-big-play-button-on-pause vjs-big-play-centered vjs-paused vjs-fluid video-dimensions vjs-controls-enabled vjs-workinghover vjs-v7 vjs-user-active"
+                                lang="de" role="region" aria-label="Video Player">
+                                <video class="vjs-tech" style="outline: none;"
+                                    data-setup="{ &quot;controls&quot;: true, &quot;autoplay&quot;: true, &quot;preload&quot;: &quot;auto&quot;, &quot;controlBar&quot;: false, &quot;fluid&quot;: true }"
+                                    id="video_html5_api" tabindex="-1" preload="auto" autoplay="" src="video/video.mp4"
+                                    poster="video/bgvideo.png">
+                                    <source src="video/video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="homeTopText">
+                            <img src="assets/immediate-edge-logo.png" alt="Immediate Edge Logo" />
+                            <p>Immediate Edge Registro</p>
+                            <form id="formTop" name="email-form" class="members-form" autocomplete="off" method="post">
+                                <input type="text" class="form-control w-input" name="first_name" id="first_name"
+                                    required placeholder="Nombre">
+
+                                <input type="text" class="form-control w-input" required name="last_name" id="last_name"
+                                    placeholder="Apellidos">
+
+                                <input type="email" class="form-control w-input" name="email" id="email"
+                                    placeholder="Email">
+
+                                <input type="tel" id="phone1" name="phone1" placeholder="" autocomplete="off" required>
+                                <input type="hidden" id="realPhone" name="realPhone" class="hidden-phone" value>
+                                <input type="hidden" id="country" name="country" value>
+
+                                <button type="submit" class="button btn_register btn-primary btn-sm btn-100 w-button">
+                                    <span>Unirme Ya</span>
+                                </button>
+                                <p class="form-dis">Al hacer clic aceptas los Términos y Exenciones de
+                                    Responsabilidad de la web y la Política de Privacidad. Estás
+                                    proporcionando información personal que aceptas compartir con nuestros socios
+                                    externos. Toda operación conlleva riesgo. Antes de empezar a operar, infórmate!</p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="sponsorLogo">
+                        <img src="assets/ssl-png.png" class="ssl-logo" alt="SSL Logo" />
+                        <img src="assets/DMCA.png" class="dmca-logo" alt="DMCA Logo" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container homeTextContainer">
+            <p>Descargo de responsabilidad: Immediate Edge es una herramienta de software que conecta a los operadores
+                con corredores financieros, que ofrecen servicios para operar con criptodivisas, Forex, CFD, acciones y
+                otros activos. Todas las formas de inversión financiera y de especulación en el mercado conllevan un
+                riesgo y pueden provocar pérdidas monetarias. Por esta razón, no es aconsejable invertir dinero que no
+                pueda permitirse perder. Investigue siempre adecuadamente, calcule los riesgos y planifique su
+                presupuesto en consecuencia. Además, nuestro software recomienda corredores de forma aleatoria según el
+                acuerdo con nuestros socios. Lleve a cabo su debida diligencia e investigue el corredor que le asignamos
+                para asegurarse de que sus servicios cumplen todas las normas y reglamentos.</p>
+            <div class="container bottomContainer topContainer pt-3 pb-3 text-center">
+                <a href="#to_top">Abrir una Cuenta en Immediate Edge</a>
+            </div>
+            <h3>El Software Immediate Edge Explicado</h3>
+            <p>
+                Immediate Edge está diseñado para ayudarte a acceder al creciente mercado del Bitcoin y las divisas
+                digitales.
+            </p>
+            <p>
+                Gracias a la última tecnología, casi cualquier persona, sin importar su educación, formación o nivel de
+                ingresos, puede beneficiarse potencialmente de las muchas oportunidades que ofrece el mercado de las
+                criptomonedas.
+            </p>
+            <p>
+                ¿Qué ventajas tiene? Transacciones rápidas, retiradas transparentes, ausencia de comisiones ocultas,
+                igualdad de acceso a las oportunidades de inversión y mucho más. Incluso los no bancarizados, que
+                representan 1.700 millones de personas en todo el mundo (según el último Índice Financiero Global),
+                podrían beneficiarse de las tecnologías de criptomoneda y blockchain.
+            </p>
+            <p>
+                ¡Y nosotros estamos aquí para acelerar estos cambios! Nuestro bien diseñado portal ayuda a los
+                comerciantes de todo el mundo a acercarse a alcanzar su máximo potencial intentando utilizar la
+                volatilidad del mercado de criptomonedas en su beneficio. Sin embargo, no podemos garantizarle un éxito
+                seguro, ya que la habilidad y la suerte están involucradas. Los mercados se mueven rápidamente, pero
+                gracias a las herramientas de nuestros socios, usted puede estar en mejor posición para seguir el ritmo.
+            </p>
+            <p>
+                Miles de personas utilizan Immediate Edge para acceder al mercado de criptomonedas. Tú puedes ser el
+                siguiente! Regístrate en el formulario y descubre lo que Immediate Edge puede hacer por ti!
+            </p>
+
+            <h3>Immediate Edge | Ventajas</h3>
+            <p><strong>Socios de confianza:</strong></p>
+            <p>A diferencia de otras plataformas de negociación, Immediate Edge es fácil de usar para los principiantes,
+                fiable y segura. ¡Y podrá obtener sus primeros resultados en cuestión de minutos! Estará conectado con
+                uno de los corredores más populares de su zona que estará disponible las 24 horas del día para ayudarle
+                con cualquier pregunta que pueda tener.</p>
+            <p>Nuestros socios ofrecen tendencias, parámetros de trading, copy trading, datos históricos y más, con un
+                depósito mínimo de sólo 250EUR. ¿Suena bien, verdad?</p>
+            <p><strong>Resultados rápidos:</strong></p>
+            <p>Immediate Edge encuentra las mejores oportunidades para ti en el acto. Porque el mercado cambia
+                rápidamente y la velocidad importa. Creemos que AHORA es el momento adecuado para entrar en el mercado.
+            </p>
+            <p>Piénsalo. Los bancos han bajado sus tipos de interés. Grandes empresas como Tesla, Apple, Google o
+                Facebook ya han invertido en blockchain. Miles, millones de personas han entrado en el mercado de las
+                monedas digitales. ¿Por qué perder más tiempo?</p>
+            <p><strong>Libertad financiera:</strong></p>
+            <p>Con Immediate Edge podrás acceder a los mercados del futuro. Toma control de tu experiencia de trading y
+                utiliza la tecnología de nuestros socios para alcanzar tu máximo potencial. Compra o vende Bitcoin y
+                otras criptomonedas como Ethereum, Litecoin, Cardano, Stellar y Chainlink a golpe de clic. Infórmate
+                sobre el trading con apalancado, los CPD, los spreads y otros términos y conviértete en un profesional.
+            </p>
+            <p>El mercado de Bitcoin nos acerca a los mercados del futuro, y con Immediate Edge podrás entrar en este
+                ecosistema futurista. Ya ha cambiado el futuro de muchos, tú puedes ser el siguiente!</p>
+            <p><strong>Sistema fácil de usar:</strong></p>
+            <p>Immediate Edge ofrece un enfoque personalizado de inversión. Nuestra misión es ayudar a todo el mundo a
+                entrar al mercado de criptomonedas, incluso si no estás familiarizado con el funcionamiento de la
+                industria. Immediate Edge te conecta con un software fácil de usar en cualquier dispositivo.</p>
+            <p>Es seguro, y puedes financiar tu cuenta con distintas divisas. La mayoría de los brokers con los que
+                trabajamos ofrecen varios métodos de pago y un sencillo sistema de retirada.</p>
+            <p><strong>Herramientas avanzadas:</strong></p>
+            <p>Después de abrir tu cuenta podrás utilizar un avanzado software de trading de criptomonedas para comprar
+                y vender Bitcoin y otras altcoins. Por eso nace Immediate Edge: para dar a todo el mundo la oportunidad
+                de acceder a los mercados del futuro.</p>
+            <p>El mercado de Bitcoin está lleno de potencial, incluso para los nuevos inversores. Con herramientas
+                adecuadas, conocimientos y astucia, hay oportunidades de obtener beneficios. Immediate Edge es una
+                plataforma para que saques partido de la volatilidad del mercado de criptomonedas, con herramientas
+                automatizadas de trading.</p>
+            <p><strong>Oportunidades lucrativas:</strong></p>
+            <p>En Immediate Edge probamos el mercado y utilizamos un sistema integral que conecta a los operadores con
+                los corredores que están activos a nivel mundial. Como se ha explicado anteriormente, podrás operar con
+                una variedad de criptodivisas como Bitcoin, Ethereum, Litecoin, Cardano, Stellar, Chainlink y muchas
+                otras con un solo clic.</p>
+            <p>Pero también puedes operar con activos regulares como el oro y la plata, y divisas regulares como el USD,
+                la GBP, el EUR o docenas más. Tú decides!</p>
+            <p><strong>Apoyo continuo:</strong></p>
+            <p>Los brokers te proporcionarán una plataforma de trading automatizado de fiar para operar a la velocidad
+                de la luz. Además, un asesor profesional de la empresa del broker te llamará para explicarte todo en un
+                lenguaje sencillo y comprensible.</p>
+            <p>Aprenderá con precisión sus sistemas, precios, riesgos, consejos y trucos. Por ejemplo, podrá implementar
+                un sistema de stop-loss que podría limitar su exposición a grandes pérdidas. Empezar nunca ha sido tan
+                fácil.</p>
+            <h3>¿Cómo Funciona?</h3>
+            <div class="row m-0">
+                <div class="col-12 col-md-6 col-lg-3 mb-3 blue-box">
+                    <div class="workStepBox">
+                        <p>Introduzca sus datos en el formulario de registro de arriba y podrá empezar a operar en
+                            cuestión de horas. El registro es totalmente gratuito.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3 blue-box">
+                    <div class="workStepBox">
+                        <p>Su información se enviará directamente a los corredores de su país. Te llamarán casi de
+                            inmediato para asegurarse de que empieces cuanto antes.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3 blue-box">
+                    <div class="workStepBox">
+                        <p>Deposita en tu cuenta un depósito mínimo y accede al software de trading que proporciona tu
+                            broker personal.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3 blue-box">
+                    <div class="workStepBox">
+                        <p>Comienza ya a operar con criptomonedas. Rápido, fiable, seguro y fácil de usar para
+                            principiantes.</p>
+                    </div>
+                </div>
+            </div>
+            <p><strong>Regístrate ya y consigue resultados en unas horas!</strong></p>
+        </section>
+        <section class="homeTextBg">
+            <div class="container homeTextContainer">
+                <h3>Por Qué Operar con Bitcoin | Bitcoin Predictions</h3>
+                <p>Aunque no podemos garantizar beneficios, te animamos a unirte ya porque estas oportunidades se
+                    presentan una vez en la vida.</p>
+                <p>Shervin Pishevar, fundador de Hyperloop One and Sherpa Capital, afirma que bitcoin alcanzará 100.000$
+                    en 2022.</p>
+                <p>Thomas Fitzpatrick, CEO de Citibank, cree que bitcoin alcanzará 318.000$ en 2022.</p>
+                <p>Los hermanos Winkelvoss, que ganaron millones invirtiendo de forma temprana en Bitcoin, afirman que
+                    es el nuevo oro, y que llegará un día a los 500.000$.</p>
+                <p>Tai Lopez, un experto en marketing que inunda YouTube con anuncios, pronostica que bitcoin superará
+                    este año los 60.000$.</p>
+                <p>Entra al mercado de criptomonedas antes de que estalle la burbuja!</p>
+                <div class="newBtnBox">
+                    <a href="#to_top">Empezar a Operar YA</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faqContent">
+            <div class="container faqContainer">
+                <h3>Preguntas Frecuentes</h3>
+                <div class="faqBox">
+                    <div class="faqQuestion">
+                        <h5>¿Cómo funciona Immediate Edge?</h5>
+                    </div>
+                    <div class="faqAnswer">
+                        <p>
+                            Es fiable y seguro, y puede financiar su cuenta con numerosas divisas. La mayoría de los
+                            corredores con los que trabajamos ofrecen múltiples métodos de pago, incluido un sencillo
+                            sistema de retirada de fondos.
+                        </p>
+                        <ul>
+                            <li>Copy trading</li>
+                            <li>Análisis técnicos</li>
+                            <li>Gráficos</li>
+                            <li>Mobile Trading</li>
+                            <li>Alertas</li>
+                            <li>Señales </li>
+                            <li>Bots de trading</li>
+                            <li>Algoritmos de Trading</li>
+                        </ul>
+                        <p>Estos brokers te llamarán cuando te hayas registrado para explicarte sus servicios en
+                            detalle. Cuando lo tengas claro, podrás empezar a operar con ellos. El depósito mínimo
+                            inicial es de 250 EUR.</p>
+                        <p>Antes de invertir, ten en cuenta que no es dinero gratis. Todas las operaciones conllevan un
+                            riesgo y pueden no ser adecuadas para ti. Haz tu propia investigación y asegúrate de
+                            entender lo que estás haciendo. No inviertas más de lo que puedas permitirte perder y
+                            contacta con un profesional autorizado si tienes dudas.</p>
+                    </div>
+                </div>
+                <div class="faqBox">
+                    <div class="faqQuestion">
+                        <h5>¿Qué ventajas tiene Immediate Edge?</h5>
+                    </div>
+                    <div class="faqAnswer">
+                        <p>Immediate Edge explora el mercado de las criptomonedas para conectarte con el mejor BROKER de
+                            tu país.</p>
+                        <ul>
+                            <li>Regístrate y accede a la tecnología de trading más avanzada. Rápido, fiable y apto para
+                                principiantes.</li>
+                            <li>No necesitas ser rico para entrar. Basta con una inversión inicial mínima de 250 EUR.
+                            </li>
+                            <li>Puedes acceder a sus herramientas de trading en cualquier dispositivo. También ofrecemos
+                                asistencia continua.</li>
+                        </ul>
+                        <p>Los traders expertos pueden utilizar Immediate Edge para acceder a herramientas avanzadas. La
+                            mayoría de los brokers con los que trabajamos permiten utilizar CPD con apalancamiento. Son
+                            productos complejos que pueden aumentar tus beneficios. Utiliza estas herramientas sólo
+                            cuando tengas la suficiente experiencia. Operar con apalancamiento podría resultar en la
+                            pérdida de todo tu capital.</p>
+                    </div>
+                </div>
+                <div class="faqBox">
+                    <div class="faqQuestion">
+                        <h5>¿Es Immediate Edge apto para principiantes?</h5>
+                    </div>
+                    <div class="faqAnswer">
+                        <p>Nuestra plataforma es fácil de usar para principiantes, solo tienes que introducir tus datos.
+                            Tu información se envía a un agente que te ofrecerá servicios para operar. Estos servicios
+                            pueden ser lucrativos, pero también son arriesgados ante la volatilidad del mercado. Nunca
+                            inviertas más de lo que te puedes permitir perder. Si no estás seguro de qué hacer, consulta
+                            con un asesor profesional antes de operar. La mayoría de principiantes pierden su dinero con
+                            herramientas complejas como CPD, bots y herramientas de automatización. Infórmate de los
+                            riesgos de este tipo de trading.</p>
+                    </div>
+                </div>
+                <div class="faqBox">
+                    <div class="faqQuestion">
+                        <h5>¿Debería operar con criptomonedas?</h5>
+                    </div>
+                    <div class="faqAnswer">
+                        <p>No podemos dar consejos sobre inversiones. Pero en general, los expertos creen que es buena
+                            idea invertir una pequeña parte de tu dinero en criptomonedas como Bitcoin, entre un 2% y un
+                            8% de tus ahorros. Sobre todo ahora que los bancos están bajando los tipos de interés. Dicho
+                            esto, las criptomonedas y el apalancamiento financiero conllevan un alto riesgo. Es fácil
+                            perder toda tu inversión. Invierte SOLO lo que puedas permitirte perder. Asegúrate de que no
+                            es tu única fuente de ingresos, y no hagas nada que no entiendas del todo. </p>
+                    </div>
+                </div>
+                <div class="faqBox">
+                    <div class="faqQuestion">
+                        <h5>¿Puedo usar Immediate Edge en mi smartphone?</h5>
+                    </div>
+                    <div class="faqAnswer">
+                        <p>Immediate Edge es accesible en dispositivos de escritorio y móviles.</p>
+                    </div>
+                </div>
+                <div class="faqBox">
+                    <div class="faqQuestion">
+                        <h5>¿Hay tarifas para usar Immediate Edge?</h5>
+                    </div>
+                    <div class="faqAnswer">
+                        <p>No tienes que pagar por usar Immediate Edge. Nos pagan nuestros socios afiliados. Estos
+                            brokers cobran comisión de tus operaciones. Por lo general, se trata de diferenciales.</p>
+                    </div>
+                </div>
+                <div class="faqBox">
+                    <div class="faqQuestion">
+                        <h5>¿Immediate Edge utiliza encriptación?</h5>
+                    </div>
+                    <div class="faqAnswer">
+                        <p>Immediate Edge usa protección SSL para mantener tus datos seguros. Tu privacidad importa!</p>
+                    </div>
+                </div>
+                <div class="faqBox">
+                    <div class="faqQuestion">
+                        <h5>¿Puedo operar con otras criptomonedas además de Bitcoin?</h5>
+                    </div>
+                    <div class="faqAnswer">
+                        <p>Sí, la mayoría de brokers permiten operar con muchas de las monedas principales de
+                            CoinMarketCap, como Ethereum, Cardano, XRP, Polkadot, Litecoin, Chainlink y muchas más.</p>
+                    </div>
+                </div>
+                <div class="faqBox">
+                    <div class="faqQuestion">
+                        <h5>¿Necesito comprobar Immediate Edge cada día?</h5>
+                    </div>
+                    <div class="faqAnswer">
+                        <p>Después de registrarte en la plataforma Immediate Edge, no tendrás que utilizarla más. Esta
+                            plataforma solo te conecta con brokers, así que no es necesario utilizarla. Pero antes de
+                            empezar a operar, es buena idea informarte. Lee, aprende y practica. Prueba con una cuenta
+                            demo. Aprende cómo funciona el mercado y desarrolla tu estrategia para operar.</p>
+                    </div>
+                </div>
+                <div class="faqBox">
+                    <div class="faqQuestion">
+                        <h5>¿Qué método de pago puedo usar para financiar mi cuenta?</h5>
+                    </div>
+                    <div class="faqAnswer">
+                        <p>La mayoría de brokers con los que trabajamos aceptan una variedad de métodos de pago, como
+                            Visa, MasterCard, PayPal y más. Asegúrate de conocer la legislación vigente sobre
+                            criptomonedas en tu país antes de utilizar los servicios de cualquier broker.</p>
+                    </div>
+                </div>
+                <div class="faqBox">
+                    <div class="faqQuestion">
+                        <h5>¿Cuánto dinero puedo ganar?</h5>
+                    </div>
+                    <div class="faqAnswer">
+                        <p>Los beneficios que puedes obtener dependen de muchos factores, como experiencia, habilidades,
+                            conocimientos, oportunidades, cantidad invertida, circunstancias del mercado y suerte. El
+                            rendimiento pasado no es garantía de éxito. Recuerda que te arriesgas a perder toda tu
+                            inversión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- <script async src="https://kit.fontawesome.com/a5598cee1d.js" crossorigin="anonymous"></script> -->
+
+    <footer>
+        <div class="container footerContent position-relative">
+            <div class="footerLogo">
+                <a href="#to_top">
+                    <img src="assets/immediate-edge-logo.png" alt="Immediate Edge Logo" />
+                </a>
+            </div>
+            <!-- <div class="footerBtn">
+                <div><a class="text-uppercase" href="index.html">Home</a></div>
+                <div><a class="text-uppercase" href="about/index.html">About Us</a></div>
+                <div><a class="text-uppercase" href="terms-conditions/index.html">Terms and Conditions</a></div>
+                <div><a class="text-uppercase" href="cookie-policy/index.html">Cookie Policy</a></div>
+                <div><a class="text-uppercase" href="privacy-policy/index.html">Privacy Policy</a></div>
+            </div> -->
+            <!-- <div class="iconBox">
+                <a rel="nofollow" href="#to_top" target="_blank">
+                    <i class='fab fa-twitter'></i>
+                </a>
+                <a rel="nofollow" href="#to_top" target="_blank">
+                    <i class='fab fa-facebook-f'></i>
+                </a>
+            </div> -->
+
+
+            <div class="footerText">
+                <h3>Aviso de Inversión de Alto Riesgo</h3>
+                <p>Immediate Edge actúa como herramienta de marketing para atraer a inversores y conectarlos con brokers
+                    fiables. Recibimos compensación de nuestros socios. No somos brokers ni asesores financieros. El
+                    contenido se comparte con fines informativos y no representa asesoramiento financiero. Consulta con
+                    un profesional antes de operar.</p>
+                <p>El trading es una inversión de alto riesgo. No operes con dinero prestado ni con dinero que no puedas
+                    permitirte perder. Puedes perder todo tu capital. Es tu obligación asegurarte de que el uso de esta
+                    web cumple con la legislación vigente en tu país.</p>
+                <p>Asegúrate de que entiendes los CPD y la normativa sobre criptomonedas en tu país antes de operar.
+                    Empresas y particulares no están autorizados a promover CPD basados en criptomonedas en Reino Unido.
+                    La norma PS20/10 de la FCA lo prohíbe debido al riesgos que conllevan. No fomentamos la promoción de
+                    CPD basados en criptomonedas en Reino Unido, y clientes del Reino Unido o los Estados Unidos no
+                    deben usar Immediate Edge. Actúa bajo tu propia responsabilidad!</p>
+            </div>
+        </div>
+        <div class="alert">
+            <div class="msgBox">
+                <span class="closebtn">&times;</span>
+                <strong id="msg"></strong>
+            </div>
+        </div>
+        <div id="advads-cookie-consent-box">
+            <div class="advads-cookie-consent-title">
+                <span>Aviso de Cookies</span>
+            </div>
+            <div class="advads-cookie-consent-text">
+                <p>Esta web o sus herramientas utilizan cookies, necesarias para su funcionamiento y para lograr los
+                    fines definidos en la política de cookies.</p>
+                <div class="advads-cookie-consent-btn">
+                    <button id="advads-cookie-consent" onclick="localStorage.setItem('accept_cookies', 'true');
+                jQuery('#advads-cookie-consent-box').fadeOut();">Acepto</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class='modal-form' id='modalFailure'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">Ya se ha registrado para este número. Si necesita una nueva cuenta, regístrese
+                    para un número de teléfono diferente</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class='modal-form' id='modalFailureEmail'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">Ya se ha registrado con este e-mail. Si necesita una nueva cuenta, regístrese con
+                    un correo electrónico diferente</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class='modal-form' id='modalInvalid'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='content'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">Ha introducido un correo electrónico no válido. Regístrese para recibir otro
+                    correo electrónico</h5>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="main.1af7279bc901a0c5965f.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/utm.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Geschenkkarte</title>
+    <meta name="viewport" content="user-scalable=false, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/util.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.modal.js"></script>
+    <script type="text/javascript" src="assets/js/confetti.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/translate.js"></script>
+
+    <script>
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        const results = regex.exec(location.search);
+        console.log(results);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', getUrlParameter('idpxl'));
+      fbq('track', 'PageView');
+      fbq('track', 'InitiateCheckout');
+    </script>
+  </head>
+
+  <body>
+    <!-- <video style="position: absolute;" id="music" src="/landings/278272/images/" width="0" height="0" playsinline=""></video> -->
+    <div id="p_body_content"><canvas id="canvasConfetti" width="1920" height="937"></canvas></div>
+    <div id="lotopop" class="modal11" style="display: none"></div>
+    <div id="id1" class="header">
+      <div class="container">
+        <div class="nav-hamburger-menu"><span></span><span></span><span></span></div>
+        <div class="nav-logo-link">
+          <!--<span class="nav-logo-base"><img src="/landings/278272/images/logo.png" width="97" height="30" alt="Amazon"></span>--><!--<span id="locoLogo" class="nav-logo-locale">.de</span>-->
+        </div>
+        <div class="nav-location">
+          <div class="nav-location-icon">
+            <img src="assets/images/icon-location.png" width="15" height="18" alt="" />
+          </div>
+          <div class="nav-location-address">
+            <span class="nav-line nav-line-1 text-69">Доставка до</span
+            ><strong id="countryNameSrc" class="nav-line nav-line-2"> {{country}} </strong
+            ><span class="nav-line nav-line-3"> {{city}} </span>
+          </div>
+        </div>
+        <div class="header-title text-1">Пробна програма</div>
+        <div class="nav-signin">
+          <span class="nav-line-1"
+            ><span class="nav-subline-1 text-70">Привіт,</span>
+            &nbsp;
+            <span class="nav-subline-2 text-71">Увійти</span></span
+          ><strong class="nav-line-2 text-72">Обліковий запис і списки</strong>
+        </div>
+        <div class="nav-orders">
+          <span class="nav-line-1 text-73">Повернення</span
+          ><strong class="nav-line-2 text-74">та замовлення</strong>
+        </div>
+        <div class="nav-cart">
+          <div class="nav-cart-count-container">
+            <span class="nav-cart-count"> 0 </span
+            ><span class="nav-cart-icon"
+              ><img src="assets/images/icon-basket.png" width="38" height="26" alt=""
+            /></span>
+          </div>
+          <div class="nav-cart-text-container">
+            <span class="nav-line-1 text-75"></span
+            ><strong class="nav-line-2 text-76">Кошик</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="main-content" id="content3">
+        <div id="boxes" class="boxes" data-cgeneric="boxes-cgeneric">
+          <div class="div_img_gift">
+            <img class="img_gift box-gift" src="assets/images/iphone_main.png" />
+          </div>
+          <div id="0" class="try temblor">
+            <div class="caja_tapa"><img class="box-01" src="assets/images/top_red.png" /></div>
+            <div class="caja_trasera"><img class="box-03" src="assets/images/x1.png" /></div>
+            <div class="caja_gift showned">
+              <img class="box-04" src="assets/images/icon_card.png" />
+            </div>
+            <div class="caja"><img class="box-02" src="assets/images/box_open.png" /></div>
+          </div>
+          <div id="1" class="try temblor">
+            <div class="caja_tapa"><img class="box-01" src="assets/images/top_red.png" /></div>
+            <div class="caja_trasera"><img class="box-03" src="assets/images/x1.png" /></div>
+            <div class="caja_gift showned">
+              <img class="box-04" src="assets/images/icon_card.png" />
+            </div>
+            <div class="caja"><img class="box-02" src="assets/images/box_open.png" /></div>
+          </div>
+          <div id="2" class="try temblor">
+            <div class="caja_tapa"><img class="box-01" src="assets/images/top_red.png" /></div>
+            <div class="caja_trasera"><img class="box-03" src="assets/images/x1.png" /></div>
+            <div class="caja_gift showned">
+              <img class="box-04" src="assets/images/icon_card.png" />
+            </div>
+            <div class="caja"><img class="box-02" src="assets/images/box_open.png" /></div>
+          </div>
+          <div id="3" class="try temblor">
+            <div class="caja_tapa"><img class="box-01" src="assets/images/top_red.png" /></div>
+            <div class="caja_trasera"><img class="box-03" src="assets/images/x1.png" /></div>
+            <div class="caja_gift showned">
+              <img class="box-04" src="assets/images/icon_card.png" />
+            </div>
+            <div class="caja"><img class="box-02" src="assets/images/box_open.png" /></div>
+          </div>
+          <div id="4" class="try temblor">
+            <div class="caja_tapa"><img class="box-01" src="assets/images/top_red.png" /></div>
+            <div class="caja_trasera"><img class="box-03" src="assets/images/x1.png" /></div>
+            <div class="caja_gift showned">
+              <img class="box-04" src="assets/images/icon_card.png" />
+            </div>
+            <div class="caja"><img class="box-02" src="assets/images/box_open.png" /></div>
+          </div>
+          <div id="5" class="try temblor">
+            <div class="caja_tapa"><img class="box-01" src="assets/images/top_red.png" /></div>
+            <div class="caja_trasera"><img class="box-03" src="assets/images/x1.png" /></div>
+            <div class="caja_gift showned">
+              <img class="box-04" src="assets/images/icon_card.png" />
+            </div>
+            <div class="caja"><img class="box-02" src="assets/images/box_open.png" /></div>
+          </div>
+          <div id="6" class="try temblor">
+            <div class="caja_tapa"><img class="box-01" src="assets/images/top_red.png" /></div>
+            <div class="caja_trasera"><img class="box-03" src="assets/images/x1.png" /></div>
+            <div class="caja_gift showned">
+              <img class="box-04" src="assets/images/icon_card.png" />
+            </div>
+            <div class="caja"><img class="box-02" src="assets/images/box_open.png" /></div>
+          </div>
+          <div id="7" class="try temblor">
+            <div class="caja_tapa"><img class="box-01" src="assets/images/top_red.png" /></div>
+            <div class="caja_trasera"><img class="box-03" src="assets/images/x1.png" /></div>
+            <div class="caja_gift showned">
+              <img class="box-04" src="assets/images/icon_card.png" />
+            </div>
+            <div class="caja"><img class="box-02" src="assets/images/box_open.png" /></div>
+          </div>
+          <div id="8" class="try temblor">
+            <div class="caja_tapa"><img class="box-01" src="assets/images/top_red.png" /></div>
+            <div class="caja_trasera"><img class="box-03" src="assets/images/x1.png" /></div>
+            <div class="caja_gift showned">
+              <img class="box-04" src="assets/images/icon_card.png" />
+            </div>
+            <div class="caja"><img class="box-02" src="assets/images/box_open.png" /></div>
+          </div>
+          <div id="9" class="try temblor">
+            <div class="caja_tapa"><img class="box-01" src="assets/images/top_red.png" /></div>
+            <div class="caja_trasera"><img class="box-03" src="assets/images/x1.png" /></div>
+            <div class="caja_gift showned">
+              <img class="box-04" src="assets/images/icon_card.png" />
+            </div>
+            <div class="caja"><img class="box-02" src="assets/images/box_open.png" /></div>
+          </div>
+          <div id="10" class="try temblor">
+            <div class="caja_tapa"><img class="box-01" src="assets/images/top_red.png" /></div>
+            <div class="caja_trasera"><img class="box-03" src="assets/images/x1.png" /></div>
+            <div class="caja_gift showned">
+              <img class="box-04" src="assets/images/icon_card.png" />
+            </div>
+            <div class="caja"><img class="box-02" src="assets/images/box_open.png" /></div>
+          </div>
+          <div id="11" class="try temblor">
+            <div class="caja_tapa"><img class="box-01" src="assets/images/top_red.png" /></div>
+            <div class="caja_trasera"><img class="box-03" src="assets/images/x1.png" /></div>
+            <div class="caja_gift showned">
+              <img class="box-04" src="assets/images/icon_card.png" />
+            </div>
+            <div class="caja"><img class="box-02" src="assets/images/box_open.png" /></div>
+          </div>
+        </div>
+        <div
+          id="p_modal1"
+          class="modal fade text-center p_modal"
+          tabindex="-1"
+          role="dialog"
+          data-backdrop="static"
+          data-keyboard="false"
+          style="display: none"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img class="temblor_inf box-00" src="assets/images/iphone_main.png" />
+                <h2 class="text-77">
+                  Вітаємо! Раді, що ви знову з нами! Не пропустіть свій шанс ваш приз чекає!
+                </h2>
+                <p>
+                  <span class="text-34">Сьогодні</span>
+                  ⁠,&nbsp;
+                  <span class="current-date">27.1.2023</span
+                  ><span class="text-68">подарункова картка на 1000€!</span><br />
+                </p>
+                <p class="text-35">Ви повинні вибрати коробку з вашою винагородою</p>
+                <p class="text-36">У вас є три спроби. Удачі!</p>
+                <button type="button" id="p_modal_button1" class="survey_button">OK</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="p_modal2"
+          class="modal fade text-center p_modal"
+          tabindex="-1"
+          role="dialog"
+          aria-hidden="true"
+          data-backdrop="static"
+          data-keyboard="false"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="circle-loader load-complete">
+                  <div class="checkmark draw"></div>
+                </div>
+                <h2 class="text-37">О ...</h2>
+                <p>
+                  <span class="text-38">Вибрана коробка, на жаль, порожня. У вас ще є (</span
+                  ><span id="num_intentos"> 2 </span><span class="text-39">) Шанси! Удачі!</span>
+                </p>
+                <button type="button" id="p_modal_button2" class="survey_button">OK</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="p_modal3"
+          class="modal fade text-center p_modal"
+          tabindex="-1"
+          role="dialog"
+          aria-hidden="true"
+          data-backdrop="static"
+          data-keyboard="false"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img class="box-gift" src="assets/images/iphone_main.png" />
+                <h2 class="text-40">Вітаємо!</h2>
+                <h6 class="text-41">Gift cart!</h6>
+                <p class="text-42">1. Натисніть "ОК", щоб відвідати нашу сторінку спонсора.</p>
+                <p class="text-43">2. Введіть свою адресу, щоб отримати вашу нагороду</p>
+                <p class="text-44">
+                  3. Ваша нагорода буде доставлена ​​протягом 3 або 5 днів кур'єром.
+                </p>
+                <a href="{offer}" id="afflink" class="survey_button"> OK </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content" id="content4">
+        <div class="comments_face">
+          <div class="comments">
+            <p style="margin: 0; padding: 0; float: left; display: block; width: 50%">
+              <span style="color: #007185; cursor: pointer" class="text-45">Коментарі</span>
+            </p>
+            <p
+              style="
+                margin: 0;
+                padding: 0;
+                float: right;
+                display: block;
+                width: 50%;
+                color: #a8a7a7;
+                text-align: right;
+              "
+              class="text-46"
+            >
+              7 з 589
+            </p>
+            <div style="clear: both"></div>
+          </div>
+          <div class="comments" id="comment0" style="display: block">
+            <div class="profile"><img src="assets/images/fr1.jpg" /></div>
+            <div class="comment-content">
+              <p class="name text-47">Марко</p>
+              <p class="text-48">Дякую!</p>
+            </div>
+            <div class="clr"></div>
+            <div class="comment-status">
+              <span class="comment-stars"
+                ><img src="assets/images/star-full.png" width="16" height="16" alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /></span
+              ><span><span class="text-49">Відгуки</span> &nbsp;·&nbsp;3&nbsp;·&nbsp; </span
+              ><span class="current-date">27.1.2023</span>
+            </div>
+          </div>
+          <div class="comments" id="comment1" style="display: block">
+            <div class="profile"><img src="assets/images/fr2.jpg" /></div>
+            <div class="comment-content">
+              <p class="name text-50">Антон</p>
+              <p class="text-51">Бум!</p>
+            </div>
+            <div class="clr"></div>
+            <div class="comment-status">
+              <span class="comment-stars"
+                ><img src="assets/images/star-full.png" width="16" height="16" alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /></span
+              ><span><span class="text-49">Відгуки</span> &nbsp;·&nbsp;17&nbsp;·&nbsp; </span
+              ><span class="current-date">27.1.2023</span>
+            </div>
+          </div>
+          <div class="comments" id="comment2" style="display: block">
+            <div class="profile"><img src="assets/images/fr3.jpg" /></div>
+            <div class="comment-content">
+              <p class="name text-52">Тетяна</p>
+              <p class="text-53">#happy</p>
+            </div>
+            <div class="clr"></div>
+            <div class="comment-status">
+              <span class="comment-stars"
+                ><img src="assets/images/star-full.png" width="16" height="16" alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-empty.png"
+                  width="16"
+                  height="16"
+                  alt="" /></span
+              ><span><span class="text-49">Відгуки</span> &nbsp;·&nbsp;46&nbsp;·&nbsp; </span
+              ><span class="current-date">27.1.2023</span>
+            </div>
+          </div>
+          <div class="comments" id="comment3" style="display: block">
+            <div class="profile"><img src="assets/images/fr4.jpg" /></div>
+            <div class="comment-content">
+              <p class="name text-54">Сергій</p>
+              <p class="text-55">
+                Фантастичний! Я ніколи не виграв нічого раніше, але я сподіваюся бути так само
+                пощастило!
+              </p>
+            </div>
+            <div class="clr"></div>
+            <div class="comment-status">
+              <span class="comment-stars"
+                ><img src="assets/images/star-full.png" width="16" height="16" alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /></span
+              ><span><span class="text-49">Відгуки</span> &nbsp;·&nbsp;10&nbsp;·&nbsp; </span
+              ><span class="current-date">27.1.2023</span>
+            </div>
+          </div>
+          <div class="comments" id="comment3" style="display: block">
+            <div class="profile"><img src="assets/images/fr5.jpg" /></div>
+            <div class="comment-content">
+              <p class="name text-56">Ліза</p>
+              <p class="text-57">
+                Велике спасибі, це дійсно фантастично, я ніколи не виграв нічого в Інтернеті!
+              </p>
+            </div>
+            <div class="clr"></div>
+            <div class="comment-status">
+              <span class="comment-stars"
+                ><img src="assets/images/star-full.png" width="16" height="16" alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /></span
+              ><span><span class="text-49">Відгуки</span> &nbsp;·&nbsp;36&nbsp;·&nbsp; </span
+              ><span class="current-date">27.1.2023</span>
+            </div>
+          </div>
+          <div class="comments" id="comment4" style="display: block">
+            <div class="profile"><img src="assets/images/fr6.jpg" /></div>
+            <div class="comment-content">
+              <p class="name text-58">Миколай</p>
+              <p class="text-59">Хто-небудь дійсно виграв?</p>
+            </div>
+            <div class="clr"></div>
+            <div class="comment-status">
+              <span class="comment-stars"
+                ><img src="assets/images/star-full.png" width="16" height="16" alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-empty.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-empty.png"
+                  width="16"
+                  height="16"
+                  alt="" /></span
+              ><span><span class="text-49">Відгуки</span> &nbsp;·&nbsp;31&nbsp;·&nbsp; </span
+              ><span class="current-date">27.1.2023</span>
+            </div>
+          </div>
+          <div class="comments" id="comment5" style="display: block">
+            <div class="profile"><img src="assets/images/fr11.jpg" /></div>
+            <div class="comment-content">
+              <p class="name text-60">Лука</p>
+              <p class="text-61">
+                Сьогодні я отримав новий gift cart поштою, я все ще не можу повірити, спасибі !!!!
+              </p>
+            </div>
+            <div class="clr"></div>
+            <div class="comment-status">
+              <span class="comment-stars"
+                ><img src="assets/images/star-full.png" width="16" height="16" alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /><img
+                  src="assets/images/star-full.png"
+                  width="16"
+                  height="16"
+                  alt="" /></span
+              ><span><span class="text-49">Відгуки</span> &nbsp;·&nbsp;37&nbsp;·&nbsp; </span
+              ><span class="current-date">27.1.2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer" class="footer">
+      <p style="padding: 20px; margin-bottom: 0px; font-size: 13px">
+        <a href="#" class="text-62">Умови продажу</a
+        ><a href="#" class="text-63">Умови участі у програмі ринку</a
+        ><a href="#" class="text-64">Особисті дані |</a><a href="#" class="text-65">Кукі</a
+        ><a href="#" class="text-66">Оголошення на основі ваших інтересів</a>
+      </p>
+    </div>
+  </body>
+</html>

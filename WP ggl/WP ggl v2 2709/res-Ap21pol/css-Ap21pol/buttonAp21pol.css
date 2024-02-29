@@ -1,0 +1,177 @@
+.button-1 {
+  width: 130px;
+  font-size: 1.1em;
+  cursor: pointer;
+  background-color: #171717;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all .4s;
+ }
+ 
+ .button-1:hover {
+  border-radius: 5px;
+  transform: translateY(-10px);
+  box-shadow: 0 7px 0 -2px #f85959,
+   0 15px 0 -4px #39a2db,
+   0 16px 10px -3px #39a2db;
+ }
+ 
+ .button-1:active {
+  transition: all 0.2s;
+  transform: translateY(-5px);
+  box-shadow: 0 2px 0 -2px #f85959,
+   0 8px 0 -4px #39a2db,
+   0 12px 10px -3px #39a2db;
+ }
+
+
+ .button-2 {
+  width: 130px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+ }
+ 
+ .button-2 {
+  background: rgb(96,9,240);
+  background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+  border: none;
+ }
+ 
+ .button-2:before {
+  height: 0%;
+  width: 2px;
+ }
+ 
+ .button-2:hover {
+  box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
+               -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+     inset -4px -4px 6px 0 rgba(255,255,255,.2),
+     inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+ }
+
+ .button-3 {
+  position: relative;
+  font-family: 'Heebo', sans-serif;
+  padding: 12px 40px;
+  border: 0;
+  background: rgb(148, 1, 1);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1em;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.button-3:hover {
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.562);
+  transform: scale(1.01);
+  box-shadow: inset 0px 0px 10px rgba(255, 0, 0, 0.575);
+}
+
+.button-3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -300px;
+  width: 50%;
+  height: 100%;
+  transform: rotate(80deg);
+  background: #ffffff77;
+  filter: blur(10px);
+  transition: 0.6s ease-in-out;
+}
+
+.button-3:hover::after {
+  left: 100%;
+}
+
+
+.button-4 {
+  position: relative;
+  background: #FBD148;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  padding: 1rem 3rem;
+  font-size: 1em;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.button-4::before {
+  position: absolute;
+  content: '';
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  transform: translate(-5px, -5px);
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(84, 84, 84);
+  transition: .25s ease;
+}
+
+.button-4:hover {
+  transform: translate(-5px, -5px);
+}
+
+.button-4:hover::before {
+  transform: translate(5px, 5px);
+}
+
+.button-5 {
+  background-color: #ffc600;
+ /* sets the background color of the button to yellow */
+  color: #000000;
+ /* sets the text color of the button to black */
+  padding: 12px 24px;
+ /* adds some padding to the button */
+  border: none;
+ /* remove the default border */
+  border-radius: 30px;
+ /* rounds the corners of the button */
+  font-size: 18px;
+ /* sets the font size of the button text */
+  font-weight: bold;
+ /* sets the font weight of the button text to bold */
+  cursor: pointer;
+ /* changes the cursor to a pointer when hovering over the button */
+  /* text-shadow: 2px 2px 3px #ffc600; */
+ /* adds a subtle shadow to the button text */
+  box-shadow: 2px 2px 3px #ffc600;
+ /* adds a subtle shadow to the button */
+  transition: all 0.2s ease-in-out;
+ /* adds transition effect when hovering over the button */
+}
+
+.button-5:hover {
+  background-color: #000000;
+ /* changes the background color of the button to black when hovered */
+  color: #ffc600;
+ /* changes the text color of the button to yellow when hovered */
+  transform: scale(1.1);
+ /* increases the size of the button slightly when hovered */
+}
+
+.button-5:active {
+  transform: scale(0.97);
+}
+
+
+
+

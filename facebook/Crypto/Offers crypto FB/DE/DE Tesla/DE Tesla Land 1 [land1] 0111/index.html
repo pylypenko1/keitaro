@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Lassen Sie Ihr Kapital wachsen">
+    <title>Lassen Sie Ihr Kapital wachsen</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="css/css2.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" as="style">
+    <link href="css/nrp.css" rel="stylesheet" as="style">
+    <link rel="stylesheet" href="css/form.css">
+
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+    <style>
+        :root {
+            --agency-footer-link-color: #000000;
+            --agency-footer-text-color: #000000;
+        }
+
+        .iti.iti--allow-dropdown.iti--separate-dial-code {
+            width: 100%;
+        }
+
+        .iti--separate-dial-code .iti__selected-flag,
+        .iti__flag-container {
+            max-height: 38px;
+            outline: none;
+        }
+
+        input.error {
+            margin-bottom: 0;
+            border: 2px solid #eb162b !important;
+        }
+
+        input.valid {
+            border: 2px solid #1eb630 !important;
+        }
+
+        label.error {
+            width: 100%;
+            font-weight: 400;
+            margin-top: 0.25rem;
+            padding: 5px;
+            color: #fff;
+            background-color: #eb162b;
+            font-size: 12px;
+        }
+    </style>
+
+    <!-- JS adapter -->
+    <script type="application/javascript">
+        function getCookie(name) {
+            var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return v ? v[2] : null;
+        }
+
+        function setCookie(name, value, days) {
+            var d = new Date;
+            d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+            document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+        }
+
+        function getSubId() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{subid}'.match('{')) {
+                return '{subid}';
+            }
+            var clientSubid = '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+            if (clientSubid && !clientSubid.match('>')) {
+                return clientSubid;
+            }
+            if (params.get('_subid')) {
+                return params.get('_subid')
+            }
+            if (params.get('subid')) {
+                return params.get('subid')
+            }
+            if (getCookie('subid')) {
+                return getCookie('subid');
+            }
+        }
+
+        function getToken() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{token}'.match('{')) {
+                return '{token}';
+            }
+            var clientToken = '<?php echo isset($client) ? $client->getToken() : "" ?>';
+            if (clientToken && !clientToken.match('>')) {
+                return clientToken;
+            }
+            if (params.get('_token')) {
+                return params.get('_token')
+            }
+            if (params.get('token')) {
+                return params.get('token')
+            }
+            if (getCookie('token')) {
+                return getCookie('token');
+            }
+            return null;
+        }
+
+        function getPixel() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!'{pixel}'.match('{')) {
+                return '{pixel}';
+            }
+            if (params.get('pixel')) {
+                return params.get('pixel')
+            }
+
+            if (getCookie('pixel')) {
+                return getCookie('pixel');
+            }
+
+            return null;
+        }
+
+        if (typeof URLSearchParams === 'function') {
+            document.addEventListener("DOMContentLoaded", function (event) {
+                var params = new URLSearchParams(document.location.search.substr(1));
+                var subid = getSubId();
+                var token = getToken();
+                var pixel = getPixel();
+
+                params.set('_token', token);
+                setCookie('idpxl', pixel);
+                setCookie('token', token);
+                setCookie('subid', subid);
+
+                // // Adds params to the links  
+                // document.querySelectorAll('a').forEach(function (link) {
+                //     var url = new URL(link.href);
+                //     params.forEach(function (v, k) {
+                //         url.searchParams.append(k, v);
+                //     });
+                //     link.href = url.toString();
+                // });
+
+                // Adds params as hidden inputs to the forms
+                document.querySelectorAll('form').forEach(function (form) {
+                    params.forEach(function (v, k) {
+                        var input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = k;
+                        input.value = v;
+
+                        form.append(input);
+                    });
+                });
+            })
+        }
+    </script>
+    <!-- End JS adapter -->
+</head>
+
+<body class="step1 funnel funnel-esa_6367_de_c funnel-one-step exit-intent-b">
+
+    <div class="wrap">
+        <!--top -->
+        <section class="top de">
+            <picture>
+                <img class="mobile" src="images/top-bg-mobile.webp" alt="">
+                <img class="top__bg" src="images/top-bg-desktop.jpg" alt="">
+            </picture>
+
+            <div class="top__container container">
+                <div class="top__inner">
+                    <div class="top__logo" data-editable="" data-name="top__logo">
+                        <img src="images/logo-red.svg" alt="" loading="lazy">
+
+                    </div>
+
+                    <div class="top__text" data-editable="" data-name="top__text">
+                        <p>Erfahren Sie wie man</p>
+                    </div>
+
+                    <div class="top__subtitle" data-editable="" data-name="top__subtitle">
+                        <p>Mit einer Investition in Tesla-Aktien</p>
+                    </div>
+
+                    <div class="top__title" data-editable="" data-name="top__title">
+                        <p>Ein zweites Einkommen schafft</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- form -->
+        <section class="form de">
+            <div class="form__container container">
+                <div class="form__wrap">
+                    <div class="form__top">
+                        <div class="form__main">
+                            <div class="form__title">
+                                <div class="form__title-text" data-editable="" data-name="form__title">
+                                    <p>Investieren Sie in</p>
+                                </div>
+
+                                <div class="form__logo" data-editable="" data-name="form__logo">
+                                    <img src="images/logo-text.png" alt="" loading="lazy">
+                                </div>
+
+                            </div>
+                            <div class="form__body">
+
+                                <form id="formTop" autocomplete="off" method="post" class="formWrapper">
+
+                                    <input class="form-control" type="text" name="first_name" id="first_name" required
+                                        placeholder="Geben Sie Ihren Namen ein">
+
+                                    <input class="form-control" type="text" required name="last_name" id="last_name"
+                                        placeholder="Geben Sie Ihren Nachnamen ein">
+
+                                    <input class="form-control" type="email" name="email" id="email"
+                                        placeholder="Ihre E-Mail eingeben">
+
+                                    <input class="form-control" type="tel" id="phone1" name="phone1" placeholder=""
+                                        autocomplete="off" required>
+                                    <input type="hidden" id="realPhone" name="realPhone" class="hidden-phone" value>
+                                    <input type="hidden" id="country" name="country" value>
+
+                                    <button class="submitBtn" type="submit">BEITRETEN!</button>
+
+                                </form>
+
+                                <div class="form__text" data-editable="" data-name="form__text">
+                                    <p>Um zu investieren müssen Sie mindestens<br class="mobile-only"> 18<br
+                                            class="desktop-only"> Jahre alt sein. Erforderliches<br class="mobile-only">
+                                        Mindestkapital 250€</p>
+                                </div>
+
+                            </div>
+                            <div class="form__footer" data-editable="" data-name="form__payment-methods">
+                                <img src="images/payment-methods.png" alt="" loading="lazy">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--line-block -->
+        <section class="line-block de">
+            <div class="container">
+                <div class="line-block__text" data-editable="" data-name="line-block__text">
+                    <p>Profitieren Sie von Teslas<br class="mobile-only"> Jahresumsatz<br class="tablet-only"> von<br
+                            class="desktop-only"> 31,5 Milliarden<br class="mobile-only"> US-Dollar</p>
+                </div>
+
+                <div class="line-block__arrow" data-editable="" data-name="line-block__arrow">
+                    <img src="images/arrow.png" alt="" loading="lazy">
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- access -->
+        <section class="access de">
+            <div class="access__container container">
+                <div class="access__title" data-editable="" data-name="access__title">
+                    <p>Der Einstieg ist<br class="mobile-only"> einfach. Erhalten<br class="mobile-only"> Sie Zugang zu:
+                    </p>
+                </div>
+
+                <ul class="access__list">
+                    <li class="access__list-item">
+                        <div class="access__list-img">
+                            <img src="images/icon_1.svg" alt="icon">
+                        </div>
+                        <div class="access__list-text" data-editable="" data-name="access__list-text_1">
+                            <p>Sichere und<br> regulierte Plattform</p>
+                        </div>
+
+                    </li>
+                    <li class="access__list-item">
+                        <div class="access__list-img">
+                            <img src="images/icon_2.svg" alt="icon">
+                        </div>
+                        <div class="access__list-text" data-editable="" data-name="access__list-text_2">
+                            <p>Erträge innerhalb<br> von 24 Stunden auf<br class="no-tablet"> Ihrem Konto</p>
+                        </div>
+
+                    </li>
+                    <li class="access__list-item">
+                        <div class="access__list-img">
+                            <img src="images/icon_3.svg" alt="icon">
+                        </div>
+                        <div class="access__list-text" data-editable="" data-name="access__list-text_3">
+                            <p>Einfache<br> Schulungsinstrumente</p>
+                        </div>
+
+                    </li>
+                    <li class="access__list-item">
+                        <div class="access__list-img">
+                            <img src="images/icon_4.svg" alt="icon">
+                        </div>
+                        <div class="access__list-text" data-editable="" data-name="access__list-text_4">
+                            <p>24 stunden Support<br class="no-tablet"> und fortlaufende<br> Unterstützung</p>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="access__bottom">
+                <div class="access__container container">
+                    <div class="access__inner access__inner--bottom">
+                        <div class="js-scroll access__btn hover-btn js-scroll js-popup-form" data-scroll="form__main"
+                            data-editable="" data-name="access-btn">
+                            <p>Verdienen Sie jetzt mit Tesla</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--content -->
+        <section class="content de">
+            <div class="content__container container">
+                <div class="content__inner">
+                    <div class="content__title" data-editable="" data-name="content__title">
+                        <p>Teslas Marktkapitalisierung übertrifft die 9 größten Autohersteller zusammen</p>
+                    </div>
+
+
+                    <picture>
+                        <img class="content__img" src="images/content-image-desktop.jpg" alt="">
+                    </picture>
+
+                    <div class="content__text" data-editable="" data-name="content__text">
+                        <p>Die Marktkapitalisierung von Tesla erreichte im Januar 2020 ein <b>Allzeithoch</b> von <b>86
+                                Milliarden Dollar</b>. Laut Business Insider hat dieser epische Anstieg Tesla zum
+                            <b>wertvollsten Automobilhersteller</b> der Welt gemacht und das Unternehmen <b>über
+                                Goliaths wie Toyota und Ford hinaus katapultiert.</b><br> Mit schnell steigenden
+                            Umsätzen und einer Aktie, die sich besser entwickelt hat als Bitcoin, wurde Tesla zum
+                            <b>unangefochtenen Marktführer</b>. Wer in Tesla investiert, kann von den <b>enormen
+                                Entwicklungsperspektiven</b> profitieren, die Elon Musk bald der Welt offenbaren wird.
+                        </p>
+                        <p>Steigen Sie noch heute mit einer <b>Investition von nur 250€</b> ein und beginnen Sie,
+                            <b>jeden Monat mehr Geld zu verdienen</b>, direkt auf Ihr Bankkonto, ohne versteckte
+                            Gebühren und ohne Ihre Couch verlassen zu müssen.
+                        </p>
+                    </div>
+
+                    <div class="js-scroll content__btn hover-btn js-scroll js-popup-form" data-scroll="form__main"
+                        data-editable="" data-name="content__btn">
+                        <p>Heute in Tesla investieren</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--graph -->
+        <section class="graph de">
+            <div class="graph__container container">
+                <div class="graph__inner">
+                    <div class="graph__title" data-editable="" data-name="graph__title">
+                        <p>Marktkapitalisierung in USD</p>
+                    </div>
+
+                    <div class="graph__content">
+                        <div class="graph__text graph__text_1" data-editable="" data-name="graph__text_1">
+                            <p>Milliarden Dollar</p>
+                        </div>
+
+                        <div class="graph__text graph__text_2" data-editable="" data-name="graph__text_2">
+                            <p>578 Milliarden Dollar</p>
+                        </div>
+
+                        <div class="graph__text graph__text_3" data-editable="" data-name="graph__text_3">
+                            <p>582 Milliarden Dollar</p>
+                        </div>
+
+                        <div class="graph__img desktop-and-tablet-only" data-editable="" data-name="graph__desktop">
+                            <img src="images/graph-desktop.jpg" alt="" loading="lazy">
+
+                        </div>
+
+                        <div class="graph__img mobile-only" data-editable="" data-name="graph__mobile">
+                            <img src="images/graph-mobile.jpg" alt="" loading="lazy">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- quotes -->
+        <section class="quotes">
+            <div class="quotes__container container">
+                <div class="quotes__title-wrap">
+                    <div class="quotes__title" data-editable="" data-name="quotes__title">
+                        <p>Das beste Elektroauto -<br class="mobile-only"> Die beste Schlagzeile</p>
+                    </div>
+
+                </div>
+                <div class="quotes__content">
+                    <div class="quotes__item">
+                        <div class="quotes__phrase" data-editable="" data-name="quotes__phrase_1">
+                            <p>Tesla meldet mehr als 1 Milliarde Nettogewinn im 2. Quartal, zehnmal so viel wie vor
+                                einem Jahr</p>
+                        </div>
+
+                        <div class="quotes__date" data-editable="" data-name="quotes__date_1">
+                            <p>26. Juli 2022</p>
+                        </div>
+
+                        <div class="quotes__img " data-editable="" data-name="quotes__img">
+                            <img src="images/quotes-1.png" alt="image" loading="lazy">
+
+                        </div>
+
+                    </div>
+                    <div class="quotes__item">
+                        <div class="quotes__phrase" data-editable="" data-name="quotes__phrase_2">
+                            <p>Tesla hat im zweiten Quartal mehr als 200.000 Fahrzeuge produziert und ausgeliefert, ein
+                                Allzeithoch</p>
+                        </div>
+
+                        <div class="quotes__date" data-editable="" data-name="quotes__date_2">
+                            <p>27. Juli 2022</p>
+                        </div>
+
+                        <div class="quotes__img " data-editable="" data-name="quotes__img">
+                            <img src="images/quotes-2.png" alt="image" loading="lazy">
+
+                        </div>
+
+                    </div>
+                    <div class="quotes__item">
+                        <div class="quotes__phrase" data-editable="" data-name="quotes__phrase_3">
+                            <p>Tesla belegt den ersten, zweiten und dritten Platz beim Car &amp; Driver's "EV 1000"
+                                Rennen</p>
+                        </div>
+
+                        <div class="quotes__date" data-editable="" data-name="quotes__date_3">
+                            <p>14. Juli 2022</p>
+                        </div>
+
+                        <div class="quotes__img " data-editable="" data-name="quotes__img">
+                            <img src="images/quotes-3.png" alt="image" loading="lazy">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="js-scroll quotes__btn hover-btn js-scroll js-popup-form" data-scroll="form__main"
+                    data-editable="" data-name="quotes__btn">
+                    <p>Profitieren Sie von einer<br class="mobile-only"> Investition in Tesla</p>
+                </div>
+
+                <div class="quotes__payment" data-editable="" data-name="quotes__payment-methods">
+                    <img src="images/payment-methods.png" alt="" loading="lazy">
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- links -->
+        <!-- <section class="links de">
+            <div class="links__container container">
+                <div class="links__text" data-editable="" data-name="link_1">
+                    <p><a target="_blank" href="#">https://www.cnbc.com/2021/07/26/tesla-tsla-earnings-q2-2021.html</a>
+                    </p>
+                </div>
+
+                <div class="links__text" data-editable="" data-name="link_2">
+                    <p><a target="_blank"
+                            href="#">https://edition.cnn.com/2021/07/27/investing/premarket-stocks-trading/index.html</a>
+                    </p>
+                </div>
+
+                <div class="links__text" data-editable="" data-name="link_3">
+                    <p><a target="_blank"
+                            href="#">https://www.forbes.com/sites/johnkoetsier/2021/07/14/tesla-wins-first-second-and-third-in-car--drivers-ev-1000-race/?sh=22ae60b36995</a>
+                    </p>
+                </div>
+
+            </div>
+        </section> -->
+    </div>
+
+    <section class="popup-form form de">
+        <div class="popup-form__overlay">
+            <div class="popup-form__block">
+                <div class="popup-form__close-icon"></div>
+                <div class="form__main">
+                    <div class="form__title">
+                        <div class="form__title-text" data-editable="" data-name="popup-form__title">
+                            <p>Investieren Sie in</p>
+                        </div>
+
+                        <div class="form__logo" data-editable="" data-name="popup-form__logo">
+                            <img src="images/logo-text.png" alt="" loading="lazy">
+                        </div>
+
+                    </div>
+                    <div class="form__body">
+
+                        <!-- <div id="formWrapper2" class="formWrapper"> -->
+                        <form id="formTop2" autocomplete="off" method="post" class="formWrapper">
+
+                            <input class="form-control" type="text" name="first_name" id="first_name" required
+                                placeholder="Geben Sie Ihren Namen ein">
+
+                            <input class="form-control" type="text" required name="last_name" id="last_name"
+                                placeholder="Geben Sie Ihren Nachnamen ein">
+
+                            <input class="form-control" type="email" name="email" id="email"
+                                placeholder="Ihre E-Mail eingeben">
+
+                            <input class="form-control" type="tel" id="phone2" name="phone2" placeholder=""
+                                autocomplete="off" required>
+                            <input type="hidden" id="realPhone" name="realPhone" class="hidden-phone" value>
+                            <input type="hidden" id="country" name="country" value>
+
+                            <button class="submitBtn" type="submit">BEITRETEN!</button>
+
+                        </form>
+                        <!-- </div> -->
+
+                        <div class="form__text" data-editable="" data-name="popup-form__text">
+                            <p>Um zu investieren müssen Sie mindestens<br class="mobile-only"> 18<br
+                                    class="desktop-only"> Jahre alt sein. Erforderliches<br class="mobile-only">
+                                Mindestkapital 250€</p>
+                        </div>
+                    </div>
+                    <div class="form__footer" data-editable="" data-name="popup-form__payment-methods">
+                        <img src="images/payment-methods.png" alt="" loading="lazy">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start popup double -->
+    <div class='modal-form' id='modalFailure'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='contents'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">Sie sind bereits mit dieser Nummer registriert. Wenn Sie ein neues Konto
+                    benötigen, registrieren Sie sich mit einer anderen Handynummer.</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class='modal-form' id='modalFailureEmail'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='contents'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">Sie haben sich bereits für dieses E-Mail-Konto registriert. Wenn Sie ein neues
+                    Konto benötigen, registrieren Sie sich mit einem anderen E-Mail-Konto.</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class='modal-form' id='modalInvalid'>
+        <p class='close-modal' href="#">&times;</p>
+        <div class='contents'>
+            <div class="sign-up-form-header text-center mb-4">
+                <h5 class="mb-2 mt-4">Sie haben eine falsche E-Mail eingegeben. Bitte gehen Sie zu auf ein anderes
+                    E-Mail-Konto.</h5>
+            </div>
+        </div>
+    </div>
+    <!-- End popup double -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main2.js" defer></script>
+    <script src="js/jquery.scrolldepth.min.js" defer></script>
+
+    <script src="js/checkCookiePhone.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/submitForm.js"></script>
+    <script src="js/utm.js"></script>
+</body>
+
+</html>

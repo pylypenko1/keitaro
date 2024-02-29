@@ -1,0 +1,14 @@
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<h1>404 Not Found</h1>
+<ul>
+<li>Code: NoSuchKey</li>
+<li>Message: The specified key does not exist.</li>
+<li>Key: webfonts/fa-solid-900.svg</li>
+<li>RequestId: 401D16786414C85C</li>
+<li>HostId: 2wBw2ycNrYgNqR8zmNx8hKFJhdQRDWOJiJG9x/m3vxg8h7EpBzkjzpAihg5odYilNcJTK4JbYC4=</li>
+</ul>
+<hr>
+</body>
+</html>

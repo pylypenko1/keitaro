@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.4 (375) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 77 + Rectangle 78 + Rectangle 78</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Design-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Main" sketch:type="MSArtboardGroup" transform="translate(-656.000000, -6507.000000)">
+            <g id="Oval-77-+-Rectangle-78-+-Rectangle-78" sketch:type="MSLayerGroup" transform="translate(656.000000, 6507.000000)">
+                <circle id="Oval-77" fill="#FF6161" sketch:type="MSShapeGroup" cx="9" cy="9" r="9"></circle>
+                <rect id="Rectangle-78" fill="#FFFFFF" sketch:type="MSShapeGroup" x="8" y="4" width="2" height="5"></rect>
+                <rect id="Rectangle-78" fill="#FFFFFF" sketch:type="MSShapeGroup" x="8" y="11" width="2" height="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
