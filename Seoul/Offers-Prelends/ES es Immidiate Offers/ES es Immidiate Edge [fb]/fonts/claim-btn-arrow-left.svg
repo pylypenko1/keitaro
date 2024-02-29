@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 53 (72520) - https://sketchapp.com -->
+    <title>B2357B5E-260E-4D35-AC7A-9CEE14BF6090</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M1355.78885,24.5777088 L1366.55279,46.1055728 C1367.04676,47.0935298 1366.64632,48.2948759 1365.65836,48.7888544 C1365.38065,48.9277098 1365.07442,49 1364.76393,49 L1343.23607,49 C1342.1315,49 1341.23607,48.1045695 1341.23607,47 C1341.23607,46.6895098 1341.30836,46.3832837 1341.44721,46.1055728 L1352.21115,24.5777088 C1352.70512,23.5897518 1353.90647,23.1893031 1354.89443,23.6832816 C1355.28148,23.876809 1355.59533,24.190654 1355.78885,24.5777088 Z" id="path-1"></path>
+        <filter x="-8.1%" y="-10.8%" width="130.5%" height="130.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="2" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="IE_home_xl_Short_form" transform="translate(-1594.000000, -6828.000000)" fill-rule="nonzero">
+            <g id="Group-29" transform="translate(255.000000, 6807.000000)">
+                <g id="Triangle-Copy-2" transform="translate(1354.000000, 35.000000) scale(-1, 1) rotate(90.000000) translate(-1354.000000, -35.000000) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#F8F8F8" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

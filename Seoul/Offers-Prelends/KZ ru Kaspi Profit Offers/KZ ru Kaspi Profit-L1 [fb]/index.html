@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="x-ms-format-detection" content="none" />
+  <title>Kaspi Profit</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/nouislider.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/usercount.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- <div class="user-count">
+        <div class="count-wrapper">
+          <span class="count" id="userCount"></span>
+          <span class="label">пользователей на сайте</span>
+        </div>
+        <div class="separator"></div>
+        <div class="space-wrapper">
+          <span class="free-space" id="freeSpace"></span>
+          <span class="label">свободных мест</span>
+        </div>
+      </div> -->
+
+    <div id="loader" style="display: none">
+      <img src="images/preloader.svg" alt="Preloader" />
+    </div>
+
+    <header class="header">
+      <!-- <div class="header__top">
+                <div class="container">
+                    <div class="header__top-details">
+                        <p class="support-text">При поддержке</p>
+                        <div class="logos">
+                            <img src="images/gerb-kz.png" alt="" />
+                            <p class="ministry-text" style="margin-right: 15px">
+                                Министерство <br />
+                                экономики <br />
+                                Республики <br />
+                                Казахстан
+                            </p>
+                            <img src="images/halyk-bank.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+      <div class="header__bottom">
+        <div class="header__bottom-details">
+          <div class="logo-container">
+            <div class="logos">
+              <!-- <img class="left-logo" src="images/ipo-logo.png" alt="" /> -->
+              <img class="left-logo" src="images/ipo-logo-cropp.png" alt="" style="margin-right: 10px;" />
+              <p style="font-size: 23px; font-weight: 900;">Kaspi Profit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="first-section">
+        <div class="first-text">
+          <!-- <div class="main">
+                        Инвестируйте в проекты по добыче золота с
+                        <nobr>
+                            <span class="gold-text">
+                                Halyk Invest
+                            </span>
+                        </nobr>
+                    </div> -->
+          <div class="main">
+            <nobr><span class="gold-text" style="font-weight: 600;">Kaspi Profit</span></nobr> - ваши инвестиции в надежных руках
+          </div>
+          <div class="description">Мы объединили более 20 самых опытных брокеров, которые помогают нашим клиентам
+            инвестировать их средства в самые прибыльные проекты</div>
+        </div>
+        <div class="first-image">
+          <img src="images/p3.png" alt="">
+          <!-- <div class="video-container"> -->
+          <!-- <video controls poster="video/poster.png" style="border-radius: 20px">
+            <source src="video/video.mp4" type="video/mp4" />
+          </video> -->
+          <!-- </div> -->
+        </div>
+      </section>
+
+      <section class="eighth-section" style="padding-top: 0; padding-bottom: 0;">
+        <div class="description" style="font-family: Roboto, sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.15px;
+        font-size: 14px;
+        line-height: 120%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: center;">
+          Я рад приветствовать вас на нашем новом проекте, созданном для того, чтобы помочь каждому желающему открыть
+          для себя мир инвестиций. Брокеры, которых я лично отобрал, помогут вам приумножать ваши деньги на
+          инвестиционных рынках пока вы будете заниматься вашими любимыми делами.
+        </div>
+        <div class="description" style="font-family: Roboto, sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.15px;
+        font-size: 14px;
+        line-height: 120%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: center;">
+          Инвестиции — это просто, вместе с
+          <span class="gold-text" style="font-weight: 600;">
+            <nobr>Kaspi Profit</nobr>
+          </span>
+        </div>
+      </section>
+
+
+      <div class="swiper" style="padding-bottom: 35px;">
+        <h2 class="title" style="    font-family: Roboto, sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.15px;
+            font-size: 16px;
+            line-height: 120%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;">
+              <!-- Регистрируйся и начни путь к финансовой независимости -->
+              Как стать участником проекта?
+            </h2>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <section class="fourth-section">
+              <section class="fourth__container">
+                <div class="title">
+                  Шаг 1
+                </div>
+                <img class="arrow" src="images/pngegg.png" alt="" />
+                <div class="content">
+                  Заполните форму регистрации, чтобы мы могли с вами связаться
+                </div>
+              </section>
+            </section>
+          </div>
+          <div class="swiper-slide">
+            <section class="fourth-section">
+              <section class="fourth__container">
+                <div class="title">
+                  Шаг 2
+                </div>
+                <img class="arrow" src="images/pngegg.png" alt="" />
+                <div class="content">
+                  С нашим брокером выберите удобную для вас сумму инвестиции, а так же ниши, в которые хотите
+                  инвестировать
+                </div>
+              </section>
+            </section>
+          </div>
+          <div class="swiper-slide">
+            <section class="fourth-section">
+              <section class="fourth__container">
+                <div class="title">
+                  Шаг 3
+                </div>
+                <div class="content">
+                  Отслеживайте в личном кабинете как ваши финансы работают на вас
+                </div>
+              </section>
+            </section>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination" style="bottom: 10px;"></div>
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+      
+      <section class="fourth-section">
+        <section class="fourth__container">
+          <div class="form">
+            <form id="form1" novalidate autocomplete="off">
+              <h2 class="title">
+                <!-- Регистрируйся и начни путь к финансовой независимости -->
+                Для регистрации на проекте оставьте заявку и с вами свяжется наш финансовый эксперт
+              </h2>
+              <div class="form-group">
+                <input type="text" id="firstName" name="firstName" placeholder="Имя" />
+                <!-- <label for="firstName">Имя</label> -->
+                <span class="error" data-field="firstName"></span>
+              </div>
+              <div class="form-group">
+                <input type="text" id="lastName" name="lastName" placeholder="Фамилия" />
+                <!-- <label for="lastName">Фамилия</label> -->
+                <span class="error" data-field="lastName"></span>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Почта" />
+                <!-- <label for="email">Почта</label> -->
+                <span class="error" data-field="email"></span>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder=" " />
+                <span class="error" data-field="phone"></span>
+              </div>
+              <div class="policy">
+                <!-- Оставляя заявку, я соглашаюсь на
+                <a href="https://online.zakon.kz/Document/?doc_id=31396226&show_di=1&sub_id=70000&pos=122;-56#pos=122;-56"
+                  target="_blank" rel="noreferrer">
+                  обработку персональных данных
+                </a> -->
+                *Брокеры проекта Kaspi Profit работают с инвестициями от 70000 тенге
+              </div>
+              <div class="form-group">
+                <button class="calculate-btn button is-blicked" type="submit">
+                  <span class="icon">
+                    <svg viewBox="0 0 24 24" class="mdi-icon mdi-24px" fill="#fff">
+                      <title>mdi-checkbox-marked-circle-outline</title>
+                      <path
+                        d="M20,12C20,16.42 16.42,20 12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+                        stroke-width="0" fill-rule="nonzero"></path>
+                    </svg>
+                  </span>
+                  &nbsp; Зарегистрироваться
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </section>
+
+      
+<style>
+  .fourth__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    max-width: 200px;
+  }
+</style>
+
+
+
+
+          <div class="swiper" style="padding-bottom: 35px;">
+            <h2 class="title" style="font-family: Roboto, sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.15px;
+            font-size: 16px;
+            line-height: 120%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            padding-left: 10px;
+    padding-right: 10px;">
+              <!-- Регистрируйся и начни путь к финансовой независимости -->
+              Известные люди, которые уже инвестируют с <nobr><span class="gold-text" style="font-weight: 600;">Kaspi Profit</span></nobr>
+            </h2>
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <section class="fourth-section">
+                  <section class="fourth__container">
+                    <img src="images/динара.png" alt="" />
+                    <h2 class="title">
+                      Динара Сатжан
+                    </h2>
+                    <p>журналист, ведущая</p>
+                  </section>
+                </section>
+              </div>
+              <div class="swiper-slide">
+                <section class="fourth-section">
+                  <section class="fourth__container">
+                    <img src="images/нурлан.png" alt="" />
+                    <div class="title">
+                      Нурлан Сабуров
+                    </div>
+                    <p>стендап-комик</p>
+                  </section>
+                </section>
+              </div>
+              <div class="swiper-slide">
+                <section class="fourth-section">
+                  <section class="fourth__container">
+                    <img src="images/баян.png" alt="" />
+                    <div class="title">
+                      Баян Алагузова
+                    </div>
+                    <p>актриса</p>
+                  </section>
+                </section>
+              </div>
+              <div class="swiper-slide">
+                <section class="fourth-section">
+                  <section class="fourth__container">
+                    <img src="images/байгали.png" alt="" />
+                    <div class="title">
+                      Байгали Серкебаев
+                    </div>
+                    <p>музыкант</p>
+                  </section>
+                </section>
+              </div>
+              <div class="swiper-slide">
+                <section class="fourth-section">
+                  <section class="fourth__container">
+                    <img src="images/дильназ.png" alt="" />
+                    <div class="title">
+                      Дильназ Ахмадиева
+                    </div>
+                    <p>певица и актриса</p>
+                  </section>
+                </section>
+              </div>
+              <div class="swiper-slide">
+                <section class="fourth-section">
+                  <section class="fourth__container">
+                    <img src="images/jah.png" alt="" />
+                    <div class="title">
+                      Jah Khalib
+                    </div>
+                    <p>музыкант, репер</p>
+                  </section>
+                </section>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="content">
+          <div class="first-block">
+            <h6 class="text">© 2012-2024, АО «Kaspi Profit»</h6>
+            <h6 class="text">
+              Лицензия на проведение банковских и иных операций и деятельности на рынке ценных бумаг №1.2.245/61 от
+              03.02.2020, выданная Агентством Республики Казахстан по регулированию и развитию финансового рынка
+            </h6>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal-form">
+    <div class="modal-form_content">
+      <form id="form2" novalidate autocomplete="off">
+        <h2 class="title">
+          Для регистрации на проекте оставьте заявку и с вами свяжется наш финансовый эксперт
+        </h2>
+        <div class="form-group">
+          <input type="text" id="firstName2" name="firstName" placeholder="Имя" />
+          <!-- <label for="firstName">Имя</label> -->
+          <span class="error" data-field="firstName"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="lastName2" name="lastName" placeholder="Фамилия" />
+          <!-- <label for="lastName">Фамилия</label> -->
+          <span class="error" data-field="lastName"></span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email2" name="email" placeholder="Почта" />
+          <!-- <label for="email">Почта</label> -->
+          <span class="error" data-field="email"></span>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone2" name="phone" placeholder=" " />
+          <span class="error" data-field="phone"></span>
+        </div>
+        <div class="policy">
+          
+          *Брокеры проекта Kaspi Profit работают с инвестициями от 70000 тенге
+              
+        </div>
+        <div class="form-group">
+          <button class="calculate-btn button is-blicked" type="submit">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" class="mdi-icon mdi-24px" fill="#fff">
+                <title>mdi-checkbox-marked-circle-outline</title>
+                <path
+                  d="M20,12C20,16.42 16.42,20 12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+                  stroke-width="0" fill-rule="nonzero"></path>
+              </svg>
+            </span>
+            &nbsp; Зарегистрироваться
+          </button>
+        </div>
+      </form>
+      <span class="modal-close"></span>
+    </div>
+  </div>
+
+  <script src="js/imask.js"></script>
+  <script src="js/script.js"></script>
+  <!-- JS-Adapter -->
+  <script src="js/jsAdapter.js"></script>
+  <script src="js/pixelInitPageView.js"></script>
+  <!-- noUiSlider -->
+  <!-- <script src="js/nouislider.min.js"></script> -->
+  <!-- Validate.js -->
+  <script src="js/validate.min.js"></script>
+  <!-- FAQ -->
+  <script src="js/faq.js"></script>
+  <!-- Calculator -->
+  <!-- <script src="js/calculator.js"></script> -->
+  <!-- Slider -->
+  <!-- <script src="js/slider.js"></script> -->
+  <!-- Modal Form -->
+  <script src="js/modalForm.js"></script>
+  <!-- User Count -->
+  <script src="js/userCount.js"></script>
+
+
+  <!-- Подключение Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Подключение Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  </script>
+  
+
+</body>
+
+</html>

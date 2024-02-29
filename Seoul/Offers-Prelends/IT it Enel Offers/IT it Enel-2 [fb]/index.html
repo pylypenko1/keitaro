@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- 23 - 141  [o60;l2] enel-greencoin-it -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>EnelGreenCoin</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="assets/landing/css/landing.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+<!--[HEADER]--></head>
+
+<body>
+    <!-- preloader -->
+    <div id="loader" style="display: none">
+        <img src="images/preloader.svg" alt="Preloader" />
+    </div>
+    <!-- preloader end -->
+
+    <div style="width: 100%; background: red; text-align: center; position: fixed; z-index: 100">
+        <div id="timer">
+            <div class="timer-title">Affrettarsi!</div>
+            <div class="counter-wrapper">
+                <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__logo">
+                        <img src="img/logo.webp" width="150px" alt="" />
+                    </div>
+                    <div class="header__nav">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="intro" id="reg_form">
+        <div class="container">
+            <h2 class="intro__title">
+                Guadagnate 3.000 euro al mese con l'ENEL GREEN COIN
+            </h2>
+            <div class="intro__inner">
+                <div class="intro__form" id="form">
+                    <form method="post" id="form" class="form-container" novalidate>
+                        <div class="form__group form__group-name">
+                            <input name="firstName" type="text" placeholder="Nome" />
+                        </div>
+                        <div class="form__group form__group-name">
+                            <input placeholder="Cognome" name="lastName" type="text" />
+                        </div>
+                        <div class="form__group form__group-email">
+                            <input type="email" name="email" placeholder="indirizzo e-mail" />
+                        </div>
+                        <div class="form__group form__group-input">
+                            <input type="tel" class="phone phone-input" name="phone" />
+                        </div>
+                        <div class="modal-sign__input">
+                            <div class="modal-sign__block-checked" style="display:flex; flex-direction: column; align-items: flex-start; gap: 15px; height: auto">
+                                <label class="modal-sign__checked-container" style="padding: 0; align-self: center; justify-self: center">
+                                    <div style="text-align: center">Il progetto è aperto solo ai cittadini italiani!</div>
+                                </label>
+                                <label class="modal-sign__checked-container">
+                                    <input class="terms1" type="checkbox" name="rules" value="1"> <span class="modal-sign__checked-checkmark"></span>
+                                    <div>
+                                        Confermo di essere cittadino italiano</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__group-button">
+                            <button class="send-form btn btn-primary btn_send" type="submit" name="submit" id="form__button" disabled>
+                                <span class="button--inner btn-check">Iscriviti per una consulenza</span>
+                                <span class="mychecked">Accettare le condizioni di utilizzo</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="video">
+                    <div class="poster_block">
+                        <img class="poster" src="img/poster.webp" alt="">
+                        <img class="play-btn" src="assets/landing/img/play.webp" alt="">
+                    </div>
+                    <div class="embed-container"></div>
+                </div>
+            </div>
+        </div>
+        <div class="intro__overlay"></div>
+    </section>
+    <div class="section-4">
+        <div class="container">
+            <h2>Benefici giornalieri di Green COIN</h2>
+            <div class="earnings">
+                <div class="row">
+                    <div class="col-4 col-sm-4 my-auto">
+                        <div class="time-wrapper">
+                            <span id="uktime" class="date time">10:51</span>
+                        </div>
+                    </div>
+                    <div class="col-8 col-sm-8">
+                        <div class="total-wrapper">
+                            <span class="big-ammount"><span class="currency">€</span><span id="total-earnings">3,455,543</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-wrapper">
+                <div class="live-updates">
+                    <div class="users-wrapper">
+                        <div class="users-content">
+                            <div class="user">
+                                <img class="d-inline float-left" src="img/85.webp" alt="user" />
+                                <div class="d-inline float-left ml-2">
+                                    <p>Raúl</p>
+                                    <span class="user-name">Investimento di 240 €</span>
+                                </div>
+                                <div class="float-right">
+                                    <span class="ammount big"><span class="currency">€</span><span class="ammount-sum">1160</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="user">
+                                <img class="d-inline float-left" src="img/35.webp" alt="user" />
+                                <div class="d-inline float-left ml-2">
+                                    <p>Claudia</p>
+                                    <span class="user-name">Investimento di 480 €</span>
+                                </div>
+                                <div class="d-inline float-right">
+                                    <span class="ammount"><span class="currency">€</span><span class="ammount-sum">2950</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="user">
+                                <img class="d-inline float-left" src="img/54.webp" alt="user" />
+                                <div class="d-inline float-left ml-2">
+                                    <p>Thomas</p>
+                                    <span class="user-name">Investimento di 250 €</span>
+                                </div>
+                                <div class="d-inline float-right">
+                                    <span class="ammount"><span class="currency">€</span><span class="ammount-sum">1435</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="user">
+                                <img class="d-inline float-left" src="img/36.webp" alt="user" />
+                                <div class="d-inline float-left ml-2">
+                                    <p>Carla</p>
+                                    <span class="user-name">Investimento di 310 €</span>
+                                </div>
+                                <div class="d-inline float-right">
+                                    <span class="ammount"><span class="currency">€</span><span class="ammount-sum">3435</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <a href="#reg_form">
+                                <button class="btn-green d-block mx-auto">
+                                    Iscriviti per una consulenza
+                                </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="present">
+        <div class="container">
+            <h2 class="intro__title" style="color: #000">GREEN COIN - è il futuro</h2>
+            <div class="present__inner">
+                <div class="present__box">
+                    <div data-aos="zoom-in" class="present__img">
+                        <img src="img/presedent.webp" alt="" />
+                    </div>
+                    <div class="present__content">
+                        <p data-aos="fade-right">
+                            "Non è redditizio, sei pazzo", dicevano tutti riguardo all'idea di una criptovaluta Green Coin con cui tutti potessero guadagnare. Oggi migliaia di persone lo fanno ogni giorno, migliaia di persone lo fanno ogni giorno. Sosterremo e svilupperemo il progetto, ma non ci fermeremo qui.
+                        </p>
+                        <span data-aos="fade-up" class="president">Francesco Starace, Amministratore delegato di Enel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="company">
+        <div class="container">
+            <img src="img/forbs.webp" alt="" /><img src="img/cnn.webp" alt="" /><img src="img/cnbc.webp" alt="" />
+        </div>
+    </section>
+    <div class="section-4">
+        <div class="container">
+            <h2>Come funziona il GREEN COIN di ENEL</h2>
+            <div class="map-wrapper">
+                <div class="map" id="underlay">
+                    <div class="markers">
+                        <div id="marker1" class="marker" style="left: 6%; top: 10%; display: none"></div>
+                        <div id="marker3" class="marker" style="left: 8%; top: 20%; display: none"></div>
+                        <div id="marker4" class="marker" style="left: 12%; top: 26%; display: block"></div>
+                        <div id="marker5" class="marker" style="left: 42%; top: 45%; display: none"></div>
+                        <div id="marker6" class="marker" style="left: 57%; top: 39%; display: none"></div>
+                        <div id="marker7" class="marker" style="left: 52%; top: 66%; display: none"></div>
+                        <div id="marker8" class="marker user-online" style="left: 47%; top: 16%; display: block"></div>
+                        <div id="marker9" class="marker" style="left: 27%; top: 65%; display: block"></div>
+                        <div id="marker10" class="marker" style="left: 59%; top: 72%"></div>
+                        <div id="marker11" class="marker" style="left: 50%; top: 57%; display: block"></div>
+                        <div id="marker12" class="marker" style="left: 80%; top: 18%; display: none"></div>
+                        <div id="marker13" class="marker" style="left: 61%; top: 30%; display: block"></div>
+                        <div id="marker14" class="marker" style="left: 75%; top: 40%"></div>
+                        <div id="marker15" class="marker" style="left: 70%; top: 30%; display: block"></div>
+                        <div id="marker16" class="marker" style="left: 50%; top: 22%; display: block"></div>
+                        <div id="marker17" class="marker" style="left: 39%; top: 50%; display: none"></div>
+                        <div id="marker18" class="marker" style="left: 57%; top: 42%; display: block"></div>
+                        <div id="marker19" class="marker" style="left: 49%; top: 38%; display: block"></div>
+                        <div id="marker20" class="marker" style="left: 45%; top: 14%; display: block"></div>
+                        <div id="marker21" class="marker" style="left: 55%; top: 22%; display: block"></div>
+                        <div id="marker22" class="marker" style="left: 41%; top: 20%; display: block"></div>
+                        <div id="marker23" class="marker user-online" style="left: 41%; top: 50%; display: block"></div>
+                        <div id="marker24" class="marker" style="left: 65%; top: 20%; display: block"></div>
+                        <div id="marker25" class="marker user-online" style="left: 45%; top: 40%; display: block"></div>
+                        <div id="marker26" class="marker" style="left: 55%; top: 33%; display: block"></div>
+                        <div id="marker27" class="marker" style="left: 45%; top: 23%; display: none"></div>
+                        <div id="marker28" class="marker" style="left: 49%; top: 29%; display: block"></div>
+                        <div id="marker29" class="marker" style="left: 48%; top: 27%; display: none"></div>
+                        <div id="marker31" class="marker" style="left: 43%; top: 25%"></div>
+                        <div id="marker32" class="marker" style="left: 30%; top: 71%; display: block"></div>
+                        <div id="marker33" class="marker" style="left: 56%; top: 56%; display: block"></div>
+                        <div id="marker34" class="marker" style="left: 28%; top: 60%; display: block"></div>
+                        <div id="marker35" class="marker" style="left: 50%; top: 16%; display: none"></div>
+                        <div id="marker36" class="marker" style="left: 63%; top: 35%; display: block"></div>
+                        <div id="marker37" class="marker" style="left: 22%; top: 65%; display: block"></div>
+                        <div id="marker38" class="marker" style="left: 15%; top: 15%; display: none"></div>
+                        <div id="marker39" class="marker" style="left: 80%; top: 15%; display: none"></div>
+                        <div id="marker40" class="marker" style="left: 65%; top: 15%; display: none"></div>
+                        <div id="marker41" class="marker" style="left: 20%; top: 10%; display: none"></div>
+                        <div id="marker42" class="marker" style="left: 80%; top: 40%; display: none"></div>
+                        <div id="marker43" class="marker" style="left: 70%; top: 15%; display: none"></div>
+                        <div id="marker44" class="marker" style="left: 25%; top: 73%; display: none"></div>
+                        <div id="marker45" class="marker" style="left: 50%; top: 65%; display: block"></div>
+                        <div id="marker46" class="marker" style="left: 20%; top: 20%; display: block"></div>
+                        <div id="marker47" class="marker" style="left: 48%; top: 15%; display: block"></div>
+                        <div id="marker48" class="marker" style="left: 60%; top: 10%; display: none"></div>
+                        <div id="marker49" class="marker" style="left: 10%; top: 22%"></div>
+                        <div id="marker50" class="marker" style="left: 65%; top: 35%"></div>
+                    </div>
+                    <img class="imgfluid mx-auto w-100" src="img/map-2.webp" alt="map" />
+                </div>
+                <p class="last">
+                    GREEN COIN genera profitti in tempo reale ed è ideale per i principianti al 100%. L'assenza di rischio è una caratteristica fondamentale, in quanto l'investitore riceve solo i dividendi derivanti da operazioni redditizie nel settore dell'energia sui mercati europei.
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer__logo">
+                <img src="img/logo.webp" width="150px" alt="" />
+            </div>
+            <p>© ENEL</p>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="elementor-widget-container">
+                <div class="pl-6 block w-1/3 sm:p-0 sm:w-full">
+                    <div class="wrapper-form-header">
+                        <div class="intro__inner">
+                            <div class="intro__form" id="form">
+                                
+                        <form id="form" class="form-container shadow" method="post" style="padding: 41px 15px;">
+                            <div class="form__group form_group--name">
+                                <input type="text" placeholder="Nome" name="firstName">
+                            </div>
+                            <div class="form__group form_group--name">
+                                <input type="text" placeholder="Nome e cognome" name="lastName">
+                            </div>
+                            <div class="form__group form_group--email">
+                                <input type="email" name="email" placeholder="E-mailem">
+                            </div>
+                            <div class="form__group form_input--group">
+                                <input type="tel" class="phone" name="phone">
+                            </div>
+                            <div class="modal-sign__input">
+                                <div class="modal-sign__block-checked" style="display:flex; flex-direction: column; align-items: flex-start; gap: 15px; height: auto">
+                                    <label class="modal-sign__checked-container" style="padding: 0; align-self: center; justify-self: center">
+                                        <div style="text-align: center">Il progetto è aperto solo ai cittadini italiani!</div>
+                                    </label>
+                                    <label class="modal-sign__checked-container">
+                                        <input class="terms1" type="checkbox" name="rules" value="1" checked> <span class="modal-sign__checked-checkmark"></span>
+                                        <div>
+                                            Confermo di essere cittadino italiano</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form_group--button">
+                                <button class="send-form btn btn-primary" type="submit" name="submit">
+                                    <span class="button--inner">connettersi</span>
+                                </button>
+                            </div>
+                            <p class="point text-center pt-3">
+                                lasciate una richiesta e i nostri esperti saranno lieti di rispondere a tutte le vostre
+                                domande
+                            </p>
+                        </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="close">&times;</span>
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="assets/landing/js/jquery.min.js"></script>
+    <script>
+    function show_hide_pins() {
+        var markers = $(".markers .marker");
+        var numberMakers = markers.length;
+
+        var randomNumber = Math.floor(Math.random() * numberMakers) + 1;
+        $("#marker" + randomNumber).hide();
+
+        var randomNumber = Math.floor(Math.random() * numberMakers) + 1;
+        $("#marker" + randomNumber)
+            .show()
+            .addClass("user-online");
+
+        setTimeout(function() {
+            $("#marker" + randomNumber).removeClass("user-online");
+        }, 6000);
+    }
+
+    function displayFirstPins(numberPins) {
+        var markers = $(".markers .marker");
+        var numberMakers = markers.length;
+
+        for (i = 0; i < numberPins; i++) {
+            var randomNumber = Math.floor(Math.random() * numberMakers) + 1;
+            $("#marker" + randomNumber).show();
+        }
+    }
+
+    displayFirstPins(50);
+    setInterval(function() {
+        show_hide_pins();
+    }, 2000);
+    </script>
+    <script>
+    var terms1 = $('.terms1');
+    terms1.click(function() {
+        if (terms1.prop("checked")) {
+            $("#form__button").removeAttr("disabled");
+        } else {
+            $("#form__button").attr("disabled", "disabled");
+        }
+    })
+    </script>
+    <script>
+    $('a[href^="#"]').click(function(e) {
+        e.preventDefault();
+        var aid = $(this).attr("href");
+        $('html,body').animate({ scrollTop: $(aid).offset().top }, 'slow');
+    });
+    $(".poster_block").click(function() {
+        $('.poster_block').css('display', 'none');
+        $('.embed-container').append('<iframe src="https://player.vimeo.com/video/844500565?autoplay=1&loop=1&autopause=0&muted=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>');
+        $('.embed-container').css('display', 'block');
+    });
+    </script>
+
+
+
+
+    <!-- intl-tel-input -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/jsAdapter.js"></script>
+    <script src="js/pixelInitPageView.js"></script>
+    <script src="js/validate.min.js"></script>
+    <script src="js/modal-form-and-timer.js"></script>
+</body>
+
+</html>

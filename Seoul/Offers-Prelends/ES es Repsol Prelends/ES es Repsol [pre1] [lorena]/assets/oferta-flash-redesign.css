@@ -1,0 +1,106 @@
+/* @font-face {
+    font-family: Roboto-Light;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/Roboto-Light.woff2") format("woff2"),url("../fonts/Roboto-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: Mundo;
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/Mundo-ExtraBold.woff2") format("woff2"), url("../fonts/Mundo-ExtraBold.woff") format("woff");
+    font-display: swap
+}
+@font-face {
+    font-family: Mundo;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/Mundo-Light.woff2") format("woff2"), url("../fonts/Mundo-Light.woff") format("woff");
+    font-display: swap
+} */
+
+
+.portada header[data-theme=elmundo-theme] .ue-c-main-header__subscription--hightlighted a {
+    text-decoration: none;
+    padding: 0;
+    background-color:  transparent;
+}
+
+.portada header[data-theme=elmundo-theme] .ue-c-main-header__subscription--hightlighted {
+    border-bottom-right-radius: 88px;
+    border-bottom-left-radius: 88px;
+    border-top: 0;
+    /*background-color: #F8F03E;*/
+    /* background-color: #3ED7F8; */
+    /* background-color: #FED5B5; */
+    background-color: #B2E3F4;
+     /* background-color: #ff6c6c;  */
+    /* background-color: #f8ae3e; */
+
+    justify-content: center;
+    width: 88px;
+    height: 53px;
+    overflow: hidden;
+}
+
+.portada header[data-theme=elmundo-theme] .ue-c-main-header__subscription--hightlighted p {
+    text-align:  center;
+    color: #000;
+    display:  flex;
+    flex-direction:  column;
+}
+
+/* .ue-c-main-header__subscription--hightlighted span {
+    display: block;
+} */
+
+
+.portada header[data-theme=elmundo-theme] .ue-c-main-header__subscription--hightlighted .first-line {
+    font-family: Mundo;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 12px;
+}
+.portada header[data-theme=elmundo-theme] .ue-c-main-header__subscription--hightlighted .second-line {
+    font-family: Mundo;
+    font-weight: 800;
+    font-size: 27px;
+    line-height: 25px;
+    letter-spacing: -0.06em;
+    
+}
+
+.portada header[data-theme=elmundo-theme] .ue-c-main-header__subscription--hightlighted .third-line {
+    font-family: Roboto-Light;
+    font-weight: 300;
+    font-size: 9.5px;
+    line-height: 10px;
+    
+}
+
+@-moz-document url-prefix() {
+
+   /*  .portada header[data-theme=elmundo-theme] .ue-c-main-header__subscription--hightlighted .second-line {
+        padding-top: 2px;
+    }
+
+    .portada header[data-theme=elmundo-theme] .ue-c-main-header__subscription--hightlighted .third-line {
+        margin-top: -3px;
+        line-height: 13px;
+    } */
+
+    .portada header[data-theme="elmundo-theme"] .ue-c-main-header__subscription--hightlighted .first-line {
+        margin-top: -3px;
+    }
+}
+
+@media (max-width:46.20em) {
+    header[data-theme=elmundo-theme] .ue-c-main-header__subscription--hightlighted a{
+        padding:  3px 1px;
+    }
+
+    .portada header[data-theme=elmundo-theme] .ue-c-main-header__subscription--hightlighted .third-line { line-height: 13px; }
+}
+
+

@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 54 - 253  [o32;l9] immediate-edge-it-scnd -->
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#081047" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Immediate Edge</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
+    <link href="assets/landing/css/landing.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+<!--[HEADER]--></head>
+
+<body class="body" style="overflow: auto">
+    <!-- preloader -->
+    <div id="loader" style="display: none">
+        <img src="images/preloader.svg" alt="Preloader" />
+      </div>
+      <!-- preloader end -->
+    <div id="preloader" style="display: block">
+        <div id="loader"></div>
+    </div>
+    <div class="popup">
+        <div class="popup_wrap">
+            <button class="close-btn" onclick="closePopup()"></button>
+            <div class="form">
+                <div class="form--top ">
+                    <h2 class="form--title">
+                        ISCRIVITI GRATIS
+                    </h2>
+                    <span class="dep-info anti-accent">Deposito minimo 250€</span>
+                </div>
+                <form method="post" class="" novalidate>
+                    <div class="preloader"></div>
+                    <div class="form--controlWrapper form--controlWrapper-half">
+                        <div class="input--wrapper">
+                            <input type="text" class="form--input" name="firstName" placeholder="Nome">
+                            <span class="form--floatingLabel"></span>
+                        </div>
+                    </div>
+                    <div class="form--controlWrapper form--controlWrapper-half">
+                        <div class="input--wrapper">
+                            <input type="text" class="form--input" name="lastName" placeholder="Cognome">
+                            <span class="form--floatingLabel"></span>
+                        </div>
+                    </div>
+                    <div class="form--controlWrapper ">
+                        <div class="input--wrapper">
+                            <input type="email" class="form--input" name="email" placeholder="E-mail">
+                            <span class="form--floatingLabel"></span>
+                        </div>
+                    </div>
+                    <div class="form--controlWrapper " >
+                        <div class="input--wrapper">
+                            <input id="telephone" name="phone" class="form--input phone" type="tel">
+                        </div>
+                    </div>
+                    <div class="form--controlWrapper " style="margin-top: 40px;">
+                        <button type="submit" name="submit" class="btn form--btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Registrare
+                        </button>
+                        <p class="statistics__item country-info">Disponibile solo per i residenti in Italia <img src="images/it.webp"></p>
+                        <p class="statistics__item">Posti disponibili per la registrazione:
+                            <span class="pack_count last-counter dynamic-accent dynamic-accent-active">5</span>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <header class="header header--sticky">
+        <div id="timer" class="stripe-info">
+            Attendi la chiamata dell'operatore, ti ricontatteremo entro <span class="minutes">60</span>:<span class="seconds"
+            >00</span
+          > minuti!
+        </div>
+        <div class="header__wrapper">
+            <div class="header__logo aos-init aos-animate">
+                <img width="182px" src="images/logo.webp" alt="">
+            </div>
+            <nav class="header__nav"></nav>
+            <div class="header__user aos-init aos-animate">
+                <a data-action="scrollToForm" href="" class="header__auth button button--sm"><span> Iscriviti gratis </span></a>
+            </div>
+            <button class="header__hamburger hamburger hamburger--emphatic" type="button">
+                <a data-action="scrollToForm" href="" class="header__auth button button--sm">Iscriviti gratis</a>
+            </button>
+        </div>
+    </header>
+    <main class="main">
+        <div id="particles-js"></div>
+        <section class="section promo dynamic-accent promo-main dynamic-accent-active">
+            <div class="wrapper">
+                <div class="promo__wrapper">
+                    <div class="promo__heading">
+                        <h1 class="promo__title">
+                            Convertire <span class="anti-accent">250€</span> In
+                            <span class="accent">6,500€</span> In 3 giorni è impossibile? Con Immediate Edge puoi fare ancora di più!
+                        </h1>
+                        <p class="promo__subtitle">
+                            La migliore piattaforma di investimento innovativa di Elon Musk nel 2023 secondo i Forex Awards. Sbrigati e registrati gratuitamente adesso e avrai la possibilità di sbarazzarti delle difficoltà creditizie e finanziarie! Il tuo manager personale ti sta già aspettando!
+                        </p>
+                    </div>
+                </div>
+                <div class="promo__middle-left aos-init form-div aos-animate" >
+                    <div class="form">
+                        <div class="form--top ">
+                            <h2 class="form--title">
+                                ISCRIVITI GRATIS
+                            </h2>
+                            <span class="dep-info anti-accent">Deposito minimo 250€</span>
+                        </div>
+                        <form method="post" class="" novalidate>
+                            <div class="preloader"></div>
+                            <div class="form--controlWrapper form--controlWrapper-half">
+                                <div class="input--wrapper">
+                                    <input type="text" class="form--input" name="firstName" placeholder="Nome">
+                                    <span class="form--floatingLabel"></span>
+                                </div>
+                            </div>
+                            <div class="form--controlWrapper form--controlWrapper-half">
+                                <div class="input--wrapper">
+                                    <input type="text" class="form--input" name="lastName" placeholder="Cognome">
+                                    <span class="form--floatingLabel"></span>
+                                </div>
+                            </div>
+                            <div class="form--controlWrapper ">
+                                <div class="input--wrapper">
+                                    <input type="email" class="form--input" name="email" placeholder="Email">
+                                    <span class="form--floatingLabel"></span>
+                                </div>
+                            </div>
+                            <div class="form--controlWrapper ">
+                                <div class="input--wrapper">
+                                    <input id="telephone" name="phone" class="form--input phone" type="tel">
+                                </div>
+                            </div>
+                            <div class="form--controlWrapper "  style="margin-top: 40px;">
+                                <button type="submit" name="submit" class="btn form--btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Registrare
+                                </button>
+                                <p class="statistics__item country-info">Disponibile solo per i residenti in Italia <img src="images/it.webp"></p>
+                                <p class="statistics__item">Posti disponibili per la registrazione:
+                                    <span class="pack_count last-counter dynamic-accent dynamic-accent-active">5</span>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="promo__right">
+                    <div class="play-btn-wrap">
+                        <div class="play-wrapper">
+                            <div class="round-logo">
+                                <span class="letter0 letter" style="transform: rotate(0deg)">R</span>
+                                <span class="letter1 letter" style="transform: rotate(5.4deg)">e</span>
+                                <span class="letter2 letter" style="transform: rotate(10.8deg)">p</span>
+                                <span class="letter3 letter" style="transform: rotate(16.2deg)">r</span>
+                                <span class="letter4 letter" style="transform: rotate(21.6deg);">o</span>
+                                <span class="letter4 letter" style="transform: rotate(27deg)">d</span>
+                                <span class="letter7 letter" style="transform: rotate(32.4deg);">u</span>
+                                <span class="letter8 letter" style="transform: rotate(37.8deg);">c</span>
+                                <span class="letter8 letter" style="transform: rotate(43.2deg);">e</span>
+                                <span class="letter8 letter" style="transform: rotate(48.6deg);">
+                                </span>
+                                <span class="letter4 letter" style="transform: rotate(54deg);">v</span>
+                                <span class="letter5 letter" style="transform: rotate(59.4deg);">í</span>
+                                <span class="letter6 letter" style="transform: rotate(64.8deg);">d</span>
+                                <span class="letter7 letter" style="transform: rotate(70.2deg);">e</span>
+                                <span class="letter8 letter" style="transform: rotate(75.6deg);">o</span>
+                                <span class="letter8 letter" style="transform: rotate(81deg);">
+                                </span>
+                                <span class="letter0 letter" style="transform: rotate(86.4deg);">R</span>
+                                <span class="letter1 letter" style="transform: rotate(91.8deg);">e</span>
+                                <span class="letter2 letter" style="transform: rotate(97.2deg);">p</span>
+                                <span class="letter3 letter" style="transform: rotate(102.6deg);">r</span>
+                                <span class="letter4 letter" style="transform: rotate(108deg);">o</span>
+                                <span class="letter4 letter" style="transform: rotate(113.4deg);">d</span>
+                                <span class="letter7 letter" style="transform: rotate(118.8deg);">u</span>
+                                <span class="letter8 letter" style="transform: rotate(124.2deg);">c</span>
+                                <span class="letter8 letter" style="transform: rotate(129.6deg);">e</span>
+                                <span class="letter8 letter" style="transform: rotate(135deg);">
+                                </span>
+                                <span class="letter4 letter" style="transform: rotate(140.4deg);">v</span>
+                                <span class="letter5 letter" style="transform: rotate(145.8deg);">í</span>
+                                <span class="letter6 letter" style="transform: rotate(151.2deg);">d</span>
+                                <span class="letter7 letter" style="transform: rotate(156.6deg);">e</span>
+                                <span class="letter8 letter" style="transform: rotate(162deg);">o</span>
+                                <span class="letter8 letter" style="transform: rotate(167.4deg);">
+                                </span>
+                                <span class="letter0 letter" style="transform: rotate(172.8deg);">R</span>
+                                <span class="letter1 letter" style="transform: rotate(178.2deg);">e</span>
+                                <span class="letter2 letter" style="transform: rotate(183.6deg);">p</span>
+                                <span class="letter3 letter" style="transform: rotate(189deg);">r</span>
+                                <span class="letter4 letter" style="transform: rotate(194.4deg);">o</span>
+                                <span class="letter4 letter" style="transform: rotate(199.8deg);">d</span>
+                                <span class="letter7 letter" style="transform: rotate(205.2deg);">u</span>
+                                <span class="letter8 letter" style="transform: rotate(210.6deg);">c</span>
+                                <span class="letter8 letter" style="transform: rotate(216deg);">e</span>
+                                <span class="letter8 letter" style="transform: rotate(221.4deg);">
+                                </span>
+                                <span class="letter4 letter" style="transform: rotate(226.8deg);">v</span>
+                                <span class="letter5 letter" style="transform: rotate(232.2deg);">í</span>
+                                <span class="letter6 letter" style="transform: rotate(237.6deg);">d</span>
+                                <span class="letter7 letter" style="transform: rotate(243deg);">e</span>
+                                <span class="letter8 letter" style="transform: rotate(248.4deg);">o</span>
+                                <span class="letter8 letter" style="transform: rotate(253.8deg);">
+                                </span>
+                                <span class="letter0 letter" style="transform: rotate(259.2deg);">R</span>
+                                <span class="letter1 letter" style="transform: rotate(264.6deg);">e</span>
+                                <span class="letter2 letter" style="transform: rotate(270deg);">p</span>
+                                <span class="letter3 letter" style="transform: rotate(275.4deg);">r</span>
+                                <span class="letter4 letter" style="transform: rotate(280.8deg);">o</span>
+                                <span class="letter4 letter" style="transform: rotate(286.2deg);">d</span>
+                                <span class="letter7 letter" style="transform: rotate(291.6deg);">u</span>
+                                <span class="letter8 letter" style="transform: rotate(297deg);">c</span>
+                                <span class="letter8 letter" style="transform: rotate(302.4deg);">e</span>
+                                <span class="letter8 letter" style="transform: rotate(307.8deg);">
+                                </span>
+                                <span class="letter4 letter" style="transform: rotate(313.2deg);">v</span>
+                                <span class="letter5 letter" style="transform: rotate(318.6deg);">í</span>
+                                <span class="letter6 letter" style="transform: rotate(324deg);">d</span>
+                                <span class="letter7 letter" style="transform: rotate(329.4deg);">e</span>
+                                <span class="letter8 letter" style="transform: rotate(334.8deg);">o</span>
+                            </div>
+                            <img class="play-btn" data-src="id_12345" src="images/no-border.webp" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="users-row">
+                <div class="users-row__wrapper" aria-hidden="true">
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/1.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Roberto</span>
+                            <span class="users-row__won">Beneficio: <span>697€</span></span>
+                            <span class="users-row__">Bilancio corrente: 5.022€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/2.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Ian</span>
+                            <span class="users-row__won">Beneficio: <span>893€</span></span>
+                            <span class="users-row__">Bilancio corrente: 8.792€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/3.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Fred</span>
+                            <span class="users-row__won">Beneficio: <span>788€</span></span>
+                            <span class="users-row__">Bilancio corrente: 4.239€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/4.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Kristin</span>
+                            <span class="users-row__won">Beneficio: <span>575€</span></span>
+                            <span class="users-row__">Bilancio corrente: 9.236€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/5.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Ray</span>
+                            <span class="users-row__won">Beneficio: <span>785€</span></span>
+                            <span class="users-row__">Bilancio corrente: 6.493€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/6.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Brent</span>
+                            <span class="users-row__won">Beneficio: <span>620€</span></span>
+                            <span class="users-row__">Bilancio corrente: 7.502€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/7.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Felicia</span>
+                            <span class="users-row__won">Beneficio: <span>821€</span></span>
+                            <span class="users-row__">Bilancio corrente: 9.892€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/8.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Cody</span>
+                            <span class="users-row__won">Beneficio: <span>397€</span></span>
+                            <span class="users-row__">Bilancio corrente: 4.424€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/9.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Brian</span>
+                            <span class="users-row__won">Beneficio: <span>770€</span></span>
+                            <span class="users-row__">Bilancio corrente: 8.102€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/10.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Murray</span>
+                            <span class="users-row__won">Beneficio: <span>250€</span></span>
+                            <span class="users-row__">Bilancio corrente: 9.120€</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="users-row__wrapper" aria-hidden="true">
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/11.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Tamara</span>
+                            <span class="users-row__won">Beneficio: <span>327€</span></span>
+                            <span class="users-row__">Bilancio corrente: 5.554€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/12.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Ana</span>
+                            <span class="users-row__won">Beneficio: <span>725€</span></span>
+                            <span class="users-row__">Bilancio corrente: 9.483€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/13.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Brayden</span>
+                            <span class="users-row__won">Beneficio: <span>605€</span></span>
+                            <span class="users-row__">Bilancio corrente: 5.813€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/14.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Roberto</span>
+                            <span class="users-row__won">Beneficio: <span>480€</span></span>
+                            <span class="users-row__">Bilancio corrente: 8.792€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/15.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Aiden</span>
+                            <span class="users-row__won">Beneficio: <span>815€</span></span>
+                            <span class="users-row__">Bilancio corrente: 4.270€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/16.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Hector</span>
+                            <span class="users-row__won">Beneficio: <span>912€</span></span>
+                            <span class="users-row__">Bilancio corrente: 4.915€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/17.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Jimmy</span>
+                            <span class="users-row__won">Beneficio: <span>779€</span></span>
+                            <span class="users-row__">Bilancio corrente: 1.620€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/18.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Vincent</span>
+                            <span class="users-row__won">Beneficio: <span>585€</span></span>
+                            <span class="users-row__">Bilancio corrente: 3.820€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/19.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Jeffrey</span>
+                            <span class="users-row__won">Beneficio: <span>609€</span></span>
+                            <span class="users-row__">Bilancio corrente: 5.813€</span>
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="users-row__img">
+                            <img src="images/20.webp" alt="" />
+                        </div>
+                        <div class="users-row__text">
+                            <span class="users-row__name">Cindy</span>
+                            <span class="users-row__won">Beneficio: <span>919€</span></span>
+                            <span class="users-row__">Bilancio corrente: 6.552€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section technology" id="technology">
+            <div class="technology__bg"></div>
+            <div class="wrapper technology__header">
+                <h2>Cosa rende l’informatica quantistica un investimento così valido?</h2>
+                <div class="technology__text-wrapper">
+                    <p>
+                        Questa è la prima macchina di calcolo quantistico al mondo; A differenza del PC di casa, questo computer è intelligente e prende migliaia di "decisioni" simultanee contemporaneamente. Il tuo cervello pensa un pensiero alla volta, in sequenza. Immagina di poter avere migliaia di pensieri contemporaneamente, ognuno chiaro quanto l'altro. Questo è il calcolo quantistico.
+                    </p>
+                    <p>
+                        Utilizzando questa potenza, la nostra macchina informatica quantistica ti aiuterà a prendere decisioni di investimento più intelligenti e a guadagnare più denaro di quanto pensavi possibile. E soprattutto, è progettato in modo che tu possa guadagnare denaro e aiutare gli altri mentre guadagni!
+                    </p>
+                    <p>
+                        Trova operazioni analizzando le differenze nei prezzi delle azioni ogni nanosecondo in cui i mercati azionari sono attivi (e fai anche previsioni quando i mercati sono chiusi, in modo da sapere cosa potrebbe accadere quando riapriranno). Il tuo computer attuale (e quello di tutti gli altri) non può eguagliare la velocità decisionale di questo nuovo sistema.
+                    </p>
+                </div>
+                <p class="technology__conclusion">
+                    La probabilità di un errore sul fronte immediato è praticamente zero! Ciò dimostra che i tuoi investimenti non andranno mai in deficit, è diventato un progresso nella lotta contro i problemi finanziari delle persone.
+                </p>
+            </div>
+        </section>
+        <section class="problem dynamic-accent">
+            <div class="problem__title-wrapper">
+                <span class="problem__title-left"></span>
+                <h2 class="problem__title">Problems</h2>
+                <span class="problem__title-right"></span>
+            </div>
+            <div class="problem__item problem__first dynamic-accent">
+                <div class="problem__item-wrapper">
+                    <div class="problem__text-wrapper">
+                        <p class="problem__text">
+                            <span>Povertà</span> È un problema globale che ci sforziamo di risolvere per sempre. Il tasso globale di povertà estrema ha raggiunto il 9,3%, in aumento rispetto all’8,4% nel 2022. Le recenti crisi hanno allontanato ulteriormente il mondo dall’obiettivo globale di sradicare la povertà estrema entro il 2030..
+                        </p>
+                        <p class="problem__text problem__accent">
+                            In Italia, più di una persona su otto (13,4%) e un bambino su sei (16,6%) vivono al di sotto della soglia di povertà tenendo conto dei costi abitativi.
+                        </p>
+                    </div>
+                    <div class="problem__img-wrapper">
+                        <img src="images/poverty.webp" alt="" class="problem__img" />
+                    </div>
+                </div>
+            </div>
+            <div class="problem__item problem__second dynamic-accent">
+                <div class="problem__item-wrapper">
+                    <div class="problem__img-wrapper">
+                        <img src="images/suicide.webp" alt="" class="problem__img" />
+                    </div>
+                    <div class="problem__text-wrapper">
+                        <p class="problem__text">
+                            <span>Suicidio globale</span> a causa di problemi finanziari è aumentato in media del 5% e continua ad aumentare.
+                        </p>
+                        <p class="problem__text problem__accent">
+                            Il rapporto annuale di Suicide Prevention Italia mostra che il 70% degli esperimenti italiani livelli di stress superiori al normale rispetto al 2022 a causa del costo della vita, del debito e del credito. Il tasso di suicidio in Italia è in aumento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="problem__item problem__third dynamic-accent">
+                <div class="problem__item-wrapper">
+                    <div class="problem__text-wrapper">
+                        <p class="problem__text">
+                            <span>Disuguaglianza globale</span> È in pessime condizioni e praticamente non migliora. Oggi, il 10% più ricco riceve il 52% di tutto il reddito. La metà più povera riceve solo l’8,5%..
+                        </p>
+                        <p class="problem__text problem__accent">
+                            Ogni anno circa il 5% degli italiani sperimenta un profondo isolamento sociale.
+                        </p>
+                    </div>
+                    <div class="problem__img-wrapper">
+                        <img src="images/inequality.webp" alt="" class="problem__img" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="key">
+            <div class="key__wrapper dynamic-accent">
+                <h2 class="key__title">
+                    <span>s</span>
+                    <span>o</span>
+                    <span>l</span>
+                    <span>u</span>
+                    <span>c</span>
+                    <span>i</span>
+                    <span>ó</span>
+                    <span>n</span>
+                </h2>
+                <div class="key__arrow">
+                    <div class="arrow"></div>
+                </div>
+                <p class="key__main-text">
+                    Immediate Edge è il futuro del mondo finanziario, aiutando le persone e la Banca Mondiale a combattere la povertà globale! Gli obiettivi del Gruppo della Banca Mondiale sono porre fine alla povertà estrema e promuovere la prosperità condivisa. Utilizzando le capacità dell’informatica quantistica, un team con partner e banche rinomati guidati da Elon Musk ha avuto successo. Ogni persona sulla piattaforma può ora dimenticare le proprie paure, i crediti, il basso reddito, la depressione e la fame. In Italia, con l'aiuto di Immediate Edge, gli esperti delle Nazioni Unite promettono un aumento dell'economia del 30% entro il 2027. La tua seconda possibilità di raggiungere la libertà finanziaria nel 2023, se non l'hai raggiunta con Bitcoin nel 2018!!
+                </p>
+            </div>
+            <div class="key__wrapper key__wrapper--start dynamic-accent key__start">
+                <p class="key__start-phrase">ALLORA COSA TI SERVE PER INIZIARE?</p>
+                <ul class="key__start-list">
+                    <li class="key__start-item">
+                        <span class="key__start-number">1</span>
+                        <span class="key__start-word">REGISTRARE</span>
+                        <span class="key__start-desc">REGISTRATI PER AVERE UN ACCOUNT GRATUITO</span>
+                    </li>
+                    <li class="key__start-item">
+                        <span class="key__start-number">2</span>
+                        <span class="key__start-word">DEPOSITARE</span>
+                        <span class="key__start-desc">DEPOSITARE 250€.</span>
+                    </li>
+                    <li class="key__start-item">
+                        <span class="key__start-number">3</span>
+                        <span class="key__start-word">SCEGLIERE</span>
+                        <span class="key__start-desc">SCEGLI I MESTIERI CONSIGLIATI DA IMMEDIATE EDGE</span>
+                    </li>
+                    <li class="key__start-item">
+                        <span class="key__start-number">4</span>
+                        <span class="key__start-word">RITIRARE</span>
+                        <span class="key__start-desc">PRELEVARE QUALSIASI FONDI IN POCHE ORE!</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="trust">
+            <div class="trust__wrapper">
+                <h2 class="trust__title">PERCHÉ NON DOVREI AVERE PAURA?</h2>
+                <div class="trust__content dynamic-accent">
+                    <div class="trust__content-item sert-wrapper">
+                        <img src="images/sert.webp" alt="" class="sert" />
+                    </div>
+                    <div class="trust__content-item">
+                        <ul class="trust__list">
+                            <li class="trust__list-item">
+                                Puoi prelevare le vincite dal tuo primo deposito su qualsiasi sistema di pagamento o banca in qualsiasi momento. Tutte le transazioni Immediate Edge sono supportate ed elaborate esclusivamente tramite la Banca Mondiale.
+                            </li>
+                            <li class="trust__list-item">
+                                Non sei solo. Il miglior gestore ti aiuterà a moltiplicare il tuo primo deposito e a risolvere eventuali difficoltà che potrebbero sorgere.
+                            </li>
+                            <li class="trust__list-item">
+                                I dati utente di Immediate Edge vengono mantenuti riservati. Dopo 30 giorni senza utilizzare la piattaforma, tutti i dati vengono automaticamente cancellati dai nostri server.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="people">
+            <div class="arrows">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="description">
+                <d class="descriptiom__logo">Consiglieri</d>
+                <p>
+                    Immediate Edge gode di un ampio sostegno tra gli investitori. Tra loro ci sono gli scienziati, uomini d'affari e ingegneri più brillanti
+                </p>
+            </div>
+            <div class="swiper slider slider__main swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                <div class="swiper-wrapper slider__wrapper" id="swiper-wrapper-cf97cf62aeca243e" aria-live="polite" style="
+              transition-duration: 0ms;
+              transform: translate3d(621.429px, 0px, 0px);
+            ">
+                    <div class="swiper-slide slider__item swiper-slide-active" role="group" aria-label="1 / 4" style="width: 437.143px; margin-right: 60px">
+                        <div class="slider__item-wrapper">
+                            <div class="slider__item-top">
+                                <div class="slider__item-img-wrapper">
+                                    <img src="images/c2.webp" class="slider__item-img" />
+                                </div>
+                                <div class="slider__item-text-wrapper">
+                                    <p class="slider__item-name">Jeff Bezos:</p>
+                                    <p class="slider__item-desc">
+                                        Imprenditore tecnologico, investitore e filantropo
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="slider__item-text">
+                                L’informatica quantistica è il futuro. Non esagero quando dico che tutto cambierà. Siamo agli albori dell’informatica quantistica; Non molte persone lo conoscono, il che significa che pochissimi lo usano. I pochi che lo fanno stanno prendendo decisioni incredibilmente sagge (e redditizie).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slider__item swiper-slide-next" role="group" aria-label="2 / 4" style="width: 437.143px; margin-right: 60px">
+                        <div class="slider__item-wrapper">
+                            <div class="slider__item-top">
+                                <div class="slider__item-img-wrapper">
+                                    <img src="images/c3.webp" class="slider__item-img" />
+                                </div>
+                                <div class="slider__item-text-wrapper">
+                                    <p class="slider__item-name">Keith Rupert Murdoch:</p>
+                                    <p class="slider__item-desc">
+                                        Imprenditore italiano e americano, magnate dei media e proprietario dei media
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="slider__item-text">
+                                Oggi, le persone che hanno accesso alla piattaforma Immediate Edge possono aumentare in modo sicuro e legale il proprio reddito oltre ogni immaginazione! Se avessi avuto l'opportunità di farlo nei miei anni, non avrei nemmeno preso in considerazione la possibilità di collaborare con la Macchina Quantistica.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slider__item" role="group" aria-label="3 / 4" style="width: 437.143px; margin-right: 60px">
+                        <div class="slider__item-wrapper">
+                            <div class="slider__item-top">
+                                <div class="slider__item-img-wrapper">
+                                    <img src="images/c1.webp" class="slider__item-img" />
+                                </div>
+                                <div class="slider__item-text-wrapper">
+                                    <p class="slider__item-name">Bill Gates:</p>
+                                    <p class="slider__item-desc">
+                                        Magnate degli affari, investitore, autore, filantropo e umanitario
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="slider__item-text">
+                                So per certo che Elon ha speso 3 miliardi di euro dei propri soldi per finanziare questo programma. I miei rispetti per questo, sono 3 miliardi di euro del suo denaro per finanziare un futuro migliore per tutti e per aiutare gli altri a realizzare profitti che lo aiuteranno a realizzarlo. È una vittoria per tutti e sono molto entusiasta di vedere dove andrà a finire.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slider__item" role="group" aria-label="4 / 4" style="width: 437.143px; margin-right: 60px">
+                        <div class="slider__item-wrapper">
+                            <div class="slider__item-top">
+                                <div class="slider__item-img-wrapper">
+                                    <img src="images/cr4.webp" class="slider__item-img" />
+                                </div>
+                                <div class="slider__item-text-wrapper">
+                                    <p class="slider__item-name">Changpeng Zhao:</p>
+                                    <p class="slider__item-desc">
+                                        Co-fondatore e CEO di Binance, il più grande scambio di criptovalute al mondo
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="slider__item-text">
+                                Immediate Edge non è il nostro concorrente! Vogliamo raggiungere l’obiettivo comune: l’eliminazione della povertà in ogni Paese. A nome mio e del team di Binance, vorrei ringraziare Elon Musk e Immediate Edge. Finalmente esiste una piattaforma che sta cambiando la vita delle persone, non solo a parole, ma nei fatti!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+        </section>
+        <section class="last-form">
+            <div class="statistics">
+                <h2 class="statistics__title">LE STATISTICHE DI OGGI:</h2>
+                <div class="statistics__wrapper dynamic-accent">
+                    <div>
+                        <p class="statistics__item">
+                            Guadagno medio di un utente registrato da un deposito 250€:
+                            <span data-target="734" id="number1" class="counter dynamic-accent">0</span><span class="ix">$</span>
+                        </p>
+                        <p class="statistics__item">
+                            Registrazioni su ImmediateEdge:
+                            <span data-target="111" id="number2" class="counter dynamic-accent">0</span>
+                        </p>
+                        <p class="statistics__item">
+                            Aumentano i guadagni medi:
+                            <span data-target="4" id="number3" class="counter dynamic-accent">0</span><span class="ix">x</span>
+                        </p>
+                        <p class="statistics__item">
+                            Posti rimasti per registrarsi:
+                            <span class="pack_count last-counter dynamic-accent">16</span>
+                        </p>
+                    </div>
+                    <div>
+                        <svg class="statistics__svg" width="269" height="362" viewBox="0 0 269 362" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="190" width="79" height="362" rx="11" fill="white"></rect>
+                            <rect x="95" y="149" width="79" height="213" rx="11" fill="white"></rect>
+                            <rect y="219" width="79" height="143" rx="11" fill="white"></rect>
+                        </svg>
+                    </div>
+                </div>
+                <div id="block" class="cta-container">
+                    <div class="stack" style="--stacks: 3;">
+                        <span style="--index: 0;">Iscriviti gratuitamente oggi e ottieni il tuo primo profitto!</span>
+                        <span style="--index: 1;">Iscriviti gratuitamente oggi e ottieni il tuo primo profitto!</span>
+                        <span style="--index: 2;">Iscriviti gratuitamente oggi e ottieni il tuo primo profitto!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="form--top ">
+                    <h2 class="form--title">
+                        ISCRIVITI GRATIS
+                    </h2>
+                    <span class="dep-info anti-accent">Deposito minimo 250€</span>
+                </div>
+                <form method="post" id="myform" class="" novalidate>
+                    <div class="preloader"></div>
+                    <div class="form--controlWrapper form--controlWrapper-half">
+                        <div class="input--wrapper">
+                            <input type="text" class="form--input" name="firstName" placeholder="Nome">
+                            <span class="form--floatingLabel"></span>
+                        </div>
+                    </div>
+                    <div class="form--controlWrapper form--controlWrapper-half">
+                        <div class="input--wrapper">
+                            <input type="text" class="form--input" name="lastName" placeholder="Cognome">
+                            <span class="form--floatingLabel"></span>
+                        </div>
+                    </div>
+                    <div class="form--controlWrapper ">
+                        <div class="input--wrapper">
+                            <input type="email" class="form--input" name="email" placeholder="Email">
+                            <span class="form--floatingLabel"></span>
+                        </div>
+                    </div>
+                    <div class="form--controlWrapper ">
+                        <div class="input--wrapper">
+                            <input id="telephone" name="phone" class="form--input phone" type="tel">
+                        </div>
+                    </div>
+                    <div class="form--controlWrapper "  style="margin-top: 40px;">
+                        <button type="submit" name="submit" class="btn form--btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Registrare
+                        </button>
+                        <p class="statistics__item country-info">Disponibile solo per i residenti in Italia <img src="images/it.webp"></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="collab">
+            <div class="users-row">
+                <div class="users-row__wrapper" aria-hidden="true">
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa1.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa2.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa3.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa4.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa5.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa6.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa7.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa8.webp" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="users-row__wrapper" aria-hidden="true">
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa1.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa2.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa3.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa4.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa5.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa6.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa7.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="users-row__item">
+                        <div class="collab__item">
+                            <img src="images/pa8.webp" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="contacts">
+        <div class="wrapper">
+            <div class="container">
+                <div class="formhere"></div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="bottom__col">© Immediate Edge</div>
+            <div class="bottom__col">
+                <a data-action="scrollToForm" href="" class="bottom__link">Politica sulla riservatezza</a> |
+                <a data-action="scrollToForm" href="" class="bottom__link">Condizioni</a> |
+                <a data-action="scrollToForm" href="" class="bottom__link">Segnala abuso/spam</a>
+            </div>
+        </div>
+    </footer>
+    <div class="hover-modal"></div>
+    <canvas class="background" width="3360" height="874" style="width: 100%; height: 100%"></canvas>
+    <div class="video-popup">
+        <div class="video-popup-wrapper">
+            <div class="poster_block">
+                <img class="poster" src="images/poster.webp" alt="">
+                <img class="play-btn" src="assets/landing/img/play.webp" alt="">
+            </div>
+            <div class="embed-container" style="display: none;"></div>
+            <button class="close-button">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/landing/js/jquery.min.js"></script>
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="js/people.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            $('.popup').css('display', 'block');
+        }, 60000);
+    });
+    function closePopup() {
+        document.querySelector('.popup').style.display = 'none';
+    }
+    $(".poster_block").click(function() {
+        $('.poster_block').css('display', 'none');
+        $('.embed-container').append('<iframe src="https://player.vimeo.com/video/814549298?autoplay=1&loop=1&autopause=0&muted=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>');
+        $('.embed-container').css('display', 'block');
+    });
+    </script>
+    
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('a');
+
+  links.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      const form = document.getElementById('block');
+
+      if (form) {
+        form.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+});
+    </script>
+
+
+    <!-- intl-tel-input -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/jsAdapter.js"></script>
+    <script src="js/pixelInitPageView.js"></script>
+    <script src="js/validate.min.js"></script>
+    <script src="js/modal-form-and-timer.js"></script>
+</body>
+
+</html>

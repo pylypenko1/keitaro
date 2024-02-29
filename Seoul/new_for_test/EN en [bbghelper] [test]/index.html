@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="This is the membership related website" />
+    <meta name="keywords" content="learning, coding, membership," />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>bbghelper.com</title>
+
+    <!-- Fonts -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antic+Slab&amp;family=Barlow&amp;family=Bitter:wght@400;600;700;800;900&amp;family=Ephesis&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="main-area">
+      <div class="language ps-2">
+        <div class="single-lang py-1">
+          <ul>
+            <li class="toggle">
+              <img class="flag" src="images/language_en.svg" alt="flags" /> EN
+              <i class="fa-solid fa-angle-down"></i>
+              <ul
+                class="dropdown-content"
+                style="
+                  padding-left: 0px;
+                  overflow-y: scroll;
+                  overflow-x: hidden;
+                  max-height: 600px;
+                "
+              >
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_af.svg"
+                    alt="flags"
+                  />
+                  Afrikaans
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_cs.svg"
+                    alt="flags"
+                  />
+                  Czech
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_de.svg"
+                    alt="flags"
+                  />
+                  German
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_en.svg"
+                    alt="flags"
+                  />
+                  English
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_es.svg"
+                    alt="flags"
+                  />
+                  Spanish
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_et.svg"
+                    alt="flags"
+                  />
+                  Estonian
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_fi.svg"
+                    alt="flags"
+                  />
+                  Finnish
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_fr.svg"
+                    alt="flags"
+                  />
+                  French
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_id.svg"
+                    alt="flags"
+                  />
+                  Indonesian
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_it.svg"
+                    alt="flags"
+                  />
+                  Italian
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_ja.svg"
+                    alt="flags"
+                  />
+                  Japanese
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_lt.svg"
+                    alt="flags"
+                  />
+                  Lithuanian
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_lv.svg"
+                    alt="flags"
+                  />
+                  Latvian
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_ms.svg"
+                    alt="flags"
+                  />
+                  Malay
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_nb.svg"
+                    alt="flags"
+                  />
+                  Norwegian (Bokmål)
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_nl.svg"
+                    alt="flags"
+                  />
+                  Dutch
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_pl.svg"
+                    alt="flags"
+                  />
+                  Polish
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_pt.svg"
+                    alt="flags"
+                  />
+                  Portuguese
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_sv.svg"
+                    alt="flags"
+                  />
+                  Swedish
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_tl.svg"
+                    alt="flags"
+                  />
+                  Tagalog
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_xh.svg"
+                    alt="flags"
+                  />
+                  Xhosa
+                </a>
+                <a class="nav-link nav-under">
+                  <img
+                    class="flag"
+                    style="max-width: 30px"
+                    src="images/language_zu.svg"
+                    alt="flags"
+                  />
+                  Zulu
+                </a>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="header-area">
+                <div class="logo">
+                  <a>Our Workspace</a>
+                </div>
+                <div class="t-bar text-end">
+                  <p>Refund according to our refund policy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="hero">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="left-item">
+                      <div class="tab-box mb-4 mb-lg-0">
+                        <nav>
+                          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button
+                              class="nav-link active"
+                              id="nav-welcome-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#welcome"
+                              type="button"
+                              role="tab"
+                              aria-controls="welcome"
+                              aria-selected="true"
+                            >
+                              Welcome
+                            </button>
+                            <button
+                              class="nav-link"
+                              id="nav-faq-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#faq"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-faq"
+                              aria-selected="false"
+                            >
+                              FAQ
+                            </button>
+                            <button
+                              class="nav-link"
+                              id="nav-contact-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-contact"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-contact"
+                              aria-selected="false"
+                            >
+                              Contact
+                            </button>
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                          <div
+                            class="tab-pane fade show active"
+                            id="welcome"
+                            role="tabpanel"
+                            aria-labelledby="nav-welcome-tab"
+                          >
+                            <div class="login-info">
+                              <div class="login-des py-4 mb-xxl-4">
+                                <p>
+                                  If you see
+                                  <a target="_blank">bbghelper.com</a>
+                                  on your bank statement, it is because you have
+                                  purchased a membership with
+                                  <a target="_blank">bebudget.com</a>. You have
+                                  received a welcome e-mail with login
+                                  credentials to
+                                  <a target="_blank">bebudget.com</a>
+                                  after the initial membership purchase. Please
+                                  check your inbox for that email.
+                                </p>
+                              </div>
+                              <div class="login-form">
+                                <p>Find your membership</p>
+                                <form
+                                  action=""
+                                  method="POST"
+                                  id="findSubscription"
+                                >
+                                  <!-- <input type="hidden" name="_token" id="token" value="lAbQLS6xXaYhWbzjTu6qfGZ5Nhm35qKdLZ6zeksD"> -->
+                                  <input
+                                    type="hidden"
+                                    name="_token"
+                                    value="lAbQLS6xXaYhWbzjTu6qfGZ5Nhm35qKdLZ6zeksD"
+                                  />
+                                  <div class="login-email mb-4">
+                                    <input
+                                      type="email"
+                                      name="subscription_email"
+                                      id="email"
+                                      placeholder="Email"
+                                      required=""
+                                    />
+                                  </div>
+                                  <div class="login-digit mb-4">
+                                    <input
+                                      type="text"
+                                      maxlength="4"
+                                      name="subscription_last4"
+                                      id="subscription_last4"
+                                      placeholder="Last 4 digits of cards"
+                                    />
+                                  </div>
+                                  <div class="login-btn">
+                                    <button type="submit">SEARCH</button>
+                                  </div>
+                                </form>
+
+                                <form
+                                  action=""
+                                  method="POST"
+                                  id="cancelSubscription"
+                                >
+                                  <input
+                                    type="hidden"
+                                    name="_token"
+                                    id="token"
+                                    value="lAbQLS6xXaYhWbzjTu6qfGZ5Nhm35qKdLZ6zeksD"
+                                  />
+                                  <div class="login-email mb-4">
+                                    <input
+                                      type="text"
+                                      name="subscription_id"
+                                      id="subscription_id"
+                                      disabled=""
+                                    />
+                                    <input
+                                      type="hidden"
+                                      name="locale"
+                                      id="locale"
+                                      value="en"
+                                    />
+                                  </div>
+                                  <div class="login-btn">
+                                    <button type="submit">
+                                      CANCEL SUBSCRIPTION
+                                    </button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="tab-pane fade"
+                            id="faq"
+                            role="tabpanel"
+                            aria-labelledby="nav-faq-tab"
+                          >
+                            <div class="faq-info">
+                              <div class="faq-hdd py-4">
+                                <h3>
+                                  Find answers to frequently asked questions
+                                  here
+                                </h3>
+                              </div>
+                              <div class="faq-qna">
+                                <div
+                                  class="accordion accordion-flush"
+                                  id="accordionFlushExample"
+                                >
+                                  <div class="accordion-item">
+                                    <h2
+                                      class="accordion-header"
+                                      id="flush-headingOne"
+                                    >
+                                      <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne"
+                                        aria-expanded="false"
+                                        aria-controls="flush-collapseOne"
+                                      >
+                                        What is&nbsp;<a>bebudget.com</a>?
+                                      </button>
+                                    </h2>
+                                    <div
+                                      id="flush-collapseOne"
+                                      class="accordion-collapse collapse"
+                                      aria-labelledby="flush-headingOne"
+                                      data-bs-parent="#accordionFlushExample"
+                                    >
+                                      <div class="accordion-body">
+                                        <p>
+                                          Be Budget helps you reach short-term
+                                          and long-term financial goals and
+                                          helps you manage and control your
+                                          finances. Get a real-time picture of
+                                          your financial state and spending
+                                          habits, so you can save more and
+                                          create good short-term and long-term
+                                          financial goals. All you need to do is
+                                          manually import your daily
+                                          transactions and financial details,
+                                          without any links to your bank
+                                          accounts, and you’ll be able to track
+                                          and manage your money using the tools
+                                          and features available through our
+                                          planner. We offer tips and
+                                          recommendations that can help you save
+                                          more and make smarter financial
+                                          decisions. There is even an option to
+                                          receive alerts on your due dates, so
+                                          you can pay your bills on time. Avoid
+                                          splurges and create clear and concise
+                                          financial reports faster than ever
+                                          before. All the tools in our planner
+                                          are placed on a single dashboard that
+                                          anyone can use.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-item">
+                                    <h2
+                                      class="accordion-header"
+                                      id="flush-headingTwo"
+                                    >
+                                      <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo"
+                                        aria-expanded="false"
+                                        aria-controls="flush-collapseTwo"
+                                      >
+                                        <span>
+                                          Why do I see
+                                          <a target="_blank"
+                                            >&nbsp; bbghelper.com &nbsp;</a
+                                          >
+                                          on my bank statement?</span
+                                        >
+                                      </button>
+                                    </h2>
+                                    <div
+                                      id="flush-collapseTwo"
+                                      class="accordion-collapse collapse"
+                                      aria-labelledby="flush-headingTwo"
+                                      data-bs-parent="#accordionFlushExample"
+                                    >
+                                      <div class="accordion-body">
+                                        <p>
+                                          If you see
+                                          <a target="_blank">bbghelper.com </a>
+                                          on your bank statement, it is because
+                                          you have purchased a membership with
+                                          <a target="_blank">bebudget.com</a>.
+                                        </p>
+                                        <p>
+                                          You have received a welcome e-mail
+                                          with login credentials to
+                                          <a target="_blank">bebudget.com</a>
+                                          after the initial membership purchase.
+                                          Please check your inbox for that
+                                          email.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-item">
+                                    <h2
+                                      class="accordion-header"
+                                      id="flush-headingThree"
+                                    >
+                                      <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree"
+                                        aria-expanded="false"
+                                        aria-controls="flush-collapseThree"
+                                      >
+                                        How do I cancel my membership?
+                                      </button>
+                                    </h2>
+                                    <div
+                                      id="flush-collapseThree"
+                                      class="accordion-collapse collapse"
+                                      aria-labelledby="flush-headingThree"
+                                      data-bs-parent="#accordionFlushExample"
+                                    >
+                                      <div class="accordion-body">
+                                        <p>
+                                          There are several ways in which you
+                                          can cancel your membership on our
+                                          website:
+                                        </p>
+                                        <ul>
+                                          <li>
+                                            Log in to your account, go to your
+                                            Profile, and click “Cancel
+                                            Membership” button
+                                          </li>
+                                          <li>
+                                            Go to “Cancel Membership” page of
+                                            your account and click the “Cancel
+                                            Membership” button
+                                          </li>
+                                          <li>
+                                            Cancel it directly through this
+                                            support page. To do this, go to the
+                                            section titled “Find Your
+                                            Membership” and enter your email and
+                                            the last 4 digits of your credit
+                                            card in the dedicated fields. Click
+                                            the “Search” button, and you will
+                                            easily find your membership. Then,
+                                            click the offered “Cancel
+                                            Membership” button
+                                          </li>
+                                          <li>
+                                            Simply contact our support agents
+                                            and request membership termination
+                                          </li>
+                                        </ul>
+                                        <p>
+                                          If you have issues finding your login
+                                          credentials, please contact customer
+                                          support.
+                                        </p>
+                                        <p>
+                                          Email:
+                                          <a
+                                            ><span
+                                              class="__cf_email__"
+                                              data-cfemail="9cefe9ececf3eee8dcfef9fee9f8fbf9e8b2fff3f1"
+                                              >[email&nbsp;protected]</span
+                                            ></a
+                                          >
+                                        </p>
+                                        <p>
+                                          Phone:
+                                          <a>+357 25 654099</a>
+                                        </p>
+                                        <p>
+                                          Customer support is open Monday to
+                                          Friday from 08.00 AM - 16.00 PM (Time
+                                          zone: +2 GMT) and will do our best to
+                                          guide you and answer your questions
+                                          within 48 hours on weekdays and we are
+                                          closed in the weekends.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-item">
+                                    <h2
+                                      class="accordion-header"
+                                      id="flush-headingFour"
+                                    >
+                                      <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFour"
+                                        aria-expanded="false"
+                                        aria-controls="flush-collapseFour"
+                                      >
+                                        Where do I find my invoices?
+                                      </button>
+                                    </h2>
+                                    <div
+                                      id="flush-collapseFour"
+                                      class="accordion-collapse collapse"
+                                      aria-labelledby="flush-headingFour"
+                                      data-bs-parent="#accordionFlushExample"
+                                    >
+                                      <div class="accordion-body">
+                                        <p>
+                                          An invoice is created whenever we bill
+                                          your credit card, and you can look for
+                                          it under 'My Account &gt; Orders'.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-item">
+                                    <h2
+                                      class="accordion-header"
+                                      id="flush-headingFive"
+                                    >
+                                      <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFive"
+                                        aria-expanded="false"
+                                        aria-controls="flush-collapseFive"
+                                      >
+                                        Can I get refunded?
+                                      </button>
+                                    </h2>
+                                    <div
+                                      id="flush-collapseFive"
+                                      class="accordion-collapse collapse"
+                                      aria-labelledby="flush-headingFive"
+                                      data-bs-parent="#accordionFlushExample"
+                                    >
+                                      <div class="accordion-body">
+                                        <p>
+                                          Yes, we offer a 100% refund guarantee
+                                          on all orders where you request a
+                                          refund within 14 days of the purchase.
+                                        </p>
+                                        <p>
+                                          We hope you will love everything that
+                                          you order from us but if something
+                                          isn’t quite right, you have 14 days to
+                                          request a refund under the refund
+                                          guarantee. All other cases have to be
+                                          reviewed by the customer support team,
+                                          and a decision is made on a case by
+                                          case basis.
+                                        </p>
+                                        <p>
+                                          To request a refund, please contact
+                                          the customer support team.
+                                        </p>
+                                        <p>
+                                          Email:
+                                          <a
+                                            ><span
+                                              class="__cf_email__"
+                                              data-cfemail="56252326263924221634333423323133227835393b"
+                                              >[email&nbsp;protected]</span
+                                            ></a
+                                          >
+                                        </p>
+                                        <p>
+                                          Phone:
+                                          <a>+357 25 654099</a>
+                                        </p>
+                                        <p>
+                                          Customer support is open Monday to
+                                          Friday from 08.00 AM - 16.00 PM (Time
+                                          zone: +2 GMT) and will do our best to
+                                          guide you and answer your questions
+                                          within 48 hours on weekdays and we are
+                                          closed in the weekends.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="tab-pane fade"
+                            id="nav-contact"
+                            role="tabpanel"
+                            aria-labelledby="nav-contact-tab"
+                          >
+                            <div class="contact-us">
+                              <div class="contact-form pb-3">
+                                <div class="contact-hdd py-4">
+                                  <h3>
+                                    If you have any questions please contact our
+                                    team.
+                                  </h3>
+                                </div>
+                                <form method="POST">
+                                  <div class="name mb-3">
+                                    <label for="name">Name</label>
+                                    <input
+                                      type="text"
+                                      placeholder="Name"
+                                      name="name"
+                                      id="email"
+                                    />
+                                  </div>
+                                  <div class="email mb-3">
+                                    <label for="email">Email</label>
+                                    <input
+                                      type="email"
+                                      placeholder="email"
+                                      name="email"
+                                      id="email"
+                                      required=""
+                                    />
+                                  </div>
+                                  <div class="msg mb-3">
+                                    <label for="message">Message</label>
+                                    <textarea
+                                      id="message"
+                                      name="message"
+                                      cols="30"
+                                      rows="4"
+                                      placeholder="Message"
+                                    ></textarea>
+                                  </div>
+                                  <div class="check mb-3">
+                                    <input type="checkbox" id="check" />
+                                    <label for="check"
+                                      >I hereby consent to my personal data
+                                      being processed for the purpose of
+                                      receiving replies from you regarding my
+                                      request for information.</label
+                                    >
+                                  </div>
+                                  <div class="submit-btn">
+                                    <button type="submit">SEND</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="right-item d-lg-block d-none">
+                      <div class="hero-img text-center">
+                        <img
+                          src="images/hero-img.png"
+                          alt="hero-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="dash text-center">
+                Copyright © Be Budget 2024. BENSET LIMITED - CR: 439480 - 18A
+                Panteli Katelari, Limassol 3012, Cyprus | All rights reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/my-js.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 97 - 227  [o158;l1] avex-ai -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Avex AI</title>
+    <link rel="shortcut icon" type="image/webp" href="img/favicon.webp" />
+    <link href="assets/landing/css/landing.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/app.css" />
+
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+    <!--[HEADER]-->
+</head>
+
+<body>
+    <!-- preloader -->
+    <div id="loader" style="display: none">
+        <img src="images/preloader.svg" alt="Preloader" />
+    </div>
+    <!-- preloader end -->
+
+    <div style="width: 100%; background: red; text-align: center; position: fixed; z-index: 100">
+        <div id="timer">
+            <div class="timer-title">Affrettarsi!</div>
+            <div class="counter-wrapper">
+                <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span>
+            </div>
+        </div>
+    </div>
+    <div class="main-wrapper">
+        <div class="attention-message text-center">
+            <div class="container">
+                <strong>ATTENZIONE: ISCRIVETEVI ORA!!!</strong>
+                La registrazione terminerà il <span class="date"></span> -
+                <strong>NON PERDERE QUESTA OPPORTUNITA!</strong>
+            </div>
+        </div>
+        <header class="header" id="header">
+            <div class="container flex center just-between">
+                <img src="img/logo-black.webp" width="176" height="44" alt="Logo" class="header-logo-img"
+                    onclick="scrollToElem('#formWrapper')" loading="lazy" />
+            </div>
+        </header>
+        <main class="main">
+            <section class="hero-section">
+                <div class="hero-section-bg"></div>
+                <div class="container">
+                    <h2 class="main-subheading text-white">
+                        Investire a un nuovo livello:
+                    </h2>
+                    <div class="hero-content flex start just-between">
+                        <div class="hero-video-wrapper">
+                            <h1 class="main-heading text-white">
+                                <span>Avex AI</span> è il vostro partner affidabile nel mondo
+                                delle tecnologie finanziarie
+                            </h1>
+                            <div class="video">
+                                <div class="poster_block">
+                                    <img class="poster" src="img/poster.webp" alt="">
+                                    <div class="play-btn"></div>
+                                </div>
+                                <div class="embed-container" style="display: none;"></div>
+                            </div>
+                        </div>
+                        <div class="hero-form-part">
+                            <div class="form-wrapper">
+                                <h2>Registrazione gratuita</h2>
+                                <div style="margin-left: auto;margin-right: auto;width: 100%;max-width: 360px;">
+                                    <form method="post" novalidate>
+                                        <div id="formData">
+                                            <input type="text" name="firstName" class="form__input" placeholder="Nome">
+                                            <input type="text" name="lastName" class="form__input"
+                                                placeholder="Cognome">
+                                            <input type="email" name="email" class="form__input" placeholder="Email">
+                                            <input type="tel" id="phone" name="phone" class="form__input phone">
+                                            <button
+                                                class="form__btn button w-button gtd-form-submit btn btn_send w-56 font-sans font-bold transition bg-btn-primary hover:bg-btn-hover text-white rounded py-3"
+                                                type="submit" name="submit">Registrati ora</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="why-us-section">
+                <div class="container flex center just-between">
+                    <div class="img-part">
+                        <div class="img-container flex center just-center reveal">
+                            <img src="img/logo-white.webp" width="440" height="108" alt="Logo" class="logo-img" />
+                        </div>
+                        <div class="cards-wrapper flex center just-evenly">
+                            <div class="card why-us-card text-center reveal delay-02">
+                                <img src="img/badge.webp" width="96" height="96" alt="Icon" class="why-us-icon" />
+                                <h4>Piena autonomia</h4>
+                            </div>
+                            <div class="card why-us-card text-center reveal delay-04">
+                                <img src="img/artificial-intelligence.webp" width="96" height="96" alt="Icon"
+                                    class="why-us-icon" />
+                                <h4>Integrazione dell'intelligenza artificiale</h4>
+                            </div>
+                            <div class="card why-us-card text-center reveal delay-06">
+                                <img src="img/discount-bag.webp" width="96" height="96" alt="Icon"
+                                    class="why-us-icon" />
+                                <h4>Reddito stabile</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-part">
+                        <h2 class="section-heading">
+                            <span class="reveal">Perché Avex AI?</span>
+                        </h2>
+                        <p class="section-text reveal">
+                            Avex AI è una piattaforma di investimento in grado di operare in
+                            modo completamente automatico e di generare profitti stabili per
+                            i nostri clienti. La nostra piattaforma utilizza algoritmi
+                            avanzati di apprendimento automatico per prevedere le tendenze
+                            del mercato e prendere decisioni di investimento sulla base di
+                            grandi volumi di dati e informazioni di mercato.
+                        </p>
+                        <p class="section-text reveal">
+                            Il nostro sistema di investimento automatizzato offre soluzioni
+                            di investimento altamente efficienti per ogni cliente, tenendo
+                            conto delle sue esigenze individuali e dei suoi obiettivi
+                            finanziari. Questo garantisce ai nostri clienti un reddito
+                            stabile e minimizza i rischi, anche in condizioni di mercato
+                            difficili.
+                        </p>
+                        <p class="section-text reveal">
+                            Avex AI offre un processo di investimento comodo e semplice che
+                            non richiede particolari conoscenze o esperienze in campo
+                            finanziario. I nostri clienti possono monitorare i loro
+                            portafogli attraverso la nostra piattaforma online e ricevere
+                            regolarmente rapporti sulla performance dei loro investimenti.
+                        </p>
+                        <p class="section-text reveal">
+                            Scegliendo Avex AI, potete essere certi che il vostro
+                            portafoglio è in mani sicure e che i nostri algoritmi di
+                            apprendimento automatico lavoreranno per il vostro futuro
+                            finanziario.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="advantages-section">
+                <div class="container">
+                    <h2 class="section-heading text-white">
+                        <span class="reveal">Vantaggi di Avex AI</span>
+                    </h2>
+                    <div class="cards-wrapper flex just-between">
+                        <div class="card advantages-card text-center reveal delay-01">
+                            <img src="img/desktop.webp" width="90" height="90" alt="Icon" class="why-us-icon" />
+                            <h4>Accesso rapido alle informazioni</h4>
+                            <p>
+                                Grazie alla sua AI altamente precisa, Avex AI ha accesso a una
+                                fonte inesauribile di dati su borse, piattaforme e altri
+                                mercati.
+                            </p>
+                        </div>
+                        <div class="card advantages-card text-center reveal delay-02">
+                            <img src="img/badge.webp" width="90" height="90" alt="Icon" class="why-us-icon" />
+                            <h4>Piena autonomia</h4>
+                            <p>
+                                La piattaforma analizza in modo indipendente i mercati, prende
+                                decisioni di trading ed esegue le operazioni senza la
+                                necessità di un monitoraggio continuo da parte del trader.
+                            </p>
+                        </div>
+                        <div class="card advantages-card text-center reveal delay-03">
+                            <img src="img/safe.webp" width="90" height="90" alt="Icon" class="why-us-icon" />
+                            <h4>L'assenza pratica di perdite</h4>
+                            <p>
+                                Avex AI prevede i movimenti dei grafici con un'accuratezza del
+                                99,8%, utilizzando algoritmi e modelli complessi per eseguire
+                                operazioni redditizie.
+                            </p>
+                        </div>
+                        <div class="card advantages-card text-center reveal delay-04">
+                            <img src="img/exchange.webp" width="90" height="90" alt="Icon" class="why-us-icon" />
+                            <h4>Comodo prelievo di denaro</h4>
+                            <p>
+                                L'azienda collabora con i principali sistemi di pagamento come
+                                Visa, Mastercard, PayPal, Binance e altri.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="steps-section">
+                <div class="container">
+                    <h2 class="section-heading">
+                        <span class="reveal">Come iniziare?</span>
+                    </h2>
+                    <div class="cards-wrapper flex just-between">
+                        <div class="card steps-card text-white text-center reveal delay-01">
+                            <h4>PRIMO PASSO</h4>
+                            <p>Compilare il modulo di registrazione sul sito web</p>
+                        </div>
+                        <div class="card steps-card text-white text-center reveal delay-02">
+                            <h4>SECONDO PASSO</h4>
+                            <p>Rispondere alla chiamata di un manager personale</p>
+                        </div>
+                        <div class="card steps-card text-white text-center reveal delay-03">
+                            <h4>TERZO PASSO</h4>
+                            <p>Effettuare il primo deposito di 250 dollari</p>
+                        </div>
+                    </div>
+                    <div class="call-to-action text-center reveal">
+                        GODERE DI UN REDDITO PASSIVO STABILE!
+                    </div>
+                </div>
+            </section>
+            <section class="about-section">
+                <div class="container flex center just-between">
+                    <div class="img-part">
+                        <img src="img/ai-large-img.webp" alt="AI" class="about-img reveal" loading="lazy" />
+                    </div>
+                    <div class="text-part">
+                        <h2 class="section-heading">
+                            <span class="reveal">Cosa può fare il bot?</span>
+                        </h2>
+                        <ul>
+                            <li class="reveal">
+                                <h4>Analisi e previsioni</h4>
+                                <p>
+                                    Il robot utilizza vari strumenti analitici per prevedere i
+                                    movimenti dei grafici e prendere le relative decisioni di
+                                    trading.
+                                </p>
+                            </li>
+                            <li class="reveal">
+                                <h4>Esecuzione rapida dell'ordine</h4>
+                                <p>
+                                    Il robot di trading garantisce l'esecuzione istantanea degli
+                                    ordini, consentendo di rispondere rapidamente alle
+                                    condizioni di mercato in rapida evoluzione.
+                                </p>
+                            </li>
+                            <li class="reveal">
+                                <h4>Gestione del rischio</h4>
+                                <p>
+                                    Il robot è dotato di una funzione di gestione automatica del
+                                    rischio per controllare le perdite potenziali e proteggere i
+                                    profitti.
+                                </p>
+                            </li>
+                            <li class="reveal">
+                                <h4>Monitoraggio e notifiche</h4>
+                                <p>
+                                    Il bot monitora costantemente le condizioni di mercato e lo
+                                    stato del conto di trading, fornendo ai trader notifiche e
+                                    rapporti tempestivi sulle operazioni eseguite.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="opinions-section">
+                <div class="cards-wrapper container flex just-evenly">
+                    <div class="card opinion-card text-center text-white reveal">
+                        <img src="img/jack-ma.webp" width="336" height="336" alt="Jack Ma" class="opinion-card-img"
+                            loading="lazy" />
+                        <h4>
+                            <span>JACK MA</span>
+                        </h4>
+                        <p>
+                            <q>
+                                Sono impressionato dalla piattaforma di investimento Avex AI e
+                                dall'uso dell'intelligenza artificiale per il trading
+                                automatico. I suoi algoritmi accurati e le sue capacità
+                                analitiche aiutano gli investitori a prendere decisioni
+                                informate. Vedo il potenziale di queste tecnologie per lo
+                                sviluppo del settore finanziario e credo che Avex AI possa
+                                diventare un attore significativo nel mercato degli
+                                investimenti.
+                            </q>
+                        </p>
+                    </div>
+                    <div class="card opinion-card text-center text-white reveal delay-02">
+                        <img src="img/warren-buffet.webp" width="336" height="336" alt="Warren Buffet"
+                            class="opinion-card-img" loading="lazy" />
+                        <h4>
+                            <span>Warren Buffett</span>
+                        </h4>
+                        <p>
+                            <q>
+                                Investire non è un'attività facile ma redditizia. Ho visto e
+                                testato molte piattaforme, ma Avex AI mi ha piacevolmente
+                                sorpreso. Si tiene al passo con le tendenze tecnologiche e le
+                                incorpora nella piattaforma. L'elevata redditività e la
+                                facilità d'uso della piattaforma ne sono la prova. Pertanto,
+                                posso raccomandarla con fiducia a chiunque sia alla ricerca di
+                                una piattaforma affidabile e redditizia per il trading di
+                                attività finanziarie.
+                            </q>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="comments-section">
+                <div class="container flex center just-center wrap">
+                    <img src="img/Visa.webp" width="122" height="80" alt="Visa" class="payment-method-img reveal"
+                        loading="lazy" />
+                    <img src="img/Mastercard.webp" width="122" height="80" alt="Mastercard"
+                        class="payment-method-img reveal delay-01" loading="lazy" />
+                    <img src="img/Maestro.webp" width="122" height="80" alt="Maestro"
+                        class="payment-method-img reveal delay-02" loading="lazy" />
+                    <img src="img/PayPal.webp" width="122" height="80" alt="PayPal"
+                        class="payment-method-img reveal delay-03" loading="lazy" />
+                    <img src="img/Payoneer.webp" width="122" height="80" alt="Payoneer"
+                        class="payment-method-img reveal delay-04" loading="lazy" />
+                    <img src="img/Barclays.webp" width="122" height="80" alt="Barclays"
+                        class="payment-method-img reveal delay-05" loading="lazy" />
+                    <img src="img/Unionpay.webp" width="122" height="80" alt="Unionpay"
+                        class="payment-method-img reveal delay-06" loading="lazy" />
+                    <img src="img/Dowjones.webp" width="122" height="80" alt="Dowjones"
+                        class="payment-method-img reveal delay-07" loading="lazy" />
+                    <img src="img/Nasdaq.webp" width="122" height="80" alt="Nasdaq"
+                        class="payment-method-img reveal delay-08" loading="lazy" />
+                    <img src="img/Dinnersclub.webp" width="122" height="80" alt="Dinnersclub"
+                        class="payment-method-img reveal delay-09" loading="lazy" />
+                </div>
+                <div class="container">
+                    <h2 class="section-heading">
+                        <span class="reveal">I nostri utenti dicono</span>
+                    </h2>
+                    <div class="cards-wrapper flex start just-between">
+                        <div class="text-part fb-comments reveal">
+                            <div class="control-panel flex center just-between">
+                                <div class="comments-quantity">19K Commenti</div>
+                                <div class="actions flex center">
+                                    <span>Ordina per</span>
+                                    <select name="SortingCategories" id="sorting_categories">
+                                        <option value="Oldest">Il più vecchio</option>
+                                        <option value="Newest">Più recente</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="comment-card flex">
+                                <img src="img/john-gross.webp" width="60" height="60" alt="John Gross" class="user-img"
+                                    loading="lazy" />
+                                <div class="comment-card-content">
+                                    <h5 class="comment-user-name">John Gross</h5>
+                                    <p class="comment-text">
+                                        Faccio trading con Avex AI da qualche settimana e ho
+                                        ottenuto un piccolo profitto di 2.300 dollari. È molto più
+                                        di quanto guadagno con il mio lavoro. Verificato
+                                        personalmente) Buoni risultati fin dal primo giorno.
+                                    </p>
+                                    <div class="operations flex center">
+                                        <button class="operations-btn">Like</button>
+                                        <span>&#183;</span>
+                                        <button class="operations-btn">Reply</button>
+                                        <span>&#183;</span>
+                                        <div class="comment-age">20h</div>
+                                    </div>
+                                    <div class="comment-answer-card flex">
+                                        <img src="img/catherine-baker.webp" width="40" height="40" alt="Catherine Baker"
+                                            class="user-img" loading="lazy" />
+                                        <div class="comment-card-content">
+                                            <h5 class="comment-user-name">Catherine Baker</h5>
+                                            <p class="comment-text">
+                                                Grazie per aver condiviso i tuoi risultati. Sembra che
+                                                dovrei provarlo!
+                                            </p>
+                                            <div class="operations flex center">
+                                                <button class="operations-btn">Like</button>
+                                                <span>&#183;</span>
+                                                <button class="operations-btn">Reply</button>
+                                                <span>&#183;</span>
+                                                <div class="comment-age">6h</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-card flex">
+                                <img src="img/nancy-fisher.webp" width="60" height="60" alt="Nancy Fisher"
+                                    class="user-img" loading="lazy" />
+                                <div class="comment-card-content">
+                                    <h5 class="comment-user-name">Nancy Fisher</h5>
+                                    <p class="comment-text">
+                                        La piattaforma è semplice e facile da usare, anche per me!
+                                        Non avevo mai fatto trading prima d'ora, ma guadagno oltre
+                                        3.000 dollari a settimana e mi godo la vita come mai prima
+                                        d'ora!
+                                    </p>
+                                    <div class="operations flex center">
+                                        <button class="operations-btn">Like</button>
+                                        <span>&#183;</span>
+                                        <button class="operations-btn">Reply</button>
+                                        <span>&#183;</span>
+                                        <div class="comment-age">20h</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-card flex">
+                                <img src="img/kevin-perry.webp" width="60" height="60" alt="Kevin Perry"
+                                    class="user-img" loading="lazy" />
+                                <div class="comment-card-content">
+                                    <h5 class="comment-user-name">Kevin Perry</h5>
+                                    <p class="comment-text">
+                                        Fare soldi online non è mai stato così facile! Lo
+                                        consiglio a tutti!
+                                    </p>
+                                    <div class="operations flex center">
+                                        <button class="operations-btn">Like</button>
+                                        <span>&#183;</span>
+                                        <button class="operations-btn">Reply</button>
+                                        <span>&#183;</span>
+                                        <div class="comment-age">20h</div>
+                                    </div>
+                                    <div class="comment-answer-card flex">
+                                        <img src="img/margaret-walker.webp" width="40" height="40" alt="Margaret Walker"
+                                            class="user-img" loading="lazy" />
+                                        <div class="comment-card-content">
+                                            <h5 class="comment-user-name">Margaret Walker</h5>
+                                            <p class="comment-text">Wow, sembra fantastico.</p>
+                                            <div class="operations flex center">
+                                                <button class="operations-btn">Like</button>
+                                                <span>&#183;</span>
+                                                <button class="operations-btn">Reply</button>
+                                                <span>&#183;</span>
+                                                <div class="comment-age">6h</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-answer-card flex">
+                                        <img src="img/amalia-morgan.webp" width="40" height="40" alt="Amalia Morgan"
+                                            class="user-img" loading="lazy" />
+                                        <div class="comment-card-content">
+                                            <h5 class="comment-user-name">Amalia Morgan</h5>
+                                            <p class="comment-text">
+                                                Sono assolutamente d'accordo.
+                                            </p>
+                                            <div class="operations flex center">
+                                                <button class="operations-btn">Like</button>
+                                                <span>&#183;</span>
+                                                <button class="operations-btn">Reply</button>
+                                                <span>&#183;</span>
+                                                <div class="comment-age">6h</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-answer-card flex">
+                                        <img src="img/alex-evans.webp" width="40" height="40" alt="Alex Evans"
+                                            class="user-img" loading="lazy" />
+                                        <div class="comment-card-content">
+                                            <h5 class="comment-user-name">Alex Evans</h5>
+                                            <p class="comment-text">
+                                                È vero, lo consiglio a tutti..
+                                            </p>
+                                            <div class="operations flex center">
+                                                <button class="operations-btn">Like</button>
+                                                <span>&#183;</span>
+                                                <button class="operations-btn">Reply</button>
+                                                <span>&#183;</span>
+                                                <div class="comment-age">6h</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-card flex">
+                                <img src="img/adam-johnson.webp" width="60" height="60" alt="Adam Johnson"
+                                    class="user-img" loading="lazy" />
+                                <div class="comment-card-content">
+                                    <h5 class="comment-user-name">Adam Johnson</h5>
+                                    <p class="comment-text">
+                                        Mia moglie mi ha parlato di Avex AI e mi ha cambiato la
+                                        vita. Da un mese a questa parte, guadagno oltre 2.000
+                                        dollari a settimana, lavorando meno di 30 minuti al giorno
+                                        e trascorrendo del tempo con la mia famiglia.
+                                    </p>
+                                    <div class="operations flex center">
+                                        <button class="operations-btn">Like</button>
+                                        <span>&#183;</span>
+                                        <button class="operations-btn">Reply</button>
+                                        <span>&#183;</span>
+                                        <div class="comment-age">23h</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-card flex">
+                                <img src="img/andrew-cooper.webp" width="60" height="60" alt="Andrew Cooper"
+                                    class="user-img" loading="lazy" />
+                                <div class="comment-card-content">
+                                    <h5 class="comment-user-name">Andrew Cooper</h5>
+                                    <p class="comment-text">
+                                        Sono impressionato dalla piattaforma! Hanno un'interfaccia
+                                        facile da usare e, grazie ai loro sistemi di sicurezza
+                                        affidabili, mi sento sicuro di lavorare con Avex AI.
+                                    </p>
+                                    <div class="operations flex center">
+                                        <button class="operations-btn">Like</button>
+                                        <span>&#183;</span>
+                                        <button class="operations-btn">Reply</button>
+                                        <span>&#183;</span>
+                                        <div class="comment-age">23h</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="load-more-btn">Carica altri 10 commenti</button>
+                            <div class="comments-footer flex center">
+                                <img src="img/fb-icon.webp" style="margin-right: 5px" width="14" height="12"
+                                    alt="Facebook" loading="lazy" />
+                                <span> Facebook Comments Plugin </span>
+                            </div>
+                        </div>
+                        <div class="text-part live-comments reveal delay-02">
+                            <div class="live-comments-wrapper">
+                                <div class="comment-card flex">
+                                    <img src="img/andrew-warren.webp" width="48" height="48" alt="Andrew Warren"
+                                        class="user-img" loading="lazy" />
+                                    <div class="comment-card-content">
+                                        <h5 class="comment-user-name">Andrew Warren</h5>
+                                        <p class="comment-text">
+                                            Mi sono registrato sulla piattaforma con i miei migliori
+                                            amici e in sole 3 settimane abbiamo fatto il botto. Il
+                                            robot di trading fa tutto il lavoro per voi. Insieme,
+                                            abbiamo guadagnato oltre 4.000 dollari a settimana!
+                                        </p>
+                                        <div class="operations flex center">
+                                            <button class="operations-btn">Like</button>
+                                            <span>&#183;</span>
+                                            <button class="operations-btn">Reply</button>
+                                            <span>&#183;</span>
+                                            <div class="comment-age">20h</div>
+                                        </div>
+                                        <div class="comment-answer-card flex">
+                                            <img src="img/ronald-richards.webp" width="40" height="40"
+                                                alt="Ronald Richards" class="user-img" loading="lazy" />
+                                            <div class="comment-card-content">
+                                                <h5 class="comment-user-name">Ronald Richards</h5>
+                                                <p class="comment-text">
+                                                    Anch'io non vedo l'ora di iniziare a guadagnare.
+                                                </p>
+                                                <div class="operations flex center">
+                                                    <button class="operations-btn">Like</button>
+                                                    <span>&#183;</span>
+                                                    <button class="operations-btn">Reply</button>
+                                                    <span>&#183;</span>
+                                                    <div class="comment-age">6h</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-answer-card flex">
+                                            <img src="img/amy-miller.webp" width="40" height="40" alt="Amy Miller"
+                                                class="user-img" loading="lazy" />
+                                            <div class="comment-card-content">
+                                                <h5 class="comment-user-name">Amy Miller</h5>
+                                                <p class="comment-text">Congratulazioni!</p>
+                                                <div class="operations flex center">
+                                                    <button class="operations-btn">Like</button>
+                                                    <span>&#183;</span>
+                                                    <button class="operations-btn">Reply</button>
+                                                    <span>&#183;</span>
+                                                    <div class="comment-age">6h</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-card flex">
+                                    <img src="img/richard-nelson.webp" width="48" height="48" alt="Richard Nelson"
+                                        class="user-img" loading="lazy" />
+                                    <div class="comment-card-content">
+                                        <h5 class="comment-user-name">Richard Nelson</h5>
+                                        <p class="comment-text">
+                                            Ho guadagnato oltre 12.303 dollari in un solo mese di
+                                            utilizzo di Avex AI. Dato che posso lavorare sulla
+                                            piattaforma da qualsiasi parte del mondo, ho viaggiato
+                                            in Russia e ho fatto trading 24/7 con il pilota
+                                            automatico!
+                                        </p>
+                                        <div class="operations flex center">
+                                            <button class="operations-btn">Like</button>
+                                            <span>&#183;</span>
+                                            <button class="operations-btn">Reply</button>
+                                            <span>&#183;</span>
+                                            <div class="comment-age">20h</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-card flex">
+                                    <img src="img/harry-norman.webp" width="48" height="48" alt="Harry Norman"
+                                        class="user-img" loading="lazy" />
+                                    <div class="comment-card-content">
+                                        <h5 class="comment-user-name">Harry Norman</h5>
+                                        <p class="comment-text">
+                                            Avex AI è una piattaforma eccellente! Offre un'ampia
+                                            gamma di risorse, un'interfaccia facile da usare e
+                                            un'ottima assistenza clienti. La consiglio vivamente!
+                                        </p>
+                                        <div class="operations flex center">
+                                            <button class="operations-btn">Like</button>
+                                            <span>&#183;</span>
+                                            <button class="operations-btn">Reply</button>
+                                            <span>&#183;</span>
+                                            <div class="comment-age">20h</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-card flex">
+                                    <img src="img/andrew-johnson.webp" width="48" height="48" alt="Andrew Johnson"
+                                        class="user-img" loading="lazy" />
+                                    <div class="comment-card-content">
+                                        <h5 class="comment-user-name">Andrew Johnson</h5>
+                                        <p class="comment-text">
+                                            Come funziona? Come si effettuano gli scambi?
+                                        </p>
+                                        <div class="operations flex center">
+                                            <button class="operations-btn">Like</button>
+                                            <span>&#183;</span>
+                                            <button class="operations-btn">Reply</button>
+                                            <span>&#183;</span>
+                                            <div class="comment-age">20h</div>
+                                        </div>
+                                        <div class="comment-answer-card flex">
+                                            <img src="img/olivia-smith.webp" width="40" height="40" alt="Olivia Smith"
+                                                class="user-img" loading="lazy" />
+                                            <div class="comment-card-content">
+                                                <h5 class="comment-user-name">Olivia Smith</h5>
+                                                <p class="comment-text">
+                                                    Andrew, è un pilota automatico. È sufficiente
+                                                    attivare la funzione di trading automatico.
+                                                    Dopodiché, ci si può rilassare e osservare il flusso
+                                                    di denaro sul proprio conto. È incredibile, ma è
+                                                    così facile
+                                                </p>
+                                                <div class="operations flex center">
+                                                    <button class="operations-btn">Like</button>
+                                                    <span>&#183;</span>
+                                                    <button class="operations-btn">Reply</button>
+                                                    <span>&#183;</span>
+                                                    <div class="comment-age">6h</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-answer-card flex">
+                                            <img src="img/oscar-miles.webp" width="40" height="40" alt="Oscar Miles"
+                                                class="user-img" loading="lazy" />
+                                            <div class="comment-card-content">
+                                                <h5 class="comment-user-name">Oscar Miles</h5>
+                                                <p class="comment-text">Funziona senza sforzo!</p>
+                                                <div class="operations flex center">
+                                                    <button class="operations-btn">Like</button>
+                                                    <span>&#183;</span>
+                                                    <button class="operations-btn">Reply</button>
+                                                    <span>&#183;</span>
+                                                    <div class="comment-age">6h</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-input-panel">
+                                <label for="comment">
+                                    Lasciate il vostro commento qui:
+                                </label>
+                                <div class="comment-input-wrapper flex column end">
+                                    <textarea id="comment" name="comment" class="comment-input" cols="1" rows="4"
+                                        placeholder="Scrivi la tua recensione..." autocorrect="on"
+                                        resizable="off"></textarea>
+                                    <button class="comment-submit-btn">Inviare</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bottom-section">
+                <div class="container flex center just-between">
+                    <div class="text-part text-white">
+                        <h2 class="reveal">
+                            La libertà finanziaria nelle vostre mani - Avex AI!
+                        </h2>
+                        <p class="reveal delay-01">
+                            Padroneggiate il mondo del trading con Avex AI, una piattaforma
+                            avanzata per gli investimenti intelligenti. L'interfaccia facile
+                            da usare e l'elevata redditività fanno di Avex AI la scelta
+                            perfetta per trader e investitori. Affidatevi a questa
+                            piattaforma e godetevi le operazioni di successo. Registratevi
+                            oggi stesso e cambiate la vostra vita in meglio!
+                        </p>
+                        <img src="img/logo-white.webp" width="280" height="70" alt="Logo"
+                            onclick="scrollToElem('.header')" class="bottom-section-logo reveal delay-02"
+                            loading="lazy" />
+                    </div>
+                    <div class="hero-form-part reveal delay-02">
+                        <div class="form-wrapper">
+                            <h2>Registrazione gratuita</h2>
+                            <div style="margin-left: auto;margin-right: auto;width: 100%;max-width: 360px;">
+                                <form method="post" novalidate>
+                                    <div id="formData">
+                                        <input type="text" name="firstName" class="form__input" placeholder="Nome">
+                                        <input type="text" name="lastName" class="form__input" placeholder="Cognome">
+                                        <input type="email" name="email" class="form__input" placeholder="Email">
+                                        <input type="tel" id="phone" name="phone" class="form__input phone">
+                                        <button
+                                            class="form__btn button w-button gtd-form-submit btn btn_send w-56 font-sans font-bold transition bg-btn-primary hover:bg-btn-hover text-white rounded py-3"
+                                            type="submit" name="submit">Registrati ora</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container flex just-between text-white">
+                <div class="copyright">©<span class="year"></span> AVEX AI</div>
+                <div class="policies flex center">
+                    <a href="privacy.html" target="_blank" data-name="policy" class="alterlink">Politica sulla
+                        privacy</a>
+                    <a href="privacy.html" target="_blank" data-name="terms" class="alterlink">Termini d'uso</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+
+
+            <div class="whitelisting__heading">
+                <div id="form-element-2" class="theme-undefined feature-tooltips form-div">
+
+                    <div class="container flex center just-between">
+                        <div class="hero-form-part reveal delay-02" style="width: 100%; transition: none; margin: 0;">
+                            <div class="form-wrapper">
+                                <h2>Registrazione gratuita</h2>
+                                <div style="margin-left: auto;margin-right: auto;width: 100%;max-width: 360px;">
+                                    <form method="post" novalidate>
+                                        <div id="formData">
+                                            <input type="text" name="firstName" class="form__input" placeholder="Nome">
+                                            <input type="text" name="lastName" class="form__input"
+                                                placeholder="Cognome">
+                                            <input type="email" name="email" class="form__input" placeholder="Email">
+                                            <input type="tel" id="phone" name="phone" class="form__input phone">
+                                            <button
+                                                class="form__btn button w-button gtd-form-submit btn btn_send w-56 font-sans font-bold transition bg-btn-primary hover:bg-btn-hover text-white rounded py-3"
+                                                type="submit" name="submit">Registrati ora</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="close">&times;</span>
+        </div>
+
+    </div>
+    </div>
+
+    <script type="text/javascript" src="assets/landing/js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(".poster_block").click(function () {
+            $('.poster_block').css('display', 'none');
+            $('.embed-container').append('<iframe src="https://player.vimeo.com/video/886386232?autoplay=1&loop=1&autopause=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>');
+            $('.embed-container').css('display', 'block');
+        });
+    </script>
+
+
+
+
+    <!-- intl-tel-input -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/jsAdapter.js"></script>
+    <script src="js/pixelInitPageView.js"></script>
+    <script src="js/validate.min.js"></script>
+    <script src="js/modal-form-and-timer.js"></script>
+</body>
+</body>
+
+</html>

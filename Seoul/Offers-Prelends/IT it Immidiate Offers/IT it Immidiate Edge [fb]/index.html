@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 54 - 125 [o32;l4] immediate-edge-it -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Immediate Edge - The Official Website</title>
+    <link rel="icon" type="image/x-icon" href="img/ie-logo-nav-mobile.webp" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+<!--[HEADER]--></head>
+
+<body ng-controller="SubscribeController as sc">
+    <!-- preloader -->
+    <div id="loader" style="display: none">
+        <img src="images/preloader.svg" alt="Preloader" />
+      </div>
+      <!-- preloader end -->
+
+      <div style="width: 100%; background: red; text-align: center; position: fixed; z-index: 100">
+        <div id="timer">
+          <div class="timer-title">Affrettarsi!</div>
+          <div class="counter-wrapper">
+            <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds"
+              >00</span
+            >
+          </div>
+        </div>
+      </div>
+    <header>
+        <div class="top-header">
+            <div class="row">
+                <div class="col-xs-4 padding-0">
+                    <div class="logo">
+                        <img class="logo-nav-desktop" src="img/ie-logo-nav-desktop-1step.webp" alt="" />
+                        <img class="logo-nav-mobile" src="img/ie-logo-nav-mobile.webp" alt="" />
+                    </div>
+                </div>
+                <div class="col-xs-8 padding-0">
+                    <div class="spots-mobile">
+                        <p>Scadenza per le candidature! 43 posti disponibili</p>
+                    </div>
+                    <div class="spots-desktop">
+                        <span class="flag gtd-geo-country-flag-icon"></span>
+                        <p class="hurry">
+                            <img src="img/it.webp" class="flag gtd-geo-country-flag-icon" />
+                            <strong>Date prisa ! </strong>43 prostih mest
+                            <span class="country-name-custom"></span>
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="section-1" id="top">
+        <div class="container">
+            <h1>
+                Guadagnare fino a 2.200 euro al giorno con il software più
+                intelligente del mondo
+            </h1>
+            <div class="m-50">
+                <div class="row" id="form">
+                    <div class="col-md-8">
+                        <div class="videoWrapper">
+                            <div class="embed-responsive">
+                                <img src="img/poster.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="primary-form">
+                            <div class="form-logo">
+                                <img src="img/ice-logo.svg" alt="" />
+                            </div>
+                            <div class="form-block">
+                                <div class="form-signup-wrapper">
+                                    <div class="form-optin-holder">
+                                        <div class="intgrtn-sp-form-step-1">
+                                            <div data-intgrtn-form-optin="">
+                                                <form name="intgrtnFormOptin" method="post" class="intgrtn-form-optin" novalidate>
+                                                    <div class="intgrtn-input-holder intgrtn-input-holder-first-name intgrtn-invalid">
+                                                        <input class="intgrtn-input intgrtn-invalid" type="text" name="firstName" placeholder="Nome" />
+                                                    </div>
+                                                    <div class="intgrtn-input-holder intgrtn-input-holder-last-name">
+                                                        <input class="intgrtn-input" type="text" name="lastName" placeholder="Cognome" />
+                                                    </div>
+                                                    <div class="intgrtn-input-holder intgrtn-input-holder-email">
+                                                        <input class="intgrtn-input" type="email" name="email" placeholder="Email" />
+                                                    </div>
+                                                    <div class="intgrtn-input-holder intgrtn-input-holder-last-name">
+                                                        <input class="intgrtn-input phone" type="tel" name="phone" />
+                                                    </div>
+                                                    <div class="intgrtn-btn-submit-holder">
+                                                        <button class="intgrtn-btn-submit" type="submit" name="submit">
+                                                            Iniziare a guadagnare
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="intgrtn-sp-form-step-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="secured">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <img src="img/symantec.webp" alt="" />
+                    </div>
+                    <div class="col-xs-2">
+                        <img src="img/mcafee.webp" alt="" />
+                    </div>
+                    <div class="col-xs-2">
+                        <img src="img/verisign.webp" alt="" />
+                    </div>
+                    <div class="col-xs-2">
+                        <img src="img/ssl.webp" alt="" />
+                    </div>
+                    <div class="col-xs-2">
+                        <img src="img/geotrust.webp" alt="" />
+                    </div>
+                    <div class="col-xs-2">
+                        <img src="img/secure.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <p class="subtitle">Unisciti a noi e guadagna €2200 al giorno</p>
+        </div>
+    </div>
+    <div class="assets">
+        <div class="container">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="win">
+                        <div class="person-icon">
+                            <img src="img/59.webp" alt="" />
+                        </div>
+                        <p>
+                            <span class="name"> Ricardo V: </span>
+                            <span class="money"><span data-visitor-currency-symbol="">€</span>596.41</span>
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="win">
+                        <div class="person-icon">
+                            <img src="img/50.webp" alt="" />
+                        </div>
+                        <p>
+                            <span class="name"> Jose C: </span>
+                            <span class="money"><span data-visitor-currency-symbol="">€</span>280.53</span>
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="win">
+                        <div class="person-icon">
+                            <img src="img/43.webp" alt="" />
+                        </div>
+                        <p>
+                            <span class="name"> Esteban H: </span>
+                            <span class="money"><span data-visitor-currency-symbol="">€</span>262.74</span>
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="win">
+                        <div class="person-icon">
+                            <img src="img/21.webp" alt="" />
+                        </div>
+                        <p>
+                            <span class="name"> Alvaro S: </span>
+                            <span class="money"><span data-visitor-currency-symbol="">€</span>633.47</span>
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="win">
+                        <div class="person-icon">
+                            <img src="img/44.webp" alt="" />
+                        </div>
+                        <p>
+                            <span class="name"> Isabel N: </span>
+                            <span class="money"><span data-visitor-currency-symbol="">€</span>695.16</span>
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="win">
+                        <div class="person-icon">
+                            <img src="img/87.webp" alt="" />
+                        </div>
+                        <p>
+                            <span class="name"> Sofia H: </span>
+                            <span class="money"><span data-visitor-currency-symbol="">€</span>679.71</span>
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="win">
+                        <div class="person-icon">
+                            <img src="img/81.webp" alt="" />
+                        </div>
+                        <p>
+                            <span class="name"> Adrian R: </span>
+                            <span class="money"><span data-visitor-currency-symbol="">€</span>726.78</span>
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="win">
+                        <div class="person-icon">
+                            <img src="img/14.webp" alt="" />
+                        </div>
+                        <p>
+                            <span class="name"> Luis G: </span>
+                            <span class="money"><span data-visitor-currency-symbol="">€</span>412.58</span>
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="win">
+                        <div class="person-icon">
+                            <img src="img/88.webp" alt="" />
+                        </div>
+                        <p>
+                            <span class="name"> Gabriel N: </span>
+                            <span class="money"><span data-visitor-currency-symbol="">€</span>882.51</span>
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 p">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="img/img-pic-3.webp" alt="" class="cent-img" />
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="cent">
+                                <h3>Bill Gates</h3>
+                                <h4>Criptoinvestitore</h4>
+                                <p>
+                                    "Le criptovalute sono il modo più veloce per fare soldi
+                                    istantanei nel mercato di oggi, se si sa dove guardare.
+                                    Profitti massicci e crescita di centinaia o addirittura
+                                    migliaia di punti percentuali sono disponibili per coloro
+                                    che hanno gli strumenti per iniziare!"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 p">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="img/winkle.webp" alt="" class="cent-img" />
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="cent">
+                                <h3>Gemelli Winklevoss</h3>
+                                <h4>Miliardari del Bitcoin</h4>
+                                <p>
+                                    "Compra a buon mercato, vendi a caro prezzo" è semplice. Le
+                                    criptovalute sono il futuro della rapida crescita e dei
+                                    potenziali profitti. Non è necessario essere un esperto di
+                                    Wall Street per ottenere il vantaggio competitivo necessario
+                                    a trarre profitto da questo mercato da 500 miliardi di
+                                    dollari".
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-5">
+        <div class="container">
+            <h2>
+                I principianti ottengono un profitto immediato, ma con il nostro aiuto
+                potrete guadagnare €2200 al giorno o €66.000 al mese.
+            </h2>
+        </div>
+    </div>
+    <div class="section-6 index2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <div class="user-feedback">
+                        <div class="image-wrapper">
+                            <img src="img/4.webp" alt="" />
+                        </div>
+                        <span class="name">Sam Holt</span>
+                        <p>
+                            Voglio solo ringraziarvi perché Immediate Edge ha davvero
+                            cambiato la mia vita. In una sola settimana sono riuscito a
+                            lasciare il mio lavoro!
+                        </p>
+                        <div class="country">
+                            <img src="img/it.webp" class="flag gtd-geo-country-flag-icon" />
+                            <span class="green"><span data-visitor-currency-symbol="">€</span> 5017</span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="user-feedback">
+                        <div class="image-wrapper">
+                            <img src="img/43.webp" alt="" />
+                        </div>
+                        <span class="name">Molly Anderson</span>
+                        <p>
+                            Ora ho 231.952 euro nel mio conto di trading. Non ci si può
+                            credere!
+                        </p>
+                        <div class="country">
+                            <img src="img/it.webp" class="flag gtd-geo-country-flag-icon" />
+                            <span class="green"><span data-visitor-currency-symbol="">€</span> 266592</span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="user-feedback">
+                        <div class="image-wrapper">
+                            <img src="img/21.webp" alt="" />
+                        </div>
+                        <span class="name">Owen Jackson</span>
+                        <p>
+                            Sono senza parole. Non ho mai visto numeri del genere prima
+                            d'ora. Grazie, Imeidate Edge
+                        </p>
+                        <div class="country">
+                            <img src="img/it.webp" class="flag gtd-geo-country-flag-icon" />
+                            <span class="green"><span data-visitor-currency-symbol="">€</span> 45474</span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="user-feedback">
+                        <div class="image-wrapper">
+                            <img src="img/91.webp" alt="" />
+                        </div>
+                        <span class="name">Mila Walker</span>
+                        <p>
+                            Ragazzi, questa cosa funziona davvero! È davvero fantastico. Lo
+                            uso solo da un paio di settimane e ho già guadagnato più soldi
+                            con questo strumento che con il mio lavoro negli ultimi mesi!
+                        </p>
+                        <div class="country">
+                            <img src="img/it.webp" class="flag gtd-geo-country-flag-icon" />
+                            <span class="green"><span data-visitor-currency-symbol="">€</span> 11365</span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="second-form">
+                        <div class="form-logo">
+                            <img src="img/ice-logo.svg" alt="" />
+                        </div>
+                        <div class="Immediate-Earnings">Guadagni immediati</div>
+                        <div class="form-block">
+                            <div class="form-signup-wrapper">
+                                <div class="form-optin-holder">
+                                    <div class="intgrtn-sp-form-step-1">
+                                        <div data-intgrtn-form-optin="">
+                                            <form name="intgrtnFormOptin" method="post" class="intgrtn-form-optin" novalidate>
+                                                <div class="intgrtn-input-holder intgrtn-input-holder-first-name intgrtn-invalid">
+                                                    <input class="intgrtn-input intgrtn-invalid" type="text" name="firstName" placeholder="Nome" />
+                                                </div>
+                                                <div class="intgrtn-input-holder intgrtn-input-holder-last-name">
+                                                    <input class="intgrtn-input" type="text" name="lastName" placeholder="Cognome" />
+                                                </div>
+                                                <div class="intgrtn-input-holder intgrtn-input-holder-email">
+                                                    <input class="intgrtn-input" type="email" name="email" placeholder="Email" />
+                                                </div>
+                                                <div class="intgrtn-input-holder intgrtn-input-holder-last-name">
+                                                    <input class="intgrtn-input phone" type="tel" name="phone" />
+                                                </div>
+                                                <div class="intgrtn-btn-submit-holder">
+                                                    <button class="intgrtn-btn-submit" type="submit" name="submit">
+                                                        Iniziare a guadagnare
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="intgrtn-sp-form-step-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-9">
+        <div class="container">
+            <div class="fb-logo">
+                <img src="img/facebook.webp" alt="" />
+            </div>
+            <div class="date">
+                <span class="js-today-date"></span>,
+                <span class="js-today-time"></span>
+            </div>
+            <div class="comment">
+                <div class="row">
+                    <div class="col-md-2 col-sm-3">
+                        <div class="user-img">
+                            <img class="img-responsive" src="img/44.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-sm-9">
+                        <div class="name"><span>Tahlia Spencer</span></div>
+                        <div class="star">
+                            <span class="icon-icon icon-four-stars" style="margin: 10px 0"></span>
+                        </div>
+                        <div class="text">
+                            Non ho mai fatto trading prima d'ora, ma Immediate Edge lo rende
+                            così facile. Non avrei mai pensato di dirlo, perché il mondo
+                            delle criptovalute può essere così complicato... ma è così
+                            facile guadagnare somme di denaro inimmaginabili!
+                        </div>
+                        <div class="like">
+                            <a href="#form"><i class="far fa-thumbs-up"></i>Like</a>
+                            <a href="#form"><i class="far fa-comment"></i>Comment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="row">
+                    <div class="col-md-2 col-sm-3">
+                        <div class="user-img">
+                            <img class="img-responsive" src="img/87.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-sm-9">
+                        <div class="name"><span>Annabel Foster</span></div>
+                        <div class="star">
+                            <span class="icon-icon icon-four-stars" style="margin: 10px 0"></span>
+                        </div>
+                        <div class="text">
+                            Questo è esattamente ciò che stavo aspettando! Il vostro
+                            supporto educativo e il vostro sistema altamente efficace mi
+                            hanno agganciato per tutta la vita! Grazie mille
+                        </div>
+                        <div class="like">
+                            <a href="#form"><i class="far fa-thumbs-up"></i>Like</a>
+                            <a href="#form"><i class="far fa-comment"></i>Comment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="row">
+                    <div class="col-md-2 col-sm-3">
+                        <div class="user-img">
+                            <img class="img-responsive" src="img/81.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-sm-9">
+                        <div class="name"><span>William Spencer</span></div>
+                        <div class="star">
+                            <span class="icon-icon icon-four-stars" style="margin: 10px 0"></span>
+                        </div>
+                        <div class="text">
+                            Nel mio primo giorno, ho guadagnato oltre 900 dollari su quello
+                            che posso dire... Ho finalmente trovato qualcosa che dà grandi
+                            risultati!
+                        </div>
+                        <div class="like">
+                            <a href="#form"><i class="far fa-thumbs-up"></i>Like</a>
+                            <a href="#form"><i class="far fa-comment"></i>Comment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="row">
+                    <div class="col-md-2 col-sm-3">
+                        <div class="user-img">
+                            <img class="img-responsive" src="img/14.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-sm-9">
+                        <div class="name"><span>Carter Thomas</span></div>
+                        <div class="star">
+                            <span class="icon-icon icon-four-stars" style="margin: 10px 0"></span>
+                        </div>
+                        <div class="text">
+                            I have had money in my account since day one, I still can't
+                            believe it... I love your system and great customer service!
+                        </div>
+                        <div class="like">
+                            <a href="#form"><i class="far fa-thumbs-up"></i>Like</a>
+                            <a href="#form"><i class="far fa-comment"></i>Comment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="earningsPopup" class="just-made">
+        <div class="pull-left">
+            <p class="name">Jay M Made</p>
+            <span class="green">$ 1093.20</span>
+        </div>
+        <div class="pull-right">
+            <div class="avatar">
+                <span class="flag gtd-geo-country-flag-icon flag-2"></span>
+                <img src="img/user.webp" alt="" />
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <img src="img/ie-logo-nav-desktop-1step.webp" class="footer-logo" alt="logo" />
+            <div data-intgrtn-agreements="" data-intgrtn-type="4" style="font-size: 12px; padding-top: 20px"></div>
+        </div>
+    </footer>
+    <input type="hidden" name="countryCode" value="it" />
+    <script type="text/javascript" src="assets/landing/js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script>
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = "0" + dd;
+    }
+
+    if (mm < 10) {
+        mm = "0" + mm;
+    }
+
+    $("#forbes-date").html(dd + "." + mm + "." + yyyy);
+    $(".js-today-date").html(dd + "." + mm + "." + yyyy);
+    document.addEventListener("visitorLocated", function(e) {});
+    $('a[href^="#"]').click(function(e) {
+        e.preventDefault();
+        var aid = $(this).attr("href");
+        $('html,body').animate({ scrollTop: $(aid).offset().top }, 'slow');
+    });
+    $(".owl-carousel").owlCarousel({
+        loop: !0,
+        margin: 0,
+        autoplay: !0,
+        slideTransition: "linear",
+        autoplaySpeed: 7e3,
+        autoplayHoverPause: !1,
+        dots: !1,
+        nav: !1,
+        responsiveClass: !0,
+        responsive: { 0: { items: 1 }, 600: { items: 1 }, 1e3: { items: 2 }, 1410: { items: 3 } }
+    });
+    </script>
+
+    <script type="text/javascript" src="assets/landing/js/jquery.min.js"></script>
+    <script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            $('.footer-year').append(new Date().getFullYear());
+        }, 2000);
+    });
+    </script>
+
+        <!-- Модальное окно -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="second-form">
+                <div class="form-logo" style="text-align: center;">
+                    <img src="img/ice-logo.svg" alt="" />
+                </div>
+                <div class="Immediate-Earnings" style="text-align: center; font-size: 18px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #fff;
+                margin-bottom: 20px;">Guadagni immediati</div>
+                <div class="form-block">
+                    <div class="form-signup-wrapper">
+                        <div class="form-optin-holder">
+                            <div class="intgrtn-sp-form-step-1">
+                                <div data-intgrtn-form-optin="">
+                                    <form name="intgrtnFormOptin" method="post" class="intgrtn-form-optin" novalidate>
+                                        <div class="intgrtn-input-holder intgrtn-input-holder-first-name intgrtn-invalid">
+                                            <input class="intgrtn-input intgrtn-invalid" type="text" name="firstName" placeholder="Nome" />
+                                        </div>
+                                        <div class="intgrtn-input-holder intgrtn-input-holder-last-name">
+                                            <input class="intgrtn-input" type="text" name="lastName" placeholder="Cognome" />
+                                        </div>
+                                        <div class="intgrtn-input-holder intgrtn-input-holder-email">
+                                            <input class="intgrtn-input" type="email" name="email" placeholder="Email" />
+                                        </div>
+                                        <div class="intgrtn-input-holder intgrtn-input-holder-last-name">
+                                            <input class="intgrtn-input phone" type="tel" name="phone" />
+                                        </div>
+                                        <div class="intgrtn-btn-submit-holder">
+                                            <button class="intgrtn-btn-submit" type="submit" name="submit">
+                                                Iniziare a guadagnare
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="intgrtn-sp-form-step-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            </div>
+          </div>
+    
+    <!-- intl-tel-input -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/jsAdapter.js"></script>
+    <script src="js/pixelInitPageView.js"></script>
+    <script src="js/validate.min.js"></script>
+    <script src="js/modal-form-and-timer.js"></script>
+</body>
+
+</html>

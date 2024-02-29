@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- 23 - 55  [o60;l1] enel -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enel Group</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="assets/landing/css/intlTelInput.css" rel="stylesheet" type="text/css">
+    <link href="assets/landing/css/landing.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+    <!--[HEADER]-->
+</head>
+
+<body>
+    <!-- preloader -->
+    <div id="loader" style="display: none">
+        <img src="images/preloader.svg" alt="Preloader" />
+    </div>
+    <!-- preloader end -->
+
+    <div style="width: 100%; background: red; text-align: center; position: fixed; z-index: 100">
+        <div id="timer">
+            <div class="timer-title">Affrettarsi!</div>
+            <div class="counter-wrapper">
+                <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span>
+            </div>
+        </div>
+    </div>
+    <main class="wrap">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+            <div class="container d-flex">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.svg" width="110" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-scroll="#about" href="#">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-scroll="#prod" href="#">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-scroll="#comm" href="#">Commitments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-scroll="#form" href="#">Join us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="intro py-5">
+            <div class="container">
+                <div class="intro__inner my-0 my-md-5">
+                    <h2 class="title shading">
+                        <span>Open Power</span>
+                        <br> for a brighter future
+                    </h2>
+                    <p class="copy">Stable income for our investors</p>
+                </div>
+                <div class="row pt-4 pt-md-5">
+                    <div class="col-12 col-md-7">
+                        <div class="poster_block">
+                            <img class="poster" src="img/poster.webp" alt="">
+                            <img class="play-btn" src="assets/landing/img/play.webp" alt="">
+                        </div>
+                        <div class="embed-container"></div>
+                    </div>
+                    <div class="col-12 col-md-4 offset-md-1 mt-5 mt-md-0">
+                        <form id="form" class="form-container shadow" method="post">
+                            <div class="form__group form_group--name">
+                                <input type="text" name="firstName" placeholder="Nome">
+                            </div>
+                            <div class="form__group form_group--name">
+                                <input type="text" placeholder="Nome e cognome" name="lastName">
+                            </div>
+                            <div class="form__group form_group--email">
+                                <input type="email" name="email" placeholder="E-mailem">
+                            </div>
+                            <div class="form__group form_input--group">
+                                <input type="tel" class="phone" name="phone">
+                            </div>
+                            <div class="form_group--button">
+                                <button class="send-form btn btn-primary" type="submit" name="submit">
+                                    <span class="button--inner">connettersi</span>
+                                </button>
+                            </div>
+                            <p class="point text-center pt-3">
+                                lasciate una richiesta e i nostri esperti saranno lieti di rispondere a tutte le vostre
+                                domande
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="about" class="info mt-md-5 py-5">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-12 col-md-3 col-lg-2 mb-5">
+                        <div class="counter">
+                            <h4>Presence 21</h4>
+                            <p>
+                                <span class="title">Presenza</span>
+                                <span class="number">21</span>
+                                <span class="description">Paesi in cui siamo presenti</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2 offset-lg-1 mb-5">
+                        <div class="counter">
+                            <h4>Development 6</h4>
+                            <p>
+                                <span class="title">Sviluppo</span>
+                                <span class="number">6</span>
+                                <span class="description">Paesi in cui stiamo sviluppando attività</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2 offset-lg-1 mb-5">
+                        <div class="counter">
+                            <h4>GW total 50,8</h4>
+                            <p>
+                                <span class="title">GW totale</span>
+                                <span class="number">50,8</span>
+                                <span class="description">Capacità rinnovabile installata</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2 offset-lg-1">
+                        <div class="counter">
+                            <h4>Projects &gt;1200</h4>
+                            <p>
+                                <span class="title">Progetti</span>
+                                <span class="number">1200</span>
+                                <span class="description">Operativi e in costruzione in tutto il mondo </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="prod" class="presidente mt-md-5 py-5">
+            <div class="container">
+                <h2 class="info__title title">Mario Draghi: Quando si investe in azioni <span class="enel">ENEL</span>,
+                    si
+                    ottiene un futuro sicuro!</h2>
+                <p class="copy">Presidente del Consiglio dei Ministri.</p>
+                <div class="row mt-4 d-flex flex-column-reverse flex-md-row">
+                    <div class="col-12 col-md-6 mt-4 mt-md-0">
+                        <h5 class="mb-3">Mario Draghi:</h5>
+                        <p class="text">
+                            - Penso che questo progetto sia un ottimo inizio per aumentare il benessere economico dei
+                            nostri
+                            cittadini! Poiché, purtroppo, i cittadini italiani non possono contare solo sulle pensioni,
+                            è
+                            necessario fornire loro fonti di reddito passivo. Abbiamo elaborato e approvato un accordo
+                            con
+                            il gigante ENEL!
+                        </p>
+                        <p class="text">
+                            Questo è stato ottenuto grazie alla collaborazione con il governo e alla partecipazione
+                            dell'azienda a un'iniziativa globale per aiutare le persone in tempi di crisi economica dopo
+                            Covid. ENEL vende alcune delle sue azioni a cittadini italiani, fornendo loro un reddito
+                            passivo. Penso che questo sia un passo molto importante per lo sviluppo del nostro paese!
+                            Sono
+                            orgoglioso di far parte di un tale evento! L'azienda stessa sta ottenendo una classe fiscale
+                            più
+                            favorevole e benefici dal governo. Invitiamo le aziende a collaborare!
+                        </p>
+                        <button type="button" data-scroll="#form"
+                            class="presidente__btn btn shadow-sm d-block mx-auto mx-md-0">più
+                            informazioni
+                        </button>
+                    </div>
+                    <div class="col-12 col-md-5 offset-md-1">
+                        <img src="img/Mario_Draghi.webp" class="shadow" alt="Mario Draghi">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="comm" class="stocks mt-md-5 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="tradingview-widget-container" style="width: 100%; height: 100%;">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    setTimeout(function () {
+                                        $('<iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?locale=it#%7B%22symbol%22%3A%22MIL%3AENEL%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A%22100%25%22%2C%22dateRange%22%3A%2212M%22%2C%22colorTheme%22%3A%22light%22%2C%22trendLineColor%22%3A%22rgba(41%2C%2098%2C%20255%2C%201)%22%2C%22underLineColor%22%3A%22rgba(41%2C%2098%2C%20255%2C%200.3)%22%2C%22underLineBottomColor%22%3A%22rgba(41%2C%2098%2C%20255%2C%200)%22%2C%22isTransparent%22%3Afalse%2C%22autosize%22%3Atrue%2C%22largeChartUrl%22%3A%22%22%2C%22utm_source%22%3A%22%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22mini-symbol-overview%22%2C%22page-uri%22%3A%22__NHTTP__%22%7D" style="box-sizing: border-box; display: block; height: 100%; width: 100%;"></iframe>').appendTo('.tradingview-widget-container');
+                                    }, 2000);
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-5 mt-md-0 col-md-5 offset-md-1">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="calc">
+                                    <div class="calc__title">
+                                        II Vostri Ritorni
+                                    </div>
+                                    <div class="calc__content">
+                                        <div class="calc__item">
+                                            <h4 class="calc__item--title">
+                                                investimenti
+                                            </h4>
+                                            <ul class="calc__list">
+                                                <li class="calc__item-num">250</li>
+                                                <li class="calc__item-num">400</li>
+                                                <li class="calc__item-num">600</li>
+                                                <li class="calc__item-num">1000</li>
+                                            </ul>
+                                        </div>
+                                        <div class="calc__item">
+                                            <h4 class="calc__item--title">
+                                                ROI
+                                            </h4>
+                                            <ul class="calc__list">
+                                                <li class="calc__item-num">0.18%</li>
+                                                <li class="calc__item-num">1.28%</li>
+                                                <li class="calc__item-num">5.50%</li>
+                                                <li class="calc__item-num">66.91%</li>
+                                            </ul>
+                                        </div>
+                                        <div class="calc__item">
+                                            <h4 class="calc__item--title">
+                                                profitto
+                                            </h4>
+                                            <ul class="calc__list">
+                                                <li class="calc__item-num-count" data-num="50">0</li>
+                                                <li class="calc__item-num-count" data-num="60">0</li>
+                                                <li class="calc__item-num-count" data-num="100">0</li>
+                                                <li class="calc__item-num-count" data-num="150">0</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="info__title title mt-5">
+                    Oggigiorno, chiunque può far <span class="enel">parte di un'azienda</span> gigantesca con una
+                    reputazione mondiale!
+                </h2>
+                <p class="stocks__text">
+                    Ora ognuno può essere responsabile della propria situazione finanziaria. Investendo solo 250€ in un
+                    acquisto di azioni, puoi guadagnare un reddito passivo di 5000€ ogni mese! Si può facilmente
+                    guadagnare
+                    abbastanza per comprare una macchina o un appartamento investendo di più! Ad essere onesti, anch'io
+                    ho
+                    comprato azioni ENEL!
+                </p>
+                <button type="button" data-scroll="#form"
+                    class="presidente__btn btn shadow-sm d-block mx-auto mx-md-0">più
+                    informazioni
+                </button>
+            </div>
+        </div>
+        <div class="form mt-md-5 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 mx-auto">
+                        <form class="form-container shadow bg-white" method="post" novalidate>
+                            <div class="form__group form_group--name">
+                                <input type="text" name="firstName" placeholder="Nome">
+                            </div>
+                            <div class="form__group form_group--name">
+                                <input type="text" placeholder="Nome e cognome" name="lastName">
+                            </div>
+                            <div class="form__group form_group--email">
+                                <input type="email" name="email" placeholder="E-mailem">
+                            </div>
+                            <div class="form__group form_input--group">
+                                <input type="tel" class="phone" name="phone">
+                            </div>
+                            <div class="form_group--button">
+                                <button class="send-form btn btn-primary" type="submit" name="submit">
+                                    <span class="button--inner">connettersi</span>
+                                </button>
+                            </div>
+                            <p class="point text-center pt-3">
+                                lasciate una richiesta e i nostri esperti saranno lieti di rispondere a tutte le vostre
+                                domande
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="gradient"></div>
+        </div>
+    </main>
+    <footer class="footer text-center py-4">
+        <div class="container">
+            <div class="copyright">© <span class="footer-year"></span> Enel Spa All Rights Reserved <span
+                    class="domain"></span></div>
+        </div>
+    </footer>
+
+
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="elementor-widget-container">
+                <div class="pl-6 block w-1/3 sm:p-0 sm:w-full">
+                    <div class="wrapper-form-header">
+                        <div class="intro__inner">
+                            <div class="intro__form" id="form">
+                                
+                        <form id="form" class="form-container shadow" method="post" style="padding: 41px 15px;">
+                            <div class="form__group form_group--name">
+                                <input type="text" placeholder="Nome" name="firstName">
+                            </div>
+                            <div class="form__group form_group--name">
+                                <input type="text" placeholder="Nome e cognome" name="lastName">
+                            </div>
+                            <div class="form__group form_group--email">
+                                <input type="email" name="email" placeholder="E-mailem">
+                            </div>
+                            <div class="form__group form_input--group">
+                                <input type="tel" class="phone" name="phone">
+                            </div>
+                            <div class="form_group--button">
+                                <button class="send-form btn btn-primary" type="submit" name="submit">
+                                    <span class="button--inner">connettersi</span>
+                                </button>
+                            </div>
+                            <p class="point text-center pt-3">
+                                lasciate una richiesta e i nostri esperti saranno lieti di rispondere a tutte le vostre
+                                domande
+                            </p>
+                        </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="close">&times;</span>
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="assets/landing/js/jquery.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/script_scroll.js"></script>
+    <script>
+        $(".play-btn").click(function () {
+            $('.poster_block').css('display', 'none');
+            $('.embed-container').css('display', 'block');
+            $('.embed-container').append('<iframe src="https://player.vimeo.com/video/813472662?autoplay=1&loop=1&autopause=0&muted=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>');
+        });
+        $('.footer-year').append(new Date().getFullYear());
+    </script>
+
+
+
+    <!-- intl-tel-input -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/jsAdapter.js"></script>
+    <script src="js/pixelInitPageView.js"></script>
+    <script src="js/validate.min.js"></script>
+    <script src="js/modal-form-and-timer.js"></script>
+</body>
+
+</html>

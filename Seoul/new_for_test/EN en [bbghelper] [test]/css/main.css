@@ -1,0 +1,591 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bitter', serif;
+    font-weight: 500;
+}
+body{
+    background-color: #fff;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+p{
+    margin: 0;
+}
+ul{
+    margin-bottom: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+::selection {
+    background-color: #333;
+    color: #fff;
+}
+/* language */
+/* .single-lang ul {
+    width: 90px;
+} */
+.single-lang ul li {
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    padding: 0 6px;
+}
+.single-lang ul li img {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.single-lang ul li i {
+    font-size: 14px;
+    margin-left: 4px;
+}
+.single-lang ul li ul {
+    position: absolute;
+    top: 125%;
+    left: 0;
+    z-index: 999;
+    padding: 6px 0;
+    display: none;
+    background-color: #F3EEDB;
+	border: 2px solid #000;
+	border-top: 2px solid transparent;
+}
+.single-lang ul li ul li a{
+    display: flex;
+    color: #000;
+    padding: 5px 0 5px 6px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+.single-lang ul li ul li:hover a{
+    background-color: rgba(0, 0, 0, .15);
+}
+/* main css */
+.main-area {
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    padding-bottom: 40px;
+}
+.menu-area{
+    z-index: 8;
+    transition: all 0.3s ease-in-out;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+.header-area {
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    padding: 0 40px;
+}
+.logo{
+    width: 35%;
+    float: left;
+    border-right: 2px solid #000;
+}
+.logo a {
+    font-size: 30px;
+    color: #000;
+    font-weight: 900;
+}
+.t-bar {
+    width: 65%;
+    overflow: hidden;
+    padding: 8px 0;
+}
+.t-bar p {
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+}
+
+/* welcome  */
+.tab-box {
+    background-color: transparent;
+    padding-bottom: 30px;
+    height: 67vh;
+    overflow: hidden;
+}
+.login-info {
+    padding: 0 24px 24px;
+    overflow-y: scroll;
+}
+.nav-tabs {
+    border-bottom: 2px solid #000;
+}
+#nav-tab button {
+    font-size: 22px;
+}
+.nav-tabs .nav-link {
+    color: #757575;
+    border: 1px solid transparent;
+}
+.nav-link:focus, .nav-link:hover {
+    color: #000;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+.nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+}
+.login-des p {
+    font-size: 18px;
+    color: #000;
+    line-height: 1.3;
+}
+.login-form p {
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 16px;
+}
+.login-email input, 
+.login-digit input {
+    font-size: 18px;
+    padding: 8px 16px;
+    width: 100%;
+    border: 2px solid #000;
+    outline: none;
+    background-color: transparent;
+    color: #000;
+}
+.login-btn input, .login-btn button {
+    font-size: 18px;
+    padding: 8px 40px;
+    background-color: #000;
+    border: 2px solid #000;
+    color: #fff;
+    outline: none;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+}
+.login-btn input:hover, .login-btn button:hover {
+    box-shadow: 6px 6px 8px rgba(0,0,0,0.4);
+}
+
+/* faq area  */
+.hero {
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    padding: 40px 40px 0 40px;
+}
+.dash {
+    padding: 8px 0;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+.left-item {
+    height: 100%;
+    padding-bottom: 40px;
+}
+.right-item {
+    height: 100%;
+    padding-bottom: 40px;
+    position: relative;
+}
+.faq-info {
+    height: 55vh;
+    overflow-y: scroll;
+    padding: 0 24px;
+}
+.faq-hdd h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.accordion-item {
+    background-color: transparent;
+}
+.accordion-button {
+    font-size: 16px;
+    color: #000;
+    background-color: rgba(0,0,0,0.05);
+}
+.accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: rgba(0,0,0,0.1);
+}
+.accordion-button:focus {
+    border-color: #999;
+    outline: 0;
+    box-shadow: 0 0 0 #999;
+}
+.accordion-button::after {
+    background-size: 12px;
+    width: 12px;
+    height: 12px;
+    background-image: url("../images/down-arrow.png");
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("../images/up-arrow.png");
+    transform: rotate(-0deg);
+}
+.accordion-body p {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 12px;
+    font-family: 'Antic Slab', serif;
+}
+.accordion-body ul li {
+    font-size: 16px;
+    color: #000;
+    list-style: disc;
+    margin-bottom: 12px;
+    font-family: 'Antic Slab', serif;
+}
+
+/* contact */
+.contact-form {
+    padding: 0 24px;
+    height: 60vh;
+    overflow-y: scroll;
+}
+.contact-hdd h3 {
+    font-size: 24px;
+}
+.name label,
+.email label,
+.msg label {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 4px;
+}
+.name input,
+.email input,
+.msg textarea {
+    font-size: 18px;
+    padding: 8px 16px;
+    width: 100%;
+    border: 2px solid #000;
+    outline: none;
+    background-color: transparent;
+    color: #000;
+}
+.check input {
+    display: inline-block;
+    accent-color: #000;
+    margin-right: 5px;
+}
+.check label {
+    display: inline;
+    font-size: 16px;
+    color: #000;
+}
+.submit-btn input, .submit-btn button {
+    font-size: 18px;
+    padding: 8px 40px;
+    background-color: #000;
+    border: 2px solid #000;
+    color: #fff;
+    outline: none;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+}
+.submit-btn input:hover, .submit-btn button:hover {
+    box-shadow: 6px 6px 8px rgba(0,0,0,0.4);
+}
+
+/* image area  */
+.hero-img img {
+    width: 95%;
+    height: 539px;
+}
+.timing {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    height: 100px;
+    width: 100px;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+.timing h3 {
+    font-family: 'Antic Slab', serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+#cancelSubscription {
+    display: none;
+}
+
+/* Responsive  */
+
+@media all and (min-width: 1200px) {
+    .hero-img img {
+        width: 80%;
+        height: 539px;
+    }
+}
+@media all and (max-width: 1920px){
+    .tab-box {
+        height: 75vh;
+    }
+    .faq-info {
+        height: 65vh;
+    }
+    .contact-form {
+        height: 65vh;
+    }
+}
+@media all and (max-width: 1710px){
+    .tab-box {
+        height: 72vh;
+    }
+    .faq-info {
+        height: 65vh;
+    }
+}
+@media all and (max-width: 1500px){
+    .faq-info {
+        height: 62vh;
+    }
+}
+@media all and (max-width: 1400px){
+    .tab-box {
+        height: 70vh;
+    }
+    .accordion-button,
+    .accordion-body,
+    .accordion-body ul li {
+        font-size: 15px;
+    }
+    .contact-form {
+        height: 62vh;
+    }
+    .timing {
+        height: 85px;
+        width: 85px;
+    }
+    .timing h3 {
+        font-size: 26px;
+    }
+}
+@media all and (max-width: 1200px){
+    .t-bar p {
+        font-size: 16px;
+    }
+    .logo a {
+        font-size: 28px;
+    }
+    .login-info,
+    .faq-info,
+    .contact-form {
+        padding: 0 10px;
+    }
+    .login-info {
+        padding: 0 10px 24px;
+    }
+    .tab-box {
+        height: 68vh;
+    }
+    .faq-info {
+        height: 60vh;
+    }
+    #nav-tab button {
+        font-size: 20px;
+    }
+    .login-des p {
+        font-size: 16px;
+    }
+    .login-form p {
+        font-size: 20px;
+    }
+    .login-email input, 
+    .login-digit input {
+        font-size: 16px;
+    }
+    .login-btn input {
+        font-size: 16px;
+    }
+    .faq-hdd h3 {
+        font-size: 20px;
+    }
+    .contact-hdd h3 {
+        font-size: 20px;
+    }
+    .name label, .email label, .msg label {
+        font-size: 16px;
+    }
+    .name input, .email input, .msg textarea {
+        font-size: 16px;
+    }
+    .check label {
+        font-size: 14px;
+    }
+    .submit-btn input {
+        font-size: 16px;
+    }
+    .contact-form {
+        height: 60vh;
+    }
+    .accordion-button, 
+    .accordion-body p,
+    .accordion-body ul li {
+        font-size: 14px;
+    }
+    .accordion-button {
+        padding: 16px 12px;
+    }
+    .timing {
+        height: 75px;
+        width: 75px;
+    }
+    .timing h3 {
+        font-size: 22px;
+    }
+}
+@media (min-width: 991px) and (max-width: 1024px){
+    .tab-box {
+        height: 60vh;
+    }
+    .faq-info {
+        height: 50vh;
+    }
+    .contact-form {
+        height: 53vh;
+    }
+    .login-info {
+        height: 52vh;
+    }
+}
+@media all and (max-width: 991px){
+    .logo {
+        padding: 2px 0;
+    }
+    .logo a {
+        font-size: 24px;
+    }
+    .left-item {
+        height: auto;
+    }
+    .tab-box {
+        height: 60vh;
+    }
+    .faq-info,
+    .contact-form {
+        height: 53vh;
+    }
+}
+@media all and (max-width: 767px){
+	.single-lang ul li {
+		font-size: 14px;
+	}
+	.single-lang ul li img {
+		height: 22px;
+		width: 22px;
+	}
+	.single-lang ul li ul li a {
+		font-size: 14px;
+	}
+    .logo {
+        width: 45%;
+    }
+    .t-bar {
+        width: 55%;
+        padding: 9px 0;
+    }
+    .t-bar p {
+        font-size: 14px;
+    }
+    .hero {
+        padding: 40px 24px 0 24px;
+    }
+    .header-area {
+        padding: 0 24px;
+    }
+    #nav-tab button {
+        font-size: 18px;
+    }
+    .login-des p {
+        font-size: 14px;
+    }
+    .login-form p {
+        font-size: 18px;
+    }
+    .login-email input, .login-digit input {
+        font-size: 14px;
+    }
+    .login-btn input {
+        font-size: 14px;
+    }
+    .faq-hdd h3 {
+        font-size: 20px;
+    }
+    .contact-hdd h3 {
+        font-size: 18px;
+    }
+    .name label, .email label, .msg label {
+        font-size: 14px;
+    }
+    .name input, .email input, .msg textarea {
+        font-size: 14px;
+    }
+    .submit-btn input {
+        font-size: 14px;
+    }
+}
+@media all and (max-width: 575px){
+    .header-area {
+        padding: 0 12px;
+    }
+    .hero {
+        padding: 40px 12px 0 12px;
+    }
+    .left-item {
+        padding-bottom: 30px;
+    }
+}
+@media all and (max-width: 480px){
+    .header-area {
+        padding: 0;
+    }
+    .logo {
+        width: 100%;
+        float: none;
+        border-right: 2px solid transparent;
+        text-align: center;
+    }
+    .t-bar {
+        width: 100%;
+        padding: 9px 0;
+        border-top: 2px solid #000;
+        text-align: center !important;
+    }
+    #nav-tab button {
+        font-size: 16px;
+    }
+    .login-form p {
+        font-size: 16px;
+    }
+    .tab-box {
+        height: 64vh;
+        padding-bottom: 0;
+    }
+    .faq-info, .contact-form {
+        height: 58vh;
+    }
+    .contact-hdd h3 {
+        font-size: 16px;
+    }
+}
+
+
+

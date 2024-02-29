@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="x-ms-format-detection" content="none" />
+  <title>Kaspi Депозит</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/nouislider.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/usercount.css" />
+</head>
+
+<body>
+  <div id="page1" class="page1">
+  <div class="wrapper">
+    <!-- <div class="user-count">
+        <div class="count-wrapper">
+          <span class="count" id="userCount"></span>
+          <span class="label">пользователей на сайте</span>
+        </div>
+        <div class="separator"></div>
+        <div class="space-wrapper">
+          <span class="free-space" id="freeSpace"></span>
+          <span class="label">свободных мест</span>
+        </div>
+      </div> -->
+
+    <div id="loader" style="display: none">
+      <img src="images/preloader.svg" alt="Preloader" />
+    </div>
+
+    <header class="header">
+      <!-- <div class="header__top">
+                <div class="container">
+                    <div class="header__top-details">
+                        <p class="support-text">При поддержке</p>
+                        <div class="logos">
+                            <img src="images/gerb-kz.png" alt="" />
+                            <p class="ministry-text" style="margin-right: 15px">
+                                Министерство <br />
+                                экономики <br />
+                                Республики <br />
+                                Казахстан
+                            </p>
+                            <img src="images/halyk-bank.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+      <div class="header__bottom">
+        <div class="header__bottom-details">
+          <div class="logo-container">
+            <div class="logos">
+              <img class="left-logo" src="images/ipo-logo-cropped.png" alt="" />
+            </div>
+          </div>
+          <!-- <div class="language-container inherit-w relative">
+              <div class="flag">
+                <img src="images/kz-flag.svg" alt="" />
+              </div>
+            </div> -->
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="first-section">
+        <!-- <div class="first-text">
+          <div class="main">
+            Начните зарабатывать от <nobr><span class="gold-text">$4000 ежемесячно</span></nobr> на Вашем инвестиционном
+            портфеле с
+            <nobr><span class="gold-text">Kaspi IPO</span></nobr>
+          </div>
+          <div class="description">Присоединяйтесь к проекту и обеспечьте себе финансовую стабильность!</div>
+        </div> -->
+        <div class="first-image">
+          <img src="images/deposit-main-v2.svg" alt="">
+          <!-- <div class="video-container"> -->
+          <!-- <video controls poster="video/poster.png" style="border-radius: 20px">
+            <source src="video/video.mp4" type="video/mp4" />
+          </video> -->
+          <!-- </div> -->
+        </div>
+        <div class="first-text">
+          <div class="main">
+            Kaspi Депозит
+          </div>
+          <div class="description">Это самая доступная инвестиционная платформа от <nobr><span class="gold-text">Kaspi</span></nobr>.</div>
+        </div>
+      </section>
+
+     
+      <section class="third-section">
+        <div class="info">
+          
+        </div>
+        <div class="calculate-btn-wrapper">
+          <a><button id="openPage2" class="calculate-btn button is-blicked">Узнать больше</button></a>
+        </div>
+      </section>
+
+      <section class="eighth-section">
+        <div class="title">
+          Как это работает
+        </div>
+        <div class="content">
+          <div class="image-block">
+            <img src="images/deposit.png" alt="" />
+          </div>
+          <div class="items-block">
+            <ol class="numeric-list">
+              <li>
+                <div class="item-content">
+                  <div class="title">
+                    Ознакомтесь с информацией на нашем сайте
+                  </div>
+                  <!-- <div class="description">
+                    Заполнить регистрационную форму, чтобы создать бесплатную учетную запись.
+                  </div> -->
+                </div>
+                <!-- <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_11_3794)">
+                    <path
+                      d="M23.9999 46.6666C36.5184 46.6666 46.6666 36.5184 46.6666 24C46.6666 11.4815 36.5184 1.33331 23.9999 1.33331C11.4815 1.33331 1.33325 11.4815 1.33325 24C1.33325 36.5184 11.4815 46.6666 23.9999 46.6666Z"
+                      stroke="#F14635" stroke-width="4" />
+                    <path d="M14.3611 24.8707L20.634 31.5817C20.7684 31.7254 20.9972 31.7222 21.1274 31.5747L34 17"
+                      stroke="#F14635" stroke-width="4" stroke-linecap="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_11_3794">
+                      <rect width="48" height="48" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg> -->
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="title">
+                    Пройдите регистрацию для получения личного финансовго эксперта
+                  </div>
+                  <!-- <div class="description">
+                    Дождитесь звонка от специалиста Kaspi IPO для обсуждения ваших инвестиционных планов и подтверждения
+                    регистрации.
+                  </div> -->
+                </div>
+                <!-- <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_11_3794)">
+                    <path
+                      d="M23.9999 46.6666C36.5184 46.6666 46.6666 36.5184 46.6666 24C46.6666 11.4815 36.5184 1.33331 23.9999 1.33331C11.4815 1.33331 1.33325 11.4815 1.33325 24C1.33325 36.5184 11.4815 46.6666 23.9999 46.6666Z"
+                      stroke="#F14635" stroke-width="4" />
+                    <path d="M14.3611 24.8707L20.634 31.5817C20.7684 31.7254 20.9972 31.7222 21.1274 31.5747L34 17"
+                      stroke="#F14635" stroke-width="4" stroke-linecap="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_11_3794">
+                      <rect width="48" height="48" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg> -->
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="title">Внесите первый депозит чтобы начать зарабатывать</div>
+                  <!-- <div class="description">
+                    Переведите деньги в инвестиционный актив и начните процесс увеличения вашего капитала.
+                  </div> -->
+                </div>
+                <!-- <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_11_3794)">
+                    <path
+                      d="M23.9999 46.6666C36.5184 46.6666 46.6666 36.5184 46.6666 24C46.6666 11.4815 36.5184 1.33331 23.9999 1.33331C11.4815 1.33331 1.33325 11.4815 1.33325 24C1.33325 36.5184 11.4815 46.6666 23.9999 46.6666Z"
+                      stroke="#F14635" stroke-width="4" />
+                    <path d="M14.3611 24.8707L20.634 31.5817C20.7684 31.7254 20.9972 31.7222 21.1274 31.5747L34 17"
+                      stroke="#F14635" stroke-width="4" stroke-linecap="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_11_3794">
+                      <rect width="48" height="48" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg> -->
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <!-- <div class="money-section">
+        <button class="calculate-btn button is-blicked get-form">Зарегистрироваться</button>
+
+        <div class="img-wrap">
+          <img src="images/phone.png" alt="phone img" />
+        </div>
+      </div> -->
+
+      <!-- <section class="second-section">
+        <div class="title">Калькулятор доходности</div>
+        <div class="second-section__container">
+          <div class="calculate">
+            <div class="calculate-amount">
+              <div class="calculate-wrap">
+                <p class="input-name">Сумма инвестирования</p>
+                <div class="calculate-text-ml">
+                  <div class="input-base-wrapper">
+                    <input type="text" id="text" class="calculate-input" />
+                  </div>
+                </div>
+                &nbsp;
+                <span>₸</span>
+              </div>
+              <div class="calculate-slider">
+                <div id="slider"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calculate-inner">
+            <div class="calculate-block">
+              <p class="result-text">Доход</p>
+              <p>
+                <span><span id="prop">100000</span></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+
+      <!-- <section class="fifth-section">
+                <div class="fifth-section__container">
+                    <div class="title">Инвестируйте в криптовалюты с выгодными условиями</div>
+                    <div class="items__container">
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="images/icons/icon-investment.png" alt="">
+                            </div>
+                            <div class="item__text">
+                                Разнообразие
+                            </div>
+                            <div class="item__subtext">
+                                Диверсификация портфеля для снижения рисков и повышения стабильности.
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="images/icons/icon-guard.png" alt="">
+                            </div>
+                            <div class="item__text">
+                                Защита
+                            </div>
+                            <div class="item__subtext">
+                                Инфляционная защита от девальвации валюты и сохранение ценности.
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="images/icons/icon-liquidity.png" alt="">
+                            </div>
+                            <div class="item__text">
+                                Ликвидность
+                            </div>
+                            <div class="item__subtext">
+                                Возможность быстрой конвертации криптовалюты в наличные средства в любой момент.
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="images/icons/icon-security.png" alt="">
+                            </div>
+                            <div class="item__text">
+                                Убежище
+                            </div>
+                            <div class="item__subtext">
+                                Криптовалюты как безопасный актив в периоды геополитической нестабильности и кризисов.
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="images/icons/icon-income.png" alt="">
+                            </div>
+                            <div class="item__text">
+                                Доходность
+                            </div>
+                            <div class="item__subtext">
+                                Поиск высоких доходов при низких процентных ставках на другие активы.
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="images/icons/icon-clock.png" alt="">
+                            </div>
+                            <div class="item__text">
+                                Стабильность
+                            </div>
+                            <div class="item__subtext">
+                                Долгосрочная стабильность в цене, исторически подтвержденная, для сохранения стоимости.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+      <!-- <section class="seventh-section">
+        <div class="seventh-section__container">
+          <div class="title">
+            Отзывы участников
+            <nobr>проекта
+              <span class="gold-text">Halyk Invest</span>
+            </nobr>
+          </div>
+          <div class="slider-container">
+            <div class="items-block sliders-block">
+              <div class="item slide">
+                <h2>Талгат Муратович</h2>
+                <img src="images/reviews/review6.jpg" alt="" />
+                <p>
+                  Я глубоко признателен проекту Halyk Invest. Благодаря его команде, я достиг
+                  значительных финансовых успехов и с нетерпением жду дальнейшего роста.
+                </p>
+              </div>
+              <div class="item slide">
+                <h2>Данияр Куспеков</h2>
+                <img src="images/reviews/review1.jpg" alt="" />
+                <p>
+                  Спасибо Halyk Invest! Теперь не надо каждый день кататься на работу, 175 000
+                  тенге за 2 часа заработал! На днях буду увольняться точно! Наконец начну жить в
+                  удовольствие...
+                </p>
+              </div>
+              <div class="item slide">
+                <h2>Даулет Нусипхожин</h2>
+                <img src="images/reviews/review3.jpg" alt="" />
+                <p>
+                  Я присоединился к проекту Halyk Invest по рекомендации друзей с надеждой на
+                  большую прибыль. Пока заработал не так много, но ожидаю лучших результатов в
+                  будущем.
+                </p>
+              </div>
+              <div class="item slide">
+                <h2>Лилия Хакимова</h2>
+                <img src="images/reviews/review4.jpg" alt="" />
+                <p>
+                  До сих пор не верится! Думала что какая-то ерунда очередная по заработку, а
+                  оказался отличный способ! И реально переводят деньги после запроса, причем
+                  быстро.
+                </p>
+              </div>
+              <div class="item slide">
+                <h2>Бейбит Замекбаев</h2>
+                <img src="images/reviews/review5.jpg" alt="" />
+                <p>
+                  Мне жена не верила, что я тут заработал, 79500 тенге перевели на счет! Причем
+                  через 2 часа!
+                </p>
+              </div>
+              <div class="item slide">
+                <h2>Азамат Ертасов</h2>
+                <img src="images/reviews/review7.jpg" alt="" />
+                <p>
+                  Я так благодарен, что принял решение инвестировать свои сбережения. Это открыло
+                  мне новые горизонты и возможности для финансового роста.
+                </p>
+              </div>
+              <div class="item slide">
+                <h2>Аблай Казбаев</h2>
+                <img src="images/reviews/review8.jpg" alt="" />
+                <p>
+                  Спасибо Halyk Invest за превосходные инвестиционные возможности. Я чувствую себя
+                  уверенным и защищенным, зная, что мои деньги работают на меня и приносят
+                  стабильную прибыль.
+                </p>
+              </div>
+              <div class="item slide">
+                <h2>Галина Зияновна</h2>
+                <img src="images/reviews/review9.jpg" alt="" />
+                <p>
+                  После присоединения к проекту по рекомендации друзей, я начала видеть потенциал
+                  роста. Возможно, пока заработала не много, но я остаюсь уверенной в перспективах
+                  и с нетерпением жду дальнейших результатов.
+                </p>
+              </div>
+            </div>
+            <div class="slider-nav">
+              <div class="slider-prev">&lsaquo;</div>
+              <div class="slider-next">&rsaquo;</div>
+            </div>
+          </div>
+
+          <div class="calculate-btn-wrapper">
+            <button class="calculate-btn get-form button is-blicked">Начать зарабатывать</button>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- <section class="tenth-section">
+        <div class="title">Часто задаваемые вопросы</div>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button id="accordion-button-1" aria-expanded="false">
+              <span class="accordion-title"> Что такое "Halyk Invest"? </span>
+              <span class="icon_plus" aria-expanded="false">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                <span class="weight-bold">Halyk Invest</span> - простой и удобный проект для
+                инвестирования, где доступны ценные бумаги локальных и международных компаний.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-2" aria-expanded="false">
+              <span class="accordion-title"> Сколько я смогу заработать за день? </span>
+              <span class="icon_plus" aria-expanded="false">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Мы гарантируем, что вы сможете зарабатывать как минимум
+                <span class="weight-bold">$1000 в неделю</span> – то есть,
+                <span class="weight-bold">более $4000 в месяц</span>. Посмотрите отзывы других
+                участников проекта, чтобы понять, сколько они зарабатывают сейчас.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-3" aria-expanded="false">
+              <span class="accordion-title"> Когда была разработана Halyk Invest? </span>
+              <span class="icon_plus" aria-expanded="false">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Halyk Invest была разработана в ноябре 2021 года. В первый год она
+                <span class="weight-bold">заработала своим инвесторам больше $1 000 000</span>
+                и на протяжении всего времени объем прибыли только растет.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-4" aria-expanded="false">
+              <span class="accordion-title">
+                Могут ли нерезиденты РК пользоваться Halyk Invest?
+              </span>
+              <span class="icon_plus" aria-expanded="false">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Halyk Invest на данный момент доступен только резидентам РК, в данную категорию не
+                входят иностранные граждане с видом на жительство.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-5" aria-expanded="false">
+              <span class="accordion-title">
+                Как мне начать инвестировать вместе с Halyk Invest?
+              </span>
+              <span class="icon_plus" aria-expanded="false">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Это очень просто. Для этого нужно заполнить форму регистрации, дождаться звонка
+                финансового специалиста, внести первый депозит и уже через 30 дней получить первый
+                доход.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-6" aria-expanded="false">
+              <span class="accordion-title">
+                Где можно получить подробную информацию о платформе Halyk Invest?
+              </span>
+              <span class="icon_plus" aria-expanded="false">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Получить более подробную информацию о Halyk Invest Вы можете от нашего финансового
+                специалиста, который позвонит Вам после заполнения формы регистрации.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="content">
+          <div class="first-block">
+            <h2 class="text">Шаг 1 из 3</h2>
+            <div class="dots">
+            <span class="dot" style="background-color:red;"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  
+</div>
+<div id="page2" class="page2" style="display: none;">
+  <div class="wrapper">
+    <!-- <div class="user-count">
+        <div class="count-wrapper">
+          <span class="count" id="userCount"></span>
+          <span class="label">пользователей на сайте</span>
+        </div>
+        <div class="separator"></div>
+        <div class="space-wrapper">
+          <span class="free-space" id="freeSpace"></span>
+          <span class="label">свободных мест</span>
+        </div>
+      </div> -->
+
+    <div id="loader" style="display: none">
+      <img src="images/preloader.svg" alt="Preloader" />
+    </div>
+
+    <header class="header">
+      <!-- <div class="header__top">
+                <div class="container">
+                    <div class="header__top-details">
+                        <p class="support-text">При поддержке</p>
+                        <div class="logos">
+                            <img src="images/gerb-kz.png" alt="" />
+                            <p class="ministry-text" style="margin-right: 15px">
+                                Министерство <br />
+                                экономики <br />
+                                Республики <br />
+                                Казахстан
+                            </p>
+                            <img src="images/halyk-bank.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+      <div class="header__bottom">
+        <div class="header__bottom-details">
+          <div class="logo-container">
+            <div class="logos">
+              <img class="left-logo" src="images/ipo-logo-cropped.png" alt="" />
+            </div>
+          </div>
+          <!-- <div class="language-container inherit-w relative">
+              <div class="flag">
+                <img src="images/kz-flag.svg" alt="" />
+              </div>
+            </div> -->
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="first-section">
+        <div class="first-text">
+          <!-- <div class="main">
+                        Инвестируйте в проекты по добыче золота с
+                        <nobr>
+                            <span class="gold-text">
+                                Halyk Invest
+                            </span>
+                        </nobr>
+                    </div> -->
+          <div class="main">
+            Преимущества Kaspi Депозита
+          </div>
+          <!-- <div class="description">Присоединяйтесь к проекту и обеспечьте себе финансовую стабильность!</div> -->
+        </div>
+        <div class="first-image">
+          <img src="images/transfers-main-v2.svg" alt="">
+          <!-- <div class="video-container"> -->
+          <!-- <video controls poster="video/poster.png" style="border-radius: 20px">
+            <source src="video/video.mp4" type="video/mp4" />
+          </video> -->
+          <!-- </div> -->
+        </div>
+      </section>
+
+      <section class="eighth-section" style="padding-top: 0px;">
+        <!-- <div class="title">
+          Как инвестировать в
+          <span class="gold-text">
+            <nobr>Kaspi IPO?</nobr>
+          </span>
+        </div> -->
+        <div class="content">
+          <div class="image-block">
+            <img src="images/deposit.png" alt="" />
+          </div>
+          <div class="items-block">
+            <ol class="numeric-list2">
+              <li>
+                <div class="item-content">
+                  <div class="title">
+                    <img src="images/tenge_icon.svg" alt="">
+                  </div>
+                  <div class="title">
+                    Гарантированные выплаты
+                  </div>
+                  <!-- <div class="description">
+                    Гарантированные выплаты
+                  </div> -->
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="title">
+                    <img src="images/cash-top-up_icon.svg" alt="">
+                  </div>
+                  <div class="title">
+                    Минимальный депозит
+                  </div>
+                  <!-- <div class="description">
+                    Дождитесь звонка от специалиста Kaspi IPO для обсуждения ваших инвестиционных планов и подтверждения
+                    регистрации.
+                  </div> -->
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="title">
+                    <img src="images/app_icon.svg" alt="">
+                  </div>
+                  <div class="title">Доступность платформы с мобильного устройства</div>
+                  <!-- <div class="description">
+                    Переведите деньги в инвестиционный актив и начните процесс увеличения вашего капитала.
+                  </div> -->
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="title">
+                    <img src="images/percent_icon.svg" alt="">
+                  </div>
+                  <div class="title">Высокая доходность в % от ваших инвестиций</div>
+                  <!-- <div class="description">
+                    Переведите деньги в инвестиционный актив и начните процесс увеличения вашего капитала.
+                  </div> -->
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="calculate-btn-wrapper">
+          <a><button id="openPage3" class="calculate-btn button is-blicked">Больше информации</button></a>
+        </div>
+      </section>
+      <!-- <div class="money-section">
+        <button class="calculate-btn button is-blicked get-form">Зарегистрироваться</button>
+
+        <div class="img-wrap">
+          <img src="images/phone.png" alt="phone img" />
+        </div>
+      </div> -->
+
+      
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="content">
+          <div class="first-block">
+            <h2 class="text">Шаг 2 из 3</h2>
+            <div class="dots">
+            <span class="dot" style="background-color:red;"></span>
+            <span class="dot" style="background-color:red;"></span>
+            <span class="dot"></span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+<div id="page3" class="page3" style="display: none;">
+
+  <div class="wrapper">
+
+    <div id="loader" style="display: none">
+      <img src="images/preloader.svg" alt="Preloader" />
+    </div>
+
+    <header class="header">
+      <div class="header__bottom">
+        <div class="header__bottom-details">
+          <div class="logo-container">
+            <div class="logos">
+              <img class="left-logo" src="images/ipo-logo-cropped.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="first-section">
+        <div class="first-text">
+          <!-- <div class="main">
+                        Инвестируйте в проекты по добыче золота с
+                        <nobr>
+                            <span class="gold-text">
+                                Halyk Invest
+                            </span>
+                        </nobr>
+                    </div> -->
+          <!-- <div class="main">
+            Популярные вопросы
+          </div> -->
+          <!-- <div class="description">Присоединяйтесь к проекту и обеспечьте себе финансовую стабильность!</div> -->
+        </div>
+        <div class="first-image">
+          <img src="images/kaspipay-m.svg" alt="">
+        </div>
+      </section>
+      <section class="tenth-section" style="padding-bottom: 10px;">
+        <div class="title">
+            Популярныее вопросы
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false">
+                    <span class="accordion-title">
+                      Сколько я смогу заработать?
+                    </span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>
+                      Вы можете зарабатывать от 500 000 тенге в месяц. Размер дохода зависит от вашей инвестиции. В проекте нет органичений в доходе.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button id="accordion-button-2" aria-expanded="false">
+                    <span class="accordion-title">
+                      Почему платформа гарантирует доход?
+                    </span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>
+                      Компания Kaspi вышла на рынок IPO США благодаря тому что мы сотрудничаем с мировыми гигантами. Такими как : Apple, Microsoft, Tesla, Amazon, Meta. Поэтому на нашем проекте невозможно потерять деньги, так как мы минимизируем  риски. Инвестируя в акции компаний и криптовалюту.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button id="accordion-button-3" aria-expanded="false">
+                    <span class="accordion-title">
+                      Как инвестировать с чего начать?
+                    </span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>
+                      Kaspi Депозит предлагает вам профессиональные советы от финансовых экспертов и помогает вам зарабатывать.  Эксперт сможет закрыть абсолютно все ваши вопросы и возражения.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="calculate-btn-wrapper">
+      <button id="openFormButton" class="calculate-btn button is-blicked">Начать зарабатывать</button>
+    </div>
+      
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="content">
+          <div class="first-block">
+            <h2 class="text">Шаг 3 из 3</h2>
+            <div class="dots">
+            <span class="dot" style="background-color:red;"></span>
+            <span class="dot" style="background-color:red;"></span>
+            <span class="dot" style="background-color:red;"></span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="modal-form" class="modal-form">
+    <div class="modal-form_content">
+      <form id="form2" novalidate autocomplete="off">
+        <h2 class="title">
+          Оставьте свои контактные данные и начните получать выплаты дивидендов уже сейчас!
+        </h2>
+        <div class="form-group">
+          <input type="text" id="firstName2" name="firstName" placeholder="Имя" />
+          <!-- <label for="firstName">Имя</label> -->
+          <span class="error" data-field="firstName"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="lastName2" name="lastName" placeholder="Фамилия" />
+          <!-- <label for="lastName">Фамилия</label> -->
+          <span class="error" data-field="lastName"></span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email2" name="email" placeholder="Почта" />
+          <!-- <label for="email">Почта</label> -->
+          <span class="error" data-field="email"></span>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone2" name="phone" placeholder=" " />
+          <span class="error" data-field="phone"></span>
+        </div>
+        <div class="policy">
+          Оставляя заявку, я соглашаюсь на
+          <a href="https://online.zakon.kz/Document/?doc_id=31396226&show_di=1&sub_id=70000&pos=122;-56#pos=122;-56"
+            target="_blank" rel="noreferrer">
+            обработку персональных данных
+          </a>
+        </div>
+        <div class="form-group">
+          <button class="calculate-btn2 button is-blicked" type="submit">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" class="mdi-icon mdi-24px" fill="#fff">
+                <title>mdi-checkbox-marked-circle-outline</title>
+                <path
+                  d="M20,12C20,16.42 16.42,20 12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+                  stroke-width="0" fill-rule="nonzero"></path>
+              </svg>
+            </span>
+            &nbsp; Зарегистрироваться
+          </button>
+        </div>
+      </form>
+      <span class="modal-close"></span>
+    </div>
+  </div>
+<script>
+  // Находим кнопку для открытия формы
+const page1Button = document.getElementById('openPage2');
+const page1 = document.getElementById('page1');
+
+page1Button.addEventListener('click', function() {
+  // При клике, показываем контейнер формы
+  page2.style.display = 'block';
+  page1.style.display = 'none';
+});
+
+  // Находим кнопку для открытия формы
+  const page2Button = document.getElementById('openPage3');
+const page2 = document.getElementById('page2');
+
+page2Button.addEventListener('click', function() {
+  // При клике, показываем контейнер формы
+  page3.style.display = 'block';
+  page2.style.display = 'none';
+});
+
+const openFormButton = document.getElementById('openFormButton');
+
+// Находим контейнер формы
+const formContainer = document.getElementById('modal-form');
+
+// Добавляем обработчик события клика на кнопку
+openFormButton.addEventListener('click', function() {
+  // При клике, показываем контейнер формы
+  formContainer.style.display = 'flex';
+});
+
+</script>
+</div>
+  <script src="js/imask.js"></script>
+  <script src="js/script.js"></script>
+  <!-- JS-Adapter -->
+  <script src="js/jsAdapter.js"></script>
+  <script src="js/pixelInitPageView.js"></script>
+  <!-- noUiSlider -->
+  <script src="js/nouislider.min.js"></script>
+  <!-- Validate.js -->
+  <script src="js/validate.min.js"></script>
+  <!-- FAQ -->
+  <script src="js/faq.js"></script>
+  <!-- Calculator -->
+  <script src="js/calculator.js"></script>
+  <!-- Slider -->
+  <script src="js/slider.js"></script>
+  <!-- Modal Form -->
+  <script src="js/modalForm.js"></script>
+  <!-- User Count -->
+  <script src="js/userCount.js"></script>
+</body>
+
+</html>

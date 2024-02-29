@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="css/jquery-fancy.css" />
+    <link
+      rel="stylesheet"
+      href="css/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+
+    <meta property="og:image" content="logotip.svg" />
+
+            <link
+          rel="shortcut icon"
+          href="images/logotip.svg"
+          type="image/x-icon"
+        />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <title>
+      Servicios de corretaje: su puerta de entrada al mundo del comercio de
+      valores
+    </title>
+    <style>
+      li {
+        list-style: none;
+      }
+
+      * {
+        font-family: "Exo 2", sans-serif !important;
+      }
+      html {
+        -ms-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: subpixel-antialiased !important;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        direction: ltr;
+        margin: 0;
+        overflow-x: hidden;
+        background: #fff;
+        background-size: cover;
+        background-position: center;
+      }
+      .container {
+        width: 1197px;
+      }
+      .top-block-box {
+        background: #f05454;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        align-items: center;
+        justify-content: space-between;
+        display: none;
+      }
+      .resp-sharing-button {
+        font-size: 13px;
+      }
+      .center-block-box {
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+      .site-name {
+        font-size: 37px;
+        font-family: "Shadows Into Light", sans-serif !important;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .site-name-first {
+        font-size: 37px;
+        font-family: "Shadows Into Light", sans-serif !important;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .site-name img {
+        width: 40;
+        display: block;
+      }
+      .search-box {
+        display: none;
+        width: 342px;
+      }
+      .muColor {
+        color: #f05454;
+        border-color: #f05454;
+      }
+      .bottom-nav {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      .bottom-nav ul {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 0;
+      }
+      .bottom-nav li {
+        list-style: none;
+        font-size: 12px;
+      }
+      .top-title-and-content-box {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .content-images-block {
+        text-align: center;
+      }
+      .content-images-block img {
+        width: 100%;
+        border-radius: 5px;
+      }
+      .content-title-block-date {
+      }
+      .content-title-block-date span {
+        color: #333;
+      }
+      .new_title_images_block {
+        display: none;
+      }
+      .new_title_images_block img {
+        width: 100%;
+        padding-bottom: 16px;
+      }
+      .main_block_side-content {
+        padding-top: 21px;
+        padding-bottom: 21px;
+      }
+      .main_block_side-content h1 {
+        padding: ;
+      }
+      .top-news_item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 15px 0px;
+        padding: 10px;
+        border-bottom: 1px solid #f05454;
+      }
+      .top-news_item:last-child {
+        border: none;
+      }
+      .top-news_item img {
+        width: 32%;
+        border-radius: 5px;
+      }
+      .top-news_item a {
+        font-size: 14px;
+        text-decoration: none;
+        color: #f05454;
+      }
+      .top-news_item p {
+        font-size: 12px;
+        color: #333;
+        margin: 0px;
+        margin-top: 5px;
+      }
+      .sidebar_top-gallery {
+        margin-top: 49px;
+        display: none;
+      }
+      .sidebar_top-gallery h3 {
+        font-size: 18px;
+        font-weight: 700;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #f05454;
+      }
+      .top-gallery_main {
+        padding-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .top-gallery_main div {
+        width: 32%;
+        flex-grow: 1;
+      }
+      .top-gallery_main img {
+        width: 100%;
+      }
+      .bottom_author_box {
+        padding: 16px 0px;
+        display: flex;
+        gap: 7px;
+        align-items: center;
+      }
+      .bottom_author_box img {
+        width: 21px;
+        border-radius: 50%;
+      }
+      .bottom_author_box i {
+        display: block;
+      }
+      .bottom_author_box p {
+        margin: 0px;
+        font-size: 14px;
+        color: #333;
+      }
+      .comments_content_block_new {
+        padding: 49px 0px;
+      }
+      .comments_content_block_new h3 {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 16px;
+      }
+      .comments_wrapper-item {
+        border: 1px solid;
+        padding: 21px;
+        display: flex;
+        gap: 15px;
+        border-radius: 5px;
+        margin: 21px 0px;
+      }
+      .comments_wrapper-item img {
+        width: 40px;
+        border-radius: 50%;
+      }
+      .comments_wrapper-item h6 {
+        font-weight: 700;
+      }
+      .comments_wrapper-item span {
+        opacity: 0.4;
+      }
+      .not_comments_block {
+        display: none;
+      }
+      .all_comments_wrapper {
+        display: none;
+      }
+      .block-add-this-comment {
+        display: none;
+      }
+      .textwithuser {
+        min-height: 161px !important;
+      }
+
+      .for_add_btn {
+        background: #f05454;
+        margin-top: 15px;
+      }
+      .for_add_btn:hover {
+        opacity: 0.4;
+      }
+      .block_for_add_comment {
+        padding-top: 49px;
+      }
+      .block_for_add_comment h3 {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 16px;
+      }
+      .footer-block-new {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        text-align: center;
+        margin-top: 16px;
+      }
+      .footer-block-new p {
+        margin-bottom: 5px;
+      }
+      .footer-block-new a {
+        color: #f05454;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .footer-block-new a:hover {
+        text-decoration: underline;
+      }
+      .footer-block-new .row .col {
+        justify-content: center;
+      }
+      .imgFooter {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .imgFooter img {
+        width: 49px;
+      }
+      .for_price_block {
+        padding: 16px 0px;
+        justify-content: center;
+      }
+      .for_price_block p {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0px;
+      }
+      .for_buy_btn {
+        background: #f05454;
+        width: 263px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      .for_buy_btn:hover {
+        opacity: 0.4;
+      }
+      .for__btn {
+        justify-content: center;
+        padding-bottom: 16px;
+      }
+      .form__first {
+        justify-content: center;
+      }
+      .form__first .for_add_btn {
+        width: 100%;
+      }
+      #cookie-jRBh2zl {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        bottom: 16px;
+        left: 50%;
+        width: 1197px;
+        max-width: 90%;
+        transform: translateX(-50%);
+        padding: 16px;
+        background-color: #01005e;
+        border-radius: 15px;
+        box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+        gap: 16px;
+        z-index: 999999;
+      }
+      #cookie-jRBh2zl button {
+        max-width: 200px;
+      }
+
+      #cookie-jRBh2zl p {
+        margin: 0;
+        font-size: 14px;
+        color: #fff;
+      }
+
+      @media (min-width: 576px) {
+        #cookie-jRBh2zl.show {
+          display: flex;
+        }
+        .cookie_accept {
+          margin: 0 0 0 25px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        #cookie-jRBh2zl.show {
+          display: flex;
+          flex-direction: column;
+        }
+        .cookie_accept {
+          margin: 10px 0 0 0;
+        }
+        button {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 960px) {
+        .site-name {
+          flex-direction: column !important;
+        }
+        .main_block_side .row {
+          flex-direction: column !important;
+        }
+        .main_block_side .row > div {
+          width: 100% !important;
+        }
+        .main_block_side-sidebar {
+          margin-top: 30px;
+          padding: 0 !important;
+        }
+      }
+      @media (max-width: 768px) {
+        .img_text_block {
+          flex-direction: column !important;
+        }
+        .img_text_block > div {
+          width: 100% !important;
+        }
+        .footer-block-new .row {
+          flex-direction: column !important;
+          gap: 30px;
+          text-align: center;
+        }
+      }
+      @media (max-width: 576px) {
+        .container {
+          width: 100% !important;
+        }
+        .sidebar_top-gallery {
+          padding: 10px;
+        }
+        .top-gallery_main {
+          flex-direction: column !important;
+        }
+        .top-gallery_main > div {
+          width: 100%;
+        }
+      }
+      .input-h24180069 {
+        margin: 15px 0px;
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      .textarea-h24180069 {
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        padding: 0.375rem 0.75rem;
+        width: 100%;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      .floating-windows-7jJQU {
+        display: none;
+        position: fixed;
+        bottom: 15px;
+        width: 90%;
+        max-width: 1197px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        background-color: #01005e;
+        border-radius: 15px;
+        box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+        gap: 16px;
+        z-index: 99999;
+        padding: 16px;
+        text-align: center;
+      }
+      .floating-windows-7jJQU a {
+        color: #cee7ff;
+      }
+      .floating-windows-box-7jJQU {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      .button-7jJQU {
+        margin: 15px;
+        position: relative;
+        display: inline-block;
+        padding: 16px 28px;
+        font-weight: bold;
+        border: 1px solid #01005e;
+        color: #01005e;
+        text-align: center;
+        text-decoration: none;
+        background-color: #fff;
+        border-radius: 40px;
+        overflow: hidden;
+        z-index: 1;
+        cursor: pointer;
+        font-size: 12px;
+        width: auto;
+      }
+
+      .button-7jJQU:hover {
+        background-color: #01005e;
+        color: #fff;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      }
+      .modal-7jJQU {
+        overflow-y: auto;
+        display: none;
+        position: fixed;
+        z-index: 999999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content-7jJQU {
+        color: #000;
+        background-color: #fff;
+        padding: 20px;
+        max-width: 700px;
+        border-radius: 15px;
+        box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+        margin: 10% auto;
+        position: relative;
+      }
+
+      .modal-close-7jJQU {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 28px;
+        cursor: pointer;
+      }
+
+      .accordion-7jJQU {
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .accordion-header-7jJQU {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .accordion-icon-7jJQU {
+        position: absolute;
+        right: 0;
+        margin: 10px;
+        color: #162447;
+        font-weight: bold;
+      }
+
+      .accordion-header-7jJQU input[type="checkbox"],
+      input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        height: 2.1rem !important;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        margin: 0;
+        cursor: pointer;
+        border: 1px solid #4f565d;
+        background: #fff;
+        transition: background 0.3s, border-color 0.3s, outline 0.2s;
+      }
+      .accordion-header-7jJQU input[type="checkbox"]:after,
+      input[type="radio"]:after {
+        content: "";
+        display: block;
+        left: 0;
+        top: 0;
+        position: absolute;
+        transition: transform 0.3s ease, opacity 0.2s;
+      }
+      .accordion-header-7jJQU input[type="checkbox"]:checked,
+      input[type="radio"]:checked {
+        background-color: #162447;
+        border-color: #162447;
+        transition: transform 0.6s cubic-bezier(0.2, 0.85, 0.32, 1.2),
+          opacity 0.3s;
+      }
+      .accordion-header-7jJQU input[type="checkbox"]:disabled,
+      input[type="radio"]:disabled {
+        background-color: #162447;
+        border-color: #162447;
+        cursor: not-allowed;
+      }
+      .accordion-header-7jJQU input[type="checkbox"]:disabled:checked,
+      input[type="radio"]:disabled:checked {
+        background-color: #162447;
+      }
+      .accordion-header-7jJQU input[type="checkbox"]:disabled + label,
+      input[type="radio"]:disabled + label {
+        cursor: not-allowed;
+      }
+      .accordion-header-7jJQU
+        input[type="checkbox"]:hover:not(:checked):not(:disabled),
+      input[type="radio"]:hover:not(:checked):not(:disabled) {
+        border-color: #162447;
+      }
+      .accordion-header-7jJQU input[type="checkbox"]:focus-visible,
+      input[type="radio"]:focus-visible {
+        outline: 2px solid #162447;
+        outline-offset: 4px;
+      }
+      .accordion-header-7jJQU input[type="checkbox"]:not(.switch-7jJQU),
+      input[type="radio"]:not(.switch-7jJQU) {
+        width: 2.1rem;
+      }
+      .accordion-header-7jJQU input[type="checkbox"] + label,
+      input[type="radio"] + label {
+        display: inline-block;
+        cursor: pointer;
+        font-size: 1.4rem;
+        margin-left: 0.2em;
+        vertical-align: top;
+      }
+      .accordion-header-7jJQU input[type="checkbox"]:not(.switch-7jJQU) {
+        border-radius: 0.7rem;
+      }
+      .accordion-header-7jJQU input[type="checkbox"]:not(.switch-7jJQU):after {
+        border: 2px solid #fff;
+        height: 45%;
+        width: 25%;
+        border-top: 0;
+        border-left: 0;
+        left: 38%;
+        top: 20%;
+        transform: rotate(20deg);
+      }
+      .accordion-header-7jJQU
+        input[type="checkbox"]:not(.switch-7jJQU):disabled:not(:checked):after {
+        border-color: #162447;
+      }
+      .accordion-header-7jJQU
+        input[type="checkbox"]:not(.switch-7jJQU):checked:after {
+        transform: rotate(43deg);
+      }
+      input[type="checkbox"].switch-7jJQU {
+        width: 3.8rem;
+        border-radius: 1.1rem;
+      }
+      .accordion-header-7jJQU input[type="checkbox"].switch-7jJQU:after {
+        left: 5%;
+        top: 10%;
+        border-radius: 50%;
+        width: 45%;
+        height: 80%;
+        background: #4f565d;
+        transform: translateX(0);
+      }
+      .accordion-header-7jJQU
+        input[type="checkbox"].switch-7jJQU:checked:after {
+        background: #f6f8ff;
+        transform: translateX(100%);
+      }
+      .accordion-header-7jJQU
+        input[type="checkbox"].switch-7jJQU:disabled:not(:checked):after {
+        background-color: #162447;
+      }
+      .accordion-header-7jJQU input[type="radio"] {
+        border-radius: 50%;
+      }
+      .accordion-header-7jJQU input[type="radio"]:after {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: #fff;
+        transform: scale(0.7);
+      }
+      .accordion-header-7jJQU input[type="radio"]:disabled:after {
+        background: #162447;
+      }
+      .accordion-header-7jJQU input[type="radio"]:checked:after {
+        transform: scale(0.5);
+      }
+      .accordion-body-7jJQU {
+        padding: 10px;
+        display: none;
+      }
+
+      .button-box-7jJQU {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 7px;
+        margin-top: 15px;
+      }
+      .cookie-text-7jJQU {
+        font-size: 12px;
+      }
+      @media (max-width: 1024px) {
+        .floating-windows-box-7jJQU {
+          flex-direction: column;
+        }
+        .cookie-text-7jJQU {
+          width: 100% !important;
+        }
+        .button-7jJQU {
+          margin-bottom: 0px;
+          padding: 5px 15px;
+        }
+        .buttons-7jJQU button:first-child {
+          margin-top: 0px;
+        }
+      }
+      @media (max-width: 576px) {
+        .buttons-7jJQU button:nth-child(2) {
+          display: none;
+        }
+        .buttons-7jJQU {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          justify-content: center;
+        }
+        .button-7jJQU {
+          margin: 0px;
+          font-size: 11px;
+        }
+        .cookie-text-7jJQU {
+          font-size: 11px;
+        }
+      }
+      @media (max-width: 380px) {
+        .buttons-7jJQU {
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+
+    <div class="floating-windows-7jJQU" style="display: none">
+      <div class="floating-windows-box-7jJQU">
+        <div class="cookie-text-7jJQU" style="width: 100%">
+          Nuestro sitio utiliza scripts, incluidas cookies, para almacenar y
+          procesar información en su navegador. Esto puede incluir sus datos
+          personales. Utilizamos esta información para la seguridad, la mejora
+          del sitio y el marketing. Puede restringir el procesamiento
+          seleccionando solo las cookies necesarias. Al continuar utilizando el
+          sitio, usted acepta nuestra
+          <a target="_blank">política de cookies</a>.
+        </div>
+        <div class="buttons-7jJQU">
+          <button id="allow-all-cookie-7jJQU" class="button-7jJQU">
+            Aceptar todas las cookies
+          </button>
+          <button id="reject-all-7jJQU" class="button-7jJQU">
+            Rechazar todo
+          </button>
+          <button id="cookie-settings-text-7jJQU" class="button-7jJQU">
+            Configuración de cookies
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-7jJQU" class="modal-7jJQU">
+      <div class="modal-content-7jJQU">
+        <span id="modal-close-7jJQU" class="modal-close-7jJQU">×</span>
+        <h2>Configuración de cookies</h2>
+        <p>
+          Las cookies son pequeños fragmentos de datos enviados desde un sitio
+          web y almacenados en la computadora del usuario por el navegador web
+          mientras se está ejecutando. El navegador almacena cada mensaje en un
+          pequeño archivo llamado cookie. Cuando solicita otra página del
+          servidor, su navegador envía la cookie de vuelta al servidor. Las
+          cookies se han desarrollado como un mecanismo confiable que permite a
+          los sitios web recordar información o registrar la actividad del
+          usuario al navegar por las páginas.
+        </p>
+
+        <div class="accordion-7jJQU">
+          <div class="accordion-header-7jJQU">
+            <input
+              type="checkbox"
+              class="switch-7jJQU"
+              checked=""
+              disabled=""
+            />
+            <span>&nbsp; Necesario</span>
+            <span class="accordion-icon-7jJQU">∨</span>
+          </div>
+          <div class="accordion-body-7jJQU">
+            <p>
+              Cookies estrictamente necesarias: por lo general, estas cookies
+              son necesarias para el funcionamiento del sitio. Pueden ayudarle a
+              mostrar al usuario la información que necesita, personalizar su
+              experiencia y permitirle implementar y mantener características de
+              seguridad. Como regla general, sin estas cookies, el
+              funcionamiento del sitio no es posible o su funcionamiento puede
+              verse gravemente afectado.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-7jJQU">
+          <div class="accordion-header-7jJQU">
+            <input type="checkbox" class="switch-7jJQU" unchecked="" />
+            <span>&nbsp; Funcional</span>
+            <span class="accordion-icon-7jJQU">∨</span>
+          </div>
+          <div class="accordion-body-7jJQU">
+            <p>
+              Cookies funcionales: por lo general, estas cookies se utilizan
+              para mejorar las características funcionales de su sitio y
+              facilitar el uso de los usuarios. Estas cookies recuerdan la
+              configuración seleccionada por los usuarios (por ejemplo,
+              configuración de idioma y zona horaria). Con la ayuda de estos
+              archivos, los usuarios pueden evitar cambiar la configuración cada
+              vez que visitan el sitio.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-7jJQU">
+          <div class="accordion-header-7jJQU">
+            <input type="checkbox" class="switch-7jJQU" unchecked="" />
+            <span>&nbsp; Estadística</span>
+            <span class="accordion-icon-7jJQU">∨</span>
+          </div>
+          <div class="accordion-body-7jJQU">
+            <p>
+              Cookies de rendimiento: por lo general, estas cookies muestran si
+              el usuario ha visitado su sitio anteriormente. Las cookies
+              analíticas le permiten reconocer y contar el número de usuarios de
+              su sitio y ver cómo estos usuarios se mueven por su sitio.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-7jJQU">
+          <div class="accordion-header-7jJQU">
+            <input type="checkbox" class="switch-7jJQU" unchecked="" />
+            <span>&nbsp; Marketing</span>
+            <span class="accordion-icon-7jJQU">∨</span>
+          </div>
+          <div class="accordion-body-7jJQU">
+            <p>
+              Cookies de marketing, orientación y publicidad: por lo general,
+              estas cookies registran las visitas de los visitantes a su sitio,
+              las páginas que visitaron y los enlaces en los que hicieron clic.
+              Esta información se utiliza para hacer que los anuncios que se
+              muestran en ella sean más relevantes para los intereses del
+              usuario. Las cookies publicitarias permiten saber si el usuario ya
+              ha visto un anuncio concreto o un anuncio de un determinado tipo.
+            </p>
+          </div>
+        </div>
+        <div class="button-box-7jJQU">
+          <button id="save-current-settings-7jJQU" class="button-7jJQU">
+            Guardar la configuración actual
+          </button>
+          <button id="accept-all-cookies-7jJQU" class="button-7jJQU">
+            Aceptar todas las cookies y cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-12 top-block-box flex-row QOCxJ"
+          style="color: rgb(51, 51, 51)"
+        >
+          <div>
+            <i class="bi bi-calendar-week"></i> <span class="nowDate"></span>
+          </div>
+        </div>
+        <div class="col-12 center-block-box">
+          <div class="site-name flex-row">
+            <div class="site-name-first">
+              <img src="logotip.svg" alt="" />
+              <p style="margin: 0px">Trade Assure</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .container {
+        background-color: #fff;
+      }
+    </style>
+    <div class="content-page">
+      <div
+        class="container prvBlock"
+        style="
+          padding-top: 45px;
+          padding-bottom: 45px;
+          box-shadow: rgb(238, 238, 238) 0px 0px 5px;
+        "
+      >
+        <div class="privacyBlockGh">
+          <h1>Renuncia</h1>
+          <p>
+            Si necesita más información o tiene alguna pregunta sobre el
+            descargo de responsabilidad de nuestro sitio, no dude en
+            contactarnos por correo electrónico a postpsychotic@mail.es.
+          </p>
+
+          <p>
+            Toda la información en este sitio web - -
+            <span class="domaintextname-HpcAh"></span> se publica de buena fe y
+            solo con fines de información general. no ofrece ninguna garantía
+            sobre la integridad, confiabilidad y exactitud de esta información.
+            <span class="domaintextname-HpcAh"></span> Cualquier acción que tome
+            sobre la información que encuentre en este sitio web es
+            estrictamente bajo su propio riesgo.
+            <span class="domaintextname-HpcAh"></span> no será responsable de
+            ninguna pérdida y / o daño en relación con el uso de nuestro sitio
+            web.
+          </p>
+
+          <p>
+            Desde nuestro sitio web, puede visitar otros sitios web siguiendo
+            los hipervínculos a dichos sitios externos. Si bien nos esforzamos
+            por proporcionar solo enlaces de calidad a sitios web útiles y
+            éticos, no tenemos control sobre el contenido y la naturaleza de
+            estos sitios. Estos enlaces a otros sitios web no implican una
+            recomendación para todo el contenido que se encuentra en estos
+            sitios. Los propietarios del sitio y el contenido pueden cambiar sin
+            previo aviso y pueden ocurrir antes de que tengamos la oportunidad
+            de eliminar un enlace que puede haber salido "mal".
+          </p>
+
+          <p>
+            Tenga en cuenta también que cuando abandona nuestro sitio web, otros
+            sitios pueden tener diferentes políticas y términos de privacidad
+            que están fuera de nuestro control. Asegúrese de revisar las
+            Políticas de privacidad de estos sitios, así como sus "Términos de
+            servicio" antes de participar en cualquier negocio o cargar
+            cualquier información.
+          </p>
+
+          <h2>Consentimiento</h2>
+
+          <p>
+            Al utilizar nuestro sitio web, usted acepta nuestro descargo de
+            responsabilidad y acepta sus términos.
+          </p>
+
+          <h2>Actualizar</h2>
+
+          <p>
+            En caso de que actualicemos, modifiquemos o realicemos algún cambio
+            en este documento, esos cambios se publicarán de manera destacada
+            aquí.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-block-new">
+      <div class="row align-items-center">
+        <div class="col">
+          <p class="fst-italic">+34 902 22 32 23</p>
+          <p class="fst-italic">
+            Carrer de la Marina, 265, 08025 Barcelona, España
+          </p>
+          <p class="fst-italic">postpsychotic@mail.es</p>
+        </div>
+        <div class="col">
+          <p>
+            <a class="fst-italic" href="politica.html"
+              >Política de privacidad</a
+            >
+          </p>
+          <p>
+            <a class="fst-italic" href="terms.html">Términos y condiciones</a>
+          </p>
+          <p><a class="fst-italic" href="disc.html">Renuncias</a></p>
+        </div>
+        <div class="col imgFooter">
+          <img src="logotip.svg" alt="" />
+          <span class="fst-italic">Trade Assure</span>
+        </div>
+      </div>
+    </div>
+
+    <span id="randColorBox" class="#F05454"></span>
+    <span id="borderWidth" class="1px"></span>
+  </body>
+</html>
