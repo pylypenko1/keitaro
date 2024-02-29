@@ -1,2 +1,0 @@
-Clean-param: is_view&themes&mode
-Sitemap: https://kapsules.net/sitemap.xml

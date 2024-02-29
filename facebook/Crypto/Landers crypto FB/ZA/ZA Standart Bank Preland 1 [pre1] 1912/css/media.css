@@ -1,8 +1,0 @@
-@media (max-width: 1024px) {
-  .social-links,
-  .weather_link,
-  .weather-widget,
-  .weather-widget--locked {
-    display: none;
-  }
-}
