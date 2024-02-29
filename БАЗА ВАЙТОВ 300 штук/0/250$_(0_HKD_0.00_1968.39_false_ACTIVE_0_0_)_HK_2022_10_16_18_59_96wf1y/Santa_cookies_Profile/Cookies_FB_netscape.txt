@@ -1,6 +1,0 @@
-.pet-shop.jp	TRUE	/	FALSE	1674734758	__utmz	64395438.1658247414.1.1.utmcsr=l.facebook.com|utmccn=(referral)|utmcmd=referral|utmcct=/
-.facebook.com	TRUE	/	FALSE	1683538969	datr	EC6CYu1JPQ6SkLSYLsToDKtK
-.facebook.com	TRUE	/	FALSE	1675786600	c_user	739076027
-.facebook.com	TRUE	/	FALSE	1681413207	sb	EC6CYlcVLfg5IJREyHHVVMYf
-.facebook.com	TRUE	/	FALSE	1673072371	xs	30%3ABdXUH5yRCHbT5g%3A2%3A1662657184%3A-1%3A8641
-.facebook.com	TRUE	/	FALSE	1669183754	fr	0yxhSrsOGDshxYxgI.AWW3OBywZeqnx5dwWXdhka4PqP4.BjCkA7.gq.AAA.0.0.BjJfxQ.
