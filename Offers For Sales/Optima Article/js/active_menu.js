@@ -1,0 +1,1 @@
+function toggleMenu(e,n){var a=document.getElementById("m"+e),t=document.getElementById("parent_m"+e);t.className!="amenu_section_image"+n+"_nosub"&&("none"!=a.style.display?(a.style.display="none",t.className="amenu_section_image"+n+"_contracted"):(a.style.display="",t.className="amenu_section_image"+n+"_expanded"))}
