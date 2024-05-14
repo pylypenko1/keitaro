@@ -1,0 +1,499 @@
+.form input,
+body {
+    font-size: 16px
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0
+}
+
+.btn_qi,
+.button {
+    text-transform: uppercase;
+    box-sizing: border-box;
+    box-shadow: 1px 7px 10px rgba(0, 0, 0, .5)
+}
+
+.form,
+.form input,
+.iti,
+.line_box,
+.phone-eror-mess,
+.pot_wraper img,
+.select,
+img {
+    width: 100%
+}
+
+body {
+    padding: 0;
+    font-family: Inter, sans-serif
+}
+
+.iti {
+    margin-top: 10px
+}
+
+.form label,
+.iti__selected-dial-code {
+    font-size: 14px
+}
+
+* {
+    box-sizing: border-box
+}
+
+.dn {
+    display: none
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+.header {
+    padding: 15px 0
+}
+
+.header__box_logo {
+    text-align: center;
+    max-width: 191px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.about {
+    color: #fff;
+    padding: 50px 0;
+    background: url('../images/bg-main.png') center top/cover no-repeat;
+    position: relative
+}
+
+.about-logo {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    max-width: 50px
+}
+
+.about__wrapper_cont,
+.wrappeer-line {
+    position: relative
+}
+
+.about__title {
+    font-size: 20px;
+    text-transform: uppercase
+}
+
+.main_btn {
+    border: 2px solid #fff;
+    padding: 17px 12px;
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: 600;
+    border-radius: 2px;
+    display: inline-block
+}
+
+.about__content {
+    padding-top: 22px;
+    color: #014278;
+    padding-bottom: 50px
+}
+
+.about__content_titie {
+    font-size: 12px;
+    line-height: 1.3em;
+    font-weight: 400;
+    margin-bottom: 50px;
+    position: relative;
+    color: #000;
+    text-transform: uppercase
+}
+
+.about__content_titie--bold,
+.btn_qi {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center
+}
+
+.about__content_titie--bold {
+    padding-left: 0;
+    color: #000
+}
+
+.about__content p {
+    font-size: 20px;
+    line-height: 1.2em;
+    font-weight: 300
+}
+
+.btn_qi {
+    margin-top: 50px;
+    color: #fff;
+    display: block;
+    padding: 15px;
+    border: 2.24px solid #163e77;
+    background: #00325d
+}
+
+.next_clide.btn_qi {
+    margin-bottom: 40px
+}
+
+.pod {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin: 0 auto 22px;
+    text-align: center
+}
+
+.pod span {
+    border-bottom: 1px solid #0000007c
+}
+
+.pot_wraper {
+    display: flex
+}
+
+.img-pot {
+    max-width: 270px;
+    margin: 0 auto;
+    display: block
+}
+
+.footer {
+    padding: 10px 0;
+    background: url('../images/footer__bg.jpg') center top/cover no-repeat
+}
+
+.footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.footer__wrapper p {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 20px;
+    line-height: 20px
+}
+
+.wrappeer-line {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__content_titie {
+    display: flex;
+    align-items: center;
+    ;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.line_box {
+    flex-shrink: 0;
+    width: 4px;
+    height: 100%;
+}
+
+#line_box_footer {
+    width: 7px;
+}
+
+/* .about__content_titie .line_box {
+    background: url(../img/line2.png) center no-repeat
+} */
+
+#slide2 .about {
+    padding: 20px 0
+}
+
+.slide_header {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 30px 0;
+    background: url('../images/bg_quiz.png') top center/cover no-repeat;
+    margin-bottom: 20px
+}
+
+.slide_header__title {
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 20px;
+    position: relative;
+    line-height: 22px;
+    color: #002647;
+}
+
+.slide_content {
+    color: #002647;
+    padding-bottom: 50px
+}
+
+.slide_content__title {
+    padding-bottom: 30px;
+    text-align: center;
+    color: #002647;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 2%;
+    border-bottom: 1px solid #00000026
+}
+
+.box_quiz {
+    margin-top: 40px
+}
+
+.box_quiz__title {
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 14px
+}
+
+.select {
+    border: 1px solid #767676;
+    height: 43px;
+    padding: 0 30px 0 10px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 2px
+}
+
+.form,
+.form__title {
+    padding-bottom: 1.25rem
+}
+
+.button,
+.phone-eror-mess {
+    color: #fff;
+    font-size: 14px
+}
+
+.custom_select {
+    position: relative;
+    margin-bottom: 30px
+}
+
+.custom_select:after {
+    content: "▼";
+    padding: 0 8px;
+    font-size: 12px;
+    position: absolute;
+    right: 8px;
+    top: 13px;
+    z-index: 1;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+    box-sizing: border-box
+}
+
+select {
+    padding-right: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+.select.error {
+    background: #ff00005e !important;
+    border-color: red
+}
+
+.select.valid {
+    background: #0080004d !important;
+    border-color: green
+}
+
+.form__title {
+    font-weight: 500;
+    line-height: 1.2;
+    border-bottom: .115rem solid rgba(164, 164, 164, .64)
+}
+
+.form__title span {
+    color: #8c0202;
+    line-height: 1.08
+}
+
+.form {
+    display: -ms-grid;
+    display: grid;
+    gap: 1.25rem;
+    -ms-grid-row-align: center;
+    align-self: center;
+    font-weight: 400;
+    line-height: 1.08;
+    padding-top: 1.25rem
+}
+
+.input {
+    margin-top: 10px
+}
+
+.button {
+    font-family: Inter;
+    font-weight: 700;
+    border: 2.24px solid #163e77;
+    background: #00325d;
+    margin-top: 20px;
+    padding: 14px 16px
+}
+
+.form__title h3 {
+    color: #002647
+}
+
+.phone-eror-mess {
+    background-color: red;
+    text-align: center;
+    display: block
+}
+
+.footer-form {
+    text-align: center;
+    background: url(../images/footer-form.png) center/cover no-repeat;
+    padding: 30px 0
+}
+
+@media screen and (max-width:500px) {
+    .about {
+        padding: 30px 0
+    }
+    .about__content p {
+        font-size: 18px
+    }
+    .btn_qi {
+        max-width: 310px;
+        margin: 0 auto
+    }
+}
+
+@media screen and (max-width:400px) {
+    .about {
+        padding: 35px 0
+    }
+    .btn_qi {
+        margin-top: 20px
+    }
+    .slide_content {
+        padding-bottom: 30px
+    }
+    .custom_select,
+    .slide_content__title {
+        margin-bottom: 10px
+    }
+}
+
+@media (min-width:39.375em) {
+    .thanks__container {
+        padding-top: 10.625rem
+    }
+    .thanks__title {
+        font-size: 3.125rem
+    }
+    .form__title,
+    .thanks__text {
+        font-size: 1.5rem
+    }
+    .form {
+        font-size: 2.3125rem
+    }
+    .input {
+        padding: .9375rem
+    }
+    .button {
+        font-size: 2.05rem
+    }
+}
+
+@media (max-width:20em) {
+    .thanks__container {
+        padding-top: 6.25rem
+    }
+    .thanks__title {
+        font-size: 2.5rem
+    }
+    .form,
+    .form__title,
+    .thanks__text {
+        font-size: 1.25rem
+    }
+    .input {
+        padding: .625rem
+    }
+}
+
+@media (min-width:20em) and (max-width:39.375em) {
+    @supports (font-size: clamp(1.25rem, 0.9919354839rem + 1.2903225806vw, 1.5rem)) {
+        .form__title {
+            font-size: clamp(1.25rem, .9919354839rem + 1.2903225806vw, 1.5rem)
+        }
+    }
+    @supports not (font-size:clamp(1.25rem,
+    0.9919354839rem+1.2903225806vw,
+    1.5rem)) {
+        .form__title {
+            font-size: calc(1.25rem + .25 * (100vw - 20rem) / 19.375)
+        }
+    }
+    @supports (font-size:clamp(1.25rem,
+    0.1532258065rem+5.4838709677vw,
+    2.3125rem)) {
+        .form {
+            font-size: clamp(1.25rem, .1532258065rem + 5.4838709677vw, 2.3125rem)
+        }
+    }
+    @supports not (font-size:clamp(1.25rem,
+    0.1532258065rem+5.4838709677vw,
+    2.3125rem)) {
+        .form {
+            font-size: calc(1.25rem + 1.0625 * (100vw - 20rem) / 19.375)
+        }
+    }
+    @supports (padding:clamp(0.625rem,
+    0.3024193548rem+1.6129032258vw,
+    0.9375rem)) {
+        .input {
+            padding: clamp(.625rem, .3024193548rem + 1.6129032258vw, .9375rem)
+        }
+    }
+    @supports not (padding:clamp(0.625rem,
+    0.3024193548rem+1.6129032258vw,
+    0.9375rem)) {
+        .input {
+            padding: calc(.625rem + .3125 * (100vw - 20rem)/ 19.375)
+        }
+    }
+}

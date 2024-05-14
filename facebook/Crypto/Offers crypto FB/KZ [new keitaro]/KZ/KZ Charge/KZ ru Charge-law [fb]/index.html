@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Главная | «СТАТУС» " />
+    <meta
+      property="og:description"
+      content="«СТАТУС» – первое экспертное сообщество, которое узко специализируется именно на возврате денег"
+    />
+    <meta property="og:type" content="website" />
+    <title>«СТАТУС»</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="fav.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <style>
+      .specialists2 {
+        background-image: url(images/specialists-bgS.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 45px 0;
+        color: #ededed;
+      }
+      .steps2 {
+        background-image: url(images/specialists-bgS.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .order__heading2 {
+        margin-top: 0;
+        color: brown;
+      }
+      .order__text2 {
+        color: #a52a2a;
+        font-size: 20px;
+        font-family: 'roboto-light', Arial, sans-serif;
+        line-height: 1.55;
+        margin: 25px 0;
+      }
+      .top-section {
+        min-height: 100vh;
+        background-image: linear-gradient(to bottom, rgba(0, 13, 36, 0.25), rgba(1, 15, 36, 0.25)),
+          url(images/top-bgS.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        padding-top: 65px;
+        padding-bottom: 40px;
+      }
+      .form__title {
+        font-family: 'Times New Roman', serif;
+        font-weight: 400;
+        line-height: 1.2;
+        font-size: 26px;
+        color: #202020;
+      }
+      @media screen and (min-width: 768px) {
+        .form__title {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .form__title {
+          font-size: 32px;
+          margin-bottom: 18px;
+        }
+      }
+
+      .form__sub-title {
+        line-height: 1.2;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 20px;
+        margin-bottom: 22px;
+        color: #ff0000;
+      }
+      @media screen and (min-width: 768px) {
+        .form__sub-title {
+          font-size: 14px;
+          margin-bottom: 31px;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .form__sub-title {
+          font-size: 16px;
+          margin-bottom: 44px;
+        }
+      }
+
+      .form__block {
+        text-align: center;
+        width: 100%;
+        padding: 33px 18px 38px;
+        background-color: #fffdee;
+      }
+      @media screen and (min-width: 768px) {
+        .form__block {
+          width: 320px;
+          z-index: 2;
+          padding: 33px 18px 38px;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .form__block {
+          width: 406px;
+          padding: 33px 27px 38px;
+        }
+      }
+
+      .form__block-mob {
+        display: none;
+      }
+      @media screen and (min-width: 768px) {
+        .form__block-mob {
+          display: block;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .form__block-mob {
+          display: block;
+        }
+      }
+
+      .form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+      }
+      @media screen and (min-width: 768px) {
+        .form {
+          gap: 25px;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .form {
+          gap: 43px;
+        }
+      }
+
+      .forma__input {
+        border: 1px solid #c79002;
+        border-radius: 10px;
+        margin-top: 9px;
+        margin-bottom: 9px;
+        outline: rgba(0, 0, 0, 0);
+        padding: 20px 12px;
+        width: 290px;
+        height: 53px;
+        font-family: 'Times New Roman', serif;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+        background-color: transparent;
+        color: #808080;
+      }
+      @media screen and (min-width: 768px) {
+        .forma__input {
+          width: 282px;
+          height: 53px;
+          font-size: 16px;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .forma__input {
+          width: 351px;
+          height: 64px;
+          font-size: 20px;
+        }
+      }
+
+      .form__button {
+        background-color: #4382e0;
+        border: 1px solid #f3c653;
+        border-radius: 2px;
+        padding: 16px 19px;
+        margin-top: 9px;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: center;
+        color: #ffffff;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+          color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .form__button:hover,
+      .form__button:focus {
+        background-color: #000000;
+        border: 1px solid #f3c653;
+        color: #fff;
+      }
+      @media screen and (min-width: 768px) {
+        .form__button {
+          font-size: 14px;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .form__button {
+          font-size: 20px;
+        }
+      }
+      .about__text2 {
+        line-height: 31px;
+        font-family: 'roboto-light', Helvetica;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      .footer2 {
+        background-color: #111111;
+        padding: 25px 0;
+      }
+
+      .footer.container2 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .footer__section2 {
+        flex: 0 1 15%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer__section2 a {
+        text-decoration: none;
+        margin-bottom: 20px;
+      }
+
+      .footer__section.logo2 {
+        width: 120px;
+        height: 49px;
+        object-fit: cover;
+        display: block;
+        margin-bottom: 3px;
+        margin-bottom: 20px;
+      }
+
+      .footer__social2 img {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+        display: inline;
+      }
+
+      .footer__social2 + .footer__social2 {
+        margin-left: 5px;
+      }
+
+      .section__label2 {
+        color: #525252;
+        font-size: 16px;
+        font-family: 'Arial', sans-serif;
+        line-height: 1.55;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .footer.copyright2 {
+        color: #525252;
+        font-size: 12px;
+        font-family: 'Arial', sans-serif;
+        line-height: 1.55;
+        margin-top: 25px;
+      }
+
+      .footer__section2 a {
+        color: #ffffff;
+        font-size: 14px;
+        font-family: 'Arial', sans-serif;
+        line-height: 2;
+      }
+      .keyword2 {
+        color: yellow;
+      }
+      .keyword3 {
+        color: #052555;
+        margin-bottom: 20px;
+        margin-left: 15px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.6;
+        text-align: left;
+      }
+      .keyword4 {
+        color: #052555;
+        margin-bottom: 20px;
+        margin-left: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.6;
+        text-align: left;
+      }
+      .keyword-light2 {
+        color: yellow;
+      }
+      .top-section__buttons {
+        display: flex;
+        gap: 20px;
+      }
+
+      .consult2,
+      .more2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .consult2 {
+        width: 248px;
+        height: 52px;
+        color: #ffffff;
+        font-size: 15px;
+        line-height: 1.55;
+        font-weight: 400;
+        border-width: 1px;
+        border-radius: 3px;
+        background-color: #5199ff;
+        background-position: center center;
+        border-color: transparent;
+        border-style: solid;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+          border-color 0.2s ease-in-out;
+        box-shadow: 0px 8px 20px 0px rgba(81, 153, 255, 0.5);
+      }
+
+      .more2 {
+        width: 164px;
+        height: 52px;
+        color: #ffffff;
+        font-size: 15px;
+        line-height: 1.55;
+        font-weight: 400;
+        border-width: 1px;
+        border-radius: 3px;
+        background-color: #000000;
+        background-position: center center;
+        border-color: #5199ff;
+        border-style: solid;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+          border-color 0.2s ease-in-out;
+        box-shadow: 0px 8px 20px 0px rgba(81, 153, 255, 0.5);
+      }
+      .container2 {
+        max-width: 1200px;
+        height: 780px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 160px;
+      }
+      .modal-form-wrapper2 {
+        max-width: 440px;
+        width: 90%;
+        position: absolute;
+        margin: 100px 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        box-shadow: 0 0 120px 0 rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        display: block;
+        margin: 20 auto;
+        margin-top: 240px;
+      }
+      .spesialists__prof2 {
+        color: #ffffff;
+        font-size: 16px;
+        font-family: 'roboto-regular', Arial, sans-serif;
+        text-align: center;
+        line-height: 25px;
+      }
+      .slider2 {
+        position: relative;
+        padding-top: 35px;
+        padding-bottom: 35px;
+      }
+      .arrow2 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(232, 232, 232, 1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+      .arrow2 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(232, 232, 232, 1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+
+      .arrow2 svg {
+        width: 10px;
+        height: 10px;
+      }
+
+      .arrow.prev2 {
+        left: -90px;
+        transform: translateY(-50%) rotate(-180deg);
+      }
+
+      .arrow.next2 {
+        right: -90px;
+      }
+
+      .slider__list2 {
+        display: none;
+        opacity: 0;
+      }
+
+      .slider__list.active2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .slider__item2 {
+        flex: 1 1 16.6%;
+        text-align: center;
+        user-select: none;
+      }
+
+      .slider__item2 img {
+        display: inline;
+        max-width: 140px;
+        width: 100%;
+      }
+      .modal-form-banner {
+        border-radius: 20px 20px 0 0; /* Устанавливаем радиус скругления углов в 15 пикселей */
+      }
+      .reviews__text2 {
+        color: #052555;
+        margin-bottom: 20px;
+        margin-left: 15px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.6;
+        text-align: left;
+      }
+      .nav__logo2 img {
+        width: 280px;
+        height: 110px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- preloader -->
+    <div id="loader" style="display: none">
+      <img src="images/preloader.svg" alt="Preloader" />
+    </div>
+    <!-- preloader end -->
+    <header class="header" style="padding: 0;">
+      <nav class="nav">
+        <div class="container">
+          <a class="nav__logo2" style="display: block; margin: 0 auto">
+            <img src="images/statuslogo.png" alt="logo" />
+          </a>
+        </div>
+      </nav>
+    </header>
+    <section class="top-section" id="target-section">
+      <div class="container2"></div>
+      <div class="modal-form-wrapper2">
+        <img src="images/modal-bannerS.jpg" alt="alt" class="modal-form-banner" />
+        <div class="modal-form-inner-wrapper">
+          <h2 class="modal-form-heading">
+            <span class="keyword">ВОЗВРАТ СРЕДСТВ</span> ПОТЕРЯННЫХ ИЗ-ЗА БРОКЕРОВ-МОШЕННИКОВ!
+          </h2>
+          <p class="modal-form-desc">Оставьте заявку для бесплатной консультации</p>
+          <form class="form" method="POST" name="contact-form">
+            <div class="form-pole">
+              <input
+                type="text"
+                name="firstName"
+                id="user-name"
+                class="forma__input"
+                placeholder="Имя"
+              />
+              <input
+                type="text"
+                name="lastName"
+                id="user-name"
+                class="forma__input"
+                placeholder="Фамилия"
+              />
+              <input type="text" name="phone" id="phone" class="forma__input" />
+
+              <button type="submit" class="form__button">Получить консультацию</button><br /><br />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="team">
+      <div class="container slider">
+        <div class="slider__list active fade-in">
+          <div class="slider__item">
+            <img src="images/slide1S.png" alt="alt" />
+          </div>
+          <div class="slider__item">
+            <img src="images/slide2S.png" alt="alt" />
+          </div>
+          <div class="slider__item">
+            <img src="images/slide3S.png" alt="alt" />
+          </div>
+          <div class="slider__item">
+            <img src="images/slide4S.png" alt="alt" />
+          </div>
+          <div class="slider__item">
+            <img src="images/slide5S.png" alt="alt" />
+          </div>
+          <div class="slider__item">
+            <img src="images/slide6S.png" alt="alt" />
+          </div>
+          <div class="slider__item">
+            <img src="images/slide7S.png" alt="alt" />
+          </div>
+          <div class="slider__item">
+            <img src="images/slide8S.png" alt="alt" />
+          </div>
+          <div class="slider__item">
+            <img src="images/slide9S.png" alt="alt" />
+          </div>
+          <div class="slider__item">
+            <img src="images/slide10S.png" alt="alt" />
+          </div>
+          <div class="slider__item">
+            <img src="images/slide11S.png" alt="alt" />
+          </div>
+          <div class="slider__item">
+            <img src="images/slide12S.png" alt="alt" />
+          </div>
+        </div>
+      </div>
+      <div class="container about" id="howworks">
+        <div>
+          <h2 class="about__heading subheading text-center">ПРИНЦИП РАБОТЫ КОМПАНИИ</h2>
+          <p class="about__text2">
+            <br /><span class="keyword4">Компания «СТАТУС»</span> – экспертное сообщество, которое
+            узко специализируется на возврате средств из недобросовестных инвестиционных или
+            брокерских компаний, букмекерских контор и финансовых пирамид. Официальная регистрация
+            гарантирует строгое соблюдение требований законов. Готовим документацию для банков,
+            взаимодействуем с контролирующими органами, занимаемся поиском платежей.
+            <br /><br /><span class="keyword4"
+              >Наша компания работает без предоплаты, поэтому вы можете быть уверены в том, что наши
+              специалисты будут нацелены только на то, чтобы вернуть утерянные средства.</span
+            >
+          </p>
+        </div>
+        <div>
+          <iframe
+            id="youtubeiframe-457250135-1632475670077"
+            class="t-iframe loaded"
+            width="100%"
+            height="100%"
+            data-original="https://www.youtube.com/embed/CHc3dA-KUig?"
+            frameborder="0"
+            allowfullscreen=""
+            data-flag-inst="lazy"
+            src="https://www.youtube.com/embed/CHc3dA-KUig?"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <section class="specialists2" id="specialists">
+      <div class="container" id="#1">
+        <h2 class="specialists__heading subheading">
+          КОМАНДА НАШИХ <span class="keyword2">СПЕЦИАЛИСТОВ</span>
+        </h2>
+        <br />
+        <div class="spesialists__list">
+          <div class="specialists__item">
+            <img src="images/spec1.png" alt="alt" class="specialists__img" />
+            <p class="specialists__name">Амир Ахмедов</p>
+            <p class="spesialists__prof2">
+              Старший юрист, Адвокат уголовного права, специалист платежных систем и международных
+              переводов, эксперт банковского сектора.
+            </p>
+          </div>
+          <div class="specialists__item">
+            <img src="images/spec2.png" alt="alt" class="specialists__img" />
+            <p class="specialists__name">Камилла Бекташева</p>
+            <p class="spesialists__prof2">
+              Юрист высшей категории. Специалист Blockchain технологий. Эксперт криптовалютного
+              рынка.
+            </p>
+          </div>
+          <div class="specialists__item">
+            <img src="images/spec3.png" alt="alt" class="specialists__img" />
+            <p class="specialists__name">Фархат Хамзин</p>
+            <p class="spesialists__prof2">
+              Следователь биржевой комиссии. Юрист международного уголовного права.
+            </p>
+          </div>
+          <div class="specialists__item">
+            <img src="images/spec4.png" alt="alt" class="specialists__img" />
+            <p class="specialists__name">Малика Мирзокулова</p>
+            <p class="spesialists__prof2">
+              Адвокат. Специалист платежных систем и международных переводов, эксперт банковского
+              сектора.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container results">
+        <h2 class="results__heading subheading"><span class="keyword2">РЕЗУЛЬТАТЫ</span> РАБОТЫ</h2>
+        <div class="results__list">
+          <div class="result__item">
+            <h3 class="result__header">Вернули 546 230 $</h3>
+            <div class="line"></div>
+            <p class="result__desc">
+              Наши эксперты работают каждый день, возвращая огромные суммы средств их законным
+              владельцам.
+            </p>
+          </div>
+          <div class="result__item">
+            <h3 class="result__header">Быстродействие</h3>
+            <div class="line"></div>
+            <p class="result__desc">
+              Сразу после Вашего обращения, мы начинаем немедленно действовать, поэтому срок
+              возврата минимальный.
+            </p>
+          </div>
+          <div class="result__item">
+            <h3 class="result__header">Гарантии</h3>
+            <div class="line"></div>
+            <p class="result__desc">
+              Индивидуальный подход к каждому делу увеличивает шанс возврата. Вы платите по факту
+              результата.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hints" id="hints">
+      <h2 class="hints__heading subheading show-sm">КАК РАСПОЗНАТЬ ОБМАН?</h2>
+      <div class="container">
+        <div class="hints__left-block">
+          <h2 class="hints__heading subheading hide-sm">КАК РАСПОЗНАТЬ ОБМАН?</h2>
+          <br />
+          <ul class="hints__list">
+            <li class="hints__item">
+              <h3>Площадка не выводит деньги</h3>
+              <p>После запроса на вывод средств, просят совершить дополнительные платежи.</p>
+            </li>
+            <li class="hints__item">
+              <h3>Не работает платформа</h3>
+              <p>
+                Сайт или приложение через которое вы работали стали недоступным для использования.
+              </p>
+            </li>
+            <li class="hints__item">
+              <h3>Мошенник пропал с деньгами</h3>
+              <p>
+                Мошенник забрал Ваши вложения и скрылся. Не отвечает на любые попытки установить
+                контакт.
+              </p>
+            </li>
+          </ul>
+          <p class="hints__text">
+            Если Вы попали в подобную ситуацию - нужно срочно обращаться за помощью! Чем раньше мы
+            начнем действовать - тем выше шанс вернуть все средства.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="steps2" id="#steps">
+      <div class="container">
+        <h2 class="steps__heading subheading">
+          <span class="keyword2">ЭТАПЫ</span> ВОЗВРАТА СРЕДСТВ
+        </h2>
+        <ul class="steps__list">
+          <li class="steps__item">
+            <img src="images/steps1.svg" alt="alt" class="steps__ico" />
+            <h4 class="steps__item-heading">Бесплатная консультация</h4>
+            <p class="steps__text">
+              Выясняем обстоятельства обмана. Изучаем документацию. Устанавливаем сроки работы.
+            </p>
+          </li>
+          <li class="steps__item">
+            <img src="images/steps2.svg" alt="alt" class="steps__ico" />
+            <h4 class="steps__item-heading">Сбор информации</h4>
+            <p class="steps__text">
+              Собираем доступную информацию про компанию-мошенника. Делаем запросы в финансовые
+              инстанции.
+            </p>
+          </li>
+          <li class="steps__item">
+            <img src="images/steps3.svg" alt="alt" class="steps__ico" />
+            <h4 class="steps__item-heading">Процедура Чарджбэк</h4>
+            <p class="steps__text">
+              Наши компании-партнеры возвращают нам ваши деньги и отправляем в суд дело мошенника.
+            </p>
+          </li>
+          <li class="steps__item">
+            <img src="images/steps4.svg" alt="alt" class="steps__ico" />
+            <h4 class="steps__item-heading">Передача средств</h4>
+            <p class="steps__text">
+              Передаем Вам все средства. Вы оплачиваете минимальную комиссию за возврат.
+            </p>
+          </li>
+          <div class="steps__dots">
+            <img src="images/dash.png" alt="alt" />
+            <img src="images/dash.png" alt="alt" />
+            <img src="images/dash.png" alt="alt" />
+          </div>
+        </ul>
+      </div>
+    </section>
+    <section class="reviews" id="reviews">
+      <h2 class="reviews__heading subheading">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+      <br />
+      <div class="reviews__list">
+        <div class="reviews__item">
+          <iframe
+            id="youtubeiframe-457250143-1650190069802"
+            class="t-iframe loaded"
+            width="100%"
+            height="291px"
+            data-original="https://www.youtube.com/embed/Jt2cpb3T6jw?"
+            frameborder="0"
+            allowfullscreen=""
+            data-flag-inst="lazy"
+            src="https://www.youtube.com/embed/Jt2cpb3T6jw?"
+          ></iframe>
+          <p class="reviews__name">Марина Шувалова</p>
+          <span class="reviews__from"> Клиент из <span class="keyword-light">Астана</span> </span>
+
+          <div class="reviews__text2">
+            <br />Марина инвестировала 35.000$. Аналитик "HQ Broker" неоднократно навязывал кредиты,
+            страховку. Когда клиент захотел вывести деньги, его обязали оплатить налог.
+            <br />Пострадавшая отказалась, и ей заблокировали счет. После чего брокер перестал
+            выходить на связь. <br /><br /><span class="keyword3">Предпринятые действия:</span
+            ><br /><br />
+            • Подготовительная робота<br />
+            • Претензия в компанию<br />
+            • Расторжение договора с брокерской компанией<br />
+            • Заявление на чарджбэк<br />
+            <br />
+            <span class="keyword3">Результат:</span><br /><br />Полный возврат средств<br />в сумме
+            35.000$ («HALYK BANK» Visa)
+          </div>
+        </div>
+        <div class="reviews__item">
+          <iframe
+            id="youtubeiframe-457250143-1650190511295"
+            class="t-iframe loaded"
+            width="100%"
+            height="291px"
+            data-original="https://www.youtube.com/embed/lzuC3oGfhvM?"
+            frameborder="0"
+            allowfullscreen=""
+            data-flag-inst="lazy"
+            src="https://www.youtube.com/embed/lzuC3oGfhvM?"
+          ></iframe>
+          <p class="reviews__name">Иван Кудрявцев</p>
+          <span class="reviews__from"> Клиент из <span class="keyword-light">Алматы</span> </span>
+
+          <div class="reviews__text2">
+            <br />Размер инвестиций Ивана составил 7.000$. Работал с аналитиком через торговую
+            платформу. Просили скачать AnyDesk, чтобы показывать, что и как работает. После
+            пополнения счета - доступ в личный кабинет был заблокирован.<br /><br />
+            <span class="keyword3">Предпринятые действия:</span><br /><br />
+            • Сбор доказательной базы<br />
+            • Направление претензии в компанию<br />
+            • Направление расторжения в компанию<br />
+            • Заявление о спорной операции в банк<br /><br />
+            <span class="keyword3">Результат:</span><br /><br />
+            Полный возврат в сумме 7.000$ («Сбербанк» Visa)
+          </div>
+        </div>
+        <div class="reviews__item">
+          <iframe
+            id="youtubeiframe-457250143-1650188553240"
+            class="t-iframe loaded"
+            width="100%"
+            height="291px"
+            data-original="https://www.youtube.com/embed/JVc5TjFEUpU?"
+            frameborder="0"
+            allowfullscreen=""
+            data-flag-inst="lazy"
+            src="https://www.youtube.com/embed/JVc5TjFEUpU?"
+          ></iframe>
+          <p class="reviews__name">Сергей Троицкий</p>
+          <span class="reviews__from">
+            Клиент из <span class="keyword-light">Караганда</span>
+          </span>
+
+          <div class="reviews__text2">
+            <br />Сергей инвестировал 12.000$ в Marret Invest. Одновременно работали 3 трейдера.
+            Звонили по Skype, говорили какие сделки открывать. Требовали оплатить страховку.<br />Сделки
+            корректировались без ведома клиента. Не успел вывести деньги, счет заблокирован.
+            <br /><br />
+            <span class="keyword3">Предпринятые действия:</span><br /><br />
+            • Сбор доказательной базы<br />
+            • Направление претензии брокеру<br />
+            • Ведение переговоров с брокером<br />
+            • Расторжение договора с брокерской компанией<br />
+            • Заявление на чарджбэк<br /><br />
+            <span class="keyword3">Результат:</span><br /><br />
+            Полный возврат в сумме 12.000$ («KASPI BANK» Visa)
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer2" id="footer">
+      <div class="container">
+        <div class="footer__section2">
+          <a>
+            <img src="images/statuslogo.png" alt="alt" class="logo" width="290" height="100" />
+          </a>
+          <div class="modal-open">
+            <a class="footer__social2">
+              <img src="images/fb.svg" alt="alt" />
+            </a>
+            <a class="footer__social2">
+              <img src="images/yt.svg" alt="alt" />
+            </a>
+            <a class="footer__social2">
+              <img src="images/inst.svg" alt="alt" />
+            </a>
+          </div>
+          <p class="copyright">© 2023 «СТАТУС»</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="overlay">
+      <button class="overlay__close-button">
+        <svg
+          role="presentation"
+          class="t-popup__close-icon"
+          width="23px"
+          height="23px"
+          viewBox="0 0 23 23"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd">
+            <rect
+              transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) "
+              x="10.3137085"
+              y="-3.6862915"
+              width="2"
+              height="30"
+            ></rect>
+            <rect
+              transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) "
+              x="10.3137085"
+              y="-3.6862915"
+              width="2"
+              height="30"
+            ></rect>
+          </g>
+        </svg>
+      </button>
+
+      <div class="overlay-quiz">
+        <button class="overlay__close-button quiz-close">
+          <svg
+            role="presentation"
+            class="t-popup__close-icon"
+            width="23px"
+            height="23px"
+            viewBox="0 0 23 23"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd">
+              <rect
+                transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) "
+                x="10.3137085"
+                y="-3.6862915"
+                width="2"
+                height="30"
+              ></rect>
+              <rect
+                transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) "
+                x="10.3137085"
+                y="-3.6862915"
+                width="2"
+                height="30"
+              ></rect>
+            </g>
+          </svg>
+        </button>
+        <div class="quiz-wrapper quiz">
+          <div class="quiz__top-bar">
+            <div class="quiz__instruction t862__quiz-description">
+              Чтобы узнать вероятность возврата средств, пройдите опрос.
+              <svg
+                role="presentation"
+                version="1.1"
+                id="Слой_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 100 100"
+                style="enable-background: new 0 0 100 100"
+                xml:space="preserve"
+              >
+                <rect x="27.5" y="4.1" class="st61" width="56.5" height="73.5"></rect>
+                <line class="st61" x1="41.5" y1="22.1" x2="70.6" y2="22.1"></line>
+                <line class="st61" x1="41.5" y1="38.8" x2="70.6" y2="38.8"></line>
+                <line class="st61" x1="41.5" y1="55.5" x2="70.6" y2="55.5"></line>
+                <polyline
+                  class="st61"
+                  points="66.4,77.6 66.4,95.6 9.8,95.6 9.8,22.1 27.5,22.1 "
+                ></polyline>
+              </svg>
+            </div>
+            <span class="quiz__step-count"> </span>
+          </div>
+          <div class="quiz__progress-bar">
+            <div class="quiz__progress-bar-percent"></div>
+          </div>
+          <div class="quiz__body">
+            <div class="quiz__step" data-id="0" style="display: block">
+              <div>
+                <h3 class="quiz__question subheading">Укажите где Вы потеряли деньги?</h3>
+                <div class="quiz__thubms">
+                  <div>
+                    <img src="images/quiz1.png" alt="alt" class="active thumb" />
+                    <img src="images/quiz-check.svg" alt="alt" class="active-thumb-mark" />
+                    <p>Брокер</p>
+                  </div>
+                  <div>
+                    <img src="images/quiz2.jpg" alt="alt" class="thumb" />
+                    <img src="images/quiz-check.svg" alt="alt" class="active-thumb-mark" />
+                    <p>Финансовая пирамида</p>
+                  </div>
+                  <div>
+                    <img src="images/quiz3.jpg" alt="alt" class="thumb" />
+                    <img src="images/quiz-check.svg" alt="alt" class="active-thumb-mark" />
+                    <p>Букмекер</p>
+                  </div>
+                  <div>
+                    <img src="images/quiz4.webp" alt="alt" class="thumb" />
+                    <img src="images/quiz-check.svg" alt="alt" class="active-thumb-mark" />
+                    <p>Другое</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__step" data-id="1">
+              <div>
+                <h3 class="quiz__question subheading">Какая сумма потерь? (€)</h3>
+                <div class="value">1000 €</div>
+                <input
+                  type="range"
+                  id="volume"
+                  name="volume"
+                  min="1000"
+                  max="20000"
+                  step="500"
+                  value="1000"
+                />
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 5px;
+                    font-weight: 300;
+                    font-size: 12px;
+                  "
+                >
+                  <span>1000</span><span>20000</span>
+                </div>
+              </div>
+            </div>
+            <div class="quiz__step" data-id="2">
+              <div>
+                <div class="modal-form-inner-wrapper"></div>
+              </div>
+            </div>
+            <div class="quiz__control">
+              <button class="quiz__button back">Назад</button>
+              <button class="quiz__button next">Далее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="js/jquery.js"></script>
+      <!-- <script src="js/main1.js"></script> -->
+
+      <style>
+        body .overlay #phone {
+          padding-left: 110px !important;
+        }
+      </style>
+
+      <script src="js/player.js"></script>
+      <link rel="stylesheet" href="css/turn-sound.css" />
+      <script src="js/turn-sound.js"></script>
+
+      <script src="js/imask.js"></script>
+      <script src="js/script.js"></script>
+
+      <!-- Validate.js -->
+      <script src="js/validate.min.js"></script>
+
+      <!-- JS-Adapter -->
+      <script src="js/jsAdapter.js"></script>
+      <script src="js/pixelInitPageView.js"></script>
+    </div>
+  </body>
+</html>
