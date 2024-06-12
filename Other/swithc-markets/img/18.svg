@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="79px" height="108px" viewBox="0 0 79 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Combined Shape</title>
+    <defs>
+        <linearGradient x1="24.4020355%" y1="1.44372889%" x2="76.3590716%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#04D189" offset="0%"></stop>
+            <stop stop-color="#0FC5A4" offset="51.9372889%"></stop>
+            <stop stop-color="#1991FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-/-Switch-Markets-/-Homepage" transform="translate(-801.000000, -1309.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="price-section" transform="translate(322.000000, 926.000000)">
+                <g id="Pro-account-Copy" transform="translate(373.000000, 189.000000)">
+                    <g id="Group-36-Copy-2" transform="translate(106.000000, 194.000000)">
+                        <path d="M39.1376953,0 C63.5898438,0 78.4179688,20.6738281 78.4179688,53.8945312 L78.4179688,53.8945312 L78.4179688,54.0371094 C78.4179688,87.2578125 63.5898438,108.00293 39.1376953,108.00293 C14.6855469,108.00293 0,87.2578125 0,54.0371094 L0,54.0371094 L0,53.8945312 C0,20.6738281 14.6855469,0 39.1376953,0 Z M39.1376953,14.9707031 C26.0205078,14.9707031 18.5351562,29.5136719 18.5351562,53.8945312 L18.5351562,53.8945312 L18.5351562,54.0371094 C18.5351562,78.4179688 26.0205078,93.1035156 39.1376953,93.1035156 C52.2548828,93.1035156 59.8828125,78.4179688 59.8828125,54.0371094 L59.8828125,54.0371094 L59.8828125,53.8945312 C59.8828125,29.5136719 52.2548828,14.9707031 39.1376953,14.9707031 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

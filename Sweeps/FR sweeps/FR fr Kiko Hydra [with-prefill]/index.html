@@ -259,8 +259,7 @@
 					<h1 class="main-product-info__title"><b>Ensemble de lèvres Hydra 3D Kiko Milano</b>
 					</h1>
 					<div class="prices-block">
-						<span class="prices-block__old">29€</span>
-						<span class="prices-block__new">3€</span>
+						<span class="prices-block__new">2£</span>
 					</div>
 					<div class="text-block">
 						<p class="text-block__paragraph"><b>Gloss à lèvres apaisant - Kiko Milano 3D Hydra Lipgloss</b>
@@ -481,16 +480,14 @@
 			<div class="basket-tab">
 				<div class="order-form-wrp">
 					<div class="order-form-left-side">
-						<form class="cart-form" action="https://{trackingdomain}/click/">
-							<input type="hidden" name="fbpixel" value="{lander.param:fbpixel}" />
-							<input type="hidden" name="origin" value="{origin}" />
-							<input id="countryCodeHiddenField" type="hidden" name="country_code" value="+33">
+						<form class="cart-form"  id="cart-form">
+
 							<div class="order-form-item">
 								<span class="order-form-item__name">Livraison</span>
 								<div class="order-form-item__fields">
 									<div class="form-group">
 										<label>Ville</label>
-										<div class="input mt-1"><input name="city" class="" type="text" data-role="input"
+										<div class="input mt-1"><input name="city" id="city" class="" type="text" data-role="input"
 												data-validate="custom=validateNameFamily" data-role-input="true" required>
 											<div class="button-group"><button class="button input-clear-button" tabindex="-1"
 													type="button"><span class="default-icon-cross"></span></button></div>
@@ -498,7 +495,7 @@
 									</div>
 									<div class="form-group">
 										<label>Adresse</label>
-										<div class="input mt-1"><input name="address" class="" type="text" data-role="input"
+										<div class="input mt-1"><input name="address" id="address" class="" type="text" data-role="input"
 												data-validate="custom=validateNameFamily" data-role-input="true" required>
 											<div class="button-group"><button class="button input-clear-button" tabindex="-1"
 													type="button"><span class="default-icon-cross"></span></button></div>
@@ -506,7 +503,7 @@
 									</div>
 									<div class="form-group">
 										<label>Code postal ou ZIP</label>
-										<div class="input mt-1"><input name="zip" class="" type="text" data-role="input"
+										<div class="input mt-1"><input name="zip" id="zip" class="" type="text" data-role="input"
 												data-validate="minlength=4" data-role-input="true" required>
 											<div class="button-group"><button class="button input-clear-button" tabindex="-1"
 													type="button"><span class="default-icon-cross"></span></button></div>
@@ -585,7 +582,7 @@
 								<div class="order-form-item__fields">
 									<div class="form-group">
 										<label>Prénom</label>
-										<div class="input mt-1"><input name="name" class="" type="text" data-role="input"
+										<div class="input mt-1"><input name="name" id="firstName" class="" type="text" data-role="input"
 												data-validate="minlength=8" data-role-input="true" required>
 											<div class="button-group"><button class="button input-clear-button" tabindex="-1"
 													type="button"><span class="default-icon-cross"></span></button></div>
@@ -593,7 +590,7 @@
 									</div>
 									<div class="form-group">
 										<label>Nom de famille</label>
-										<div class="input mt-1"><input name="family" class="" type="text" data-role="input"
+										<div class="input mt-1"><input name="family" id="lastName" class="" type="text" data-role="input"
 												data-validate="minlength=8" data-role-input="true" required>
 											<div class="button-group"><button class="button input-clear-button" tabindex="-1"
 													type="button"><span class="default-icon-cross"></span></button></div>
@@ -603,7 +600,7 @@
 										<label>Numéro de téléphone</label>
 										<div class="input country-input mt-1">
 											<span class="country-input__value">+33</span>
-											<input id="phoneInput" class="js-phone-input" class="" type="text" data-role="input"
+											<input id="phone" class="js-phone-input" class="" type="text" data-role="input"
 												data-validate="minlength=9" data-role-input="true" required name="phone">
 											<div class="button-group">
 												<button class="button input-clear-button" tabindex="-1" type="button"><span
@@ -644,7 +641,7 @@
 									</div>
 									<div class="form-group">
 										<label>E-Mail</label>
-										<div class="input"><input name="email" type="text" data-role="input" data-validate="email"
+										<div class="input"><input name="email" id="email" type="text" data-role="input" data-validate="email"
 												data-role-input="true" class="js-email-input" required>
 											<div class="button-group"><button class="button input-clear-button" tabindex="-1"
 													type="button"><span class="default-icon-cross"></span></button></div>
@@ -653,9 +650,9 @@
 								</div>
 							</div>
 							<div class="buttons" style="width: 100%;">
-								<button class="order-footer__button-next btn normal js-submit-button" type="submit">
+								<a class="order-footer__button-next btn normal js-submit-button" href="#" id="submitLink" onclick="collectFormData(event)">
 									Aller à la caisse
-								</button>
+								</a>
 								<style>
 									.js-submit-button.disable {
 										opacity: 0.3;
@@ -663,6 +660,8 @@
 									}
 								</style>
 							</div>
+                            <span id="brandName" style="display: none;">Kiko</span>
+                            <span id="productName" style="display: none;">Hydra 3D Kiko Milano</span>
 						</form>
 					</div>
 					<div class="order-form-right-side">
@@ -674,8 +673,7 @@
 								<span class="order-item__name">Ensemble de lèvres Hydra 3D Kiko Milano
 								</span>
 								<div class="order-item__price-row">
-									<span class="order-item__old-price">29€</span>
-									<span class="order-item__new-price">3€</span>
+									<span class="order-item__new-price">2£</span>
 								</div>
 							</div>
 						</div>
@@ -684,7 +682,7 @@
 							<ul class="order-details-list">
 								<li class="order-details-list__item">
 									<span class="order-details-list__name">Precio del pedido</span>
-									<span class="order-details-list__value">3€</span>
+									<span class="order-details-list__value">2£</span>
 								</li>
 								<li class="order-details-list__item">
 									<span class="order-details-list__name">Entrega</span>
@@ -692,7 +690,7 @@
 								</li>
 								<li class="order-details-list__item all">
 									<span class="order-details-list__name">Total</span>
-									<span class="order-details-list__value">3€</span>
+									<span class="order-details-list__value">2£</span>
 								</li>
 							</ul>
 						</div>
@@ -1859,7 +1857,7 @@
 		});
 
 		$('.cart-form').submit(function () {
-			var inputField = $('#phoneInput');
+			var inputField = $('#phone');
 
 			var inputValue = inputField.val().replace(/[^0-9]/g, '');
 			inputField.val(inputValue);
@@ -1868,6 +1866,35 @@
 
 
 	</script>
+
+<script>
+    function collectFormData(event) {
+      event.preventDefault();
+
+      var form = document.getElementById('cart-form');
+
+      var firstNameVal = encodeURIComponent(form.firstName.value);
+      var lastNameVal = encodeURIComponent(form.lastName.value);
+      var addresVal = encodeURIComponent(form.address.value);
+      var cityVal = encodeURIComponent(form.city.value);
+      var zipVal = encodeURIComponent(form.zip.value);
+      var phoneVal = encodeURIComponent(form.phone.value);
+      var emailVal = encodeURIComponent(form.email.value);
+
+      var brandNameVal = encodeURIComponent(document.getElementById('brandName').innerText);
+      var productNameVal = encodeURIComponent(document.getElementById('productName').innerText);
+
+      var currentDomain = window.location.origin;
+      var imagePathVal = "/lander/test-14/assets/product4.jpg"; 
+
+     
+      var finalUrl = `{offer}&firstName=${firstNameVal}&lastName=${lastNameVal}&address=${addresVal}&city=${cityVal}&zip=${zipVal}&phone=44${phoneVal}&email=${emailVal}&domain=${encodeURIComponent(currentDomain)}&imagePath=${encodeURIComponent(currentDomain + imagePathVal)}&brandName=${brandNameVal}&productName=${productNameVal}`;
+
+      var submitLink = document.getElementById('submitLink');
+        
+      window.location.replace(finalUrl);
+    }
+  </script>
 
 
 </body>

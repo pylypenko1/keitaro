@@ -1,0 +1,3394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="preload stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;900&display=swap"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <style>
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 19px 0;
+        z-index: 99;
+      }
+      header .menu-container .btns-wrapper {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        header {
+          padding: 28px 0 8px;
+        }
+      }
+      header a.logo {
+        margin-right: 1.5rem;
+        line-height: 1;
+      }
+      @media (max-width: 990px) {
+        header .container {
+          align-items: center;
+        }
+      }
+      header .icon-bar {
+        display: block;
+        width: 24px;
+        height: 3px;
+        opacity: 1;
+        background-color: #fff;
+      }
+      header .icon-bar.middle-bar {
+        margin: 5px 0;
+      }
+      header .navbar.sidebar,
+      header .toggle-nav {
+        display: none;
+      }
+      @media (max-width: 990px) {
+        header .navbar.sidebar .ul-nav-wrapper {
+          overflow-y: scroll;
+          overflow-x: hidden;
+          max-height: calc(100vh - 40px);
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+          width: calc(100% - 1rem);
+          margin: 4.5rem auto 0.5rem;
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+        }
+        header .navbar.sidebar .ul-nav-wrapper::-webkit-scrollbar {
+          display: none;
+        }
+        header .toggle-nav {
+          padding: 0 0.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-end;
+          background: 0 0;
+          border: none;
+          outline: 0;
+          z-index: 101;
+        }
+        header .navbar.sidebar {
+          display: block;
+          position: fixed;
+          top: 0;
+          z-index: 15;
+          width: 100%;
+          min-height: 100vh;
+          height: 100vh;
+          overflow: hidden;
+          background: #040c48;
+          margin: 0 auto;
+          line-height: 2.5;
+          right: -100%;
+        }
+        header .navbar.sidebar li.navbar-nav__item a::after {
+          display: none;
+        }
+        header .navbar.sidebar a {
+          opacity: 1;
+        }
+        header .navbar.sidebar .navbar-nav {
+          transform: translateX(50px);
+          opacity: 0;
+        }
+        header .navbar.sidebar .navbar-nav .navbar-nav__item {
+          opacity: 0;
+          transform: translateX(25%);
+        }
+        header .navbar.sidebar .btn {
+          max-width: 400px;
+          margin: 0 auto;
+          width: calc(100% - 1rem);
+          margin-bottom: 1.5rem;
+        }
+        header .accordion {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+          margin: 0 auto;
+        }
+        header .accordion .link {
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          font-weight: 500;
+          padding: 1rem;
+          color: #fff;
+        }
+        header .accordion .link .icon {
+          font-size: 0.85rem;
+          line-height: 0;
+          display: flex;
+          align-items: center;
+          transform: rotate(-90deg);
+        }
+        header ul.submenu {
+          display: none;
+          padding: 0 1rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+        header ul.submenu .title {
+          color: #fff;
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+          display: block;
+          font-weight: 600;
+        }
+        header ul.submenu a {
+          display: block;
+          text-decoration: none;
+          color: #d9d9d9;
+          margin-bottom: 1.5rem;
+        }
+      }
+      header .navbar-nav {
+        list-style: none;
+        position: relative;
+        width: 100%;
+        line-height: 1;
+        margin: 0;
+        max-height: 100%;
+      }
+      header .navbar-nav li.navbar-nav__item {
+        display: inline-block;
+      }
+      header .navbar-nav li.navbar-nav__item a {
+        position: relative;
+        font-family: inherit;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+      }
+      header .navbar-nav li.navbar-nav__item a:not(.btn)::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        right: 0;
+        background: #1991ff;
+        visibility: hidden;
+        border-radius: 5px;
+        transform: scaleX(0);
+        margin-right: 0;
+        margin-bottom: -0.5rem;
+      }
+      .menu {
+        display: none;
+      }
+      .menu > ul > li.dropdown > ul {
+        display: none;
+        grid-template-columns: 2.25fr 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        backdrop-filter: saturate(180%) blur(5px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 1.5rem 0;
+        margin-top: 10px;
+        position: absolute;
+        z-index: 99;
+        right: 0;
+        margin: 0;
+        list-style: none;
+        box-sizing: border-box;
+        transform: translateY(0);
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+      }
+      .menu .apply-after::after {
+        content: ' ';
+        background: linear-gradient(to right, #040c48 1%, #00589c 51%, #04d189);
+        position: absolute;
+        bottom: 0;
+        height: 4px;
+        width: 100%;
+      }
+      .menu .logo {
+        display: flex;
+        height: 42px;
+        margin-top: -7px;
+      }
+      .menu > ul > li.dropdown i {
+        font-size: 10px;
+        margin-left: 3px;
+      }
+      .menu > ul > li.dropdown ul {
+        width: 100%;
+      }
+      .menu-container {
+        margin: 0;
+        width: 100%;
+      }
+      .menu img {
+        max-width: 100%;
+      }
+      .menu > ul {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .menu > ul > li {
+        padding: 1rem 2rem 1rem 1rem;
+      }
+      @media (min-width: 1200px) {
+        .menu > ul > li {
+          padding: 1rem 2.5rem 1rem 1rem;
+        }
+      }
+      .menu > ul > li:last-child {
+        padding: 1rem 0;
+      }
+      .menu > ul > li span {
+        text-align: left;
+      }
+      .menu > ul > li p {
+        text-align: left;
+      }
+      .menu > ul > li > a {
+        position: relative;
+        text-decoration: none;
+        display: block;
+        color: #fff;
+        opacity: 0.7;
+        font-family: inherit;
+        font-weight: 500;
+      }
+      .menu > ul > li > ul > li:not(.align-items-start) {
+        margin: 0;
+        list-style: none;
+        float: left;
+        color: #212b36;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .menu > ul > li > ul > li.align-items-start {
+        color: #212b36;
+        flex-direction: column;
+      }
+      .menu > ul > li > ul > li a {
+        color: #777;
+        display: block;
+        border-bottom: 1px solid #ccc;
+      }
+      .menu > ul > li > ul > li > ul {
+        display: block;
+        padding: 0;
+        margin: 10px 0 0;
+        list-style: none;
+        box-sizing: border-box;
+      }
+      .menu > ul > li > ul > li > ul > li {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0.5rem;
+      }
+      .menu > ul > li > ul > li > ul > li a {
+        border: 0;
+        font-size: 14px;
+      }
+      @media (max-width: 990px) {
+        .menu {
+          display: none;
+        }
+      }
+      .menu > ul > li.dropdown > a::after {
+        content: '';
+        background-image: url(img/33.svg);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 30px;
+        height: 9px;
+        opacity: 0;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateY(40px);
+      }
+      input[type='email'] {
+        border-radius: 3px;
+        border: solid 1px #c4cdd5;
+        background-color: #fff;
+        padding: 0.5rem;
+        outline: 0;
+        width: 100%;
+        height: 36px;
+        font-size: 0.875rem;
+      }
+      input:-ms-input-placeholder {
+        color: #949494;
+        opacity: 0.7;
+        text-align: left;
+      }
+      input::-moz-placeholder {
+        color: #949494;
+        opacity: 0.7;
+        text-align: left;
+      }
+      input:-moz-placeholder {
+        color: #949494;
+        opacity: 0.7;
+        text-align: left;
+      }
+      input::-webkit-input-placeholder {
+        opacity: 0.7;
+        text-align: left;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+      body {
+        font-size: 1rem;
+        line-height: 1.5;
+        font-family: 'Nunito Sans', sans-serif;
+        letter-spacing: 0;
+        font-weight: 400;
+        color: #212b36;
+        overflow-x: hidden;
+      }
+      button,
+      input,
+      input:-webkit-autofill::first-line {
+        font-family: inherit;
+      }
+      #pageWrap {
+        max-width: 100%;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        overflow-x: hidden;
+        scrollbar-width: none;
+      }
+      #pageWrap::-webkit-scrollbar {
+        width: 0;
+        background: 0 0;
+      }
+      .h2,
+      h1,
+      h2 {
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 600;
+      }
+      h1 {
+        font-size: 2.2rem;
+        line-height: 1.25;
+        letter-spacing: -1px;
+      }
+      @media (min-width: 460px) {
+        h1 {
+          font-size: 2.45rem;
+        }
+      }
+      @media (min-width: 768px) {
+        h1 {
+          font-size: 2.65rem;
+          line-height: 1.4;
+        }
+      }
+      .h2,
+      h2 {
+        font-size: 1.75rem;
+        line-height: 1.4;
+      }
+      .h2-smaller {
+        font-size: 1.132rem;
+      }
+      @media (min-width: 1024px) {
+        .h2-smaller {
+          font-size: 1.625rem;
+        }
+      }
+      .btn {
+        position: relative;
+        text-align: center;
+        font-weight: 500;
+        min-width: 98px;
+        padding: 0.6rem 0.9rem;
+        font-size: 0.8rem;
+        line-height: 1.2;
+        color: #fff;
+        border: 2px solid transparent;
+        border-radius: 2px;
+        will-change: background-color, color, background-image, border-color;
+      }
+      @media (min-width: 414px) {
+        .btn {
+          font-size: 0.875rem;
+        }
+      }
+      .btn.btn-xl {
+        border-radius: 3px;
+        padding: 0.5rem 0.7rem;
+      }
+      @media (min-width: 414px) {
+        .btn.btn-xl {
+          font-size: 0.95rem;
+          padding: 0.6rem 0.9rem;
+        }
+      }
+      @media (min-width: 768px) {
+        .btn.btn-xl {
+          font-size: 1.1rem;
+          padding: 0.8rem 1.2rem;
+        }
+      }
+      .btn.btn-border-green {
+        border: 2px solid #009762;
+        color: #212b36;
+      }
+      .btn.btn-green {
+        color: #212b36;
+        border: solid 2px #02a169;
+        background-image: linear-gradient(179deg, #04d189 0, #04d189 52%, #04d189 100%);
+        z-index: 1;
+      }
+      .btn.btn-green::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(179deg, #00f198 0, #19ba80 52%, #007c50 100%);
+        z-index: -1;
+        opacity: 0;
+      }
+      .btn.btn-green-outline {
+        color: #212b36;
+        border: solid 2px #02a169;
+        background: 0 0;
+        z-index: 1;
+      }
+      .btn.btn-green-outline::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(179deg, #00f198 0, #19ba80 52%, #007c50 100%);
+        z-index: -1;
+        opacity: 0;
+      }
+      .btn.btn-white {
+        color: #212b36;
+        border: solid 2px #e4e4e4;
+        background-color: #fff;
+      }
+      .btn.btn-white.btn-border-green {
+        border: 2px solid #009762;
+      }
+      .btn.btn-white-outline {
+        color: #fff;
+        background-image: linear-gradient(
+          179deg,
+          rgba(255, 255, 255, 0) 0,
+          rgba(255, 255, 255, 0) 52%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        border: solid 2px #fff;
+      }
+      .btn.btn-white-outline::before {
+        position: absolute;
+        content: ' ';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(179deg, #fff 0, #fff 52%, #e6e6e6 100%);
+        z-index: -1;
+        opacity: 0;
+      }
+      .d-none {
+        display: none;
+      }
+      .d-block {
+        display: block;
+      }
+      .d-flex {
+        display: flex;
+      }
+      .flex-column {
+        flex-direction: column;
+      }
+      .font-weight-normal {
+        font-weight: 400;
+      }
+      .font-weight-medium {
+        font-weight: 500;
+      }
+      .font-weight-bold {
+        font-weight: 600;
+      }
+      p {
+        line-height: 1.4;
+        margin: 0;
+      }
+      .text-small {
+        font-size: 0.91rem;
+        letter-spacing: 0;
+      }
+      .mt-0 {
+        margin-top: 0;
+      }
+      .mt-05 {
+        margin-top: 0.5rem;
+      }
+      .mt-1 {
+        margin-top: 1rem !important;
+      }
+      .mt-2 {
+        margin-top: 2rem;
+      }
+      .mb-05 {
+        margin-bottom: 0.5rem !important;
+      }
+      .mb-1 {
+        margin-bottom: 1rem !important;
+      }
+      .mr-05 {
+        margin-right: 0.5rem;
+      }
+      .mt-1_5 {
+        margin-top: 1.5rem !important;
+      }
+      .mb-1_5 {
+        margin-bottom: 1.5rem !important;
+      }
+      .pr-1 {
+        padding-right: 1rem;
+      }
+      .pl-1 {
+        padding-left: 1rem;
+      }
+      .opacity {
+        opacity: 0.5;
+      }
+      .icon {
+        line-height: 0;
+      }
+      img {
+        max-width: 100%;
+      }
+      @media (min-width: 991px) {
+        .d-lg-none {
+          display: none;
+        }
+        .d-lg-block {
+          display: block;
+        }
+      }
+      .text-grey {
+        color: #637381;
+      }
+      .text-green {
+        color: #04d189;
+      }
+      .text-white {
+        color: #fff;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-left {
+        text-align: left;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        display: inline-block;
+        color: #1991ff;
+      }
+      .align-items-center {
+        align-items: center;
+      }
+      .align-items-start {
+        align-items: flex-start;
+      }
+      .align-items-baseline {
+        align-items: baseline;
+      }
+      .justify-content-center {
+        justify-content: center;
+      }
+      .justify-content-end {
+        justify-content: flex-end;
+      }
+      .justify-content-between {
+        justify-content: space-between;
+      }
+      .animate-scroll {
+        opacity: 0;
+        transform: translateY(4em);
+        will-change: transform, opacity;
+      }
+      .container {
+        width: 100%;
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          min-width: 720px;
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1140px;
+        }
+      }
+      @media (min-width: 1300px) {
+        .container {
+          max-width: 1240px;
+        }
+      }
+      .w-100 {
+        width: 100%;
+      }
+      .h-100vh {
+        height: 100%;
+        min-height: 100vh;
+      }
+      .h-100 {
+        height: 100%;
+      }
+      @media (max-width: 767px) {
+        .switchmarkets-logo {
+          max-width: 140px;
+          height: auto;
+        }
+      }
+      .hero {
+        height: 100%;
+      }
+      .hero.homepage header {
+        position: relative;
+      }
+      #cookie-msg-wrapper.hidden {
+        visibility: hidden;
+        transform: translateY(200%);
+      }
+      input {
+        font-size: 0.8rem;
+        font-weight: 400;
+      }
+      @media screen and (device-aspect-ratio: 2/3) {
+        input[type='email'] {
+          font-size: 16px;
+        }
+      }
+      @media screen and (device-aspect-ratio: 40/71) {
+        input[type='email'] {
+          font-size: 0.8rem;
+        }
+      }
+      @media screen and (device-aspect-ratio: 375/667) {
+        input[type='email'] {
+          font-size: 0.8rem;
+        }
+      }
+      @media screen and (device-aspect-ratio: 9/16) {
+        input[type='email'] {
+          font-size: 0.8rem;
+        }
+      }
+      .up-trade {
+        color: #04d189;
+      }
+      .pricing-toggle-container.regular-active .institutional-active {
+        display: none;
+      }
+      .price-card .price--header .opacity {
+        opacity: 0.8;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      .accordion {
+        max-width: 1000px;
+        margin: 3rem auto;
+      }
+      img.toast-msg {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin-bottom: 2rem;
+      }
+      @media (min-width: 991px) {
+        img.toast-msg {
+          margin-left: 60px;
+        }
+      }
+      .comment-area .chat-arrow {
+        display: none;
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        margin-bottom: -90px;
+        margin-left: 2rem;
+        width: 0;
+        height: 0;
+        border-top: 90px solid #09285d;
+        border-right: 80px solid transparent;
+        border-top-width: 90px;
+        border-top-style: solid;
+      }
+      @media (min-width: 991px) {
+        .comment-area .chat-arrow {
+          display: block;
+        }
+      }
+      .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .overlay_hidden {
+        display: none;
+      }
+      .popup {
+        margin: 1rem auto;
+        border-radius: 5px;
+        width: 90%;
+        max-width: 900px;
+        z-index: 99;
+        position: relative;
+        background: linear-gradient(120deg, #040c48 1%, #00589c 51%, #04d189 100%);
+        padding: 7rem 4rem;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .popup::-webkit-scrollbar {
+        display: none;
+      }
+      .popup .close {
+        position: absolute;
+        top: 0;
+        right: 0.5rem;
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: #fff;
+      }
+      .popup .content {
+        height: 100%;
+      }
+      @media screen and (max-width: 700px) {
+        .popup {
+          width: 95%;
+          padding: 0;
+          overflow: hidden auto;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .popup::-webkit-scrollbar {
+          display: none;
+          width: 0;
+          background: 0 0;
+        }
+      }
+      .input-button-inside {
+        display: grid;
+        grid-template-columns: 1fr;
+        background: #fff;
+        padding: 0.25rem;
+        border-radius: 3px;
+        border: 1px solid #02a169;
+        width: 100%;
+        max-width: 400px;
+      }
+      @media (min-width: 768px) {
+        .input-button-inside {
+          grid-template-columns: 2fr 1fr;
+        }
+      }
+      .input-button-inside input {
+        display: inline-block;
+        height: 40px;
+        border: none;
+      }
+      .currency-card {
+        border-radius: 3.2px;
+        box-shadow: 0 0 48px 8px rgba(13, 37, 62, 0.1);
+      }
+      .currency-card.dark-card {
+        min-width: 270px;
+        padding: 8px 0;
+      }
+      .currency-card.top {
+        padding-top: 1rem;
+        padding-bottom: 0;
+      }
+      @media (max-width: 360px) {
+        .currency-card {
+          width: calc(100% + 15px);
+          margin-left: -7px;
+        }
+      }
+      .currency-card .trade-numb {
+        font-size: 0.82rem;
+        text-align: center;
+      }
+      @media (min-width: 576px) {
+        .currency-card .trade-numb {
+          font-size: 1rem;
+        }
+      }
+      @media (min-width: 768px) {
+        .currency-card .trade-numb {
+          font-size: 1.125rem;
+        }
+      }
+      .currency-card .symbol {
+        display: grid;
+        justify-self: start;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 400px) {
+        .currency-card .symbol {
+          grid-template-columns: 40px 1fr;
+        }
+        .currency-card .symbol img {
+          flex: 1 1 33px;
+        }
+      }
+      @media (min-width: 768px) {
+        .currency-card .symbol {
+          align-items: center;
+        }
+      }
+      .currency-card .h2 {
+        font-size: 1rem;
+      }
+      @media (min-width: 768px) {
+        .currency-card .h2 {
+          font-size: 1.125rem;
+        }
+      }
+      .currency-card .data-img {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        .currency-card .data-img {
+          display: inline-block;
+        }
+      }
+      .currency-card .data-img img {
+        height: 100%;
+        object-fit: cover;
+      }
+      .currency-card .trade-numb-down-up {
+        font-size: 0.875rem;
+        display: none;
+        align-items: center;
+        justify-content: flex-end;
+        grid-column: 2/3;
+        grid-row: 1/4;
+      }
+      @media (min-width: 525px) {
+        .currency-card .trade-numb-down-up {
+          display: flex;
+        }
+      }
+      .currency-card .icon {
+        font-size: 0.6rem;
+        margin-left: 0.4rem;
+      }
+      .currency-card .top-spacers {
+        display: none;
+      }
+      @media (min-width: 525px) {
+        .currency-card .top-spacers.first {
+          display: block;
+        }
+      }
+      @media (min-width: 768px) {
+        .currency-card .top-spacers {
+          display: block;
+        }
+      }
+      .currency-card .column-head {
+        font-size: 0.82rem;
+        color: #637381;
+      }
+      .currency-card .wrapper {
+        align-items: center;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.06);
+        display: grid;
+        justify-items: center;
+        padding: 0 1rem;
+        grid-template-columns: auto 65px 65px 55px 10px;
+      }
+      @media (min-width: 330px) {
+        .currency-card .wrapper {
+          grid-template-columns: auto 75px 75px 55px 10px;
+        }
+      }
+      @media (min-width: 525px) {
+        .currency-card .wrapper {
+          grid-template-columns: minmax(125px, auto) 1fr 1fr 1fr 1fr 10px;
+        }
+      }
+      @media (min-width: 768px) {
+        .currency-card .wrapper {
+          grid-template-columns: 140px 75px 70px auto auto 75px 100px;
+        }
+      }
+      @media (min-width: 992px) {
+        .currency-card .wrapper {
+          grid-template-columns: 150px 75px 100px auto auto 75px 100px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .currency-card .wrapper {
+          grid-template-columns: 130px 75px 45px auto auto 75px 100px;
+        }
+      }
+      .currency-card .ask,
+      .currency-card .bid,
+      .currency-card .spread {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      @media (min-width: 768px) {
+        .currency-card .ask,
+        .currency-card .bid,
+        .currency-card .spread {
+          flex-direction: column;
+        }
+      }
+      .currency-card .btn {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        .currency-card .btn {
+          display: block;
+          color: #fff;
+        }
+      }
+      .currency-card .link {
+        transform: rotate(-90deg);
+        color: #04d189;
+      }
+      @media (min-width: 768px) {
+        .currency-card .link {
+          display: none;
+        }
+      }
+      .bids-cards-wrapper {
+        margin-top: 1rem;
+        align-items: baseline;
+        grid-gap: 0;
+        background-color: transparent;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 24px 7px rgba(13, 37, 62, 0.1);
+        background-image: linear-gradient(112deg, rgba(0, 0, 0, 0.27) 5%, rgba(0, 0, 0, 0.2) 86%);
+        border-radius: 4px;
+      }
+      @media (min-width: 768px) {
+        .bids-cards-wrapper {
+          margin-top: 2.5rem;
+        }
+      }
+      @media (min-width: 991px) {
+        .bids-cards-wrapper {
+          margin-top: 0.5rem;
+        }
+      }
+      .desktop-bids-cards--wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: baseline;
+        grid-gap: 0;
+      }
+      .h-100vh {
+        min-height: 100vh;
+      }
+      @media (max-width: 767px) and (min-height: 801px) {
+        .h-100vh {
+          min-height: 90vh;
+        }
+      }
+      @media (min-width: 991px) and (min-height: 700px) {
+        .h-100vh {
+          min-height: calc(100vh + 5rem);
+        }
+      }
+      @media (max-height: 600px) {
+        .h-100vh {
+          min-height: calc(100vh + 11rem);
+        }
+      }
+      @media (min-height: 799px) {
+        .h-100vh {
+          min-height: 89vh;
+        }
+      }
+      img {
+        height: auto;
+      }
+      body {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      .hero {
+        position: relative;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        color: #fff;
+      }
+      @media (min-width: 768px) {
+        .hero h1 {
+          font-size: 2.65rem;
+        }
+      }
+      @media (min-width: 1240px) {
+        .hero h1 {
+          font-size: 3rem;
+          line-height: 1.2;
+        }
+      }
+      .hero .desktop-bids-cards--wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: baseline;
+        grid-gap: 0;
+      }
+      .hero.homepage header {
+        position: relative;
+        will-change: position;
+      }
+      .hero .icon-check {
+        font-size: 1.25rem;
+      }
+      .hero .content {
+        width: 100%;
+        border-right: 0;
+        z-index: 1;
+      }
+      @media (min-width: 991px) {
+        .hero .content {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: 2rem;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 1199px) {
+        .hero .content {
+          border-right: 0;
+        }
+      }
+      @media (min-width: 1200px) {
+        .hero .content {
+          grid-template-columns: 1fr 1.5fr;
+          grid-gap: 2rem;
+          margin-top: -3rem;
+        }
+      }
+      .full-height-hero {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      @media (max-width: 359px) {
+        .full-height-hero {
+          padding-top: 1rem;
+        }
+      }
+      @media (max-width: 767px) {
+        .full-height-hero {
+          padding-bottom: 10rem;
+        }
+      }
+      @media (min-width: 768px) {
+        .full-height-hero {
+          padding-top: 3rem;
+          padding-bottom: 8rem;
+        }
+      }
+      .full-height-hero ul li {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+      @media (max-width: 413px) {
+        .full-height-hero ul li {
+          font-size: 1.1rem;
+        }
+      }
+      .full-height-hero .buttons-wrapper {
+        margin-top: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        .full-height-hero .buttons-wrapper {
+          margin-top: 2.5rem;
+        }
+      }
+      @media (max-width: 359px) {
+        .full-height-hero .buttons-wrapper {
+          flex-wrap: wrap;
+          flex-direction: column;
+          margin-top: 1.5rem;
+        }
+      }
+      .full-height-hero .btn-green {
+        margin-right: 1rem;
+      }
+      @media (max-width: 359px) {
+        .full-height-hero .btn-green {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+      }
+      @media (min-width: 991px) {
+        .full-height-hero {
+          justify-content: space-evenly;
+          min-height: calc(100vh - 88px);
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 1120px) and (orientation: landscape) {
+        .full-height-hero {
+          padding-top: 3rem;
+          min-height: calc(100vh + 6rem);
+          justify-content: flex-start;
+        }
+      }
+      @media (min-height: 1200px) {
+        .full-height-hero {
+          min-height: 80vh;
+        }
+      }
+      @media (min-height: 1600px) {
+        .full-height-hero {
+          min-height: 60vh;
+        }
+      }
+      @media (min-height: 1920px) {
+        .full-height-hero {
+          min-height: 45vh;
+        }
+      }
+      @media (min-width: 991px) and (min-height: 850px) {
+        .full-height-hero.h-100vh.cookie-visible-viewport {
+          justify-content: center;
+          min-height: calc(100vh - 160px);
+          padding-top: 3rem;
+        }
+      }
+      .hero-filter {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.7)),
+          linear-gradient(123deg, #040c48 1%, rgba(0, 88, 156, 0.85) 51%, #04d189);
+        z-index: 0;
+        opacity: 0.8;
+      }
+      #myVideo {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .hero-bg-img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .data-wrapper {
+        width: 100%;
+        position: absolute;
+        margin-top: 0;
+        bottom: 0;
+        padding: 1rem 0 0.5rem;
+        background: rgba(0, 0, 0, 0.25);
+      }
+      .data-wrapper .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        text-align: center;
+      }
+      @media (min-width: 991px) {
+        .data-wrapper {
+          margin-top: 0;
+        }
+      }
+      .data-wrapper .item {
+        padding: 0 0.25rem;
+      }
+      @media (min-width: 768px) {
+        .data-wrapper .item {
+          padding: 0 0.65rem;
+          flex-direction: row;
+          align-items: center;
+          text-align: left;
+          justify-content: space-around;
+        }
+      }
+      .data-wrapper .item:not(:last-child) {
+        border-right: 1px solid #828282;
+      }
+      .data-wrapper .item:not(:first-child) {
+        font-size: 1.25rem;
+      }
+      .data-wrapper .item__numb {
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 500;
+        font-size: 2.625rem;
+        font-size: 20px;
+        text-align: left;
+      }
+      @media (min-width: 768px) {
+        .data-wrapper .item__numb {
+          font-size: 1.5rem;
+        }
+      }
+      @media (min-width: 991px) {
+        .data-wrapper .item__numb {
+          font-size: 2.625rem;
+        }
+      }
+      .data-wrapper .item__text {
+        text-align: left;
+        order: 2;
+        font-size: 10px;
+      }
+      @media (min-width: 768px) {
+        .data-wrapper .item__text {
+          font-size: 0.875rem;
+          margin-right: 0.5rem;
+          order: 0;
+        }
+      }
+      @media (min-width: 991px) {
+        .data-wrapper .item {
+          border-right: 0 !important;
+        }
+        .data-wrapper .item:not(:first-child)::before {
+          content: ' ';
+          border-left: 1px solid #828282;
+          display: block;
+          height: 46px;
+          margin-right: 1rem;
+        }
+      }
+    </style>
+
+
+    <link
+      rel="preload"
+      as="image"
+      href="img/5.webp"
+    />
+
+    <!-- Splide slider -->
+    <link
+      rel="preload stylesheet"
+      as="style"
+      href="css/splide.min.css"
+      type="text/css"
+    />
+
+    <!-- font icons -->
+    <link
+      rel="preload stylesheet"
+      as="style"
+      href="css/styles.css"
+      type="text/css"
+    />
+
+    <script
+      src="js/2.js"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <title>Switch Markets - Regulated Forex Broker - 0.0 Spreads</title>
+
+   
+
+
+
+    <script src="js/vimeo.js"></script>
+
+  </head>
+  <body class="preload">
+    <div id="pageWrap">
+      <!-- Hero -->
+      <section class="hero homepage">
+        <header class="">
+          <div class="container d-flex align-items-center justify-content-between">
+            <div class="menu-container d-flex align-items-center" style="justify-content: space-between;">
+              <a href="/" class="logo"
+                ><img
+                  class="switchmarkets-logo"
+                  src="img/3.svg"
+                  alt="Switch Markets"
+                  width="159"
+                  height="42"
+              /></a>
+              <div class="menu justify-content-between">
+                <div class="d-flex justify-content-end">
+                  <a href="/signup" class="btn btn-green mr-05">Start trading today</a>
+                  <a href="/demo" class="btn btn-white-outline">Try free demo</a>
+                </div>
+              </div>
+            </div>
+            <!-- END Navbar sidebar -->
+          </div>
+        </header>
+
+        <div
+          id="full-height-hero"
+          class="d-flex align-items-center flex-column h-100vh full-height-hero cookie-visible-viewport"
+        >
+          <div class="content align-items-baseline container">
+            <div>
+              <h1>Where <span class="text-green">traders</span> come to trade</h1>
+
+              <ul class="mt-1_5">
+                <li class="d-flex align-items-center">
+                  <i class="icon icon-check text-white mr-05"></i>Nearly 2,000 Markets To Trade
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="icon icon-check text-white mr-05"></i>Advanced MT4/5 Trading Platforms
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="icon icon-check text-white mr-05"></i>Free Powerful VPS for Algo Traders
+                </li>
+              </ul>
+
+              <div class="d-flex buttons-wrapper">
+                <a href="/signup" class="btn btn-green btn-xl">Create Live Account</a>
+                <a href="/demo" class="btn btn-white-outline btn-xl">Create Demo Account</a>
+              </div>
+
+             
+              <!-- End TrustBox widget -->
+            </div>
+
+            <div>
+              <div class="bids-cards-wrapper desktop-bids-cards--wrapper">
+                <div class="currency-card dark-card top">
+                  <div class="wrapper">
+                    <div></div>
+                    <div class="top-spacers first"></div>
+                    <div class="top-spacers"></div>
+                    <div class="bid">
+                      <span class="column-head">Bid</span>
+                    </div>
+
+                    <div class="ask">
+                      <span class="column-head">Ask</span>
+                    </div>
+
+                    <div class="spread">
+                      <span class="column-head">Spread</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="currency-card dark-card"
+                  data-currency="EURUSD.s_core"
+                  data-direction="-1"
+                  data-daily="-1"
+                >
+                  <div class="wrapper">
+                    <div class="symbol">
+                      <img
+                        src="img/5.svg"
+                        width="33"
+                        height="33"
+                        class="mr-05"
+                        alt="eurusd"
+                      />
+                      <span class="h2 font-weight-medium text-left text-white">EURUSD</span>
+                    </div>
+                    <!-- if is positive image should be "up-trade-graph.svg" -->
+                    <span data-image="" class="data-img">
+                      <img
+                        src="img/6.svg"
+                        alt="up trade chart"
+                      />
+                    </span>
+                    <!-- if is positive add class "up-trade" -->
+                    <span class="trade-numb-down-up font-weight-medium up-trade" data-daily="0"
+                      >-</span
+                    >
+                    <div class="bid">
+                      <span class="trade-numb font-weight-medium" data-bid="0">-</span>
+                    </div>
+
+                    <div class="ask">
+                      <span class="trade-numb font-weight-medium" data-ask="0">-</span>
+                    </div>
+
+                    <div class="spread">
+                      <span class="trade-numb font-weight-medium text-white" data-spread="0"
+                        >-</span
+                      >
+                    </div>
+                    <a href="/signup" class="btn btn-green-outline">Trade</a>
+                    <a href="/signup" class="link"><i class="icon icon-chevron-down"></i></a>
+                  </div>
+                </div>
+
+                <div
+                  class="currency-card dark-card"
+                  data-currency="XAUUSD.s_core"
+                  data-direction="-1"
+                  data-daily="-1"
+                >
+                  <div class="wrapper">
+                    <div class="symbol">
+                      <img
+                        src="img/7.svg"
+                        width="25"
+                        height="25"
+                        class="mr-05"
+                        alt="goldusd"
+                      />
+                      <span class="h2 font-weight-medium text-left text-white">GOLD USD</span>
+                    </div>
+                    <!-- if is negative image should be "down-trade-graph.svg" -->
+                    <span data-image="" class="data-img">
+                      <img
+                        src="img/8.svg"
+                        alt="down trade chart"
+                        width="83"
+                        height="20"
+                      />
+                    </span>
+                    <!-- if is negative add class "down-trade" -->
+                    <span class="trade-numb-down-up font-weight-medium up-trade" data-daily="0"
+                      >-</span
+                    >
+                    <div class="bid">
+                      <span class="trade-numb font-weight-medium" data-bid="0">-</span>
+                    </div>
+
+                    <div class="ask">
+                      <span class="trade-numb font-weight-medium" data-ask="0">-</span>
+                    </div>
+
+                    <div class="spread">
+                      <span class="trade-numb font-weight-medium text-white" data-spread="0"
+                        >-</span
+                      >
+                    </div>
+                    <a href="/signup" class="btn btn-green-outline">Trade</a>
+                    <a href="/signup" class="link"><i class="icon icon-chevron-down"></i></a>
+                  </div>
+                </div>
+
+                <div
+                  class="currency-card dark-card"
+                  data-currency="TSLA_US.s_core"
+                  data-direction="-1"
+                  data-daily="-1"
+                >
+                  <div class="wrapper">
+                    <div class="symbol">
+                      <img
+                        src="img/9.svg"
+                        width="25"
+                        height="25"
+                        class="mr-05"
+                        alt="tesla"
+                      />
+                      <span class="h2 font-weight-medium text-left text-white">TESLA</span>
+                    </div>
+                    <!-- if is negative image should be "down-trade-graph.svg" -->
+                    <span data-image="" class="data-img">
+                      <img
+                        src="img/10.svg"
+                        alt="down trade chart"
+                        width="83"
+                        height="20"
+                      />
+                    </span>
+                    <!-- if is negative add class "down-trade" -->
+                    <span class="trade-numb-down-up font-weight-medium up-trade" data-daily="0"
+                      >-</span
+                    >
+                    <div class="bid">
+                      <span class="trade-numb font-weight-medium" data-bid="0">-</span>
+                    </div>
+                    <div class="ask">
+                      <span class="trade-numb font-weight-medium" data-ask="0">-</span>
+                    </div>
+                    <div class="spread">
+                      <span class="trade-numb font-weight-medium text-white" data-spread="0"
+                        >-</span
+                      >
+                    </div>
+                    <a href="/signup" class="btn btn-green-outline">Trade</a>
+                    <a href="/signup" class="link"><i class="icon icon-chevron-down"></i></a>
+                  </div>
+                </div>
+
+                <div
+                  class="currency-card dark-card"
+                  data-currency="UK100.s_core"
+                  data-direction="-1"
+                  data-daily="-1"
+                >
+                  <div class="wrapper">
+                    <div class="symbol">
+                      <img
+                        src="img/11.svg"
+                        width="25"
+                        height="25"
+                        class="mr-05"
+                        alt="ftse100"
+                      />
+                      <span class="h2 font-weight-medium text-left text-white">FTSE 100</span>
+                    </div>
+                    <span data-image="" class="data-img">
+                      <img
+                        src="img/10.svg"
+                        alt="down trade chart"
+                        width="83"
+                        height="20"
+                      />
+                    </span>
+                    <span class="trade-numb-down-up font-weight-medium up-trade" data-daily="0"
+                      >-</span
+                    >
+                    <div class="bid">
+                      <span class="trade-numb font-weight-medium" data-bid="0">-</span>
+                    </div>
+
+                    <div class="ask">
+                      <span class="trade-numb font-weight-medium" data-ask="0">-</span>
+                    </div>
+
+                    <div class="spread">
+                      <span class="trade-numb font-weight-medium text-white" data-spread="0"
+                        >-</span
+                      >
+                    </div>
+                    <a href="/signup" class="btn btn-green-outline">Trade</a>
+                    <a href="/signup" class="link"><i class="icon icon-chevron-down"></i></a>
+                  </div>
+                </div>
+
+                <div
+                  class="currency-card dark-card"
+                  data-currency="BTCUSD_.s_core"
+                  data-direction="-1"
+                  data-daily="-1"
+                >
+                  <div class="wrapper">
+                    <div class="symbol">
+                      <img
+                        src="img/12.svg"
+                        width="25"
+                        height="25"
+                        class="mr-05"
+                        alt="btcusd"
+                      />
+                      <span class="h2 font-weight-medium text-left text-white">BTCUSD</span>
+                    </div>
+                    <span data-image="" class="data-img">
+                      <img
+                        src="img/10.svg"
+                        alt="down trade chart"
+                        width="83"
+                        height="20"
+                      />
+                    </span>
+                    <span class="trade-numb-down-up font-weight-medium up-trade" data-daily="0"
+                      >-</span
+                    >
+                    <div class="bid">
+                      <span class="trade-numb font-weight-medium" data-bid="0">-</span>
+                    </div>
+
+                    <div class="ask">
+                      <span class="trade-numb font-weight-medium" data-ask="0">-</span>
+                    </div>
+
+                    <div class="spread">
+                      <span class="trade-numb font-weight-medium text-white" data-spread="0"
+                        >-</span
+                      >
+                    </div>
+                    <a href="/signup" class="btn btn-green-outline">Trade</a>
+                    <a href="/signup" class="link"><i class="icon icon-chevron-down"></i></a>
+                  </div>
+                </div>
+
+                <div
+                  class="currency-card dark-card"
+                  data-currency="US30.s_core"
+                  data-direction="-1"
+                  data-daily="-1"
+                >
+                  <div class="wrapper">
+                    <div class="symbol">
+                      <img
+                        src="img/13.svg"
+                        width="25"
+                        height="25"
+                        class="mr-05"
+                        alt="us30"
+                      />
+                      <span class="h2 font-weight-medium text-left text-white">US 30</span>
+                    </div>
+                    <span data-image="" class="data-img">
+                      <img
+                        src="img/10.svg"
+                        alt="down trade chart"
+                        width="83"
+                        height="20"
+                      />
+                    </span>
+                    <span class="trade-numb-down-up font-weight-medium up-trade" data-daily="0"
+                      >-</span
+                    >
+                    <div class="bid">
+                      <span class="trade-numb font-weight-medium" data-bid="0">-</span>
+                    </div>
+
+                    <div class="ask">
+                      <span class="trade-numb font-weight-medium" data-ask="0">-</span>
+                    </div>
+
+                    <div class="spread">
+                      <span class="trade-numb font-weight-medium text-white" data-spread="0"
+                        >-</span
+                      >
+                    </div>
+                    <a href="/signup" class="btn btn-green-outline">Trade</a>
+                    <a href="/signup" class="link"><i class="icon icon-chevron-down"></i></a>
+                  </div>
+                </div>
+              </div>
+              <span class="text-grey d-block text-small bids-cards-info text-white"
+                >*Prices are indicative. Please view our platform for real-time pricing.</span
+              >
+            </div>
+          </div>
+
+          <div class="data-wrapper" style="z-index: 2">
+            <div class="container">
+              <div class="d-flex flex-column item">
+                <span class="item__text">Commission <br />account</span>
+                <span class="item__numb">$0</span>
+              </div>
+
+              <div class="d-flex flex-column item">
+                <span class="item__text">Leverage <br />up to</span>
+                <span class="item__numb">1:500</span>
+              </div>
+
+              <div class="d-flex flex-column item">
+                <span class="item__text">Spreads<br />as low as</span>
+                <span class="item__numb">0.0*</span>
+              </div>
+
+              <div class="d-flex flex-column item">
+                <span class="item__text">Zero deposit <br />& withdrawal fees</span>
+                <span class="item__numb">$0</span>
+              </div>
+
+              <div class="d-flex flex-column item">
+                <span class="item__text">Minimum deposit</span>
+                <span class="item__numb">$50</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <picture>
+          <source
+            srcset="img/5.webp"
+            type="image/webp"
+          />
+          <img
+            src="img/5.webp"
+            width="768"
+            height="691"
+            alt="trade markets background"
+            class="hero-bg-img"
+          />
+        </picture>
+        <div class="hero-filter"></div>
+
+        <video autoplay muted loop playsinline id="myVideo" width="1400" height="auto">
+          <source
+            data-src="img/video.webm"
+            type="video/webm"
+          />
+          <source data-src="img/video.webm" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </section>
+      <!-- END Hero -->
+
+      <!-- Pricing -->
+      <!-- Pricing -->
+      <section
+        class="pricing-section js-pricing-section regular-active pricing-toggle-container text-center pt-5 pb-5"
+      >
+        <div class="container">
+          <a href="#pricing" class="scroll-to bounce-animation"
+            ><i class="icon icon-arrow-down text-md"></i
+          ></a>
+          <h2 class="h3 mt-2 font-weight-bold">Get trading in minutes</h2>
+          <h3 class="subheading text-small text-light-grey mt-1 font-weight-medium">
+            Choose a trading account to suit your needs
+          </h3>
+        </div>
+
+        <div class="container container-sm columns-grid align-items-center sm-gap pt-2">
+          <!-- Price Standard -->
+          <div class="price-card standard">
+            <div class="price--header position-relative">
+              <span class="regular-active opacity">Regular</span>
+              <span class="institutional-active opacity">Institutional</span>
+              <span class="title">Standard</span>
+              <span class="opacity">No commission account</span>
+              <img
+                src="img/14.svg"
+                alt="icon graph"
+                class="icon-header"
+                width="48"
+                height="48"
+              />
+            </div>
+            <div class="price-body text-center">
+              <span class="text-small d-block font-weight-medium">Spreads from</span>
+
+              <div class="d-flex align-items-baseline justify-content-center mt-1">
+                <img
+                  class="regular-active"
+                  src="img/15.svg"
+                  alt="one"
+                  width="79"
+                  height="108"
+                />
+                <img
+                  class="institutional-active"
+                  src="img/16.svg"
+                  alt="zero"
+                  width="79"
+                  height="108"
+                />
+                <span class="regular-active h2 font-weight-bold">.&nbsp;4</span>
+                <span class="institutional-active h2 font-weight-bold">.&nbsp;6</span>
+              </div>
+
+              <span class="text-small font-weight-medium mt-1 d-block"
+                >No commission. Zero. None. Nada.</span
+              >
+
+              <div class="d-block mt-1 list-items-wrapper">
+                <ul class="d-flex flex-column" style="padding-left: 1rem; padding-top: 1rem">
+                  <li class="regular-active d-flex align-items-center text-small">
+                    <i class="icon icon-check text-green mr-05"></i> Spread as low as 1.4
+                  </li>
+                  <li class="institutional-active d-flex align-items-center text-small">
+                    <i class="icon icon-check text-green mr-05"></i> Spread as low as 0.6
+                  </li>
+                  <li class="d-flex align-items-center mt-1 text-small text-left">
+                    <i class="icon icon-check text-green mr-05"></i> No commission
+                  </li>
+                  <li class="d-flex align-items-center mt-1 text-small text-left">
+                    <i class="icon icon-check text-green mr-05"></i> Free VPS (worth $497)
+                  </li>
+                  <li class="d-flex align-items-center mt-1 text-small text-left">
+                    <i class="icon icon-check text-green mr-05"></i> Credit bonus up to $5,000**
+                  </li>
+
+                  <li class="d-flex align-items-center mt-1 text-small text-left">
+                    <i class="icon icon-check text-green mr-05"></i> Leverage up to 1:500
+                  </li>
+                  <li class="d-flex align-items-center mt-1 text-small text-left">
+                    <i class="icon icon-check text-green mr-05"></i> MT4/5 platform
+                  </li>
+                </ul>
+              </div>
+
+              <span class="text-small d-block mt-1 border-top pt-03">Minimum deposit of</span>
+              <span class="regular-active numb h2 d-block mb-05">$50</span>
+              <span class="institutional-active numb d-block h2 mb-05">$25,000</span>
+              <span class="text-small border-top d-block small-lineheight mt-1">Suitable for</span>
+              <span class="currencies d-block mb-1">
+                Day traders, trend followers, scalpers, EA traders, High-frequency and Discretionary
+                traders
+              </span>
+              <span class="text-small d-block mt-1">Account currency</span>
+              <span class="currencies d-block"> USD EUR AUD GBP CAD NZD CHF </span>
+              <a href="/signup" class="btn btn-price">Get started</a>
+            </div>
+          </div>
+          <!-- END Price Standard -->
+
+          <!-- Price Pro -->
+          <div class="price-card pro">
+            <div class="price--header position-relative">
+              <span class="regular-active opacity">Regular</span>
+              <span class="institutional-active opacity">Institutional</span>
+              <span class="title">Pro</span>
+              <span class="opacity">ZERO spreads account</span>
+              <img
+                src="img/17.svg"
+                alt="icon percentage"
+                class="icon-header"
+                width="48"
+                height="48"
+              />
+            </div>
+            <div class="price-body text-center">
+              <span class="text-small d-block font-weight-medium">Spreads from</span>
+
+              <div class="d-flex align-items-baseline justify-content-center mt-1">
+                <img
+                  src="img/18.svg"
+                  alt="zero"
+                  width="79"
+                  height="108"
+                />
+                <span class="h2 font-weight-bold">.&nbsp;0</span>
+              </div>
+
+              <span class="regular-active text-small mt-1 font-weight-medium d-block"
+                >Starting from $3.5 USD Comission***</span
+              >
+              <span class="institutional-active text-small mt-1 font-weight-medium d-block"
+                >Starting from $3.5 USD Comission***</span
+              >
+
+              <div class="d-block mt-1 list-items-wrapper">
+                <ul class="d-flex flex-column" style="padding-left: 1rem; padding-top: 1rem">
+                  <li class="d-flex align-items-center text-small">
+                    <i class="icon icon-check text-green mr-05"></i> Spread as low as 0.0*
+                  </li>
+                  <li class="d-flex align-items-center mt-1 text-small text-left">
+                    <i class="icon icon-check text-green mr-05"></i> Low commission
+                  </li>
+                  <li class="d-flex align-items-center mt-1 text-small text-left">
+                    <i class="icon icon-check text-green mr-05"></i> Free VPS (worth $497)
+                  </li>
+                  <li class="d-flex align-items-center mt-1 text-small text-left">
+                    <i class="icon icon-check text-green mr-05"></i> Credit bonus up to $5,000**
+                  </li>
+                  <li class="d-flex align-items-center mt-1 text-small text-left">
+                    <i class="icon icon-check text-green mr-05"></i> Leverage up to 1:500
+                  </li>
+                  <li class="d-flex align-items-center mt-1 text-small text-left">
+                    <i class="icon icon-check text-green mr-05"></i> MT4/5 platform
+                  </li>
+                </ul>
+              </div>
+
+              <span class="text-small d-block mt-1 border-top pt-03">Minimum deposit of</span>
+              <span class="regular-active numb h2 d-block mb-05">$50</span>
+              <span class="institutional-active numb d-block h2 mb-05">$25,000</span>
+              <span class="text-small border-top d-block small-lineheight mt-1">Suitable for</span>
+              <span class="currencies d-block mb-1">
+                Day traders, trend followers, scalpers, EA traders, High-frequency and Discretionary
+                traders
+              </span>
+              <span class="text-small d-block mt-1">Account currency</span>
+              <span class="currencies d-block"> USD EUR AUD GBP CAD </span>
+              <a href="/signup" class="btn btn-price btn-pro">Get started</a>
+            </div>
+          </div>
+          <!-- END Price Pro -->
+
+          <!-- Price Cent -->
+          <!-- END Price Standard -->
+        </div>
+
+        <div class="text-center font-weight-bold mt-1_5">Not sure which account is for you?</div>
+        <div class="text-center mt-05 text-small">
+          Visit our account comparison <a href="#">page</a>
+        </div>
+      </section>
+      <!-- END Pricing -->
+      <!-- END Pricing -->
+
+      <section class="pt-5 pb-5 pt-lg-7 pb-lg-7 why-sm-circlegreen bg-white">
+        <div class="container">
+          <h2 class="text-center">Why trade with Switch Markets?</h2>
+          <div class="columns-grid pt-3 pt-lg-5 align-items-start">
+            <div class="icon-div-wrapper">
+              <div class="icon-wrapper d-block">
+                <i class="icon icon-commission-icon text-green"></i>
+              </div>
+              <div>
+                <span class="title d-block mt-1 font-weight-medium"
+                  >0.0% commission & no hidden costs</span
+                >
+                <p class="description text-grey mt-05 d-block">
+                  Whatever you’re trading, we know that every penny matters. That’s why we’re all
+                  about low spreads and transparent pricing.
+                </p>
+              </div>
+            </div>
+            <div class="icon-div-wrapper">
+              <div class="icon-wrapper d-block">
+                <i class="icon icon-milisecond-pip text-green"></i>
+              </div>
+              <div>
+                <span class="title d-block mt-1 font-weight-medium">Ideal for Algo Traders</span>
+                <p class="description text-grey mt-05 d-block">
+                  Unlike most brokers, we’ve built our broker with algo traders like you in mind.
+                </p>
+              </div>
+            </div>
+            <div class="icon-div-wrapper">
+              <div class="icon-wrapper d-block"><i class="icon icon-spreads text-green"></i></div>
+              <div>
+                <span class="title d-block mt-1 font-weight-medium">Spreads from 0.0 pips</span>
+                <p class="description text-grey mt-05 d-block">
+                  Spreads with no hidden costs mean we really do offer 0.0 pips. Switch Markets is
+                  the difference traders have been waiting for.
+                </p>
+              </div>
+            </div>
+
+            <div class="icon-div-wrapper">
+              <div class="icon-wrapper d-block"><i class="icon icon-celebrate text-green"></i></div>
+              <div>
+                <span class="title d-block mt-1 font-weight-medium">100% First Deposit Bonus</span>
+                <p class="description text-grey mt-05 d-block">
+                  Deposit as little as $100 and we'll match you up to $5,000. No catches, that's
+                  just how we do it.
+                </p>
+              </div>
+            </div>
+            <div class="icon-div-wrapper">
+              <div class="icon-wrapper d-block"><i class="icon icon-sheet-up text-green"></i></div>
+              <div>
+                <span class="title d-block mt-1 font-weight-medium"
+                  >Free How To Trade Membership</span
+                >
+                <p class="description text-grey mt-05 d-block">
+                  Get Complimentary access to How To Trade*.
+                </p>
+              </div>
+            </div>
+            <div class="icon-div-wrapper">
+              <div class="icon-wrapper d-block"><i class="icon icon-server text-green"></i></div>
+              <div>
+                <span class="title d-block mt-1 font-weight-medium">Free Forex VPS</span>
+                <p class="description text-grey mt-05 d-block">
+                  Real traders know that using a VPS makes all the difference. We are now giving out
+                  a free Forex VPS with every new account!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trade popular markets -->
+      <section class="bg-light pt-3 pb-1 pb-lg-3 pt-lg-4">
+        <div class="container text-center">
+          <h2 class="mt-05">Trade and invest in nearly 2,000 markets worldwide</h2>
+          <p class="h4 text-small text-light-grey subheading font-weight-medium mt-1">
+            Global markets right at your fingertips...
+          </p>
+        </div>
+
+        <div class="drag-to-scroll--wrapper">
+          <div class="drag-to-scroll">
+            <div class="text-left item">
+              <div class="d-flex justify-content-between align-items-start flex-column h-100">
+                <div>
+                  <h3 class="font-weight-medium d-flex align-items-baseline">
+                    <i class="icon icon-foreign-exchange text-blue text-md mr-05"></i>Forex
+                  </h3>
+                  <p class="text-grey mt-1">
+                    Majors, minors and exotics. No matter the pair, we’ve got you covered.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-left item">
+              <div class="d-flex justify-content-between align-items-start flex-column h-100">
+                <div>
+                  <h3 class="font-weight-medium d-flex align-items-baseline">
+                    <i class="icon icon-gold-ingot text-blue text-md mr-05"></i>Metals
+                  </h3>
+                  <p class="text-grey mt-1">
+                    Get involved in one of the most exciting markets - precious metals.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-left item">
+              <div class="d-flex justify-content-between align-items-start flex-column h-100">
+                <div>
+                  <h3 class="font-weight-medium d-flex align-items-baseline">
+                    <i class="icon icon-bar-chart text-blue text-md mr-05"></i>Indices
+                  </h3>
+                  <p class="text-grey mt-1">
+                    Trade indices from across the globe and major markets.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-left item">
+              <div class="d-flex justify-content-between align-items-start flex-column h-100">
+                <div>
+                  <h3 class="font-weight-medium d-flex align-items-baseline">
+                    <i class="icon icon-cfd text-blue text-md mr-05"></i>CFD Shares
+                  </h3>
+                  <p class="text-grey mt-1">Trade CFDs of some of the most popular companies.</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-left item">
+              <div class="d-flex justify-content-between align-items-start flex-column h-100">
+                <div>
+                  <h3 class="font-weight-medium d-flex align-items-baseline">
+                    <i class="icon icon-crypto text-blue text-md mr-05"></i>Digital Currencies
+                  </h3>
+                  <p class="text-grey mt-1">Trade the most widely used digital currencies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END Trade popular markets -->
+
+      <!-- No nonsense deposits and withdrawals -->
+      <section
+        class="container columns-grid pt-lg-7 pb-lg-7 pt-3 pb-5 align-items-start deposit-withdrawal-section"
+      >
+        <div class="deposit-withdrawal-wrapper">
+          <div class="card-logo">
+            <img
+              src="img/19.png"
+              alt="mastercard logo"
+              width="51"
+              height="40"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-logo">
+            <img
+              src="img/20.png"
+              alt="visa logo"
+              width="73"
+              height="24"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-logo d-flex flex-column">
+            <i class="icon icon-data-centre text-blue" style="font-size: 20px"></i>
+            <span class="text-xs text-light-grey mt-05">Bank Wire</span>
+          </div>
+          <div class="card-logo d-flex flex-column">
+            <i class="icon icon-crypto text-blue" style="font-size: 20px"></i>
+            <span class="text-xs text-light-grey mt-05">Digital Currencies</span>
+          </div>
+
+          <div class="card-logo">
+            <img
+              src="img/21.png"
+              alt="nganluong logo"
+              width="121"
+              height="29"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-logo">
+            <img
+              src="img/22.png"
+              alt="Globepay logo"
+              width="96"
+              height="26"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-logo">
+            <img
+              src="img/23.png"
+              alt="Perfect Money logo"
+              width="110"
+              height="32"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-logo">
+            <img
+              src="img/24.png"
+              alt="PayTrust logo"
+              width="110"
+              height="25"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="card-logo">
+            <img
+              src="img/union-pay.png"
+              alt="Union Pay logo"
+              width="56"
+              height="35"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-logo">
+            <img
+              src="img/skrill.png"
+              alt="Skrill logo"
+              width="60"
+              height="20"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-logo">
+            <img
+              src="img/fasapay.png"
+              alt="Fasapay logo"
+              width="115"
+              height="22"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-logo">
+            <img
+              src="img/neteller.png"
+              alt="Neteller logo"
+              width="106"
+              height="19"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="order-n1 order-lg-2">
+          <h2 class="text-green">Your money, your way.</h2>
+          <p class="mt-1 font-weight-medium">
+            At Switch Markets we believe all traders are entitled to a fast, hassle-free experience
+            when it comes to your funds.
+          </p>
+
+          <div class="d-block">
+            <p class="mt-1 d-flex align-items-center">
+              <i class="icon icon-check mr-05"></i> Near-instant deposits
+            </p>
+            <p class="mt-1 d-flex align-items-center">
+              <i class="icon icon-check mr-05"></i> Fast withdrawals
+            </p>
+            <p class="mt-1 d-flex align-items-center">
+              <i class="icon icon-check mr-05"></i> No deposit fees
+            </p>
+          </div>
+
+          <a href="deposits.html" target="_blank" class="btn btn-green mt-1_5"
+            >Explore all Deposit options</a
+          >
+        </div>
+      </section>
+      <!-- END No nonsense deposits and withdrawals -->
+
+      <!-- Algo trader -->
+      <!-- Perfect for algo traders -->
+      <section class="bg-gradient-blue-green pt-lg-3 pt-2 light-fast-trade">
+        <div class="container text-center position-relative mt-05" style="z-index: 2">
+          <span class="h4 opacity font-weight-medium">Perfect for algo traders</span>
+          <h2 class="text-white mt-05">Trade 1ms latency on our in-house VPS</h2>
+          <p class="subheading h6 font-weight-medium mt-05 text-white">
+            Never miss a pip with Switch Markets. Host your Expert Advisors on our in-house VPS.
+          </p>
+          <div
+            class="d-flex flex-wrap justify-content-between flex-column align-items-center flex-lg-row pt-2 pt-lg-4 position-relative lighting-animation-wrapper"
+          >
+            <div class="balloon-wrapper">
+              <div class="balloon-img-wrapper">
+                <img
+                  src="img/25.png"
+                  alt="MT4 balloon"
+                  width="140"
+                  height="70"
+                  loading="lazy"
+                />
+              </div>
+
+              <span class="card">
+                <span class="title">Buy</span>
+                <span class="number">1.21466</span>
+              </span>
+            </div>
+
+            <div class="lighting">
+              <span class="bar-animation"></span>
+            </div>
+
+            <div class="balloon-wrapper">
+              <div class="balloon-img-wrapper">
+                <img
+                  src="img/26.png"
+                  alt="Equinix balloon"
+                  width="140"
+                  height="70"
+                  loading="lazy"
+                />
+              </div>
+
+              <span class="card">
+                <span class="title">Fill</span>
+                <span class="number">1.21466</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <img
+          src="img/4.png"
+          width="2000"
+          height="802"
+          loading="lazy"
+          alt="circuits connections"
+          class="filter"
+        />
+        <div class="filter"></div>
+      </section>
+      <!-- END Perfect for algo traders -->
+
+      <!-- Execute trades as fast ... -->
+      <section class="bg-light-blue pt-2 pt-lg-3 pb-2">
+        <div class="algo-trading-section">
+          <ul class="columns-grid">
+            <li class="mt-05">
+              <i class="icon icon-check mr-05 text-small"></i>Hosted in Equinix DC
+            </li>
+            <li class="mt-05">
+              <i class="icon icon-check mr-05 text-small"></i>MetaTrader 4/5 pre-installed
+            </li>
+            <li class="mt-05">
+              <i class="icon icon-check mr-05 text-small"></i>Free with all live account types
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="bg-white pt-lg-7 pb-lg-7 pt-5 pb-5">
+        <div class="container align-items-start">
+          <h2 class="d-lg-none">
+            <span class="text-green">Much more</span> than just a
+            <span class="text-green">broker</span>
+          </h2>
+          <p class="font-weight-medium text-grey mt-1 mb-1_5 d-lg-none">
+            Explore the benefits and extras you can get if you open an account with Switch Markets.
+          </p>
+
+          <div class="columns-grid align-items-center">
+            <div>
+              <h2 class="d-none d-lg-block">
+                <span class="text-green">Much more</span> than just a
+                <span class="text-green">broker</span>
+              </h2>
+              <p class="font-weight-medium text-grey mt-1 mb-1_5 d-none d-lg-block">
+                Explore the benefits and extras you can get if you open an account with Switch
+                Markets.
+              </p>
+
+              <div class="d-flex flex-column">
+                <a href="" class="tools-card" target="_blank">
+                  <div class="d-flex align-items-center">
+                    <span class="icon-wrapper mr-1"
+                      ><i class="icon icon-server text-green"></i
+                    ></span>
+                    <span class="font-weight-medium title">Free Forex VPS</span>
+                  </div>
+                </a>
+
+                <a href="" class="tools-card mt-1" target="_blank">
+                  <div class="d-flex align-items-center">
+                    <span class="icon-wrapper mr-1"
+                      ><i class="icon icon-chart text-green"></i
+                    ></span>
+                    <span class="font-weight-medium title">Risk Management EA</span>
+                  </div>
+                </a>
+
+                <a href="" class="tools-card mt-1" target="_blank">
+                  <div class="d-flex align-items-center">
+                    <span class="icon-wrapper mr-1"
+                      ><i class="icon icon-celebrate text-green"></i
+                    ></span>
+                    <span class="font-weight-medium title">100% Bonus</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="text-center position-relative order-n1 order-lg-2 mt-2 mb-1 mt-lg-0 mb-lg-0"
+            >
+              <picture>
+                <source
+                  srcset="img/broker-bg.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="img/broker-bg.webp"
+                  width="460"
+                  height="452"
+                  loading="lazy"
+                  alt="young man on computer"
+                />
+              </picture>
+              <img
+                src="img/toast-success-blue.svg"
+                alt="toast success"
+                class="toast-msg animate-scroll show-on-scroll d-none d-lg-block"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END Free tools -->
+      <!-- END Free tools -->
+
+      <!-- Slider testimonials -->
+      <!-- Testimonials -->
+
+      <section class="comment-area pt-4 pb-5" id="testimonials-section">
+        <div
+          class="content-wrapper container-lg d-flex flex-wrap justify-content-around align-items-center pr-1 pl-1"
+        >
+          <div class="text-left">
+            <h2 class="font-weight-medium">Join our happy traders</h2>
+            <!-- TrustBox widget - Micro Review Count -->
+         
+            <!-- End TrustBox widget -->
+          </div>
+
+          <div class="d-flex flex-column align-items-center testimonial-slider">
+            <span class="testimonial">
+              <div id="trustpilot-splide" class="splide mt-3">
+                <div class="splide__track trustpilot-reviews">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <div class="slick-content">
+                        <div class="testimonial-wrapper">
+                          <i class="icon icon-quote"></i>
+                          <span class="text-small mt-1 d-block">Christopher Faron</span>
+
+                          <p class="mt-2 text-md font-weight-bold">
+                            &#8220;Great broker, fully recommend.&#8221;
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="slick-content">
+                        <div class="testimonial-wrapper">
+                          <i class="icon icon-quote"></i>
+                          <span class="text-small mt-1 d-block">Benaiah Hlebeya</span>
+
+                          <p class="mt-2 text-md font-weight-bold">
+                            &#8220;The best broker care for the clients&#8221;
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="slick-content">
+                        <div class="testimonial-wrapper">
+                          <i class="icon icon-quote"></i>
+                          <span class="text-small mt-1 d-block">Richard</span>
+
+                          <p class="mt-2 text-md font-weight-bold">
+                            &#8220;An exceptional broker&#8221;
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="slick-content">
+                        <div class="testimonial-wrapper">
+                          <i class="icon icon-quote"></i>
+                          <span class="text-small mt-1 d-block">shaanshii</span>
+
+                          <p class="mt-2 text-md font-weight-bold">
+                            &#8220;Highly Recommend&#8221;
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="slick-content">
+                        <div class="testimonial-wrapper">
+                          <i class="icon icon-quote"></i>
+                          <span class="text-small mt-1 d-block">Pill Taker</span>
+
+                          <p class="mt-2 text-md font-weight-bold">&#8220;Really good&#8221;</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="slick-content">
+                        <div class="testimonial-wrapper">
+                          <i class="icon icon-quote"></i>
+                          <span class="text-small mt-1 d-block">Christopher Faron</span>
+
+                          <p class="mt-2 text-md font-weight-bold">
+                            &#8220;Very happy with this broker, decent spreads, pretty reliable. The
+                            free VPS is such a great deal. Fully recommend.&#8221;
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <picture>
+          <source srcset="img/27.webp" type="image/webp" />
+          <img
+            src="img/28.jpeg"
+            width="1300"
+            height="495"
+            loading="lazy"
+            alt="user faces"
+            class="testimonial-bg"
+          />
+        </picture>
+        <div class="filter"></div>
+        <span class="chat-arrow"></span>
+      </section>
+      <!-- END Testimonials -->
+
+      <!-- Need to place it inside the page footer, not here -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          new Splide('#trustpilot-splide', {
+            type: 'loop',
+            perPage: 1,
+            flickMaxPages: 1,
+            rewind: true,
+            autoplay: true,
+            interval: 5000,
+            easing: 'ease',
+            pagination: false,
+            arrows: true,
+            gap: 10,
+            throttle: 300,
+            breakpoints: {
+              767: {
+                pagination: true,
+                arrows: false,
+              },
+            },
+          }).mount();
+        });
+      </script>
+      <!-- END Slider testimonials -->
+
+      <!-- Edu Hub Articles -->
+      <section class="edu-hub pt-5">
+        <div class="container">
+          <h2 class="text-center">Market Analysis & News</h2>
+          <p class="text-center">Develop your trading edge with Switch Markets</p>
+          <div class="grid-3 pt-4 mb-4">
+            <div class="article-card" data-id="3872">
+              <img
+                src="img/29.png"
+                alt=""
+                class="article-card-img"
+              />
+              <h3 class="article-card-title">How to Keep Your Trading Account Secure</h3>
+              <p class="article-card-intro">
+                Online security is becoming more and more of a priority for businesses and
+                individuals. When it comes to your trading accounts, security, privacy and being
+                aware of what data you share online are crucial. According to CNBC, there was 61%
+                increase in phishing attacks in 2022 compared to the previous year and we expect
+                2023 [&hellip;]
+              </p>
+              <a
+                href="article1.html"
+                class="article-card-link"
+                ><span class="underline">Read the article</span>
+                <i class="icon icon-arrow-right ml-1"></i
+              ></a>
+            </div>
+            <div class="article-card" data-id="3824">
+              <img
+                src="img/30.jpeg"
+                alt=""
+                class="article-card-img"
+              />
+              <h3 class="article-card-title">4 Steps to Becoming an Introducing Broker</h3>
+              <p class="article-card-intro">
+                New forex brokers have different ways to enter and offer forex trading services in
+                one of the most fascinating and lucrative markets in the world. One way to do so is
+                by becoming an introducing broker (IB).&nbsp; Much like an affiliate marketer,
+                introducing brokers operates in collaboration with another brokerage firm that
+                already has a [&hellip;]
+              </p>
+              <a
+                href="article2.html"
+                class="article-card-link"
+                ><span class="underline">Read the article</span>
+                <i class="icon icon-arrow-right ml-1"></i
+              ></a>
+            </div>
+            <div class="article-card" data-id="3807">
+              <img
+                src="img/31.jpeg"
+                alt=""
+                class="article-card-img"
+              />
+              <h3 class="article-card-title">
+                Is Bitcoin a Safe Haven Asset? &#8211; A Realistic Overview
+              </h3>
+              <p class="article-card-intro">
+                Can bitcoin be a safe haven asset? This is a question that will dominate in the
+                upcoming years and perhaps even decades. Ironically, since its inception, bitcoin
+                has been perceived by many people as the new safe-haven asset, the alternative to
+                gold, silver, the US dollar, and the alleged failing financial system.&nbsp; But is
+                Bitcoin [&hellip;]
+              </p>
+              <a
+                href="article2.html"
+                class="article-card-link"
+                ><span class="underline">Read the article</span>
+                <i class="icon icon-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END Edu Hub Articles -->
+
+      <!-- FAQ -->
+
+      <section id="faq" class="bg-light text-center pt-5 pb-5">
+        <div class="container">
+          <h2>FAQs</h2>
+          <p class="subheading text-small text-light-grey font-weight-medium mt-1">
+            Read our frequently asked questions below. If you still need help,
+            <a href="">contact us</a> today.
+          </p>
+
+          <div class="accordion mt-2_5">
+            <div class="accordion-item">
+              <div class="accordion-item-header">
+                <h3>How do I get started? <i class="icon icon-chevron-down"></i></h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>
+                    We're excited to have you on board! Simply click
+                    <a href="/signup" target="_blank">"Start trading today"</a> to begin setting up
+                    your account. Explore our different account types to find the one that best fits
+                    your trading objectives. Filling out our registration form only takes a few
+                    minutes, and once your account is approved, you can start trading!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-item-header">
+                <h3>Do you offer a demo account? <i class="icon icon-chevron-down"></i></h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>
+                    Absolutely! Click <a href="/demo" target="_blank">"Try free demo"</a> to start
+                    practicing with a Switch Market Demo Account in just minutes. You can use your
+                    demo account indefinitely to refine your trading strategies. When you feel
+                    confident, switching to a live account is just a click away.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-item-header">
+                <h3>
+                  How long does the demo account last for? <i class="icon icon-chevron-down"></i>
+                </h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>
+                    Your Switch Markets demo account is yours indefinitely, with no time limit. You
+                    can transition to a live trading account whenever you're ready by clicking
+                    <a href="/signup" target="_blank">"Start trading today"</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-item-header">
+                <h3>
+                  What is the minimum amount needed to open a Switch Markets trading account?
+                  <i class="icon icon-chevron-down"></i>
+                </h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>
+                    You can open a live trading account with Switch Markets for as little as $50.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-item-header">
+                <h3>
+                  What costs are involved in trading with Switch Markets?
+                  <i class="icon icon-chevron-down"></i>
+                </h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>
+                    We keep it simple. There are no deposit or withdrawal fees at Switch Markets.
+                    Choose a trading account that aligns with your trading preferences.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-item-header">
+                <h3>
+                  Do I get charged for a dormant trading account?
+                  <i class="icon icon-chevron-down"></i>
+                </h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>Nope. Nada. You will not be charged anything for keeping your account open.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-item-header">
+                <h3>How fast are withdrawals? <i class="icon icon-chevron-down"></i></h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>
+                    Withdrawals at Switch Markets are fast. Once you've completed all necessary
+                    verification checks, most withdrawals are processed within one business day.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-item-header">
+                <h3>How do I contact support? <i class="icon icon-chevron-down"></i></h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>
+                    We're here to help! Connect with us anytime through our live chat for immediate
+                    assistance. Our team is available 24/7 to answer your questions. Alternatively,
+                    you can reach out to us via email at
+                    <a href="mailto:support@switchmarkets.com" target="_blank"
+                      >support@switchmarkets.com</a
+                    >.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-item-header">
+                <h3>
+                  Why would a trader need a VPS for trading? <i class="icon icon-chevron-down"></i>
+                </h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>
+                    A VPS offers several advantages for traders, including uninterrupted trading
+                    operations, enhanced security, and improved execution speed. It allows you to
+                    run your trading platforms and algorithms 24/7, even when your personal
+                    computers are turned off. This ensures that trading strategies can be executed
+                    without downtime, capturing opportunities in global markets.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-item-header">
+                <h3>
+                  How does a VPS improve trading performance? <i class="icon icon-chevron-down"></i>
+                </h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>
+                    A VPS is hosted on powerful servers with high-speed internet connections,
+                    reducing latency and execution delays. This can significantly improve trade
+                    execution speed and accuracy. Traders can take advantage of quicker order
+                    placement, reducing the risk of slippage and improving the overall efficiency of
+                    your trading strategies.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-item-header">
+                <h3>
+                  Can I access my trading account from anywhere using a VPS?
+                  <i class="icon icon-chevron-down"></i>
+                </h3>
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <p>
+                    Absolutely. One of the benefits of a VPS is remote accessibility. You can access
+                    your VPS and trading platform from anywhere with an internet connection. This
+                    flexibility allows you to monitor and manage your trades, even when you are away
+                    from your personal computers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END FAQ -->
+
+      <!-- Tight spreads that make a difference. -->
+      <!-- Tight spreads that make a difference. -->
+      <section
+        class="bg-gradient-blue-green pt-5 pb-5 pt-lg-7 pb-lg-7 text-white tight-spreads-section"
+      >
+        <div class="container text-center">
+          <h2>Tight spreads that make a difference.</h2>
+          <h3 class="h2-smaller font-weight-normal mt-1">
+            Diverse liquidity providers ensure our spreads are tight around<br />
+            the clock. Trade with spreads as low as 0.0* pips.
+          </h3>
+
+          <div
+            class="mt-2 align-items-baseline"
+            style="display: grid; grid-template-columns: 1fr 1fr"
+          >
+            <div class="text-right mr-1">
+              <a href="/signup" class="btn btn-green btn-xl">Create Live Account</a>
+              <span class="d-block text-xs text-right mt-05"
+                >Deposit from $50<br />Start trading in minutes</span
+              >
+            </div>
+
+            <div class="text-left">
+              <a href="/demo" class="btn btn-white-outline btn-xl">Create Demo Account</a>
+              <span class="d-block text-xs text-left mt-05"
+                >Practice with $50,000 <br />Demo environment</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-dark-blue text-white">
+        <div class="logo-wrapper container pt-3 mb-2 d-flex flex-wrap justify-content-between">
+          <a href="/" class="logo"
+            ><img src="img/3.svg" alt="Switch Markets logo" width="130" height="35"
+          /></a>
+
+          <div>
+            <a href="/signup" class="btn btn-green btn-wide mr-1 mb-1">Start trading today</a>
+            <a href="/demo" class="btn btn-white-outline btn-wide">Try free demo</a>
+          </div>
+        </div>
+
+        <div class="base-footer">
+          <div class="container d-flex flex-wrap justify-content-between">
+            <span
+              >Copyright &#169; 2020-2024 Switch Markets International PTE Ltd | All rights
+              reserved.</span
+            >
+
+            <!-- <span>
+              <a href="terms-conditions.html">Terms & Conditions</a> |
+              <a href="privacy-policy.html">Privacy Policy</a> |
+              <a href="cookie-policy.html">Cookies Policy</a> |
+              <a href="product-disclosure-statement.html">Product Disclosure</a> |
+              <a href="financial-services-guide.html">Financial Services Guide</a>
+            </span> -->
+
+            <div class="mt-1_5">
+              <span class="mb-1 d-block"
+                >* Spreads starting as low as 0.0 are only available on the Pro account type.</span
+              >
+              <span class="mb-1 d-block"
+                >**<a href="#">Terms &amp; Conditions</a> apply. New customers
+                only. A minimum deposit of 100 USD is necessary to qualify for the bonus.</span
+              >
+              <span class="mb-1 d-block"
+                >*** $3.50 is the commission amount paid for each time you enter or exit a 1 lot
+                trade on a Forex pair.</span
+              >
+
+              Switch Markets International PTE Ltd (202040285G) is an authorised representative of
+              Royal ETP LLC. The information on this page does not constitute personal advice. We
+              encourage you to seek out your own independent advice and to consider your own
+              financial situation, needs and objectives prior to making any decisions.
+              <br /><br />
+              Regional restrictions: Switch Markets does not provide trading services to anyone
+              residing in the U.S.A, Yemen, Iran and North Korea nor any other countries where the
+              offer of our products are prohibited or restricted by laws. You must satisfy yourself
+              that dealing in our products is permitted under the laws of the country that you
+              reside.
+              <br /><br />
+              This site is protected by reCAPTCHA and the Google
+              <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
+              <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a>
+              apply. Risk Warning: <br /><br />
+              Switch Markets International PTE Ltd offers trading on Foreign Exchange (‘Forex’ or
+              ‘FX’) and Contracts for Difference (‘CFDs’), which are complex financial products that
+              are traded on margin. They carry a high level of risk since leverage can work both to
+              your advantage and disadvantage. As a result, these products may not be suitable for
+              all investors, as loss of all invested capital may occur. You should not risk more
+              than you are prepared to lose. Before deciding to trade, you need to ensure that you
+              understand the risks involved and consider your investment objectives and level of
+              experience. Seek independent advice, if necessary.<br /><br />
+              Switch Markets International PTE Ltd does not issue advice, recommendations or
+              opinions in relation to acquiring, holding or disposing of a CFD. Switch Markets
+              International PTE Ltd is not a financial advisor and all services are provided on an
+              execution-only basis. This communication is not an offer or solicitation to enter into
+              a transaction and shall not be construed as such.<br /><br />
+              This website is not directed at any jurisdiction and is not intended for any use that
+              would be contrary to local law or regulation. By using www.switchmarkets.com you agree
+              to use our cookies to enhance your experience.<br /><br />
+
+              Switch Markets International PTE LTD introduces clients to Royal Group Holdings, Royal
+              ETP LLC incorporated in Saint Vincent and the Grenadines (149LLC2019). Each country
+              that a person trades in has a particular legal framework, which Royal Group Holdings
+              adheres to when agreeing to onboard customers.
+              <br /><br />
+              Address: Suite 126, 117 Old Pittwater Road, Brookvale, NSW2100, Australia<br />
+              Contact: +61 480 094 684
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="cookie-consent js-cookie-consent">
+      <div class="cookie-consent__content" lang="en">
+        <h6 lang="en" class="cookie-consent__content__title">This website uses cookies</h6>
+        <div lang="en" class="cookie-consent__content__text">
+          We use cookies to enhance your browsing experience, serve personalized ads or content, and
+          analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+        </div>
+      </div>
+
+      <div class="cookie-consent__buttons" lang="en">
+        <button lang="en" class="btn btn-deny js-cookie-consent-deny">Deny</button>
+        <button class="btn btn-blue js-cookie-consent-accept" lang="en">Accept All</button>
+      </div>
+    </div>
+
+    <script src="js/splide.min.js"></script>
+
+
+
+    <script>
+      (function () {
+        const slider = document.querySelector('.drag-to-scroll');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+          isDown = true;
+          slider.classList.add('active');
+          startX = e.pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+          isDown = false;
+          slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+          isDown = false;
+          slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - slider.offsetLeft;
+          const walk = (x - startX) * 3; //scroll-fast
+          slider.scrollLeft = scrollLeft - walk;
+          //console.log(walk);
+        });
+      })();
+    </script>
+    <script>
+      'use strict';
+      (function () {
+        var accordionItemHeaders = document.querySelectorAll('.accordion-item-header');
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+        accordionItemHeaders.forEach((accordionItemHeader) => {
+          accordionItemHeader.addEventListener('click', (event) => {
+            accordionItemHeader.classList.toggle('active');
+            const accordionItemBody = accordionItemHeader.nextElementSibling;
+            if (accordionItemHeader.classList.contains('active')) {
+              // Execute JavaScript only if the browser is Safari
+              if (isSafari) {
+                accordionItemBody.style.maxHeight = '800px';
+              } else {
+                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
+              }
+            } else {
+              accordionItemBody.style.maxHeight = 0;
+            }
+          });
+        });
+      })();
+    </script>
+
+    <script>
+      var sm_price = new (function () {
+        this.pairs = [];
+        this.update = (data) => {
+          if (data) {
+            data.forEach((row) => {
+              this.pairs[row.symbol] = row;
+              if (row.type == 'crypto' || row.type == 'stock') {
+                let ask = this.pairs[row.symbol].ask;
+                let bid = this.pairs[row.symbol].bid;
+                this.pairs[row.symbol].ask = parseFloat(ask).toFixed(2);
+                this.pairs[row.symbol].bid = parseFloat(bid).toFixed(2);
+                this.pairs[row.symbol]['spread'] = (ask - bid).toFixed(2);
+              }
+            });
+          }
+
+          // console.log(this.pairs);
+          setTimeout(() => {
+            var els = document.getElementsByClassName('bids-cards-wrapper');
+            for (var x = 0; x < els.length; x++) {
+              var el = els[x].getElementsByClassName('currency-card');
+              for (var l = 0; l < el.length; l++) {
+                if (this.pairs[el[l].dataset.currency]) {
+                  try {
+                    el[l].querySelector('[data-bid]').innerHTML =
+                      this.pairs[el[l].dataset.currency].bid;
+                    el[l].querySelector('[data-ask]').innerHTML =
+                      this.pairs[el[l].dataset.currency].ask;
+                    el[l].querySelector('[data-spread]').innerHTML =
+                      this.pairs[el[l].dataset.currency].spread;
+                    el[l].querySelector('[data-daily]').innerHTML =
+                      this.pairs[el[l].dataset.currency].dailyPercentage +
+                      '%' +
+                      (this.pairs[el[l].dataset.currency].dailyPercentage < 0
+                        ? ' <i class="icon icon-triangle-down"></i>'
+                        : ' <i class="icon icon-triangle-up"></i>');
+                    if (el[l].dataset.daily != this.pairs[el[l].dataset.currency].daily) {
+                      el[l].dataset.daily = this.pairs[el[l].dataset.currency].dailyPercentage;
+                      el[l].querySelector('[data-daily]').classList.remove('down-trade');
+                      el[l].querySelector('[data-daily]').classList.remove('up-trade');
+                      el[l]
+                        .querySelector('[data-daily]')
+                        .classList.add(
+                          this.pairs[el[l].dataset.currency].dailyPercentage < 0
+                            ? 'down-trade'
+                            : 'up-trade',
+                        );
+                      el[l].querySelector('[data-image').innerHTML =
+                        this.pairs[el[l].dataset.currency].dailyPercentage < 0
+                          ? `<img src="img/1.svg" alt="down trade chart" width="80px" height="20px">`
+                          : `<img src="img/2.svg" alt="up trade chart" width="80px" height="20px">`;
+                    }
+                    if (el[l].dataset.direction != this.pairs[el[l].dataset.currency].direction) {
+                      el[l].dataset.direction = this.pairs[el[l].dataset.currency].direction;
+                      el[l].querySelector('[data-bid]').classList.remove('down-trade');
+                      el[l].querySelector('[data-bid]').classList.remove('up-trade');
+                      el[l]
+                        .querySelector('[data-bid]')
+                        .classList.add(
+                          this.pairs[el[l].dataset.currency].dailyPercentage < 0
+                            ? 'down-trade'
+                            : 'up-trade',
+                        );
+                      el[l].querySelector('[data-ask]').classList.remove('down-trade');
+                      el[l].querySelector('[data-ask]').classList.remove('up-trade');
+                      el[l]
+                        .querySelector('[data-ask]')
+                        .classList.add(
+                          this.pairs[el[l].dataset.currency].dailyPercentage < 0
+                            ? 'down-trade'
+                            : 'up-trade',
+                        );
+                    }
+                  } catch (err) {
+                    console.error(err);
+                  }
+                }
+              }
+            }
+            if (sm_app.ffc && Object.keys(this.pairs).length) {
+              // dashboard prices
+              const ffcScreen = document.querySelector('.ffc-screen');
+              if (ffcScreen) {
+                const event = new CustomEvent('newPrice', {
+                  detail: {
+                    time: Math.floor(new Date().getTime() / 1000),
+                    EURUSD: this.pairs['EURUSD.s_core'].bid,
+                    GBPUSD: this.pairs['GBPUSD.s_core'].bid,
+                    AUDUSD: this.pairs['AUDUSD.s_core'].bid,
+                  },
+                });
+                ffcScreen.dispatchEvent(event);
+              }
+              // chart prices
+              const ffcChart = document.querySelector('#ffc-chart-div');
+              if (ffcChart) {
+                const event = new CustomEvent('newPrice', {
+                  detail: {
+                    time: Math.floor(new Date().getTime() / 1000),
+                    EURUSD: this.pairs['EURUSD.s_core'].bid,
+                    GBPUSD: this.pairs['GBPUSD.s_core'].bid,
+                    AUDUSD: this.pairs['AUDUSD.s_core'].bid,
+                  },
+                });
+                ffcChart.dispatchEvent(event);
+              }
+            }
+            var tables = document.getElementsByClassName('spreadsTable');
+            if (tables !== null) {
+              for (var x = 0; x < tables.length; x++) {
+                var table = tables[x];
+
+                if (table.getElementsByClassName('initMsg')[0]) {
+                  table.getElementsByClassName('initMsg')[0].style.display = 'none';
+                }
+
+                var type = table.dataset.type;
+                var account_type = table.dataset.account_type;
+                if (type !== 'undefined' && account_type !== 'undefined') {
+                  data.forEach((pair) => {
+                    try {
+                      if (pair.type == type && pair.type_account == account_type) {
+                        if (!table.rows.namedItem(pair.symbol)) {
+                          var row = table.insertRow(table.rows.length);
+                          row.setAttribute('data-daily', pair.dailyPercentage);
+                          row.setAttribute('data-direction', pair.direction);
+                          row.setAttribute('id', pair.symbol);
+                          let symbol_name = pair.symbol.replace('.s_cl', '');
+                          symbol_name = symbol_name.replace('.s_core', '');
+                          symbol_name = symbol_name.replace('.s_vip', '');
+                          var instrument = row.insertCell(0);
+                          instrument.innerHTML = symbol_name;
+                          instrument.dataset.label = 'Instrument';
+                          var bid = row.insertCell(1);
+                          bid.innerHTML = pair.bid;
+                          bid.dataset.label = 'Bid Price';
+                          bid.classList.add(pair.dailyPercentage < 0 ? 'down-trade' : 'up-trade');
+                          var ask = row.insertCell(2);
+                          ask.innerHTML = pair.ask;
+                          ask.dataset.label = 'Ask Price';
+                          ask.classList.add(pair.dailyPercentage < 0 ? 'down-trade' : 'up-trade');
+                          var spread = row.insertCell(3);
+                          spread.innerHTML = pair.spread;
+                          spread.dataset.label = 'Spread';
+                          var daily = row.insertCell(4);
+                          daily.innerHTML = pair.dailyPercentage;
+                          daily.dataset.label = 'Change';
+                          daily.classList.add(
+                            pair.dailyPercentage >= 0 ? 'up-trade' : 'down-trade',
+                          );
+                          var img = row.insertCell(5);
+                          img.innerHTML =
+                            pair.dailyPercentage < 0
+                              ? `<img src="img/1.svg" alt="down trade chart" width="80px" height="20px">`
+                              : `<img src="img/2.svg" alt="up trade chart" width="80px" height="20px">`;
+                          img.dataset.label = 'Trend';
+                        } else {
+                          var rows = table.getElementsByTagName('tr');
+                          for (var y = 0; y < rows.length; y++) {
+                            if (rows[y].id == pair.symbol) {
+                              table.rows[y].cells[1].innerHTML = pair.bid;
+                              table.rows[y].cells[2].innerHTML = pair.ask;
+                              table.rows[y].cells[3].innerHTML = pair.spread;
+                              table.rows[y].cells[4].innerHTML = pair.dailyPercentage;
+
+                              if (table.rows[y].dataset.direction != pair.direction) {
+                                table.rows[y].cells[1].classList.remove('up-trade');
+                                table.rows[y].cells[1].classList.remove('down-trade');
+                                table.rows[y].cells[1].classList.add(
+                                  pair.dailyPercentage < 0 ? 'down-trade' : 'up-trade',
+                                );
+                                table.rows[y].cells[2].classList.remove('up-trade');
+                                table.rows[y].cells[2].classList.remove('down-trade');
+                                table.rows[y].cells[2].classList.add(
+                                  pair.dailyPercentage < 0 ? 'down-trade' : 'up-trade',
+                                );
+                              }
+                              if (table.rows[y].dataset.daily != pair.dailyPercentage) {
+                                table.rows[y].cells[4].classList.remove('up-trade');
+                                table.rows[y].cells[4].classList.remove('down-trade');
+                                table.rows[y].cells[4].classList.add(
+                                  pair.dailyPercentage >= 0 ? 'up-trade' : 'down-trade',
+                                );
+                                table.rows[y].cells[5].innerHTML =
+                                  pair.dailyPercentage < 0
+                                    ? `<img src="img/1.svg" alt="down trade chart" width="80px" height="20px">`
+                                    : `<img src="img/2.svg" alt="up trade chart" width="80px" height="20px">`;
+                              }
+                              break;
+                            }
+                          }
+                        }
+                      }
+                    } catch (err) {
+                      console.error(err);
+                    }
+                  });
+                }
+              }
+            }
+          }, 50);
+        };
+      })();
+    </script>
+    <script>
+      //countdown function
+
+      var sm_countdown = new (function () {
+        let timer;
+        let nodes;
+        let end;
+
+        const _second = 1000;
+        const _minute = _second * 60;
+        const _hour = _minute * 60;
+        const _day = _hour * 24;
+
+        let countdown = document.querySelectorAll('.countdown-wrapper');
+        let countdown_title = document.querySelector('.countdown-title');
+
+        this.stopCountdown = function () {
+          clearInterval(timer);
+          return this;
+        };
+
+        this.countdownStep = function () {
+          let now = new Date();
+          now.setMilliseconds(0);
+
+          let distance = end - now;
+
+          if (distance < 0) {
+            clearInterval(timer);
+            if (countdown_title) {
+              countdown_title.style.display = 'none';
+            }
+            countdown.forEach((e) => (e.style.display = 'none'));
+            return;
+          } else {
+            if (countdown_title) {
+              countdown_title.style.display = 'block';
+            }
+            countdown.forEach((e) => (e.style.display = 'block'));
+          }
+
+          let days = Math.floor(distance / _day);
+          let hours = Math.floor((distance % _day) / _hour);
+          let minutes = Math.floor((distance % _hour) / _minute);
+          let seconds = Math.floor((distance % _minute) / _second);
+
+          const data = [
+            {
+              title: 'days',
+              value: days,
+            },
+            {
+              title: 'hrs',
+              value: prependZero(hours),
+            },
+            {
+              title: 'mins',
+              value: prependZero(minutes),
+            },
+            {
+              title: 'secs',
+              value: prependZero(seconds),
+            },
+          ];
+
+          function prependZero(val) {
+            return ('0' + val).slice(-2);
+          }
+
+          function toHtml({ title, value }) {
+            const margin = title === 'secs' ? '' : '';
+            const textAlign = 'center'; // (title === 'days') ? 'right' : 'center';
+
+            return `<div class="d-inline-block text-${textAlign}${margin}"><span class="countdown__digit">${value}</span><span class="countdown__date d-block">${title}</span></div>`;
+          }
+
+          const html = data.map(toHtml).join('<span class="countdown__colon">:</span>');
+          nodes.forEach((e) => (e.innerHTML = html));
+        };
+
+        this.PlansCountdown = function (dt, containerClassName, debug = false) {
+          nodes = document.querySelectorAll('.' + containerClassName);
+
+          if (nodes.length > 0) {
+            end = new Date(dt);
+            this.countdownStep();
+            if (!debug) {
+              timer = setInterval(this.countdownStep, 1000);
+            }
+          }
+        };
+      })();
+
+      var sm_cookie = new (function () {
+        //current date
+        let myDate = new Date();
+
+        function addDays(dd) {
+          return myDate.setDate(myDate.getDate() + dd);
+        }
+
+        this.setCookie = function (cname, cvalue, exdays) {
+          let d = new Date(exdays);
+          let expires = 'expires=' + d.toUTCString();
+
+          document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+        };
+
+        this.getCookie = function (cname) {
+          let name = cname + '=';
+          let ca = document.cookie.split(';');
+          for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return '';
+        };
+
+        this.checkCookie = function (cookieName, dd) {
+          let dt = new Date(dd);
+          let grabCookie = sm_cookie.getCookie(cookieName);
+
+          if (grabCookie != '') {
+            dd = grabCookie;
+          } else {
+            grabCookie = cookieName;
+            sm_cookie.setCookie(cookieName, dt, dd);
+          }
+          //run the countdown function
+          sm_countdown.PlansCountdown(dt, 'js_countdown', cookieName);
+        };
+      })();
+    </script>
+    <script>
+      //load video only on desktop view
+      document.addEventListener('DOMContentLoaded', function () {
+        var sources = document.querySelectorAll('video#myVideo source');
+        // Define the video object this source is contained inside
+        var video = document.querySelector('video#myVideo');
+
+        for (var i = 0; i < sources.length; i++) {
+          sources[i].setAttribute('src', sources[i].getAttribute('data-src'));
+        }
+
+        if (window.innerWidth > 991) {
+          // If for some reason we do want to load the video on desktop, use videojs API to load
+          if (video) {
+            video.load();
+          }
+        }
+      });
+    </script>
+
+    <!-- <script src="js/1.js" chat="true"></script> -->
+
+    <!-- END The exit Modal -->
+  </body>
+</html>
