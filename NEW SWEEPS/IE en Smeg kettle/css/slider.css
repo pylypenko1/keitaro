@@ -1,0 +1,84 @@
+body {
+  background: #ffffff;
+}
+.main {
+  font-family: Arial;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+h3 {
+  background: #fff;
+  color: #3498db;
+  font-size: 36px;
+  line-height: 100px;
+  margin: 10px;
+  padding: 2%;
+  position: relative;
+  text-align: center;
+}
+.action {
+  display: block;
+  margin: 100px auto;
+  width: 100%;
+  text-align: center;
+}
+.action a {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #f30;
+  color: #fff;
+  text-decoration: none;
+}
+.action a:hover {
+  background: #000;
+}
+.slider img {
+  border-radius: 10px;
+  border: 3px solid #0c2645;
+}
+.slick-slide img {
+  border: none !important;
+  margin-top: 20px;
+}
+.slick-dots,
+.slick-arrow {
+  display: none !important;
+}
+.leftimg {
+  float: left; /* Выравнивание по левому краю */
+  margin: 0px 10px 10px 0; /* Отступы вокруг картинки */
+}
+.rightimg {
+  float: right; /* Выравнивание по правому краю  */
+  margin: 0px 0 10px 10px; /* Отступы вокруг картинки */
+}
+.div1,
+.div2,
+.div3,
+.div4 {
+  margin-top: 20px;
+}
+.maintext {
+  color: #0c2645 !important;
+  font-size: 18px !important;
+  font-weight: 900;
+  padding: none !important;
+}
+.tech_spec tr:nth-child(2n) {
+  background: #eef0f2;
+}
+.tech_spec tr td.tech_spec_header {
+  padding: 40px 15px 20px 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: #fff;
+  color: #0c2645;
+  border-bottom: 1px solid #d4d9de;
+  font-weight: 700;
+}
+.cofe_present {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 15px;
+}

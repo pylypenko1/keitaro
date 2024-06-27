@@ -1,0 +1,417 @@
+.text_big {
+  font-size: 70px;
+  line-height: 6rem;
+  text-transform: uppercase;
+}
+
+.img_celeb {
+  position: relative;
+  text-align: left;
+  color: white;
+}
+
+.text_celeb {
+  position: absolute;
+  top: 53%;
+  left: 16px;
+  font-family: Montserrat;
+}
+
+.btn_sport {
+  position: absolute;
+  width: 310px;
+  height: 60px;
+  background: linear-gradient(130.99deg, #b6ff6f 1.35%, #75c922 73.25%);
+  box-shadow: 0px 4px 0px #69b31f, 0px 254px 102px rgba(6, 26, 45, 0.01),
+    0px 143px 86px rgba(6, 26, 45, 0.05), 0px 63px 63px rgba(6, 26, 45, 0.09),
+    0px 16px 35px rgba(6, 26, 45, 0.1), 0px 0px 0px rgba(6, 26, 45, 0.1);
+  border-radius: 20px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 43px;
+  text-align: center;
+  padding-top: 7px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn_sport1 {
+  position: absolute;
+  width: 310px;
+  height: 60px;
+  background: linear-gradient(130.99deg, #b6ff6f 1.35%, #75c922 73.25%);
+  box-shadow: 0px 4px 0px #69b31f, 0px 254px 102px rgba(6, 26, 45, 0.01),
+    0px 143px 86px rgba(6, 26, 45, 0.05), 0px 63px 63px rgba(6, 26, 45, 0.09),
+    0px 16px 35px rgba(6, 26, 45, 0.1), 0px 0px 0px rgba(6, 26, 45, 0.1);
+  border-radius: 20px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 43px;
+  text-align: center;
+  padding-top: 7px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn_sport2 {
+  background: linear-gradient(94.89deg, #75c922 23.79%, #b6ff6f 92.36%);
+
+  border-radius: 20px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 43px;
+  text-align: center;
+  padding-top: 7px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.form_head {
+  padding-top: 20px;
+}
+
+.com_img {
+  position: relative;
+}
+
+.com_text {
+  position: absolute;
+  top: 70%;
+  left: 16px;
+  right: 16px;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: Montserrat;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.money_comm {
+  padding-left: 1%;
+  color: #b6ff6f;
+  white-space: nowrap;
+  font-size: 24px;
+}
+
+.money_comm1 {
+  color: #b6ff6f;
+  white-space: nowrap;
+  font-size: 24px;
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  font-weight: 600;
+}
+
+.name_comm {
+  text-align: left;
+}
+
+.background_bot {
+  background: linear-gradient(180deg, #121825 0%, #129d7f 250%);
+}
+
+.online-members {
+  margin-bottom: 50px;
+  font-size: 20px;
+  color: #3b4034;
+}
+
+.exchanges {
+  background: rgba(30, 30, 30, 0.61);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.icons {
+  width: 40px;
+}
+
+.privacy-link {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.copyright {
+  font-weight: 400;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-family: Montserrat;
+}
+
+.input_1 {
+  border: none;
+  border-radius: 8px !important;
+  margin: 5px;
+  width: 100%;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  padding-left: 10px;
+}
+
+.input_1::-webkit-input-placeholder {
+  color: #767676 !important;
+}
+
+.form_main {
+}
+
+.btn_main {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(130.99deg, #b6ff6f 1.35%, #75c922 73.25%);
+  box-shadow: 0px 4px 0px #69b31f, 0px 254px 102px rgba(6, 26, 45, 0.01),
+    0px 143px 86px rgba(6, 26, 45, 0.05), 0px 63px 63px rgba(6, 26, 45, 0.09),
+    0px 16px 35px rgba(6, 26, 45, 0.1), 0px 0px 0px rgba(6, 26, 45, 0.1);
+  border-radius: 20px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 43px;
+  text-align: center;
+  padding-top: 7px;
+  margin-top: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+.hurry1 {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 400;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-align: center;
+  font-family: Montserrat;
+}
+.spotsLeft1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.p_center {
+  text-align: center !important;
+}
+
+.row2 {
+  display: flex;
+}
+
+.p_color {
+  color: #121825 !important;
+}
+
+@media (min-width: 992px) {
+  .money_comm_mob {
+    display: none;
+  }
+  .section-4 .asset {
+    display: block;
+  }
+  .btn_sport {
+    display: none;
+  }
+  .btn_sport2 {
+    display: none;
+  }
+  .text_mob {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section-2 p {
+    font-size: 12px !important;
+  }
+  .money_comm {
+    font-size: 14px;
+  }
+  .money_comm1 {
+    font-size: 18px;
+  }
+  .com_text {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial p {
+    top: 75%;
+    font-size: 11px;
+    color: #fff !important;
+  }
+}
+
+@media (max-width: 992px) {
+  header .logo-nav-mobile,
+  header .logo-nav-desktop {
+    height: 40px;
+    margin-top: 5px;
+  }
+  .section-1 h1 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .text_big {
+    font-size: 50px;
+  }
+  .section-1 {
+    padding: 45px 0 20px 0;
+  }
+  .input_1 {
+    width: 100%;
+  }
+  .btn_main {
+    width: 100%;
+  }
+  .section-2 p {
+    font-size: 11px !important;
+    margin-bottom: 0px;
+  }
+  .section-2 h4 {
+    font-size: 18px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .text_celeb {
+    top: 53%;
+  }
+  .small_text {
+    top: 56% !important;
+  }
+  .laptop img {
+    margin-left: 0px;
+    margin-top: 70px;
+    width: 100%;
+    z-index: 9999;
+    position: sticky;
+  }
+  .section-5 {
+    margin-top: -300px;
+  }
+  .money_comm {
+    padding-left: 10px;
+    font-size: 18px;
+  }
+
+  .com_text {
+    font-size: 14px;
+    top: 67%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .p_color1 {
+    font-size: 11px !important;
+  }
+  .h4_bot {
+    margin-bottom: 150px !important;
+  }
+  .exchange {
+    display: none;
+  }
+  .section-8 {
+    background: #fff;
+  }
+  .row1 {
+    padding: 20px;
+  }
+  .money_comm_mob {
+    color: #b6ff6f;
+    white-space: nowrap;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .money_comm1 {
+    display: none;
+  }
+  .p_center {
+    text-align: center !important;
+    font-size: 14px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+  .section-9 .comment .like {
+    display: flex;
+    justify-content: space-around;
+  }
+  .section-9 .comment .user-img img {
+    width: 70px;
+  }
+  .scroll-btn {
+    width: 85% !important;
+  }
+  .section-10 h1 {
+    font-size: 22px;
+  }
+  .btn_sport1 {
+    display: none;
+  }
+}
+
+.logo_bot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_text {
+  font-size: 28px;
+  color: #4c647b;
+  font-style: italic;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.logo_text1 {
+  font-size: 22px;
+  color: #4c647b;
+  font-style: italic;
+  font-weight: 500;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.logo_text2 {
+  font-size: 35px;
+  color: #4c647b;
+  font-style: italic;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.logo_add {
+  display: flex;
+}
+
+.text_mob {
+  color: #fff;
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: 600 !important;
+  text-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
+}
